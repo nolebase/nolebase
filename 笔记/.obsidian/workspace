@@ -7,12 +7,22 @@
         "id": "088972497de9d37d",
         "type": "leaf",
         "state": {
+          "type": "graph",
+          "state": {}
+        },
+        "group": "8758c605f88f7daa"
+      },
+      {
+        "id": "28946a00d389630d",
+        "type": "leaf",
+        "state": {
           "type": "markdown",
           "state": {
-            "file": "前端/前端拾遗.md",
+            "file": "前端/什么是设计规范.md",
             "mode": "preview"
           }
-        }
+        },
+        "group": "8758c605f88f7daa"
       }
     ],
     "direction": "vertical"
@@ -48,8 +58,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -69,7 +78,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/前端拾遗.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,9 +93,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "前端/前端拾遗.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -99,15 +105,15 @@
   },
   "active": "088972497de9d37d",
   "lastOpenFiles": [
-    "前端/前端拾遗.md",
-    "前端/互联网是如何工作的.md",
     "前端/什么是设计规范.md",
     "前端/「自适应」与「响应式」布局.md",
+    "前端/前端拾遗.md",
+    "前端/词汇/互联网.md",
+    "前端/互联网是如何工作的.md",
     "前端/前端开发路线图.md",
     "终端/Linux/设置代理.md",
-    "MySQL/快速查询.md",
     "MySQL/MySql.md",
-    "MySQL/强制设定为 Unique 索引.md",
-    "前端/词汇/互联网.md"
+    "PHP/PHP.md",
+    "PHP/注释.md"
   ]
 }
