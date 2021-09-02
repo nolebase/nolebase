@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "80a493d02de51124",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e381fc63bc75a58",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "273d3c95d9a6f9e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "6efec142384ef886",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c125b6448ab28e5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c7ede6aee64a5a45",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a6f23219724443e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "d299c76868617eb8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58dc9de943a847eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0e381fc63bc75a58",
+  "lastOpenFiles": [
+    "笔记/前端/互联网是如何工作的.md",
+    "软件/笔记软件.md",
+    "软件/未命名.md",
+    "笔记/前端/前端开发路线图.md",
+    "笔记/前端/前端拾遗.md",
+    "笔记/前端/什么是设计规范.md"
+  ]
+}

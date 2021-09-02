@@ -1,0 +1,112 @@
+{
+  "main": {
+    "id": "6e06a00a90728b8e",
+    "type": "split",
+    "children": [
+      {
+        "id": "088972497de9d37d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "前端/互联网是如何工作的.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "efc6ff1cff5c66ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a558feee21d2680",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d174dd1691775e9b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "82cf506b76fb030b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f41954ca417f7a75",
+    "type": "split",
+    "children": [
+      {
+        "id": "30cc7cc1839cd5cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "67fbd0b7da34862c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "前端/互联网是如何工作的.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "11c985953604a7e7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "前端/互联网是如何工作的.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "088972497de9d37d",
+  "lastOpenFiles": [
+    "前端/互联网是如何工作的.md",
+    "前端/前端开发路线图.md",
+    "前端/前端拾遗.md",
+    "终端/Linux/设置代理.md",
+    "MySQL/快速查询.md",
+    "MySQL/MySql.md",
+    "MySQL/强制设定为 Unique 索引.md",
+    "前端/什么是设计规范.md",
+    "前端/词汇/互联网.md",
+    "前端/「自适应」与「响应式」布局.md"
+  ]
+}
