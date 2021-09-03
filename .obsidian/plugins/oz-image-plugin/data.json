@@ -1,0 +1,9 @@
+{
+  "renderAll": true,
+  "renderPDF": false,
+  "renderIframe": false,
+  "renderExcalidraw": false,
+  "renderTransclusion": false,
+  "refreshImagesAfterChange": false,
+  "WYSIWYG": true
+}
