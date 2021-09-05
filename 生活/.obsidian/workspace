@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "药物/感冒.md",
+            "file": "药物/止痛.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "药物/感冒.md",
+                "file": "药物/止痛.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +88,8 @@
   },
   "active": "0cd04cbf943273ec",
   "lastOpenFiles": [
-    "药物/感冒.md",
+    "药物/止痛.md",
     "药物/过敏.md",
-    "药物/止痛.md"
+    "药物/感冒.md"
   ]
 }

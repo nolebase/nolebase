@@ -18,7 +18,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "前端/什么是设计规范.md",
+            "file": "PHP/注释.md",
             "mode": "preview"
           }
         },
@@ -57,6 +57,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "7f455f0d7c627cd6",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
@@ -92,8 +100,27 @@
             "id": "11c985953604a7e7",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "8a760cb4724b8ef5",
+            "type": "leaf",
+            "state": {
               "type": "outline",
               "state": {}
+            }
+          },
+          {
+            "id": "d986b7fa602e6edc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
             }
           }
         ]
@@ -105,15 +132,15 @@
   },
   "active": "088972497de9d37d",
   "lastOpenFiles": [
+    "PHP/注释.md",
+    "PHP/基础类型.md",
+    "前端/前端开发路线图.md",
+    "终端/Linux/设置代理.md",
     "前端/什么是设计规范.md",
     "前端/「自适应」与「响应式」布局.md",
     "前端/前端拾遗.md",
     "前端/词汇/互联网.md",
     "前端/互联网是如何工作的.md",
-    "前端/前端开发路线图.md",
-    "终端/Linux/设置代理.md",
-    "MySQL/MySql.md",
-    "PHP/PHP.md",
-    "PHP/注释.md"
+    "MySQL/MySql.md"
   ]
 }
