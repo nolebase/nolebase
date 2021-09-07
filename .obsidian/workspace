@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "c53f4fb9e2df07a2",
+        "id": "7bf1bd9158f8eb12",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "生活/药物/感冒.md",
+            "file": "笔记/终端/Git/Git 命令速记.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "生活/药物/感冒.md",
+                "file": "笔记/终端/Git/Git 命令速记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,23 +83,16 @@
             "id": "ac8a84facaeb8883",
             "type": "leaf",
             "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "生活/药物/感冒.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
             "id": "b2952bf202ae695a",
             "type": "leaf",
             "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -109,17 +102,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c53f4fb9e2df07a2",
+  "active": "7bf1bd9158f8eb12",
   "lastOpenFiles": [
-    "生活/药物/感冒.md",
-    "生活/药物/过敏.md",
-    "生活/药物/止痛.md",
-    "生活/药物/未命名.md",
-    "笔记/前端/互联网是如何工作的.md",
-    "软件/笔记软件.md",
-    "软件/未命名.md",
+    "笔记/终端/Git/未命名.md",
+    "笔记/VS Code/解决 VS Code 不能在只读卷上更新.md",
+    "笔记/PHP/基础类型.md",
+    "笔记/MySQL/MySql.md",
+    "笔记/MySQL/强制设定为 Unique 索引.md",
+    "笔记/MySQL/快速查询.md",
+    "笔记/Golang/Go 常用命令行指令.md",
     "笔记/前端/前端开发路线图.md",
-    "笔记/前端/前端拾遗.md",
-    "笔记/前端/什么是设计规范.md"
+    "笔记/前端/互联网是如何工作的.md",
+    "笔记/终端/Linux/设置代理.md"
   ]
 }
