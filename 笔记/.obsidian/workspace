@@ -4,25 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "088972497de9d37d",
-        "type": "leaf",
-        "state": {
-          "type": "graph",
-          "state": {}
-        },
-        "group": "8758c605f88f7daa"
-      },
-      {
         "id": "28946a00d389630d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "PHP/注释.md",
+            "file": "终端/Git/Git 命令速记.md",
             "mode": "preview"
           }
-        },
-        "group": "8758c605f88f7daa"
+        }
       }
     ],
     "direction": "vertical"
@@ -86,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "终端/Git/Git 命令速记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +100,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "终端/Git/Git 命令速记.md"
+              }
             }
           },
           {
@@ -123,24 +116,24 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "088972497de9d37d",
+  "active": "28946a00d389630d",
   "lastOpenFiles": [
-    "PHP/注释.md",
+    "终端/Git/Git 命令速记.md",
+    "前端/互联网是如何工作的.md",
+    "MySQL/强制设定为 Unique 索引.md",
+    "终端/Git/gitignore 不生效解决办法.md",
     "PHP/基础类型.md",
+    "PHP/注释.md",
     "前端/前端开发路线图.md",
     "终端/Linux/设置代理.md",
     "前端/什么是设计规范.md",
-    "前端/「自适应」与「响应式」布局.md",
-    "前端/前端拾遗.md",
-    "前端/词汇/互联网.md",
-    "前端/互联网是如何工作的.md",
-    "MySQL/MySql.md"
+    "前端/「自适应」与「响应式」布局.md"
   ]
 }
