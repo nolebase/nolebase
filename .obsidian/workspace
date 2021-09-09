@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/终端/Git/Git 命令速记.md",
-            "mode": "preview"
+            "file": "笔记/终端/Git/使用变基和堆叠整合提交和拉取请求.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/终端/Git/Git 命令速记.md",
+                "file": "笔记/终端/Git/使用变基和堆叠整合提交和拉取请求.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,10 +104,10 @@
   },
   "active": "7bf1bd9158f8eb12",
   "lastOpenFiles": [
+    "笔记/终端/Git/未命名.md",
     "笔记/终端/Git/Git 命令速记.md",
     "笔记/前端/vue/插件/组件类型的插件开发.md",
     "笔记/前端/vue/插件/未命名.md",
-    "笔记/终端/Git/未命名.md",
     "笔记/VS Code/解决 VS Code 不能在只读卷上更新.md",
     "笔记/PHP/基础类型.md",
     "笔记/MySQL/MySql.md",
