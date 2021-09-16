@@ -7,8 +7,11 @@
         "id": "9e40820ced815113",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "git-rebase-vsc-preview",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +100,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md"
+              }
             }
           },
           {
@@ -111,7 +117,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -119,15 +125,15 @@
   },
   "active": "9e40820ced815113",
   "lastOpenFiles": [
+    "⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md",
+    "⬛️ 终端/Git/git-rebase-vsc-preview1.png",
+    "⬛️ 终端/Git/Git 命令速记.md",
+    "⬛️ 终端/Git/git-rebase-vsc-preview2.png",
+    "⬛️ 终端/Git/git-rebase-vsc-preview3.png",
+    "🛠 VS Code/解决 VS Code 不能在只读卷上更新.md",
     "终端/Git/使用变基和堆叠整合提交和拉取请求.md",
     "终端/Git/gitignore 不生效解决办法.md",
     "终端/Git/Git 命令速记.md",
-    "终端/Git/git-rebase-vsc-preview2.png",
-    "终端/Git/git-rebase-vsc-preview3.png",
-    "终端/Git/git-rebase-vsc-preview1.png",
-    "前端/互联网是如何工作的.md",
-    "前端/前端拾遗.md",
-    "Users/yuna/Doc/notebook/笔记/终端/Git/git-rebase-vsc-preview2.png.md",
-    "终端/Linux/设置代理.md"
+    "终端/Git/git-rebase-vsc-preview2.png"
   ]
 }
