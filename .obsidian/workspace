@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7bf1bd9158f8eb12",
+        "id": "1911ddf3c7d73e36",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "笔记/终端/Git/Git 命令速记.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/终端/Git/Git 命令速记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,17 +98,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7bf1bd9158f8eb12",
+  "active": "1911ddf3c7d73e36",
   "lastOpenFiles": [
+    "笔记/Golang/未命名.md",
+    "笔记/终端/Git/使用变基和堆叠整合提交和拉取请求.md",
+    "笔记/终端/Git/未命名.md",
     "笔记/终端/Git/Git 命令速记.md",
     "笔记/前端/vue/插件/组件类型的插件开发.md",
     "笔记/前端/vue/插件/未命名.md",
-    "笔记/终端/Git/未命名.md",
     "笔记/VS Code/解决 VS Code 不能在只读卷上更新.md",
     "笔记/PHP/基础类型.md",
     "笔记/MySQL/MySql.md",
-    "笔记/MySQL/强制设定为 Unique 索引.md",
-    "笔记/MySQL/快速查询.md",
-    "笔记/Golang/Go 常用命令行指令.md"
+    "笔记/MySQL/强制设定为 Unique 索引.md"
   ]
 }
