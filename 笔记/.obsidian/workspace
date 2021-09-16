@@ -4,10 +4,10 @@
     "type": "split",
     "children": [
       {
-        "id": "28946a00d389630d",
+        "id": "9e40820ced815113",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -117,17 +117,17 @@
     "direction": "horizontal",
     "width": 273
   },
-  "active": "28946a00d389630d",
+  "active": "9e40820ced815113",
   "lastOpenFiles": [
-    "终端/Linux/设置代理.md",
+    "终端/Git/使用变基和堆叠整合提交和拉取请求.md",
     "终端/Git/gitignore 不生效解决办法.md",
     "终端/Git/Git 命令速记.md",
+    "终端/Git/git-rebase-vsc-preview2.png",
+    "终端/Git/git-rebase-vsc-preview3.png",
+    "终端/Git/git-rebase-vsc-preview1.png",
     "前端/互联网是如何工作的.md",
-    "MySQL/强制设定为 Unique 索引.md",
-    "PHP/基础类型.md",
-    "PHP/注释.md",
-    "前端/前端开发路线图.md",
-    "前端/什么是设计规范.md",
-    "前端/「自适应」与「响应式」布局.md"
+    "前端/前端拾遗.md",
+    "Users/yuna/Doc/notebook/笔记/终端/Git/git-rebase-vsc-preview2.png.md",
+    "终端/Linux/设置代理.md"
   ]
 }
