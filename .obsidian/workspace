@@ -7,9 +7,10 @@
         "id": "efa955e7ee84289c",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "笔记/终端/Git/git-rebase-vsc-preview1.png"
+            "file": "笔记/⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md",
+            "mode": "preview"
           }
         }
       }
@@ -67,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/终端/Git/git-rebase-vsc-preview1.png",
+                "file": "笔记/⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,6 +104,8 @@
   },
   "active": "efa955e7ee84289c",
   "lastOpenFiles": [
+    "笔记/⬛️ 终端/Git/使用变基和堆叠整合提交和拉取请求.md",
+    "笔记/🐭 Golang/Go 常用命令行指令.md",
     "笔记/终端/Git/git-rebase-vsc-preview1.png",
     "笔记/终端/Git/git-rebase-vsc-preview2.png",
     "笔记/终端/Git/git-rebase-vsc-preview3.png",
@@ -110,8 +113,6 @@
     "笔记/终端/Git/使用变基和堆叠整合提交和拉取请求.md",
     "笔记/终端/Git/未命名.md",
     "笔记/终端/Git/Git 命令速记.md",
-    "笔记/前端/vue/插件/组件类型的插件开发.md",
-    "笔记/前端/vue/插件/未命名.md",
-    "笔记/VS Code/解决 VS Code 不能在只读卷上更新.md"
+    "笔记/前端/vue/插件/组件类型的插件开发.md"
   ]
 }
