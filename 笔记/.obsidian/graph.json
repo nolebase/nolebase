@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:Golang",
@@ -62,18 +62,25 @@
         "a": 1,
         "rgb": 11361494
       }
+    },
+    {
+      "query": "path:\"📐 图形学\"",
+      "color": {
+        "a": 1,
+        "rgb": 14586600
+      }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 2.20347493489583,
+  "nodeSizeMultiplier": 1.59463315217391,
   "lineSizeMultiplier": 3.98395182291667,
   "collapse-forces": true,
   "centerStrength": 0.565981657608696,
-  "repelStrength": 10.6640625,
+  "repelStrength": 11.7476222826087,
   "linkStrength": 1,
-  "linkDistance": 154,
-  "scale": 0.5652745038629315,
-  "close": false
+  "linkDistance": 321,
+  "scale": 0.6830229844195819,
+  "close": true
 }
