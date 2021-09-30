@@ -2,7 +2,10 @@
 
 ### 安装前置软件
 
-此处需要安装 Nginx（HTTP 网页服务器），Vim（编辑器，不喜欢的话可以换成 nano），Git（命令行管理），node（Node.js 环境），pnpm（包管理器）
+1. 优先安装 epel-release（一个很大的软件库注册表，安装后可以搜索和安装更多的软件包）
+2. 更新整个软件包列表缓存和系统
+3. 此处需要安装 Nginx（HTTP 网页服务器），Vim（编辑器，不喜欢的话可以换成 nano），Git（命令行管理），node（Node.js 环境），pnpm（包管理器）
+4. -y 参数表示无需询问是否安装，直接静默安装
 
 ```shell
 $ sudo yum install epel-release -y
@@ -18,7 +21,7 @@ $ sudo yum install nginx vim git -y
 curl -fsSL https://rpm.nodesource.com/setup_14.x | sudo bash -
 ```
 
-导入 Node16 仓库和配置
+导入 Node16 仓库和配置（和上面的 Node14 二选一）
 
 ```shell
 curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
