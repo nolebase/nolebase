@@ -340,7 +340,7 @@ After=network.target
 [Service]
 ExecStart=/usr/bin/serve -s <编译产物路径> -l <监听端口号>
 ExecStop=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID
-ExecReload=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID && /usr/bin/serve -s <编译产物路径> -l <监听端口号>
+ExecReload=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID && /usr/bin/serve -s <编译产物路径> -l <项目端口号>
 Restart=always
 User=deploy
 Group=deploy
@@ -375,17 +375,18 @@ $ sudo vim /etc/nginx/conf.d/<域名>.conf
 ```
 
 配置文件内容：
+此处 **外部可访问端口** 和 **项目端口号** 不可以是一致的
 
 ```nginx
 server {
-		listen <端口>;
+		listen <外部可访问端口>;
 		server_name <域名（不带 http 前缀）>;
 		location / { 
                 proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
-				proxy_pass http://127.0.0.1:<端口号>;
+				proxy_pass http://127.0.0.1:<项目端口号>;
 		}
 }
 ```
@@ -394,14 +395,14 @@ server {
 
 ```nginx
 server {
-		listen <端口>;
+		listen <外部可访问端口>;
 		server_name <域名（不带 http 前缀）>;
 		location /demo { // 子级目录 
 				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
-				proxy_pass http://127.0.0.1:<端口号>;
+				proxy_pass http://127.0.0.1:<项目端口号>;
 		}
 }
 ```
@@ -410,7 +411,7 @@ server {
 
 ```nginx
 server {
-		listen <端口>;
+		listen <外部可访问端口>;
         server_name <域名>;
 
         return 301 https://$host$request_uri; # 这里是指自动 301 重定向到 https 协议
@@ -448,7 +449,7 @@ server {
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
-				proxy_pass http://127.0.0.1:<端口号>;
+				proxy_pass http://127.0.0.1:<项目端口号>;
 		}
 }
 ```
