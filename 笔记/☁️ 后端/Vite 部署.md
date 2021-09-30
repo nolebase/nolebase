@@ -227,7 +227,7 @@ $ sudo vim /etc/nginx/conf.d/<域名>.conf
 
 ```nginx
 server {
-		listen 80;
+		listen <端口>;
 		server_name <域名（不带 http 前缀）>;
 		location / { 
 				root /front; // 前端文件路径，绝对路径
@@ -241,7 +241,7 @@ server {
 
 ```nginx
 server {
-		listen 80;
+		listen <端口>;
 		server_name <域名（不带 http 前缀）>;
 		location /demo { // 子级目录 
 				alias /front/demo; 
@@ -255,7 +255,7 @@ server {
 
 ```nginx
 server {
-        listen 80;
+		listen <端口>;
         server_name <域名>;
 
         return 301 https://$host$request_uri; # 这里是指自动 301 重定向到 https 协议
@@ -378,7 +378,7 @@ $ sudo vim /etc/nginx/conf.d/<域名>.conf
 
 ```nginx
 server {
-		listen 80;
+		listen <端口>;
 		server_name <域名（不带 http 前缀）>;
 		location / { 
                 proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
@@ -394,7 +394,7 @@ server {
 
 ```nginx
 server {
-		listen 80;
+		listen <端口>;
 		server_name <域名（不带 http 前缀）>;
 		location /demo { // 子级目录 
 				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
@@ -410,7 +410,7 @@ server {
 
 ```nginx
 server {
-        listen 80;
+		listen <端口>;
         server_name <域名>;
 
         return 301 https://$host$request_uri; # 这里是指自动 301 重定向到 https 协议
