@@ -1,4 +1,4 @@
-## 使用说明
+## FastGit 使用说明
 
 关于 FastGit 的使用，本质上与 `git` 有关。常规的面向 GitHub 的 `clone` 命令可能如下：
 
@@ -22,3 +22,8 @@ $ git config protocol.https.allow always
 ```
 
 [FastGit 官方文档](https://doc.fastgit.org/zh-cn/#%E5%85%B3%E4%BA%8E-fastgit)
+
+## 别的类似镜像
+
+https://gitclone.com/
+https://github.com/HuangCongQing/mirrors
