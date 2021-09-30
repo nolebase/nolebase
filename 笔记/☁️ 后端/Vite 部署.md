@@ -14,6 +14,9 @@ $ sudo yum install nginx vim git -y
 ```
 
 如果此处提示找不到 nginx，我们需要手动添加一下 nginx 官方的软件源
+
+#### 调整 Nginx 软件源
+
 创建一个 nginx.repo 文件并且写入 nginx 官方源配置：
 
 ```shell
@@ -54,6 +57,15 @@ $ sudo yum update
 ```shell
 $ sudo yum install nginx
 ```
+
+如果还是不行，可以选择手动编译
+
+#### 手动编译 Nginx
+
+```shell
+$ sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libxslt libxslt-devel gd-devel perl-devel perl-ExtUtils-Embed GeoIP GeoIP-devel GeoIP-data gperftools-devel
+```
+
 
 #### 安装 Node.js
 
