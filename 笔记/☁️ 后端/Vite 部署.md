@@ -62,10 +62,17 @@ $ sudo yum install nginx
 
 #### 手动编译 Nginx
 
+安装编译需要的依赖包
+
 ```shell
 $ sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libxslt libxslt-devel gd-devel perl-devel perl-ExtUtils-Embed GeoIP GeoIP-devel GeoIP-data gperftools-devel
 ```
 
+下载 nginx 的源码
+
+```shell
+wget http://nginx.org/download/nginx-1.20.1.tar.gz
+```
 
 #### 安装 Node.js
 
