@@ -111,12 +111,318 @@ $ sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 
 ```shell
 $ git clone <仓库地址>
+$ cd <项目文件夹>
 ```
 
 #### 编译
 
-对于 vitesse 而言，直接运行 pnpm build 就好了
+对于 vitesse 而言，直接运行 `pnpm build` 就好了，执行依赖更新和 `build` 命令
 
 ```shell
-$ pnpm build
+$ pnpm i && pnpm build
 ```
+
+编译后文件会被放到 `dist` 文件夹下，这个时候为了方便我们版本切换，可以把 `dist` 文件夹里的文件单独放到另一个文件夹里面，这样下次更新前端的时候就不会由于运行 `pnpm build` 指令导致 `dist` 文件夹被清空，因而导致页面无法访问
+
+移动编译产物 `dist` 文件夹到别的地方
+如果是需要限制权限和访问的，可以放到 `/usr/local/frontend/<项目名称>/app`，`frontend` 是前端的意思
+这个目录创建的时候带上 `sudo` 就可以限制为仅可 `root` 或 root 权限访问：
+
+```shell
+$ sudo mkdir -p /usr/local/frontend/<项目名称>
+```
+
+还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
+
+```shell
+$ sudo chown -R root:whell /usr/local/frontend
+```
+
+如果没有特别的需求，可以放到原地，比如新建一个 app 文件夹用来存编译产物也是完全没问题的
+
+```shell
+$ sudo mv dist <文件夹地址>
+```
+
+## 配置网页服务器
+
+此处有两种方案可以选择，一种是直接通过 Nginx 读取静态文件，还有一种是基于一个 serve 命令的服务来实现静态文件的服务器，请求该网站的时候，流量会通过 Nginx 重定向到 serve 提供的地址，从而把数据通过 Nginx 从 serve 反代理到服务器外部，实现对内部数据的访问
+
+
+### 静态文件
+
+静态文件的配置稍微会麻烦一些，可能这个过程中会遇到权限问题，403 配置问题，vue-router history 模式配置不正确导致的 404 问题
+
+新建一个 Nginx 配置文件（配置的时候可以把里面的中文注释删一下，避免编码问题）
+
+```shell
+$ sudo vim /etc/nginx/conf.d/<域名>.conf
+```
+
+配置文件内容：
+
+```nginx
+server {
+		listen 80;
+		server_name <域名（不带 http 前缀）>;
+		location / { 
+				root /front; // 前端文件路径，绝对路径
+				index index.html; // hash 模式只配置这行支持访问 html 文件就可以了 
+				try_files $uri $uri/ /index.html; // history 模式下需要加一行这个 
+		}
+}
+```
+
+如果需要部署到子目录，可以按照下面的来：
+
+```nginx
+server {
+		listen 80;
+		server_name <域名（不带 http 前缀）>;
+		location /demo { // 子级目录 
+				alias /front/demo; 
+				index index.html; 
+				try_files $uri $uri/ /demo/index.html;
+		}
+}
+```
+
+如果需要配置为 443（HTTPS）的服务器，可以按照下面的来：
+
+```nginx
+server {
+        listen 80;
+        server_name <域名>;
+
+        return 301 https://$host$request_uri; # 这里是指自动 301 重定向到 https 协议
+}
+
+server {
+        listen 443 ssl http2;
+        # listen [::]:443 ssl;
+
+        server_name <域名>;
+
+        ssl_certificate <证书位置>;
+        ssl_certificate_key <证书私钥位置>;
+        ssl_prefer_server_ciphers on;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS !RC4";
+        keepalive_timeout 70;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_timeout 10m;
+
+        add_header Strict-Transport-Security max-age=63072000;
+        # add_header X-Frame-Options DENY;
+        add_header X-Content-Type-Options nosniff;
+
+		location / { 
+				root /front; // 前端文件路径，绝对路径
+				index index.html; // hash 模式只配置这行支持访问 html 文件就可以了 
+				try_files $uri $uri/ /index.html; // history 模式下需要加一行这个 
+		}
+		
+		location /demo { // 子级目录 
+				alias /front/demo; 
+				index index.html; 
+				try_files $uri $uri/ /demo/index.html;
+		}
+}
+```
+
+编辑之后保存退出。
+
+测试 Nginx 配置文件是否正确：
+
+```shell
+$ sudo nginx -t
+```
+
+如果有错误的话会提示具体的文件和行号
+
+重新载入 Nginx 配置文件并应用
+
+```shell
+$ sudo nginx -s reload
+```
+
+### 反代理
+
+安装 serve
+
+```shell
+$ sudo npm install -g serve
+```
+
+反代理图示：
+
+客户端 <------> Nginx <------> serve
+
+Nginx 从接收到客户端的请求（比如请求 a.com）了解到需要去找 serve 开的端口和地址要数据，于是把流量转发过去，serve 接收到之后，了解路由的参数，并且把静态文件提取出来返回给 Nginx，Nginx 拿到返回值之后直接返回给客户端，这个流程就叫做「反代理」
+
+反代理需要额外配置一个服务，新建一个 service 文件
+
+```shell
+$ sudo nano /usr/lib/systemd/system/<项目名称>.service
+```
+
+写入服务信息
+
+```service
+[Unit]
+Description=<项目名称>
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/serve -s <编译产物路径> -l <监听端口号>
+ExecStop=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID
+ExecReload=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID && /usr/bin/serve -s <编译产物路径> -l <监听端口号>
+Restart=always
+User=deploy
+Group=deploy
+WorkingDirectory=<编译产物路径>
+
+[Install]
+WantedBy=multi-user.target
+```
+
+重载 systemctl 的服务配置
+
+```shell
+$ sudo systemctl daemon-reload
+```
+
+开启 serve 服务开机自启
+
+```shell
+$ sudo systemctl enable <项目名称>
+```
+
+开始 serve 服务
+
+```shell
+$ sudo systemctl start <项目名称>
+```
+
+新建一个 Nginx 配置文件（配置的时候可以把里面的中文注释删一下，避免编码问题）
+
+```shell
+$ sudo vim /etc/nginx/conf.d/<域名>.conf
+```
+
+配置文件内容：
+
+```nginx
+server {
+		listen 80;
+		server_name <域名（不带 http 前缀）>;
+		location / { 
+                proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
+				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
+                proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
+				proxy_pass http://127.0.0.1:<端口号>;
+		}
+}
+```
+
+如果需要部署到子目录，可以按照下面的来：
+
+```nginx
+server {
+		listen 80;
+		server_name <域名（不带 http 前缀）>;
+		location /demo { // 子级目录 
+				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
+				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
+                proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
+				proxy_pass http://127.0.0.1:<端口号>;
+		}
+}
+```
+
+如果需要配置为 443（HTTPS）的服务器，可以按照下面的来：
+
+```nginx
+server {
+        listen 80;
+        server_name <域名>;
+
+        return 301 https://$host$request_uri; # 这里是指自动 301 重定向到 https 协议
+}
+
+server {
+        listen 443 ssl http2;
+        # listen [::]:443 ssl;
+
+        server_name <域名>;
+
+        ssl_certificate <证书位置>;
+        ssl_certificate_key <证书私钥位置>;
+        ssl_prefer_server_ciphers on;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers "EECDH+ECDSA+AESGCM EECDH+aRSA+AESGCM EECDH+ECDSA+SHA384 EECDH+ECDSA+SHA256 EECDH+aRSA+SHA384 EECDH+aRSA+SHA256 EECDH+aRSA+RC4 EECDH EDH+aRSA !aNULL !eNULL !LOW !3DES !MD5 !EXP !PSK !SRP !DSS !RC4";
+        keepalive_timeout 70;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_timeout 10m;
+
+        add_header Strict-Transport-Security max-age=63072000;
+        # add_header X-Frame-Options DENY;
+        add_header X-Content-Type-Options nosniff;
+
+		location / { 
+				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
+				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
+                proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
+				proxy_pass http://127.0.0.1:<端口号>; 
+		}
+		
+		location /demo { // 子级目录 
+				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
+				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
+                proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
+				proxy_pass http://127.0.0.1:<端口号>;
+		}
+}
+```
+
+测试 Nginx 配置文件是否正确：
+
+```shell
+$ sudo nginx -t
+```
+
+如果有错误的话会提示具体的文件和行号
+
+重新载入 Nginx 配置文件并应用
+
+```shell
+$ sudo nginx -s reload
+```
+
+## 错误排查
+
+### 反代理 502
+
+502 表示反代理访问的端口访问不到了。
+serve 服务启用了吗？可以检查以下服务运行状态：
+
+```shell
+$ sudo systemctl status <项目名称>
+```
+
+如果出现问题，可以检查以下是否是端口占用，重复执行命令导致的。
+
+### 404
+
+如果是反代理配置的话，404 一般是编译产物目录下面文件找不到了，可以看一下 URL 是否正确，编译后的文件本地也可以测试以下是不是也可以访问到。
+
+如果是 Nginx 静态文件配置的话，404 可能是 history 模式兼容性配置导致的，vue-router 有 hash（哈希）和 history（历史）模式，对于 404 而言需要多加一行
+
+```shell
+
+```
+
