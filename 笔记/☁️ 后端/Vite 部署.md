@@ -2,7 +2,7 @@
 
 ### 安装前置软件
 
-1. 优先安装 epel-release（一个很大的软件库注册表，安装后可以搜索和安装更多的软件包）
+1. 优先安装 epel-release（一个很大的软件库源，安装后可以搜索和安装更多的软件包）
 2. 更新整个软件包列表缓存和系统
 3. 此处需要安装 Nginx（HTTP 网页服务器），Vim（编辑器，不喜欢的话可以换成 nano），Git（命令行管理），node（Node.js 环境），pnpm（包管理器）
 4. -y 参数表示无需询问是否安装，直接静默安装
@@ -11,6 +11,48 @@
 $ sudo yum install epel-release -y
 $ sudo yum update -y
 $ sudo yum install nginx vim git -y
+```
+
+如果此处提示找不到 nginx，我们需要手动添加一下 nginx 官方的软件源
+创建一个 nginx.repo 文件并且写入 nginx 官方源配置：
+
+```shell
+$ sudo vim /etc/yum.repos.d/nginx.repo
+```
+
+nginx.repo 内容，其中需要替换一些字符串：
+把 `<OS>` 替换为发行版，比如 rhel，或者 centos
+把 `<OSRELEASE>` 替换为发行版的大版本号，比如 `6`, `6._x_`, `7`, `7._x_`
+
+```ini
+[nginx]
+name=nginx repo
+baseurl=https://nginx.org/packages/mainline/<OS>/<OSRELEASE>/$basearch/
+gpgcheck=0
+enabled=1
+```
+
+比如 CentOS7 的话可以这样写
+
+```ini
+[nginx]
+name=nginx repo
+baseurl=https://nginx.org/packages/mainline/centos/7/$basearch/
+gpgcheck=0
+enabled=1
+```
+
+编辑之后输入 `:wq` 退出
+
+运行下面的命令来更新软件源和系统
+```shell
+$ sudo yum update
+```
+
+再次尝试安装
+
+```shell
+$ sudo yum install nginx
 ```
 
 #### 安装 Node.js
