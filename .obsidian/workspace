@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/⬛️ 终端/Git/国内 GitHub 加速.md",
-            "mode": "source"
+            "file": "笔记/☁️ 后端/Vite 部署.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/⬛️ 终端/Git/国内 GitHub 加速.md",
+                "file": "笔记/☁️ 后端/Vite 部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,8 +104,8 @@
   },
   "active": "efa955e7ee84289c",
   "lastOpenFiles": [
-    "笔记/⬛️ 终端/Git/未命名.md",
     "笔记/☁️ 后端/Vite 部署.md",
+    "笔记/⬛️ 终端/Git/未命名.md",
     "笔记/☁️ 后端/未命名.md",
     "笔记/☁️ 后端/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
     "笔记/未命名.md",
