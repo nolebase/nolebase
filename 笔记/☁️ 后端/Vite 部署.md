@@ -403,6 +403,12 @@ $ sudo nginx -t
 $ sudo nginx -s reload
 ```
 
+配置 SELinux 规则以允许 Nginx 访问内网：
+
+```shell
+$ sudo setsebool -P httpd_can_network_connect on
+```
+
 ## 错误排查
 
 ### 反代理 502
@@ -416,13 +422,48 @@ $ sudo systemctl status <项目名称>
 
 如果出现问题，可以检查以下是否是端口占用，重复执行命令导致的。
 
+### 403
+
+403 有很多可能，无论是静态文件配置还是反代理配置都有可能出现这个问题。
+如果是使用的静态文件配置，可以检查一下文件的权限，是不是 root，还可以看一下文件具体的权限值：
+
+```shell
+$ sudo ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
+             *2^(8-i));if(k)printf("%0o ",k);print}' <目录>
+```
+
+一般 600 的话访问不到，不是 root 的话也可能没办法访问到，需要根据具体情况重新设定一下权限才行。
+
+变更权限值，755 是一个例子，具体根据情况而定（参见 https://www.jianshu.com/p/aa0ae40204ae）
+一般常用的是 655 或者 755
+
+```shell
+$ sudo chmod 755 <文件>
+```
+
+如果设定到 777 才能访问的话，和 CentOS 内置的 SELinux 保护安全策略有关，需要执行以下：
+静态文件的话，授予 Nginx 针对特定目录的访问权限：
+
+```shell
+$ sudo chcon -Rt httpd_sys_content_t <项目绝对路径>
+```
+
+反代理的话，授予 Nginx 访问网络的权限：
+
+```shell
+$ setsebool -P httpd_can_network_connect on
+```
+
 ### 404
 
 如果是反代理配置的话，404 一般是编译产物目录下面文件找不到了，可以看一下 URL 是否正确，编译后的文件本地也可以测试以下是不是也可以访问到。
 
 如果是 Nginx 静态文件配置的话，404 可能是 history 模式兼容性配置导致的，vue-router 有 hash（哈希）和 history（历史）模式，对于 404 而言需要多加一行
 
-```shell
-
+```nginx
+location / { 
+		...
+		try_files $uri $uri/ /index.html; // history 模式下需要加一行这个 
+		...
+}
 ```
-
