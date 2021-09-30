@@ -59,7 +59,7 @@ $ sudo systemctl status iptables
 如果运行命令后提示 `Unit iptables.service could not be found.` 则表示服务不存在
 如果找到了服务的话会有这样的提示：
 
-```
+```shell
 ● iptables.service - iptables
    Loaded: loaded (/usr/lib/systemd/system/iptables.service; disabled; vendor preset: enabled)
    Active: inactive (dead)
