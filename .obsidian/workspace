@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/⬛️ 终端/Git/Git 客户端配置 SSH 验证.md",
-            "mode": "preview"
+            "file": "笔记/📟 Linux/Linux 的权限.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/⬛️ 终端/Git/Git 客户端配置 SSH 验证.md",
+                "file": "笔记/📟 Linux/Linux 的权限.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,6 +103,7 @@
   },
   "active": "d0e516cf64835c32",
   "lastOpenFiles": [
+    "笔记/📟 Linux/Linux 的权限.md",
     "笔记/⬛️ 终端/Git/Git 客户端配置 SSH 验证.md",
     "笔记/⬛️ 终端/Git/Git 命令速记.md",
     "笔记/⬛️ 终端/Git/国内 GitHub 加速.md",
@@ -111,7 +112,6 @@
     "笔记/⬛️ 终端/Git/assets/Pasted image 20211008134945.png",
     "笔记/⬛️ 终端/Git/Git 客户端 SSH 配置方法.md",
     "笔记/📟 Linux/未命名.md",
-    "笔记/⬛️ 终端/Git/未命名.md",
-    "笔记/☁️ 后端/Vite 部署.md"
+    "笔记/⬛️ 终端/Git/未命名.md"
   ]
 }
