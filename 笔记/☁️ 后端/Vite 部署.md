@@ -342,8 +342,6 @@ ExecStart=/usr/bin/serve -s <编译产物路径> -l <监听端口号>
 ExecStop=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID
 ExecReload=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID && /usr/bin/serve -s <编译产物路径> -l <项目端口号>
 Restart=always
-User=deploy
-Group=deploy
 WorkingDirectory=<编译产物路径>
 
 [Install]
