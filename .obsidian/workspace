@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/文件系统.md",
-            "mode": "source"
+            "file": "笔记/📟 Linux/权限.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/文件系统.md",
+                "file": "笔记/📟 Linux/权限.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,8 +103,8 @@
   },
   "active": "9929ddec16dddfe1",
   "lastOpenFiles": [
-    "笔记/📟 Linux/文件系统.md",
     "笔记/📟 Linux/权限.md",
+    "笔记/📟 Linux/文件系统.md",
     "笔记/📟 Linux/未命名.md",
     "笔记/📟 Linux/Linux 的权限.md",
     "笔记/⬛️ 终端/Git/Git 客户端配置 SSH 验证.md",
