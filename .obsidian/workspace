@@ -6,13 +6,27 @@
       {
         "id": "9929ddec16dddfe1",
         "type": "leaf",
+        "dimension": 84.08602150537634,
         "state": {
           "type": "markdown",
           "state": {
             "file": "笔记/📟 Linux/常用命令.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "74aaad041da4e383"
+      },
+      {
+        "id": "2e8ec8fefd3098f4",
+        "type": "leaf",
+        "dimension": 15.913978494623656,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "笔记/📟 Linux/常用命令.md"
+          }
+        },
+        "group": "74aaad041da4e383"
       }
     ],
     "direction": "vertical"
@@ -52,7 +66,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a6f23219724443e3",
@@ -69,13 +84,13 @@
               "type": "backlink",
               "state": {
                 "file": "笔记/📟 Linux/常用命令.md",
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -94,13 +109,23 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "e80e13e1669c9ced",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "笔记/📟 Linux/常用命令.md"
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "9929ddec16dddfe1",
   "lastOpenFiles": [
