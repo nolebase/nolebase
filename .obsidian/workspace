@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/权限.md",
-            "mode": "preview"
+            "file": "笔记/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/权限.md",
+                "file": "笔记/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,6 +103,7 @@
   },
   "active": "9929ddec16dddfe1",
   "lastOpenFiles": [
+    "笔记/🐭 Golang/未命名.md",
     "笔记/📟 Linux/权限.md",
     "笔记/📟 Linux/文件系统.md",
     "笔记/📟 Linux/未命名.md",
@@ -111,7 +112,6 @@
     "笔记/⬛️ 终端/Git/Git 命令速记.md",
     "笔记/⬛️ 终端/Git/国内 GitHub 加速.md",
     "笔记/⬛️ 终端/Git/assets/Pasted image 20211008135202.png",
-    "笔记/⬛️ 终端/Git/gitignore 不生效解决办法.md",
-    "笔记/⬛️ 终端/Git/assets/Pasted image 20211008134945.png"
+    "笔记/⬛️ 终端/Git/gitignore 不生效解决办法.md"
   ]
 }
