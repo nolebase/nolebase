@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
+            "file": "笔记/☁️ 后端/Vite 部署.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md"
+            "file": "笔记/☁️ 后端/Vite 部署.md"
           }
         },
         "group": "74aaad041da4e383"
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "assets",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 463
   },
   "right": {
     "id": "a6f23219724443e3",
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
+                "file": "笔记/☁️ 后端/Vite 部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md"
+                "file": "笔记/☁️ 后端/Vite 部署.md"
               }
             }
           }
@@ -128,15 +128,15 @@
   },
   "active": "9929ddec16dddfe1",
   "lastOpenFiles": [
-    "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
-    "笔记/📟 Linux/常用命令.md",
-    "笔记/📟 Linux/命令/系统管理/top htop bpytop 任务管理器.md",
-    "笔记/📟 Linux/命令/文件管理/touch 创建文件.md",
-    "笔记/📟 Linux/命令/文件管理/which 或 where 获取命令对应的可执行文件.md",
-    "笔记/📟 Linux/命令/系统管理/未命名.md",
+    "笔记/☁️ 后端/Vite 部署.md",
     "笔记/📟 Linux/命令/网络通讯/未命名.md",
-    "笔记/📟 Linux/命令/系统管理/ps 进程状态.md",
-    "笔记/📟 Linux/命令/磁盘管理/cd 变更目录.md",
-    "笔记/📟 Linux/命令/文件管理/mv 剪贴、移动.md"
+    "笔记/📟 Linux/命令/网络通讯/ifconfig 网络配置.md",
+    "笔记/📟 Linux/软件/未命名.md",
+    "笔记/📟 Linux/软件/wget HTTP 客户端.md",
+    "笔记/📟 Linux/软件/curl HTTP 客户端.md",
+    "笔记/📟 Linux/软件/Git 版本控制/国内 GitHub 加速.md",
+    "笔记/📟 Linux/设置代理.md",
+    "笔记/📟 Linux/权限.md",
+    "笔记/📟 Linux/文件系统.md"
   ]
 }
