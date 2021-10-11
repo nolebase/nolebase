@@ -5,7 +5,7 @@
 
 1. 优先安装 epel-release（一个很大的软件库源，安装后可以搜索和安装更多的软件包）
 2. 更新整个软件包列表缓存和系统
-3. 此处需要安装 Nginx（[[Nginx 网页服务器]]），Vim（[[Vim 编辑器]]，不喜欢的话可以换成 [[GUN Nano 编辑器]]），Git（[[Git 命令速记]]），node（[[node Node.js]]），pnpm（包管理器）
+3. 此处需要安装 Nginx（[[Nginx 网页服务器]]），Vim（[[Vim 编辑器]]，不喜欢的话可以换成 [[nano 编辑器]]），Git（[[Git 命令速记]]），node（[[node Node.js]]），pnpm（包管理器）
 4. -y 参数表示无需询问是否安装，直接静默安装
 
 ```shell
