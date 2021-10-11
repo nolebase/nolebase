@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☁️ 后端/Vite 部署.md",
+            "file": "笔记/📟 Linux/命令/系统管理/ps 进程状态.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "笔记/☁️ 后端/Vite 部署.md"
+            "file": "笔记/📟 Linux/命令/系统管理/ps 进程状态.md"
           }
         },
         "group": "74aaad041da4e383"
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "进程",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,7 +62,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -82,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☁️ 后端/Vite 部署.md",
+                "file": "笔记/📟 Linux/命令/系统管理/ps 进程状态.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☁️ 后端/Vite 部署.md"
+                "file": "笔记/📟 Linux/命令/系统管理/ps 进程状态.md"
               }
             }
           }
@@ -128,6 +129,7 @@
   },
   "active": "9929ddec16dddfe1",
   "lastOpenFiles": [
+    "笔记/📟 Linux/命令/系统管理/ps 进程状态.md",
     "笔记/☁️ 后端/Vite 部署.md",
     "小音的知识库/第一个文件.md",
     "生活/药物/感冒.md",
@@ -136,7 +138,6 @@
     "软件/Figma 设计软件.md",
     "软件/笔记软件.md",
     "笔记/☁️ 后端/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
-    "笔记/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
-    "笔记/🐭 Golang/Go101 书籍（简体中文）.md"
+    "笔记/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md"
   ]
 }
