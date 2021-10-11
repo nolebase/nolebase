@@ -38,8 +38,6 @@ func Go(f func()) {
 }
 ```
 
-
-
 创建工具包对应的测试文件 `util_test.go`
 
 ```go

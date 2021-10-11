@@ -1,10 +1,11 @@
 ## 安装和配置
 
 ### 安装前置软件
+使用 `yum` 或者 `dnf`（两者都一样的效果，[[yum dnf 包管理器]]）进行安装
 
 1. 优先安装 epel-release（一个很大的软件库源，安装后可以搜索和安装更多的软件包）
 2. 更新整个软件包列表缓存和系统
-3. 此处需要安装 Nginx（HTTP 网页服务器），Vim（编辑器，不喜欢的话可以换成 nano），Git（命令行管理），node（Node.js 环境），pnpm（包管理器）
+3. 此处需要安装 Nginx（[[Nginx 网页服务器]]），Vim（[[Vim 编辑器]]，不喜欢的话可以换成 [[GUN Nano 编辑器]]），Git（[[Git 命令速记]]），node（[[node Node.js]]），pnpm（包管理器）
 4. -y 参数表示无需询问是否安装，直接静默安装
 
 ```shell
@@ -68,7 +69,7 @@ $ sudo yum install nginx
 $ sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libxslt libxslt-devel gd-devel perl-devel perl-ExtUtils-Embed GeoIP GeoIP-devel GeoIP-data gperftools-devel
 ```
 
-使用 wget 命令下载 nginx 的源码
+使用 `wget` 命令（参考 [[wget HTTP 客户端]]）下载 nginx 的源码
 
 ```shell
 wget http://nginx.org/download/nginx-1.20.1.tar.gz
@@ -76,13 +77,13 @@ wget http://nginx.org/download/nginx-1.20.1.tar.gz
 
 #### 安装 Node.js
 
-导入 Node14 仓库和配置（和下面的 Node16 二选一）
+使用 `curl` 命令（参考[[curl HTTP 客户端]]）下载并导入 Node14 仓库和配置（和下面的 Node16 二选一）
 
 ```shell
 curl -fsSL https://rpm.nodesource.com/setup_14.x | sudo bash -
 ```
 
-导入 Node16 仓库和配置（和上面的 Node14 二选一）
+使用 `curl` 命令（参考[[curl HTTP 客户端]]）下载并导入 Node16 仓库和配置（和上面的 Node14 二选一）
 
 ```shell
 curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
@@ -102,6 +103,8 @@ $ sudo npm install -g pnpm
 
 ### 设定 Nginx 服务为开机自启，并且开始运行
 
+使用 `systemctl`（参考 [[systemctl 服务管理]]）设定开机自启和运行
+
 ```shell
 $ sudo systemctl enable nginx
 $ sudo systemctl start nginx
@@ -114,7 +117,7 @@ $ sudo systemctl start nginx
 
 #### 检查 iptables
 
-1. 先检查 iptables（一个老牌防火墙服务）是否在运行
+1. 先检查 iptables（一个老牌防火墙服务，命令参考：[[iptables 防火墙配置]]）是否在运行
 
 ```shell
 $ sudo systemctl status iptables
@@ -141,7 +144,7 @@ $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
 #### 检查 firewalld
 
-2. 检查 firewalld（现在主流防火墙服务）是否在运行
+2. 检查 firewalld（现在主流防火墙服务，命令参考 [[firewalld 防火墙配置]]）是否在运行
 
 ```shell
 $ sudo systemctl status firewalld
@@ -190,19 +193,19 @@ $ pnpm i && pnpm build
 
 移动编译产物 `dist` 文件夹到别的地方
 如果是需要限制权限和访问的，可以放到 `/usr/local/frontend/<项目名称>/app`，`frontend` 是前端的意思
-这个目录创建的时候带上 `sudo` 就可以限制为仅可 `root` 或 root 权限访问：
+这个目录使用 `mkdir` （参考 [[mkdir 创建目录]]）创建的时候带上 `sudo` 就可以限制为仅可 `root` 或 root 权限访问：
 
 ```shell
 $ sudo mkdir -p /usr/local/frontend/<项目名称>
 ```
 
-还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
+还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令（参考 [[chown 变更所有权]]）表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
 
 ```shell
 $ sudo chown -R root:whell /usr/local/frontend
 ```
 
-如果没有特别的需求，可以放到原地，比如新建一个 app 文件夹用来存编译产物也是完全没问题的
+如果没有特别的需求，可以放到原地，比如新建一个 app 文件夹用来存编译产物也是完全没问题的；使用 `mv` 命令（参考 [[mv 剪贴、移动]]）把编译好的内容放到新的地方：
 
 ```shell
 $ sudo mv dist <文件夹地址>
@@ -215,7 +218,7 @@ $ sudo mv dist <文件夹地址>
 
 ### 静态文件
 
-静态文件的配置稍微会麻烦一些，可能这个过程中会遇到权限问题，403 配置问题，vue-router history 模式配置不正确导致的 404 问题
+静态文件的配置稍微会麻烦一些，可能这个过程中会遇到权限问题，403 配置问题，`vue-router` history 模式配置不正确导致的 404 问题
 
 新建一个 Nginx 配置文件（配置的时候可以把里面的中文注释删一下，避免编码问题）
 
@@ -304,7 +307,7 @@ $ sudo nginx -t
 
 如果有错误的话会提示具体的文件和行号
 
-重新载入 Nginx 配置文件并应用
+使用 `nginx` 命令（参考 [[Nginx 网页服务器]]）加上参数 `s` 重新载入 Nginx 配置文件并应用
 
 ```shell
 $ sudo nginx -s reload
@@ -466,7 +469,7 @@ $ sudo nginx -t
 $ sudo nginx -s reload
 ```
 
-配置 SELinux 规则以允许 Nginx 访问内网：
+使用 `setsebool` 命令（参考 [[setsebool 配置 SELinux 参数]]）配置 SELinux （参见 [[SELinux 安全 Linux]]）规则以允许 Nginx 访问内网：
 
 ```shell
 $ sudo setsebool -P httpd_can_network_connect on
@@ -491,8 +494,16 @@ $ sudo systemctl status <项目名称>
 如果是使用的静态文件配置，可以检查一下文件的权限，是不是 root，还可以看一下文件具体的权限值：
 
 ```shell
-$ sudo ls -l | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
-             *2^(8-i));if(k)printf("%0o ",k);print}' <目录>
+$ sudo ls -l <目录> | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
+             *2^(8-i));if(k)printf("%0o ",k);print}'
+```
+
+使用上面的命令可以获得下面的输出，这样可以在最前面看到每个文件的具体权限值（[[权限]]）：
+
+```shell
+总用量 4
+664 -rw-rw-r-- 1 neko neko 16 10月  9 17:34 hello
+775 drwxrwxr-x 2 neko neko  6 10月 11 10:37 tests
 ```
 
 一般 600 的话访问不到，不是 root 的话也可能没办法访问到，需要根据具体情况重新设定一下权限才行。
@@ -521,7 +532,7 @@ $ setsebool -P httpd_can_network_connect on
 
 如果是反代理配置的话，404 一般是编译产物目录下面文件找不到了，可以看一下 URL 是否正确，编译后的文件本地也可以测试以下是不是也可以访问到。
 
-如果是 Nginx 静态文件配置的话，404 可能是 history 模式兼容性配置导致的，vue-router 有 hash（哈希）和 history（历史）模式，对于 404 而言需要多加一行
+如果是 Nginx 静态文件配置的话，404 可能是 history 模式兼容性配置导致的，`vue-router` 有 hash（哈希）和 history（历史）模式，对于 404 而言需要多加一行
 
 ```nginx
 location / { 

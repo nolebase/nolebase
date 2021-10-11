@@ -110,8 +110,6 @@ go get gitHub.com/gin-gonic/gin
 
 值得注意的是，这个名称中的 [github.com](http://github.com/) 并不是指从 GitHub 下载 ，而是从名为 gopkg 的网站进行下载，毕竟，依赖也是需要注册才能使用的
 
-
-
 2. 更新并下载依赖包（尽可能地使用这个方法）
 
 ```shell
