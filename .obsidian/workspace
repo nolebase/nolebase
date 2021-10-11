@@ -61,6 +61,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "926195f3bd39ede5",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
@@ -116,6 +124,28 @@
               "type": "outline",
               "state": {
                 "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md"
+              }
+            }
+          },
+          {
+            "id": "5dee71c771b7a259",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "721213d6a7af4df8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
