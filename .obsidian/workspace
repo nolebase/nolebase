@@ -10,8 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
-            "mode": "preview"
+            "file": "笔记/📟 Linux/软件/nano 编辑器.md",
+            "mode": "source"
           }
         },
         "group": "74aaad041da4e383"
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md"
+            "file": "笔记/📟 Linux/软件/nano 编辑器.md"
           }
         },
         "group": "74aaad041da4e383"
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
+                "file": "笔记/📟 Linux/软件/nano 编辑器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md"
+                "file": "笔记/📟 Linux/软件/nano 编辑器.md"
               }
             }
           },
@@ -133,6 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/📟 Linux/软件/nano 编辑器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,15 +159,15 @@
   },
   "active": "9929ddec16dddfe1",
   "lastOpenFiles": [
+    "笔记/📟 Linux/软件/nano 编辑器.md",
+    "笔记/📟 Linux/软件/容器化/未命名.md",
+    "笔记/📟 Linux/软件/Docker 虚拟化/未命名.md",
     "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
     "笔记/📟 Linux/命令/系统管理/ps 进程状态.md",
     "笔记/☁️ 后端/Vite 部署.md",
     "小音的知识库/第一个文件.md",
     "生活/药物/感冒.md",
     "生活/药物/过敏.md",
-    "生活/药物/止痛.md",
-    "软件/Figma 设计软件.md",
-    "软件/笔记软件.md",
-    "笔记/☁️ 后端/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md"
+    "生活/药物/止痛.md"
   ]
 }
