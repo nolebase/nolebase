@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/cp 复制.md",
+            "file": "笔记/☁️ 后端/Cloudflare/Worker 学习.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/cp 复制.md",
+                "file": "笔记/☁️ 后端/Cloudflare/Worker 学习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/cp 复制.md"
+                "file": "笔记/☁️ 后端/Cloudflare/Worker 学习.md"
               }
             }
           },
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/cp 复制.md",
+                "file": "笔记/☁️ 后端/Cloudflare/Worker 学习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,15 +145,15 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
+    "笔记/☁️ 后端/Cloudflare/Worker 学习.md",
+    "笔记/☁️ 后端/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
+    "笔记/☁️ 后端/Vite 部署.md",
+    "笔记/📟 Linux/文件系统.md",
+    "笔记/📟 Linux/权限.md",
+    "笔记/📟 Linux/设置代理.md",
     "笔记/📟 Linux/命令/文件管理/cp 复制.md",
     "笔记/📟 Linux/命令/网络通讯/dig DNS 查询.md",
     "笔记/📟 Linux/软件/wget HTTP 客户端.md",
-    "笔记/📟 Linux/软件/node Node.js.md",
-    "笔记/📟 Linux/软件/Nginx 网页服务器.md",
-    "笔记/📟 Linux/软件/curl HTTP 客户端.md",
-    "笔记/📟 Linux/软件/SSH 远程登入/ssh-keygen 创建 SSH 密钥.md",
-    "笔记/📟 Linux/软件/nano 编辑器.md",
-    "笔记/📟 Linux/软件/SSH 远程登入/ssh 远程登入.md",
-    "笔记/📟 Linux/软件/Git 版本控制/gitignore 不生效解决办法.md"
+    "笔记/📟 Linux/软件/node Node.js.md"
   ]
 }
