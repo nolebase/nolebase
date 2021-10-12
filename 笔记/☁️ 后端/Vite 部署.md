@@ -199,7 +199,7 @@ $ pnpm i && pnpm build
 $ sudo mkdir -p /usr/local/frontend/<项目名称>
 ```
 
-还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令（参考 [[chown 变更所有权]]）表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
+还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令（参考 [[chown 变更所属权]]）表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
 
 ```shell
 $ sudo chown -R root:whell /usr/local/frontend
