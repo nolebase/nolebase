@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+            "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+                "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md"
+                "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md"
               }
             }
           },
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+                "file": "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,6 +145,8 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
+    "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
+    "笔记/📟 Linux/命令/文件管理/cp 复制.md",
     "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
     "笔记/📟 Linux/命令/权限管理/chown 变更所属权.md",
     "笔记/📟 Linux/命令/权限管理/setsebool 配置 SELinux 参数.md",
@@ -152,8 +154,6 @@
     "笔记/📟 Linux/权限.md",
     "笔记/📟 Linux/RedHat Enterprise Linux/SELinux 安全 Linux.md",
     "笔记/📟 Linux/assets/image_20211012140400.png",
-    "Pasted image 20211012140400.png",
-    "笔记/📟 Linux/assets/image_20211012140244.png",
-    "笔记/📟 Linux/assets/Pasted image 20211012140244.png"
+    "Pasted image 20211012140400.png"
   ]
 }
