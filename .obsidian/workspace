@@ -4,29 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9929ddec16dddfe1",
+        "id": "5dd0cd251f26d281",
         "type": "leaf",
-        "dimension": 84.08602150537634,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
-            "mode": "source"
+            "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+            "mode": "preview"
           }
-        },
-        "group": "74aaad041da4e383"
-      },
-      {
-        "id": "2e8ec8fefd3098f4",
-        "type": "leaf",
-        "dimension": 15.913978494623656,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md"
-          }
-        },
-        "group": "74aaad041da4e383"
+        }
       }
     ],
     "direction": "vertical"
@@ -53,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tree",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,8 +56,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -91,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
+                "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md"
+                "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md"
               }
             }
           },
@@ -134,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
+                "file": "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,17 +143,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9929ddec16dddfe1",
+  "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
-    "笔记/📟 Linux/命令/文件管理/rm 移除文件.md",
-    "笔记/📟 Linux/命令/磁盘管理/mkdir 创建目录.md",
-    "笔记/📟 Linux/命令/文件管理/find 查找.md",
-    "笔记/📟 Linux/命令/文件管理/touch 创建文件.md",
-    "笔记/📟 Linux/命令/文件管理/cp 复制.md",
-    "笔记/📟 Linux/命令/文件管理/cat 输出文件.md",
-    "笔记/📟 Linux/命令/文件管理/file 获取文件信息.md",
-    "笔记/📟 Linux/命令/文件管理/which where 获取命令对应的可执行文件.md",
-    "笔记/📟 Linux/命令/磁盘管理/mkswap 创建虚拟内存.md",
-    "笔记/📟 Linux/命令/磁盘管理/未命名.md"
+    "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+    "笔记/📟 Linux/命令/权限管理/chown 变更所属权.md",
+    "笔记/📟 Linux/命令/权限管理/setsebool 配置 SELinux 参数.md",
+    "笔记/📟 Linux/命令/权限管理/chmod 变更权限.md",
+    "笔记/📟 Linux/权限.md",
+    "笔记/📟 Linux/RedHat Enterprise Linux/SELinux 安全 Linux.md",
+    "笔记/📟 Linux/assets/image_20211012140400.png",
+    "Pasted image 20211012140400.png",
+    "笔记/📟 Linux/assets/image_20211012140244.png",
+    "笔记/📟 Linux/assets/Pasted image 20211012140244.png"
   ]
 }
