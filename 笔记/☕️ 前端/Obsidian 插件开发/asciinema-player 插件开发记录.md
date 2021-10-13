@@ -1,11 +1,3 @@
----
-author: '猫猫'
-tags:
-- Obsidian 插件开发
----
-
-
-
 # `asciinema-player` 插件开发记录
 
 ## 说明
