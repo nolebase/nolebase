@@ -1,3 +1,5 @@
+
+
 # `asciinema-player` 插件开发记录
 
 ## 说明
@@ -76,6 +78,22 @@ $ pnpm i
 }
 ```
 
+### 调整文件夹结构
+
+一般情况下源代码都会被放置在 `src` 目录中，我们可以创建一个 `src` 目录，把 `main.ts` 放进去。
+
+![](assets/image_20211013185835.png)
+
+然后去 `rollup.config.js` 文件中调整我们编译的程序入点路径：
+
+```javascript
+export default {
+  input: 'src/main.ts' # 把 input 字段的值从 main.ts 改成 src/main.ts
+  ...
+}
+```
+
+
 ### 编译并开启热加载
 
 ```shell
@@ -85,4 +103,42 @@ $ pnpm dev
 现在对 `main.ts` 及其依赖的文件都会被自动编译到 `main.js` 文件中。
 
 ### 在 Obsidian 中激活我们的插件
+
+1. 先重新加载 Obsidian
+
+![](assets/image_20211013185238.png)
+
+2. 在插件列表中激活我们的插件
+
+![](assets/image_20211013185153.png)
+
+## 源代码解析
+
+```
+import { App, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian'
+
+/**
+ * MyPlugin 拓展了 obsidian 的 Plugin（插件）实现
+ * MyPlugin 同时是一个默认的导出对象，也就是说插件默认从这个位置挂载
+ */
+export default class MyPlugin extends Plugin {
+  // 定义了设定的结构
+	settings: MyPluginSettings;
+	
+	// onload 是默认挂载插件时执行的事件函数
+	async onload() {
+	  // TODO
+	}
+	// onunload 是插件卸载时执行的的事件函数
+	onunload() {
+	  // TODO
+	}
+}
+
+/**
+ * SampleSettingTab 拓展了 obsidian 的 PluginSettingTab（插件设定选项卡）实现
+ */
+class SampleSettingTab extends PluginSettingTab {
+}
+```
 
