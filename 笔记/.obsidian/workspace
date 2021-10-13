@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "ac16a7ff8d1f6f07",
+        "id": "8be69749d8c5562e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "☁️ 后端/Vite 部署.md",
+            "file": "🧰 运维/配置 gitlab ci 自动部署.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "☁️ 后端/Vite 部署.md",
+                "file": "🧰 运维/配置 gitlab ci 自动部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +101,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "☁️ 后端/Vite 部署.md"
+                "file": "🧰 运维/配置 gitlab ci 自动部署.md"
               }
             }
           },
@@ -123,17 +123,17 @@
     "direction": "horizontal",
     "width": 273
   },
-  "active": "ac16a7ff8d1f6f07",
+  "active": "8be69749d8c5562e",
   "lastOpenFiles": [
-    "☁️ 后端/Vite 部署.md",
-    "⬛️ 终端/Linux/设置代理.md",
-    "🐘 PHP/标记.md",
-    "☁️ 后端/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
-    "☕️ 前端/在小型独立窗口中打开页面.md",
-    "☕️ 前端/vue/插件/组件类型的插件开发.md",
-    "📐 图形学/🔘 点乘.md",
-    "📐 图形学/🔢 标量、向量、张量.md",
-    "📐 图形学/📐 向量之间的夹角.md",
-    "📐 图形学/✖️ 叉乘.md"
+    "🧰 运维/配置 gitlab ci 自动部署.md",
+    "🧰 运维/Vite 部署.md",
+    "📟 Linux/命令/权限管理/chown 变更所属权.md",
+    "📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+    "📟 Linux/命令/权限管理/useradd 创建用户.md",
+    "📟 Linux/命令/权限管理/usermod 变更用户.md",
+    "📟 Linux/命令/权限管理/setsebool 配置 SELinux 参数.md",
+    "📟 Linux/命令/权限管理/groupadd 创建用户组.md",
+    "📟 Linux/权限.md",
+    "🧰 运维/未命名.md"
   ]
 }
