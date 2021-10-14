@@ -1,11 +1,11 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:Golang",
@@ -76,11 +76,11 @@
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.59463315217391,
   "lineSizeMultiplier": 3.98395182291667,
-  "collapse-forces": false,
+  "collapse-forces": true,
   "centerStrength": 0.565981657608696,
   "repelStrength": 11.7476222826087,
   "linkStrength": 1,
   "linkDistance": 153,
-  "scale": 0.36065469098204284,
-  "close": true
+  "scale": 0.7584475631393341,
+  "close": false
 }
