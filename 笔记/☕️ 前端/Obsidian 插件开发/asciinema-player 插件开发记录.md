@@ -46,7 +46,7 @@ $ pnpm i
 	"description": "", # 简介
 	"author": "Ayaka Neko", # 作者
 	"authorUrl": "https://github.com/nekomeowww", # 作者地址
-	"isDesktopOnly": false # 是否只支持桌面端
+	"isDesktopOnly": false # 决定了使用的是 Node API（跨平台） 还是 Electron API（桌面端）
 }
 ```
 
@@ -144,5 +144,55 @@ class SampleSettingTab extends PluginSettingTab {
 }
 ```
 
-在 Obsidian 的文档中可以得知：
+在 Obsidian 的[[Obsidian 官方文档参考]]中可以得知：必须使用 `export default class` 导出一个扩展 `Plugin` 的默认类，所以我们的插件要基于拓展的 Plugin 类完成。
+
+## 开始编写
+
+### i18n 支持
+
+在 `src` 下创建 `locales` 目录，以及 `locales` 目录下的 `lang` 文件夹和 `helpers.ts` 文件。
+1. 在 `helpers.ts` 文件中，我们将会构建 i18n 的主要函数 `t`
+2. 在 `lang` 文件夹中，将会保存我们需要的本地化文件
+
+在 `locales/lang` 目录下创建我们的默认语言 English（英文）的本地化文件 `en.ts`，以及简体中文的本地化文件 `zh-cn.ts`，这两个文件的结构都一致：
+
+```typescript
+export default {
+}
+```
+
+在 `helpers.ts` 中写下下面的内容：
+
+```typescript
+import { moment } from 'obsidian' // 导入 moment
+
+// 导入本地化文件
+import en from './lang/en'
+import zhCN from './lang/zh-cn'
+
+// 创建字典
+const localeMap: { [k: string]: Partial<typeof en> } = {
+    en,
+    "zh-cn": zhCN,
+}
+
+// obsidian 中的 moment.locale() 函数可以用于获取黑曜石的语言
+const locale = localeMap[moment.locale()]
+
+/**
+ * @params {String} str - i18n 本地化键值
+ * @returns 本地化字符串
+ */
+export function t(str: keyof typeof en): string {
+  // 如果 locale 不存在，则打印错误
+  if (!locale) {
+    console.error("Error: Plugin obsidian-asciinema-player locale not found", moment.locale());
+  }
+
+  // 如果 locale 或是 locale[str] 未定义，自动回退到 en（英文）
+  return (locale && locale[str]) || en[str]
+}
+```
+
+这样我们在任何一个地方导入 `helpers.ts` 就可以使用 i18n 了。
 
