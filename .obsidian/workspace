@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🧰 运维/配置 GitLab CI CD 自动部署.md",
+            "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
             "mode": "source"
           }
         }
@@ -60,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 239
+    "width": 239,
+    "collapsed": true
   },
   "right": {
     "id": "a6f23219724443e3",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧰 运维/配置 GitLab CI CD 自动部署.md",
+                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧰 运维/配置 GitLab CI CD 自动部署.md"
+                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md"
               }
             }
           },
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧰 运维/配置 GitLab CI CD 自动部署.md",
+                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,15 +147,15 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
-    "笔记/🧰 运维/配置 gitlab ci 自动部署.md",
-    "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+    "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
+    "笔记/📟 Linux/文件系统.md",
     "笔记/📟 Linux/命令/权限管理/usermod 变更用户.md",
     "笔记/📟 Linux/命令/权限管理/useradd 创建用户.md",
+    "笔记/📟 Linux/命令/权限管理/setsebool 配置 SELinux 参数.md",
+    "笔记/🧰 运维/配置 gitlab ci 自动部署.md",
+    "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
     "笔记/📟 Linux/命令/权限管理/chown 变更所属权.md",
-    "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
     "笔记/📟 Linux/软件/node Node.js.md",
-    "笔记/🧰 运维/Vite 部署.md",
-    "笔记/☕️ 前端/Obsidian 插件开发/开源插件参考.md",
-    "笔记/☕️ 前端/Obsidian 插件开发/Obsidian 论坛参考.md"
+    "笔记/🧰 运维/Vite 部署.md"
   ]
 }

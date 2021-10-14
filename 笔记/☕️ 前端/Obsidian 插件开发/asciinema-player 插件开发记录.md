@@ -112,7 +112,9 @@ $ pnpm dev
 
 ![](assets/image_20211013185153.png)
 
-## 源代码解析
+## 插件结构
+
+在案例插件的 `main.ts` 代码文件中可以看到：
 
 ```TypeScript
 import { App, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian'
@@ -141,4 +143,6 @@ export default class MyPlugin extends Plugin {
 class SampleSettingTab extends PluginSettingTab {
 }
 ```
+
+在 Obsidian 的文档中可以得知：
 
