@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "软件/笔记软件/Obsidian 插件收藏.md",
-            "mode": "source"
+            "file": "笔记/🧰 运维/配置 gitlab ci 自动部署.md",
+            "mode": "preview"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "软件/笔记软件/Obsidian 插件收藏.md",
+                "file": "笔记/🧰 运维/配置 gitlab ci 自动部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "软件/笔记软件/Obsidian 插件收藏.md"
+                "file": "笔记/🧰 运维/配置 gitlab ci 自动部署.md"
               }
             }
           },
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "软件/笔记软件/Obsidian 插件收藏.md",
+                "file": "笔记/🧰 运维/配置 gitlab ci 自动部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,15 +146,15 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
-    "软件/笔记软件/Obsidian 插件收藏.md",
-    "笔记/🧰 运维/Vite 部署.md",
-    "笔记/☁️ 后端/Cloudflare/Worker 学习.md",
-    "软件/笔记软件/未命名.md",
-    "软件/笔记软件.md",
+    "笔记/🧰 运维/配置 gitlab ci 自动部署.md",
+    "笔记/📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
+    "笔记/📟 Linux/命令/权限管理/usermod 变更用户.md",
+    "笔记/📟 Linux/命令/权限管理/useradd 创建用户.md",
+    "笔记/📟 Linux/命令/权限管理/chown 变更所属权.md",
     "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
-    "笔记/☕️ 前端/assets/Pasted image 20211013185835.png",
-    "笔记/☕️ 前端/assets/Pasted image 20211013185238.png",
-    "笔记/☕️ 前端/assets/image_20211013185153.png",
-    "笔记/☕️ 前端/Obsidian 插件开发/Obsidian 官方文档参考.md"
+    "笔记/📟 Linux/软件/node Node.js.md",
+    "笔记/🧰 运维/Vite 部署.md",
+    "笔记/☕️ 前端/Obsidian 插件开发/开源插件参考.md",
+    "笔记/☕️ 前端/Obsidian 插件开发/Obsidian 论坛参考.md"
   ]
 }

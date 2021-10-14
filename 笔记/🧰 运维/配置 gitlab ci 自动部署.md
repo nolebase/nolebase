@@ -144,15 +144,15 @@ sudo usermod -g wheel gitlab-runner
 
 #### 2. 设置 whell 组的 sudo 命令权限，允许免密码执行 sudo
 
-1. ##### 切换到 root 用户下
+1. ##### 切换到 `root` 用户下
 
 ```shell
 su root
 ```
 
-3. ##### 打开 sudoers 文件
+3. ##### 打开 `sudoers` 文件
 
-sudoers 文件到的目录是 `/etc/sudoers`
+`sudoers` 文件的目录是 `/etc/sudoers`
 
 有可能出现无法编辑 `sudoers` 文件的情况，需要添加写权限：
 
@@ -160,7 +160,7 @@ sudoers 文件到的目录是 `/etc/sudoers`
 chmod u+w /etc/sudoers
 ```
 
-通过 vim 或者 nano 命令编辑
+通过 `vim` 或者 `nano` 命令编辑
 
 ```shell
 vim /etc/sudoers
@@ -168,7 +168,7 @@ vim /etc/sudoers
 
 ##### 3. 编辑文件，设置 sudo 权限
 
-在 `shuders` 文件中找到 `# %wheel	ALL=(ALL)	NOPASSWD: ALL`  这一行，将它前面的注视,也就是 `#` 去掉，然后保存文件。如果没有找到，也可以直接新建一行填入这段文本。然后保存文件并退出
+在 `sudoers` 文件中找到 `# %wheel	ALL=(ALL)	NOPASSWD: ALL`  这一行，将它前面的注释，也就是 `#` 去掉，然后保存文件。如果没有找到，也可以直接新建一行填入这段文本。然后保存文件并退出
 
 ##### 4. 撤销刚刚添加的 sudoers 文件写权限
 
@@ -178,11 +178,9 @@ vim /etc/sudoers
 chmod u-w /etc/sudoers
 ```
 
-
-
 ### 编写 .gitlab-ci.yml 脚本
 接下来我们参考 [官方文档](https://docs.gitlab.com/ee/ci/yaml/README.html) 的格式，在 .gitlab-ci.yml 文件写入要执行的步骤和触发条件。
-编写完成后可以进入 Gitlab 项目，然后选择 `CI/CD` -> `流水线` -> `CI lint`，打开**“证您的GitLab CI配置”** 页面，在这里可以校验你的 .gitlab-ci.yml 文件语法是否正。
+编写完成后可以进入 Gitlab 项目，然后选择 `CI/CD` -> `流水线` -> `CI lint`，打开**“验证您的GitLab CI配置”** 页面，在这里可以校验你的 .gitlab-ci.yml 文件语法是否正。
 
 #### 完整的 .gitlab-ci.yml 脚本如下
 ```yaml
