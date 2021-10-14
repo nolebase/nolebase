@@ -1,2 +1,2 @@
-## 标签测试
-![](asciinema:assets/demo.cast)
+## `asciinema-player` 测试
+![](asciinema:assets/asciinema_demo.cast)
