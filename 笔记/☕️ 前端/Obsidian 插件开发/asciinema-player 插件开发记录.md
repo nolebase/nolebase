@@ -114,7 +114,7 @@ $ pnpm dev
 
 ## 源代码解析
 
-```
+```TypeScript
 import { App, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian'
 
 /**
