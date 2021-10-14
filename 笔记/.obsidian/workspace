@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "8be69749d8c5562e",
+        "id": "933cbe1e783c88b3",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -60,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100
+    "width": 316
   },
   "right": {
     "id": "f41954ca417f7a75",
@@ -116,24 +116,23 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 273
   },
-  "active": "8be69749d8c5562e",
+  "active": "933cbe1e783c88b3",
   "lastOpenFiles": [
     "🧰 运维/配置 gitlab ci 自动部署.md",
     "🧰 运维/Vite 部署.md",
-    "📟 Linux/命令/权限管理/chown 变更所属权.md",
-    "📟 Linux/命令/权限管理/chgrp 变更所属群组.md",
-    "📟 Linux/命令/权限管理/useradd 创建用户.md",
-    "📟 Linux/命令/权限管理/usermod 变更用户.md",
-    "📟 Linux/命令/权限管理/setsebool 配置 SELinux 参数.md",
+    "🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
+    "🐭 Golang/复制结构体指针到新的指针中.md",
+    "🐭 Golang/Go 常用命令行指令.md",
+    "🐭 Golang/Go101 书籍（简体中文）.md",
     "📟 Linux/命令/权限管理/groupadd 创建用户组.md",
-    "📟 Linux/权限.md",
-    "🧰 运维/未命名.md"
+    "📟 Linux/命令/权限管理/chown 变更所属权.md",
+    "📟 Linux/命令/权限管理/usermod 变更用户.md",
+    "📟 Linux/命令/权限管理/useradd 创建用户.md"
   ]
 }
