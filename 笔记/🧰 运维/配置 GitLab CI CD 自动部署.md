@@ -249,8 +249,6 @@ YAML 有一个名为“锚”的功能，您可以使用它在整个文档中复
 
 发现权限设置有误，可以通过 `chmod` 变更权限，`chown` 变更所属权之类的方式进行权限的修改。
 
-
-
 ##### 查看 gitlab-runner 服务运行时的 log：
 
 ```shell
@@ -258,8 +256,6 @@ systemctl status gitlab-runner -l
 ```
 
 使用 `status` 获取状态， `-l` 参数表示显示完整 log，这个办法可以看到最近的十条 log
-
-
 
 ##### 配置文件:
 
