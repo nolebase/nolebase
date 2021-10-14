@@ -1,2 +1,2 @@
 ## 标签测试
-![](asciinema:demo.cast)
+![](asciinema:assets/demo.cast)
