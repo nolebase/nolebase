@@ -6,8 +6,6 @@
 | ------------------------------------------------------------ | ------------------- |
 | [svgo](https://github.com/svg/svgo)                          | 用于压缩 SVG        |
 
-
-
 ## 安装依赖
 ```
 pnpm install -D vite-plugin-svg-icons svgo
