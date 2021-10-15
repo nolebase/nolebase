@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
-            "mode": "preview"
+            "file": "笔记/🐭 Golang/Golang 学习资料大全.md",
+            "mode": "source"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
+                "file": "笔记/🐭 Golang/Golang 学习资料大全.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md"
+                "file": "笔记/🐭 Golang/Golang 学习资料大全.md"
               }
             }
           },
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
+                "file": "笔记/🐭 Golang/Golang 学习资料大全.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,6 +146,8 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
+    "笔记/🐭 Golang/未命名.md",
+    "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
     "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
     "笔记/☕️ 前端/assets/image_20211013185238.png",
     "笔记/☕️ 前端/Obsidian 插件开发/开源插件参考.md",
@@ -153,8 +155,6 @@
     "笔记/☕️ 前端/assets/asciinema_demo.cast",
     "笔记/📈 监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md",
     "笔记/📈 监控/assets/Pasted image 20211015122207.png",
-    "Pasted image 20211015122147.png",
-    "笔记/📈 监控/Grafana 监控大盘/未命名.md",
-    "笔记/🐭 Golang/未命名.md"
+    "Pasted image 20211015122147.png"
   ]
 }
