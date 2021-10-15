@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
+            "file": "笔记/🗂 数据库/SQL 规范.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
+                "file": "笔记/🗂 数据库/SQL 规范.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md"
+                "file": "笔记/🗂 数据库/SQL 规范.md"
               }
             }
           },
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
+                "file": "笔记/🗂 数据库/SQL 规范.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,6 +146,7 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
+    "笔记/🗂 数据库/未命名.md",
     "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
     "笔记/☕️ 前端/Obsidian 插件开发/开源插件参考.md",
     "笔记/☕️ 前端/Obsidian 插件开发/Obsidian 论坛参考.md",
@@ -154,7 +155,6 @@
     "笔记/☕️ 前端/assets/demo.cast",
     "assets/demo.cast",
     "笔记/☕️ 前端/assets/image_20211013185835.png",
-    "笔记/☕️ 前端/assets/image_20211013185153.png",
-    "笔记/☕️ 前端/assets/image_20211013185238.png"
+    "笔记/☕️ 前端/assets/image_20211013185153.png"
   ]
 }
