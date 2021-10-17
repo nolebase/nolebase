@@ -69,7 +69,7 @@ export default () => {
       // SvgIcon 用于生成 svg 雪碧图
       viteSvgIcons({
         // 指定需要缓存的图标文件夹
-        iconDirs: [path.resolve(process.cwd(), 'src/icons')],
+        iconDirs: [path.resolve(process.cwd(), 'src/icons/svg')],
         // 指定symbolId格式
         symbolId: 'icon-[dir]-[name]',
       }),
