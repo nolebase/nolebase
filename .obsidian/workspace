@@ -88,22 +88,6 @@
             }
           },
           {
-            "id": "ac8a84facaeb8883",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "b2952bf202ae695a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "e80e13e1669c9ced",
             "type": "leaf",
             "state": {
@@ -146,6 +130,7 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
+    "笔记/🐭 Golang/Golang 学习资料大全.md",
     "笔记/🐭 Golang/未命名.md",
     "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
     "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
@@ -154,7 +139,6 @@
     "笔记/☕️ 前端/assets/asciinema_nyan.cast",
     "笔记/☕️ 前端/assets/asciinema_demo.cast",
     "笔记/📈 监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md",
-    "笔记/📈 监控/assets/Pasted image 20211015122207.png",
-    "Pasted image 20211015122147.png"
+    "笔记/📈 监控/assets/Pasted image 20211015122207.png"
   ]
 }
