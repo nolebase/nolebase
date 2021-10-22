@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 Linux/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
+            "file": "笔记/🕸 网络/docker 配置 dnsmasq.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 Linux/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
+                "file": "笔记/🕸 网络/docker 配置 dnsmasq.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 Linux/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md"
+                "file": "笔记/🕸 网络/docker 配置 dnsmasq.md"
               }
             }
           },
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📟 Linux/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
+                "file": "笔记/🕸 网络/docker 配置 dnsmasq.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,15 +130,15 @@
   },
   "active": "5dd0cd251f26d281",
   "lastOpenFiles": [
-    "笔记/📟 Linux/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
-    "笔记/📟 Linux/软件/容器化/docker 容器化.md",
+    "笔记/🕸 网络/docker 配置 dnsmasq.md",
+    "笔记/🕸 网络/assets/dnsmasq-setup.cast",
+    "笔记/🕸 网络/未命名.md",
+    "笔记/📟 终端/软件/容器化/docker 容器化.md",
+    "笔记/📟 终端/Unix 权限.md",
+    "笔记/📟 终端/Unix 文件系统.md",
+    "笔记/📟 终端/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
     "笔记/🐭 Golang/Golang 学习资料大全.md",
     "笔记/🐭 Golang/未命名.md",
-    "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md",
-    "笔记/☕️ 前端/Obsidian 插件开发/asciinema 测试.md",
-    "笔记/☕️ 前端/assets/image_20211013185238.png",
-    "笔记/☕️ 前端/Obsidian 插件开发/开源插件参考.md",
-    "笔记/☕️ 前端/assets/asciinema_nyan.cast",
-    "笔记/☕️ 前端/assets/asciinema_demo.cast"
+    "笔记/☕️ 前端/Obsidian 插件开发/asciinema-player 插件开发记录.md"
   ]
 }

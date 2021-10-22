@@ -42,7 +42,7 @@ $ file /usr/bin/curl
 
 3. 看图片信息
 
-![IMG_7413.jpg|100](assets/IMG_7413.jpg)
+![IMG_7413.jpg|100](IMG_7413.jpg)
 IMG_7413.jpg
 
 ```shell
