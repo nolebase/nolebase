@@ -7,8 +7,11 @@
         "id": "46b877b7ea45716f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +115,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md"
+              }
             }
           }
         ]
@@ -121,5 +128,9 @@
     "collapsed": true
   },
   "active": "46b877b7ea45716f",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
+    "笔记/🕸 网络/docker 配置 dnsmasq.md",
+    "笔记/🕸 网络/IP 后面的斜杠是什么？.md"
+  ]
 }
