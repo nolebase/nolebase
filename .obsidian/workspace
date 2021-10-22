@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "46b877b7ea45716f",
+        "id": "c589947a0e4d8159",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -115,9 +110,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/🕸 网络/WireGuard VPN 多用户管理.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -127,10 +120,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "46b877b7ea45716f",
+  "active": "c589947a0e4d8159",
   "lastOpenFiles": [
-    "笔记/🕸 网络/WireGuard VPN 多用户管理.md",
+    "笔记/🗂 数据库/🐘 PostgreSQL/分配权限.md",
+    "笔记/🗂 数据库/🐘 PostgreSQL/创建用户和更改用户密码.md",
+    "笔记/🗂 数据库/🐘 PostgreSQL/常用控制台指令.md",
     "笔记/🕸 网络/docker 配置 dnsmasq.md",
-    "笔记/🕸 网络/IP 后面的斜杠是什么？.md"
+    "笔记/🕸 网络/IP 后面的斜杠是什么？.md",
+    "笔记/🕸 网络/WireGuard VPN 多用户管理.md"
   ]
 }
