@@ -18,7 +18,7 @@
 
 `./src/util/sliderValidator.ts`:
 
-```typescript
+``````typescript
 /** 验证结果 */
 export type SliderValidatorResult = {
   /** 验证结果，0：验证成功。2：用户主动关闭验证码。 */
@@ -128,7 +128,7 @@ export function sliderVerification(options?: TencentCaptchaOptions): ApplySlider
     })
   }
 }
-```
+``````
 
 这边会用到一个 `import.meta.env.VITE_TENCENT_CAPTCHA_APP_ID` 的参数，可以从从腾讯云的验证码控制台中获取, 验证码控制台页面内【图形验证】>【验证列表】进行查看 。如果未新建验证，请根据业务需求选择适合的验证渠道、验证场景进行新建。
 
