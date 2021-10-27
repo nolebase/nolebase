@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "🔌 知识库插件列表.md",
-            "mode": "source"
+            "file": "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,6 @@
       {
         "id": "166ecf9eee3475b0",
         "type": "tabs",
-        "dimension": 34.79561316051844,
         "children": [
           {
             "id": "c589947a0e4d8159",
@@ -84,7 +83,6 @@
       {
         "id": "00f8f8ad2cb9f9b0",
         "type": "tabs",
-        "dimension": 65.20438683948156,
         "children": [
           {
             "id": "ccb7652bb733a848",
@@ -92,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🔌 知识库插件列表.md",
+                "file": "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +107,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🔌 知识库插件列表.md",
+                "file": "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🔌 知识库插件列表.md"
+                "file": "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md"
               }
             }
           }
@@ -145,15 +143,15 @@
   },
   "active": "543f1718673aa752",
   "lastOpenFiles": [
+    "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
+    "笔记/🕸 网络/WireGuard VPN/WireGuard 安装.md",
+    "笔记/🕸 网络/WireGuard VPN/WireGuard 配置.md",
+    "软件/笔记软件/Obsidian 插件收藏.md",
     "🔌 知识库插件列表.md",
     "笔记/📟 终端/Linux 命令索引.md",
     "笔记/🛠 VS Code/解决 VS Code 不能在只读卷上更新.md",
     "笔记/🕸 网络/docker 配置 dnsmasq.md",
     "笔记/🕸 网络/IP 后面的斜杠是什么？.md",
-    "笔记/🕸 网络/WireGuard VPN/WireGuard 安装.md",
-    "笔记/🕸 网络/WireGuard VPN/WireGuard 配置.md",
-    "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
-    "笔记/📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md",
-    "笔记/📟 终端/Linux 命令/文件管理/file 获取文件信息.md"
+    "笔记/📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md"
   ]
 }
