@@ -4,35 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b67452dff01f93c2",
-        "type": "split",
-        "children": [
-          {
-            "id": "3824214d3027f9a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "☕️ 前端/📝 代码片段/超出文本显示省略号.md",
-                "mode": "source"
-              }
-            },
-            "group": "d4144b4629a60c6e"
-          },
-          {
-            "id": "83fa23f06fffe3a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "☕️ 前端/📝 代码片段/超出文本显示省略号.md",
-                "mode": "preview"
-              }
-            },
-            "group": "d4144b4629a60c6e"
+        "id": "e5b3e3c9d826d9b0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "☕️ 前端/📝 代码片段/Vue3 + TypeScript 接入腾讯云滑块验证.md",
+            "mode": "preview"
           }
-        ],
-        "direction": "horizontal"
+        }
       }
     ],
     "direction": "vertical"
@@ -59,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git-rebase-vsc-preview",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227
+    "width": 261
   },
   "right": {
     "id": "f41954ca417f7a75",
@@ -96,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "☕️ 前端/📝 代码片段/超出文本显示省略号.md",
+                "file": "☕️ 前端/📝 代码片段/Vue3 + TypeScript 接入腾讯云滑块验证.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,20 +88,12 @@
             }
           },
           {
-            "id": "11c985953604a7e7",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "8a760cb4724b8ef5",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "☕️ 前端/📝 代码片段/超出文本显示省略号.md"
+                "file": "☕️ 前端/📝 代码片段/Vue3 + TypeScript 接入腾讯云滑块验证.md"
               }
             }
           },
@@ -137,23 +109,23 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 273
+    "width": 146
   },
-  "active": "3824214d3027f9a2",
+  "active": "e5b3e3c9d826d9b0",
   "lastOpenFiles": [
+    "☕️ 前端/📝 代码片段/Vue3 + TypeScript 接入腾讯云滑块验证.md",
     "☕️ 前端/📝 代码片段/超出文本显示省略号.md",
-    "☕️ 前端/📝 代码片段/未命名.md",
-    "☕️ 前端/vue/Vite 配置 SVG 雪碧图和 SVG 压缩.md",
-    "☕️ 前端/vue/Vite 配置 SVG 雪碧图.md",
-    "📟 Linux/软件/Git 版本控制/Git 命令速记.md",
-    "📟 Linux/软件/Git 版本控制/Git 客户端配置 SSH 验证.md",
-    "📟 Linux/软件/Git 版本控制/国内 GitHub 加速.md",
-    "☕️ 前端/vue/未命名.md",
-    "☕️ 前端/vue/插件/组件类型的插件开发.md",
-    "☕️ 前端/📝 代码片段/🌛 暗色模式-支持跟随系统与手动指定.md"
+    "📟 终端/软件/容器化/docker 容器化.md",
+    "📟 终端/软件/容器化/docker-compose 容器化批处理.md",
+    "📟 终端/Unix 文件系统.md",
+    "📟 终端/设置代理.md",
+    "🕸 网络/WireGuard VPN 多用户管理.md",
+    "🕸 网络/IP 后面的斜杠是什么？.md",
+    "🕸 网络/docker 配置 dnsmasq.md",
+    "📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md"
   ]
 }
