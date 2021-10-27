@@ -103,7 +103,7 @@ $ sudo npm install -g pnpm
 
 ### 设定 Nginx 服务为开机自启，并且开始运行
 
-使用 `systemctl`（参考 [[systemctl 服务管理]]）设定开机自启和运行
+使用 `systemctl`（参考 [[🚧  systemctl 服务管理]]）设定开机自启和运行
 
 ```shell
 $ sudo systemctl enable nginx
@@ -117,7 +117,7 @@ $ sudo systemctl start nginx
 
 #### 检查 iptables
 
-1. 先检查 iptables（一个老牌防火墙服务，命令参考：[[iptables 防火墙配置]]）是否在运行
+1. 先检查 iptables（一个老牌防火墙服务，命令参考：[[🚧  iptables 防火墙配置]]）是否在运行
 
 ```shell
 $ sudo systemctl status iptables
@@ -144,7 +144,7 @@ $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
 #### 检查 firewalld
 
-2. 检查 firewalld（现在主流防火墙服务，命令参考 [[firewalld 防火墙配置]]）是否在运行
+2. 检查 firewalld（现在主流防火墙服务，命令参考 [[🚧  firewalld 防火墙配置]]）是否在运行
 
 ```shell
 $ sudo systemctl status firewalld
@@ -469,7 +469,7 @@ $ sudo nginx -t
 $ sudo nginx -s reload
 ```
 
-使用 `setsebool` 命令（参考 [[setsebool 配置 SELinux 参数]]）配置 SELinux （参见 [[SELinux 安全 Linux]]）规则以允许 Nginx 访问内网：
+使用 `setsebool` 命令（参考 [[🚧  setsebool 配置 SELinux 参数]]）配置 SELinux （参见 [[SELinux 安全 Linux]]）规则以允许 Nginx 访问内网：
 
 ```shell
 $ sudo setsebool -P httpd_can_network_connect on
@@ -498,7 +498,7 @@ $ sudo ls -l <目录> | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/
              *2^(8-i));if(k)printf("%0o ",k);print}'
 ```
 
-使用上面的命令可以获得下面的输出，这样可以在最前面看到每个文件的具体权限值（[[Unix 权限]]）：
+使用上面的命令可以获得下面的输出，这样可以在最前面看到每个文件的具体权限值（[[Linux 权限]]）：
 
 ```shell
 总用量 4

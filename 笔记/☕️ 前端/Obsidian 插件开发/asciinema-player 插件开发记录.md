@@ -2,6 +2,8 @@
 
 # `asciinema-player` 插件开发记录
 
+#typescript #obsidian-plugin #rollup #前端 
+
 ## 说明
 
 [如何离线使用 asciinema](https://unix.stackexchange.com/questions/512450/how-to-use-asciinema-offline)

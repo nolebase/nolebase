@@ -1,3 +1,7 @@
+# Obsidian 官方文档参考
+
+#obsidian-plugin 
+
 ## 关于 `main.ts`
 
 1. 使用 `require('obsidian')` 导入任何黑曜石 API。
