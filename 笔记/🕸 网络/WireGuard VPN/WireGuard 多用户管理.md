@@ -71,6 +71,8 @@ $ sudo wg-quick save wg0
 [Interface]
 # 客户端的私匙，对应服务器配置中的客户端公匙（自动读取上面刚刚生成的密匙内容）
 PrivateKey = <上面创建的 privatekey1>
+# 客户端监听端口，一般为 51820
+ListenPort = 51820
 # 客户端的内网IP地址（如果上面你添加的内网IP不是 .3 请自行修改）
 Address = 10.0.0.3/24
 # 解析域名用的DNS

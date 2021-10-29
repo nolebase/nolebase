@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🐭 Golang/嵌套式表驱动.md",
+            "file": "🔌 知识库插件列表.md",
             "mode": "preview"
           }
         }
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🐭 Golang/嵌套式表驱动.md",
+                "file": "🔌 知识库插件列表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🐭 Golang/嵌套式表驱动.md",
+                "file": "🔌 知识库插件列表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🐭 Golang/嵌套式表驱动.md"
+                "file": "🔌 知识库插件列表.md"
               }
             }
           }
@@ -145,15 +145,15 @@
   },
   "active": "543f1718673aa752",
   "lastOpenFiles": [
-    "笔记/🐭 Golang/嵌套式表驱动.md",
-    "笔记/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
-    "笔记/📟 终端/软件/SSH 远程登入/ssh 禁用 Root 登录.md",
-    "笔记/📟 终端/软件/SSH 远程登入/ssh 禁用密码登录.md",
-    "笔记/📟 终端/软件/SSH 远程登入/ssh-keygen 创建 SSH 密钥.md",
-    "笔记/📟 终端/软件/SSH 远程登入/ssh 远程登入.md",
-    "笔记/🕸 网络/WireGuard VPN/WireGuard 配置.md",
-    "笔记/🕸 网络/WireGuard VPN/WireGuard 安装.md",
+    "🔌 知识库插件列表.md",
+    "笔记/🖥 桌面端/Swift/在 Swift 中调用 AppleScript.md",
+    "笔记/🖥 桌面端/Swift/Xcode 项目的 Entitlements 文件在构建过程中被修改时报错.md",
+    "笔记/🖥 桌面端/Swift/assets/Xcode_image_20211029164627.png",
+    "笔记/🖥 桌面端/Swift/assets/Xcode_image_20211029164434.png",
+    "笔记/🖥 桌面端/Swift/assets/Xcode_image_20211029164201.png",
+    "笔记/🖥 桌面端/Swift/assets/Xcode_2021-10-29_16-27-59.png",
+    "笔记/🕸 网络/WireGuard VPN/WireGuard 内网到内网.md",
     "笔记/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
-    "服务/☁️ 猫猫云/内网 IP 列表.md"
+    "笔记/🕸 网络/WireGuard VPN/WireGuard 配置.md"
   ]
 }
