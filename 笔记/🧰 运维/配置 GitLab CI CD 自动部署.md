@@ -1,5 +1,5 @@
 # 配置 Gitlab CI 自动部署
-作者：小音，标签: #gitlab #ci 
+作者：小音，标签: #gitlab #ci
 本教程预期实现将前端代码提交到 test 分支或者合并到 test 分支时触发自动部署脚本，从而实现自动部署测试环境的目的。
 
 > 本篇不包含如何建立网站服务器的内容，只讲述如何配置 Gitlab CI。
@@ -89,6 +89,10 @@ cd $BASEDIR
 ```shell
 # ci/deploy_staging.sh
 # 测试网的部署脚本
+
+# 遇到错误时退出，更加可读的版本是：set -o errexit
+set -e
+
 echo "============================"
 echo "=== Start deploy staging ==="
 echo "============================"
@@ -102,19 +106,22 @@ echo "==== Copy product files ===="
 
 # 开启 地址通配符功能
 shopt -s extglob
-# 删除部署文件夹中之前留下的文件，保留 dist（build 后的产物） 和 node_modules 文件夹
+# 删除部署文件夹中之前留下的文件，只保留 dist（构建产物） 和 node_modules （依赖）文件夹
 sudo rm -rf /usr/share/frontend/!(dist|node_modules)
-sudo rm -rf /usr/share/frontend/.*
+# 删除 . 开头的隐藏文件，它们是漏网之鱼
+sudo rm -rf /usr/share/frontend/{.[!.],..?}*
+echo "Remaining files："
+ls -la /usr/share/frontend/
 
 # 为了防止因为没有权限复制而出错，预先设置署文件夹的权限组为 gitlab-runner
 sudo chown -R gitlab-runner:gitlab-runner /usr/share/frontend
 # 拷贝至部署文件夹
-cp -r . /usr/share/frontend/gamecreatorwebfe/
+cp -r . /usr/share/frontend/
 # 设置一次部署文件夹内新放进去文件的权限，允许读写和执行
 sudo chmod -R 775 /usr/share/frontend
 
 # 进入部署文件夹
-cd /usr/share/frontend
+cd /usr/share/frontend/
 
 echo "==== Start pnpm install ===="
 # 安装依赖
@@ -122,8 +129,8 @@ pnpm install
 
 echo "===== Start build test ====="
 # 编译项目
-pnpm build-test
-  
+pnpm test
+
 echo "============================="
 echo "== Finished deploy staging =="
 echo "============================="
@@ -219,7 +226,7 @@ deploy_staging2:
 
 > .deploy_staging_default: &deploy_staging_default
 >
-> 
+>
 >
 > <<: *deploy_staging_default
 
