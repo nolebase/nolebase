@@ -1,1 +1,0 @@
-![](asciinema:assets/dnsmasq-setup.cast)
