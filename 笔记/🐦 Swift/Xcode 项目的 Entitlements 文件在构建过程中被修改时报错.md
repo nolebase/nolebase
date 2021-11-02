@@ -8,4 +8,4 @@ Entitlements file "Track.entitlements" was modified during the build, which is n
 
 Xcode > Product > Clean Build Folder
 
-![](assets/Xcode_2021-10-29_16-27-59.png)
+![](Xcode_2021-10-29_16-27-59.png)
