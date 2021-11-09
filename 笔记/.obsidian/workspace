@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "☕️ 前端/📝 代码片段/响应式固定比例的 DIV 盒子.md",
-            "mode": "preview"
+            "file": "☕️ 前端/vue/Vite 配置 SVG 雪碧图和 SVG 压缩.md",
+            "mode": "source"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "☕️ 前端/📝 代码片段/响应式固定比例的 DIV 盒子.md",
+                "file": "☕️ 前端/vue/Vite 配置 SVG 雪碧图和 SVG 压缩.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "☕️ 前端/📝 代码片段/响应式固定比例的 DIV 盒子.md"
+                "file": "☕️ 前端/vue/Vite 配置 SVG 雪碧图和 SVG 压缩.md"
               }
             }
           },
@@ -117,15 +117,15 @@
   },
   "active": "e5b3e3c9d826d9b0",
   "lastOpenFiles": [
-    "☕️ 前端/📝 代码片段/响应式固定比例的 DIV 盒子.md",
-    "☕️ 前端/📝 代码片段/Vue3 + TypeScript 接入腾讯云滑块验证.md",
-    "☕️ 前端/📝 代码片段/🌛 暗色模式-支持跟随系统与手动指定.md",
-    "☕️ 前端/词汇/互联网.md",
-    "☕️ 前端/📝 代码片段/超出文本显示省略号.md",
-    "🧰 运维/Vite 部署.md",
-    "語 编程语言/🦀️ Rust/📖 学习文档.md",
-    "語 编程语言/🐭 Golang/复制结构体指针到新的指针中.md",
-    "語 编程语言/🐭 Golang/嵌套式表驱动.md",
-    "語 编程语言/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md"
+    "☕️ 前端/vue/Vite 配置 SVG 雪碧图和 SVG 压缩.md",
+    "☕️ 前端/vue/🐚  Vite2 + Vue3 模版项目.md",
+    "☕️ 前端/「自适应」与「响应式」布局.md",
+    "☕️ 前端/前端开发路线图.md",
+    "☕️ 前端/vue/Vite2 + Vue3 模版项目.md",
+    "📐 图形学/^ 单位向量.md",
+    "📐 图形学/↗️ 向量长度.md",
+    "📐 图形学/▶️ 三角函数.md",
+    "📐 图形学/✖️ 叉乘.md",
+    "📐 图形学/📐 向量之间的夹角.md"
   ]
 }
