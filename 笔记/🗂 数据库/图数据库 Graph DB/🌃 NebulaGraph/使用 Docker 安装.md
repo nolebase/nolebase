@@ -1,5 +1,11 @@
 # 使用 Docker 安装
 
+##### 文档兼容性
+
+| 主体 | 版本号 | 文档地址（如果有） |
+| -- | -- | -- |
+| NebulaGraph | v2.6.0 | https://docs.nebula-graph.com.cn/2.6.0/ |
+
 ## 克隆 Docker Compose[^1] 配置仓库
 
 ```shell

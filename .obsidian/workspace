@@ -1,14 +1,17 @@
 {
   "main": {
-    "id": "02caf2c4627cb227",
+    "id": "25f4cc8f077230c0",
     "type": "split",
     "children": [
       {
-        "id": "d11450d305e59d33",
+        "id": "a3275d5dd38aaf2f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "笔记/語 编程语言/🐦 Swift/SwiftUI 生命周期控制.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -89,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/語 编程语言/🐦 Swift/SwiftUI 生命周期控制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/語 编程语言/🐦 Swift/SwiftUI 生命周期控制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +131,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/語 编程语言/🐦 Swift/SwiftUI 生命周期控制.md"
+              }
             }
           }
         ],
@@ -136,17 +143,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "d11450d305e59d33",
+  "active": "a3275d5dd38aaf2f",
   "lastOpenFiles": [
-    "笔记/🗂 数据库/非关系型数据库 NoSQL/📦 Couchbase/Swift SDK 集成.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/开发工具 Nebula Graph Studio 和 Nebula Explorer.md",
-    "笔记/🗂 数据库/关系型数据库 Relational DB/🏠 Clickhouse/什么是 Clickhouse？.md",
-    "笔记/♦️ 区块链/Dfinity/Motoko 游乐场.md",
-    "笔记/♦️ 区块链/Polygon/安装 SDK 和侧链部署.md",
-    "笔记/語 编程语言/🐦 Swift/Index 索引.md",
+    "笔记/語 编程语言/🐦 Swift/SwiftUI 生命周期控制.md",
+    "笔记/語 编程语言/🐦 Swift/Xcode 激活的开发者目录错误.md",
+    "笔记/語 编程语言/🐦 Swift/Swift 入门.md",
+    "笔记/語 编程语言/🐦 Swift/macOS SwiftUI 配置文件存储与更新.md",
     "笔记/語 编程语言/🐦 Swift/无障碍（Accessibility）API.md",
-    "笔记/🗂 数据库/Index.md",
-    "笔记/🗂 数据库/关系型数据库 Relational DB/📊 MySQL/Index.md",
-    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/Index.md"
+    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建空间（类似于 SQL 的数据库）.md",
+    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/开发工具 Nebula Graph Studio 和 Nebula Explorer.md",
+    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/使用 Docker 安装.md",
+    "笔记/🗂 数据库/非关系型数据库 NoSQL/📦 Couchbase/Swift SDK 集成.md",
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🏠 Clickhouse/什么是 Clickhouse？.md"
   ]
 }
