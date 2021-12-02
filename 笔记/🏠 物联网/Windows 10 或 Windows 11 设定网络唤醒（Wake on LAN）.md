@@ -51,7 +51,7 @@ switch:
    name: <按钮的名称>
    turn_off:
      service: shell_command.turn_off_rizumu_desktop
-	 
+
 shell_command:
   turn_off_rizumu_desktop: 'curl -X GET <RPC 服务器>'
 ```
@@ -65,7 +65,7 @@ switch:
    name: 小音的电脑
    turn_off:
      service: shell_command.turn_off_rizumu_desktop
-	 
+
 shell_command:
   turn_off_rizumu_desktop: 'curl -X GET http://rizumu-desktop/rpc'
 ```
