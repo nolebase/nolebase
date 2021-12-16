@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md",
-            "mode": "source"
+            "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md",
+            "mode": "preview"
           }
         }
       }
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md",
+                "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md",
+                "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md"
+                "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md"
               }
             }
           }
@@ -145,15 +145,15 @@
   },
   "active": "a3275d5dd38aaf2f",
   "lastOpenFiles": [
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建图空间.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/使用 Docker 安装.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/玩具房/物种关系.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/玩具房/用户和评论.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/开发工具 Nebula Graph Studio 和 Nebula Explorer.md",
-    "笔记/語 编程语言/🐦 Swift/SwiftUI 生命周期控制.md",
-    "笔记/語 编程语言/🐦 Swift/Scripting Bridge.md",
+    "笔记/🧰 运维/部署 Confluence Data Center 版.md",
     "⚠️ 知识库须知.md",
-    "笔记/語 编程语言/🐦 Swift/Xcode 项目的 Entitlements 文件在构建过程中被修改时报错.md"
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md",
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/创建用户和更改用户密码.md",
+    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建图空间.md",
+    "笔记/🧰 运维/申请 Let's Encrypt 的 SSL 证书.md",
+    "笔记/🧰 运维/🧾 证书基础设施/OpenSSL 通过指定的 CRL（证书吊销列表）手动验证证书有效性.md",
+    "笔记/🧰 运维/Vite 部署.md",
+    "笔记/🧰 运维/配置 GitLab CI CD 自动部署.md",
+    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md"
   ]
 }
