@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md",
-            "mode": "preview"
+            "file": "笔记/🧰 运维/Dell 戴尔服务器/配置 iDRAC 的 TLS SSL 证书.md",
+            "mode": "source"
           }
         }
       }
@@ -46,14 +46,6 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "f568bf7e439d398b",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
             }
           }
         ]
@@ -92,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md",
+                "file": "笔记/🧰 运维/Dell 戴尔服务器/配置 iDRAC 的 TLS SSL 证书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,42 +94,8 @@
                 "unlinkedCollapsed": true
               }
             }
-          },
-          {
-            "id": "5f488e06357db2c6",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "109c669fb0e4b88f",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "475eb9b30293eb6b",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "笔记/🧰 运维/部署 Confluence Data Center 版.md"
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -145,6 +103,8 @@
   },
   "active": "a3275d5dd38aaf2f",
   "lastOpenFiles": [
+    "笔记/🧰 运维/Dell 戴尔服务器/配置 iDRAC 的 TLS SSL 证书.md",
+    "笔记/🧰 运维/Dell 戴尔服务器/assets/dell-idrac-1.png",
     "笔记/🧰 运维/部署 Confluence Data Center 版.md",
     "⚠️ 知识库须知.md",
     "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md",
@@ -152,8 +112,6 @@
     "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建图空间.md",
     "笔记/🧰 运维/申请 Let's Encrypt 的 SSL 证书.md",
     "笔记/🧰 运维/🧾 证书基础设施/OpenSSL 通过指定的 CRL（证书吊销列表）手动验证证书有效性.md",
-    "笔记/🧰 运维/Vite 部署.md",
-    "笔记/🧰 运维/配置 GitLab CI CD 自动部署.md",
-    "笔记/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/新建标签.md"
+    "笔记/🧰 运维/Vite 部署.md"
   ]
 }
