@@ -11,7 +11,7 @@ mkdir -p .secrets/certbot && echo -e 'dns_cloudflare_email = <Cloudflare 电子�
 ```
 
 ```
-chmod 600 .secrets
+chmod 700 .secrets
 chmod 600 .secrets/certbot
 chmod 600 .secrets/certbot/cloudflare.ini
 ```
@@ -31,7 +31,7 @@ mkdir -p .secrets/certbot && echo -e 'dns_cloudflare_email = <Cloudflare 电子�
 ```
 
 ```
-chmod 600 .secrets
+chmod 700 .secrets
 chmod 600 .secrets/certbot
 chmod 600 .secrets/certbot/cloudflare.ini
 ```
