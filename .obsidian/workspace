@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308,
-    "collapsed": true
+    "width": 308
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -143,20 +142,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "33a2b1cb97001a27",
   "lastOpenFiles": [
     "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
+    "服务/猫窝云/内网 IP 列表.md",
     "⚠️ 知识库须知.md",
     "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/未命名.md",
     "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/未命名.md",
     "笔记/🏠 物联网/Windows 设定网络唤醒并集成到 Homekit.md",
     "笔记/♦️ 区块链/Dfinity/Motoko 游乐场.md",
     "笔记/♦️ 区块链/Polygon/安装 SDK 和侧链部署.md",
-    "服务/☁️ 猫猫云/内网 IP 列表.md",
-    "服务/☁️ 猫猫云/架构一览.md",
-    "笔记/🧰 运维/申请 Let's Encrypt 的 SSL 证书.md"
+    "服务/猫猫云/内网 IP 列表.md",
+    "服务/猫猫云/架构一览.md"
   ]
 }
