@@ -198,7 +198,7 @@ sudo vim /opt/atlassian/confluence/conf/server.xml
 
 #### 启用反代理配置
 
-将写有 HTTPS - Proxying Confluence via Apache or Nginx over HTTPS 字样注释下方的 Connector 标签解除注释
+将写有 HTTPS - Proxying Confluence via Apache or Nginx over HTTP 字样注释下方的 Connector 标签解除注释
 
 修改 Connector 标签最后一行的值：
 
@@ -317,7 +317,9 @@ mkdir -p /opt/atlassian-agent
 cd /opt/atlassian-agent
 sudo mv ~/atlassian-agent-v1.3.1.tar.gz ./
 sudo tar -xvf atlassian-agent-v1.3.1.tar.gz
+cd atlassian-agent-v1.3.1
 sudo mv ./* ..
+cd ..
 sudo rm -rf atlassian-agent-v1.3.1
 sudo chmod a+x atlassian-agent.jar
 ```
