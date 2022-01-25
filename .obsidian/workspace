@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
-            "mode": "preview",
+            "file": "笔记/語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
+                "file": "笔记/語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
+                "file": "笔记/語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md"
+                "file": "笔记/語 编程语言/🐭 Golang/单元测试工具 testify 用法.md"
               }
             }
           }
@@ -146,15 +146,15 @@
   },
   "active": "33a2b1cb97001a27",
   "lastOpenFiles": [
-    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
-    "服务/猫窝云/内网 IP 列表.md",
+    "笔记/語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
     "⚠️ 知识库须知.md",
-    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/未命名.md",
-    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/未命名.md",
-    "笔记/🏠 物联网/Windows 设定网络唤醒并集成到 Homekit.md",
-    "笔记/♦️ 区块链/Dfinity/Motoko 游乐场.md",
-    "笔记/♦️ 区块链/Polygon/安装 SDK 和侧链部署.md",
-    "服务/猫猫云/内网 IP 列表.md",
-    "服务/猫猫云/架构一览.md"
+    "笔记/語 编程语言/🐭 Golang/复制结构体指针到新的指针中.md",
+    "笔记/語 编程语言/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
+    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/新闻动态/训练大脑集中注意力的视频游戏.md",
+    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/新闻动态/FDA 刚刚批准了第一个处方视频游戏——它是为患有 ADHD 多动症的孩子准备的.md",
+    "笔记/🧰 运维/部署 Confluence Data Center 版.md",
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md",
+    "笔记/☁️ 后端/apidoc 安装.md",
+    "笔记/☁️ 后端/Cloudflare/Worker 学习.md"
   ]
 }
