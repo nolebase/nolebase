@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "♦️ 区块链/Polygon/开发工具.md",
+            "file": "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "权限",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "♦️ 区块链/Polygon/开发工具.md",
+                "file": "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "♦️ 区块链/Polygon/开发工具.md"
+                "file": "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md"
               }
             }
           },
@@ -119,15 +119,15 @@
   },
   "active": "8d8e0c79dab12da4",
   "lastOpenFiles": [
-    "♦️ 区块链/Polygon/开发工具.md",
-    "♦️ 区块链/Polygon/hardhat 简单命令.md",
-    "♦️ 区块链/Polygon/安装 SDK 和侧链部署.md",
-    "📟 终端/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
-    "📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md",
-    "📟 终端/软件/Git 版本控制/Git 命令速记.md",
-    "📟 终端/软件/Git 版本控制/Git 添加 PR 拉取和切换命令.md",
-    "📟 终端/软件/Git 版本控制/gitignore 不生效解决办法.md",
-    "📟 终端/软件/Git 版本控制/国内 GitHub 加速.md",
-    "📐 图形学/✖️ 叉乘.md"
+    "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
+    "📟 终端/Linux 命令/权限管理/chmod 变更权限.md",
+    "🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/分配权限.md",
+    "🧰 运维/部署 Confluence Data Center 版.md",
+    "🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md",
+    "🧰 运维/配置 GitLab CI CD 自动部署.md",
+    "🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/使用 Docker 安装.md",
+    "📟 终端/软件/🗃 node Node.js/解决 npm,yarn,pnpm 全局安装无效.md",
+    "📟 终端/Linux 命令索引.md",
+    "📟 终端/Linux 权限.md"
   ]
 }
