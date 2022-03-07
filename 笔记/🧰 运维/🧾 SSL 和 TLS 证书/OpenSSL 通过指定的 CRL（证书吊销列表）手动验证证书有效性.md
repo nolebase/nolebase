@@ -20,7 +20,7 @@
 
 该步骤通过 `openssl` 命令和 `wikipedia.org:443` 创建了一个连接，并且把证书文件输出到名为 `wikipedia.pem` 的文件中
 
-```
+```shell
 openssl s_client -connect wikipedia.org:443 2>&1 < /dev/null | sed -n '/-----BEGIN/,/-----END/p' > wikipedia.pem
 ```
 
@@ -28,13 +28,13 @@ openssl s_client -connect wikipedia.org:443 2>&1 < /dev/null | sed -n '/-----BEG
 
 该步骤通过 `openssl` 命令读取上一步中获取的 `wikipedia.pem` 文件，并且使用 `grep`[^1] 命令查找了 `X509v3 CRL Distribution Points` 字段，打印它所相关的 4 行内的值
 
-```
+```shell
 openssl x509 -noout -text -in wikipedia.pem | grep -A 4 'X509v3 CRL Distribution Points'
 ```
 
 示例输出
 
-```
+```shell
 X509v3 CRL Distribution Points: 
     Full Name:
       URI:http://crl.globalsign.com/gs/gsorganizationvalsha2g2.crl
@@ -45,7 +45,7 @@ X509v3 CRL Distribution Points:
 
 该步骤通过 `wget`[^2]命令通过上一步获取的 URL 下载了一个文件，并且保存为 `crl.der`（`.der` 拓展名表示该文件使用 DER 编码）
 
-```
+```shell
 wget -O crl.der http://crl.globalsign.com/gs/gsorganizationvalsha2g2.crl
 ```
 
@@ -59,7 +59,7 @@ openssl crl -inform DER -in <CRL 文件路径> -out <转换后的 CRL 文件路�
 
 此处可以执行下面的命令把上一步的 CRL 文件转换为 PEM 编码：
 
-```
+```shell
 openssl crl -inform DER -in crl.der -outform PEM -out crl.pem
 ```
 
@@ -69,13 +69,13 @@ HTTPS 使用的 SSL 证书通常由证书颁发机构颁发，有的证书基础
 
 输入下面的命令就可以获得证书链的文件 `chain.pem`
 
-```
+```shell
 OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect <网站域名>:<HTTPS 服务所在的端口> -showcerts -tlsextdebug -tls1 2>&1 </dev/null | sed -n '/-----BEGIN/,/-----END/ {/-----BEGIN/ s/^/:/; p}'); for certificate in ${certificates#:}; do echo $certificate | tee -a chain.pem ; done; IFS=$OLDIFS 
 ```
 
 此处可以执行下面的命令获得证书链的文件 `chain.pem`：
 
-```
+```shell
 OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect wikipedia.org:443 -showcerts -tlsextdebug -tls1 2>&1 </dev/null | sed -n '/-----BEGIN/,/-----END/ {/-----BEGIN/ s/^/:/; p}'); for certificate in ${certificates#:}; do echo $certificate | tee -a chain.pem ; done; IFS=$OLDIFS 
 ```
 
@@ -85,7 +85,7 @@ OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect wikipedia.org:443 
 
 Openssl 命令需要将 PEM 格式的证书链和 CRL 连接在一起以进行验证。检查证书是否有效的时候可以省略 CRL 文件，但是 CRL 检查将不起作用，它只会根据证书链验证证书（比如验证该证书是否是颁发机构颁发的，或是是否还在有效期、是否被篡改等）。
 
-```
+```shell
 cat chain.pem crl.pem > crl_chain.pem
 ```
 
@@ -93,7 +93,7 @@ cat chain.pem crl.pem > crl_chain.pem
 
 #### 验证未被吊销的证书
 
-```
+```shell
 openssl verify -crl_check -CAfile crl_chain.pem wikipedia.pem 
 wikipedia.pem: OK
 ```
@@ -102,7 +102,7 @@ wikipedia.pem: OK
 
 #### 验证被吊销的证书
 
-```
+```shell
 openssl verify -crl_check -CAfile crl_chain.pem revoked-test.pem 
 revoked-test.pem: OU = Domain Control Validated, OU = PositiveSSL, CN = xs4all.nl
 error 23 at 0 depth lookup:certificate revoked

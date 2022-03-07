@@ -6,7 +6,7 @@
 
 下载 Dell EMC OpenManage DRAC Tools, includes Racadm (64bit),v9.2.0
 
-![](./assets/dell-idrac-1.png)
+![](dell-idrac-1.png)
 
 下载后解压并打开安装包进行安装。
 安装后可以选择配置 Windows 系统变量 Path，将 Dell OpenManage 程序安装位置目录下的 rac5 目录添加到 Path 中，如果不希望配置，则可以选择直接打开 Windows Terminal (管理员权限) 并切换目录到 rac5 的目录：
