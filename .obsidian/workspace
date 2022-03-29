@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "627e7d06ce374315",
+        "id": "7288b591278359ac",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/国际化查询中将查询得到的 Object 数组转换为 language_code 为键的 Object.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/国际化查询中将查询得到的 Object 数组转换为 language_code 为键的 Object.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/国际化查询中将查询得到的 Object 数组转换为 language_code 为键的 Object.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/国际化查询中将查询得到的 Object 数组转换为 language_code 为键的 Object.md"
+              }
             }
           }
         ],
@@ -136,17 +144,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "627e7d06ce374315",
+  "active": "7288b591278359ac",
   "lastOpenFiles": [
-    "笔记/🧰 运维/🐳 Docker/Docker Registry 删除镜像.md",
-    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md",
-    "笔记/🤖 AI 神经网络/隐写术/调研结果和资料整理.md",
-    "笔记/🤖 AI 神经网络/隐写术/可用项目.md",
-    "笔记/🤖 AI 神经网络/隐写术/非神经网络实现.md",
-    "笔记/☕️ 前端/📝 代码片段/超出文本显示省略号.md",
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/国际化查询中将查询得到的 Object 数组转换为 language_code 为键的 Object.md",
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md",
+    "⚠️ 知识库须知.md",
+    "🔌 知识库插件列表.md",
     "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/分配权限.md",
-    "笔记/🧰 运维/🧾 SSL 和 TLS 证书/申请 Let's Encrypt 的 SSL 证书.md",
-    "笔记/📟 终端/Debian/修复语言错误.md",
-    "笔记/📟 终端/assets/image_20220215140515.png"
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/创建用户和更改用户密码.md",
+    "笔记/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/常用控制台指令.md",
+    "笔记/🤖 AI 神经网络/隐写术/调研结果和资料整理.md",
+    "笔记/☁️ 后端/增量同步/学习资料.md",
+    "笔记/🕸 网络/OpenWRT 透明代理 和 Turbo ACC 导致的 Apple 推送服务延迟问题.md"
   ]
 }
