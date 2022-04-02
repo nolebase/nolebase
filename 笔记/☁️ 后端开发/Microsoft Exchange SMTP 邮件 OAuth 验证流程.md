@@ -1,5 +1,3 @@
-
-
 ## 相关链接和文章
 
 [Azure AD | Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade)
