@@ -53,3 +53,8 @@ Start-VM -Name '<虚拟机名称>'
 ```powershell
 (Get-VM '<虚拟机名称>' | Get-VMProcessor ).ExposeVirtualizationExtensions
 ```
+
+## 延伸阅读
+
+ [How to Enable Nested Virtualization in Hyper-V - Petri IT Knowledgebase](https://petri.com/how-to-enable-nested-virtualization-in-hyper-v/)
+ [Virtualization not supported? : truenas](https://www.reddit.com/r/truenas/comments/rz48uq/virtualization_not_supported/)
