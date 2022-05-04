@@ -1,3 +1,6 @@
+# 电子邮件的 Subject 主题字段中文乱码
+#golang #go #gmail #smtp #email #电子邮件 #编码 #utf8 #rfc
+
 golang--解决邮件发送标题乱码问题 - 黑曼巴后仰 - 博客园
 https://www.cnblogs.com/s42-/p/13053885.html
 What the =?UTF-8?B?ZnVjayDwn5CO?=! – dmorgan.info

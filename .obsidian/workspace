@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "7288b591278359ac",
+        "id": "7b120f3256cdaa04",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☁️ 后端开发/Cloudflare/Worker 学习.md",
+            "file": "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "600",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231
+    "width": 366
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☁️ 后端开发/Cloudflare/Worker 学习.md",
+                "file": "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☁️ 后端开发/Cloudflare/Worker 学习.md",
+                "file": "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☁️ 后端开发/Cloudflare/Worker 学习.md"
+                "file": "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md"
               }
             }
           }
@@ -142,19 +142,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 386
   },
-  "active": "7288b591278359ac",
+  "active": "7b120f3256cdaa04",
   "lastOpenFiles": [
-    "笔记/☁️ 后端开发/Cloudflare/Worker 学习.md",
-    "笔记/☁️ 后端开发/电子邮件的 Subject 主题字段中文乱码.md",
-    "笔记/☁️ 后端开发/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
-    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/国际化查询中将查询得到的 Object 数组转换为 language_code 为键的 Object.md",
-    "笔记/☁️ 后端开发/apidoc 安装.md",
-    "笔记/☁️ 后端开发/🕸 网络/OpenWRT 透明代理 和 Turbo ACC 导致的 Apple 推送服务延迟问题.md",
-    "笔记/🕸 网络/OpenWRT 透明代理 和 Turbo ACC 导致的 Apple 推送服务延迟问题.md",
-    "conflict-files-obsidian-git.md",
-    "笔记/☁️ 后端开发/增量同步/学习资料.md",
-    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md"
+    "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
+    "⚠️ 知识库须知.md",
+    "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
+    "笔记/🪟 Windows/assets/20220504222411.png",
+    "笔记/🤖 AI 神经网络/机器学习/知识点/向量范数和矩阵范数.md",
+    "笔记/🤖 AI 神经网络/机器学习/知识点/SVD奇异值分解及其意义.md",
+    "笔记/🎮 游戏开发/📐 图形学/📐 向量之间的夹角.md",
+    "笔记/🎮 游戏开发/📐 图形学/↗️ 向量长度.md",
+    "笔记/🎮 游戏开发/📐 图形学/▶️ 三角函数.md",
+    "笔记/🎮 游戏开发/📐 图形学/复平面和四元数.md"
   ]
 }
