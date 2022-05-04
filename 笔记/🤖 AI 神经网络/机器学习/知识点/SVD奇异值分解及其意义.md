@@ -10,12 +10,12 @@ source: https://shartoo.github.io/2016/10/25/SVD-decomponent/
 英文原文:[英文原文](http://blog.csdn.net/redline2005/article/details/24099377)  
 中文转自:[中文原文](http://blog.sciencenet.cn/blog-696950-699432.html)
 
-## [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#%E4%B8%80-%E7%AE%80%E4%BB%8B "一 简介")一 简介
+## 1 简介
 
 SVD实际上是数学专业内容，但它现在已经渗入到不同的领域中。SVD的过程不是很好理解，因为它不够直观，但它对矩阵分解的效果却非常好。比如，Netflix（一个提供在线电影租赁的公司）曾经就悬赏100万美金，如果谁能提高它的电影推荐系统评分预测准确率提高10%的话。令人惊讶的是，这个目标充满了挑战，来自世界各地的团队运用了各种不同的技术。最终的获胜队伍”BellKor’s Pragmatic Chaos”采用的核心算法就是基于SVD。  
 SVD提供了一种非常便捷的矩阵分解方式，能够发现数据中十分有意思的潜在模式。在这篇文章中，我们将会提供对SVD几何上的理解和一些简单的应用实例。
 
-### [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#1-1-%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89 "1.1 线性变换的几何意义")1.1 线性变换的几何意义
+### 1.1 线性变换的几何意义
 
 **奇异值分解应该就是把一个线性变换分解成两个线性变换，一个线性变换代表旋转，另一个代表拉伸。**
 
@@ -106,7 +106,7 @@ $$
 
 ![水平变换效果](assets/SVD奇异值分解及其意义-svd7.jpeg)
 
-## [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#%E4%BA%8C-%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89 "二 几何意义")二 几何意义
+## 2 几何意义
 
 该部分是从几何层面上去理解二维的SVD：对于任意的 2 x 2 矩阵，通过SVD可以将一个相互垂直的网格(orthogonal grid)变换到另外一个相互垂直的网格。  
 我们可以通过向量的方式来描述这个事实: 首先，选择两个相互正交的单位向量 $v_1$和 $v_2$, 向量 $Mv_1$ 和 $Mv_2$ 正交。
@@ -160,7 +160,7 @@ u 矩阵的列向量分别是 $u_1,u_2，\sum$是一个对角矩阵，对角元�
 
 这就表明任意的矩阵 M 是可以分解成三个矩阵。V表示了原始域的标准正交基，u 表示经过M 变换后的co-domain的标准正交基，Σ表示了V 中的向量与u中相对应向量之间的关系。(V describes an orthonormal basis in the domain, and U describes an orthonormal basis in the co-domain, and Σ describes how much the vectors in V are stretched to give the vectors in U.)
 
-## [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#%E4%B8%89-%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89 "三 奇异值分解的物理意义")三 奇异值分解的物理意义
+## 3 奇异值分解的物理意义
 
 此部分转载自知乎 [奇异值分解物理意义，郑宁的回答](https://www.zhihu.com/question/22237507/answer/28007137)
 
@@ -234,7 +234,7 @@ $$
 
 奇异值分解还广泛的用于主成分分析（Principle Component Analysis，简称PCA）和推荐系统（如Netflex的电影推荐系统）等。在这些应用领域，奇异值也有相应的意义
 
-## [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#%E5%9B%9B-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3 "四 如何获得奇异值分解")四 如何获得奇异值分解
+## 4 如何获得奇异值分解
 
 事实上我们可以找到任何矩阵的奇异值分解，那么我们是如何做到的呢？假设在原始域中有一个单位圆，如下图所示。经过 M 矩阵变换以后在co-domain中单位圆会变成一个椭圆，它的长轴(Mv1)和短轴(Mv2)分别对应转换后的两个标准正交向量，也是在椭圆范围内最长和最短的两个向量。
 
@@ -265,9 +265,9 @@ $$
 
 因此，$u_i$ 和 $u_j$ 是正交的。但实际上，这并非是求解奇异值的方法，效率会非常低。这里也主要不是讨论如何求解奇异值，为了演示方便，采用的都是二阶矩阵。
 
-## [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#%E4%BA%94-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B "五 应用实例")五 应用实例
+## 5 应用实例
 
-### [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#5-1-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B%E4%B8%80 "5.1 应用实例一")5.1 应用实例一
+### 5.1 应用实例一
 
 $$
 M =
@@ -289,7 +289,7 @@ $$
 
 换句话说，如果某些奇异值非常小的话，其相对应的几项就可以不同出现在矩阵 M 的分解式中。因此，我们可以看到矩阵 M 的秩的大小等于非零奇异值的个数。
 
-### [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#5-2-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B%E4%BA%8C "5.2  应用实例二")5.2 应用实例二
+### 5.2 应用实例二
 
 我们来看一个奇异值分解在数据表达上的应用。假设我们有如下的一张 15 x 25 的图像数据。
 
@@ -319,7 +319,7 @@ $$
 
 $v_i$ 具有15个元素，$u_i$ 具有25个元素，$σ_i$ 对应不同的奇异值。如上图所示，我们就可以用123个元素来表示具有375个元素的图像数据了。
 
-### [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#5-3-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B%E4%B8%89%EF%BC%9A%E5%87%8F%E5%99%AA-noise-reduction "5.3 应用实例三：减噪(noise reduction)")5.3 应用实例三：减噪(noise reduction)
+### 5.3 应用实例三：减噪(noise reduction)
 
 前面的例子的奇异值都不为零，或者都还算比较大，下面我们来探索一下拥有零或者非常小的奇异值的情况。通常来讲，大的奇异值对应的部分会包含更多的信息。比如，我们有一张扫描的，带有噪声的图像，如下图所示
 
@@ -347,7 +347,7 @@ $$
 
 ![水平变换效果](assets/SVD奇异值分解及其意义-svd16.jpeg)
 
-### [](https://shartoo.github.io/2016/10/25/SVD-decomponent/#5-4-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B%E5%9B%9B%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-data-analysis "5.4 应用实例四：数据分析(data analysis)")5.4 应用实例四：数据分析(data analysis)
+### 5.4 应用实例四：数据分析(data analysis)
 
 我们搜集的数据中总是存在噪声：无论采用的设备多精密，方法有多好，总是会存在一些误差的。如果你们还记得上文提到的，大的奇异值对应了矩阵中的主要信息的话，运用SVD进行数据分析，提取其中的主要部分的话，还是相当合理的。  
 作为例子，假如我们搜集的数据如下所示：
