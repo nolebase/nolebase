@@ -29,11 +29,11 @@ SDDT 代表世嘉出品的 O.N.G.E.K.I 游戏。1.35 版本是当前正在稼动
 
 在资源管理器中右键使用 7z 打开，点按上方的提取（Extract）按钮，然后选择期望解压的文件夹进行解压。
 
-![[SDDT 1.35 screenshot 01.png]]
+![](assets/SDDT-1.35-screenshot-01.png)
 
 解压后可以看到类似于下面的文件结构
 
-![[SDDT 1.35 screenshot 02.png]]
+![](assets/SDDT-1.35-screenshot-02.png)
 
 接下来我们需要前往 `package` 目录进行后续配置和设置
 
@@ -43,7 +43,7 @@ SDDT 代表世嘉出品的 O.N.G.E.K.I 游戏。1.35 版本是当前正在稼动
 
 在获取了对应的 segatools 压缩包（也许下载到的档案名叫 `SDDT_1.35_segatools.zip`）之后，使用常见的解压缩软件打开该压缩包（此处我使用 Bandizip），打开后将里面所有的文件全选并拖拽到 `package` 目录下，然后我们可以获得类似的目录结构：
 
-![[SDDT 1.35 screenshot 04.png]]
+![](assets/SDDT-1.35-screenshot-04.png)
 
 #### 配置 `segatools.ini`
 
@@ -61,7 +61,7 @@ SDDT 代表世嘉出品的 O.N.G.E.K.I 游戏。1.35 版本是当前正在稼动
 
 如下图所示：
 
-![[SDDT 1.35 screenshot 03.png]]
+![](assets/SDDT-1.35-screenshot-03.png)
 
 这三个字段分别对应了你当前所在的 `package` 目录下有的三个同名文件夹。
 
@@ -184,7 +184,7 @@ SLIDER_SPEED=1000
 
 解压后的目录结构如下：
 
-![[SDDT 1.35 screenshot 05.png]]
+![](assets/SDDT-1.35-screenshot-05.png)
 
 我们需要将 `mu3hook.dll` 和 `mu3io.dll` 这两个文件放到先前配置 `segatools.ini` 的 `package` 目录下并完全替换文件。
 接下来我们打开被解压的 `segatools.ini`，会发现里面多了一些配置。
@@ -270,6 +270,123 @@ RIGHT_MENU=0x4F ;O
 SLIDER_SPEED=1000
 ```
 
+### 完整的 segatools 配置案例
+
+此处是我的 segatools 配置：
+
+```ini
+[vfs]
+; Insert the path to the game AMFS directory here (contains ICF1 and ICF2)
+amfs=amfs
+; Insert the path to the game Option directory here (contains OPxx directories)
+option=option
+; Create an empty directory somewhere and insert the path here.
+; This directory may be shared between multiple SEGA games.
+; NOTE: This has nothing to do with Windows %APPDATA%.
+appdata=appdata
+
+[aime]
+enable=1
+aimePath=DEVICE\aime.txt
+felicaGen=0
+
+[dns]
+; Insert the hostname or IP address of the server you wish to use here.
+; Note that 127.0.0.1, localhost etc are specifically rejected.
+default=ea1.msm.moe
+
+[ds]
+; Region code on the emulated AMEX board DS EEPROM.
+; 1: Japan
+; 4: Export (some UI elements in English)
+;
+; NOTE: Changing this setting causes a factory reset.
+region=1
+
+[netenv]
+; Simulate an ideal LAN environment. This may interfere with head-to-head play.
+; SEGA games are somewhat picky about their LAN environment, so leaving this
+; setting enabled is recommended.
+enable=1
+
+[keychip]
+; The /24 LAN subnet that the emulated keychip will tell the game to expect.
+; If you disable netenv then you must set this to your LAN's IP subnet, and
+; that subnet must start with 192.168.
+subnet=192.168.1.0
+
+[gpio]
+; Emulated Nu DIP switch for Distribution Server setting.
+;
+; If multiple machines are present on the same LAN then set this to 1 on
+; exactly one machine and set this to 0 on all others.
+dipsw1=0
+
+; -----------------------------------------------------------------------------
+; Input settings
+; -----------------------------------------------------------------------------
+
+; Keyboard bindings are specified as hexadecimal (prefixed with 0x) or decimal
+; (not prefixed with 0x) virtual-key codes, a list of which can be found here:
+;
+; https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+;
+; This is, admittedly, not the most user-friendly configuration method in the
+; world. An improved solution will be provided later.
+
+[io3]
+; Input API selection for JVS input emulator.
+; Set "1" to use a xinput gamepad and set "2" to use keyboard.
+mode=2
+
+; Set "1" to enable mouse lever emulation.
+mouse=1
+
+test=0x75
+service=0x76
+
+[dinput]
+LEFT_A=0x53  ;S
+LEFT_B=0x44  ;D
+LEFT_C=0x46 ;F
+
+;LEFT_SIDE=0x51     ;Q
+;RIGHT_SIDE=0x45    ;E
+
+LEFT_SIDE=0x01  ; Mouse Left
+RIGHT_SIDE=0x02  ; Mouse Right
+
+RIGHT_A=0x4A  ;J
+RIGHT_B=0x4B  ;K
+RIGHT_C=0x4C  ;L
+
+LEFT_MENU=0x55  ;U
+RIGHT_MENU=0x4F  ;O
+
+; Change move speed of slider when use dinput
+SLIDER_SPEED=1000
+```
+
+### 配置 freeplay（免费游玩）
+
+由于当前版本的 HDD 暂时无法直接支持先前版本中可以使用的 coin 键，所以我们需要使用别的方案来解决投币问题。
+
+需要前往并打开 `package` 目录下的 `client_common.json` 文件，编辑下图所示区域：
+
+![[SDDT-1.35-screenshot-15.jpg]]
+
+编辑 `credit` 对象下方的 `config` 对象中的 `freeplay` 字段值为 `true`
+这样在连接到服务器时，直接选择自己期望的币值即可，**有些情况下可能会需要倒计时为 0 时币值才会生效**。
+
+### 额外配置说明
+
+对于连接到 [ea1.msm.moe](https://ea1.msm.moe) 的玩家，我们需要配置额外的内容。
+
+需要前往并打开 `package` 目录下的 `client_common.json` 文件，编辑下图所示区域：
+
+![](assets/SDDT-1.35-screenshot-14.jpg)
+编辑 `emoney` 对象下的 `enable` 字段并将其值改为 `false`
+
 ### 启动前
 
 #### 配置 inject.exe 的权限和启动方式
@@ -315,12 +432,12 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 #### 进入 service 模式
 
-![[SDDT 1.35 screenshot 09.png]]
+![](assets/SDDT-1.35-screenshot-09.png)
 
 在游戏读取到不是「**初期化中**」的时候，按下 F6 进入 service 模式（如果按了没有反应，请检查 `segatools.ini` 
  的 io3 部分的配置）。
  
-![[SDDT 1.35 screenshot 06.png]]
+![](assets/SDDT-1.35-screenshot-06.png)
 
 进入 service 模式后，我们可以使用 dinput 部分配置的 `LEFT_B` 按键（默认是 S）和 `LEFT_C` 按键（默认是 D）来完成上下导航，使用 `RIGHT_A` 按键（默认是 J）来确认并进入下级菜单。
 在我们完成配置时导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到游戏进入前的最后自检模式。
@@ -331,11 +448,11 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 1. 前往 service 模式，导航到「**レバー設定**（摇杆设定）」并按下 `RIGHT_A` 按键（默认是 J）来进行摇杆设定
 
-![[SDDT 1.35 screenshot 07.png]]
+![](assets/SDDT-1.35-screenshot-07.png)
 
 2. 进入后按下 `RIGHT_A` 按键（默认是 J）来选择「**初期設定に戻す**」来恢复摇杆的初始化值，此时此刻移动鼠标就可以看到「**レバー位置**」对应的值发生变化。
 
-![[SDDT 1.35 screenshot 08.png]]
+![](assets/SDDT-1.35-screenshot-08.png)
 
 配置完成后，导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到 service 菜单。
 
@@ -343,11 +460,11 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 1. 前往 service 模式，导航到「**閉店設定** （店铺关门设定）」并按下 `RIGHT_A` 按键（默认是 J）来进行店铺关门设定
 
-![[SDDT 1.35 screenshot 10.png]]
+![](assets/SDDT-1.35-screenshot-10.png)
 
 2. 在「**時**」字段上，不断按下 `RIGHT_A` 按键（默认是 J）直至字段值为「**全時刻**（全天候）」
 
-![[SDDT 1.35 screenshot 11.png]]
+![](assets/SDDT-1.35-screenshot-11.png)
 
 配置完成后，导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到 service 菜单。
 
@@ -355,12 +472,12 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 1. 前往 service 模式，导航到「**ゲーム設定**（游戏设定）」并按下 `RIGHT_A` 按键（默认是 J）来进行游戏设定
 
-![[SDDT 1.35 screenshot 12.png]]
+![](assets/SDDT-1.35-screenshot-12.png)
 
 2. 导航到「**グループ内基準機の設定**（组内基准机的设定）」字段，不断按下 `RIGHT_A` 按键（默认是 J）直至值被更改为改为「**基準機**」
 3. 导航到「**イベントモード設定**（事件模式设定）」字段，不断按下 `RIGHT_A` 按键（默认是 J）直至值被更改为「**OFF**」
 
-![[SDDT 1.35 screenshot 13.png]]
+![](assets/SDDT-1.35-screenshot-13.png)
 
 配置完成后，导航到「终了」并按下 `RIGHT_A` 按键（默认是 J）来返回到 service 菜单。
 

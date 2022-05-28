@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "ae09d95e7787a82f",
+        "id": "92fa490f5bee2c3a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
+            "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
             "mode": "source",
             "source": false
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
+                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
+                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md"
+                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md"
               }
             }
           }
@@ -144,17 +144,17 @@
     "direction": "horizontal",
     "width": 386
   },
-  "active": "ae09d95e7787a82f",
+  "active": "92fa490f5bee2c3a",
   "lastOpenFiles": [
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 13.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 01.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 12.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 11.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 10.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 09.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 08.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 07.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 06.png"
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-13.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-15.jpg",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-14.jpg",
+    "telegram-cloud-photo-size-1-4940610157897952404-x.jpg",
+    "笔记/🎮 游戏开发/📐 图形学/🔢 矩阵乘法.md",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-03.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-01.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-12.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-11.png"
   ]
 }
