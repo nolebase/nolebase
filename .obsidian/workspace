@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2c1e3b3fd54e492a",
+        "id": "ae09d95e7787a82f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -36,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#SDDT",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 366
+    "width": 220
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md"
+              }
             }
           }
         ],
@@ -136,17 +144,17 @@
     "direction": "horizontal",
     "width": 386
   },
-  "active": "2c1e3b3fd54e492a",
+  "active": "ae09d95e7787a82f",
   "lastOpenFiles": [
-    "服务/猫猫云/架构一览.md",
-    "服务/猫窝云/内网 IP 列表.md",
-    "服务/猫猫云/内网 IP 列表.md",
-    "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
-    "笔记/💾 软件/笔记软件/笔记软件.md",
-    "🔌 知识库插件列表.md",
-    "⚠️ 知识库须知.md",
-    "生活/药物/止痛.md",
-    "生活/药物/过敏.md",
-    "生活/药物/感冒.md"
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/SDDT 1.35 HDD 配置.md",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 13.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 01.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 12.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 11.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 10.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 09.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 08.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 07.png",
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT 1.35 screenshot 06.png"
   ]
 }
