@@ -196,13 +196,14 @@ stages:
 
 .deploy_staging_default: &deploy_staging_default
   stage: deploy
- # 通过 shell 执行的
+  # 通过 shell 执行的
   script:
-    - 'pwd'
+    - pwd
     # 避免克隆下来的 .sh 文件没有执行权限导致执行失败，预先添加执行权限
-    - 'sudo chmod -R a+x .'
+    - sudo chmod -R a+x .
     # 执行部署脚本
-    - 'sudo ./ci/deploy_staging.sh'
+    - sudo ./ci/deploy_staging.sh
+
   # tags 标签表示这个 CI 任务在会被分配给哪些 Runner，只有包含如下 tags 中任意一个或多个的 Runner 才会执行这个任务。
   tags:
     - test

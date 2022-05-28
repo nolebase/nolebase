@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 220
+    "width": 334
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -149,13 +149,13 @@
   "lastOpenFiles": [
     "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitLab/配置 GitLab CI CD 自动部署.md",
     "笔记/🧰 运维/🔍 Elastic Stack (ELK)/安装 ELK.md",
+    "笔记/🧰 运维/🧾 SSL 和 TLS 证书/申请 Lets Encrypt 的 SSL 证书.md",
     "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
     "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
     "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
     "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-17.png",
     "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-16.png",
     "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-15.jpg",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-02.png",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-13.png"
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/assets/SDDT-1.35-screenshot-02.png"
   ]
 }

@@ -254,7 +254,7 @@ sudo apt install nginx
 
 #### 申请 Let's Encrypt 证书
 
-参见 [[申请 Let's Encrypt 的 SSL 证书]]
+参见 [[申请 Lets Encrypt 的 SSL 证书]]
 
 #### 创建 Confluence 反代理配置文件
 
