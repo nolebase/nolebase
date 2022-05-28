@@ -203,7 +203,7 @@ stages:
     - 'sudo chmod -R a+x .'
     # 执行部署脚本
     - 'sudo ./ci/deploy_staging.sh'
-	# tags 标签表示这个 CI 任务在会被分配给哪些 Runner，只有包含如下 tags 中任意一个或多个的 Runner 才会执行这个任务。
+  # tags 标签表示这个 CI 任务在会被分配给哪些 Runner，只有包含如下 tags 中任意一个或多个的 Runner 才会执行这个任务。
   tags:
     - test
     - deploy

@@ -1,9 +1,6 @@
----
-创建时间: 2022-02-12T12:30:13 (UTC +08:00)
-来源： https://lighthouse.thecloudiest.com/2020/12/20/fix-nvidia-shield-moonlight-selecting-the-wrong-monitor/
----
-
 # 修复：NVidia Shield (Moonlight) 选择了错误的显示器 – Lighthouse @ theCloudiest 
+
+来源：https://lighthouse.thecloudiest.com/2020/12/20/fix-nvidia-shield-moonlight-selecting-the-wrong-monitor/
 
 > ## Excerpt
 > A while back I stopped paying for consoles and put my efforts to a good PC rig. However I still like laying down on the couch and using a XBOX Controller. Moonlight fixed this for me (using a 4K Ap…

@@ -80,7 +80,7 @@ services:
       - discovery.seed_hosts=es02
       - cluster.initial_master_nodes=es01,es02
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
     ulimits:
       memlock:
         soft: -1
@@ -100,7 +100,7 @@ services:
       - discovery.seed_hosts=es01
       - cluster.initial_master_nodes=es01,es02
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - 'ES_JAVA_OPTS=-Xms512m -Xmx512m'
     ulimits:
       memlock:
         soft: -1
