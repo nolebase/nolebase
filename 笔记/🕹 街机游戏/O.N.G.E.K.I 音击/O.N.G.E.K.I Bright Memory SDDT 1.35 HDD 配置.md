@@ -29,11 +29,11 @@ SDDT 代表世嘉出品的 O.N.G.E.K.I 游戏。1.35 版本是当前正在稼动
 
 在资源管理器中右键使用 7z 打开，点按上方的提取（Extract）按钮，然后选择期望解压的文件夹进行解压。
 
-![AltText|600](assets/SDDT-1.35-screenshot-01.png)
+![](assets/SDDT-1.35-screenshot-01.png)
 
 解压后可以看到类似于下面的文件结构
 
-![AltText|600](assets/SDDT-1.35-screenshot-02.png)
+![](assets/SDDT-1.35-screenshot-02.png)
 
 接下来我们需要前往 `package` 目录进行后续配置和设置
 
@@ -43,7 +43,7 @@ SDDT 代表世嘉出品的 O.N.G.E.K.I 游戏。1.35 版本是当前正在稼动
 
 在获取了对应的 segatools 压缩包（也许下载到的档案名叫 `SDDT_1.35_segatools.zip`）之后，使用常见的解压缩软件打开该压缩包（此处我使用 Bandizip），打开后将里面所有的文件全选并拖拽到 `package` 目录下，然后我们可以获得类似的目录结构：
 
-![AltText|600](assets/SDDT-1.35-screenshot-04.png)
+![](assets/SDDT-1.35-screenshot-04.png)
 
 #### 配置 `segatools.ini`
 
@@ -61,7 +61,7 @@ SDDT 代表世嘉出品的 O.N.G.E.K.I 游戏。1.35 版本是当前正在稼动
 
 如下图所示：
 
-![AltText|600](assets/SDDT-1.35-screenshot-03.png)
+![](assets/SDDT-1.35-screenshot-03.png)
 
 这三个字段分别对应了你当前所在的 `package` 目录下有的三个同名文件夹。
 
@@ -184,7 +184,7 @@ SLIDER_SPEED=1000
 
 解压后的目录结构如下：
 
-![AltText|600](assets/SDDT-1.35-screenshot-05.png)
+![](assets/SDDT-1.35-screenshot-05.png)
 
 我们需要将 `mu3hook.dll` 和 `mu3io.dll` 这两个文件放到先前配置 `segatools.ini` 的 `package` 目录下并完全替换文件。
 接下来我们打开被解压的 `segatools.ini`，会发现里面多了一些配置。
@@ -373,7 +373,7 @@ SLIDER_SPEED=1000
 
 需要前往并打开 `package` 目录下的 `client_common.json` 文件，编辑下图所示区域：
 
-![AltText|600](assets/SDDT-1.35-screenshot-15.jpg)
+![](assets/SDDT-1.35-screenshot-15.jpg)
 
 编辑 `credit` 对象下方的 `config` 对象中的 `freeplay` 字段值为 `true`
 这样在连接到服务器时，直接选择自己期望的币值即可，**有些情况下可能会需要倒计时为 0 时币值才会生效**。
@@ -384,7 +384,7 @@ SLIDER_SPEED=1000
 
 需要前往并打开 `package` 目录下的 `client_common.json` 文件，编辑下图所示区域：
 
-![AltText|600](assets/SDDT-1.35-screenshot-14.jpg)
+![](assets/SDDT-1.35-screenshot-14.jpg)
 编辑 `emoney` 对象下的 `enable` 字段并将其值改为 `false`
 
 ### 启动前
@@ -432,12 +432,12 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 #### 进入 service 模式
 
-![AltText|600](assets/SDDT-1.35-screenshot-09.png)
+![](assets/SDDT-1.35-screenshot-09.png)
 
 在游戏读取到不是「**初期化中**」的时候，按下 F6 进入 service 模式（如果按了没有反应，请检查 `segatools.ini` 
  的 io3 部分的配置）。
 
-![AltText|600](assets/SDDT-1.35-screenshot-06.png)
+![](assets/SDDT-1.35-screenshot-06.png)
 
 进入 service 模式后，我们可以使用 dinput 部分配置的 `LEFT_B` 按键（默认是 S）和 `LEFT_C` 按键（默认是 D）来完成上下导航，使用 `RIGHT_A` 按键（默认是 J）来确认并进入下级菜单。
 在我们完成配置时导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到游戏进入前的最后自检模式。
@@ -448,11 +448,11 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 1. 前往 service 模式，导航到「**レバー設定**（摇杆设定）」并按下 `RIGHT_A` 按键（默认是 J）来进行摇杆设定
 
-![AltText|600](assets/SDDT-1.35-screenshot-07.png)
+![](assets/SDDT-1.35-screenshot-07.png)
 
 2. 进入后按下 `RIGHT_A` 按键（默认是 J）来选择「**初期設定に戻す**」来恢复摇杆的初始化值，此时此刻移动鼠标就可以看到「**レバー位置**」对应的值发生变化。
 
-![AltText|600](assets/SDDT-1.35-screenshot-08.png)
+![](assets/SDDT-1.35-screenshot-08.png)
 
 配置完成后，导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到 service 菜单。
 
@@ -460,11 +460,11 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 1. 前往 service 模式，导航到「**閉店設定** （店铺关门设定）」并按下 `RIGHT_A` 按键（默认是 J）来进行店铺关门设定
 
-![AltText|600](assets/SDDT-1.35-screenshot-10.png)
+![](assets/SDDT-1.35-screenshot-10.png)
 
 2. 在「**時**」字段上，不断按下 `RIGHT_A` 按键（默认是 J）直至字段值为「**全時刻**（全天候）」
 
-![AltText|600](assets/SDDT-1.35-screenshot-11.png)
+![](assets/SDDT-1.35-screenshot-11.png)
 
 配置完成后，导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到 service 菜单。
 
@@ -472,12 +472,12 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 1. 前往 service 模式，导航到「**ゲーム設定**（游戏设定）」并按下 `RIGHT_A` 按键（默认是 J）来进行游戏设定
 
-![AltText|600](assets/SDDT-1.35-screenshot-12.png)
+![](assets/SDDT-1.35-screenshot-12.png)
 
 2. 导航到「**グループ内基準機の設定**（组内基准机的设定）」字段，不断按下 `RIGHT_A` 按键（默认是 J）直至值被更改为改为「**基準機**」
 3. 导航到「**イベントモード設定**（事件模式设定）」字段，不断按下 `RIGHT_A` 按键（默认是 J）直至值被更改为「**OFF**」
 
-![AltText|600](assets/SDDT-1.35-screenshot-13.png)
+![](assets/SDDT-1.35-screenshot-13.png)
 
 配置完成后，导航到「**终了**」并按下 `RIGHT_A` 按键（默认是 J）来返回到 service 菜单。
 
@@ -485,11 +485,11 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 想要检查网络连接，可以前往 service 模式，导航到「**ネットワークテスト**（网络测试）」并执行测试：
 
-![AltText|600](assets/SDDT-1.35-screenshot-16.png)
+![](assets/SDDT-1.35-screenshot-16.png)
 
 网络测试应当得到如下的结果才算正常：
 
-![AltText|600](assets/SDDT-1.35-screenshot-17.png)
+![](assets/SDDT-1.35-screenshot-17.png)
 
 ## 常见问题和解决方案
 
