@@ -168,9 +168,9 @@ sudo docker pull docker.elastic.co/kibana/kibana:7.16.3
 `kibana.yml`:
 
 ```yaml
-server.host: "0.0.0.0"
-server.shutdownTimeout: "5s"
-elasticsearch.hosts: [ "http://es01:9200" ]
+server.host: 0.0.0.0
+server.shutdownTimeout: 5s
+elasticsearch.hosts: ['http://es01:9200']
 monitoring.ui.container.elasticsearch.enabled: true
 
 # 中文本地化
