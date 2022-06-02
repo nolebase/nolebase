@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "92fa490f5bee2c3a",
+        "id": "17e97dbd06c49394",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
+            "file": "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
             "mode": "source",
             "source": false
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
+                "file": "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
+                "file": "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md"
+                "file": "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md"
               }
             }
           }
@@ -145,8 +145,9 @@
     "width": 386,
     "collapsed": true
   },
-  "active": "92fa490f5bee2c3a",
+  "active": "17e97dbd06c49394",
   "lastOpenFiles": [
+    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
     "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
     "笔记/☁️ 后端开发/🕸 网络/assets/rfc2616-screenshot-01.png",
     "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
@@ -155,7 +156,6 @@
     "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitLab/配置 GitLab CI CD 自动部署.md",
     "笔记/🧰 运维/🧾 SSL 和 TLS 证书/申请 Lets Encrypt 的 SSL 证书.md",
     "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
-    "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md"
+    "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md"
   ]
 }
