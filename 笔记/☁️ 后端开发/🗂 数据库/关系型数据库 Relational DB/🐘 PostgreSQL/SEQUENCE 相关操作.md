@@ -10,3 +10,9 @@ SELECT * FROM "<schema>"."<sequence_name>";
 ```sql
 ALTER SEQUENCE "<schema>"."<sequence_name>" RESTART WITH <next id>;
 ```
+
+3. 授权使用和递增 SEQUENCE
+
+```sql
+GRANT USAGE, SELECT ON SEQUENCE "<schema>"."<sequence_name>" TO "<user>";
+```
