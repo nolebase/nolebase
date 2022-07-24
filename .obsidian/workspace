@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "67f900ef6a360b92",
+        "id": "23c2037f4c888e3b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
+            "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
             "mode": "source",
             "source": false
           }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334
+    "width": 233.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
+                "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
+                "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md"
+                "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md"
               }
             }
           }
@@ -145,17 +145,17 @@
     "width": 386,
     "collapsed": true
   },
-  "active": "67f900ef6a360b92",
+  "active": "23c2037f4c888e3b",
   "lastOpenFiles": [
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 内网到内网.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 安装.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard + dnsmasq 实现内网自定义解析.md",
+    "笔记/☁️ 后端开发/CORS 重定向问题.md",
     "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
     "笔记/🧰 运维/🔍 Elastic Stack (ELK)/安装 ELK.md",
     "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
-    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md",
-    "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
-    "笔记/☁️ 后端开发/🕸 网络/assets/rfc2616-screenshot-01.png",
-    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/治疗/认知行为疗法/认知行为疗法（CBT）对成人 ADHD 的干预.md",
-    "笔记/🏥 医疗/ADHD 注意力缺陷多动障碍/新闻动态/FDA 刚刚批准了第一个处方视频游戏——它是为患有 ADHD 多动症的孩子准备的.md",
-    "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitLab/配置 GitLab CI CD 自动部署.md",
-    "笔记/🧰 运维/🧾 SSL 和 TLS 证书/申请 Lets Encrypt 的 SSL 证书.md"
+    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md"
   ]
 }

@@ -145,3 +145,23 @@ sudo systemctl enable wg-quick@wg0
 ```shell
 sudo sysctl -w net.ipv4.ip_forward=1
 ```
+
+## 错误排查
+
+### `/usr/bin/wg-quick: line 32: resolvconf: command not found`
+
+Debian 11 如果在使用 `wg-quick up <interface>` 的时候遭遇以下错误：
+
+```shell
+/usr/bin/wg-quick: line 32: resolvconf: command not found
+```
+
+可以通过下面的命令修复：
+
+```shell
+sudo apt install openresolv
+```
+
+参见：
+https://superuser.com/a/1546280
+https://github.com/StreisandEffect/streisand/issues/1434#issuecomment-417792239
