@@ -14,11 +14,13 @@ source: https://blog.csdn.net/weixin_43744534/article/details/123418289
 ### OpenWRT 开启 Software/Hardware Flow Offloading 后 iOS 通知推送延迟问题的溯源及一点解决办法
 
 实际上这个问题是我在将[路由器](https://so.csdn.net/so/search?q=%E8%B7%AF%E7%94%B1%E5%99%A8&spm=1001.2101.3001.7020)刷成OpenWrt后偶然发现的。本来自使用的路由器是AX3 Pro，但是使用一段时间后发现这个路由器对IPv6的分配策略上有着不小的问题：本地运营商下发了/60的前缀后，此路由器并不会自动将此段地址切割以供二级路由使用，导致二级路由只能分配到/64的IPv6地址，无法继续下发地址，虽然在二级路由上可以使用NAT技术使下挂设备使用IPv6网络，但是这样显然违背了IPv6设计的初衷；其次，AX3 Pro默认将IPv6防火墙完全打开，同时无法在管理页面将此防火墙关闭，导致无法从公网访问到路由器后面的IPv6设备，这也明显阻碍了从外界管理内网设备的需求。所以，只能无奈舍弃这款路由器而选择可以刷入OpenWrt的路由器（OpenWrt对于IPv6及相关设置的支持良好），选择了搭载MT7621+MT7615的路由器解锁SSH权限并刷入了OpenWrt系统。  
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/c7f39fb61c5e44adba971c4a909df54c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hvY29sYS0=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 图1 MT7621官方数据参数
 
 刷入系统几天后，偶然在一次聊天中发现iOS的消息通知推送有了延迟，通知框最迟的时候显示的是将近十分钟前的消息。于是用另一台设备发送测试消息，发现只要设备空闲超过两分钟，iOS的通知消息便有了明显的延迟。起初怀疑是官方的OpenWrt版本使用的都是开源驱动，对第三方设备的支持并不那么良好，于是自己拉取源码，修改编译选项将开源驱动换为MTK官方的闭源驱动编译出固件，再次刷入后发现问题仍然存在，但是后来换成完全基于MTK官方驱动且可以完全调用MT7621的硬件加速功能的Padavan系统后就不再存在消息延迟的问题。这个问题很令人感到困惑，本以为是驱动造成的问题，但是同样使用了闭源驱动，两个系统却有不一样的表现，只能是OpenWrt可能在某些关于网络的实现上有问题，但具体是哪里的问题，实在是不太好发现。于是在各个有关网络的论坛内搜索有没有类似的情况出现，终于在这个帖子内找到了遇到过类似问题的人： [iPhone 推送通知延迟，这种情况出现在只连接 WIFI 的情况下。](https://v2ex.com/t/804005)并且下面有网友给出了一种可能的解决办法。  
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2975f195b27f42e685b8ae6bc416e8b2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hvY29sYS0=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 图2 相似问题的帖子
@@ -59,6 +61,7 @@ source: https://blog.csdn.net/weixin_43744534/article/details/123418289
 图7 路由器FORWARD链规则
 
 链中规则是有先后执行顺序的，第一条规则仅起统计作用可以忽略不计，重点在于第二条规则：对于此条规则，不论数据包源自哪里目的哪里，只要经过内核转发建立连接或者与已建立连接相关联数据包，目标一律是FLOWOFFLOAD。这个FLOWOFFLOAD是什么？通过查阅Netfilter官方资料可由下图大致解释：  
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/cb2c3a8b7adf4399b9b70e10aea530de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hvY29sYS0=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 图8 Netfilter官方对于FLOWOFFLOAD的解释
@@ -79,7 +82,8 @@ The ingress hook provides an alternative to tc ingress filtering. You still need
 -   递减TTL并直接交由dev\_out发出，无需经过内核处理
 -   未匹配成功则按传统路径交由内核处理。在FORWARD点出将信息注入flowtable
 
-进入flowtable有一个条件，即完整地经过Netfiler路径，也就是一条流的双向包必须被FORWARD链都“看到”，才可将其从Netfilter中“卸下”。如何查看到被OFFLOAD包的状态呢？FLOWOFFLOAD功能依赖于nf\_conntrack模块，可从/proc/net/nf\_conntrack中查看到这些数据。向Apple设备发送消息唤醒推送服务后，在Shell中执行cat /proc/net/nf\_conntrack | grep -w 5223可见：  
+进入flowtable有一个条件，即完整地经过Netfiler路径，也就是一条流的双向包必须被FORWARD链都“看到”，才可将其从Netfilter中“卸下”。如何查看到被OFFLOAD包的状态呢？FLOWOFFLOAD功能依赖于nf\_conntrack模块，可从/proc/net/nf\_conntrack中查看到这些数据。向Apple设备发送消息唤醒推送服务后，在Shell中执行cat /proc/net/nf\_conntrack | grep -w 5223可见：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/b1575374f7bf49b083c577565ee334e6.png#pic_center)
 
 图9 命令执行结果
@@ -92,6 +96,7 @@ The ingress hook provides an alternative to tc ingress filtering. You still need
 第五列数据即为该连接的超时时间，明显可以看出，被OFFLOAD后的连接超时时间过短，这对于需要建立长连接的服务会有很严重的影响。在74s过后再次执行该命令可发现，该连接已经在表中消失了，也就是说在推送服务在无数据传送不到3分钟的时间里，该条连接就被路由器移除了！在之后的将近7分钟内（APNS心跳包间隔约为10分钟），向该设备发送的任何消息，因为与消息推送服务器连接被过早移除的原因，该设备都不会接收到来自服务器送达的任何数据，直至下次发送心跳包。
 
 看起来在OpenWrt下推送消息延迟的原因找到了，但为什么被OFFLOAD包的超时时间是如此短？通过sysctl查询内核模块nf\_conntrack相应的属性来看，flowtable的超时时间似乎与其不一致。执行sysctl -a | grep conntrack | grep timeout命令后：  
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/3def503ccd744efca2179fc883bbc690.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQ2hvY29sYS0=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
 
 图11 命令执行结果
@@ -125,28 +130,29 @@ The ingress hook provides an alternative to tc ingress filtering. You still need
 
 static inline __s32 nf_flow_timeout_delta(unsigned int timeout)
 {
-return (__s32)(timeout - (u32)jiffies);
+	return (__s32)(timeout - (u32)jiffies);
 }
 
 static void flow_offload_fixup_ct_timeout(struct nf_conn *ct)
 {
-const struct nf_conntrack_l4proto *l4proto;
-int l4num = nf_ct_protonum(ct);
-unsigned int timeout;
+	const struct nf_conntrack_l4proto *l4proto;
+	int l4num = nf_ct_protonum(ct);
+	unsigned int timeout;
 
-l4proto = nf_ct_l4proto_find(l4num);
-if (!l4proto)
-return;
+	l4proto = nf_ct_l4proto_find(l4num);
+	if (!l4proto)
+		return;
 
-if (l4num == IPPROTO_TCP)
-timeout = NF_FLOWTABLE_TCP_PICKUP_TIMEOUT;
-else if (l4num == IPPROTO_UDP)
-timeout = NF_FLOWTABLE_UDP_PICKUP_TIMEOUT;
-else
-return;
+	if (l4num == IPPROTO_TCP)
+		timeout = NF_FLOWTABLE_TCP_PICKUP_TIMEOUT;
+	else if (l4num == IPPROTO_UDP)
+		timeout = NF_FLOWTABLE_UDP_PICKUP_TIMEOUT;
+	else
+	
+	return;
 
-if (nf_flow_timeout_delta(ct->timeout) > (__s32)timeout)
-ct->timeout = nfct_time_stamp + timeout;
+	if (nf_flow_timeout_delta(ct->timeout) > (__s32)timeout)
+		ct->timeout = nfct_time_stamp + timeout;
 }
 ```
 

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
+            "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
             "mode": "source",
             "source": false
           }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 319.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
+                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
+                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md"
+                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md"
               }
             }
           }
@@ -147,15 +147,15 @@
   },
   "active": "23c2037f4c888e3b",
   "lastOpenFiles": [
-    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 内网到内网.md",
-    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 多用户管理.md",
-    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 配置.md",
-    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 安装.md",
-    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard + dnsmasq 实现内网自定义解析.md",
-    "笔记/☁️ 后端开发/CORS 重定向问题.md",
-    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
-    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/安装 ELK.md",
-    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
-    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md"
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/Golang mTLS 实现.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
+    "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
+    "笔记/☁️ 后端开发/mTLS SSO/系统设计.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
+    "⚠️ 知识库须知.md",
+    "笔记/🧰 运维/💾 TrueNAS/手机端照片同步.md",
+    "笔记/🧰 运维/💾 TrueNAS/自建音乐库服务器.md"
   ]
 }
