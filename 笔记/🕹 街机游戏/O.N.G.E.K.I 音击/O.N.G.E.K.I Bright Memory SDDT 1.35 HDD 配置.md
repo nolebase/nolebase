@@ -499,11 +499,13 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 #### All.net Authentication BAD / AIME Server BAD
 
-如果是连接的线上服务器，可能是版本不被支持。
+如果是连接的线上服务器，可能是网络有故障，或是版本不被支持。
+
 如果是连接的本地服务器，请确保你更新到了最新的 aqua 或是 minime 服务器源代码然后再次重试，亦或是服务器配置有问题。
 
 #### Title Server BAD
 
 在 `segatools.ini` 文件中有 vfs 部分配置，检查其中 `amfs` 字段中配置的 `amfs` 文件夹内是否含有 IC1 文件，如果没有，可以从 segatools 中重新解压获取。
+
 在 `segatools.ini` 文件中有 dns 部分配置，检查其中 startup 字段或是 default 字段所填写的域名或是 IP 是否在线和可被访问并支持你所运行的 O.N.G.E.K.I Bright Memory 游戏版本。
 
