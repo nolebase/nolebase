@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+            "file": "笔记/🎨 程序设计/设计模式 网站阅读.md",
             "mode": "source",
             "source": false
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+                "file": "笔记/🎨 程序设计/设计模式 网站阅读.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+                "file": "笔记/🎨 程序设计/设计模式 网站阅读.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md"
+                "file": "笔记/🎨 程序设计/设计模式 网站阅读.md"
               }
             }
           }
@@ -146,9 +146,9 @@
   },
   "active": "23c2037f4c888e3b",
   "lastOpenFiles": [
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
     "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/Golang mTLS 实现.md",
     "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
-    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
     "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
     "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
     "笔记/☁️ 后端开发/mTLS SSO/系统设计.md",
