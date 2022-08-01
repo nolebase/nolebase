@@ -6,14 +6,28 @@
       {
         "id": "8d8e0c79dab12da4",
         "type": "leaf",
+        "dimension": 77.39169675090253,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
+            "file": "☕️ 前端开发/monorepo.md",
             "mode": "source",
             "source": false
           }
-        }
+        },
+        "group": "700db968f4e11ce8"
+      },
+      {
+        "id": "b8e052de01c478ab",
+        "type": "leaf",
+        "dimension": 22.60830324909747,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "☕️ 前端开发/monorepo.md"
+          }
+        },
+        "group": "700db968f4e11ce8"
       }
     ],
     "direction": "vertical"
@@ -77,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
+                "file": "☕️ 前端开发/monorepo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md"
+                "file": "☕️ 前端开发/monorepo.md"
               }
             }
           },
@@ -119,15 +133,15 @@
   },
   "active": "8d8e0c79dab12da4",
   "lastOpenFiles": [
-    "語 编程语言/🐭 Golang/单元测试工具 testify 用法.md",
-    "📟 终端/Linux 命令/权限管理/chmod 变更权限.md",
-    "🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/分配权限.md",
-    "🧰 运维/部署 Confluence Data Center 版.md",
-    "🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/建库.md",
-    "🧰 运维/配置 GitLab CI CD 自动部署.md",
-    "🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/使用 Docker 安装.md",
-    "📟 终端/软件/🗃 node Node.js/解决 npm,yarn,pnpm 全局安装无效.md",
-    "📟 终端/Linux 命令索引.md",
-    "📟 终端/Linux 权限.md"
+    "📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+    "📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
+    "📄 PKI 公钥基础设施/TLS SSL 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
+    "📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/Golang mTLS 实现.md",
+    "🎮 游戏开发/📐 图形学/📐 向量之间的夹角.md",
+    "🎮 游戏开发/📐 图形学/🌐 齐次坐标.md",
+    "🎮 游戏开发/📐 图形学/✖️ 叉乘.md",
+    "🎮 游戏开发/📐 图形学/▶️ 三角函数.md",
+    "🎮 游戏开发/📐 图形学/↗️ 向量长度.md",
+    "🎮 游戏开发/📐 图形学/^ 单位向量.md"
   ]
 }
