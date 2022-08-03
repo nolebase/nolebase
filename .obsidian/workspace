@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📟 终端/设置代理.md",
+            "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
             "mode": "source",
             "source": false
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 终端/设置代理.md",
+                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📟 终端/设置代理.md",
+                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📟 终端/设置代理.md"
+                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md"
               }
             }
           }
@@ -146,6 +146,7 @@
   },
   "active": "2f81e98b21dd06dd",
   "lastOpenFiles": [
+    "笔记/📟 终端/设置代理.md",
     "笔记/🎨 程序设计/设计模式 网站阅读.md",
     "笔记/☕️ 前端开发/Vite 部署.md",
     "笔记/🧰 运维/🚢 Kubernates/KubeSphere.md",
@@ -154,7 +155,6 @@
     "笔记/☁️ 后端开发/高并发/未命名.md",
     "笔记/🧰 运维/🐳 Docker/Swarm/未命名.md",
     "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
-    "笔记/📁 资源/漫画资源.md"
+    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md"
   ]
 }

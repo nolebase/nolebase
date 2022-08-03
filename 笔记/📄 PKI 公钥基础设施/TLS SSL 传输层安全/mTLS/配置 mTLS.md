@@ -2,6 +2,8 @@
 
 #nginx #keystore #ssl #tls #certificate #p12 #ztna
 
+本文章着重参考了 [OpenSSL Certificate Authority — Jamie Nguyen](https://jamielinux.com/docs/openssl-certificate-authority/introduction.html) 一站的文章说明和讲解。
+
 ## 创建 CA（证书颁发机构）
 
 ### 创建根证书颁发机构的私钥并使用 des3 加密模式进行加密
