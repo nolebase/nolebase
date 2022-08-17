@@ -24,6 +24,9 @@ wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
 
 ```shell
 export codename=`grep -Po 'VERSION="[0-9]+ \(\K[^)]+' /etc/os-release`
+```
+
+```shell
 echo "deb http://openresty.org/package/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
 ```
 
@@ -31,6 +34,9 @@ echo "deb http://openresty.org/package/debian $codename openresty" | sudo tee /e
 
 ```shell
 export codename=`grep -Po 'VERSION="[0-9]+ \(\K[^)]+' /etc/os-release`
+```
+
+```shell
 echo "deb http://openresty.org/package/arm64/debian $codename openresty" | sudo tee /etc/apt/sources.list.d/openresty.list
 ```
 
@@ -88,7 +94,7 @@ http {
     include       mime.types;
     default_type  application/octet-stream;
 
-    log_format logstash '{'
+    log_format json '{'
     	'"@timestamp":"$time_iso8601",'
   	    '"client_ip": "$remote_addr",'
 	    '"request_uri": "$uri",'
@@ -105,7 +111,7 @@ http {
     	'"upstream_response_time": $upstream_response_time'
     '}';
 
-    access_log  /var/log/nginx/access.log logstash;
+    access_log  /var/log/nginx/access.log json;
 
     sendfile        on;
     #tcp_nopush     on;
