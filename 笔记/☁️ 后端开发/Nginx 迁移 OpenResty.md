@@ -163,3 +163,15 @@ sudo systemctl start openresty
 sudo systemctl disable nginx
 sudo systemctl enable openresty
 ```
+
+### 卸载 Nginx
+
+```shell
+sudo apt remove nginx
+```
+
+### 创建新的 Nginx 二进制文件软链接
+
+```shell
+sudo ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx
+```
