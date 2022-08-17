@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2f81e98b21dd06dd",
+        "id": "5f88fcadee49ef5c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+            "file": "笔记/☁️ 后端开发/Nginx 迁移 OpenResty.md",
             "mode": "source",
             "source": false
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+                "file": "笔记/☁️ 后端开发/Nginx 迁移 OpenResty.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+                "file": "笔记/☁️ 后端开发/Nginx 迁移 OpenResty.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md"
+                "file": "笔记/☁️ 后端开发/Nginx 迁移 OpenResty.md"
               }
             }
           }
@@ -142,19 +142,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 386
+    "width": 386,
+    "collapsed": true
   },
-  "active": "2f81e98b21dd06dd",
+  "active": "5f88fcadee49ef5c",
   "lastOpenFiles": [
-    "笔记/📟 终端/设置代理.md",
-    "笔记/🎨 程序设计/设计模式 网站阅读.md",
-    "笔记/☕️ 前端开发/Vite 部署.md",
-    "笔记/🧰 运维/🚢 Kubernates/KubeSphere.md",
-    "笔记/語 编程语言/🐭 Golang/为什么要避免在 Go 中使用 ioutil.ReadAll.md",
-    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/时间转换.md",
-    "笔记/☁️ 后端开发/高并发/未命名.md",
-    "笔记/🧰 运维/🐳 Docker/Swarm/未命名.md",
-    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md",
-    "笔记/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md"
+    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/SEQUENCE 相关操作.md",
+    "笔记/☁️ 后端开发/🕸 网络/记一次 Docker Swarm 和 k8s 网络异常的排查和解决.md",
+    "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
+    "笔记/☁️ 后端开发/🕸 网络/OpenWRT 透明代理 和 Turbo ACC 导致的 Apple 推送服务延迟问题.md",
+    "笔记/☁️ 后端开发/🕸 网络/assets/a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-02.png",
+    "笔记/☁️ 后端开发/🕸 网络/assets/a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-01.png",
+    "笔记/☁️ 后端开发/🕸 网络/assets/dnsmasq-setup.cast",
+    "笔记/☁️ 后端开发/🕸 网络/IP 后面的斜杠是什么？.md",
+    "笔记/☁️ 后端开发/高并发/高并发文章.md",
+    "笔记/📁 资源/字幕资源.md"
   ]
 }
