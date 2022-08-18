@@ -120,7 +120,8 @@ http {
 
     #gzip  on;
 
-    include /etc/nginx/conf.d/*.conf;
+    include /etc/openresty/conf.d/*.conf;
+    include /etc/openresty/sites-enabled/*;
 }
 ```
 
