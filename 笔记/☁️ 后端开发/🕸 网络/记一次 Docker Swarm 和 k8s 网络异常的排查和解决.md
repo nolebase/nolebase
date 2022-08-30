@@ -1,3 +1,17 @@
+##### 文档版本
+
+| 编辑者 | 版本 | 变更日期 | 变更说明 |
+| ----- | --- | ------- | ------- |
+| Neko | v1.0.0 | 2022-08-15 | 创建 |
+
+##### 文档兼容性
+
+| 主体 | 版本号 | 文档地址（如果有） |
+| -- | -- | -- |
+| Debian | 11/5.10.127-1/amd64 |  |
+| Docker | 20.10.17 | [Docker Documentation](https://docs.docker.com/) |
+| OpenResty | openresty/1.21.4.1 | [OpenResty® - Official Site](https://openresty.org/en/) |
+
 ![[a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-01.png]]
 ![[a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-02.png]]
 深入kube-proxy ipvs模式的conn_reuse_mode问题 - MAAO的博客

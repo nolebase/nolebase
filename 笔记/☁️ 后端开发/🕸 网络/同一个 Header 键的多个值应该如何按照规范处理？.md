@@ -1,3 +1,11 @@
+# 同一个 Header 键的多个值应该如何按照规范处理？
+
+##### 文档版本
+
+| 编辑者 | 版本 | 变更日期 | 变更说明 |
+| ----- | --- | ------- | ------- |
+| Neko | v1.0.0 | 2022-05-30 | 创建 |
+
 曾经想过这个问题，但是似乎自己没有遇到过类似的情况所以没深究，今天在 Mi Home 群和 Rikumi 讨论「同一个 Header 键的多个值应该如何发送和接收」的时候好奇就去查了一下。
 
 是在这篇文章看到讲解：[Are Duplicate HTTP Response Headers acceptable? (重复的 HTTP 响应标头值应该是可被接受的吗？) - Stack Overflow](https://stackoverflow.com/questions/4371328/are-duplicate-http-response-headers-acceptable)

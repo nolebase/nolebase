@@ -1,3 +1,22 @@
+# OpenResty 记录 JWT 中的 userId
+
+##### 文档版本
+
+| 编辑者 | 版本 | 变更日期 | 变更说明 |
+| ----- | --- | ------- | ------- |
+| Neko | v1.0.0 | 2022-08-18 | 创建 |
+
+##### 文档兼容性
+
+| 主体 | 版本号 | 文档地址（如果有） |
+| -- | -- | -- |
+| Debian | 11/5.10.127-1/amd64 |  |
+| OpenResty | openresty/1.21.4.1 | [OpenResty® - Official Site](https://openresty.org/en/) |
+| SkyLothar/lua-resty-jwt | 0.1.11 | [SkyLothar/lua-resty-jwt: JWT For The Great Openresty](https://github.com/SkyLothar/lua-resty-jwt) |
+| cloudflare/lua-resty-cookie | 0.0.0 | [cloudflare/lua-resty-cookie: Lua library for HTTP cookie manipulations for OpenResty/ngx_lua](https://github.com/cloudflare/lua-resty-cookie) |
+
+
+
 ## 安装 lua-resty-jwt
 
 ```shell
