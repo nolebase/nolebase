@@ -13,6 +13,7 @@
 ## 起因
 
 小音和我说她使用的 html2canvas 引用的图片会随机丢失，有时候能稳定复现，有时候又会正常，但是总是有图片会丢失。
+
 调查浏览器的开发者工具的控制台的时候发现是图片相关的响应未正确按照 CORS 期望的设定返回 `Access-Control-Allow-Origin: *` 头部，触发了 CORS 策略错误导致。
 而如果不使用 CORS 策略（即打开 html2canvas 配置选项中的 `useCORS: true`  选项）请求图片的话，会导致 canvas 变成不安全的 canvas，或者说是被污染的 canvas（参见：[启用了 CORS 的图片 - HTML（超文本标记语言） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_enabled_image)），在这样的情况下，将不可使用 canvas 上下文 context 调用下列函数：
 
