@@ -102,7 +102,7 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 其含义是：
 
-是的，如果一个请求可能包含有不同值的 `Access-Control-Allow-Origin`，即使请求没有包含 `Access-Control-Allow-Origin` 头的响应，那么 CDN 应该总是包含返回 `Vary:Origin` 头部，你的分析是正确的：如果头信息不总是存在，就有可能用不正确的值填充缓存。
+> 是的，如果一个请求可能包含有不同值的 `Access-Control-Allow-Origin`，即使请求没有包含 `Access-Control-Allow-Origin` 头的响应，那么 CDN 应该总是包含返回 `Vary:Origin` 头部，你的分析是正确的：如果头信息不总是存在，就有可能用不正确的值填充缓存。
 
 此时此刻我们去寻找 MDN 关于 `Vary` 头部的文档 [Vary - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Vary)，就能看到：
 
