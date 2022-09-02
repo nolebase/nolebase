@@ -97,8 +97,8 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 咦，这个 `Vary: Origin` 看起来非常眼熟，之前在 OSS 的跨域配置中看到过，但是从未仔细了解过具体的含义。但是我们能在另一个回答中能找到些许线索：
 
-> Yes. If a request may contain a `Access-Control-Allow-Origin` with different values, then the CDN should always respond with `Vary: Origin`, even for responses without an `Access-Control-Allow-Origin` header. Your analysis is correct: if the header isn't always present, it would be possible to fill the cache with incorrect values.
-> - [monsur](https://stackoverflow.com/users/107250/monsur)[ answered Aug 15, 2014 at 16:02](https://stackoverflow.com/a/25329887)
+> Yes. If a request may contain a `Access-Control-Allow-Origin` with different values, then the CDN should always respond with `Vary: Origin`, even for responses without an `Access-Control-Allow-Origin` header. Your analysis is correct: if the header isn't always present, it would be possible to fill the cache with incorrect values. 
+> – [monsur](https://stackoverflow.com/users/107250/monsur)[ answered Aug 15, 2014 at 16:02](https://stackoverflow.com/a/25329887)
 
 其含义是：
 
