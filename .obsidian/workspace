@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题.md",
+            "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "systemd",
+                "query": "tag:#postgresql",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +109,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +130,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -142,20 +138,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 386,
-    "collapsed": true
+    "width": 386
   },
-  "active": "bcc62d2d191b7ece",
+  "active": "c589947a0e4d8159",
   "lastOpenFiles": [
-    "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 日志在 0 点丢失问题的排查和解决.md",
-    "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题.md",
-    "笔记/☁️ 后端开发/🚪 网关/OpenResty 记录 JWT 中的 userId.md",
-    "笔记/☁️ 后端开发/🚪 网关/Nginx 迁移 OpenResty.md",
-    "笔记/☁️ 后端开发/🕸 网络/记一次 Docker Swarm 和 k8s 网络异常的排查和解决.md",
-    "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
-    "笔记/☁️ 后端开发/🕸 网络/OpenWRT 透明代理 和 Turbo ACC 导致的 Apple 推送服务延迟问题.md",
-    "笔记/☕️ 前端开发/记一次 Canvas 内引用了 OSS 域的图片标签绘制时出现的 CORS 错误问题.md",
-    "笔记/☕️ 前端开发/assets/canvas-referenced-oss-cross-origin-image-as-source-img-element-caused-cors-error-record-screenshot-01.png",
-    "笔记/☕️ 前端开发/Vite 部署.md"
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/Golang mTLS 实现.md",
+    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
+    "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
+    "笔记/☁️ 后端开发/CORS 重定向问题.md",
+    "笔记/☁️ 后端开发/构建 Go 的最小镜像.md",
+    "笔记/☁️ 后端开发/apidoc 安装.md",
+    "笔记/☁️ 后端开发/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md"
   ]
 }

@@ -1,5 +1,7 @@
 # 本地开发环境 TLS 搭建和 DNS 覆写
 
+#openssl #域名证书 #https #ssl #certificate #开发环境 #dns
+
 [如何为 macOS 本地 HTTPS 开发创建自己的 SSL 证书颁发机构](https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/)
 
 [如何为 Windows 本地 HTTPS 开发创建自己的 SSL 证书颁发机构](https://zeropointdevelopment.com/how-to-get-https-working-in-windows-10-localhost-dev-environment/)

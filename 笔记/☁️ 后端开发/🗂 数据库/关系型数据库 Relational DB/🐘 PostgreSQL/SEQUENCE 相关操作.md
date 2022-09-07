@@ -1,3 +1,7 @@
+# SEQUENCE 相关操作
+
+#postgres #postgresql #sql
+
 1. 获取 SEQUENCE 当前的值
 
 ```sql

@@ -1,5 +1,7 @@
 # 记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题
 
+#网关 #nginx #openresty #lua #elastic #elasticsearch #elk #故障排查
+
 ##### 文档版本
 
 | 编辑者 | 版本 | 变更日期 | 变更说明 |

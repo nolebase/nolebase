@@ -1,3 +1,7 @@
+# CORS 重定向问题 
+
+#nginx #cors #后端 #跨域
+
 ```nginx
 server {
         listen 80;

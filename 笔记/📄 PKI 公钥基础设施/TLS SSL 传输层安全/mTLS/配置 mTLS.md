@@ -1,6 +1,6 @@
 # 配置 mTLS
 
-#nginx #keystore #ssl #tls #certificate #p12 #ztna
+#nginx #keystore #ssl #tls #certificate #p12 #ztna #ca #openssl 
 
 本文章着重参考了 [OpenSSL Certificate Authority — Jamie Nguyen](https://jamielinux.com/docs/openssl-certificate-authority/introduction.html) 一站的文章说明和讲解。
 

@@ -1,5 +1,7 @@
 # 国际化查询中将查询得到的 Object 数组重新映射为 `language_code` 列为键的 Object
 
+#postgres #postgresql #sql #jsonb #i18n #国际化 #嵌套查询
+
 ##### 文档版本
 
 | 编辑者 | 版本 | 变更日期 | 变更说明 |
