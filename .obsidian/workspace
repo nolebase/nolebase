@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+            "file": "笔记/☁️ 后端开发/分页的哲学.md",
             "mode": "source",
             "source": false
           }
@@ -93,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/☁️ 后端开发/分页的哲学.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/☁️ 后端开发/分页的哲学.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/☁️ 后端开发/分页的哲学.md"
+              }
             }
           }
         ],
@@ -140,17 +144,17 @@
     "direction": "horizontal",
     "width": 386
   },
-  "active": "c589947a0e4d8159",
+  "active": "bcc62d2d191b7ece",
   "lastOpenFiles": [
-    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
-    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
-    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/配置 mTLS.md",
-    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/mTLS/Golang mTLS 实现.md",
-    "笔记/📄 PKI 公钥基础设施/TLS SSL 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
-    "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
-    "笔记/☁️ 后端开发/CORS 重定向问题.md",
-    "笔记/☁️ 后端开发/构建 Go 的最小镜像.md",
     "笔记/☁️ 后端开发/apidoc 安装.md",
-    "笔记/☁️ 后端开发/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md"
+    "笔记/☁️ 后端开发/🕸️ GraphQL/基于游标的分页.md",
+    "笔记/☁️ 后端开发/分页的哲学.md",
+    "笔记/☁️ 后端开发/CORS 重定向问题.md",
+    "笔记/語 编程语言/🐭 Golang/嵌套式表驱动.md",
+    "笔记/語 编程语言/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
+    "笔记/語 编程语言/🐭 Golang/为什么要避免在 Go 中使用 ioutil.ReadAll.md",
+    "笔记/語 编程语言/🐭 Golang/Go 常用命令行指令.md",
+    "笔记/語 编程语言/🐭 Golang/Go101 书籍（简体中文）.md",
+    "笔记/語 编程语言/🐭 Golang/Golang 学习资料大全.md"
   ]
 }
