@@ -1,0 +1,27 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "pnpm run update && vitepress dev",
+    "docs:build": "pnpm run update && vitepress build",
+    "docs:serve": "vitepress serve",
+    "update": "tsx scripts/update.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^10.1.0",
+    "gray-matter": "^4.0.3",
+    "simple-git": "^3.14.0",
+    "tsx": "^3.9.0",
+    "typescript": "^4.8.3",
+    "vitepress": "1.0.0-alpha.13",
+    "vue": "^3.2.39"
+  }
+}

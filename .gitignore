@@ -5,4 +5,12 @@
 !**/.obsidian/workspace*
 !**/.obsidian/graph*
 
+.idea
+.nuxt
+.temp
+*.local
+*.log
+components.d.ts
+dist
 node_modules
+**/.vitepress/metainfo.json
