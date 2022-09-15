@@ -59,11 +59,15 @@ function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgrad
       obj = {
         index: onePath,
         text: onePath,
+        collapsible: true,
+        collapsed: true,
         items: []
       }
       indexes.push(obj)
     }
     else if (!obj.items) {
+      obj.collapsible = true
+      obj.collapsed = true
       obj.items = []
     }
 
