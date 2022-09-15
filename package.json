@@ -25,7 +25,7 @@
     "unocss": "^0.45.21",
     "unplugin-vue-components": "^0.22.7",
     "vite": "^3.1.0",
-    "vitepress": "1.0.0-alpha.13",
+    "vitepress": "1.0.0-alpha.15",
     "vue": "^3.2.39"
   }
 }
