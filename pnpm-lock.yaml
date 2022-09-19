@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/octicon': ^1.1.17
   '@types/fs-extra': ^9.0.13
   '@types/md5': ^2.3.2
   '@unocss/reset': ^0.45.21
@@ -18,6 +19,7 @@ specifiers:
   vue: ^3.2.39
 
 devDependencies:
+  '@iconify-json/octicon': 1.1.17
   '@types/fs-extra': 9.0.13
   '@types/md5': 2.3.2
   '@unocss/reset': 0.45.21
@@ -259,6 +261,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iconify-json/octicon/1.1.17:
+    resolution: {integrity: sha512-W4NqIozJ/PXJAC96u3BQag/Eh5ykqSHbzzxt6f78l+sYYc23jymp1pH1ZXDV8QnKXMbHwS/oFV2zKeHZfS1tcQ==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
 
   /@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}

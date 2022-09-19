@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@iconify-json/octicon": "^1.1.17",
     "@types/fs-extra": "^9.0.13",
     "@types/md5": "^2.3.2",
     "@unocss/reset": "^0.45.21",
