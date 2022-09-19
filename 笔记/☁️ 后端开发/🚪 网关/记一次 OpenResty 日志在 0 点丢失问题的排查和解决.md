@@ -19,7 +19,7 @@
 
 问题起因是
 
-![[an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01.png]]
+![an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01](an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01.png)
 
 ```shell
 sudo ls -la /var/log/nginx/

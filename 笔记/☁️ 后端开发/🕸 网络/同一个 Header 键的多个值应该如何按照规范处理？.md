@@ -15,7 +15,7 @@
 
 顺藤摸瓜找到 RFC2616 的第二部分：[Notational Conventions and Generic Grammar (符号约定和通用语法)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2) 可以看到对上面提到的 `1#cache-directive` 层级的说明。
 
-![[rfc2616-screenshot-02.png]]
+![rfc2616-screenshot-02](rfc2616-screenshot-02.png)
 
 根据 RFC2616 第二部分的定义，任何 `#` 字符开头的字段结构都应该是一个列表，「每一个元素之间应该使用一个或是多个英文逗号 `,` 和**可选**的线性空格（LWS）进行连接」。
 

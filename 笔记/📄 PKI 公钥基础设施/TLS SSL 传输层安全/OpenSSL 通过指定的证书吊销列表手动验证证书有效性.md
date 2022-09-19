@@ -126,5 +126,5 @@ openssl crl -inform DER -in <CRL 文件路径> -out <转换后的 CRL 文件路�
 openssl x509 -in <CER/CRT 文件路径> -inform DER -out <转换后的 CER/CRT 文件路径> -outform PEM
 ```
 
-[^1]: [[🚧  grep 查找文件]]
-[^2]: [[wget HTTP 客户端]]
+[^1]: [🚧  grep 查找文件](%F0%9F%9A%A7%20%20grep%20%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6.md)
+[^2]: [wget HTTP 客户端](wget%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)

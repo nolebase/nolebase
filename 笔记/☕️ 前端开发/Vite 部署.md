@@ -1,11 +1,11 @@
 ## 安装和配置
 
 ### 安装前置软件
-使用 `yum` 或者 `dnf`（两者都一样的效果，[[yum dnf 包管理器]]）进行安装
+使用 `yum` 或者 `dnf`（两者都一样的效果，[yum dnf 包管理器](yum%20dnf%20%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8.md)）进行安装
 
 1. 优先安装 epel-release（一个很大的软件库源，安装后可以搜索和安装更多的软件包）
 2. 更新整个软件包列表缓存和系统
-3. 此处需要安装 Nginx（[[Nginx 网页服务器]]），Vim（[[Vim 编辑器]]，不喜欢的话可以换成 [[nano 编辑器]]），Git（[[Git 命令速记]]），node（[[node Node.js]]），pnpm（包管理器）
+3. 此处需要安装 Nginx（[Nginx 网页服务器](Nginx%20%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8.md)），Vim（[Vim 编辑器](Vim%20%E7%BC%96%E8%BE%91%E5%99%A8.md)，不喜欢的话可以换成 [nano 编辑器](nano%20%E7%BC%96%E8%BE%91%E5%99%A8.md)），Git（[Git 命令速记](Git%20%E5%91%BD%E4%BB%A4%E9%80%9F%E8%AE%B0.md)），node（[node Node.js](node%20Node.js.md)），pnpm（包管理器）
 4. -y 参数表示无需询问是否安装，直接静默安装
 
 ```shell
@@ -69,7 +69,7 @@ $ sudo yum install nginx
 $ sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libxslt libxslt-devel gd-devel perl-devel perl-ExtUtils-Embed GeoIP GeoIP-devel GeoIP-data gperftools-devel
 ```
 
-使用 `wget` 命令（参考 [[wget HTTP 客户端]]）下载 nginx 的源码
+使用 `wget` 命令（参考 [wget HTTP 客户端](wget%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）下载 nginx 的源码
 
 ```shell
 wget http://nginx.org/download/nginx-1.20.1.tar.gz
@@ -77,13 +77,13 @@ wget http://nginx.org/download/nginx-1.20.1.tar.gz
 
 #### 安装 Node.js
 
-使用 `curl` 命令（参考[[curl HTTP 客户端]]）下载并导入 Node14 仓库和配置（和下面的 Node16 二选一）
+使用 `curl` 命令（参考[curl HTTP 客户端](curl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）下载并导入 Node14 仓库和配置（和下面的 Node16 二选一）
 
 ```shell
 curl -fsSL https://rpm.nodesource.com/setup_14.x | sudo bash -
 ```
 
-使用 `curl` 命令（参考[[curl HTTP 客户端]]）下载并导入 Node16 仓库和配置（和上面的 Node14 二选一）
+使用 `curl` 命令（参考[curl HTTP 客户端](curl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）下载并导入 Node16 仓库和配置（和上面的 Node14 二选一）
 
 ```shell
 curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
@@ -103,7 +103,7 @@ $ sudo npm install -g pnpm
 
 ### 设定 Nginx 服务为开机自启，并且开始运行
 
-使用 `systemctl`（参考 [[🚧  systemctl 服务管理]]）设定开机自启和运行
+使用 `systemctl`（参考 [🚧  systemctl 服务管理](%F0%9F%9A%A7%20%20systemctl%20%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86.md)）设定开机自启和运行
 
 ```shell
 $ sudo systemctl enable nginx
@@ -117,7 +117,7 @@ $ sudo systemctl start nginx
 
 #### 检查 iptables
 
-1. 先检查 iptables（一个老牌防火墙服务，命令参考：[[🚧  iptables 防火墙配置]]）是否在运行
+1. 先检查 iptables（一个老牌防火墙服务，命令参考：[🚧  iptables 防火墙配置](%F0%9F%9A%A7%20%20iptables%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）是否在运行
 
 ```shell
 $ sudo systemctl status iptables
@@ -144,7 +144,7 @@ $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
 #### 检查 firewalld
 
-2. 检查 firewalld（现在主流防火墙服务，命令参考 [[🚧  firewalld 防火墙配置]]）是否在运行
+2. 检查 firewalld（现在主流防火墙服务，命令参考 [🚧  firewalld 防火墙配置](%F0%9F%9A%A7%20%20firewalld%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）是否在运行
 
 ```shell
 $ sudo systemctl status firewalld
@@ -193,19 +193,19 @@ $ pnpm i && pnpm build
 
 移动编译产物 `dist` 文件夹到别的地方
 如果是需要限制权限和访问的，可以放到 `/usr/local/frontend/<项目名称>/app`，`frontend` 是前端的意思
-这个目录使用 `mkdir` （参考 [[mkdir 创建目录]]）创建的时候带上 `sudo` 就可以限制为仅可 `root` 或 root 权限访问：
+这个目录使用 `mkdir` （参考 [mkdir 创建目录](mkdir%20%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95.md)）创建的时候带上 `sudo` 就可以限制为仅可 `root` 或 root 权限访问：
 
 ```shell
 $ sudo mkdir -p /usr/local/frontend/<项目名称>
 ```
 
-还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令（参考 [[chown 变更所属权]]）表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
+还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令（参考 [chown 变更所属权](chown%20%E5%8F%98%E6%9B%B4%E6%89%80%E5%B1%9E%E6%9D%83.md)）表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
 
 ```shell
 $ sudo chown -R root:whell /usr/local/frontend
 ```
 
-如果没有特别的需求，可以放到原地，比如新建一个 app 文件夹用来存编译产物也是完全没问题的；使用 `mv` 命令（参考 [[mv 剪贴、移动]]）把编译好的内容放到新的地方：
+如果没有特别的需求，可以放到原地，比如新建一个 app 文件夹用来存编译产物也是完全没问题的；使用 `mv` 命令（参考 [mv 剪贴、移动](mv%20%E5%89%AA%E8%B4%B4%E3%80%81%E7%A7%BB%E5%8A%A8.md)）把编译好的内容放到新的地方：
 
 ```shell
 $ sudo mv dist <文件夹地址>
@@ -307,7 +307,7 @@ $ sudo nginx -t
 
 如果有错误的话会提示具体的文件和行号
 
-使用 `nginx` 命令（参考 [[Nginx 网页服务器]]）加上参数 `s` 重新载入 Nginx 配置文件并应用
+使用 `nginx` 命令（参考 [Nginx 网页服务器](Nginx%20%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8.md)）加上参数 `s` 重新载入 Nginx 配置文件并应用
 
 ```shell
 $ sudo nginx -s reload
@@ -469,7 +469,7 @@ $ sudo nginx -t
 $ sudo nginx -s reload
 ```
 
-使用 `setsebool` 命令（参考 [[🚧  setsebool 配置 SELinux 参数]]）配置 SELinux （参见 [[SELinux 安全 Linux]]）规则以允许 Nginx 访问内网：
+使用 `setsebool` 命令（参考 [🚧  setsebool 配置 SELinux 参数](%F0%9F%9A%A7%20%20setsebool%20%E9%85%8D%E7%BD%AE%20SELinux%20%E5%8F%82%E6%95%B0.md)）配置 SELinux （参见 [SELinux 安全 Linux](SELinux%20%E5%AE%89%E5%85%A8%20Linux.md)）规则以允许 Nginx 访问内网：
 
 ```shell
 $ sudo setsebool -P httpd_can_network_connect on
@@ -498,7 +498,7 @@ $ sudo ls -l <目录> | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/
              *2^(8-i));if(k)printf("%0o ",k);print}'
 ```
 
-使用上面的命令可以获得下面的输出，这样可以在最前面看到每个文件的具体权限值（[[Linux 权限]]）：
+使用上面的命令可以获得下面的输出，这样可以在最前面看到每个文件的具体权限值（[Linux 权限](Linux%20%E6%9D%83%E9%99%90.md)）：
 
 ```shell
 总用量 4

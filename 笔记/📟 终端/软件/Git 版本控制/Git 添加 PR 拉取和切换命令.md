@@ -59,7 +59,7 @@ git config --global -e
 
 1. 拉取指定来源的 PR 到本地：
 
-对于远程代码库的设定可以参阅 [[Git 命令速记]] 中的「远程代码库」章节：
+对于远程代码库的设定可以参阅 [Git 命令速记](Git%20%E5%91%BD%E4%BB%A4%E9%80%9F%E8%AE%B0.md) 中的「远程代码库」章节：
 
 ```shell
 git pullpr <PR 的 ID> <远程代码库，默认为 upstream> <新的分支名称>

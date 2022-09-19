@@ -146,7 +146,7 @@ class SampleSettingTab extends PluginSettingTab {
 }
 ```
 
-在 Obsidian 的[[Obsidian 官方文档参考]]中可以得知：必须使用 `export default class` 导出一个扩展 `Plugin` 的默认类，所以我们的插件要基于拓展的 Plugin 类完成。
+在 Obsidian 的[Obsidian 官方文档参考](Obsidian%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83.md)中可以得知：必须使用 `export default class` 导出一个扩展 `Plugin` 的默认类，所以我们的插件要基于拓展的 Plugin 类完成。
 
 ## 开始编写
 

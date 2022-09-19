@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "笔记/☁️ 后端开发/分页的哲学.md",
+            "file": "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md",
             "mode": "source",
             "source": false
           }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/☁️ 后端开发/分页的哲学.md",
+                "file": "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/☁️ 后端开发/分页的哲学.md",
+                "file": "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/☁️ 后端开发/分页的哲学.md"
+                "file": "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md"
               }
             }
           }
@@ -146,15 +146,15 @@
   },
   "active": "bcc62d2d191b7ece",
   "lastOpenFiles": [
+    "笔记/📟 终端/Linux 命令/系统管理/🚧  systemctl 服务管理.md",
+    "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md",
+    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md",
+    "笔记/🧰 运维/🐳 Docker/Docker Registry 删除镜像.md",
+    "笔记/☁️ 后端开发/分页的哲学.md",
     "笔记/☁️ 后端开发/apidoc 安装.md",
     "笔记/☁️ 后端开发/🕸️ GraphQL/基于游标的分页.md",
-    "笔记/☁️ 后端开发/分页的哲学.md",
     "笔记/☁️ 后端开发/CORS 重定向问题.md",
     "笔记/語 编程语言/🐭 Golang/嵌套式表驱动.md",
-    "笔记/語 编程语言/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md",
-    "笔记/語 编程语言/🐭 Golang/为什么要避免在 Go 中使用 ioutil.ReadAll.md",
-    "笔记/語 编程语言/🐭 Golang/Go 常用命令行指令.md",
-    "笔记/語 编程语言/🐭 Golang/Go101 书籍（简体中文）.md",
-    "笔记/語 编程语言/🐭 Golang/Golang 学习资料大全.md"
+    "笔记/語 编程语言/🐭 Golang/如何判断当前调用是否是 Goroutine（Go 协程）.md"
   ]
 }

@@ -14,7 +14,7 @@ sudo chown -R $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt
 xattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app
 ```
 
-`chown` —— 改变文件的归属者（[[chown 变更所属权]]）
+`chown` —— 改变文件的归属者（[chown 变更所属权](chown%20%E5%8F%98%E6%9B%B4%E6%89%80%E5%B1%9E%E6%9D%83.md)）
 
 `xattr` —— 操作文件的扩展信息，这里用来删除文件和子文件的扩展信息
 

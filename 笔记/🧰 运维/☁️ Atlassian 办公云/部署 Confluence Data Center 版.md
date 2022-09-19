@@ -152,7 +152,7 @@ Use default ports (HTTP: 8090, Control: 8000) - Recommended [1, Enter], Set cust
 
 #### 安装中命令行交互：要安装为服务么？
 
-安装为服务后可以使用 systemd（参加：[[🚧  systemctl 服务管理]]）进行管理。
+安装为服务后可以使用 systemd（参加：[🚧  systemctl 服务管理](%F0%9F%9A%A7%20%20systemctl%20%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86.md)）进行管理。
 
 ```shell
 Confluence can be run in the background.
@@ -254,7 +254,7 @@ sudo apt install nginx
 
 #### 申请 Let's Encrypt 证书
 
-参见 [[申请 Lets Encrypt 的 SSL 证书]]
+参见 [申请 Lets Encrypt 的 SSL 证书](%E7%94%B3%E8%AF%B7%20Lets%20Encrypt%20%E7%9A%84%20SSL%20%E8%AF%81%E4%B9%A6.md)
 
 #### 创建 Confluence 反代理配置文件
 

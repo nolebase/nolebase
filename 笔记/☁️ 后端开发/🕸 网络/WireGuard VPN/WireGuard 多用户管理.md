@@ -1,6 +1,6 @@
 # WireGuard VPN 多用户管理
 
-此教程默认已安装和配置过 WireGuard 服务端，如果没有，可以前往 [[WireGuard 安装]] 进行安装和 [[WireGuard 配置]] 进行配置。
+此教程默认已安装和配置过 WireGuard 服务端，如果没有，可以前往 [WireGuard 安装](WireGuard%20%E5%AE%89%E8%A3%85.md) 进行安装和 [WireGuard 配置](WireGuard%20%E9%85%8D%E7%BD%AE.md) 进行配置。
 
 ## 概述
 
@@ -30,7 +30,7 @@ $ wg genkey | sudo tee cprivatekey1 | wg pubkey > sudo cpublickey1
 ### 服务器上执行添加客户端配置代码（新增一个 `[peer]`）：
 
 命令说明
-1. `$(cat cpublickey1)` 使用 [[cat 输出文件]] 命令获取客户端公匙
+1. `$(cat cpublickey1)` 使用 [cat 输出文件](cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取客户端公匙
 2. `10.0.0.3/32` 这个是客户端内网IP地址，按序递增最后一位（.3）)，不要重复
 
 ```shell

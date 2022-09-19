@@ -54,7 +54,7 @@ drwxrwxr-x 3 neko neko    23 9月  29 16:17 source
 | drwxrwxr-x | 4 | neko | neko | 28 | 7月 | 30 | 14:33 | go |
 | drwxrwxr-x | 3 | neko | neko | 23 | 9月 | 29 | 16:17 | source |
 
-关于权限，可以参考：[[Linux 权限]]
+关于权限，可以参考：[Linux 权限](Linux%20%E6%9D%83%E9%99%90.md)
 其中：
 1. **链接数** 指的是 Unix 文件系统中的 inode 链接数，这个值只对目录有效，指的是目录下面的 **项目数量**
 2. **用户组** 在这个地方通常每个用户会对应有一个同名的组，这个组也有可能是别的组，比如 wheel（RHEL 系 Linux 系统的超级管理员组组名）
