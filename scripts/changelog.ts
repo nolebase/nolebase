@@ -2,9 +2,7 @@ import md5 from 'md5'
 import Git from 'simple-git'
 import type { CommitInfo, ContributorInfo } from './types'
 import { uniq } from './utils'
-
-/** 获取日志时包含的目录 */
-const include = ['笔记', '生活']
+import { include } from '../.vitepress/meta'
 
 const git = Git({
   maxConcurrentProcesses: 200,
