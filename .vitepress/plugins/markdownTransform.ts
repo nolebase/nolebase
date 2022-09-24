@@ -29,12 +29,18 @@ export function MarkdownTransform(): Plugin {
 
 
 export async function getFunctionMarkdown() {
+  const contributorsSection = `
+## Contributors
+
+<Contributors />
+`
+
   const changelogSection = `
 ## Changelog
 
 <Changelog />
 `
-  const footer = `${changelogSection}\n`
+  const footer = `${contributorsSection}\n${changelogSection}\n`
 
   return {
     footer,

@@ -34,6 +34,8 @@ export async function getChangeLog(count = 200) {
         .map(i => i.match(RegExp(`^(${include.join('|')})\\/.+\\.md$`))?.[0])
         .filter(Boolean),
     )
+
+    log.authorAvatar = md5(log.author_email)
   }
 
   const result = logs.filter(i => i.path?.length || i.version)
@@ -80,4 +82,10 @@ export async function getContributorsAt(path: string) {
 // ;(async function() {
 //   const log = await getChangeLog(20)
 //   console.log('changelog:', log)
+// })()
+
+// 测试 getContributorsAt
+// ;(async function() {
+//   const log = await getContributorsAt('笔记/☕️ 前端开发/用 TypeScript 写 sh 脚本.md')
+//   console.log('contributors:', log)
 // })()

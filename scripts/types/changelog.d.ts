@@ -14,4 +14,5 @@ export interface CommitInfo {
   body?: string
   author_name: string
   author_email: string
+  authorAvatar: string
 }

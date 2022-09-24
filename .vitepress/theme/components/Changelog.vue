@@ -5,12 +5,9 @@ import { computed } from 'vue'
 import { CommitInfo } from '../../../scripts/types'
 import { renderCommitMessage } from '../utils'
 import { githubRepoLink } from "../../meta"
+import { useRawPath } from '../composables/route'
 
-const rawPath = (() => {
-  if (typeof window === 'undefined')
-    return ''
-  return decodeURIComponent(window.location.pathname).replace(/^\/(.+)\.html$/, '$1.md')
-})()
+const rawPath = useRawPath()
 
 const allCommits = changelog as CommitInfo[]
 const commits = computed(() => {
