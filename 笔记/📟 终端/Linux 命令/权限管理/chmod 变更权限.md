@@ -4,7 +4,7 @@
 
 **ch**ange **mod**e，变更模式，使用该命令可以控制用户对文件的权限
 
-Linux/Unix 的文件调用权限分为三级 : 文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。具体参考：[Linux 权限](Linux%20%E6%9D%83%E9%99%90.md)
+Linux/Unix 的文件调用权限分为三级 : 文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。具体参考：[Linux 权限](../../Linux%20%E6%9D%83%E9%99%90.md)
 ![](../../assets/image_20211012135645.png)
 只有文件所有者和超级用户可以修改文件或目录的权限。可以使用绝对模式（八进制数字模式），符号模式指定文件的权限。
 ![](../../assets/image_20211012140400.png)

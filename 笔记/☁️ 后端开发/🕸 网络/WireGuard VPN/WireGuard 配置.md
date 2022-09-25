@@ -52,7 +52,7 @@ title: 警告
 
 WireGuard 的 VPN 网络都是通过自行配置网络接口并自动连接实现的，网络接口中设定了诸如我们的 IP、DNS、监听端口等等的参数，这些字段和常规的网络接口配置几乎是一致的。
 一般我们把第一个 WireGuard 网络接口称之为 `wg0`，来自 WireGuard 的缩写 `wg` 和数字 `0`，表示：第 0 位 WireGuard 网络设备。
-使用 [Vim 编辑器](Vim%20%E7%BC%96%E8%BE%91%E5%99%A8.md) 创建一个对应的 WireGuard 网络接口配置文件 `wg0.conf` 到 `/etc/wireguard`目录下：
+使用 [Vim 编辑器](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/Vim%20%E7%BC%96%E8%BE%91%E5%99%A8.md) 创建一个对应的 WireGuard 网络接口配置文件 `wg0.conf` 到 `/etc/wireguard`目录下：
 
 ```bash
 sudo vim /etc/wireguard/wg0.conf
@@ -74,17 +74,17 @@ PostDown   = firewall-cmd --zone=public --remove-port 51820/udp && firewall-cmd 
 
 该接口可以命名为任意名称，但建议使用诸如include `wg0`或`wgvpn0`之类的名称。 网络接口 **`[Interface]`** 部分中的设置具有以下含义：
 
-1. **Address**: `wg0`接口的 IPv4 或 IPv6 地址的逗号分隔列表。使用保留给专用网络的范围内的 IP（10.0.0.0/8（包含 10.0.0.0 到 10.255.255.255）、172.16.0.0/12（包含 172.16.0.0 到 172.15.255.255）或 192.168.0.0/16（包含 192.168.0.0 到 192.168.255.255）这样的 IP 格式是什么样的含义可以参考 [IP 后面的斜杠是什么？](IP%20%E5%90%8E%E9%9D%A2%E7%9A%84%E6%96%9C%E6%9D%A0%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F.md)）
+1. **Address**: `wg0`接口的 IPv4 或 IPv6 地址的逗号分隔列表。使用保留给专用网络的范围内的 IP（10.0.0.0/8（包含 10.0.0.0 到 10.255.255.255）、172.16.0.0/12（包含 172.16.0.0 到 172.15.255.255）或 192.168.0.0/16（包含 192.168.0.0 到 192.168.255.255）这样的 IP 格式是什么样的含义可以参考 [IP 后面的斜杠是什么？](../IP%20%E5%90%8E%E9%9D%A2%E7%9A%84%E6%96%9C%E6%9D%A0%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F.md)）
 2. **ListenPort**: 在其上使用的端口 WireGuard 将接受传入的连接。
-3. **PrivateKey**: 由`wg genkey`命令生成的私钥。 （使用 [cat 输出文件](cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取私钥文件的内容：`sudo cat /etc/wireguard/privatekey`）
+3. **PrivateKey**: 由`wg genkey`命令生成的私钥。 （使用 [cat 输出文件](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取私钥文件的内容：`sudo cat /etc/wireguard/privatekey`）
 4. **SaveConfig**: 设置为 `true` 时，关闭接口时的当前状态保存到配置文件中。
-5. **（可选）PostUp**: （可选，尤其是在防火墙服务不启动的时候）在启动网络接口 **`[Interface]`** 之前执行的命令或脚本。在此示例中，我们使用 `firewall-cmd`（参考 [🚧  firewalld 防火墙配置](%F0%9F%9A%A7%20%20firewalld%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）打开 WireGuard 端口并启用伪装。
-6. **（可选）PostDown**: （可选，尤其是在防火墙服务不启动的时候）在关闭接口之前执行的命令或脚本，这将允许流量离开服务器，从而使VPN客户端可以访问互联网。网络接口 **`[Interface]`** 关闭后，防火墙规则（参考 [🚧  firewalld 防火墙配置](%F0%9F%9A%A7%20%20firewalld%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）将被删除。
+5. **（可选）PostUp**: （可选，尤其是在防火墙服务不启动的时候）在启动网络接口 **`[Interface]`** 之前执行的命令或脚本。在此示例中，我们使用 `firewall-cmd`（参考 [🚧  firewalld 防火墙配置](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF/%F0%9F%9A%A7%20%20firewalld%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）打开 WireGuard 端口并启用伪装。
+6. **（可选）PostDown**: （可选，尤其是在防火墙服务不启动的时候）在关闭接口之前执行的命令或脚本，这将允许流量离开服务器，从而使VPN客户端可以访问互联网。网络接口 **`[Interface]`** 关闭后，防火墙规则（参考 [🚧  firewalld 防火墙配置](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF/%F0%9F%9A%A7%20%20firewalld%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）将被删除。
 
 #### 调整配置文件权限
 
 `wg0.conf`和`privatekey`文件对普通用户不可读。
-使用 `chmod` （参考 [chmod 变更权限](chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）将权限设置为`600`：
+使用 `chmod` （参考 [chmod 变更权限](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）将权限设置为`600`：
 
 ```shell
 sudo chmod 600 /etc/wireguard/{privatekey,wg0.conf}
@@ -118,7 +118,7 @@ interface: wg0
   listening port: 51820
 ```
 
-也可以使用 [🚧  ip 网络配置](%F0%9F%9A%A7%20%20ip%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.md) 命令来验证接口状态：
+也可以使用 [🚧  ip 网络配置](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF/%F0%9F%9A%A7%20%20ip%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.md) 命令来验证接口状态：
 
 ```bash
 ip a show wg0

@@ -30,7 +30,7 @@ $ wg genkey | sudo tee cprivatekey1 | wg pubkey > sudo cpublickey1
 ### 服务器上执行添加客户端配置代码（新增一个 `[peer]`）：
 
 命令说明
-1. `$(cat cpublickey1)` 使用 [cat 输出文件](cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取客户端公匙
+1. `$(cat cpublickey1)` 使用 [cat 输出文件](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取客户端公匙
 2. `10.0.0.3/32` 这个是客户端内网IP地址，按序递增最后一位（.3）)，不要重复
 
 ```shell

@@ -157,6 +157,8 @@ curl -X GET "localhost:9200/_cat/nodes?v=true&pretty"
 
 ## 部署 Kibana 搜索 UI
 
+访问 `http://localhost:5601` 即可
+
 ### 拉取 Kibana 镜像
 
 ```bash
@@ -193,7 +195,7 @@ sudo docker run --name kib01 --net elasticsearch_elastic -p 127.0.0.1:5601:5601 
 ssh elastic-node-01 -L 5601:127.0.0.1:5601
 ```
 
-浏览器访问 http://localhost:5601 即可看到效果
+浏览器访问 `http://localhost:5601` 即可看到效果
 
 ### Kibana 错误排查
 

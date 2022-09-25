@@ -132,7 +132,7 @@ https://docs.nebula-graph.com.cn/2.0.1/2.quick-start/2.deploy-nebula-graph-with-
 nebula-docker-compose/README_zh-CN.md at v2.0.0 · vesoft-inc/nebula-docker-compose
 https://github.com/vesoft-inc/nebula-docker-compose/blob/v2.0.0/README_zh-CN.md
 
-[^1]: [docker-compose 容器化批处理](docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
-[^2]: [docker-compose 容器化批处理](docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
-[^3]: [mv 剪贴、移动](mv%20%E5%89%AA%E8%B4%B4%E3%80%81%E7%A7%BB%E5%8A%A8.md)
-[^4]: [Linux 文件系统](Linux%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.md)
+[^1]: [docker-compose 容器化批处理](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/%E5%AE%B9%E5%99%A8%E5%8C%96/docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
+[^2]: [docker-compose 容器化批处理](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/%E5%AE%B9%E5%99%A8%E5%8C%96/docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
+[^3]: [mv 剪贴、移动](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/mv%20%E5%89%AA%E8%B4%B4%E3%80%81%E7%A7%BB%E5%8A%A8.md)
+[^4]: [Linux 文件系统](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.md)

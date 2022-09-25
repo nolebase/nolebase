@@ -47,7 +47,7 @@
 1. 在『通用』中请务必勾选『无论是否是当前登录用户都启动』，以确保开机能够自动启动
 2. 在『远程管理』标签页中可以打开『启用网页界面』，如果不需要验证信息直接操纵系统关机、休眠等操作的话，可以取消勾选『启用验证（基本 Basic）』，然后点击应用
 
-此时在浏览器中输入 https://localhost:8000 应该就能够访问到网页界面。
+此时在浏览器中输入 `https://localhost:8000` 应该就能够访问到网页界面。
 右键你想要进行的操作，选择复制链接，这样稍后就能够在 Home Assistant 中配置远程关机的操作了。
 
 ### 路由器配置
@@ -77,7 +77,7 @@
 	- `service` 表示一个服务，我们定义该服务为 `shell_command`
 
 - `shell_command` 定义了一个脚本命令服务类型
-	- `turn_off_rizumu_desktop` 表示服务的字段名，必须和上面的 service 里面填写的值一致，此处里面的值为一个脚本命令，该脚本命令使用 `curl` （参见 [curl HTTP 客户端](curl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）并使用 HTTP GET 请求访问了我们在 Windows 配置中配置的 Airytec Switch Off 的网页地址，填写地址的时候需要把之前复制的链接中的 `localhost` 替换为计算机的实际内网 IP，比如 192.168.0.2 或是 10.0.0.2 等。
+	- `turn_off_rizumu_desktop` 表示服务的字段名，必须和上面的 service 里面填写的值一致，此处里面的值为一个脚本命令，该脚本命令使用 `curl` （参见 [curl HTTP 客户端](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/curl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）并使用 HTTP GET 请求访问了我们在 Windows 配置中配置的 Airytec Switch Off 的网页地址，填写地址的时候需要把之前复制的链接中的 `localhost` 替换为计算机的实际内网 IP，比如 192.168.0.2 或是 10.0.0.2 等。
 
 ```yaml
 switch:
