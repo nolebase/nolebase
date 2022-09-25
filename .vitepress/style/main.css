@@ -95,3 +95,19 @@
 .VPHomeHero > .container > .main > .tagline {
   padding-top: 24px;
 }
+
+.VPFooter {
+  opacity: 0.8;
+}
+
+.footer-cc-link {
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: rgb(154, 154, 154);
+}
+
+.footer-cc-link:hover {
+  color: #3a3a3a;
+  text-decoration-color: rgb(91, 91, 91);
+}
+
