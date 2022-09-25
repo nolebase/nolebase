@@ -3,6 +3,7 @@
 .VPTeamMembersItem.small .profile .data .affiliation {
   min-height: 3rem;
 }
+
 .VPTeamMembersItem.small .profile .data .desc {
   min-height: 3rem;
 }
@@ -12,33 +13,40 @@
   .VPTeamMembersItem.small .profile .data .affiliation {
     min-height: 4rem;
   }
+
   .VPTeamMembersItem.small .profile .data .desc {
     min-height: 4rem;
   }
 }
+
 /* fix height ~ 3 lines of text: 3 cards per row */
 @media (min-width: 815px) and (max-width: 875px) {
   .VPTeamMembersItem.small .profile .data .affiliation {
     min-height: 4rem;
   }
+
   .VPTeamMembersItem.small .profile .data .desc {
     min-height: 4rem;
   }
 }
+
 /* fix height ~ 3 lines of text: 2 cards per row */
 @media (max-width: 612px) {
   .VPTeamMembersItem.small .profile .data .affiliation {
     min-height: 4rem;
   }
+
   .VPTeamMembersItem.small .profile .data .desc {
     min-height: 4rem;
   }
 }
+
 /* fix height: one card per row */
 @media (max-width: 568px) {
   .VPTeamMembersItem.small .profile .data .affiliation {
     min-height: unset;
   }
+
   .VPTeamMembersItem.small .profile .data .desc {
     min-height: unset;
   }
@@ -49,5 +57,41 @@
 .vp-doc .VPTeamMembers.small.count-3 .container {
   max-width: 1152px !important;
 }
-.VPTeamMembers.medium.count-2 .container { max-width: unset; }
-.VPTeamMembers.small.count-2 .container { max-width: unset; }
+
+.VPTeamMembers.medium.count-2 .container {
+  max-width: unset;
+}
+
+.VPTeamMembers.small.count-2 .container {
+  max-width: unset;
+}
+
+@font-face {
+  font-family: tengwarannatar;
+  src: url(tengwar-annatar-glaemscrafu.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block
+}
+
+@font-face {
+  font-family: tengwarannatar-bold;
+  src: url(tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block
+}
+
+.VPHomeHero > .container > .main > h1 {
+  font-size: 5rem;
+  font-family: 'tengwarannatar-bold';
+}
+
+.VPHomeHero > .container > .main > .text {
+  padding-top: 45px;
+  font-size: 4rem;
+}
+
+.VPHomeHero > .container > .main > .tagline {
+  padding-top: 24px;
+}
