@@ -120,7 +120,7 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 此刻我们再去看看阿里云 OSS 的跨域设置选项当中的最后一项下面的注释：**返回 Vary: Origin**
 
-![canvas-referenced-oss-cross-origin-image-as-source-img-element-caused-cors-error-record-screenshot-01](canvas-referenced-oss-cross-origin-image-as-source-img-element-caused-cors-error-record-screenshot-01.png)
+![](assets/canvas-referenced-oss-cross-origin-image-as-source-img-element-caused-cors-error-record-screenshot-01.png)
 
 关键的信息是：**如果浏览器同时存在 CORS 和非 CORS 请求，请启用该选项否则会出现跨域问题。**
 

@@ -12,8 +12,8 @@
 | Docker | 20.10.17 | [Docker Documentation](https://docs.docker.com/) |
 | OpenResty | openresty/1.21.4.1 | [OpenResty® - Official Site](https://openresty.org/en/) |
 
-![a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-01](a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-01.png)
-![a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-02](a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-02.png)
+![a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-01](assets/a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-01.png)
+![a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-02](assets/a-docker-swarm-and-k8s-networking-issue-troubleshooting-and-fix-record-screenshot-02.png)
 深入kube-proxy ipvs模式的conn_reuse_mode问题 - MAAO的博客
 https://maao.cloud/2021/01/15/%E6%B7%B1%E5%85%A5kube-proxy%20ipvs%E6%A8%A1%E5%BC%8F%E7%9A%84conn_reuse_mode%E9%97%AE%E9%A2%98/
 IPVS 在 k8s 中连接保持引发的问题 - Program Life

@@ -8,7 +8,7 @@
 
 可以参考下面的案例
 
-```dockerfile
+```docker
 # syntax=docker/dockerfile:1
 
 # ------ [ 构建步骤 ] ------

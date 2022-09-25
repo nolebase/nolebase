@@ -29,13 +29,13 @@
 
 在 `<项目名称>.entitlements` 文件中添加字段 `com.apple.security.temporary-exception.apple-events`，Type（类型）设定为 `Array`（数组）：
 
-![|800](Xcode_image_20211029164201.png)
+![|800](assets/Xcode_image_20211029164201.png)
 
-![|800](Xcode_image_20211029164434.png)
+![|800](assets/Xcode_image_20211029164434.png)
 
 创建好之后在点一下字段名左手边箭头以展开编辑，然后在每一行的 `Value`（值）中填写需要获取的 App 权限的 `appID`（比如 Safari 是 `com.apple.Safari`）
 
-![|800](Xcode_image_20211029164627.png)
+![|800](assets/Xcode_image_20211029164627.png)
 
 添加许可以后重新运行，发现新的错误：
 

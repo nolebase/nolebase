@@ -20,10 +20,10 @@ sudo mkdir /usr/local/etc/wireguard
 
 #### Windows
 
-```ad-warning
+::: warning
 title: 警告
 🚧 施工中
-```
+:::
 
 ### 创建公私密钥对
 
@@ -41,10 +41,10 @@ wg genkey | sudo tee /usr/local/etc/wireguard/privatekey | wg pubkey | sudo tee 
 
 #### Windows
 
-```ad-warning
+::: warning
 title: 警告
 🚧 施工中
-```
+:::
 
 ### 创建一个新的 WireGuard 网络接口配置文件
 

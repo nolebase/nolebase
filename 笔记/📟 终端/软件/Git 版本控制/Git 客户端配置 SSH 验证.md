@@ -115,11 +115,11 @@ The key's randomart image is: # 随机码的可视化
 
 前往 [GitHub 个人设置 | SSH 与 GPG 密钥](https://github.com/settings/keys) 页面进行设置
 
-![github.com.20211008134945](github.com.20211008134945.png)
+![github.com.20211008134945](assets/github.com.20211008134945.png)
 
 点选 SSH Keys 右手边的绿色按钮 `New SSH Key` 来上传我们的公钥
 
-![github.com.20211008135202](github.com.20211008135202.png)
+![github.com.20211008135202](assets/github.com.20211008135202.png)
 
 #### 填写标题和公钥内容
 标题只需要你看得懂，作为备注信息就好了。
@@ -141,7 +141,7 @@ $ nano ~/.ssh/config
 
 SSH 配置文件的格式如下
 
-```sshconfig
+```ssh-config
 Host hostname
 	HostName github.com
 	User git
@@ -165,7 +165,7 @@ $ ssh -T <别名> # 别名填写上面 Host 字段的值
 
 以我的配置为例，配置：
 
-```sshconfig
+```ssh-config
 Host nekomeowww.git
 	HostName github.com
 	User git
@@ -186,7 +186,7 @@ Hi nekomeowww! You've successfully authenticated, but GitHub does not provide sh
 
 以我的配置为例：
 
-```sshconfig
+```ssh-config
 Host nekomeowww.git
 	HostName github.com
 	User git

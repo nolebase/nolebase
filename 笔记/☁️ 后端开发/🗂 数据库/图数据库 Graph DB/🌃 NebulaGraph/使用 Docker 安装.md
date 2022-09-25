@@ -26,7 +26,7 @@ cd nebula-docker-compose
 
 ## 切换到版本对应的分支
 
-![](image_20211125141616.png)
+![](assets/image_20211125141616.png)
 
 在[官方仓库](https://github.com/vesoft-inc/nebula-docker-compose)上查看当前最新的和最推荐的版本，此处写下文档时，最新版本是 2.6.0（对应的分支应该是 v2.6.0），我们切换到 2.6.0 分支
 

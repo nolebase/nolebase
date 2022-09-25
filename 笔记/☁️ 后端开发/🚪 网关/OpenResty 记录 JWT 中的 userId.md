@@ -86,7 +86,7 @@ end
 
 编辑 `/etc/openresty/nginx.conf`
 
-```nginx.conf
+```nginx
 http {
 
 	...
@@ -120,7 +120,7 @@ http {
 
 编辑每一个需要记录 uid 的 vhost 配置文件
 
-```nginx.conf
+```nginx
 server {
         listen 80 default_server;
         server_name _;

@@ -19,7 +19,7 @@
 
 问题起因是
 
-![an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01](an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01.png)
+![an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01](assets/an-openresty-log-missing-on-everyday-0-issue-troubleshooting-and-fix-record-screenshot-01.png)
 
 ```shell
 sudo ls -la /var/log/nginx/
@@ -38,7 +38,7 @@ drwxr-xr-x 12 root     root        0  8月 28 00:00 ..
 -rw-r-----  1 nginx    adm         0  8月 11 23:58 access.log.9.gz
 ```
 
-```logrotate
+```
 /var/log/nginx/*.log {
         daily
         missingok
@@ -64,7 +64,7 @@ error_log  /usr/local/openresty/nginx/logs/error.log notice;
 pid        /usr/local/openresty/nginx/logs/nginx.pid;
 ```
 
-```logrotate
+```
 /usr/local/openresty/nginx/logs/*.log {
         daily
         missingok

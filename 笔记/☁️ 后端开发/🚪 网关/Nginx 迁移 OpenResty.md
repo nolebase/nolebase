@@ -96,7 +96,7 @@ sudo vim /etc/openresty/nginx.conf
 
 可以参考我的配置：
 
-```nginx.conf
+```nginx
 user  nginx;
 worker_processes  1;
 

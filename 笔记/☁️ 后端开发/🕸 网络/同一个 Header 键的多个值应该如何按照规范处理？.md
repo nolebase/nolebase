@@ -11,11 +11,11 @@
 是在这篇文章看到讲解：[Are Duplicate HTTP Response Headers acceptable? (重复的 HTTP 响应标头值应该是可被接受的吗？) - Stack Overflow](https://stackoverflow.com/questions/4371328/are-duplicate-http-response-headers-acceptable)
 讲解中提到了一个案例 [RFC2616 Header Field Definitions (标头字段定义)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)，在这篇 RFC 针对 Cache-Control 相关的标头定义中提到了类似的「层级」：
 
-![](rfc2616-screenshot-01.png)
+![](assets/rfc2616-screenshot-01.png)
 
 顺藤摸瓜找到 RFC2616 的第二部分：[Notational Conventions and Generic Grammar (符号约定和通用语法)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec2.html#sec2) 可以看到对上面提到的 `1#cache-directive` 层级的说明。
 
-![rfc2616-screenshot-02](rfc2616-screenshot-02.png)
+![rfc2616-screenshot-02](assets/rfc2616-screenshot-02.png)
 
 根据 RFC2616 第二部分的定义，任何 `#` 字符开头的字段结构都应该是一个列表，「每一个元素之间应该使用一个或是多个英文逗号 `,` 和**可选**的线性空格（LWS）进行连接」。
 

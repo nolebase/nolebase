@@ -335,7 +335,7 @@ $ sudo nano /usr/lib/systemd/system/<项目名称>.service
 
 写入服务信息
 
-```service
+```ini
 [Unit]
 Description=<项目名称>
 After=network.target
