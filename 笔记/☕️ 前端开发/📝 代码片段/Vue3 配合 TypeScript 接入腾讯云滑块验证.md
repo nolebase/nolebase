@@ -1,4 +1,5 @@
-# Vue3 + TypeScript 接入腾讯云滑块验证
+# Vue3 配合 TypeScript 接入腾讯云滑块验证
+
 ### 引入 SDK
 找到 `index.html` 在 `<head>` 标签中增加腾讯云验证器 SDK 引用
 `./index.html`:

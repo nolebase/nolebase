@@ -1,4 +1,4 @@
-# 🐚 Vite2 + Vue3 模版项目
+# 🐚 Vite2 搭配 Vue3 模版项目
 -   ⚡️ [Vue3.2](https://github.com/vuejs/vue-next)，[Vite2](https://github.com/vitejs/vite)，[PNPM](https://pnpm.js.org/)
 -   🗂 [基于文件的路由](https://github.com/antfu/vitesse/blob/main/src/pages)
 -   🍍 Vuex 或 Pinia

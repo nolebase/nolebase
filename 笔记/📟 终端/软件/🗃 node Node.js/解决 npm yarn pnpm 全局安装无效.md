@@ -1,4 +1,4 @@
-# 解决 npm / yarn / pnpm 全局安装无效
+# 解决 npm yarn pnpm 全局安装无效
 
 把 `npm` 或 `yarn` 的执行目录添加到 `PATH` 就行了。
 
