@@ -4,18 +4,12 @@ import changelog from '/virtual-changelog'
 import { computed } from 'vue'
 import { ContributorInfo, CommitInfo } from '../../../scripts/types'
 import { useRawPath } from '../composables/route'
+import { useCommits } from '../composables/changelog';
 
 const rawPath = useRawPath()
 
 const allCommits = changelog as CommitInfo[]
-const commits = computed(() => {
-  const commits = allCommits.filter(c => c.version || c.path?.includes(rawPath))
-  return commits.filter((i, idx) => {
-    if (i.version && (!commits[idx + 1] || commits[idx + 1]?.version))
-      return false
-    return true
-  })
-})
+const commits = useCommits(allCommits, rawPath)
 
 const contributors = computed<ContributorInfo[]>(() => {
   const map: Record<string, ContributorInfo> = {}

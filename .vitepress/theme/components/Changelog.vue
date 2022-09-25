@@ -6,18 +6,12 @@ import { CommitInfo } from '../../../scripts/types'
 import { renderCommitMessage } from '../utils'
 import { githubRepoLink } from "../../meta"
 import { useRawPath } from '../composables/route'
+import { useCommits } from '../composables/changelog'
 
 const rawPath = useRawPath()
 
 const allCommits = changelog as CommitInfo[]
-const commits = computed(() => {
-  const commits = allCommits.filter(c => c.version || c.path?.includes(rawPath))
-  return commits.filter((i, idx) => {
-    if (i.version && (!commits[idx + 1] || commits[idx + 1]?.version))
-      return false
-    return true
-  })
-})
+const commits = useCommits(allCommits, rawPath)
 </script>
 
 <template>

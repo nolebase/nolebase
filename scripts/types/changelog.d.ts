@@ -5,7 +5,7 @@ export interface ContributorInfo {
 }
 
 export interface CommitInfo {
-  path: string[]
+  path: string[][]
   version?: string
   hash: string
   date: string

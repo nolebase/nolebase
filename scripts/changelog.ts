@@ -26,13 +26,14 @@ export async function getChangeLog(count = 200) {
     }
 
     /** 文档日志 */
-    const raw = await git.raw(['diff-tree', '--no-commit-id', '--name-only', '-r', log.hash])
+    // const raw = await git.raw(['diff-tree', '--no-commit-id', '--name-only', '-r', log.hash])
+    const raw = await git.raw(['diff-tree', '--no-commit-id', '--name-status', '-r', '-M', log.hash])
     delete log.body
-    const files = raw.replace(/\\/g, '/').trim().split('\n')
+    const files = raw.replace(/\\/g, '/').trim().split('\n').map(str => str.split('\t'))
+
     log.path = uniq(
       files
-        .map(i => i.match(RegExp(`^(${include.join('|')})\\/.+\\.md$`))?.[0])
-        .filter(Boolean),
+        .filter(i => !!i[1]?.match(RegExp(`^(${include.join('|')})\\/.+\\.md$`))?.[0]),
     )
 
     log.authorAvatar = md5(log.author_email)
