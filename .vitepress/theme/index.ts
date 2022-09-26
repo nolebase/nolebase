@@ -4,13 +4,15 @@ import '../style/main.css'
 import '../style/vars.css'
 import 'uno.css'
 
+import HomePage from './components/HomePage.vue'
 import DocFooter from './components/DocFooter.vue'
 
 export default {
   ...Theme,
   Layout() {
     return h(Theme.Layout, null, {
-      'doc-footer-before': () => h(DocFooter)
+      'home-features-after': () => h(HomePage),
+      'doc-footer-before': () => h(DocFooter),
     })
   }
 }
