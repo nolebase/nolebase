@@ -89,29 +89,29 @@ end
 ```nginx
 http {
 
-	...
+    ...
 
-	log_format json '{'
-    	'"@timestamp":"$time_iso8601",'
-   		'"client_ip": "$remote_addr",'
-		'"request_uri": "$uri",'
-		'"host":"$host",'
-		'"method": "$request_method",'
-    	'"request": "$request",'
-    	'"status": "$status",'
-    	'"body_bytes_sent": $body_bytes_sent,'
-    	'"referer": "$http_referer",'
-    	'"ua": "$http_user_agent",'
-    	'"request_time": $request_time,'
-    	'"upstream_connect_time": $upstream_connect_time,'
-    	'"upstream_header_time": $upstream_header_time,'
-    	'"upstream_response_time": $upstream_response_time,'
-		'"uid": $uid' # 补充配置该行文本
+    log_format json '{'
+        '"@timestamp":"$time_iso8601",'
+        '"client_ip": "$remote_addr",'
+        '"request_uri": "$uri",'
+        '"host":"$host",'
+        '"method": "$request_method",'
+        '"request": "$request",'
+        '"status": "$status",'
+        '"body_bytes_sent": $body_bytes_sent,'
+        '"referer": "$http_referer",'
+        '"ua": "$http_user_agent",'
+        '"request_time": $request_time,'
+        '"upstream_connect_time": $upstream_connect_time,'
+        '"upstream_header_time": $upstream_header_time,'
+        '"upstream_response_time": $upstream_response_time,'
+        '"uid": $uid' # 补充配置该行文本
     '}';
 
-	access_log  /var/log/nginx/access.log json;
+    access_log  /var/log/nginx/access.log json;
 
-	...
+    ...
 
 }
 ```
@@ -125,7 +125,7 @@ server {
         listen 80 default_server;
         server_name _;
 
-		set $uid '0'; # 此处初始化变量
+        set $uid '0'; # 此处初始化变量
 
         return 301 https://$host$request_uri;
 }
@@ -133,18 +133,18 @@ server {
         listen 443 ssl http2 default_server;
         server_name _;
 
-		...
+        ...
 
-		set $uid '0'; # 此处初始化变量
+        set $uid '0'; # 此处初始化变量
 
-		...
+        ...
 
-		location / {
-			access_by_lua_file /etc/openresty/lua/log_uid.lua; # 此处导入需要执行的脚本
-			
-			...
-		}
-}
+        location / {
+            access_by_lua_file /etc/openresty/lua/log_uid.lua; # 此处导入需要执行的脚本
+            
+            ...
+        }
+}w
 ```
 
 ## 检查配置文件并重载

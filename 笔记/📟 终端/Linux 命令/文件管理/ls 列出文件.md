@@ -14,7 +14,7 @@ ls [-alrtAFR] [路径...]
 
 ```shell
 $ ls
-aria2.sh  btop  ca.crt  go  source
+Git  source
 ```
 
 ## 参数
@@ -27,7 +27,7 @@ aria2.sh  btop  ca.crt  go  source
 
 ```shell
 $ ls -a
-.   aria2.sh  .bash_logout  .viminfo  .yarn  .z .zshrc.pre-oh-my-zsh
+.   .bash_logout  .viminfo  .yarn  .z .zshrc.pre-oh-my-zsh
 ```
 
 ### 列表形式打印 - 参数 l
@@ -37,10 +37,7 @@ $ ls -a
 ```shell
 $ ls -l
 总用量 36
--rwxrwxr-x 1 neko neko 29496 6月  15 15:37 aria2.sh
-drwxrwxr-x 4 neko neko   188 9月  28 22:35 btop
--rw-r--r-- 1 root root  2163 8月  28 11:34 ca.crt
-drwxrwxr-x 4 neko neko    28 7月  30 14:33 go
+drwxrwxr-x 4 neko neko    28 7月  30 14:33 Git
 drwxrwxr-x 3 neko neko    23 9月  29 16:17 source
 ```
 
@@ -48,14 +45,12 @@ drwxrwxr-x 3 neko neko    23 9月  29 16:17 source
 
 | 权限 | 链接数 | 归属用户 | 归属用户组 | 大小 | 最后更新月份 | 最后更新日期 | 最后更新时间 | 名称 |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | -- |
-| -rwxrwxr-x | 1 | neko | neko | 29496 | 6月 | 15 | 15:37 | aria2.sh |
-| drwxrwxr-x | 4 | neko | neko | 188  | 9月 | 28 | 22:35 | btop |
-| -rw-r--r-- | 1 | root | root | 2163 | 8月 | 28 | 11:34 | ca.crt |
-| drwxrwxr-x | 4 | neko | neko | 28 | 7月 | 30 | 14:33 | go |
+| drwxrwxr-x | 4 | neko | neko | 28 | 7月 | 30 | 14:33 | Git |
 | drwxrwxr-x | 3 | neko | neko | 23 | 9月 | 29 | 16:17 | source |
 
 关于权限，可以参考：[Linux 权限](../../Linux%20%E6%9D%83%E9%99%90.md)
 其中：
+
 1. **链接数** 指的是 Unix 文件系统中的 inode 链接数，这个值只对目录有效，指的是目录下面的 **项目数量**
 2. **用户组** 在这个地方通常每个用户会对应有一个同名的组，这个组也有可能是别的组，比如 wheel（RHEL 系 Linux 系统的超级管理员组组名）
 3. **最后更新时间** 是根据本机的时区来计算的，如果是通过 SSH 访问的机器，这个时间对应的是服务器的时间，并非是本地计算机的时间

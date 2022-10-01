@@ -1,6 +1,6 @@
 # Prometheus 配置
 
-```bash
+```shell
 wget https://github.com/prometheus/prometheus/releases/download/v2.28.1/prometheus-2.28.1.linux-amd64.tar.gz
 tar -zxvf prometheus-2.28.1.linux-amd64.tar.gz
 sudo mv prometheus-2.28.1.linux-amd64.tar.gz /usr/local/prometheus
@@ -8,13 +8,13 @@ sudo mv prometheus-2.28.1.linux-amd64.tar.gz /usr/local/prometheus
 
 用户与 Systemd
 
-```bash
+```shell
 sudo groupadd prometheus
 sudo useradd -g prometheus -d /var/lib/prometheus -s /sbin/nologin prometheus
 sudo vim /usr/lib/systemd/system/prometheus.service
 ```
 
-```
+```ini
 [Unit]
 Description=prometheus
 After=network.target
@@ -29,7 +29,7 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-```bash
+```shell
 sudo yum install epel-release
 sudo yum install gcc-c++ make && curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo && sudo yum install yarn
 sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel
@@ -44,11 +44,11 @@ sudo yum -y install GeoIP GeoIP-devel GeoIP-data
 sudo yum install gperftools-devel
 ```
 
-```bash
+```shell
 ./configure --prefix=/usr/share/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib64/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --http-client-body-temp-path=/var/lib/nginx/tmp/client_body --http-proxy-temp-path=/var/lib/nginx/tmp/proxy --http-fastcgi-temp-path=/var/lib/nginx/tmp/fastcgi --http-uwsgi-temp-path=/var/lib/nginx/tmp/uwsgi --http-scgi-temp-path=/var/lib/nginx/tmp/scgi --pid-path=/run/nginx.pid --lock-path=/run/lock/subsys/nginx --user=nginx --group=nginx --with-file-aio --with-ipv6 --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_addition_module --with-http_xslt_module=dynamic --with-http_image_filter_module=dynamic --with-http_sub_module --with-http_dav_module --with-http_flv_module --with-http_mp4_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_random_index_module --with-http_secure_link_module --with-http_degradation_module --with-http_slice_module --with-http_stub_status_module --with-http_perl_module=dynamic --with-http_auth_request_module --with-mail=dynamic --with-mail_ssl_module --with-pcre --with-pcre-jit --with-stream=dynamic --with-stream_ssl_module --with-debug --with-cc-opt='-O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection' --with-ld-opt='-Wl,-z,relro -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -Wl,-E'
 ```
 
-```bash
+```ini
 [Unit]
 Description=The nginx HTTP and reverse proxy server
 After=network.target remote-fs.target nss-lookup.target

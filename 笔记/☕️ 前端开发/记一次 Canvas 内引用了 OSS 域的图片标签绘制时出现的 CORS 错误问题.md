@@ -65,8 +65,9 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 我后来又找到两篇内容讲述了类似的遭遇，分别是：
 
- - [javascript - HTML2Canvas with CORS in S3 and CloudFront - Stack Overflow](https://stackoverflow.com/questions/29105249/html2canvas-with-cors-in-s3-and-cloudfront)
- - [javascript - How to avoid CORS error when drawing image onto canvas? - Stack Overflow](https://stackoverflow.com/questions/46257444/how-to-avoid-cors-error-when-drawing-image-onto-canvas)
+- [javascript - HTML2Canvas with CORS in S3 and CloudFront - Stack Overflow](https://stackoverflow.com/questions/29105249/html2canvas-with-cors-in-s3-and-cloudfront)
+
+- [javascript - How to avoid CORS error when drawing image onto canvas? - Stack Overflow](https://stackoverflow.com/questions/46257444/how-to-avoid-cors-error-when-drawing-image-onto-canvas)
 
 他们都或多或少提到了：
 
@@ -89,7 +90,7 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 先前的问题还是没有解决，于是我去继续寻找其他问题的答案。有另一个问题是小音询问我的：**`<img>` 标签能够加 crossorigin 属性来强制 CORS，那 CSS 里面的图片怎么办？**。说实话我也不知道这个问题的答案，于是在网络上搜索。也就是在这个时候，我在 [cross domain - Using CORS headers with CSS background-image - Stack Overflow](https://stackoverflow.com/questions/21638606/using-cors-headers-with-css-background-image) StackOverflow 问答上见到了一句评论：
 
-> After doing some research I have determined that the real problem is that Amazon S3 doesn't set the "Vary: Origin" header even if it is configured to support CORS. If anyone knows how to get S3 to do that, that would also be a good answer. 
+> After doing some research I have determined that the real problem is that Amazon S3 doesn't set the "Vary: Origin" header even if it is configured to support CORS. If anyone knows how to get S3 to do that, that would also be a good answer.
 > – [Thayne](https://stackoverflow.com/users/2543666/thayne "6,381 reputation") [Feb 11, 2014 at 16:17](https://stackoverflow.com/questions/21638606/using-cors-headers-with-css-background-image#comment32821554_21638606)
 
 意思是说：
@@ -98,8 +99,8 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 咦，这个 `Vary: Origin` 看起来非常眼熟，之前在 OSS 的跨域配置中看到过，但是从未仔细了解过具体的含义。但是我们能在另一个回答中能找到些许线索：
 
-> Yes. If a request may contain a `Access-Control-Allow-Origin` with different values, then the CDN should always respond with `Vary: Origin`, even for responses without an `Access-Control-Allow-Origin` header. Your analysis is correct: if the header isn't always present, it would be possible to fill the cache with incorrect values. 
-> – [monsur](https://stackoverflow.com/users/107250/monsur)[ answered Aug 15, 2014 at 16:02](https://stackoverflow.com/a/25329887)
+> Yes. If a request may contain a `Access-Control-Allow-Origin` with different values, then the CDN should always respond with `Vary: Origin`, even for responses without an `Access-Control-Allow-Origin` header. Your analysis is correct: if the header isn't always present, it would be possible to fill the cache with incorrect values.
+> – [monsur](https://stackoverflow.com/users/107250/monsur)[answered Aug 15, 2014 at 16:02](https://stackoverflow.com/a/25329887)
 
 其含义是：
 
@@ -111,10 +112,11 @@ curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET'
 
 这句话可能不太能说明问题，我们继续看 MDN 提供的下面的例子：
 
-> ### [动态服务](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Vary#%E5%8A%A8%E6%80%81%E6%9C%8D%E5%8A%A1 "Permalink to 动态服务")
 > 哪种情况下使用 `Vary`？对于 `User-Agent` 头部信息，例如你提供给移动端的内容是不同的，可用防止你客户端误使用了用于桌面端的缓存。 并可帮助 Google 和其他搜索引擎来发现你的移动端版本的页面，同时告知他们不需要 [Cloaking](https://en.wikipedia.org/wiki/Cloaking)。
 >
 > 即此时需要设置为 `Vary: User-Agent`
+>
+> —— 来源 [动态服务](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Vary#%E5%8A%A8%E6%80%81%E6%9C%8D%E5%8A%A1 "Permalink to 动态服务")
 
 也就是说如果我们需要根据 User-Agent 的不同指挥浏览器去读写缓存，那么我们就使用 `Vary: User-Agent` 头来实现。
 

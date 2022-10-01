@@ -1,4 +1,4 @@
-## OpenSSL: 通过指定的证书吊销列表手动验证证书有效性
+# OpenSSL 通过指定的证书吊销列表手动验证证书有效性
 
 #openssl #tls #ssl #crl #证书 #certificate #ca
 

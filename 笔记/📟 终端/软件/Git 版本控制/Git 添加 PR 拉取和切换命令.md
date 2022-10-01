@@ -22,11 +22,11 @@ git config --global -e
 
 ```ini
 [user]
-	signingkey = 
-	email = neko@ayaka.moe
-	name = Ayaka Neko
+    signingkey = 
+    email = neko@ayaka.moe
+    name = Ayaka Neko
 [core]
-	editor = code -w --reuse-window
+    editor = code -w --reuse-window
 ```
 
 我们需要在文件末尾添加一个新的配置项 `[alias]` 来声明别名，如果你已经有 `[alias]` 配置项，可以只添加别名的内容：
@@ -70,4 +70,3 @@ git pullpr <PR 的 ID> <远程代码库，默认为 upstream> <新的分支名�
 ```shell
 git pr <PR 的 ID>
 ```
-

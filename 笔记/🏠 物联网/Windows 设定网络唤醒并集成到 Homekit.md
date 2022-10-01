@@ -126,8 +126,7 @@ shell_command:
 
 对于 Intel 网卡需要单独设置一个选项[^2][^3][^4]：
 控制面板 -> 系统和安全 -> （电源选项的下方）选择电源按钮的功能 -> 更改当前不可用的设置 -> （取消勾选）启用快速启动
-      
-	  
+
 [^1]: [wake on lan 远程唤醒/远程开机中的所有设置细节（arp静态绑定解决长时间关机无法唤醒） - 程序员大本营 - 中文](https://www.pianshen.com/article/80641319681/)
 [^2]: [windows8 的64位系统，选择“关机”后无法“网络唤醒”，但选择“睡眠”可以实现“网络唤醒” - 中文](https://social.technet.microsoft.com/Forums/ie/en-US/fb0212a9-e857-4dcf-9760-3286d41d0dbc/windows8?forum=w8itprozhcn)
 [^3]: [电脑关机十分钟后无法远程唤醒是什么原因？ - 张绍余的回答 - 知乎 - 中文](https://www.zhihu.com/question/344623623/answer/1123840146)

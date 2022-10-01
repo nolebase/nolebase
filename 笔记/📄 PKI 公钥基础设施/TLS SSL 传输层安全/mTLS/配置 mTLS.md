@@ -90,7 +90,7 @@ openssl req -new -sha256 -key intermediates/home_ca_intermediate_1.pem -out inte
 
 ### 使用根证书颁发机构对中间证书颁发机构进行签发
 
-此处使用了先前创建并写入的 `home_ca.cnf` 配置文件，开启了配置文件中写入的 `v3_intermediate_ca` 拓展 
+此处使用了先前创建并写入的 `home_ca.cnf` 配置文件，开启了配置文件中写入的 `v3_intermediate_ca` 拓展
 
 ```shell
 openssl ca -config home_ca.cnf -extensions v3_intermediate_ca -days 3650 -notext -md sha256 -in intermediates/home_ca_intermediate_1.csr -out intermediates/home_ca_intermediate_1.crt
@@ -219,26 +219,26 @@ sudo mv ~/home_ca_intermediate_1_bundle.crt ./
 
 ```nginx
 server {
-	...
+    ...
 
-	# 添加 ssl_client_certificate 参数配置，填写 证书链 bundle 的路径
-	ssl_client_certificate /etc/nginx/client_certs/home_ca_intermediate_1_bundle.crt;
-	
-	# 添加 ssl_verify_client 参数配置，填写为 optional。
-	# 注：该参数配置支持三个值，分别是：
-	# 1. on: 强制 TLS 证书验证，不满足时拒绝连接;
-	# 2. optional: 不强制 TLS 证书验证，将结果返回到 Nginx 上下文 ssl_client_verify 变量中;
-	# 3. off; 关闭 TLS 证书验证。
-	ssl_verify_client      optional;
-	...
-	
-	location / {
+    # 添加 ssl_client_certificate 参数配置，填写 证书链 bundle 的路径
+    ssl_client_certificate /etc/nginx/client_certs/home_ca_intermediate_1_bundle.crt;
+    
+    # 添加 ssl_verify_client 参数配置，填写为 optional。
+    # 注：该参数配置支持三个值，分别是：
+    # 1. on: 强制 TLS 证书验证，不满足时拒绝连接;
+    # 2. optional: 不强制 TLS 证书验证，将结果返回到 Nginx 上下文 ssl_client_verify 变量中;
+    # 3. off; 关闭 TLS 证书验证。
+    ssl_verify_client      optional;
+    ...
+    
+    location / {
 
-		# 进行 if 判断，对 TLS 客户端证书验证结果进行判断，如果验证不成功，则返回 496 错误代码
-		if ($ssl_client_verify != SUCCESS) {
-        	return 496;
-      	}
-      	...
+        # 进行 if 判断，对 TLS 客户端证书验证结果进行判断，如果验证不成功，则返回 496 错误代码
+        if ($ssl_client_verify != SUCCESS) {
+            return 496;
+          }
+          ...
     }
 }
 ```

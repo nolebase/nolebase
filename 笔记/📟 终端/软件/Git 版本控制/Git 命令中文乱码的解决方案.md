@@ -15,14 +15,14 @@
 
 1. 获取包含中文文件名的提交记录哈希
 
-```bash
+```shell
 $ git log --online
 9ae153c (HEAD -> main, origin/main, origin/HEAD) chore: 将所有内部链接转换为 Markdown 链接
 ```
 
 2. 使用查询到的 `9ae153c` 提交哈希进行 `diff-tree` 操作：
 
-```bash
+```shell
 $ git diff-tree --no-commit-id --name-only -r 9ae153c
 "\342\232\240\357\270\217 \347\237\245\350\257\206\345\272\223\351\241\273\347\237\245.md"
 ```
@@ -37,7 +37,7 @@ $ git diff-tree --no-commit-id --name-only -r 9ae153c
 
 在命令行程序中使用下面的命令进行配置：
 
-```bash
+```shell
 git config --global core.quotepath false
 ```
 
@@ -46,7 +46,6 @@ git config --global core.quotepath false
 [git乱码解决方案汇总 | ZRONG's BLOG](https://blog.zengrong.net/post/git-codec-issues/)
 [在git中出现中文乱码的解决方案_Johnny丶me的博客-CSDN博客_git utf8](https://blog.csdn.net/tyro_java/article/details/53439537)
 [Linux下Git命令中文显示乱码的问题解决：274\232\350\256\256\346\200\273\347\273\223 - EasonJim - 博客园](https://www.cnblogs.com/EasonJim/p/8403587.html)
-
 
 [^1]: `core.quotepath`. The commands that output paths (e.g. _ls-files_, _diff_), when not given the -z option, will quote "unusual" characters in the pathname by enclosing the pathname in a double-quote pair and with backslashes, the same way strings in the C source code are quoted. From [git-config(1) - Linux man page](https://linux.die.net/man/1/git-config)
 [^2]: [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)

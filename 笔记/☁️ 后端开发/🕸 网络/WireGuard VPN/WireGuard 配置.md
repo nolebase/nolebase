@@ -54,7 +54,7 @@ WireGuard 的 VPN 网络都是通过自行配置网络接口并自动连接实�
 一般我们把第一个 WireGuard 网络接口称之为 `wg0`，来自 WireGuard 的缩写 `wg` 和数字 `0`，表示：第 0 位 WireGuard 网络设备。
 使用 [Vim 编辑器](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/Vim%20%E7%BC%96%E8%BE%91%E5%99%A8.md) 创建一个对应的 WireGuard 网络接口配置文件 `wg0.conf` 到 `/etc/wireguard`目录下：
 
-```bash
+```shell
 sudo vim /etc/wireguard/wg0.conf
 ```
 
@@ -62,7 +62,7 @@ sudo vim /etc/wireguard/wg0.conf
 
 写入接口配置信息：
 
-```bash
+```shell
 [Interface]
 Address = 10.0.0.1/24
 SaveConfig = true
@@ -109,7 +109,7 @@ sudo wg-quick up wg0
 
 要查看接口状态和配置，请运行：
 
-```bash
+```shell
 sudo wg show wg0
 
 interface: wg0
@@ -120,7 +120,7 @@ interface: wg0
 
 也可以使用 [🚧  ip 网络配置](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF/%F0%9F%9A%A7%20%20ip%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.md) 命令来验证接口状态：
 
-```bash
+```shell
 ip a show wg0
 
 4: wg0: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1420 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -162,6 +162,8 @@ Debian 11 如果在使用 `wg-quick up <interface>` 的时候遭遇以下错误�
 sudo apt install openresolv
 ```
 
-参见：
-https://superuser.com/a/1546280
-https://github.com/StreisandEffect/streisand/issues/1434#issuecomment-417792239
+## 参考资料
+
+[https://superuser.com/a/1546280](https://superuser.com/a/1546280)
+
+[https://github.com/StreisandEffect/streisand/issues/1434#issuecomment-417792239](https://github.com/StreisandEffect/streisand/issues/1434#issuecomment-417792239)

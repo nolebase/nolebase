@@ -21,14 +21,14 @@
 
 创建目录并初始化：
 
-```bash
+```shell
 $ mkdir -p testify && cd testify
 $ go mod init github.com/darjun/go\-daily-lib/testify
 ```
 
 安装 `testify` 库：
 
-```bash
+```shell
 $ go get -u github.com/stretchr/testify
 ```
 
@@ -76,7 +76,7 @@ func TestEqual(t \*testing.T) {
 使用 `testify` 编写测试代码与 `testing` （Golang 内置的单元测试套件包）要求的单元测试一样，测试文件结尾为 `_test.go`，测试函数命名要求前缀为 `Test`（比如 `TestXxxx`）。
 使用 `go test` 命令运行测试：
 
-```bash
+```shell
 $ go test
 --- FAIL: TestEqual (0.00s) # <- 该行说明是哪个测试函数出现问题
     assert\main_test.go:12: # <- 该行说明是哪个测试文件和对应的行号出问题
@@ -723,7 +723,7 @@ func TestGetUserList(t \*testing.T) {
 
 运行：
 
-```bash
+```shell
 $ go test
 &{dj 18}
 &{zhangsan 20}
@@ -784,7 +784,7 @@ func TestExample(t \*testing.T) {
 
 运行：
 
-```bash
+```shell
 $ go test
 --- FAIL: TestExample (0.00s)
 panic:
@@ -798,7 +798,7 @@ assert: mock: The method has been called over 1 times.
 
 原来 `ExampleFunc()` 函数中`<=`应该是`<`导致多调用了一次，修改过来继续运行：
 
-```bash
+```shell
 $ go test
 PASS
 ok      github.com/darjun/testify       0.236s
@@ -896,7 +896,7 @@ func TestExample(t \*testing.T) {
 
 `suite.Run(t, new(MyTestSuit))`会将运行`MyTestSuit`中所有名为`TestXxx`的方法。运行：
 
-```bash
+```shell
 $ go test
 SetupSuite
 SetupTest test count:0
@@ -971,7 +971,7 @@ func TestGreeting(t \*testing.T) {
 
 运行：
 
-```bash
+```shell
 $ go test
 PASS
 ok      github.com/darjun/go\-daily-lib/testify/httptest 0.093s

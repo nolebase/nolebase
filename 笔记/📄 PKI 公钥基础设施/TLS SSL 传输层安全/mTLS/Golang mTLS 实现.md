@@ -14,4 +14,4 @@
 
 ## Golang 证书实现问题
 
-Does not implement crypto.Signer [](https://github.com/raff/tls-psk/issues/5)[https://github.com/raff/tls-psk/issues/5](https://github.com/raff/tls-psk/issues/5)
+Does not implement crypto.Signer [](https://github.com/raff/tls-psk/issues/5)

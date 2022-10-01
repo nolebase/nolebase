@@ -3,6 +3,7 @@
 ## 说明
 
 which，哪个，where，在哪里的含义，使用这个命令可以获取可执行命令的具体位置，这个命令包含以下几种形式：
+
 1. shell 程序定义、内建的可执行命令，比如 cd
 2. shell 脚本，可以被 shell 程序读取的代码文件，比如 hello_world.sh、hello_world.zsh 等等
 3. 二进制可执行文件，编译好的程序，比如 curl、ls 等等

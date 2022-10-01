@@ -8,11 +8,10 @@
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
-| ElasticSearch Docker 镜像 | 7.16.3 | https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html |
-| Kibana | 7.16.3 | https://www.elastic.co/guide/en/kibana/current/docker.html |
-| Docker | 20.10.5+dfsg1 | https://docs.docker.com/ |
-| docker-compose | 1.25.0 | https://docs.docker.com/compose/ |
-
+| ElasticSearch Docker 镜像 | 7.16.3 | [https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html) |
+| Kibana | 7.16.3 | [https://www.elastic.co/guide/en/kibana/current/docker.html](https://www.elastic.co/guide/en/kibana/current/docker.html) |
+| Docker | 20.10.5+dfsg1 | [https://docs.docker.com/](https://docs.docker.com/) |
+| docker-compose | 1.25.0 | [https://docs.docker.com/compose/](https://docs.docker.com/compose/) |
 
 ## 机器参数要求
 
@@ -26,30 +25,30 @@
 
 也可以执行下面的脚本，每次一行：
 
-```bash
+```shell
 sudo apt update
 ```
 
-```bash
+```shell
 sudo apt install ca-certificates curl gnupg lsb-release
 ```
 
-```bash
+```shell
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-```bash
+```shell
 sudo apt update
 ```
 
-```bash
+```shell
 sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 
 ### 安装 docker-compose
 
-```bash
+```shell
 sudo apt install docker-compose
 ```
 
@@ -59,7 +58,7 @@ sudo apt install docker-compose
 
 此处引用了 `docker.elastic.co/elasticsearch/elasticsearch:7.16.3` 镜像，大家可以前往 [Elastic Docker 注册中心](https://www.docker.elastic.co/r/elasticsearch) 查看当前可用的 ElasticSearch 镜像标签。
 
-```bash
+```shell
 sudo docker pull docker.elastic.co/elasticsearch/elasticsearch:7.16.3
 ```
 
@@ -131,13 +130,13 @@ networks:
 
 按照官方文档的说法，我们需要把 `vm.max_map_count` 的参数值设定到 `262144` 以在生产环境中使用。
 
-```bash
+```shell
 sudo sysctl -w vm.max_map_count=262144
 ```
 
 ## 开始运行 ElasticSearch 节点
 
-```bash
+```shell
 sudo docker-compose up -d
 ```
 
@@ -145,13 +144,13 @@ sudo docker-compose up -d
 
 通过 SSH 自带的端口转发来转发服务端的端口到本地进行访问：
 
-```bash
+```shell
 ssh elastic-node-01 -L 9200:127.0.0.1:9200
 ```
 
 访问节点信息：
 
-```bash
+```shell
 curl -X GET "localhost:9200/_cat/nodes?v=true&pretty"
 ```
 
@@ -161,7 +160,7 @@ curl -X GET "localhost:9200/_cat/nodes?v=true&pretty"
 
 ### 拉取 Kibana 镜像
 
-```bash
+```shell
 sudo docker pull docker.elastic.co/kibana/kibana:7.16.3
 ```
 
@@ -183,7 +182,7 @@ i18n.locale: zh-CN
 
 ### 创建容器
 
-```bash
+```shell
 sudo docker run --name kib01 --net elasticsearch_elastic -p 127.0.0.1:5601:5601 -e "ELASTICSEARCH_HOSTS=http://es01:9200" -d -v /opt/elk/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml docker.elastic.co/kibana/kibana:7.16.3
 ```
 
@@ -191,7 +190,7 @@ sudo docker run --name kib01 --net elasticsearch_elastic -p 127.0.0.1:5601:5601 
 
 通过 SSH 自带的端口转发来转发服务端的端口到本地进行访问：
 
-```bash
+```shell
 ssh elastic-node-01 -L 5601:127.0.0.1:5601
 ```
 
@@ -200,6 +199,7 @@ ssh elastic-node-01 -L 5601:127.0.0.1:5601
 ### Kibana 错误排查
 
 #### Something went wrong
+
 如果你遇到了这个错误，并且下方红框内错误提示为：**Request must contain a kbn-xsrf header.** 则说明当前 Header 头部中需要添加 `kbn-xsrf` 头部字段。
 
 Chrome 浏览器可以用 ModHeader 插件来完成。

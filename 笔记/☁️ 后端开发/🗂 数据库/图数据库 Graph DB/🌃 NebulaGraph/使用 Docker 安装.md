@@ -125,12 +125,11 @@ nebula-console -u root -p password --address=graphd --port=9669
 
 ## 延伸阅读
 
-什么是 Nebula Graph - Nebula Graph Database 手册
-https://docs.nebula-graph.com.cn/2.6.1/1.introduction/1.what-is-nebula-graph/
-Docker Compose部署Nebula Graph - Nebula Graph Database 手册
-https://docs.nebula-graph.com.cn/2.0.1/2.quick-start/2.deploy-nebula-graph-with-docker-compose/#nebula_graph
-nebula-docker-compose/README_zh-CN.md at v2.0.0 · vesoft-inc/nebula-docker-compose
-https://github.com/vesoft-inc/nebula-docker-compose/blob/v2.0.0/README_zh-CN.md
+[什么是 Nebula Graph - Nebula Graph Database 手册](https://docs.nebula-graph.com.cn/2.6.1/1.introduction/1.what-is-nebula-graph/)
+
+[Docker Compose部署Nebula Graph - Nebula Graph Database 手册](https://docs.nebula-graph.com.cn/2.0.1/2.quick-start/2.deploy-nebula-graph-with-docker-compose/#nebula_graph)
+
+[nebula-docker-compose/README_zh-CN.md at v2.0.0 · vesoft-inc/nebula-docker-compose](https://github.com/vesoft-inc/nebula-docker-compose/blob/v2.0.0/README_zh-CN.md)
 
 [^1]: [docker-compose 容器化批处理](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/%E5%AE%B9%E5%99%A8%E5%8C%96/docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
 [^2]: [docker-compose 容器化批处理](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/%E5%AE%B9%E5%99%A8%E5%8C%96/docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)

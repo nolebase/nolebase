@@ -1,8 +1,6 @@
-
-
 # `asciinema-player` 插件开发记录
 
-#typescript #obsidian-plugin #rollup #前端 
+#typescript #obsidian-plugin #rollup #前端
 
 ## 说明
 
@@ -15,24 +13,24 @@
 
 去 [obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin) 获取样例插件，可以使用 GitHub 自带的 **Use this template**（使用这个模版）来快速创建副本到自己的 GitHub 账号
 
-###  克隆仓库到本地
+### 克隆仓库到本地
 
 一般放置到插件的目录在  `<知识库路径>/.obsidian/plugins/<插件名>` ，如果你变更过 Obsidian 的配置文件路径，把 `.obsidian` 改成你想要的即可。
 
 ```shell
-$ git clone github.com/<用户名>/<仓库名> <知识库路径>/.obsidian/plugins/<插件名>
+git clone github.com/<用户名>/<仓库名> <知识库路径>/.obsidian/plugins/<插件名>
 ```
 
 以我的为例：
 
 ```shell
-$ git clone nekomeowww.git:nekomeowww/obsidian-asciinema-player.git
+git clone nekomeowww.git:nekomeowww/obsidian-asciinema-player.git
 ```
 
 ### 安装依赖
 
 ```shell
-$ pnpm i
+pnpm i
 ```
 
 ### 变更插件信息
@@ -41,14 +39,14 @@ $ pnpm i
 
 ```javascript
 {
-	"id": "obsidian-asciinema-player", # 插件 ID，不可以与社区已经存在的插件重复
-	"name": "asciinema Player", # 插件名称
-	"version": "1.0.0", # 插件版本号
-	"minAppVersion": "0.9.12", # 要求的 Obsidian 最小版本号
-	"description": "", # 简介
-	"author": "Ayaka Neko", # 作者
-	"authorUrl": "https://github.com/nekomeowww", # 作者地址
-	"isDesktopOnly": false # 决定了使用的是 Node API（跨平台） 还是 Electron API（桌面端）
+ "id": "obsidian-asciinema-player", # 插件 ID，不可以与社区已经存在的插件重复
+ "name": "asciinema Player", # 插件名称
+ "version": "1.0.0", # 插件版本号
+ "minAppVersion": "0.9.12", # 要求的 Obsidian 最小版本号
+ "description": "", # 简介
+ "author": "Ayaka Neko", # 作者
+ "authorUrl": "https://github.com/nekomeowww", # 作者地址
+ "isDesktopOnly": false # 决定了使用的是 Node API（跨平台） 还是 Electron API（桌面端）
 }
 ```
 
@@ -95,11 +93,10 @@ export default {
 }
 ```
 
-
 ### 编译并开启热加载
 
 ```shell
-$ pnpm dev
+pnpm dev
 ```
 
 现在对 `main.ts` 及其依赖的文件都会被自动编译到 `main.js` 文件中。
@@ -127,16 +124,16 @@ import { App, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian'
  */
 export default class MyPlugin extends Plugin {
   // 定义了设定的结构
-	settings: MyPluginSettings;
-	
-	// onload 是默认挂载插件时执行的事件函数
-	async onload() {
-	  // TODO
-	}
-	// onunload 是插件卸载时执行的的事件函数
-	onunload() {
-	  // TODO
-	}
+  settings: MyPluginSettings;
+ 
+  // onload 是默认挂载插件时执行的事件函数
+  async onload() {
+    // TODO
+  }
+  // onunload 是插件卸载时执行的的事件函数
+  onunload() {
+    // TODO
+  }
 }
 
 /**
@@ -153,6 +150,7 @@ class SampleSettingTab extends PluginSettingTab {
 ### i18n 支持
 
 在 `src` 下创建 `locales` 目录，以及 `locales` 目录下的 `lang` 文件夹和 `helpers.ts` 文件。
+
 1. 在 `helpers.ts` 文件中，我们将会构建 i18n 的主要函数 `t`
 2. 在 `lang` 文件夹中，将会保存我们需要的本地化文件
 
@@ -197,4 +195,3 @@ export function t(str: keyof typeof en): string {
 ```
 
 这样我们在任何一个地方导入 `helpers.ts` 就可以使用 i18n 了。
-

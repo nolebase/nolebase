@@ -12,6 +12,7 @@
 ## 黑曜石 App 架构
 
 该应用程序被组织成几个主要模块。
+
 1. App，全局对象，拥有其他一切。你可以在你的插件中通过 `this.app` 访问它。App 接口提供了以下接口的访问器。
 2. Vault，让你与保险库中的文件和文件夹互动的接口。
 3. Workspace，让你与屏幕上的面板互动的接口。
@@ -44,17 +45,12 @@ this.registerDomEvent(element, 'click', callback);
 this.registerInterval(setInterval(callback, 1000));
 ```
 
+[obsidianmd/obsidian-api](https://github.com/obsidianmd/obsidian-api)
 
-obsidianmd/obsidian-api
-https://github.com/obsidianmd/obsidian-api
-
-obsidianmd/obsidian-sample-plugin
-https://github.com/obsidianmd/obsidian-sample-plugin
+[obsidianmd/obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin)
 
 [第三方插件 - Obsidian 中文帮助 - Obsidian Publish](https://publish.obsidian.md/help-zh/%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8F%92%E4%BB%B6)
 
-Obsidian Plugin Development - Alexis Rondeau - Obsidian Publish
-https://publish.obsidian.md/alexisrondeau/Obsidian+Plugin+Development
+[Obsidian Plugin Development - Alexis Rondeau - Obsidian Publish](https://publish.obsidian.md/alexisrondeau/Obsidian+Plugin+Development)
 
-Embed files - Obsidian Help
-https://help.obsidian.md/How+to/Embed+files
+[Embed files - Obsidian Help](https://help.obsidian.md/How+to/Embed+files)

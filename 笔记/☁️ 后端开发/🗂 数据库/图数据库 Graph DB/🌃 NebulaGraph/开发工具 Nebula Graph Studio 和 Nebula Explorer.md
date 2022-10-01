@@ -2,9 +2,8 @@
 
 ## 延伸阅读
 
-什么是 Nebula Graph Studio - Nebula Graph Database 手册
-https://docs.nebula-graph.com.cn/2.5.0/nebula-studio/about-studio/st-ug-what-is-graph-studio/
-什么是 Nebula Explorer - Nebula Graph Database 手册
-https://docs.nebula-graph.com.cn/2.6.1/nebula-explorer/about-explorer/ex-ug-what-is-explorer/
-部署 Studio - Nebula Graph Database 手册
-https://docs.nebula-graph.com.cn/2.5.0/nebula-studio/deploy-connect/st-ug-deploy/
+[什么是 Nebula Graph Studio - Nebula Graph Database 手册](https://docs.nebula-graph.com.cn/2.5.0/nebula-studio/about-studio/st-ug-what-is-graph-studio/)
+
+[什么是 Nebula Explorer - Nebula Graph Database 手册](https://docs.nebula-graph.com.cn/2.6.1/nebula-explorer/about-explorer/ex-ug-what-is-explorer/)
+
+[部署 Studio - Nebula Graph Database 手册](https://docs.nebula-graph.com.cn/2.5.0/nebula-studio/deploy-connect/st-ug-deploy/)

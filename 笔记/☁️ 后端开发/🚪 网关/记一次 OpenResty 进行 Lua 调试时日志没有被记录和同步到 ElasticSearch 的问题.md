@@ -17,4 +17,3 @@
 | ElasticSearch | 8.3.2 | |
 | FileBeat | 1.6.0 | |
 | Logstash | 8.3.2 | |
-

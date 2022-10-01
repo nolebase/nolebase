@@ -10,9 +10,9 @@
 
 **另外我们需要明白一个对等原则：**
 
--   服务端配置文件中的 **`[Interface]`** 是保存自己的服务端私匙，而客户端配置文件中的 **`[Interface]`** 同样保存自己的客户端私匙。
--   服务端配置文件中的 **`[Peer]`** 是保存客户端的公匙，而客户端配置文件中的 **`[Peer]`** 是保存服务端的公匙。
--   即，服务端与客户端都是互相保存自己的私匙在 **`[Interface]`** 中，互相保存对方公匙在 **`[Peer]`** 中。
+- 服务端配置文件中的 **`[Interface]`** 是保存自己的服务端私匙，而客户端配置文件中的 **`[Interface]`** 同样保存自己的客户端私匙。
+- 服务端配置文件中的 **`[Peer]`** 是保存客户端的公匙，而客户端配置文件中的 **`[Peer]`** 是保存服务端的公匙。
+- 即，服务端与客户端都是互相保存自己的私匙在 **`[Interface]`** 中，互相保存对方公匙在 **`[Peer]`** 中。
 
 ## 服务端配置文件添加用户
 
@@ -24,17 +24,18 @@
 privatekey1 为客户端私匙，publickey1 为客户端公匙
 
 ```shell
-$ wg genkey | sudo tee cprivatekey1 | wg pubkey > sudo cpublickey1
+wg genkey | sudo tee cprivatekey1 | wg pubkey > sudo cpublickey1
 ```
 
-### 服务器上执行添加客户端配置代码（新增一个 `[peer]`）：
+### 服务器上执行添加客户端配置代码（新增一个 `[peer]`）
 
 命令说明
+
 1. `$(cat cpublickey1)` 使用 [cat 输出文件](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取客户端公匙
 2. `10.0.0.3/32` 这个是客户端内网IP地址，按序递增最后一位（.3）)，不要重复
 
 ```shell
-$ sudo wg set wg0 peer $(cat cpublickey1) allowed-ips 10.0.0.3/32
+sudo wg set wg0 peer $(cat cpublickey1) allowed-ips 10.0.0.3/32
 ```
 
 ### 查看 WireGuard 状态
@@ -58,7 +59,7 @@ peer: xxxxxxxxxxxxxxxxxxxx #新客户端账号的公匙
 ### 如果显示正常，那么我们就保存到配置文件
 
 ```shell
-$ sudo wg-quick save wg0
+sudo wg-quick save wg0
 ```
 
 ## 生成对应客户端配置文件
@@ -67,7 +68,7 @@ $ sudo wg-quick save wg0
 
 下面是配置文件的填写说明：
 
-```ini 
+```ini
 [Interface]
 # 客户端的私匙，对应服务器配置中的客户端公匙（自动读取上面刚刚生成的密匙内容）
 PrivateKey = <上面创建的 privatekey1>
@@ -97,6 +98,7 @@ PersistentKeepalive = 25
 
 填写好之后可以把上面的内容复制并粘贴到下面命令中对应的地方：
 命令说明：
+
 1. `echo` 可以把字符串输出给管道符 `|`
 2. `sed '/^#/d;/^\s*$/d'` 可以过滤输出 `#` 开头的行
 3. `wg0.conf` 是 WireGuard 的配置文件，根据不同的系统，可以放到不同的目录：
@@ -105,24 +107,28 @@ PersistentKeepalive = 25
     - Linux: `/etc/wireguard/wg0.conf`
 
 ```shell
-$ sudo echo "<配置文件内容>" | sed '/^#/d;/^\s*$/d' > wg0.conf
+sudo echo "<配置文件内容>" | sed '/^#/d;/^\s*$/d' > wg0.conf
 ```
 
 ## 服务端配置文件删除用户
 
-
 要删除呢也很简单，首先你需要知道你要删除用户的客户端公匙（例如上面刚刚生成的 `publickey1`）。
 当然，你也可以手动打开配置文件删除，记得修改后重启。下面的动态删除无需重启。
 
-1. 如果客户端公匙文件还在，那么可以执行这个命令删除：
+### 1. 如果客户端公匙文件还在
+
+可以执行这个命令删除：
 
 ```shell
-$ sudo wg set wg0 peer $(cat cpublickey1) remove
+sudo wg set wg0 peer $(cat cpublickey1) remove
 ```
 
 **注意：该命令执行后，就可以跳过下面这段命令了，直接保存配置文件即可。**
 
-2. 如果客户端公匙文件已删除，那么可以通过 wg 命令看到客户端的公匙：
+### 2. 如果客户端公匙文件已删除
+
+可以通过 `wg` 命令看到客户端的公匙：
+
 ```shell
 $ sudo wg
   interface: wg0
@@ -140,12 +146,13 @@ $ sudo wg
 以上内容仅为输出示例（仅供参考）
 
 复制你要删除的客户端账号的公匙（`peer` 后面的字符），替换下面命令中的 xxxxxxx 并执行即可
+
 ```shell
-$ sudo wg set wg0 peer xxxxxxx remove
+sudo wg set wg0 peer xxxxxxx remove
 ```
 
 执行后，我们在用 `wg` 命令查看一下是否删除成功：
 
 ```shell
-$ sudo wg-quick save wg0
+sudo wg-quick save wg0
 ```

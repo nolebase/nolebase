@@ -43,7 +43,6 @@ rngd         674  0.0  0.1 233876  6756 ?        Ssl  10月03   0:11 /usr/sbin/r
 root         683  0.0  0.9 1174540 40004 ?       Ssl  10月03   2:48 /usr/local/bin/gateway-proxy
 root         684  0.0  1.2 838016 50212 ?        Ssl  10月03   0:00 node /usr/bin/serve -s /opt/ayaka/sso-admin/dist -l 3100
 root         687  0.0  0.1  92320  7560 ?        Ss   10月03   0:05 /usr/sbin/sshd -D -oCiphers=aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes128-ctr,aes128-cbc -oMACs=hmac-sha2-256-etm@openssh.c
-root         690  0.0  1.7 1889864 69780 ?       Ssl  10月03   1:46 /opt/cloudreve/cloudreve
 ```
 
 | USER 行程拥有者 | PID  进程 ID | %CPU CPU 占用率 | %MEM 内存占用率 | VSZ 虚拟内存占用大小 | RSS 物理内存占用大小 | TTY 终端的次要装置号码 | STAT 该进程状态 | START 开始时间 | TIME 运行时间 | COMMAND 执行的命令 |

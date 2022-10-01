@@ -113,20 +113,20 @@ http {
     default_type  application/octet-stream;
 
     log_format json '{'
-    	'"@timestamp":"$time_iso8601",'
-  	    '"client_ip": "$remote_addr",'
-	    '"request_uri": "$uri",'
-	    '"host":"$host",'
-	    '"method": "$request_method",'
-    	'"request": "$request",'
-    	'"status": "$status",'
-    	'"body_bytes_sent": $body_bytes_sent,'
-    	'"referer": "$http_referer",'
-    	'"ua": "$http_user_agent",'
-    	'"request_time": $request_time,'
-    	'"upstream_connect_time": $upstream_connect_time,'
-    	'"upstream_header_time": $upstream_header_time,'
-    	'"upstream_response_time": $upstream_response_time'
+        '"@timestamp":"$time_iso8601",'
+        '"client_ip": "$remote_addr",'
+        '"request_uri": "$uri",'
+        '"host":"$host",'
+        '"method": "$request_method",'
+        '"request": "$request",'
+        '"status": "$status",'
+        '"body_bytes_sent": $body_bytes_sent,'
+        '"referer": "$http_referer",'
+        '"ua": "$http_user_agent",'
+        '"request_time": $request_time,'
+        '"upstream_connect_time": $upstream_connect_time,'
+        '"upstream_header_time": $upstream_header_time,'
+        '"upstream_response_time": $upstream_response_time'
     '}';
 
     access_log  /var/log/nginx/access.log json;
@@ -147,13 +147,13 @@ http {
 
 创建必要的目录
 
- - `/etc/openresty/conf.d`
- - `/etc/openresty/sites-available`
- - `/etc/openresty/sites-enabled`
+- `/etc/openresty/conf.d`
+- `/etc/openresty/sites-available`
+- `/etc/openresty/sites-enabled`
 
- - 复制 `/etc/nginx/conf.d/` 下面的文件到 `/etc/openresty/conf.d`
- - 复制 `/etc/nginx/sites-available/` 下面的文件到 `/etc/openresty/sites-available`
- - 手动为每一个 `/etc/openresty/sites-available` 下的配置文件创建软链接
+- 复制 `/etc/nginx/conf.d/` 下面的文件到 `/etc/openresty/conf.d`
+- 复制 `/etc/nginx/sites-available/` 下面的文件到 `/etc/openresty/sites-available`
+- 手动为每一个 `/etc/openresty/sites-available` 下的配置文件创建软链接
 
 使用下面的命令检查配置文件有效性：
 

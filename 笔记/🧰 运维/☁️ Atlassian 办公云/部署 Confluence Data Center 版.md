@@ -18,24 +18,24 @@
 
 也可以执行下面的脚本，每次一行：
 
-```bash
+```shell
 sudo apt update
 ```
 
-```bash
+```shell
 sudo apt install ca-certificates curl gnupg lsb-release
 ```
 
-```bash
+```shell
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-```bash
+```shell
 sudo apt update
 ```
 
-```bash
+```shell
 sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 
@@ -43,13 +43,13 @@ sudo apt install docker-ce docker-ce-cli containerd.io
 
 密码根据自己的需求设定
 
-```
+```shell
 sudo docker run -it --name postgres -e POSTGRES_PASSWORD=<密码> -d -p 5432:5432 postgres
 ```
 
 准备好之后进入 PostgreSQL 的 Docker 实例进行操作
 
-```
+```shell
 sudo docker exec -it postgres psql -U postgres
 ```
 
@@ -57,10 +57,10 @@ sudo docker exec -it postgres psql -U postgres
 
 ```sql
 CREATE DATABASE confluence WITH 
-	OWNER confluence
-	ENCODING 'UTF-8'
-	LC_COLLATE='en_US.utf8'
-	LC_CTYPE='en_US.utf8'
+    OWNER confluence
+    ENCODING 'UTF-8'
+    LC_COLLATE='en_US.utf8'
+    LC_CTYPE='en_US.utf8'
 ```
 
 ## 部署 Confluence
@@ -81,13 +81,13 @@ https://www.atlassian.com/software/confluence/downloads/binary/atlassian-conflue
 
 ### 设定安装包权限
 
-```
+```shell
 chmod a+x atlassian-confluence-7.15.0-x64.bin
 ```
 
 ### 执行安装
 
-```
+```shell
 sudo ./atlassian-confluence-7.15.0-x64.bin
 ```
 
@@ -192,7 +192,7 @@ sudo vim /opt/atlassian/confluence/conf/server.xml
 
 将写有 Default 字样注释的下方的 Connector 标签使用 `<!--` 和 `-->` 完全注释掉
 
-```
+```xml
     <!--
     ==============================================================================================================
     DEFAULT - Direct connector with no proxy, for unproxied HTTP access to Confluence.
@@ -200,12 +200,12 @@ sudo vim /opt/atlassian/confluence/conf/server.xml
     If using a http/https proxy, comment out this connector.
     ==============================================================================================================
     -->
-	<!--
-	<Connector port="8090" connectionTimeout="20000" redirectPort="8443"
+    <!--
+    <Connector port="8090" connectionTimeout="20000" redirectPort="8443"
                    maxThreads="48" minSpareThreads="10"
                    enableLookups="false" acceptCount="10" debug="0" URIEncoding="UTF-8"
                    protocol="org.apache.coyote.http11.Http11NioProtocol"/>
-	-->
+    -->
 ```
 
 #### 启用反代理配置
@@ -218,26 +218,26 @@ sudo vim /opt/atlassian/confluence/conf/server.xml
 `proxyName` 代理名称：填写域名
 `proxyPort` 代理端口：填写反代理后访问的端口（不是 Nginx `proxy_pass` 访问的端口，而是代理后让外界访问的端口），此处为 443
 
-```
+```xml
      <!--
-	 ==============================================================================================================
-	 HTTP - Proxying Confluence via Apache or Nginx over HTTP
+     ==============================================================================================================
+     HTTP - Proxying Confluence via Apache or Nginx over HTTP
 
-	 If you're proxying traffic to Confluence over HTTP, uncomment the connector below and comment out the others.
-	 Make sure you provide the right information for proxyName and proxyPort.
+     If you're proxying traffic to Confluence over HTTP, uncomment the connector below and comment out the others.
+     Make sure you provide the right information for proxyName and proxyPort.
 
-	 For more information see:
-		Apache - https://confluence.atlassian.com/x/4xQLM
-		nginx  - https://confluence.atlassian.com/x/TgSvEg
+     For more information see:
+        Apache - https://confluence.atlassian.com/x/4xQLM
+        nginx  - https://confluence.atlassian.com/x/TgSvEg
 
-	 ==============================================================================================================
-	-->
+     ==============================================================================================================
+    -->
 
-	<Connector port="8090" connectionTimeout="20000" redirectPort="8443"
-			   maxThreads="48" minSpareThreads="10"
-			   enableLookups="false" acceptCount="10" debug="0" URIEncoding="UTF-8"
-			   protocol="org.apache.coyote.http11.Http11NioProtocol"
-			   scheme="<协议模板>" proxyName="<域名>" proxyPort="<端口>"/>
+    <Connector port="8090" connectionTimeout="20000" redirectPort="8443"
+               maxThreads="48" minSpareThreads="10"
+               enableLookups="false" acceptCount="10" debug="0" URIEncoding="UTF-8"
+               protocol="org.apache.coyote.http11.Http11NioProtocol"
+               scheme="<协议模板>" proxyName="<域名>" proxyPort="<端口>"/>
 ```
 
 ### 重启 Confluence 服务
@@ -318,13 +318,13 @@ sudo nginx -s reload
 
 ### 安装 OpenJDK（Java 环境）
 
-```
+```shell
 sudo apt install openjdk-11-jdk
 ```
 
 ### 解压和权限调整
 
-```
+```shell
 mkdir -p /opt/atlassian-agent
 cd /opt/atlassian-agent
 sudo mv ~/atlassian-agent-v1.3.1.tar.gz ./
@@ -372,22 +372,22 @@ java -jar atlassian-agent.jar -p conf -d -m neko@ayaka.moe -n 'Ayaka Neko' -o Ay
 ` -o`：许可证颁发给的组织名
 `-p`：产品名称，Confluence 需要填写 conf
  - 支持的参数
-		- crowd: Crowd
-    	- jsm: JIRA Service Management
-	    - questions: Questions plugin for Confluence
-	    - crucible: Crucible
-	    - capture: Capture plugin for JIRA
-	    - conf: Confluence
-	    - training: Training plugin for JIRA
-	    - *: 第三方插件密钥，一般类似于：com.foo.bar
-	    - bitbucket: Bitbucket
-	    - tc: Team Calendars plugin for Confluence
-	    - bamboo: Bamboo
-	    - fisheye: FishEye
-	    - portfolio: Portfolio plugin for JIRA
-	    - jc: JIRA Core
-	    - jsd: JIRA Service Desk
-	    - jira: JIRA Software(common jira)
+        - crowd: Crowd
+        - jsm: JIRA Service Management
+        - questions: Questions plugin for Confluence
+        - crucible: Crucible
+        - capture: Capture plugin for JIRA
+        - conf: Confluence
+        - training: Training plugin for JIRA
+        - *: 第三方插件密钥，一般类似于：com.foo.bar
+        - bitbucket: Bitbucket
+        - tc: Team Calendars plugin for Confluence
+        - bamboo: Bamboo
+        - fisheye: FishEye
+        - portfolio: Portfolio plugin for JIRA
+        - jc: JIRA Core
+        - jsd: JIRA Service Desk
+        - jira: JIRA Software(common jira)
 
 `-s`：服务器 ID，在 Confluence 配置页面上找到
 
