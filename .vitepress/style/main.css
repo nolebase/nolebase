@@ -68,7 +68,7 @@
 
 @font-face {
   font-family: tengwarannatar;
-  src: url(tengwar-annatar-glaemscrafu.woff2) format('woff2');
+  src: url(/tengwar-annatar-glaemscrafu.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: block
@@ -76,7 +76,7 @@
 
 @font-face {
   font-family: tengwarannatar-bold;
-  src: url(tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');
+  src: url(/tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: block
