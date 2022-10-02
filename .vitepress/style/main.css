@@ -82,18 +82,48 @@
   font-display: block
 }
 
-.VPHomeHero > .container > .main > h1 {
+.VPHomeHero>.container>.main>h1 {
   font-size: 5rem;
   font-family: 'tengwarannatar-bold';
 }
 
-.VPHomeHero > .container > .main > .text {
+.VPHomeHero>.container>.main>.text {
   padding-top: 45px;
   font-size: 4rem;
 }
 
-.VPHomeHero > .container > .main > .tagline {
+.VPHomeHero>.container>.main>.tagline {
   padding-top: 24px;
+}
+
+@media (max-width: 1024px) {
+  .VPHomeHero>.container>.main>h1 {
+    font-size: 3.5rem;
+  }
+
+  .VPHomeHero>.container>.main>.text {
+    padding-top: 30px;
+    font-size: 3rem;
+  }
+
+  .VPHomeHero>.container>.main>.tagline {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .VPHomeHero>.container>.main>h1 {
+    font-size: 2.5rem;
+  }
+
+  .VPHomeHero>.container>.main>.text {
+    padding-top: 20px;
+    font-size: 2rem;
+  }
+
+  .VPHomeHero>.container>.main>.tagline {
+    padding-top: 20px;
+  }
 }
 
 .VPFooter {
@@ -101,13 +131,20 @@
 }
 
 .footer-cc-link {
+  color: var(--vp-c-text-2);
   transition: all 0.3s ease;
   text-decoration: underline;
-  text-decoration-color: rgb(154, 154, 154);
+  text-decoration-color: rgb(114, 114, 114);
 }
 
 .footer-cc-link:hover {
-  color: #3a3a3a;
-  text-decoration-color: rgb(91, 91, 91);
+  color: var(--vp-c-text-1);
 }
 
+.dark .footer-cc-link:hover {
+  color: var(--vp-c-text-1);
+}
+
+.VPDoc .VPDocFooter {
+  margin-top: 32px;
+}
