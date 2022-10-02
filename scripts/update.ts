@@ -4,7 +4,7 @@ import fg from 'fast-glob'
 import { join, resolve } from 'path'
 
 const dir = './'
-const target = ''
+const target = '笔记/'
 
 export const DIR_ROOT = resolve(__dirname, '..')
 export const DIR_VITEPRESS = resolve(__dirname, '../.vitepress')
@@ -39,6 +39,11 @@ function addRouteItem(indexes: any[], path: string, upgradeIndex = false) {
   }
   const linkItems = item.link.split('/')
   linkItems.shift()
+
+  target.split('/').forEach((item) => {
+    if (item)
+      linkItems.shift()
+  })
 
   if (linkItems.length === 1) {
     return
