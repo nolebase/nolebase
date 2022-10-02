@@ -30,13 +30,13 @@ export function MarkdownTransform(): Plugin {
 
 export async function getFunctionMarkdown() {
   const contributorsSection = `
-## Contributors
+## 贡献者
 
 <Contributors />
 `
 
   const changelogSection = `
-## Changelog
+## 变更记录
 
 <Changelog />
 `
