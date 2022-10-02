@@ -6,6 +6,7 @@ import {
   githubRepoLink,
 } from './meta'
 import MarkdownItFootnote from 'markdown-it-footnote'
+import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 
 export default defineConfigWithTheme({
   lang: 'zh-CN',
@@ -56,6 +57,7 @@ export default defineConfigWithTheme({
     },
     config: (md) => {
       md.use(MarkdownItFootnote)
+      md.use(MarkdownItMathjax3)
     }
   }
 })
