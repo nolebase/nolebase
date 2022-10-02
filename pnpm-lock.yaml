@@ -18,7 +18,7 @@ specifiers:
   unocss: ^0.45.21
   unplugin-vue-components: ^0.22.7
   vite: ^3.1.0
-  vitepress: npm:vitepress-collapsible-sidebar@1.0.0-alpha.17.8
+  vitepress: npm:vitepress-collapsible-sidebar@1.0.0-alpha.17.9
   vue: ^3.2.39
 
 devDependencies:
@@ -39,7 +39,7 @@ devDependencies:
   unocss: 0.45.21_vite@3.1.0
   unplugin-vue-components: 0.22.7_vite@3.1.0+vue@3.2.39
   vite: 3.1.0
-  vitepress: /vitepress-collapsible-sidebar/1.0.0-alpha.17.8
+  vitepress: /vitepress-collapsible-sidebar/1.0.0-alpha.17.9
   vue: 3.2.39
 
 packages:
@@ -2047,8 +2047,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress-collapsible-sidebar/1.0.0-alpha.17.8:
-    resolution: {integrity: sha512-bKV3EMoJirfdLaTILxwvsbDnSFq355h1pXsmwHSaNNo+9lq+l7QD4W2c+sXMsu/ZAYi19sX7ysE18eTbchTIUA==}
+  /vitepress-collapsible-sidebar/1.0.0-alpha.17.9:
+    resolution: {integrity: sha512-19nHqKrwABBs6gRxidm16FoUelbXwmQ5E9L0COcTeLefNtEkurlSFyIAIfXCZSvwzMDN2ktVtVNiPPj0PbEZfg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1
