@@ -2,6 +2,11 @@
   <img width="350" src="https://user-images.githubusercontent.com/19204772/193437443-b5e04990-9957-4339-a83c-72b33307dbff.png">
 </p>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" /></a>
+  <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" /></a>
+</p>
+
 # Nólëbase
 
 **记录回忆，知识和畅想的地方**
@@ -19,5 +24,14 @@
 - 🗃 由 Obsidian 驱动：
   - 强大的知识库管理工具，支持花样繁多的插件和拓展，让知识管理变得更加简单。
 
+
+## 声明
+
+本仓库代码以 [MIT License][mit] 协议发布
+
+本仓库文档、图片和其引用的资源均以 [CC BY-NC-SA 4.0][cc-by-nc-sa] 协议发布
+
+[mit]: https://opensource.org/licenses/MIT
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ### 用 ♥ 撰写
