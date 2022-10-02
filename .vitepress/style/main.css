@@ -66,6 +66,7 @@
   max-width: unset;
 }
 
+/* 标题所需要的字体 */
 @font-face {
   font-family: tengwarannatar;
   src: url(/tengwar-annatar-glaemscrafu.woff2) format('woff2');
@@ -74,6 +75,7 @@
   font-display: block
 }
 
+/* 标题所需要的字体 */
 @font-face {
   font-family: tengwarannatar-bold;
   src: url(/tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');
@@ -82,54 +84,67 @@
   font-display: block
 }
 
+/* 首页标题样式 */
 .VPHomeHero>.container>.main>h1 {
   font-size: 5rem;
   font-family: 'tengwarannatar-bold';
 }
 
+/* 首页子标题样式 */
 .VPHomeHero>.container>.main>.text {
   padding-top: 45px;
   font-size: 4rem;
 }
 
+/* 首页介绍样式 */
 .VPHomeHero>.container>.main>.tagline {
   padding-top: 24px;
 }
 
+/* 自适应样式 */
 @media (max-width: 1024px) {
+  /* 首页标题样式 */
   .VPHomeHero>.container>.main>h1 {
     font-size: 3.5rem;
   }
 
+  /* 首页子标题样式 */
   .VPHomeHero>.container>.main>.text {
     padding-top: 30px;
     font-size: 3rem;
   }
 
+  /* 首页介绍样式 */
   .VPHomeHero>.container>.main>.tagline {
     padding-top: 20px;
   }
 }
 
+/* 自适应样式 */
 @media (max-width: 640px) {
+  /* 首页标题样式 */
   .VPHomeHero>.container>.main>h1 {
     font-size: 2.5rem;
   }
 
+  /* 首页子标题样式 */
   .VPHomeHero>.container>.main>.text {
     padding-top: 20px;
     font-size: 2rem;
   }
 
+  /* 首页介绍样式 */
   .VPHomeHero>.container>.main>.tagline {
     padding-top: 20px;
   }
 }
 
+/* 主页下方的页脚透明度 */
 .VPFooter {
   opacity: 0.8;
 }
 
+/* 正文结尾的 CC 协议链接基本样式 */
 .footer-cc-link {
   color: var(--vp-c-text-2);
   transition: all 0.3s ease;
@@ -137,14 +152,22 @@
   text-decoration-color: rgb(114, 114, 114);
 }
 
+/* 正文结尾的 CC 协议链接鼠标 hover 样式 */
 .footer-cc-link:hover {
   color: var(--vp-c-text-1);
 }
 
+/* 正文结尾的 CC 协议链接暗色模式下鼠标 hover 样式 */
 .dark .footer-cc-link:hover {
   color: var(--vp-c-text-1);
 }
 
+/* 调整文档页面页脚到正文结尾的间隔距离 */
 .VPDoc .VPDocFooter {
   margin-top: 32px;
+}
+
+/* 确保脚注上的返回链接符号 ↩ 不会被 body 的 Emoji 字体覆盖渲染为 ↩️ */
+.footnotes > .footnotes-list {
+  font-family: sans-serif;
 }

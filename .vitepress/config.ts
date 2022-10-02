@@ -5,6 +5,7 @@ import {
   siteDescription,
   githubRepoLink,
 } from './meta'
+import MarkdownItFootnote from 'markdown-it-footnote'
 
 export default defineConfigWithTheme({
   lang: 'zh-CN',
@@ -52,6 +53,9 @@ export default defineConfigWithTheme({
     theme: {
       light: 'one-dark-pro',
       dark: 'one-dark-pro',
+    },
+    config: (md) => {
+      md.use(MarkdownItFootnote)
     }
   }
 })
