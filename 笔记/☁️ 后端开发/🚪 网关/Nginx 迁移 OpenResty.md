@@ -194,3 +194,9 @@ sudo apt remove nginx
 ```shell
 sudo ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx
 ```
+
+### 其他的关联配置
+
+#### Logrotate
+
+如果是使用软件管理器安装的 Nginx，其安装脚本可能会自动为 Nginx 配置 Logrotate 策略，且如果你在上述的 OpenResty 配置文件（`/etc/openresty/nginx.conf`）中修改了 `pid` （OpenResty 的进程 ID 文件）字段对应的值，或者说你的 OpenResty 配置文件中 `pid` 字段的值和原先 Nginx 配置文件（`/etc/nginx/nginx.conf`）中配置的 `pid` 字段的值不一样的话，请一定检查并在必要情况下修改 Logrotate 策略配置脚本。

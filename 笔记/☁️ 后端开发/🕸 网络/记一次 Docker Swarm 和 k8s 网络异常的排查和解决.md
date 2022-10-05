@@ -1,4 +1,4 @@
-# 记一次 Docker Swarm 和 k8s 网络异常的排查和解决
+# 记一次 Docker Swarm 和 K8S 网络异常的排查和解决
 
 ##### 文档版本
 
