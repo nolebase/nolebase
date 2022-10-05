@@ -1,4 +1,10 @@
-# 如何判断当前调用是否是 Goroutine（Go 协程）
+# 如何判断当前调用是否是 Goroutine
+
+## TL;DR
+
+关键在于使用 Golang 提供的 `runtime` 包的 `runtime.NumGoroutine()` 函数。
+
+## 代码示例
 
 创建一个工具包，该文件命名为 `util.go`
 
@@ -59,7 +65,7 @@ func TestSetDisableGoroutine(t *testing.T) {
 	var wg sync.WaitGroup // 创建 waitgroup 来等待协程结束
 	var afterGoroutineCount int // 协程 go 出去之后的 Goroutine 计数
 	aquireCurrentGoroutineID := func() {
-    afterGoroutineCount = runtime.NumGoroutine() // 使用 runtime.NumGoroutine() 获取 Go 协程总数 
+	    afterGoroutineCount = runtime.NumGoroutine() // 使用 runtime.NumGoroutine() 获取 Go 协程总数 
 		wg.Done() // 标记 waitgroup 为完成
 	}
 
