@@ -1,15 +1,13 @@
 # FDA 刚刚批准了第一个处方视频游戏——它是为患有 ADHD 多动症的孩子准备的
 
 ---
-发布于: 2022-01-25T11:57:35 (UTC +08:00)
-来源: https://www.theverge.com/2020/6/15/21292267/fda-adhd-video-game-prescription-endeavor-rx-akl-t01-project-evo
-作者: [Sean Hollister](https://www.theverge.com/authors/sean-hollister) | [@StarFire2258](https://www.twitter.com/StarFire2258)
----
 
-> ## 简述
-> EndeavorRX, formerly Project EVO, may go down in history.
+##### Archive 信息
 
----
+| Archive 自 | Archive 创建于 | 分类 | 原始作者 | 原始地址 | 原始资源创建时间 | 原始资源更新时间 |
+| ---------- | ------------ | ---- | ------- | ------- | ------------- | ------------- |
+| The Verge | 2022-01-26 11:56:01 | 新闻 | [Sean Hollister](https://www.theverge.com/authors/sean-hollister) [@StarFire2258](https://www.twitter.com/StarFire2258) | [链接](https://www.theverge.com/2020/6/15/21292267/fda-adhd-video-game-prescription-endeavor-rx-akl-t01-project-evom) | 2022-01-25 11:57:35 | 2022-01-25 11:57:35 |
+
 It might not look like much of a video game, but Akili Interactive’s EndeavorRX, formerly Project EVO, may go down in history: it’s the first video game that can legally be marketed and prescribed as medicine in the US.
 
 That’s the landmark decision [from the Food and Drug Administration (FDA)](https://www.fda.gov/news-events/press-announcements/fda-permits-marketing-first-game-based-digital-therapeutic-improve-attention-function-children-adhd), which is authorizing doctors to prescribe the iPhone and iPad game for kids between ages eight and 12 years old with ADHD, after it underwent seven years of clinical trials that studied over 600 children to figure out whether a game could actually make a difference.
@@ -36,5 +34,4 @@ _**Update, June 16th at 1:27 PM ET:**_ _Added info about Bayer’s Didget._
 
 ## 延伸阅读
 
-EndeavorRx® - 为治疗 ADHD 孩子的电子游戏 | FDA-authorized
-https://www.endeavorrx.com/
+[EndeavorRx® - 为治疗 ADHD 孩子的电子游戏 | FDA-authorized](https://www.endeavorrx.com/)
