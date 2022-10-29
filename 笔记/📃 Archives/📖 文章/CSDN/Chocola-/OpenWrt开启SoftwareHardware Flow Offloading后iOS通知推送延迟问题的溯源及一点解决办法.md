@@ -13,21 +13,21 @@
 
 实际上这个问题是我在将[路由器](https://so.csdn.net/so/search?q=%E8%B7%AF%E7%94%B1%E5%99%A8&spm=1001.2101.3001.7020)刷成OpenWrt后偶然发现的。本来自使用的路由器是AX3 Pro，但是使用一段时间后发现这个路由器对IPv6的分配策略上有着不小的问题：本地运营商下发了/60的前缀后，此路由器并不会自动将此段地址切割以供二级路由使用，导致二级路由只能分配到/64的IPv6地址，无法继续下发地址，虽然在二级路由上可以使用NAT技术使下挂设备使用IPv6网络，但是这样显然违背了IPv6设计的初衷；其次，AX3 Pro默认将IPv6防火墙完全打开，同时无法在管理页面将此防火墙关闭，导致无法从公网访问到路由器后面的IPv6设备，这也明显阻碍了从外界管理内网设备的需求。所以，只能无奈舍弃这款路由器而选择可以刷入OpenWrt的路由器（OpenWrt对于IPv6及相关设置的支持良好），选择了搭载MT7621+MT7615的路由器解锁SSH权限并刷入了OpenWrt系统。  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.png)
 
 图1 MT7621官方数据参数
 
 刷入系统几天后，偶然在一次聊天中发现iOS的消息通知推送有了延迟，通知框最迟的时候显示的是将近十分钟前的消息。于是用另一台设备发送测试消息，发现只要设备空闲超过两分钟，iOS的通知消息便有了明显的延迟。起初怀疑是官方的OpenWrt版本使用的都是开源驱动，对第三方设备的支持并不那么良好，于是自己拉取源码，修改编译选项将开源驱动换为MTK官方的闭源驱动编译出固件，再次刷入后发现问题仍然存在，但是后来换成完全基于MTK官方驱动且可以完全调用MT7621的硬件加速功能的Padavan系统后就不再存在消息延迟的问题。这个问题很令人感到困惑，本以为是驱动造成的问题，但是同样使用了闭源驱动，两个系统却有不一样的表现，只能是OpenWrt可能在某些关于网络的实现上有问题，但具体是哪里的问题，实在是不太好发现。于是在各个有关网络的论坛内搜索有没有类似的情况出现，终于在这个帖子内找到了遇到过类似问题的人： [iPhone 推送通知延迟，这种情况出现在只连接 WIFI 的情况下。](https://v2ex.com/t/804005)并且下面有网友给出了一种可能的解决办法。  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.1.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.1.png)
 
 图2 相似问题的帖子
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.2.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.2.png)
 
 图3 网友给出可能的解决方案
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.3.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.3.png)
 
 图4 自编译固件Turbo ACC管理页面
 
@@ -41,13 +41,13 @@
 
 之中任一推送服务器的TCP长连接（事实上Apple Inc.拥有17.0.0.0/8一整条A类网段…），并每隔十分钟发送一次心跳包以Keep Alive。  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/cef384a6da3b477fb249d8e4f55bec20.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/cef384a6da3b477fb249d8e4f55bec20.png)
 
 图5 APNS使用的协议与端口
 
 以上帖子是最接近解决问题的方法了，其他帖子甚至只有“同道中人”在反馈问题甚至没有任何可靠的解决方法。按照上面给出的方法在OpenWrt管理页面中关闭软/硬件加速，经过一段时间测试，确实消除了推送延迟的问题，但关闭此选项却带来了更大的问题：网速的极大下降。上面提到的MT7621参数表可以看出这颗CPU虽然有着双核四线程，主频仅有0.88GHz，但内置的硬件加速功能却可以带动上下同时1Gbps的网络流量。原厂固件一般搭配专用的闭源驱动来驱动这一功能：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.4.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.4.png)
 
 图6 OpenWrt官方技术细节图片
 
@@ -57,13 +57,13 @@
 
 通过SSH进入路由器Shell，通过iptables命令可以控制修改查看Netfilter模块，使用iptables -nvL -t filter查看表中所有规则，路由转发使用到FORWARD链，通过查看该链下的规则可以发现一些有意思的问题：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/81b2145a034945779845f5ce2653aa30.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/81b2145a034945779845f5ce2653aa30.png)
 
 图7 路由器FORWARD链规则
 
 链中规则是有先后执行顺序的，第一条规则仅起统计作用可以忽略不计，重点在于第二条规则：对于此条规则，不论数据包源自哪里目的哪里，只要经过内核转发建立连接或者与已建立连接相关联数据包，目标一律是FLOWOFFLOAD。这个FLOWOFFLOAD是什么？通过查阅Netfilter官方资料可由下图大致解释：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.5.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.5.png)
 
 图8 Netfilter官方对于FLOWOFFLOAD的解释
 
@@ -85,13 +85,13 @@ The ingress hook provides an alternative to tc ingress filtering. You still need
 
 进入flowtable有一个条件，即完整地经过Netfiler路径，也就是一条流的双向包必须被FORWARD链都“看到”，才可将其从Netfilter中“卸下”。如何查看到被OFFLOAD包的状态呢？FLOWOFFLOAD功能依赖于nf\_conntrack模块，可从/proc/net/nf\_conntrack中查看到这些数据。向Apple设备发送消息唤醒推送服务后，在Shell中执行cat /proc/net/nf\_conntrack | grep -w 5223可见：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/b1575374f7bf49b083c577565ee334e6.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/b1575374f7bf49b083c577565ee334e6.png)
 
 图9 命令执行结果
 
 可以看到设备与苹果APNS服务器的连接已经被从Netfilter中摘出（OFFLOAD），但奇怪的是隔一分半后继续执行该命令的结果：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/302189a742104f01aad8fc23c70723fd.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/302189a742104f01aad8fc23c70723fd.png)
 
 图10 再次执行命令结果
 
@@ -99,7 +99,7 @@ The ingress hook provides an alternative to tc ingress filtering. You still need
 
 看起来在OpenWrt下推送消息延迟的原因找到了，但为什么被OFFLOAD包的超时时间是如此短？通过sysctl查询内核模块nf\_conntrack相应的属性来看，flowtable的超时时间似乎与其不一致。执行sysctl -a | grep conntrack | grep timeout命令后：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.6.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.6.png)
 
 图11 命令执行结果
 
@@ -121,7 +121,7 @@ The ingress hook provides an alternative to tc ingress filtering. You still need
 
 回答说这个修改看起来是故意为之的，patch的内容如下：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.7.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.7.png)
 
 图12 Patch内容
 
@@ -170,13 +170,13 @@ iptables -I FORWARD -p tcp --dport 5223 -m conntrack --ctstate ESTABLISHED,RELAT
 ```
 
 执行后FORWARD链变为下图：  
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.8.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/x-oss-process=image.8.png)
 
 图13 命令执行后的FORWARD链
 
 此时向Apple设备发送消息，唤醒消息推送服务后，执行命令cat /proc/net/nf\_conntrack | grep -w 5223后的结果如图：  
 
-![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardware%20Flow%20Offloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/91a4cc1e14aa455d9a55ebf883a7b52b.png)
+![](assets/images/OpenWrt%E5%BC%80%E5%90%AFSoftwareHardwareFlowOffloading%E5%90%8EiOS%E9%80%9A%E7%9F%A5%E6%8E%A8%E9%80%81%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%E7%9A%84%E6%BA%AF%E6%BA%90%E5%8F%8A%E4%B8%80%E7%82%B9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/91a4cc1e14aa455d9a55ebf883a7b52b.png)
 
 图14 修改FORWARD链后命令执行结果
 
