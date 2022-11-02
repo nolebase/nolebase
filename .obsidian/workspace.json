@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "25f4cc8f077230c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a828d5f6b61af3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17cf68f2e6e2b089",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3698b8c616aabcfc",
+    "type": "split",
+    "children": [
+      {
+        "id": "b15e2c7929b2a46a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5dfc4e6c8287ee4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d5332c2bfa4468de",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#postgresql",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f568bf7e439d398b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 319.5
+  },
+  "right": {
+    "id": "246bd0838f8f40a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "166ecf9eee3475b0",
+        "type": "tabs",
+        "dimension": 31.804586241276173,
+        "children": [
+          {
+            "id": "c589947a0e4d8159",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "00f8f8ad2cb9f9b0",
+        "type": "tabs",
+        "dimension": 68.19541375872383,
+        "children": [
+          {
+            "id": "ccb7652bb733a848",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5f488e06357db2c6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "109c669fb0e4b88f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "475eb9b30293eb6b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 386,
+    "collapsed": true
+  },
+  "active": "17cf68f2e6e2b089",
+  "lastOpenFiles": [
+    "笔记/🧰 运维/Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
+    "README.md",
+    "笔记/☁️ 后端开发/🕸️ GraphQL/基于游标的分页.md",
+    "笔记/☁️ 后端开发/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
+    "笔记/☁️ 后端开发/CORS 重定向问题.md",
+    "笔记/☁️ 后端开发/电子邮件的 Subject 主题字段中文乱码.md",
+    "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 日志在 0 点丢失问题的排查和解决.md",
+    "笔记/☁️ 后端开发/♻️ 增量同步/学习资料.md",
+    "笔记/☁️ 后端开发/🔐 mTLS SSO/系统设计.md",
+    "笔记/📟 终端/软件/apidoc 安装.md"
+  ]
+}
