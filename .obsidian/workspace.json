@@ -11,8 +11,12 @@
             "id": "17cf68f2e6e2b089",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -97,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +140,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md"
+              }
             }
           }
         ],

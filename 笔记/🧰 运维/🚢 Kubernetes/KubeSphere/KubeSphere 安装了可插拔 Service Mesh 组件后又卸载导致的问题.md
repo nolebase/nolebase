@@ -58,15 +58,15 @@ I1101 23:26:31.296517 1 event.go:291] "Event occurred" object="namespace/service
 ```shell
 $ kubectl get ValidatingWebhookConfiguration
 
-NAME                            WEBHOOKS   AGE
-istio-sidecar-injector-1-11-2   2          8d
+NAME                                          WEBHOOKS   AGE
+istio-validator-1-11-2-istio-system           2          8d
 ```
 
 ```shell
 $ kubectl get MutatingWebhookConfiguration
 
-NAME                                          WEBHOOKS   AGE
-istio-validator-1-11-2-istio-system           2          8d
+NAME                            WEBHOOKS   AGE
+istio-sidecar-injector-1-11-2   2          8d
 ```
 
 接下来只需要运行下面的两个命令就能清理掉错误的资源了：
@@ -76,7 +76,7 @@ kubectl delete ValidatingWebhookConfiguration istio-validator-1-11-2-istio-syste
 ```
 
 ```shell
-kubectl delete MutatingWebhookConfiguration istio-validator-1-11-2-istio-system
+kubectl delete MutatingWebhookConfiguration istio-sidecar-injector-1-11-2
 ```
 
 
