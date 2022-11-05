@@ -48,7 +48,13 @@ export default defineConfig(async () => {
           presetAttributify(),
           presetIcons({
             prefix: 'i-',
-            scale: 1.2,
+            scale: 1.2, // size: 1.2 rem
+            extraProperties: {
+              'display': 'inline-block',
+              'vertical-align': 'middle',
+              'min-width': '1.2rem',
+            },
+            warn: true,
           }),
         ],
       }) as unknown as Plugin,

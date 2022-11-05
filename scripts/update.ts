@@ -2,12 +2,15 @@
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import { join, resolve } from 'path'
+import Git from 'simple-git'
 
 const dir = './'
 const target = '笔记/'
 
 export const DIR_ROOT = resolve(__dirname, '..')
 export const DIR_VITEPRESS = resolve(__dirname, '../.vitepress')
+
+const git = Git(DIR_ROOT)
 
 export async function listFunctions(dir: string, options: { target?: string, ignore?: string[] }) {
   const {
@@ -28,7 +31,7 @@ export async function listFunctions(dir: string, options: { target?: string, ign
   return files
 }
 
-function addRouteItem(indexes: any[], path: string, upgradeIndex = false) {
+async function addRouteItem(indexes: any[], path: string, upgradeIndex = false) {
   const suffixIndex = path.lastIndexOf('.')
   const nameStartsAt = path.lastIndexOf('/') + 1
   const title = path.slice(nameStartsAt, suffixIndex)
@@ -36,6 +39,7 @@ function addRouteItem(indexes: any[], path: string, upgradeIndex = false) {
     index: title,
     text: title,
     link: `/${path.slice(0, suffixIndex)}`,
+    lastUpdated:  +await git.raw(['log', '-1', '--format=%at', path]) * 1000
   }
   const linkItems = item.link.split('/')
   linkItems.shift()
@@ -78,6 +82,7 @@ function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgrad
 
     if (path.length === 1 && path[0] === 'index') {
       obj.link = item.link
+      obj.lastUpdated = item.lastUpdated
     }
     else {
       obj.items = addRouteItemRecursion(obj.items, item, path, upgradeIndex)
@@ -93,7 +98,7 @@ async function run() {
   const indexes: any[] = []
 
   await Promise.all(docs.map(async (docPath: string) => {
-    addRouteItem(indexes, docPath)
+    await addRouteItem(indexes, docPath)
   }))
 
   await fs.writeJSON(join(DIR_VITEPRESS, 'metainfo.json'), {
