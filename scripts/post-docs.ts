@@ -70,7 +70,7 @@ async function buildOG() {
     if (article) {
       const ogName = `${dirname(file)}/og-${article.index}.png`
       await generateSVG(article, ogName)
-      html = html.replace(/nolebase\.ayaka\.io\/og\.png/g, `nolebase.ayaka.io/${ogName}`.toLocaleLowerCase())
+      html = html.replace(/nolebase\.ayaka\.io\/og\.png/g, `nolebase.ayaka.io/${relative(dist,ogName)}`.toLocaleLowerCase())
     }
 
     await fs.writeFile(file, html, 'utf-8')
