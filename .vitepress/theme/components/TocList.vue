@@ -1,21 +1,11 @@
 <!-- 目录 -->
 <script lang="ts" setup>
 import { computed, reactive } from 'vue';
+import { ArticleTree } from '../../../scripts/types/metadata';
 import { sidebar } from '../../metainfo.json'
 
-type SidebarItem = {
-  index: string
-  text: string
-  link?: string
-  lastUpdated?: number
-  collapsible?: true
-  collapsed?: true
-  items?: SidebarItem[]
-  category?: string
-}
-
 const list = computed(() => {
-  const list: SidebarItem[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))] || []))
+  const list: ArticleTree[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))] || []))
   for (let i = 0; i < list.length; i++) {
     const items = list[i].items
     if (items) {
