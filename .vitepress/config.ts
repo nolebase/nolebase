@@ -12,7 +12,10 @@ export default defineConfigWithTheme({
   lang: 'zh-CN',
   title: siteName,
   description: siteDescription,
+
   lastUpdated: true,
+  ignoreDeadLinks: true,
+
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
@@ -20,10 +23,15 @@ export default defineConfigWithTheme({
     ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '16x16' }],
     ['meta', { name: 'author', content: `Ayaka Neko, Ayaka Rizumu` }],
     ['meta', { name: 'keywords', content: 'markdown, knowledgebase, 知识库, vitepress, obsidian, notebook, notes, nekomeowww, littlesound' }],
+
     ['meta', { property: 'og:title', content: siteName }],
+    ['meta', { property: 'og:image', content: 'https://nolebase.ayaka.io/og.png' }],
     ['meta', { property: 'og:description', content: siteDescription }],
-    ['meta', { name: 'twitter:title', content: siteName }],
-    ['meta', { name: 'twitter:description', content: siteDescription }],
+
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:creator', content: 'Ayaka Neko, Ayaka Rizumu' }],
+    ['meta', { name: 'twitter:image', content: 'https://nolebase.ayaka.io/og.png' }],
+
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#927baf' }],
     ['link', {rel: 'manifest', href: '/site.webmanifest' }],
     ['meta', { name: 'msapplication-TileColor', content: '#603cba' }],
