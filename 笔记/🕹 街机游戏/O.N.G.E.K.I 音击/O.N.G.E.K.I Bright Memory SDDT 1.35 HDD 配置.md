@@ -7,7 +7,7 @@
 | ----- | --- | ------- | ------- |
 | Neko | v1.0.0 | 2022-05-27 | 创建 |
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
@@ -434,7 +434,7 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 
 ![](assets/SDDT-1.35-screenshot-09.png)
 
-在游戏读取到不是「**初期化中**」的时候，按下 F6 进入 service 模式（如果按了没有反应，请检查 `segatools.ini` 
+在游戏读取到不是「**初期化中**」的时候，按下 F6 进入 service 模式（如果按了没有反应，请检查 `segatools.ini`
  的 io3 部分的配置）。
 
 ![](assets/SDDT-1.35-screenshot-06.png)

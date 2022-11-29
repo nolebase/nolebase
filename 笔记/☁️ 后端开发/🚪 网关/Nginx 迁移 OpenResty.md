@@ -8,13 +8,13 @@
 | ----- | --- | ------- | ------- |
 | Neko | v1.0.0 | 2022-08-17 | 创建 |
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
 | Debian | 11/5.10.127-1/amd64 |  |
 | Nginx | nginx/1.21.1 | [NGINX Documentation](https://docs.nginx.com/) |
-| OpenResty | openresty/1.21.4.1 | [OpenResty® - Official Site](https://openresty.org/en/) | 
+| OpenResty | openresty/1.21.4.1 | [OpenResty® - Official Site](https://openresty.org/en/) |
 
 ## Debian 11
 

@@ -1,11 +1,11 @@
 # 因打开了 swap 导致的 Kubernetes 重启后无法自愈问题
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
 | KubeSphere | v3.3.1 | [https://kubesphere.io/zh/docs/v3.3.1/](https://kubesphere.io/zh/docs/v3.3/) |
-| Kubernetes | v1.22.1 | [https://v1-22.docs.kubernetes.io/](https://v1-22.docs.kubernetes.io/) | 
+| Kubernetes | v1.22.1 | [https://v1-22.docs.kubernetes.io/](https://v1-22.docs.kubernetes.io/) |
 
 ## 说明
 

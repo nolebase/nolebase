@@ -1,11 +1,11 @@
 # KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
 | KubeSphere | v3.3.0 | [https://kubesphere.io/zh/docs/v3.3/](https://kubesphere.io/zh/docs/v3.3/) |
-| Kubernetes | v1.22.0 | [https://v1-22.docs.kubernetes.io/](https://v1-22.docs.kubernetes.io/) | 
+| Kubernetes | v1.22.0 | [https://v1-22.docs.kubernetes.io/](https://v1-22.docs.kubernetes.io/) |
 
 ## 说明
 

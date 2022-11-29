@@ -4,7 +4,7 @@
 
 #elasticsearch #elastic #kibana #logstash #日志 #监控 #基础架构
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |

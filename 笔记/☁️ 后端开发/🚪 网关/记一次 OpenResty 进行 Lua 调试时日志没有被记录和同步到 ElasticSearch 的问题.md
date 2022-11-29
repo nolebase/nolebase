@@ -2,7 +2,7 @@
 
 #网关 #nginx #openresty #lua #elastic #elasticsearch #elk #故障排查
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |

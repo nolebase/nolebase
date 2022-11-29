@@ -8,7 +8,7 @@
 | ----- | --- | ------- | ------- |
 | Neko | v1.0.0 | 2022-03-29 | 创建 |
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
@@ -120,7 +120,7 @@ source.I18n = &SourceI18n{
 	Description: make(map[string]string),
 }
 
-for _, v := range sourceI18ns {	
+for _, v := range sourceI18ns {
 	if sourceI18ns.SourceID == source.ID {
 		source.I18n.Title[v.LanguageCode] = v.Title
 		source.I18n.Description[v.LanguageCode] = v.Description
@@ -167,7 +167,7 @@ FROM "test"."source_i18n"
 GROUP BY "source_id"
 ```
 
-`JSONB_BUILD_OBJECT` 函数可以辅助构建整个 Object，参数模式为：`JSONB_BUILD_OBJECT('key', 'value', 'key2', 'value2'...)` 
+`JSONB_BUILD_OBJECT` 函数可以辅助构建整个 Object，参数模式为：`JSONB_BUILD_OBJECT('key', 'value', 'key2', 'value2'...)`
 `JSONB_OBJECT_AGG` 可以在 `GROUP BY` 语句生效的时候根据 `GROUP BY` 的字段进行聚合，此处则是根据 `source_id` 进行聚合，将原先展开的条目中的 `language_code` 字段和 `title` 字段聚合到新的 JSONB 结构里面。
 
 于是我们就可以获得下面满足 API 约定类型的结果：

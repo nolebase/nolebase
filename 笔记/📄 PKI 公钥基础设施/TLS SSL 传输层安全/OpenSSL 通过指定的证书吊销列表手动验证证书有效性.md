@@ -8,7 +8,7 @@
 | ----- | --- | ------- | ------- |
 | Neko | v1.0.0 | 2021-12-02 |
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
@@ -37,7 +37,7 @@ openssl x509 -noout -text -in wikipedia.pem | grep -A 4 'X509v3 CRL Distribution
 示例输出
 
 ```shell
-X509v3 CRL Distribution Points: 
+X509v3 CRL Distribution Points:
     Full Name:
       URI:http://crl.globalsign.com/gs/gsorganizationvalsha2g2.crl
 
@@ -72,13 +72,13 @@ HTTPS 使用的 SSL 证书通常由证书颁发机构颁发，有的证书基础
 输入下面的命令就可以获得证书链的文件 `chain.pem`
 
 ```shell
-OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect <网站域名>:<HTTPS 服务所在的端口> -showcerts -tlsextdebug -tls1 2>&1 </dev/null | sed -n '/-----BEGIN/,/-----END/ {/-----BEGIN/ s/^/:/; p}'); for certificate in ${certificates#:}; do echo $certificate | tee -a chain.pem ; done; IFS=$OLDIFS 
+OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect <网站域名>:<HTTPS 服务所在的端口> -showcerts -tlsextdebug -tls1 2>&1 </dev/null | sed -n '/-----BEGIN/,/-----END/ {/-----BEGIN/ s/^/:/; p}'); for certificate in ${certificates#:}; do echo $certificate | tee -a chain.pem ; done; IFS=$OLDIFS
 ```
 
 此处可以执行下面的命令获得证书链的文件 `chain.pem`：
 
 ```shell
-OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect wikipedia.org:443 -showcerts -tlsextdebug -tls1 2>&1 </dev/null | sed -n '/-----BEGIN/,/-----END/ {/-----BEGIN/ s/^/:/; p}'); for certificate in ${certificates#:}; do echo $certificate | tee -a chain.pem ; done; IFS=$OLDIFS 
+OLDIFS=$IFS; IFS=':' certificates=$(openssl s_client -connect wikipedia.org:443 -showcerts -tlsextdebug -tls1 2>&1 </dev/null | sed -n '/-----BEGIN/,/-----END/ {/-----BEGIN/ s/^/:/; p}'); for certificate in ${certificates#:}; do echo $certificate | tee -a chain.pem ; done; IFS=$OLDIFS
 ```
 
 在该证书中，会包含（如果有的话）上游的证书颁发机构的证书信息，以及这些证书的公钥文件。
@@ -96,7 +96,7 @@ cat chain.pem crl.pem > crl_chain.pem
 #### 验证未被吊销的证书
 
 ```shell
-openssl verify -crl_check -CAfile crl_chain.pem wikipedia.pem 
+openssl verify -crl_check -CAfile crl_chain.pem wikipedia.pem
 wikipedia.pem: OK
 ```
 
@@ -105,7 +105,7 @@ wikipedia.pem: OK
 #### 验证被吊销的证书
 
 ```shell
-openssl verify -crl_check -CAfile crl_chain.pem revoked-test.pem 
+openssl verify -crl_check -CAfile crl_chain.pem revoked-test.pem
 revoked-test.pem: OU = Domain Control Validated, OU = PositiveSSL, CN = xs4all.nl
 error 23 at 0 depth lookup:certificate revoked
 ```

@@ -6,7 +6,7 @@
 | ----- | --- | ------- | ------- |
 | Neko | v1.0.0 | 2021-12-16 | 创建 |
 
-##### 文档兼容性
+### 文档兼容性
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
@@ -56,7 +56,7 @@ sudo docker exec -it postgres psql -U postgres
 ### 建库[^1][^3]：
 
 ```sql
-CREATE DATABASE confluence WITH 
+CREATE DATABASE confluence WITH
     OWNER confluence
     ENCODING 'UTF-8'
     LC_COLLATE='en_US.utf8'
