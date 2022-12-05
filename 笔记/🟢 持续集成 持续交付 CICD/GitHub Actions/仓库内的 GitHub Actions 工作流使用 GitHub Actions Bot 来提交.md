@@ -70,11 +70,11 @@ git config user.email "github-actions[bot]@users.noreply.github.com"
 
 这会将我们的用户配置为用户名为 `github-actions[bot]` 和邮箱为 `github-actions[bot]@users.noreply.github.com` 的用户，推送到 GitHub 之后就可以看到下面带有头像且名称为 `github-actions[bot]` 的提交记录啦。
 
-![](github-actions-use-bot-user-account-as-commiter-screenshot-01.png)
+![](assets/github-actions-use-bot-user-account-as-commiter-screenshot-01.png)
 
 ### 工作流执行结果
 
-![](./assets/github-actions-use-bot-user-account-as-commiter-screenshot-02.png)
+![](assets/github-actions-use-bot-user-account-as-commiter-screenshot-02.png)
 
 ## 参考资料
 
