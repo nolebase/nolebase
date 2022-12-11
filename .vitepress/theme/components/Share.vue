@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { useClipboard } from '@vueuse/core'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vitepress'
 
 interface HyphenResp<T> {
   data: T
@@ -12,6 +14,8 @@ interface HyphenNewShortURLResp {
 const APIHost = 'https://api.ayaka.io/hyphen'
 const newUrlEndpoint = APIHost + "/api/v1/url"
 const queryUrlEndpoint = APIHost + "/api/v1/url/full"
+
+const route = useRoute()
 
 async function findExistingLink(url: string): Promise<string> {
   const res = await fetch(`${queryUrlEndpoint}?url=${url}`)
@@ -43,9 +47,12 @@ async function createShareLink(url: string) {
   return resJson.data
 }
 
-async function getShareLink() {
-  if (!window.location.pathname || ['index.html', '/', ''].includes(window.location.pathname))
-    return window.location.href
+async function getShareLink(): Promise<string> {
+  // 本身就是短地址或不是生产环境的话不处理，节省资源
+  if (
+    window.location.hostname !== 'nolebase.ayaka.io'
+    || window.location.pathname.length <= 20
+  ) return window.location.href
 
   const url = window.location.href
 
@@ -64,22 +71,37 @@ async function getShareLink() {
   return `${window.location.origin}/to/${linkHash}`
 }
 
+let shareLink = ref('')
+watch(() => route.path, async (val, oldVal, onCleanup) => {
+  if (typeof window === 'undefined') return
+  shareLink.value = ''
+  let cleanup = false
+  onCleanup(() => cleanup = true)
+
+  const link = await getShareLink()
+  if (cleanup) return
+  shareLink.value = link
+}, { immediate: true })
+
 const { copy, copied: shareSuccess  } = useClipboard()
-async function copyShareLink() {
-  const shareLink = await getShareLink()
-  copy(shareLink)
+function copyShareLink() {
+  copy(shareLink.value)
 }
 </script>
 
 <template>
+  <div hidden md:block class="bg-$vp-c-divider-light" ml4 mr2 w-1px h-24px />
   <button
     h-full
     px3
     text-sm font-medium ws-nowrap
-    hover="text-$vp-c-brand"
-    :class="shareSuccess ? '!text-green-400' : ''"
+    text="$vp-c-text-1"
+    :class="[
+      shareSuccess ? '!text-green-400' : '',
+      shareLink ? 'hover:sm:text-$vp-c-brand' : '!cursor-wait',
+    ]"
     @click="copyShareLink()"
-    :disabled="shareSuccess"
+    :disabled="!shareLink || shareSuccess"
   >
   <Transition
     mode="out-in"
@@ -100,4 +122,5 @@ async function copyShareLink() {
     </span>
   </Transition>
   </button>
+  <div block md:hidden class="bg-$vp-c-divider-light" mx2 w-1px h-24px />
 </template>
