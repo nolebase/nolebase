@@ -22,6 +22,7 @@
     "@types/node-fetch": "^2.6.2",
     "@types/sharp": "^0.31.0",
     "@unocss/reset": "^0.45.21",
+    "@vueuse/core": "^9.6.0",
     "emoji-regex": "^10.2.1",
     "fast-glob": "^3.2.12",
     "fs-extra": "^10.1.0",

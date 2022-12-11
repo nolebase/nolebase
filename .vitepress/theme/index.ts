@@ -6,6 +6,7 @@ import 'uno.css'
 
 import HomePage from './components/HomePage.vue'
 import DocFooter from './components/DocFooter.vue'
+import Share from './components/Share.vue'
 
 export default {
   ...Theme,
@@ -13,6 +14,7 @@ export default {
     return h(Theme.Layout, null, {
       'home-features-after': () => h(HomePage),
       'doc-footer-before': () => h(DocFooter),
+      'nav-bar-content-after': () => h(Share),
     })
   }
 }
