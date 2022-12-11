@@ -1,4 +1,3 @@
-import fs from 'fs'
 import type { Plugin } from 'vite'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
