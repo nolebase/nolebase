@@ -4,27 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7dfc8bb6a8a799fa",
+        "id": "5cf9baf9b9c01b11",
         "type": "tabs",
         "children": [
           {
-            "id": "3bc553d27127b181",
+            "id": "31d237dc7b1392b6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "33893f800c8b23aa",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +140,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md"
+              }
             }
           }
         ],
@@ -154,17 +153,17 @@
     "width": 386,
     "collapsed": true
   },
-  "active": "33893f800c8b23aa",
+  "active": "31d237dc7b1392b6",
   "lastOpenFiles": [
+    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-03.png",
+    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-02.png",
+    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
+    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-01.png",
+    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-homekit-screenshot-01.png",
+    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-homekit-screenshot-02.png",
+    "🔌 知识库插件列表.md",
     "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitHub Actions/仓库内的 GitHub Actions 工作流使用 GitHub Actions Bot 来提交.md",
     "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitHub Actions/assets/github-actions-use-bot-user-account-as-commiter-screenshot-02.png",
-    "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitHub Actions/assets/github-actions-use-bot-user-account-as-commiter-screenshot-01.png",
-    "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitLab/配置 GitLab CI CD 自动部署.md",
-    "笔记/☁️ 后端开发/🕸 网络/L3 透明代理导致的非常用端口出现各种异常错误问题.md",
-    "笔记/☁️ 后端开发/🕸 网络/assets/l3-transparent-proxy-issues-screenshot-01.png",
-    "笔记/☁️ 后端开发/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
-    "笔记/🧰 运维/🚢 Kubernetes/通过 Helm 部署 Mastodon 到 Kubernetes 集群.md",
-    "Pasted image 20221127210536.png",
-    "Pasted image 20221127210333.png"
+    "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitHub Actions/assets/github-actions-use-bot-user-account-as-commiter-screenshot-01.png"
   ]
 }

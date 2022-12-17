@@ -13,6 +13,7 @@ export default defineConfig(async () => {
   ])
 
   return {
+    assetsInclude: ['**/*.mov'],
     ssr: {
       format: 'cjs',
     },
