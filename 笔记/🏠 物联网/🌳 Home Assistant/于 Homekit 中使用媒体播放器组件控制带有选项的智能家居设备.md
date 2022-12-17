@@ -380,8 +380,7 @@ media_player:
 
 到这里就大功告成啦！
 
-
-## 最终效果
+### 最终效果
 
 <div flex flex-col justify-center text-center>
   <video controls>
@@ -397,7 +396,9 @@ media_player:
   <p>在 Homekit 中操作</p>
 </div>
 
+## 总结
 
+这里只是用能接入米家的电热毯作为例子讲解了如何使用电视配件来控制电热毯，但我想这个方法应该可以用于任何能接入 Home Assistant 的设备。祝大家玩的开心！
 
 ## 参考资料
 
