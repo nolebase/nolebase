@@ -383,14 +383,14 @@ media_player:
 ### 最终效果
 
 <div flex flex-col justify-center text-center>
-  <video controls>
+  <video controls muted>
     <source src="./assets/homekit-use-media-player-as-a-controller-record-01.mov" type="video/mp4">
   </video>
   <p>在 Home Assistant 中操作</p>
 </div>
 
 <div flex flex-col justify-center text-center>
-  <video controls>
+  <video controls muted>
     <source src="./assets/homekit-use-media-player-as-a-controller-record-02.mov" type="video/mp4">
   </video>
   <p>在 Homekit 中操作</p>
