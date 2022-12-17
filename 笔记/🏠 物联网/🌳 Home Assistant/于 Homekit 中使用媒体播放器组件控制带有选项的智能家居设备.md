@@ -21,9 +21,9 @@ input_select:
   electric_blanket_heat_level:
     name: '电热毯温度档位'
     options:
-      - '一档'
-      - '二档'
-      - '三档'
+      - '1 档'
+      - '2 档'
+      - '3 档'
     icon: 'mdi:application'
 
 media_player:
@@ -53,9 +53,9 @@ media_player:
         data:
           option: >
             {% set source_map = {
-                '一档': 'Gear 1',
-                '二档': 'Gear 2',
-                '三档': 'Gear 3'
+                '1 档': 'Gear 1',
+                '2 档': 'Gear 2',
+                '3 档': 'Gear 3'
             } %}
             {{ source_map[source] if source in source_map else 'Gear 1' }}
         target:
