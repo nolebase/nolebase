@@ -14,5 +14,6 @@ components.d.ts
 dist
 node_modules
 **/.vitepress/metainfo.json
+**/.vitepress/cache/
 
 .netlify/functions-serve/*
