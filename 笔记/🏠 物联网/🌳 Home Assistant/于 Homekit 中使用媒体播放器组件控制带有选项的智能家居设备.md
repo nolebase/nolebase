@@ -89,7 +89,7 @@ media_player:
   </div>
 </div>
 
-在上面的两个图中，电视可以通过「输入源选择器」来选择输入源，而空调可以通过「空调模式选择器」来选择空调运行的模式。一目了然的是空调组件会多出一个超大的「目标温度」和「温度选择滑块」，这对于电热毯而言显得有些多余，毕竟电热毯是不会有 **目标温度** 这个概念的，而且电热毯的温度是通过档位来调节的，而不是通过温度来调节的，所以我们需要将电热毯的温度档位作为一个 **输入源选择器** 来进行模拟。
+在上面的两个图中，电视可以通过「信号源选择器」来选择信号源，而空调可以通过「空调模式选择器」来选择空调运行的模式。一目了然的是空调组件会多出一个超大的「目标温度」和「温度选择滑块」，这对于电热毯而言显得有些多余，毕竟电热毯是不会有 **目标温度** 这个概念的，而且电热毯的温度是通过档位来调节的，而不是通过温度来调节的，因此我们得出结论：我们需要将电热毯作为一个带有 **信号源选择器** 的电视来进行模拟。
 
 ### 在 Home Assistant 中编辑配置文件
 
@@ -124,7 +124,7 @@ media_player: // [!code ++]
 
 #### 编辑 `input_select` 配置
 
-接下来我们需要在 `input_select` 中添加一个 `electric_blanket_heat_level` 的输入源选择器，用来模拟电热毯的温度档位：
+接下来我们需要在 `input_select` 中添加一个 `electric_blanket_heat_level` 的输入选择器，用来存储电热毯可选的温度档位：
 
 ```yaml
 input_select:
@@ -150,7 +150,7 @@ input_select:
     icon: 'mdi:application'
 ```
 
-`electric_blanket_heat_level` 是我们自定义的输入源选择器的实体 ID（在 Home Assistant 中为 `entity_id`），这个字段值可以随意定义，但是需要保证在整个 Home Assistant 中的 `input_select` 下是唯一的。稍后我们可以通过 `input_select.electric_blanket_heat_level` 来引用这个输入源选择器。
+`electric_blanket_heat_level` 是我们自定义的输入选择器的实体 ID（在 Home Assistant 中为 `entity_id`），这个字段值可以随意定义，但是需要保证在整个 Home Assistant 中的 `input_select` 下是唯一的。稍后我们可以通过 `input_select.electric_blanket_heat_level` 来引用这个输入选择器。
 
 ```yaml
 input_select:
@@ -163,16 +163,16 @@ input_select:
     icon: 'mdi:application' // [!code focus]
 ```
 
-`name` 是输入源选择器的名称，`options` 是输入源选择器的选项，`icon` 是输入源选择器的图标。
+`name` 是输入选择器的名称，`options` 是输入选择器的选项，`icon` 是输入选择器的图标。
 
 现在我们将配置文件保存，在右手边侧边栏中选择「开发者工具」-> 点选「YAML 配置」Tab -> 在下方「配置检查与重启」一栏中点击「检查配置」，如果 Home Assistant 提示「配置不会阻止 Home Assistant 启动！」，则说明配置文件没有问题，可以点击「重启启动」按钮重启 Home Assistant。
 
-等待重启后我们就能通过右手边侧边栏中选择「开发者工具」-> 点选「状态」Tab -> 在下方「实体」 -> 「输入筛选实体」一栏中输入 `input_select.electric_blanket_heat_level` 来查看我们刚刚添加的输入源选择器。应当能看到如下图一样的界面：
+等待重启后我们就能通过右手边侧边栏中选择「开发者工具」-> 点选「状态」Tab -> 在下方「实体」 -> 「输入筛选实体」一栏中输入 `input_select.electric_blanket_heat_level` 来查看我们刚刚添加的输入选择器。应当能看到如下图一样的界面：
 
 <div flex flex-col justify-center text-center>
   <div>
     <img src="./assets/homekit-use-media-player-as-a-controller-hass-screenshot-01.png" />
-    <p>输入源选择器实体状态</p>
+    <p>输入选择器实体状态</p>
   </div>
 </div>
 
@@ -180,7 +180,7 @@ input_select:
 
 ##### 配置基础信息
 
-接下来我们需要在 `media_player` 中添加一个 `platform` 为 `universal` 的媒体播放器，用来模拟电热毯：
+接下来我们需要在 `media_player` 中添加一个 `platform` 为 `universal` 的媒体播放器，用来控制电热毯：
 
 ```yaml
 media_player:
@@ -215,11 +215,11 @@ media_player:
       source_list: input_select.electric_blanket_heat_level|options // [!code ++]
 ```
 
-我们添加了 `attributes` 和其附属的属性字段。这里的 `attributes` 是一个字典，其键值对应的是 Homekit 中的「电视型电热毯」的「状态」、「输入源」和「输入源列表」。
+我们添加了 `attributes` 和其附属的属性字段。这里的 `attributes` 是一个字典。
 
 1. `state` 对应的是开关状态，当我们在媒体播放器中选择开关打开的时候，`state` 的值就会变成 `on`，反之，`state` 的值就会变成 `off`。
-2. `source` 对应的是当前选中的输入源，当我们在媒体播放器中选择信号源 1 的时候，`source` 的值就会变成 `1`。
-3. `source_list` 对应的是输入源列表，是一个数组
+2. `source` 对应的是当前选中的信号源，当我们在媒体播放器中选择信号源 1 的时候，`source` 的值就会变成 `1`。
+3. `source_list` 对应的是信号源列表，是一个数组
 
 ```yaml
 media_player:
@@ -276,7 +276,7 @@ media_player:
           entity_id: select.hddz_zndrt_d3d8_heat_level  // [!code ++]
 ```
 
-现在 `commands` 下新增了 `turn_on`、`turn_off` 和 `select_source` 三个命令，分别对应了开关电热毯的开和关的操作以及选择输入源的操作。
+现在 `commands` 下新增了 `turn_on`、`turn_off` 和 `select_source` 三个命令，分别对应了开关电热毯的开和关的操作以及选择信号源的操作。
 
 ::: tip 小贴士
 
@@ -326,7 +326,7 @@ media_player:
           entity_id: select.hddz_zndrt_d3d8_heat_level // [!code focus]
 ```
 
-最后一个属性！`select_source` 将会在我们选择该媒体播放器的信号源（输入源）时被调用，在这份例子中，我们为电热毯选择档位时，`select_source` 就会被调用。此处由于我们需要操作的目标对象（即最下方的 `target.entity_id` 指向的电热毯温度档位实体 `select.hddz_zndrt_d3d8_heat_level` 是一个 `select` 实体，所以我们需要调用 `select.*` 相关的服务），所以 `service` 为 `select.select_option`。
+最后一个属性！`select_source` 将会在我们选择该媒体播放器的信号源（信号源）时被调用，在这份例子中，我们为电热毯选择档位时，`select_source` 就会被调用。此处由于我们需要操作的目标对象（即最下方的 `target.entity_id` 指向的电热毯温度档位实体 `select.hddz_zndrt_d3d8_heat_level` 是一个 `select` 实体，所以我们需要调用 `select.*` 相关的服务），所以 `service` 为 `select.select_option`。
 
 ```yaml
       select_source:
@@ -394,7 +394,7 @@ media_player:
 
 ## 参考资料
 
-[如何为通用媒体播放器的输入源创建别名 - 媒体播放器输入源概述 - Home Assistant Community](https://community.home-assistant.io/t/media-player-universal-source-in-overview/135331/3)
+[如何为通用媒体播放器的信号源创建别名 - 媒体播放器信号源概述 - Home Assistant Community](https://community.home-assistant.io/t/media-player-universal-source-in-overview/135331/3)
 
 ## 延伸阅读
 
