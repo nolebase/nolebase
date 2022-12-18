@@ -16,7 +16,7 @@
 
 ::: details 展开以查看 config/configuration.yaml 是如何配置的
 
-```yaml [config/configuration.yaml]
+```yaml
 input_select:
   electric_blanket_heat_level:
     name: '电热毯温度档位'
@@ -97,9 +97,7 @@ Home Assistant 的配置文件分类和整理是另一个更大的话题，本�
 
 通常而言，默认的配置文件将会是类似下面的样子：
 
-::: code-group
-
-```yaml [config/configuration.yaml]
+```yaml
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -109,13 +107,9 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 ```
 
-:::
-
 为了能够存储和控制我们的电热毯，我们需要在 `config/configuration.yaml` 文件中添加两个根属性： `input_select`（对应 [Input Select](https://www.home-assistant.io/integrations/input_select/) 集成） 和 `media_player`（对应 [Media Player](https://www.home-assistant.io/integrations/media_player/) 集成和 [Universal Media Player](https://www.home-assistant.io/integrations/universal/) 集成）：
 
-::: code-group
-
-```yaml [config/configuration.yaml]
+```yaml
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -127,8 +121,6 @@ scene: !include scenes.yaml
 input_select: // [!code ++]
 media_player: // [!code ++]
 ```
-
-:::
 
 #### 编辑 `input_select` 配置
 
