@@ -29,6 +29,9 @@ export function MarkdownTransform(): Plugin {
 
 
 export async function getFunctionMarkdown() {
+  // return {
+  //   footer: '',
+  // }
   const contributorsSection = `
 ## 贡献者
 

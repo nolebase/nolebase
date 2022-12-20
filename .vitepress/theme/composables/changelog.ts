@@ -1,8 +1,11 @@
 import { CommitInfo } from "../../../scripts/types/changelog"
 import { computed } from 'vue'
+import { useMounted } from '@vueuse/core'
 
 export function useCommits(allCommits: CommitInfo[], path: string) {
-  return computed(() => {
+  const isMounted = useMounted()
+  return computed<CommitInfo[]>(() => {
+    if (!isMounted.value) return []
     const commits = allCommits.filter(c => {
       return c.version || c.path?.find(i => {
         const res = path === i[1] || path === i[2]

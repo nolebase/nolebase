@@ -4,7 +4,7 @@ import changelog from '/virtual-changelog'
 import { computed } from 'vue'
 import { ContributorInfo, CommitInfo } from '../../../scripts/types'
 import { useRawPath } from '../composables/route'
-import { useCommits } from '../composables/changelog';
+import { useCommits } from '../composables/changelog'
 
 const rawPath = useRawPath()
 
