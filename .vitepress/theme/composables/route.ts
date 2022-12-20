@@ -5,7 +5,7 @@ import { computed } from 'vue'
 export function useRawPath() {
   const route = useRoute()
   const isMounted = useMounted()
-  return computed(() => (isMounted
+  return computed(() => (isMounted.value
     ? decodeURIComponent(route.path).replace(/^\/(.+)\.html$/, '$1.md').toLowerCase()
     : ''
   ))
