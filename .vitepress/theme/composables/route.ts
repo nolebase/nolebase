@@ -1,8 +1,7 @@
+import { useRoute } from 'vitepress'
+import { computed } from 'vue'
 
 export function useRawPath() {
-  return (() => {
-    if (typeof window === 'undefined')
-      return ''
-    return decodeURIComponent(window.location.pathname).replace(/^\/(.+)\.html$/, '$1.md').toLowerCase()
-  })()
+  const route = useRoute()
+  return computed(() => decodeURIComponent(route.path).replace(/^\/(.+)\.html$/, '$1.md').toLowerCase())
 }
