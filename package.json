@@ -21,7 +21,7 @@
     "@types/md5": "^2.3.2",
     "@types/node-fetch": "^2.6.2",
     "@types/sharp": "^0.31.0",
-    "@unocss/reset": "^0.45.21",
+    "@unocss/reset": "0.46.5",
     "@vueuse/core": "^9.6.0",
     "emoji-regex": "^10.2.1",
     "fast-glob": "^3.2.12",
@@ -36,10 +36,10 @@
     "simple-git": "^3.14.0",
     "tsx": "^3.9.0",
     "typescript": "^4.8.3",
-    "unocss": "^0.45.21",
-    "unplugin-vue-components": "^0.22.7",
-    "vite": "^3.1.0",
+    "unocss": "0.46.5",
+    "unplugin-vue-components": "^0.23.0",
+    "vite": "^4.0.4",
     "vitepress": "1.0.0-alpha.43",
-    "vue": "^3.2.39"
+    "vue": "^3.2.45"
   }
 }
