@@ -14,12 +14,6 @@ export default defineConfig(async () => {
 
   return {
     assetsInclude: ['**/*.mov'],
-    ssr: {
-      format: 'cjs',
-    },
-    legacy: {
-      buildSsrCjsExternalHeuristics: true,
-    },
     optimizeDeps: {
       // vitepress is aliased with replacement `join(DIST_CLIENT_PATH, '/index')`
       // This needs to be excluded from optimization
