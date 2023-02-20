@@ -1,3 +1,5 @@
+import { ContributorInfo } from "./changelog"
+
 export interface ArticleTree {
   index: string
   text: string
@@ -7,4 +9,5 @@ export interface ArticleTree {
   collapsed?: true
   items?: ArticleTree[]
   category?: string
+  contributors?: ContributorInfo[]
 }
