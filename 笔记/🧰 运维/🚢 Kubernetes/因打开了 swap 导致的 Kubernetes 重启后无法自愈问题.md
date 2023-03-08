@@ -4,7 +4,6 @@
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
-| KubeSphere | v3.3.1 | [https://kubesphere.io/zh/docs/v3.3.1/](https://kubesphere.io/zh/docs/v3.3/) |
 | Kubernetes | v1.22.1 | [https://v1-22.docs.kubernetes.io/](https://v1-22.docs.kubernetes.io/) |
 
 ## 说明
@@ -13,7 +12,11 @@
 
 ## 排查
 
-通过 `systemctl status docker` 和 `journalctl -xef -u docker` 查看 docker 的状态和日志也没有发现问题。查阅资料的时候发现有人推荐用 `journalctl` 看一下 `kubectl` 的日志和报错问题：
+通过 `systemctl status docker` 和 `journalctl -xef -u docker` 查看 docker 的状态和日志也没有发现问题。
+
+使用 `kubectl get nodes` 时能看到节点的状态是 `NotReady`，如果使用 `kubectl describe node <节点名称>` 的话还能在 `MemoryPressure` 和其他状态栏中看到 `NodeStatusUnknown` 和 `kubelet stopped posting node status` 的报错。
+
+查阅资料的时候发现有人推荐用 `journalctl` 看一下 `kubectl` 的日志和报错问题：
 
 ```shell
 sudo journalctl -u kubelet -f
@@ -61,23 +64,142 @@ sudo journalctl -u kubelet -f
 
 所以如果你在 **内存不够用**、**内存勉强够用** 的情况下，请勿关闭 swap，这可能导致出现 out of memory（内存耗尽）的错误从而导致更难从灾难中恢复服务甚至是恢复系统。反之，如果你在 **内存充裕** 的情况下，是可以考虑关闭 swap 的，但依然需要注意的是，如果内存用量吃紧而此时此刻又没有配置 swap 的话会发生什么呢？系统内核的 OOM Killer 会被触发，并将耗内存的进程优先终止掉，此时可能是终止的部分的容器内进程，也许会影响到服务的运作，如果还有部分的 k8s 或者是 systemd 守护进程存活，那可能其会再次将原先被杀掉的进程拉活，这个过程会有一个等待时间；如果配置了 swap，那内存压力会扩散到 swap 区域的压力上，并使服务器苟延残喘一会儿，通常会发生服务降级，这个时候也会需要运维人员尽快扩容并排查内存消耗的问题。
 
+#### 如果没有 swap 分区
+
+::: warning 注意
+下面步骤中使用的 `swapoff -a` 的命令并不是完全有效的，在系统中有配置 `systemd` ，且系统盘中有 swap 分区的情况下（通过执行 `sudo fdisk -l` 或者在 `/etc/fstab` 中可以查询），`systemd` 在启动后扫描到 swap 分区时就会自动挂载 swap 分区，并且将一个名为 `dev-<dev 名称>.swap` 的 `systemd` 单元加载并激活，这会导致 swap 重新被开启，这导致 `swapoff -a` 命令的结果只会在本次已经启动的系统中生效，这个时候如果需要永久性关闭 swap，我们需要执行额外的操作。
+:::
+
 要了解当前的 swap 使用情况，我们可以：
 
 ```shell
 sudo swapon -s
 ```
 
-在了解完上述情况之后如果仍需要关闭 swap，我们可以：
+在了解完上述情况之后如果仍需要临时关闭 swap，我们可以：
 
 ```shell
 sudo swapoff -a
 ```
 
-如果需要重新开回来，我们可以：
+如果需要撤销上一步操作，我们可以：
 
 ```shell
 sudo swapon -a
 ```
+
+这个时候我们执行下面的命令重启 `kubelet`
+
+```shell
+sudo systemctl restart kubelet
+```
+
+然后我们在集群内其他节点中可以执行下面的命令查看节点状态
+
+```shell
+sudo kubectl get nodes
+```
+
+这个时候就能看到目标节点的状态变更为 `Ready` 了。
+
+#### 如果有 swap 分区
+
+在现代的绝大多数 Linux 系统中，系统安装时的自动分区可能已经帮你分区好了 swap 分区，这个时候我们需要做一些额外的操作。
+
+首先我们需要检查我们是否有 swap 分区和 swap 分区是否被 `systemd` 控制，可以通过执行以下命令了解到：
+
+通过 `fdisk` 查询硬盘的分区：
+
+```shell
+$ sudo fdisk -l
+
+
+Disk /dev/sda: 40 GiB, 42949672960 bytes, 83886080 sectors
+Disk model: Virtual Disk
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 438E101B-2565-4003-948F-454B7A695D32
+
+Device        Start      End  Sectors  Size Type
+/dev/sda1      2048  1050623  1048576  512M EFI System
+/dev/sda2   1050624 81885183 80834560 38.5G Linux filesystem
+/dev/sda3  81885184 83884031  1998848  976M Linux swap
+```
+
+可以看到 `/dev/sda3` 在设备上有一个 Linux swap 分区。
+
+查看 `/etc/fstab`：
+
+```txt
+$ sudo cat /etc/fstab | grep swap
+# swap was on /dev/sda3 during installation
+UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0
+```
+
+为了方便了解 UUID 对应的设备是哪个，我们可以用 `ls -la` 命令查看 `/dev/disk/by-uuid` 目录下的映射，可以发现 `ec583562-8777-45cb-9512-e19b7ae96ee3` 是 `/dev/sda3` 的软链接，与 `fdisk -l` 获得的信息一致：
+
+```shell
+$ sudo ls -la /dev/disk/by-uuid
+总用量 0
+drwxr-xr-x 2 root root 100  3月  8 01:11 .
+drwxr-xr-x 6 root root 120  3月  8 01:11 ..
+lrwxrwxrwx 1 root root  10  3月  8 01:11 325D-4C1F -> ../../sda1
+lrwxrwxrwx 1 root root  10  3月  8 01:11 c10110c9-c86b-4020-ad6c-78e46ec3e642 -> ../../sda2
+lrwxrwxrwx 1 root root  10  3月  8 01:11 ec583562-8777-45cb-9512-e19b7ae96ee3 -> ../../sda3
+```
+
+通过 `systemctl --all --type swap` 筛选出所有类型为 `swap` 的 `systemd` 单元：
+
+```shell
+$ sudo systemctl --all --type swap
+  UNIT          LOAD   ACTIVE   SUB  DESCRIPTION
+● dev-sda3.swap loaded active mounted dev-sda3.swap
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+To show all installed unit files use 'systemctl list-unit-files'.
+```
+
+我们发现命令返回了一个名为 `dev-sda3.swap` 的 `systemd` 单元，名称与我们之前通过 `fdisk` 和查询 `/etc/fstab` 获得的一致。
+接下来我们就需要一步一步操作，将 swap 完全禁用。
+
+先执行一下 `swapoff -a` 使本次启动的系统停止 swap：
+
+```shell
+sudo swapoff -a
+```
+
+接下来，需要编辑 `/etc/fstab` 将系统启动后自动挂载 swap 分区的指令注释起来或者整行删除掉，如果指令过多，你也可以在 `/etc/fstab` 查找 swap 相关的关键字并且把指令删除。
+最终达到类似下面这样的结果：
+
+```txt
+# swap was on /dev/sda3 during installation
+# UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0
+```
+
+接下来，我们将上面通过 `systemctl --all --type swap` 获得的单元 mask 掉：
+
+```shell
+sudo systemctl mask dev-sd3.swap
+```
+
+最后我们执行下面的命令重启 `kubelet`
+
+```shell
+sudo systemctl restart kubelet
+```
+
+然后我们在集群内其他节点中可以执行下面的命令查看节点状态
+
+```shell
+sudo kubectl get nodes
+```
+
+这个时候就能看到目标节点的状态变更为 `Ready` 了。
 
 ### 配置 k8s 相关组件以支持不报错
 
@@ -141,3 +263,9 @@ ExecStart=/usr/local/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $
 #### 额外说明
 
 我们也可以在创建 k8s 控制平面的时候所执行的 `kubeadm init` 命令后添加 `--ignore-preflight-errors=Swap` 参数来为集群中每一个 kubelet 进行配置。
+
+## 参考资料
+
+[How can I turn off swap permanently? - Ask Ubuntu](https://askubuntu.com/questions/440326/how-can-i-turn-off-swap-permanently/1292453#1292453)
+
+[How can I turn off swap permanently? - Ask Ubuntu](https://askubuntu.com/questions/440326/how-can-i-turn-off-swap-permanently/984777#984777)
