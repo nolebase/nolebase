@@ -71,6 +71,14 @@ async function buildOG() {
       const ogName = `${dirname(file)}/og-${article.index}.png`
       await generateSVG(article, ogName)
       html = html.replace(/nolebase\.ayaka\.io\/og\.png/g, `nolebase.ayaka.io/${relative(dist,ogName)}`.toLocaleLowerCase())
+      html = html.replace(
+        /<meta property="og:title" content="([^"]+)">/g,
+        `<meta property="og:title" content="${article.text}">`,
+      )
+      html = html.replace(
+        /<meta property="og:description" content="([^"]+)">/g,
+        `<meta property="og:description" content="${article.category} - Nólëbase - 记录回忆，知识和畅想的地方">`,
+      )
     }
 
     await fs.writeFile(file, html, 'utf-8')
