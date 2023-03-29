@@ -14,6 +14,12 @@
 
 [LlamaIndex documentation](https://gpt-index.readthedocs.io/en/latest/index.html)
 
+[LangChain：Model as a Service粘合剂，被ChatGPT插件干掉了吗？](https://mp.weixin.qq.com/s/3coFhAdzr40tozn8f9Dc-w)
+
+[GPT-4 ，人类迈向AGI的第一步（上半）](https://orangeblog.notion.site/GPT-4-AGI-8fc50010291d47efb92cbbd668c8c893)
+
+[拆解追溯 GPT-3.5 各项能力的起源](https://yaofu.notion.site/GPT-3-5-360081d91ec245f29029d37b54573756#5a1bff82a11042a58871ed9dfa6e98c5)
+
 ## 参考项目
 
 [hwchase17/notion-qa](https://github.com/hwchase17/notion-qa)
