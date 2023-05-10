@@ -1,6 +1,6 @@
 # WireGuard VPN 多用户管理
 
-此教程默认已安装和配置过 WireGuard 服务端，如果没有，可以前往 [WireGuard 安装](WireGuard%20%E5%AE%89%E8%A3%85.md) 进行安装和 [WireGuard 配置](WireGuard%20%E9%85%8D%E7%BD%AE.md) 进行配置。
+此教程默认已安装和配置过 WireGuard 服务端，如果没有，可以前往 [WireGuard 安装](WireGuard%20%E5%AE%89%E8%A3%85.md) 进行安装和 [WireGuard 配置](WireGuard%20%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE.md) 进行配置。
 
 ## 概述
 

@@ -77,7 +77,7 @@
 	- `service` 表示一个服务，我们定义该服务为 `shell_command`
 
 - `shell_command` 定义了一个脚本命令服务类型
-	- `turn_off_rizumu_desktop` 表示服务的字段名，必须和上面的 service 里面填写的值一致，此处里面的值为一个脚本命令，该脚本命令使用 `curl` （参见 [curl HTTP 客户端](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/curl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）并使用 HTTP GET 请求访问了我们在 Windows 配置中配置的 Airytec Switch Off 的网页地址，填写地址的时候需要把之前复制的链接中的 `localhost` 替换为计算机的实际内网 IP，比如 192.168.0.2 或是 10.0.0.2 等。
+	- `turn_off_rizumu_desktop` 表示服务的字段名，必须和上面的 service 里面填写的值一致，此处里面的值为一个脚本命令，该脚本命令使用 `curl` （参见 [curl HTTP 客户端](../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF%2F%E8%BD%AF%E4%BB%B6%2Fcurl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）并使用 HTTP GET 请求访问了我们在 Windows 配置中配置的 Airytec Switch Off 的网页地址，填写地址的时候需要把之前复制的链接中的 `localhost` 替换为计算机的实际内网 IP，比如 192.168.0.2 或是 10.0.0.2 等。
 
 ```yaml
 switch:
