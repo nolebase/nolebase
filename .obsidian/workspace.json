@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "34b28b43e0c40cb7",
+        "id": "8bc9cfc656efb4df",
         "type": "tabs",
         "children": [
           {
-            "id": "d55201a26d945ad6",
+            "id": "35829bee9a04f628",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/📁 资源/字幕资源.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -97,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/📁 资源/字幕资源.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/📁 资源/字幕资源.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +140,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/📁 资源/字幕资源.md"
+              }
             }
           }
         ],
@@ -155,8 +163,11 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "d55201a26d945ad6",
+  "active": "35829bee9a04f628",
   "lastOpenFiles": [
+    "笔记/📁 资源/字幕资源.md",
+    "笔记/📁 资源/番剧资源.md",
+    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/时间类型的互相转换.md",
     "__unconfig_vite.config.ts",
     "笔记/🤖 AI 神经网络/GPT/将 chatGPT 与文档结合.md",
     "yGXaAWbzl5A.json",

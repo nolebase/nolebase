@@ -1,4 +1,4 @@
-# WireGuard 配置服务器
+# WireGuard 服务端配置
 
 ## 配置
 
@@ -68,6 +68,7 @@ Address = 10.0.0.1/24
 SaveConfig = true
 ListenPort = 51820
 PrivateKey = SERVER_PRIVATE_KEY
+# 如果没有启用 firewalld 防火墙服务，可以省略下面两行
 PostUp     = firewall-cmd --zone=public --add-port 51820/udp && firewall-cmd --zone=public --add-masquerade
 PostDown   = firewall-cmd --zone=public --remove-port 51820/udp && firewall-cmd --zone=public --remove-masquerade
 ```
@@ -124,7 +125,7 @@ interface: wg0
 ip a show wg0
 
 4: wg0: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1420 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/none 
+    link/none
     inet 10.0.0.1/24 scope global wg0
        valid_lft forever preferred_lft forever
 ```

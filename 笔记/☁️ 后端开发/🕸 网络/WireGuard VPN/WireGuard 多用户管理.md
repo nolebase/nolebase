@@ -4,15 +4,15 @@
 
 ## 概述
 
-其实 WireGuard 的多用户配置特别简单，只需要生成一对客户端密匙（公匙+私匙），在服务端配置文件中新增一段 **`[Peer]`** 写上**新的客户端公匙 `PublicKey` 和客户端的内网 IP 地址**  `Endpoint` 即可。
+其实 WireGuard 的多用户配置特别简单，只需要生成一对客户端密匙（公钥+私钥），在服务端配置文件中新增一段 **`[Peer]`** 写上**新的客户端公钥 `PublicKey` 和客户端的内网 IP 地址**  `Endpoint` 即可。
 当然我们可以用命令快捷添加，或者手动修改服务端配置文件也行。
-而各客户端账号配置文件的区别也只是 **`[Interface]`** 中的**客户端私匙和客户端内网 IP 地址**不同罢了。
+而各客户端账号配置文件的区别也只是 **`[Interface]`** 中的**客户端私钥和客户端内网 IP 地址**不同罢了。
 
 **另外我们需要明白一个对等原则：**
 
-- 服务端配置文件中的 **`[Interface]`** 是保存自己的服务端私匙，而客户端配置文件中的 **`[Interface]`** 同样保存自己的客户端私匙。
-- 服务端配置文件中的 **`[Peer]`** 是保存客户端的公匙，而客户端配置文件中的 **`[Peer]`** 是保存服务端的公匙。
-- 即，服务端与客户端都是互相保存自己的私匙在 **`[Interface]`** 中，互相保存对方公匙在 **`[Peer]`** 中。
+- 服务端配置文件中的 **`[Interface]`** 是保存自己的服务端私钥，而客户端配置文件中的 **`[Interface]`** 同样保存自己的客户端私钥。
+- 服务端配置文件中的 **`[Peer]`** 是保存客户端的公钥，而客户端配置文件中的 **`[Peer]`** 是保存服务端的公钥。
+- 即，服务端与客户端都是互相保存自己的私钥在 **`[Interface]`** 中，互相保存对方公钥在 **`[Peer]`** 中。
 
 ## 服务端配置文件添加用户
 
@@ -21,7 +21,7 @@
 
 ### 重新生成一对客户端密匙
 
-privatekey1 为客户端私匙，publickey1 为客户端公匙
+privatekey1 为客户端私钥，publickey1 为客户端公钥
 
 ```shell
 wg genkey | sudo tee cprivatekey1 | wg pubkey > sudo cpublickey1
@@ -31,8 +31,8 @@ wg genkey | sudo tee cprivatekey1 | wg pubkey > sudo cpublickey1
 
 命令说明
 
-1. `$(cat cpublickey1)` 使用 [cat 输出文件](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取客户端公匙
-2. `10.0.0.3/32` 这个是客户端内网IP地址，按序递增最后一位（.3）)，不要重复
+1. `$(cat cpublickey1)` 使用 [cat 输出文件](../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md) 命令获取客户端公钥
+2. `10.0.0.3/32` 这个是客户端内网IP地址，按序递增最后一位（.3），不要重复
 
 ```shell
 sudo wg set wg0 peer $(cat cpublickey1) allowed-ips 10.0.0.3/32
@@ -43,14 +43,14 @@ sudo wg set wg0 peer $(cat cpublickey1) allowed-ips 10.0.0.3/32
 ```shell
 $ sudo wg
 interface: wg0
-  public key: xxxxxxxxxxxxxxxxx #服务端私匙
+  public key: xxxxxxxxxxxxxxxxx #服务端公钥
   private key: (hidden)
   listening port: 443
- 
-peer: xxxxxxxxxxxxxxxxxxxx #旧客户端账号的公匙
+
+peer: xxxxxxxxxxxxxxxxxxxx #旧客户端账号的公钥
   allowed ips: 10.0.0.2/32 #旧客户端账号的内网IP地址
- 
-peer: xxxxxxxxxxxxxxxxxxxx #新客户端账号的公匙
+
+peer: xxxxxxxxxxxxxxxxxxxx #新客户端账号的公钥
   allowed ips: 10.0.0.3/32 #新客户端账号的内网IP地址
 ```
 
@@ -64,13 +64,13 @@ sudo wg-quick save wg0
 
 ## 生成对应客户端配置文件
 
-新客户端配置文件，和其他客户端账号的配置文件只有 `[Interface]` 中的客户端私匙、内网IP地址参数不一样。
+新客户端配置文件，和其他客户端账号的配置文件只有 `[Interface]` 中的客户端私钥、内网IP地址参数不一样。
 
 下面是配置文件的填写说明：
 
 ```ini
 [Interface]
-# 客户端的私匙，对应服务器配置中的客户端公匙（自动读取上面刚刚生成的密匙内容）
+# 客户端的私钥，对应服务器配置中的客户端公钥（自动读取上面刚刚生成的密匙内容）
 PrivateKey = <上面创建的 privatekey1>
 # 客户端监听端口，一般为 51820
 ListenPort = 51820
@@ -82,7 +82,7 @@ DNS = 8.8.8.8
 MTU = 1420
 
 [Peer]
-# 服务器的公匙，对应服务器的私匙（自动读取上面刚刚生成的密匙内容）
+# 服务器的公钥，对应服务器的私钥（自动读取上面刚刚生成的密匙内容）
 PublicKey = <找管理员要>
 # 服务器地址和端口，下面的 X.X.X.X 记得更换为你的服务器公网IP，端口请填写服务端配置时的监听端口
 Endpoint = X.X.X.X:443
@@ -92,7 +92,9 @@ Endpoint = X.X.X.X:443
 # 2. 设置为特定的 IP 段，可以转发特定 IP 的流量，适用于内网和子网
 # 比如内网的网段是 10.10.0.0，则可以填写为 10.10.0.0/24
 AllowedIPs = 10.0.0.0/24
-# 保持连接，如果客户端或服务端是 NAT 网络(比如国内大多数家庭宽带没有公网IP，都是NAT)，那么就需要添加这个参数定时链接服务端(单位：秒)，如果你的服务器和你本地都不是 NAT 网络，那么建议不使用该参数（设置为0，或客户端配置文件中删除这行）
+# 保持连接，如果客户端或服务端是 NAT 网络(比如国内大多数家庭宽带没有公网IP，都是NAT)，
+# 那么就需要添加这个参数定时链接服务端(单位：秒)，如果你的服务器和你本地都不是 NAT 网络，
+# 那么建议不使用该参数（设置为0，或客户端配置文件中删除这行）
 PersistentKeepalive = 25
 ```
 
@@ -112,10 +114,10 @@ sudo echo "<配置文件内容>" | sed '/^#/d;/^\s*$/d' > wg0.conf
 
 ## 服务端配置文件删除用户
 
-要删除呢也很简单，首先你需要知道你要删除用户的客户端公匙（例如上面刚刚生成的 `publickey1`）。
+要删除呢也很简单，首先你需要知道你要删除用户的客户端公钥（例如上面刚刚生成的 `publickey1`）。
 当然，你也可以手动打开配置文件删除，记得修改后重启。下面的动态删除无需重启。
 
-### 1. 如果客户端公匙文件还在
+### 1. 如果客户端公钥文件还在
 
 可以执行这个命令删除：
 
@@ -125,27 +127,27 @@ sudo wg set wg0 peer $(cat cpublickey1) remove
 
 **注意：该命令执行后，就可以跳过下面这段命令了，直接保存配置文件即可。**
 
-### 2. 如果客户端公匙文件已删除
+### 2. 如果客户端公钥文件已删除
 
-可以通过 `wg` 命令看到客户端的公匙：
+可以通过 `wg` 命令看到客户端的公钥：
 
 ```shell
 $ sudo wg
   interface: wg0
-    public key: xxxxxxxxxxxxxxxxx #服务端私匙
+    public key: xxxxxxxxxxxxxxxxx #服务端公钥
     private key: (hidden)
     listening port: 443
 
-  peer: xxxxxxxxxxxxxxxxxxxx #客户端账号的公匙
+  peer: xxxxxxxxxxxxxxxxxxxx #客户端账号的公钥
     allowed ips: 10.0.0.2/32 #客户端账号的内网IP地址
 
-  peer: xxxxxxxxxxxxxxxxxxxx #客户端账号的公匙
+  peer: xxxxxxxxxxxxxxxxxxxx #客户端账号的公钥
     allowed ips: 10.0.0.3/32 #客户端账号的内网IP地址
 ```
 
 以上内容仅为输出示例（仅供参考）
 
-复制你要删除的客户端账号的公匙（`peer` 后面的字符），替换下面命令中的 xxxxxxx 并执行即可
+复制你要删除的客户端账号的公钥（`peer` 后面的字符），替换下面命令中的 xxxxxxx 并执行即可
 
 ```shell
 sudo wg set wg0 peer xxxxxxx remove
