@@ -216,7 +216,7 @@ sudo systemctl cat kubelet
 
 我们可以在打印出来的行中找到这样一条：
 
-> #/etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+> `# /etc/systemd/system/kubelet.service.d/10-kubeadm.conf`
 
 这代表 kubelet systemd 是多文件组成的，我们需要直接编辑 `/etc/systemd/system/kubelet.service.d` 并添加额外参数才能解决问题：
 
