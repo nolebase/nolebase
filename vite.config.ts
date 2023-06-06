@@ -34,6 +34,7 @@ export default defineConfig(async () => {
       UnoCSS({
         shortcuts: [
           ['btn', 'px-4 py-1 rounded inline-flex justify-center gap-2 text-white leading-30px children:mya !no-underline cursor-pointer disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
+          ['select-button', 'rounded text-sm px-2 py-0.5 bg-gray-400/5 hover:bg-gray-400/10'],
         ],
         presets: [
           presetUno({

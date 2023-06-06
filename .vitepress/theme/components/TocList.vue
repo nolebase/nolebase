@@ -1,8 +1,14 @@
 <!-- 目录 -->
 <script lang="ts" setup>
 import { computed, reactive } from 'vue';
+// @ts-expect-error virtual
+import changelog from '/virtual-changelog'
 import { ArticleTree } from '../../../scripts/types/metadata';
 import { sidebar } from '../../metainfo.json'
+import { invoke } from '@vueuse/core';
+import { CommitInfo, ContributorInfo } from '../../../scripts/types';
+
+const allCommits = changelog as CommitInfo[]
 
 const list = computed(() => {
   const list: ArticleTree[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))] || []))
@@ -16,13 +22,72 @@ const list = computed(() => {
   return list.filter(item => item.link)
 })
 
+const filter = reactive({
+  contributor: '',
+})
+
+const FilteredList = computed(() => {
+  if (!filter.contributor) return list.value
+  return list.value.filter(item => {
+    return item.contributors?.some(c => c.name === filter.contributor)
+  })
+})
+
 const sortedList = computed(() => {
-  const ls = [...list.value]
+  const ls = [...FilteredList.value]
   return ls.sort((a, b) => (b.lastUpdated) || 0 - (a.lastUpdated || 0))
 })
+
+const contributors = invoke(() => {
+  const map: Record<string, ContributorInfo> = {}
+  allCommits.forEach((c) => {
+    if (!map[c.author_name]) {
+      map[c.author_name] = {
+        name: c.author_name,
+        count: 0,
+        hash: c.authorAvatar,
+      }
+    }
+    map[c.author_name].count++
+  })
+  return Object.values(map).sort((a, b) => b.count - a.count)
+})
+
+function onSelect(c: ContributorInfo) {
+  filter.contributor = c.name !== filter.contributor
+    ? c.name
+    : ''
+}
 </script>
 
 <template>
+  <div grid="~ cols-[80px_auto]" gap="y-2" mt-10>
+    <div>
+      排序方式
+    </div>
+    <div>
+      <code>最近更新</code>
+    </div>
+    <div>
+      贡献者
+    </div>
+    <div>
+      <div flex="~ wrap" gap="2">
+        <button
+          v-for="c of contributors"
+          :key="c.hash"
+          class="select-button flex gap-2 items-center py-1"
+          :class="[
+            c.name === filter.contributor ? '!text-$vp-button-brand-active-text !bg-$vp-button-brand-active-bg' : '',
+          ]"
+          @click="onSelect(c)"
+        >
+          <img :src="`https://gravatar.com/avatar/${c.hash}?d=retro`" class="w-8 h-8 rounded-full">
+          <span>{{ c.name }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
   <div v-for="item of sortedList" :key="item.link" class="space-y-3">
     <a :href="item.link">
       <h3 m="0">
@@ -46,4 +111,3 @@ const sortedList = computed(() => {
     </div>
   </div>
 </template>
-
