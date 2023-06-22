@@ -133,7 +133,7 @@ sending login info to session manager, please wait...
 login failed for display 0
 ```
 
-这个时候不用慌张，可能是我们的 HWE 内核模块尚不齐全导致的，根据 [18.04 - Remote Desktop -- blue screen after login - Ask Ubuntu](https://askubuntu.com/a/1177338) 这篇回答中的提示，我们只需要安装一下 Ubuntu 18.04 专有的 `xorgxrdp-hwe` 包就能修复了：
+这个时候不用慌张，可能是我们的 HWE 内核模块尚不齐全导致的，根据 [18.04 - Remote Desktop -- blue screen after login - Ask Ubuntu](https://askubuntu.com/a/1177338) 这篇回答中的提示，我们只需要安装一下 Ubuntu 18.04 专有的 `xorgxrdp-hwe-18.04` 包（其他版本尚不清楚，我比较少用 Ubuntu，没怎么调查过，如果你是其他版本的 Ubuntu 的话不妨自己搜索和排查看看）就能修复了：
 
 ```bash
 sudo apt install xorgxrdp-hwe-18.04
