@@ -18,7 +18,7 @@ const list = computed(() => {
 
 const sortedList = computed(() => {
   const ls = [...list.value]
-  return ls.sort((a, b) => (b.lastUpdated) || 0 - (a.lastUpdated || 0))
+  return ls.sort((a, b) => (b.lastUpdated || 0) - (a.lastUpdated || 0))
 })
 </script>
 
