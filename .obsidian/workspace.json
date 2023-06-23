@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e80d3022825164b1",
+        "id": "b34085caee4d1dc8",
         "type": "tabs",
         "children": [
           {
-            "id": "09efa5eccf7982c1",
+            "id": "391d69ea522d8636",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+                "file": "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "WARNing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+                "file": "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+                "file": "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md"
+                "file": "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md"
               }
             }
           }
@@ -171,11 +171,21 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "09efa5eccf7982c1",
+  "active": "391d69ea522d8636",
   "lastOpenFiles": [
+    "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-02.png",
+    "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-01.png",
+    "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-image-01.png",
+    "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
+    "笔记/🏠 物联网/🌳 Home Assistant/Windows 设定网络唤醒并集成到 Homekit.md",
+    "笔记/🧰 运维/📦 Homelab/assets",
+    "笔记/📟 终端/Linux 命令/文档读写/🚧  grep 查找文件.md",
+    "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+    "笔记/Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+    "笔记/Windows",
     "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
     "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot03.png",
-    "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
     "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
     "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot02.png",
     "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png",
@@ -202,21 +212,11 @@
     "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_27_18.074Z.Desktop.md",
     "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题",
     "logseq/bak/笔记/🧰 运维/🚢 Kubernetes",
-    "logseq/bak/笔记/🧰 运维",
-    "logseq/bak/笔记",
     "配置 k8s 相关组件以支持不报错.md",
     "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/时间类型的互相转换.md",
     "笔记/📁 资源/字幕资源.md",
-    "笔记/📁 资源/番剧资源.md",
-    "笔记/🤖 AI 神经网络/GPT/将 chatGPT 与文档结合.md",
-    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
-    "笔记/🏥 医疗/MtF 性别焦虑/治疗/SRS 性别重置手术/手术经历.md",
-    "笔记/🏥 医疗/MtF 性别焦虑/治疗/SRS 性别重置手术/术前准备.md",
     "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-03.png",
     "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-02.png",
-    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-01.png",
-    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-homekit-screenshot-01.png",
-    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-homekit-screenshot-02.png",
-    "笔记/🧰 运维/🟢 持续集成 持续交付 CICD/GitHub Actions/assets/github-actions-use-bot-user-account-as-commiter-screenshot-02.png"
+    "笔记/🏠 物联网/🌳 Home Assistant/assets/homekit-use-media-player-as-a-controller-hass-screenshot-01.png"
   ]
 }
