@@ -2,7 +2,7 @@
 <script lang="ts" setup>
 import { computed, reactive } from 'vue';
 import { ArticleTree } from '../../../scripts/types/metadata';
-import { sidebar } from '../../metainfo.json'
+import { sidebar } from '../../docsMetadata.json'
 
 const list = computed(() => {
   const list: ArticleTree[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))] || []))

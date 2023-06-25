@@ -5,7 +5,6 @@ import { resolve, relative } from 'path'
 const ROOT = resolve(__dirname, '../../')
 
 export function MarkdownTransform(): Plugin {
-
   return {
     name: 'docs-md-transform',
     enforce: 'pre',

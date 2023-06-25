@@ -2,7 +2,7 @@ import fs from 'fs-extra'
 import fg from 'fast-glob'
 import { resolve, relative, dirname } from 'path'
 import { ArticleTree } from './types/metadata'
-import { sidebar } from '../.vitepress/metainfo.json'
+import { sidebar } from '../.vitepress/docsMetadata.json'
 import sharp from 'sharp'
 import { removeEmoji } from './utils'
 

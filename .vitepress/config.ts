@@ -1,5 +1,5 @@
 import { defineConfigWithTheme } from 'vitepress'
-import { sidebar } from './metainfo.json'
+import { sidebar } from './docsMetadata.json'
 import {
   siteName,
   siteDescription,
@@ -12,10 +12,8 @@ export default defineConfigWithTheme({
   lang: 'zh-CN',
   title: siteName,
   description: siteDescription,
-
   lastUpdated: true,
   ignoreDeadLinks: true,
-
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
