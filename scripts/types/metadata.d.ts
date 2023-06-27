@@ -9,7 +9,7 @@ export interface ArticleTree {
   category?: string
 }
 
-export type Doc = {
+export interface Doc {
   relativePath: string,
   hashes: {
     sha256: {
@@ -20,7 +20,21 @@ export type Doc = {
   ignoreWhenGenerateTagsFromGPT?: boolean,
 }
 
-export type DocsMetadata = {
+export interface Tag {
+  name: string
+  alias: string[],
+  description: string,
+  appearedInDocs: string[],
+  count: number,
+}
+
+export interface DocsMetadata {
   docs: Doc[],
+  tags: Tag[],
   sidebar: ArticleTree[]
+}
+
+export interface DocsTagsAlias {
+  name: string
+  alias: string[]
 }

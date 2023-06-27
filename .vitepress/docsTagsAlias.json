@@ -1,0 +1,26 @@
+[
+    {
+        "name": "数据库",
+        "alias": [
+            "database",
+            "Database",
+            "db"
+        ]
+    },
+    {
+        "name": "sql",
+        "alias": [
+            "SQL"
+        ]
+    },
+    {
+        "name": "postgres",
+        "alias": [
+            "postgresql",
+            "PostgreSQL",
+            "Postgres",
+            "pgsql",
+            "PgSQL"
+        ]
+    }
+]

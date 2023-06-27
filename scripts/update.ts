@@ -5,7 +5,9 @@ import { join, resolve } from 'path'
 import Git from 'simple-git'
 import matter from 'gray-matter'
 import { createHash } from 'crypto'
-import type { DocsMetadata } from './types/metadata'
+import type { DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
+import TagsAlias from '../.vitepress/docsTagsAlias.json'
+import uniq from 'lodash/uniq'
 
 const dir = './'
 const target = '笔记/'
@@ -127,12 +129,110 @@ async function processSidebar(docs: string[], docsMetadata: DocsMetadata) {
 }
 
 /**
+ * 判断 srcTag 是否是 targetTag 的别名
+ *
+ * 判断根据下面的规则进行：
+ * 1. srcTag === targetTag
+ * 2. srcTag.toUpperCase() === targetTag.toUpperCase()
+ *
+ * @param srcTag
+ * @param targetTag
+ * @returns
+ */
+function isTagAliasOfTag(srcTag: string, targetTag: string) {
+  return srcTag === targetTag || srcTag.toUpperCase() === targetTag.toUpperCase()
+}
+
+function findTagAlias(tag: string, docsMetadata: DocsMetadata, aliasMapping: DocsTagsAlias[]) {
+  const potentialAlias: string[] = []
+
+  docsMetadata.tags.forEach((item) => {
+    // 在已经存在在 docsMetadata.json 中的 alias 进行查找和筛选
+    item.alias.filter((alias) => {
+      return isTagAliasOfTag(alias, tag) // 筛选 alias 是 tag 的别名的 alias
+    }).forEach((alias) => {
+      potentialAlias.push(alias) // 将别名加入到 potentialAlias 中
+    })
+
+    if (isTagAliasOfTag(item.name, tag)) { // 如果有记录的 tag.name 是当前 tag 的别名
+      potentialAlias.push(item.name) // 那么将 tag.name 加入到 potentialAlias 中
+    }
+  })
+
+  // 在 docsTagsAlias.json 中进行查找和筛选
+  for (const aliasTag of aliasMapping) {
+    // 如果人工编撰的的 aliasTag.name 是当前 tag 的别名
+    // 那么这意味着 aliasTag.name 和 aliasTag.alias 中的所有 alias 都是当前 tag 的别名
+    if (isTagAliasOfTag(aliasTag.name, tag)) {
+      // 将 aliasTag.name 和 aliasTag.alias 中的所有 alias 加入到 potentialAlias 中
+      potentialAlias.push(aliasTag.name)
+      potentialAlias.push(...aliasTag.alias)
+    }
+
+    aliasTag.alias.forEach((alias) => {
+      // 如果人工编撰的的 aliasTag.alias 中的某个 alias 是当前 tag 的别名
+      // 那么这意味着 aliasTag.name 和 aliasTag.alias 中的所有 alias 都是当前 tag 的别名
+      if (isTagAliasOfTag(alias, tag)) {
+        // 将 aliasTag.name 和 aliasTag.alias 中的所有 alias 加入到 potentialAlias 中
+        potentialAlias.push(aliasTag.name)
+        potentialAlias.push(...aliasTag.alias)
+      }
+    })
+  }
+
+  return potentialAlias
+}
+
+async function processTags(doc: string, docsMetadata: DocsMetadata, tags: string[]) {
+  for (const tag of tags) {
+    docsMetadata.tags = docsMetadata.tags || []
+    const found = docsMetadata.tags.find((item) => {
+      if (item.name === tag) return item
+    })
+
+    // 优先查找所有的 alias
+    const aliases = uniq(findTagAlias(tag, docsMetadata, TagsAlias))
+
+    // 对于每一个 alias，如果在 docsMetadata.tags 中找到了，那么就将当前 doc 加入到 appearedInDocs 中
+    docsMetadata.tags.forEach((item, index) => {
+      aliases.forEach((alias) => {
+        if (item.name === alias && !docsMetadata.tags[index].appearedInDocs.includes(doc))
+          docsMetadata.tags[index].appearedInDocs.push(doc)
+      })
+    })
+
+    // 如果 tag 尚未出现在 docsMetadata.tags 中，那么就创建一个新的 tag
+    if (!found) {
+      const tagRecord: Tag = {
+        name: tag,
+        alias: aliases,
+        appearedInDocs: [],
+        description: '',
+        count: 1
+      }
+
+      // 将当前 doc 加入到 appearedInDocs 中
+      tagRecord.appearedInDocs.push(doc)
+      // 将新创建的 tag 加入到 docsMetadata.tags 中
+      docsMetadata.tags.push(tagRecord)
+      continue
+    }
+
+    found.count++
+    if (!found.appearedInDocs.includes(doc)) found.appearedInDocs.push(doc)
+    found.alias = uniq([...found.alias, ...aliases])
+  }
+}
+
+/**
  * 处理 docsMetadata.docs，计算和统计 sha256 hash 等信息
  * @param docs 符合 glob 的文件列表
  * @param docsMetadata docsMetadata.json 的内容
  */
 async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
   if (!docsMetadata.docs) docsMetadata.docs = []
+
+  const tagsToBeProcessed: { doc: string, tags: string[] }[] = []
 
   docsMetadata.docs = docs.map((docPath) => {
     // 尝试在 docsMetadata.docs 中找到当前文件的历史 hash 记录
@@ -144,6 +244,10 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
     const content = fs.readFileSync(docPath, 'utf-8')
     // 解析 Markdown 文件的 frontmatter
     const parsedPageContent = matter(content)
+
+    if (Array.isArray(parsedPageContent.data.tags)) {
+      tagsToBeProcessed.push({ doc: docPath, tags: parsedPageContent.data.tags })
+    }
 
     const hash = createHash('sha256')
     const tempSha256Hash = hash.update(parsedPageContent.content).digest('hex') // 对 Markdown 正文进行 sha256 hash
@@ -167,13 +271,17 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
       return found
     }
   })
+
+  await Promise.all(tagsToBeProcessed.map(async ({ doc, tags }) => {
+    await processTags(doc, docsMetadata, tags)
+  }))
 }
 
 async function run() {
   const docs = await listPages(dir, { target })
   console.log('matched', docs.length, 'files')
 
-  const docsMetadata: DocsMetadata = { docs: [], sidebar: [] }
+  const docsMetadata: DocsMetadata = { docs: [], sidebar: [], tags: [] }
 
   await processDocs(docs, docsMetadata)
   await processSidebar(docs, docsMetadata)
