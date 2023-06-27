@@ -44,7 +44,7 @@ const deleteTag = () => {
   <div
     v-else
     w-fit h-fit
-    mr-2 my-2 py-1 px-2
+    mr-2 my-1 py-1 px-2
     inline-block
     rounded-lg
     select-none
