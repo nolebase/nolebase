@@ -205,12 +205,16 @@ watchEffect(() => {
         @delete-tag="deleteTag(index)" />
       <div
         v-if="editingTags"
-        w-fit
-        py-1 px-2 mr-2 my-1
+        w-fit h-32px
+        px-2 mr-2 my-1
         inline-block
         rounded-lg
         select-none
         bg-gray-200 dark:bg-gray-700
+        transition-all
+        flex-inline items-center justify-center
+        hover="bg-gray-300 dark:bg-gray-800"
+        active="bg-gray-400 dark:bg-gray-900"
       >
         <form @submit.prevent="addTag" inline flex flex-row items-center justify-center>
           <div opacity="50" text-sm class="i-octicon:plus-16" />
@@ -218,12 +222,9 @@ watchEffect(() => {
             v-model="newTag"
             type="text"
             placeholder="新标签"
-            px-2
-            rounded-lg
-            bg-gray-200 dark:bg-gray-700
-            transition-all
-            hover="bg-gray-300 dark:bg-gray-800"
-            active="bg-gray-400 dark:bg-gray-900">
+            px-1
+            text-sm
+          >
         </form>
       </div>
     </div>

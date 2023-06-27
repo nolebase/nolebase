@@ -20,7 +20,10 @@ export async function tagsCanBeGenerated(path: string) {
     })
 
     try {
-      const resJSON = await res.json()
+      const resJSON = await res.json() as {
+        tags: string[]
+        error?: string
+      }
       if (!res.ok) {
         if (resJSON.error) {
           console.log(resJSON)
@@ -32,11 +35,7 @@ export async function tagsCanBeGenerated(path: string) {
         }
       }
 
-      const tagsRes = await res.json() as {
-        tags: string[]
-      }
-
-      return tagsRes.tags.map(tag => ({ content: tag }))
+      return resJSON.tags.map(tag => ({ content: tag }))
     } catch (err) {
       console.error(err)
       throw new Error(err)

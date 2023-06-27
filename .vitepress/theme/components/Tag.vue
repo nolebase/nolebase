@@ -14,31 +14,31 @@ const deleteTag = () => {
 </script>
 
 <template>
-  <div v-if="props.editing" inline>
-    <div
-      w-fit h-fit
-      mr-2 my-1 py-1 px-2
-      inline-block
-      rounded-lg
-      select-none
-      bg-gray-200 dark:bg-gray-700
-    >
-      <div flex items-center justify-center>
-        <button
-          w-fit mr-1
-          select-none
-          rounded-full
-          flex items-center justify-center
-          title="删除"
-          transition-all
-          hover="bg-gray-300 dark:bg-gray-800"
-          active="bg-gray-400 dark:bg-gray-900"
-          @click="deleteTag"
-        >
-          <div flex items-center opacity="50" class="i-octicon:x-16" />
-        </button>
-        <span>{{ tag.content }}</span>
-      </div>
+  <div
+    v-if="props.editing"
+    w-fit h-32px
+    mr-2 my-1 py-1 px-2
+    inline-block
+    rounded-lg
+    select-none
+    flex-inline items-center justify-center
+    bg-gray-200 dark:bg-gray-700
+  >
+    <div flex items-center justify-center>
+      <button
+        w-fit mr-1
+        select-none
+        rounded-full
+        flex items-center justify-center
+        title="删除"
+        transition-all
+        hover="bg-gray-300 dark:bg-gray-800"
+        active="bg-gray-400 dark:bg-gray-900"
+        @click="deleteTag"
+      >
+        <div flex items-center opacity="50" class="i-octicon:x-16" />
+      </button>
+      <span text-sm>{{ tag.content }}</span>
     </div>
   </div>
   <div
@@ -53,6 +53,6 @@ const deleteTag = () => {
     hover="bg-gray-300 dark:bg-gray-800"
     active="bg-gray-400 dark:bg-gray-900"
   >
-    <span>{{ tag.content }}</span>
+    <span text-sm>{{ tag.content }}</span>
   </div>
 </template>
