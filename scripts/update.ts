@@ -5,22 +5,7 @@ import { join, resolve } from 'path'
 import Git from 'simple-git'
 import matter from 'gray-matter'
 import { createHash } from 'crypto'
-
-export type Doc = {
-  relativePath: string,
-  hashes: {
-    sha256: {
-      content: string
-      contentDiff?: string
-    },
-  },
-  ignoreWhenGenerateTagsFromGPT?: boolean,
-}
-
-export type DocsMetadata = {
-  docs: Doc[],
-  sidebar: any[]
-}
+import type { DocsMetadata } from './types/metadata'
 
 const dir = './'
 const target = '笔记/'

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // @ts-expect-error virtual
 import changelog from '/virtual-changelog'
-import { computed } from 'vue'
 import { CommitInfo } from '../../../scripts/types'
 import { renderCommitMessage } from '../utils'
 import { githubRepoLink } from "../../meta"

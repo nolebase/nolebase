@@ -25,11 +25,11 @@ const callbackManager = CallbackManager.fromHandlers({
 const verbose = isVerboseOn()
 
 export const OpenAI = new ChatOpenAI({
-  openAIApiKey: process.env.OPENAI_API_SECRET,
+  openAIApiKey: process.env.OPENAI_API_SECRET || 'sk-testkey',
   modelName: 'gpt-3.5-turbo-16k',
   temperature: 0.6,
   configuration: {
-    basePath: `${process.env.OPENAI_API_HOST}/v1`,
+    basePath: `${process.env.OPENAI_API_HOST}/v1` || undefined,
   },
   verbose: verbose,
   callbacks: verbose ? callbackManager : undefined,

@@ -94,13 +94,13 @@ chmod +x ./install.sh && sudo ./install.sh
 
 这个时候就会为我们的 Ubuntu 安装诸如：
 
-- `linux-tools-4.15.0-212` 
-- `linux-tools-4.15.0-212-generic` 
-- `linux-tools-common` 
-- `linux-cloud-tools-4.15.0-212` 
-- `linux-cloud-tools-4.15.0-212-generic` 
-- `linux-cloud-tools-common` 
-- `linux-cloud-tools-virtual` 
+- `linux-tools-4.15.0-212`
+- `linux-tools-4.15.0-212-generic`
+- `linux-tools-common`
+- `linux-cloud-tools-4.15.0-212`
+- `linux-cloud-tools-4.15.0-212-generic`
+- `linux-cloud-tools-common`
+- `linux-cloud-tools-virtual`
 - `xorgxrdp`
 
 等包，不过每个人的系统都各有不同，我这里列举出来的都是我缺失的包，大家也可以在脚本输出结果里看到具体的安装过程和安装结果。

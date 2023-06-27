@@ -6,6 +6,8 @@ import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import { getChangeLog } from './scripts/changelog'
 import { ChangeLog } from './.vitepress/plugins/changelog'
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
+import { TagsTransform } from './.vitepress/plugins/tagsTransform'
+import { ExpressMiddleware } from './api'
 
 export default defineConfig(async () => {
   const [changeLog] = await Promise.all([
@@ -21,7 +23,9 @@ export default defineConfig(async () => {
     },
     plugins: [
       // custom
+      ExpressMiddleware(),
       MarkdownTransform(),
+      TagsTransform(),
       ChangeLog(changeLog),
 
       // plugins
@@ -37,7 +41,7 @@ export default defineConfig(async () => {
         ],
         presets: [
           presetUno({
-            dark: 'media',
+            dark: 'class',
           }),
           presetAttributify(),
           presetIcons({

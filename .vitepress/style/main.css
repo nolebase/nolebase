@@ -179,3 +179,8 @@
 .footnotes > .footnotes-list > .footnote-item > p {
   line-height: 18px;
 }
+
+/* 覆盖正文的 h1 标题样式 */
+.vp-doc > div > h1 {
+  margin-bottom: 16px;
+}
