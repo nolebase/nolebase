@@ -17,7 +17,7 @@ export function TagsTransform(): Plugin {
         id = relative(ROOT, id)
 
       if (id.match(RegExp(`^(${include.join('|')})\\/`))) { // markdown files that under include
-        const targetComponent = process.env.NODE_ENV === 'development' ? 'TagsEditor' : 'Tags'
+        const targetComponent = process.env.NODE_ENV === 'development' ? 'TagEditor' : 'Tag'
         // const targetComponent = 'Tags'
 
         const mkit = new MarkdownIt()

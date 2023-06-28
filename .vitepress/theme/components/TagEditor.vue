@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watchEffect } from "vue"
+import { onMounted, ref } from "vue"
 import { useData } from "vitepress"
 import { tagsCanBeGenerated, saveTags, generateNewTagsFromGPT } from '../api/internal/tags'
 
@@ -91,21 +91,10 @@ onMounted(async () => {
 
   initLoading.value = false
 })
-
-watchEffect(() => {
-  console.log(
-    'suggestToGenerate',
-    suggestToGenerate.value,
-    'editingTags',
-    editingTags.value
-  )
-})
 </script>
 
 <template>
-  <div v-if="!initLoading &&
-    ((suggestToGenerate && canBeGenerated) || (tags && tags.length > 0))
-    ">
+  <div v-if="!initLoading && ((suggestToGenerate && canBeGenerated) || (tags && tags.length > 0))">
     <h5>标签</h5>
       <div
         v-if="!initLoading && suggestToGenerate && canBeGenerated"
@@ -129,66 +118,37 @@ watchEffect(() => {
         </span>
       </div>
       <div v-if="!generated">
-      <button
-        inline
-        px-1 py-1
-        h-8
-        rounded-lg
-        text-white font-bold select-none
+      <BasicButton
         bg-yellow-500
-        transition-all
-        flex flex-row items-center justify-center
         hover="cursor-pointer bg-yellow-400 dark:bg-yellow-400"
         active="cursor-pointer bg-yellow-600 dark:bg-yellow-600"
+        :loading="loading"
         @click="generateTags"
-        :disabled="loading"
       >
-        <span v-if="loading" flex items-center px-3>
-          <div class="i-eos-icons:three-dots-loading" text-2xl />
-        </span>
-        <span v-else px-3 py-1 dark="text-gray-800">生成</span>
-      </button>
+        <span px-3 py-1 dark="text-gray-800">生成</span>
+      </BasicButton>
     </div>
     <div v-if="editingTags" flex flex-row items-center justify-center>
-      <button
-        inline
-        px-2 py-1
+      <BasicButton
         mr-2
-        h-8
-        rounded-lg
-        text-white font-bold select-none
         bg-blue-500
-        transition-all
-        flex flex-row items-center justify-center
         hover="cursor-pointer bg-blue-400 dark:bg-blue-400"
         active="cursor-pointer bg-blue-600 dark:bg-blue-600"
+        :loading="loading"
         @click="generateTags"
-        :disabled="loading"
       >
-        <span v-if="loading" flex items-center px-3>
-          <div class="i-eos-icons:three-dots-loading" text-2xl />
-        </span>
-        <span v-else px-3 py-1 dark="text-gray-800">重新生成</span>
-      </button>
-      <button
-        inline
-        px-1 py-1
-        h-8
-        rounded-lg
-        text-white font-bold select-none
+        <span px-3 py-1 dark="text-gray-800">重新生成</span>
+      </BasicButton>
+      <BasicButton
         bg-green-500
-        transition-all
         flex flex-row items-center justify-center
         hover="bg-green-400 cursor-pointer"
         active="bg-green-600"
+        :loading="loading"
         @click="saveGeneratedTags"
-        :disabled="loading"
       >
-        <span v-if="loading" flex items-center px-3>
-          <div class="i-eos-icons:three-dots-loading" text-2xl />
-        </span>
-        <span v-else px-3 py-1 dark="text-gray-800">保存</span>
-      </button>
+        <span px-3 py-1 dark="text-gray-800">保存</span>
+      </BasicButton>
     </div>
     </div>
     <div
@@ -203,20 +163,9 @@ watchEffect(() => {
         :editing="editingTags"
         :key="`${index}`"
         @delete-tag="deleteTag(index)" />
-      <div
-        v-if="editingTags"
-        w-fit h-32px
-        px-2 mr-2 my-1
-        inline-block
-        rounded-lg
-        select-none
-        bg-gray-200 dark:bg-gray-700
-        transition-all
-        flex-inline items-center justify-center
-        hover="bg-gray-300 dark:bg-gray-800"
-        active="bg-gray-400 dark:bg-gray-900"
-      >
-        <form @submit.prevent="addTag" inline flex flex-row items-center justify-center>
+      <TagItem>
+        <template #default>
+          <form @submit.prevent="addTag" inline flex flex-row items-center justify-center>
           <div opacity="50" text-sm class="i-octicon:plus-16" />
           <input
             v-model="newTag"
@@ -226,7 +175,8 @@ watchEffect(() => {
             text-sm
           >
         </form>
-      </div>
+        </template>
+      </TagItem>
     </div>
   </div>
 </template>

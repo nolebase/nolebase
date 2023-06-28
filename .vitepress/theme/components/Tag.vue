@@ -14,17 +14,8 @@ const deleteTag = () => {
 </script>
 
 <template>
-  <div
-    v-if="props.editing"
-    w-fit h-32px
-    mr-2 my-1 py-1 px-2
-    inline-block
-    rounded-lg
-    select-none
-    flex-inline items-center justify-center
-    bg-gray-200 dark:bg-gray-700
-  >
-    <div flex items-center justify-center>
+  <TagItem>
+    <template #pre v-if="props.editing">
       <button
         w-fit mr-1
         select-none
@@ -32,27 +23,15 @@ const deleteTag = () => {
         flex items-center justify-center
         title="删除"
         transition-all
+        @click="deleteTag"
         hover="bg-gray-300 dark:bg-gray-800"
         active="bg-gray-400 dark:bg-gray-900"
-        @click="deleteTag"
       >
         <div flex items-center opacity="50" class="i-octicon:x-16" />
       </button>
-      <span text-sm>{{ tag.content }}</span>
-    </div>
-  </div>
-  <div
-    v-else
-    w-fit h-fit
-    mr-2 my-1 py-1 px-2
-    inline-block
-    rounded-lg
-    select-none
-    bg-gray-200 dark:bg-gray-700
-    transition-all
-    hover="bg-gray-300 dark:bg-gray-800"
-    active="bg-gray-400 dark:bg-gray-900"
-  >
-    <span text-sm>{{ tag.content }}</span>
-  </div>
+    </template>
+    <template #default>
+      <span text-sm>{{ props.tag.content }}</span>
+    </template>
+  </TagItem>
 </template>
