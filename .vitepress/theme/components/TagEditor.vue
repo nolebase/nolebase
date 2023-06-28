@@ -102,14 +102,56 @@ onMounted(async () => {
 
 <template>
   <div v-if="!initLoading && ((suggestToGenerate && canBeGenerated) || (tags && tags.length > 0))">
-    <h5>标签</h5>
-      <div
-        v-if="!initLoading && suggestToGenerate && canBeGenerated"
-        my-4 p-4
-        rounded-lg
-        bg-zinc-50 dark="bg-zinc-900"
-        flex
+    <div flex="~ row" items-center>
+      <h5 flex="1">标签</h5>
+      <BasicButton
+        v-if="tags && tags.length > 0 && !editingTags"
+        title="编辑"
+        flex="~ row" items-center justify-center
+        text="dark:white"
+        bg="zinc-700 dark:zinc-800"
+        hover="bg-zinc-600 cursor-pointer"
+        active="bg-zinc-800"
+        @click="() => editingTags = !editingTags"
       >
+        <span px-3 py-1>编辑</span>
+      </BasicButton>
+      <BasicButton
+        v-if="editingTags"
+        title="取消"
+        flex="~ row" items-center justify-center
+        text="dark:white"
+        bg="zinc-500 dark:zinc-600"
+        hover="bg-zinc-400 cursor-pointer"
+        active="bg-zinc-600"
+        :loading="loading"
+        @click="() => editingTags = false"
+      >
+        <span px-3 py-1>取消</span>
+      </BasicButton>
+      <BasicButton
+        v-if="editingTags"
+        title="保存"
+        flex="~ row" items-center justify-center
+        ml-2
+        text="dark:white"
+        bg="green-500 dark:green-600"
+        hover="bg-green-400 cursor-pointer"
+        active="bg-green-600"
+        :loading="loading"
+        @click="saveGeneratedTags"
+      >
+        <span px-3 py-1>保存</span>
+      </BasicButton>
+    </div>
+    <section>
+    <div
+      v-if="!initLoading && suggestToGenerate && canBeGenerated"
+      my-4 p-4
+      rounded-lg
+      bg-zinc-50 dark="bg-zinc-900"
+      flex
+    >
       <div flex="~ 1 grow col">
         <span v-if="!generated" flex="~ 1" items-center>
           <div class="i-octicon:star-fill-16" mr-2 text-yellow-400 />
@@ -137,7 +179,7 @@ onMounted(async () => {
         <span px-3 py-1>生成</span>
       </BasicButton>
     </div>
-    <div v-if="editingTags" flex flex-row items-center justify-center>
+    <div v-if="generated && editingTags" flex flex-row items-center justify-center>
       <BasicButton
         mr-2
         title="重新生成"
@@ -149,18 +191,6 @@ onMounted(async () => {
         @click="generateTags"
       >
         <span px-3 py-1>重新生成</span>
-      </BasicButton>
-      <BasicButton
-        title="保存"
-        flex="~ row" items-center justify-center
-        text="dark:white"
-        bg="green-500 dark:green-600"
-        hover="bg-green-400 cursor-pointer"
-        active="bg-green-600"
-        :loading="loading"
-        @click="saveGeneratedTags"
-      >
-        <span px-3 py-1>保存</span>
       </BasicButton>
     </div>
     </div>
@@ -203,6 +233,7 @@ onMounted(async () => {
         </template>
       </TagItem>
     </div>
+    </section>
   </div>
 </template>
 
