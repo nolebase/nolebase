@@ -169,6 +169,8 @@
   },
   "active": "74b2a401f5bf70c8",
   "lastOpenFiles": [
+    "pnpm-lock.yaml.1428593850",
+    "node_modules/@headlessui",
     "__unconfig_vite.config.ts",
     "笔记/☁️ 后端开发/🕸️ GraphQL/基于游标的分页.md",
     "笔记/📟 终端/软件/Git 版本控制/Git 命令中文乱码的解决方案.md",
@@ -180,7 +182,6 @@
     "node_modules/@iconify-json",
     "node_modules",
     "_tmp_44053_01d771b7740cebdb6ed20a0c728ba1f0",
-    "api/tags/generation.ts",
     "笔记/🧰 运维/📦 Homelab/修复因内存错误导致的系统崩溃重启造成的 TrueNAS 数据损坏.md",
     "笔记/🧰 运维/📦 Homelab/assets/fix_data_corruption_caused_by_outage_from_memory_failure.png",
     "笔记/🧰 运维/📦 Homelab/assets/fix.png",
