@@ -2,7 +2,7 @@ import { extname } from 'path'
 import DocsMetadata from '../../.vitepress/docsMetadata.json'
 import type { Doc } from '../../scripts/types/metadata'
 import { isVerboseOn } from '../../scripts/utils/verbose'
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync } from 'fs'
 import matter from 'gray-matter'
 import type { RequestHandler } from 'express'
 import { generateTagsForOnePage } from '../../scripts/genTagsFromGPT'
@@ -116,7 +116,15 @@ export const handlePostTagsGeneration: RequestHandler = async (req, res) => {
     }
 
     const category = filePath.split('/').length >= 2 ? filePath.split('/')[1] : 'unknown'
-    const tags = await generateTagsForOnePage(canBeGenerated.content.content, category, 15)
+    let potentialTagsNum = Math.ceil(canBeGenerated.content.content.length / 500)
+    if (potentialTagsNum <= 5) {
+      potentialTagsNum = 5
+    }
+    if (potentialTagsNum >= 50) {
+      potentialTagsNum = 50
+    }
+
+    const tags = await generateTagsForOnePage(canBeGenerated.content.content, category, req.body.tags, potentialTagsNum)
 
     res.json({
       tags,

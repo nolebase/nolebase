@@ -105,13 +105,13 @@ onMounted(async () => {
     <div flex="~ row" items-center>
       <h5 flex="1">标签</h5>
       <BasicButton
-        v-if="tags && tags.length > 0 && !editingTags"
+        v-if="tags && tags.length > 0 && (!editingTags || (!editingTags && generated))"
         title="编辑"
         flex="~ row" items-center justify-center
         text="dark:white"
-        bg="zinc-700 dark:zinc-800"
-        hover="bg-zinc-600 cursor-pointer"
-        active="bg-zinc-800"
+        bg="zinc-600 dark:zinc-700"
+        hover="cursor-pointer bg-zinc-500 dark:bg-zinc-600"
+        active="cursor-pointer bg-zinc-700 dark:bg-zinc-800"
         @click="() => editingTags = !editingTags"
       >
         <span px-3 py-1>编辑</span>
@@ -122,10 +122,10 @@ onMounted(async () => {
         flex="~ row" items-center justify-center
         text="dark:white"
         bg="zinc-500 dark:zinc-600"
-        hover="bg-zinc-400 cursor-pointer"
-        active="bg-zinc-600"
+        hover="cursor-pointer bg-zinc-400 dark:bg-zinc-500"
+        active="cursor-pointer bg-zinc-600 dark:bg-zinc-700"
         :loading="loading"
-        @click="() => editingTags = false"
+        @click="() => editingTags = !editingTags"
       >
         <span px-3 py-1>取消</span>
       </BasicButton>
@@ -136,8 +136,8 @@ onMounted(async () => {
         ml-2
         text="dark:white"
         bg="green-500 dark:green-600"
-        hover="bg-green-400 cursor-pointer"
-        active="bg-green-600"
+        hover="cursor-pointer bg-green-400 dark:bg-green-500"
+        active="cursor-pointer bg-green-600 dark:bg-green-700"
         :loading="loading"
         @click="saveGeneratedTags"
       >
@@ -155,11 +155,11 @@ onMounted(async () => {
       <div flex="~ 1 grow col">
         <span v-if="!generated" flex="~ 1" items-center>
           <div class="i-octicon:star-fill-16" mr-2 text-yellow-400 />
-          可以通过 GPT 自动生成标签哦 (ゝ∀･)
+          <span>可以通过 GPT 自动生成标签哦 (ゝ∀･)</span>
         </span>
         <span v-else flex="~ 1" items-center py-1>
           <div class="i-octicon:check-circle-fill-16" mr-2 text-green-500 />
-          生成完成！
+          <span>生成完成！</span>
         </span>
         <span v-if="!generated && generatedError" flex="~ 1" items-center mt-2>
           <div class="i-octicon:alert" mr-2 text-red-400 />

@@ -39,27 +39,27 @@ export async function tryTagAndClassifyTextualContent(content: string, existingT
  * @param strategy
  * @returns
  */
-export async function generateTagsForOnePage(content: string, category: string, tagsNum: number) {
+export async function generateTagsForOnePage(content: string, category: string, existingTags: string[], tagsNum: number) {
   if (!process.env.OPENAI_API_SECRET) {
     throw new Error('OPENAI_API_SECRET is not set.')
   }
 
   const chunks = await pageSplitterForTagsGeneration.createDocuments([content])
 
-  let totalTags: string[] = []
+  let totalTags: string[] = [...existingTags]
 
   for (const chunk of chunks) {
     const tags: { lessRun: string[]; mediumRun: string[]; fullyRun: string[] } = { lessRun: [], mediumRun: [], fullyRun: [] }
 
     tags.lessRun = await tryTagAndClassifyTextualContent(chunk.pageContent, totalTags, category, tagsNum)
-    console.log('generated the tags from less run', `[ ${tags.lessRun.join(', ')} ]`)
-    if (tagsNum >= 3) {
+    console.log(`generated the tags from less run with targeting ${tagsNum} tags`, `[ ${tags.lessRun.join(', ')} ]`)
+    if (tagsNum >= 15) {
       tags.mediumRun = await tryTagAndClassifyTextualContent(chunk.pageContent, uniq([...totalTags, ...tags.lessRun]), category, tagsNum)
-      console.log('generated the tags from medium run', `[ ${tags.mediumRun.join(', ')} ]`)
+      console.log(`generated the tags from medium run with targeting ${tagsNum} tags`, `[ ${tags.mediumRun.join(', ')} ]`)
     }
-    if (tagsNum >= 5) {
+    if (tagsNum >= 30) {
       tags.fullyRun = await tryTagAndClassifyTextualContent(chunk.pageContent, uniq([...totalTags, ...tags.lessRun, ...tags.mediumRun]), category, tagsNum)
-      console.log('generated the tags from fully run', `[ ${tags.fullyRun.join(', ')} ]`)
+      console.log(`generated the tags from large run with targeting ${tagsNum} tags`, `[ ${tags.fullyRun.join(', ')} ]`)
     }
 
     totalTags = uniq([...totalTags, ...tags.lessRun, ...tags.mediumRun, ...tags.fullyRun])
