@@ -17,7 +17,7 @@ const hasSlot = (name) => {
     flex-inline items-center justify-center
     bg-zinc-200 dark:bg-zinc-700
 
-    :class="[ hasSlot('pre') || hasSlot('post') ? '' : 'hover:bg-zinc-300 hover:dark:bg-zinc-800 active:bg-zinc-400 active:dark:bg-zinc-900' ]"
+    :class="[ hasSlot('pre') || hasSlot('post') ? '' : 'hover:bg-zinc-300 active:bg-zinc-400 dark:hover:bg-zinc-600 dark:active:bg-zinc-700' ]"
   >
     <div flex items-center justify-center space-x-1>
       <slot name="pre"></slot>

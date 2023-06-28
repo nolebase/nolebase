@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { v4 as uuidv4 } from 'uuid'
 
 const pageData = useData()
 const tags = computed(() => {
@@ -8,7 +9,12 @@ const tags = computed(() => {
     return []
   }
 
-  return pageData.frontmatter.value.tags
+  return pageData.frontmatter.value.tags.map((tag) => {
+    return {
+      id: String(uuidv4()),
+      content: tag
+    }
+  })
 })
 </script>
 

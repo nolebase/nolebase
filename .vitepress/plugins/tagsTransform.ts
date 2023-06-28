@@ -17,7 +17,7 @@ export function TagsTransform(): Plugin {
         id = relative(ROOT, id)
 
       if (id.match(RegExp(`^(${include.join('|')})\\/`))) { // markdown files that under include
-        const targetComponent = process.env.NODE_ENV === 'development' ? 'TagEditor' : 'Tag'
+        const targetComponent = process.env.NODE_ENV === 'development' ? '<TagEditor />' : '<Tags />'
         // const targetComponent = 'Tags'
 
         const mkit = new MarkdownIt()
@@ -29,7 +29,7 @@ export function TagsTransform(): Plugin {
 
         // if not found, return the original code
         if (openIndex === -1 || closeIndex === -1)
-          return `<${targetComponent} />\n\n${code}`
+          return `${targetComponent}\n\n${code}`
 
         // concat the heading open and close token with level 1 along with the inner content of the heading
         const heading = tokens.slice(openIndex, closeIndex + 1).map((token) => {
@@ -48,10 +48,10 @@ export function TagsTransform(): Plugin {
 
         // if not found, return the original code
         if (headingIndex === -1)
-          return `<${targetComponent} />\n\n${code}`
+          return `${targetComponent}\n\n${code}`
 
         // insert the <Tags /> component after the heading
-        code = code.slice(0, headingIndex + heading.length) + `\n\n<${targetComponent} />\n\n` + code.slice(headingIndex + heading.length)
+        code = code.slice(0, headingIndex + heading.length) + `\n\n${targetComponent}\n\n` + code.slice(headingIndex + heading.length)
       }
 
       return code
