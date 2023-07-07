@@ -4,28 +4,11 @@ Gateway 那边 Intermediate CA 的流程和系统还没有建立起来，继续�
 
 这次维护用了 1Password 帮忙存储和读取 key，不过生成 Private key 的功能尚在 beta 阶段，所以还是先用 openssl 生成。
 
-### 创建证书的私钥
+### 生成 Private key 和证书签发请求文件
 
 ```shell
 openssl genrsa -out ./domains/ihome.cat/2023/ihome.cat.pem 4096
-```
-
-把私钥文件内存保存到 1Password 中
-
-```shell
-cat ./domains/ihome.cat/2023/ihome.cat.pem | pbcopy
-```
-
-```shell
-rm -rf ./domains/ihome.cat/2023/ihome.cat.pem
-```
-
-### 创建证书申请
-
-```shell
-op read "op://<secret reference>" > domains/ihome.cat/2023/ihome.cat.pem
 openssl req -new -key domains/ihome.cat/2023/ihome.cat.pem -out domains/ihome.cat/2023/ihome.cat.csr
-domains/ihome.cat/2023/ihome.cat.pem
 ```
 
 ### 创建证书拓展文件
@@ -58,3 +41,10 @@ openssl verify -CAfile home_ca.crt domains/ihome.cat/2023/ihome.cat.crt
 ```
 
 然后把证书部署到对应的服务端即可。
+
+部署后记得清理本地的私钥和证书申请文件。
+
+```shell
+rm -rf domains/ihome.cat/2023/ihome.cat.pem
+rm -rf domains/ihome.cat/2023/ihome.cat.csr
+```
