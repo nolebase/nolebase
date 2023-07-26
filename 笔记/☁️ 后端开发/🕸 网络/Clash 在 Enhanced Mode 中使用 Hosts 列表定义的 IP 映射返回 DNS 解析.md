@@ -29,3 +29,42 @@ code '/Users/neko/.config/clash/config.yaml'
 ```
 
 我们需要在配置文件中添加下面的行就可以解决：
+
+```yaml
+#---------------------------------------------------#
+## 配置文件需要放置在 $HOME/.config/clash/*.yaml
+
+## 这份文件是clashX的基础配置文件，请尽量新建配置文件进行修改。
+## ！！！只有这份文件的端口设置会随ClashX启动生效
+
+## 如果您不知道如何操作，请参阅 官方Github文档 https://github.com/Dreamacro/clash/blob/dev/README.md
+#---------------------------------------------------#
+
+# (HTTP and SOCKS5 in one port)
+mixed-port: 7890
+# RESTful API for clash
+external-controller: 127.0.0.1:9090
+allow-lan: false
+mode: rule
+log-level: warning
+
+proxies:
+
+proxy-groups:
+
+dns: // [!code ++]
+  use-hosts: true // [!code ++]
+
+hosts: // [!code ++]
+  # --- 项目域名 ---- // [!code ++]
+  'service.test.com': '127.0.0.1' // [!code ++]
+  # ---------------- // [!code ++]
+
+rules:
+  - DOMAIN-SUFFIX,google.com,DIRECT
+  - DOMAIN-KEYWORD,google,DIRECT
+  - DOMAIN,google.com,DIRECT
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - GEOIP,CN,DIRECT
+  - MATCH,DIRECT
+```
