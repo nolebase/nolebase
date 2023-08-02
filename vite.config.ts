@@ -6,8 +6,10 @@ import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import { getChangeLog } from './scripts/changelog'
 import { ChangeLog } from './.vitepress/plugins/changelog'
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
-import { TagsTransform } from './.vitepress/plugins/tagsTransform'
-import { ExpressMiddleware } from './api'
+import { EasyTag } from './.vitepress/plugins/vitepress-plugin-docsmd-easytag/src'
+import { include } from './.vitepress/meta'
+
+const ROOT = __dirname
 
 export default defineConfig(async () => {
   const [changeLog] = await Promise.all([
@@ -23,9 +25,13 @@ export default defineConfig(async () => {
     },
     plugins: [
       // custom
-      ExpressMiddleware(),
+      EasyTag({
+        rootDir: ROOT,
+        includes: [...include],
+        openAIAPISecret: process.env.OPENAI_API_SECRET!,
+        openAIAPIHost: process.env.OPENAI_API_HOST!,
+      }),
       MarkdownTransform(),
-      TagsTransform(),
       ChangeLog(changeLog),
 
       // plugins

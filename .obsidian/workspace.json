@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1e6279ad87619243",
+        "id": "dd2a80a1d8449846",
         "type": "tabs",
         "children": [
           {
-            "id": "74b2a401f5bf70c8",
+            "id": "b6902749692fb784",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -69,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -110,6 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,6 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +152,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md"
+              }
             }
           }
         ],
@@ -167,11 +174,19 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "74b2a401f5bf70c8",
+  "active": "b6902749692fb784",
   "lastOpenFiles": [
+    "tsconfig.json",
+    "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
+    "笔记/🤖 AI 神经网络/GPT/Promtps",
+    "笔记/🤖 AI 神经网络/未命名",
+    "笔记/☁️ 后端开发/🕸 网络/Clash 在 Enhanced Mode 中使用 Hosts 列表定义的 IP 映射返回 DNS 解析.md",
     "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
-    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有模式切换的智能家居设备.md",
+    "笔记/🏠 物联网/🌳 Home Assistant/Windows 设定网络唤醒并集成到 Homekit.md",
+    "笔记/☁️ 后端开发/🕸 网络/Clash 在 Enhanced Mode 中使用 Hosts 列表定义的 IP 映射返回 DNS 解析~.md",
+    "README.md",
     "__unconfig_vite.config.ts",
+    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有模式切换的智能家居设备.md",
     "pnpm-lock.yaml.1428593850",
     "node_modules/@headlessui",
     "笔记/☁️ 后端开发/🕸️ GraphQL/基于游标的分页.md",
@@ -181,8 +196,6 @@
     "node_modules/@types",
     "node_modules/@netlify",
     "node_modules/@inquirer",
-    "node_modules/@iconify-json",
-    "node_modules",
     "笔记/🧰 运维/📦 Homelab/修复因内存错误导致的系统崩溃重启造成的 TrueNAS 数据损坏.md",
     "笔记/🧰 运维/📦 Homelab/assets/fix_data_corruption_caused_by_outage_from_memory_failure.png",
     "笔记/🧰 运维/📦 Homelab/assets/fix.png",
@@ -197,12 +210,10 @@
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-02.png",
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-01.png",
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-image-01.png",
-    "笔记/🏠 物联网/🌳 Home Assistant/Windows 设定网络唤醒并集成到 Homekit.md",
     "笔记/📟 终端/Linux 命令/文档读写/🚧  grep 查找文件.md",
     "笔记/Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
     "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
     "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
-    "README.md",
     "🔌 知识库插件列表.md",
     "journals/2023_06_01.md",
     "笔记/📟 终端/Linux 命令索引.md",
@@ -210,10 +221,6 @@
     "笔记/📟 终端/Linux 命令/文件管理/cd 变更目录.md",
     "笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
     "pages/contents.md",
-    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_28_20.540Z.Desktop.md",
-    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_28_18.301Z.Desktop.md",
-    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_27_34.000Z.Desktop.md",
-    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_27_31.798Z.Desktop.md",
-    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_27_29.037Z.Desktop.md"
+    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_28_20.540Z.Desktop.md"
   ]
 }

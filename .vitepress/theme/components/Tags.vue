@@ -20,11 +20,11 @@ const tags = computed(() => {
 
 <template>
   <div
-      v-if="tags && tags.length > 0"
-      my-4 p-4
-      rounded-lg
-      bg-zinc-50 dark="bg-zinc-900"
-    >
-      <Tag v-for="(tag, index) in tags" :tag="tag" :key="`${index}`" />
+    v-if="tags && tags.length > 0"
+    my-4 p-4
+    rounded-lg
+    bg-zinc-50 dark="bg-zinc-900"
+  >
+    <Tag v-for="(tag, index) in tags" :tag="tag" :key="`${index}`" />
   </div>
 </template>

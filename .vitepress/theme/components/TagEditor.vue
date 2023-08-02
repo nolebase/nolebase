@@ -2,8 +2,9 @@
 import { onMounted, ref } from "vue"
 import { useData } from "vitepress"
 import Draggable from 'vuedraggable'
-import { tagsCanBeGenerated, saveTags, generateNewTagsFromGPT } from '../api/internal/tags'
+import { tagsCanBeGenerated, saveTags, generateNewTagsFromGPT } from '../../plugins/vitepress-plugin-docsmd-easytag/src/api/client/tags'
 import { v4 as uuidv4 } from 'uuid'
+import BasicButton from './BasicButton.vue'
 
 type Tag = { id: string; content: string }
 

@@ -95,11 +95,10 @@ function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgrad
 
     if (!obj) {
       // 如果没有找到，就创建一个
-      obj = { index: onePath, text: onePath, collapsible: true, collapsed: true, items: [] }
+      obj = { index: onePath, text: onePath, collapsed: true, items: [] }
       indexes.push(obj)
     } else if (!obj.items) {
       // 如果找到了，但是没有 items，就创建对应的 items 和标记为可折叠
-      obj.collapsible = true
       obj.collapsed = true
       obj.items = []
     }

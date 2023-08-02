@@ -1,5 +1,6 @@
-import { h } from 'vue';
-import Theme from 'vitepress/theme'
+import { h } from 'vue'
+import DefaultTheme from 'vitepress/theme'
+import type { Theme } from 'vitepress'
 import '../style/main.css'
 import '../style/vars.css'
 import 'uno.css'
@@ -20,7 +21,7 @@ import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
 export default {
-  ...Theme,
+  ...DefaultTheme,
   enhanceApp({ app }) {
     app.component('HomePage', HomePage)
     app.component('DocFooter', DocFooter)

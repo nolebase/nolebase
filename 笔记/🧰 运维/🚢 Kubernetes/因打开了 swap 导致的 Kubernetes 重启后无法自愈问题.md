@@ -24,7 +24,7 @@ sudo journalctl -u kubelet -f
 
 然后就发现了下面的日志：
 
-```txt
+```
 11月 26 16:37:46 node01 systemd[1]: kubelet.service: Main process exited, code=exited, status=1/FAILURE
 11月 26 16:37:46 node01 systemd[1]: kubelet.service: Failed with result 'exit-code'.
 11月 26 16:37:56 node01 systemd[1]: kubelet.service: Scheduled restart job, restart counter is at 66.
@@ -132,7 +132,7 @@ Device        Start      End  Sectors  Size Type
 
 查看 `/etc/fstab`：
 
-```txt
+```
 $ sudo cat /etc/fstab | grep swap
 # swap was on /dev/sda3 during installation
 UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0
@@ -176,7 +176,7 @@ sudo swapoff -a
 接下来，需要编辑 `/etc/fstab` 将系统启动后自动挂载 swap 分区的指令注释起来或者整行删除掉，如果指令过多，你也可以在 `/etc/fstab` 查找 swap 相关的关键字并且把指令删除。
 最终达到类似下面这样的结果：
 
-```txt
+```
 # swap was on /dev/sda3 during installation
 # UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0
 ```

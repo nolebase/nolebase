@@ -1,11 +1,11 @@
 import { extname } from 'path'
-import DocsMetadata from '../../.vitepress/docsMetadata.json'
-import type { Doc } from '../../scripts/types/metadata'
-import { isVerboseOn } from '../../scripts/utils/verbose'
+import DocsMetadata from '../../../../../../docsMetadata.json'
+import type { Doc } from '../../../../../../../scripts/types/metadata'
+import { isVerboseOn } from '../../../utils/verbose'
 import { readFileSync } from 'fs'
 import matter from 'gray-matter'
 import type { RequestHandler } from 'express'
-import { generateTagsForOnePage } from '../../scripts/genTagsFromGPT'
+import { tagOpenAI } from '../../../lib/openai'
 
 function checkTagsForPageCanBeGenerated(filePath: string): {
   reason?: string;
@@ -124,7 +124,7 @@ export const handlePostTagsGeneration: RequestHandler = async (req, res) => {
       potentialTagsNum = 50
     }
 
-    const tags = await generateTagsForOnePage(canBeGenerated.content.content, category, req.body.tags, potentialTagsNum)
+    const tags = await tagOpenAI.generateTagsForOnePage(canBeGenerated.content.content, category, req.body.tags, potentialTagsNum)
 
     res.json({
       tags,

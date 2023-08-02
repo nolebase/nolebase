@@ -19,7 +19,7 @@
 我看了看每一个 KubeSphere 核心组件的状态，它们都是正常的。
 也或许日志里会有什么线索？于是我看了看提供用于集群管理的 API 接口服务 `ks-apiserver`，发现有这么几行错误：
 
-```txt
+```
 E1101 23:23:34.180786 1 utils.go:76] /workspace/pkg/kapis/resources/v1alpha3/handler.go:289 GET https://hub.example.com/v2/namespace/repo/manifests/latest: unexpected status code 401 Unauthorized: <html>
 <head><title>401 Authorization Required</title></head>
 <body>
@@ -32,7 +32,7 @@ E1101 23:23:34.180786 1 utils.go:76] /workspace/pkg/kapis/resources/v1alpha3/han
 这看起来是在访问私有 Docker Registry 的时候出现的问题，于是我去 KubeSphere 的 WebUI 上尝试编辑 deployment 的容器镜像来尝试让 KubeSphere 拉取到镜像的信息，发现在 WebUI 上编辑容器镜像的时候是能够正常拉取镜像和镜像 manifest 信息的，那说明应该不是这个问题，至少不会报 `401 Authorization Required` 的错误。
 那会是哪里出了问题呢？也许是 Kubernetes 的核心服务出了问题？我去检查了 `kube-controller-manager-svc` （用于内嵌随 Kubernetes 一起发布的核心控制回路）的容器日志，然后发现了这么些错误和信息：
 
-```txt
+```
 I1101 23:26:30.165776 1 event.go:291] "Event occurred" object="namespace/service-v1-688965cd66" kind="ReplicaSet" apiVersion="apps/v1" type="Warning" reason="FailedCreate" message="Error creating: Internal error occurred: failed calling webhook \"rev.object.sidecar-injector.istio.io\": failed to call webhook: Post \"https://istiod-1-11-2.istio-system.svc:443/inject?timeout=10s\": service \"istiod-1-11-2\" not found"
 
 E1101 23:26:30.329218 1 replica_set.go:536] sync "namespace/service-v1-688965cd66" failed with Internal error occurred: failed calling webhook "rev.object.sidecar-injector.istio.io": failed to call webhook: Post "https://istiod-1-11-2.istio-system.svc:443/inject?timeout=10s": service "istiod-1-11-2" not found

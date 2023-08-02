@@ -383,7 +383,7 @@ media_player:
 
 在模板的最后一行中我们通过
 
-```txt
+```yaml
 {{ source_map[source] if source in source_map else 'Gear 1' }}
 ```
 

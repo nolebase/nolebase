@@ -34,7 +34,7 @@ sudo vim /etc/modprobe.d/blacklist.conf
 
 并在最后一行添加
 
-```txt
+```
 blacklist hyperv_fb
 ```
 
