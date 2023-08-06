@@ -1,7 +1,8 @@
 #!/usr/bin/env tsx
 import fs from 'fs-extra'
 import fg from 'fast-glob'
-import { join, resolve } from 'path'
+import { fileURLToPath } from 'url'
+import { join, resolve, dirname } from 'path'
 import Git from 'simple-git'
 import matter from 'gray-matter'
 import { createHash } from 'crypto'
@@ -12,8 +13,8 @@ import uniq from 'lodash/uniq'
 const dir = './'
 const target = '笔记/'
 
-export const DIR_ROOT = resolve(__dirname, '..')
-export const DIR_VITEPRESS = resolve(__dirname, '../.vitepress')
+export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+export const DIR_VITEPRESS = resolve(dirname(fileURLToPath(import.meta.url)), '../.vitepress')
 
 const git = Git(DIR_ROOT)
 

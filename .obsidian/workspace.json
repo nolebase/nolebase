@@ -11,12 +11,8 @@
             "id": "b6902749692fb784",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -92,12 +88,8 @@
             "id": "c589947a0e4d8159",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/📟 终端/软件/Git 版本控制/Git 命令中文乱码的解决方案.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -113,7 +105,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +121,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,9 +142,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -176,51 +164,51 @@
   },
   "active": "b6902749692fb784",
   "lastOpenFiles": [
-    "tsconfig.json",
-    "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
-    "笔记/🤖 AI 神经网络/GPT/Promtps",
-    "笔记/🤖 AI 神经网络/未命名",
-    "笔记/☁️ 后端开发/🕸 网络/Clash 在 Enhanced Mode 中使用 Hosts 列表定义的 IP 映射返回 DNS 解析.md",
-    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
-    "笔记/🏠 物联网/🌳 Home Assistant/Windows 设定网络唤醒并集成到 Homekit.md",
-    "笔记/☁️ 后端开发/🕸 网络/Clash 在 Enhanced Mode 中使用 Hosts 列表定义的 IP 映射返回 DNS 解析~.md",
-    "README.md",
-    "__unconfig_vite.config.ts",
-    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有模式切换的智能家居设备.md",
-    "pnpm-lock.yaml.1428593850",
-    "node_modules/@headlessui",
-    "笔记/☁️ 后端开发/🕸️ GraphQL/基于游标的分页.md",
-    "笔记/📟 终端/软件/Git 版本控制/Git 命令中文乱码的解决方案.md",
-    "node_modules/@vueuse",
-    "node_modules/@unocss",
-    "node_modules/@types",
-    "node_modules/@netlify",
-    "node_modules/@inquirer",
-    "笔记/🧰 运维/📦 Homelab/修复因内存错误导致的系统崩溃重启造成的 TrueNAS 数据损坏.md",
-    "笔记/🧰 运维/📦 Homelab/assets/fix_data_corruption_caused_by_outage_from_memory_failure.png",
-    "笔记/🧰 运维/📦 Homelab/assets/fix.png",
-    "笔记/🧰 运维/📦 Homelab/未命名.md",
-    "笔记/🪟 Windows/assets/fix.png",
-    "笔记/🪟 Windows/assets/Pasted image 20230624004446.png",
-    "笔记/🪟 Windows/Pasted image 20230624004446.png",
-    "笔记/🪟 Windows/未命名.md",
-    "Pasted image 20230624004446.png",
+    "uno.config.ts",
+    "toc.md",
+    "scripts/utils/index.ts",
+    "scripts/types/index.d.ts",
+    "scripts/types/metadata.d.ts",
+    "scripts/types/changelog.d.ts",
+    "scripts/utils",
+    "scripts/update.ts",
+    "scripts/types",
+    "scripts/post-docs.ts",
+    "scripts/changelog.ts",
+    "scripts/og-template.svg",
+    "scripts",
+    "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
     "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
-    "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+    "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
+    "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot03.png",
+    "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot02.png",
+    "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png",
+    "笔记/🪟 Windows/assets/20220504222411.png",
+    "笔记/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
+    "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
+    "笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
+    "笔记/🧰 运维/🖥 Dell 戴尔服务器/assets/dell-idrac-1.png",
+    "笔记/🧰 运维/🖥 Dell 戴尔服务器/配置 iDRAC 的 TLS SSL 证书.md",
+    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/安装 ELK.md",
+    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-02.png",
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-01.png",
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-image-01.png",
-    "笔记/📟 终端/Linux 命令/文档读写/🚧  grep 查找文件.md",
-    "笔记/Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
-    "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
-    "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
-    "🔌 知识库插件列表.md",
-    "journals/2023_06_01.md",
-    "笔记/📟 终端/Linux 命令索引.md",
-    "笔记/📟 终端/Linux 命令/文件管理/file 获取文件信息.md",
-    "笔记/📟 终端/Linux 命令/文件管理/cd 变更目录.md",
-    "笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
-    "pages/contents.md",
-    "logseq/bak/笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题/2023-06-01T15_28_20.540Z.Desktop.md"
+    "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+    "笔记/🧰 运维/📈 指标监控/Prometheus/Prometheus 配置.md",
+    "笔记/🧰 运维/📈 指标监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md",
+    "笔记/🧰 运维/💾 TrueNAS/设置 SMB 共享配额.md",
+    "笔记/🧰 运维/💾 TrueNAS/自建音乐库服务器.md",
+    "笔记/🧰 运维/💾 TrueNAS/手机端照片同步.md",
+    "笔记/🧰 运维/🐳 Docker/自建 Docker Registry.md",
+    "笔记/🧰 运维/🐳 Docker/Docker Registry 删除镜像.md",
+    "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md",
+    "笔记/🧮 算法/HashLife/HashLife.md",
+    "笔记/🤖 AI 神经网络/隐写术/调研结果和资料整理.md",
+    "笔记/🤖 AI 神经网络/机器学习/知识点/向量范数和矩阵范数.md",
+    "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
+    "笔记/🤖 AI 神经网络/机器学习/知识点/SVD奇异值分解及其意义.md",
+    "笔记/🤖 AI 神经网络/机器学习/知识点/1范数 2范数 无穷范数的通俗理解.md",
+    "笔记/🤖 AI 神经网络/GPT/将 chatGPT 与文档结合.md"
   ]
 }

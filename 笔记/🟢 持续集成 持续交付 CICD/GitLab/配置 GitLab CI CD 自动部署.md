@@ -191,6 +191,7 @@ chmod u-w /etc/sudoers
 编写完成后可以进入 Gitlab 项目，然后选择 `CI/CD` -> `流水线` -> `CI lint`，打开**“验证您的GitLab CI配置”** 页面，在这里可以校验你的 .gitlab-ci.yml 文件语法是否正。
 
 #### 完整的 .gitlab-ci.yml 脚本如下
+
 ```yaml
 stages:
   - deploy

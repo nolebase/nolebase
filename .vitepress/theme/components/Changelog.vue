@@ -14,7 +14,7 @@ const commits = useCommits(allCommits, rawPath)
 </script>
 
 <template>
-  <em v-if="!commits.length" opacity="70">No recent changes</em>
+  <em v-if="!commits.length" opacity="70">暂无最近变更历史</em>
 
   <div class="grid grid-cols-[30px_auto] -ml-1 gap-1.5 children:my-auto">
     <template v-for="(commit, idx) of commits" :key="commit.hash">
@@ -35,10 +35,7 @@ const commits = useCommits(allCommits, rawPath)
           <div class="i-octicon:rocket-16" m="auto" />
         </div>
         <div>
-          <a
-            :href="`${githubRepoLink}/releases/tag/${commit.version}`"
-            target="_blank"
-          >
+          <a :href="`${githubRepoLink}/releases/tag/${commit.version}`" target="_blank">
             <code class="!text-primary font-bold">{{ commit.version }}</code>
           </a>
           <span class="opacity-50 text-xs"> on {{ new Date(commit.date).toLocaleDateString() }}</span>

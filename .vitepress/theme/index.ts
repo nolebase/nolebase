@@ -1,8 +1,7 @@
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
-import type { Theme } from 'vitepress'
-import '../style/main.css'
-import '../style/vars.css'
+import '../styles/main.css'
+import '../styles/vars.css'
 import 'uno.css'
 
 import HomePage from './components/HomePage.vue'
@@ -21,8 +20,16 @@ import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
 export default {
-  ...DefaultTheme,
-  enhanceApp({ app }) {
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'home-features-after': () => h(HomePage),
+      'doc-footer-before': () => h(DocFooter),
+      'nav-bar-content-after': () => h(Share),
+    })
+  },
+  enhanceApp({ app, router, siteData }) {
     app.component('HomePage', HomePage)
     app.component('DocFooter', DocFooter)
     app.component('Share', Share)
@@ -44,13 +51,5 @@ export default {
 
     app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
-  },
-  Layout() {
-    return h(Theme.Layout, null, {
-      'home-features-after': () => h(HomePage),
-      'doc-footer-before': () => h(DocFooter),
-      'nav-bar-content-after': () => h(Share),
-    })
   }
 }
-
