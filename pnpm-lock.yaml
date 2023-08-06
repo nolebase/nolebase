@@ -50,6 +50,12 @@ devDependencies:
   body-parser:
     specifier: ^1.20.2
     version: 1.20.2
+  define-models:
+    specifier: link:@vue-macros/volar/define-models
+    version: link:@vue-macros/volar/define-models
+  define-slots:
+    specifier: link:@vue-macros/volar/define-slots
+    version: link:@vue-macros/volar/define-slots
   emoji-regex:
     specifier: ^10.2.1
     version: 10.2.1

@@ -1,12 +1,13 @@
 import fs from 'fs-extra'
 import fg from 'fast-glob'
+import { fileURLToPath } from 'url'
 import { resolve, relative, dirname } from 'path'
 import { ArticleTree } from './types/metadata'
 import { sidebar } from '../.vitepress/docsMetadata.json'
 import sharp from 'sharp'
 import { removeEmoji } from './utils'
 
-export const DIR_ROOT = resolve(__dirname, '..')
+export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 
 const dist = '.vitepress/dist/'
 
