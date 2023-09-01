@@ -4,43 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "636a5f1a63eca07c",
+        "id": "f5cdfda4c2b14777",
         "type": "tabs",
         "children": [
           {
-            "id": "9cea42fe879a1f1c",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140355.png"
-              }
-            }
-          },
-          {
-            "id": "6626b1fb67abf6a6",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140515.png"
-              }
-            }
-          },
-          {
-            "id": "2aad46bddf681237",
+            "id": "71ad9a899da50db3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+                "file": "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）在变更默认打开程序之后图标依然维持原样的异常问题.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:命令行/Powershell",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -130,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+                "file": "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）在变更默认打开程序之后图标依然维持原样的异常问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+                "file": "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）在变更默认打开程序之后图标依然维持原样的异常问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md"
+                "file": "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）在变更默认打开程序之后图标依然维持原样的异常问题.md"
               }
             }
           }
@@ -188,51 +167,51 @@
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2aad46bddf681237",
+  "active": "71ad9a899da50db3",
   "lastOpenFiles": [
+    "笔记/🎛️ 操作系统/🍎 macOS/assets/twitter-status-1690198922210189312-image.png",
+    "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）在变更默认打开程序之后图标依然维持原样的异常问题.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/assets",
+    "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
+    "README.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140355.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140515.png",
+    "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
+    "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
     "vite.config.ts.timestamp-1693546072372-0b43887901709.mjs",
     "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
     "vite.config.ts.timestamp-1693546020372-be1107e136b05.mjs",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140515.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140355.png",
     "笔记/🎛️ 操作系统/🍥 Debian/assets",
     "笔记/📟 终端/assets/image_20211012140400.png",
     "笔记/📟 终端/assets/image_20211012135645.png",
     "笔记/🎛️ 操作系统/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
     "笔记/🎛️ 操作系统/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
-    "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）.md",
     "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md",
     "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/SELinux 安全 Linux.md",
-    "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
     "笔记/📟 终端/Linux 命令索引.md",
     "笔记/📟 终端/Linux 权限.md",
     "笔记/📟 终端/Linux 文件系统.md",
-    "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃（Drop）的暂存（Stash）.md",
     "笔记/🎛️ 操作系统/🍎 macOS",
     "笔记/🎛️ 操作系统",
     "未命名",
-    "README.md",
     "笔记/index.md",
     "笔记/🎞️ 代码片段/未命名.md",
     "笔记/🎞️ 代码片段",
-    "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
     "笔记/💾 软件/笔记软件/笔记软件.md",
     "未命名.canvas",
     "未命名.md",
     "uno.config.ts",
     "toc.md",
     "scripts/utils/index.ts",
-    "scripts/types/index.d.ts",
-    "scripts/types/metadata.d.ts",
     "scripts/og-template.svg",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot03.png",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot02.png",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png",
-    "笔记/🎛️ 操作系统/🪟 Windows/assets/20220504222411.png",
     "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
     "笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
     "笔记/🧰 运维/🖥 Dell 戴尔服务器/配置 iDRAC 的 TLS SSL 证书.md",
