@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md",
+                "file": "笔记/🎛️ 操作系统/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md",
+                "file": "笔记/🎛️ 操作系统/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md",
+                "file": "笔记/🎛️ 操作系统/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md"
+                "file": "笔记/🎛️ 操作系统/🪟 Windows/Hyper-V 激活嵌套虚拟化.md"
               }
             }
           }
@@ -172,12 +172,13 @@
   },
   "active": "9cea42fe879a1f1c",
   "lastOpenFiles": [
+    "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）.md",
+    "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md",
     "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/SELinux 安全 Linux.md",
     "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
     "笔记/🎛️ 操作系统/🪟 Windows/Hyper-V 激活嵌套虚拟化.md",
     "笔记/🎛️ 操作系统/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
     "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
-    "笔记/🎛️ 操作系统/⛑️ RedHat Enterprise Linux/yum dnf 包管理器.md",
     "笔记/📟 终端/Linux 命令索引.md",
     "笔记/📟 终端/Linux 权限.md",
     "笔记/📟 终端/Linux 文件系统.md",
@@ -217,7 +218,6 @@
     "笔记/🧰 运维/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-image-01.png",
     "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
     "笔记/🧰 运维/📈 指标监控/Prometheus/Prometheus 配置.md",
-    "笔记/🧰 运维/📈 指标监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md",
-    "笔记/🧰 运维/💾 TrueNAS/设置 SMB 共享配额.md"
+    "笔记/🧰 运维/📈 指标监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md"
   ]
 }
