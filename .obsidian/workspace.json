@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "dd2a80a1d8449846",
+        "id": "6a8f40ad52ad4d6e",
         "type": "tabs",
         "children": [
           {
-            "id": "b6902749692fb784",
+            "id": "87947f079a10339b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -105,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,6 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +148,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md"
+              }
             }
           }
         ],
@@ -162,8 +170,11 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "b6902749692fb784",
+  "active": "87947f079a10339b",
   "lastOpenFiles": [
+    "笔记/💾 软件/笔记软件/笔记软件.md",
+    "未命名.canvas",
+    "未命名.md",
     "uno.config.ts",
     "toc.md",
     "scripts/utils/index.ts",
@@ -176,7 +187,6 @@
     "scripts/post-docs.ts",
     "scripts/changelog.ts",
     "scripts/og-template.svg",
-    "scripts",
     "笔记/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
     "笔记/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
     "笔记/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
@@ -208,7 +218,6 @@
     "笔记/🤖 AI 神经网络/机器学习/知识点/向量范数和矩阵范数.md",
     "笔记/🤖 AI 神经网络/GPT/Promtps/嘴臭锐评 Prompt.md",
     "笔记/🤖 AI 神经网络/机器学习/知识点/SVD奇异值分解及其意义.md",
-    "笔记/🤖 AI 神经网络/机器学习/知识点/1范数 2范数 无穷范数的通俗理解.md",
-    "笔记/🤖 AI 神经网络/GPT/将 chatGPT 与文档结合.md"
+    "笔记/🤖 AI 神经网络/机器学习/知识点/1范数 2范数 无穷范数的通俗理解.md"
   ]
 }
