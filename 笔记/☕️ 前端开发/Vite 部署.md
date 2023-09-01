@@ -1,7 +1,7 @@
 ## 安装和配置
 
 ### 安装前置软件
-使用 `yum` 或者 `dnf`（两者都一样的效果，[yum dnf 包管理器](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/RedHat%20Enterprise%20Linux/yum%20dnf%20%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8.md)）进行安装
+使用 `yum` 或者 `dnf`（两者都一样的效果，[yum dnf 包管理器](yum%20dnf%20包管理器.md)）进行安装
 
 1. 优先安装 epel-release（一个很大的软件库源，安装后可以搜索和安装更多的软件包）
 2. 更新整个软件包列表缓存和系统
@@ -469,7 +469,7 @@ $ sudo nginx -t
 $ sudo nginx -s reload
 ```
 
-使用 `setsebool` 命令（参考 [🚧  setsebool 配置 SELinux 参数](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/%F0%9F%9A%A7%20%20setsebool%20%E9%85%8D%E7%BD%AE%20SELinux%20%E5%8F%82%E6%95%B0.md)）配置 SELinux （参见 [SELinux 安全 Linux](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/RedHat%20Enterprise%20Linux/SELinux%20%E5%AE%89%E5%85%A8%20Linux.md)）规则以允许 Nginx 访问内网：
+使用 `setsebool` 命令（参考 [🚧  setsebool 配置 SELinux 参数](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/%F0%9F%9A%A7%20%20setsebool%20%E9%85%8D%E7%BD%AE%20SELinux%20%E5%8F%82%E6%95%B0.md)）配置 SELinux （参见 [SELinux 安全 Linux](SELinux%20安全%20Linux.md)）规则以允许 Nginx 访问内网：
 
 ```shell
 $ sudo setsebool -P httpd_can_network_connect on

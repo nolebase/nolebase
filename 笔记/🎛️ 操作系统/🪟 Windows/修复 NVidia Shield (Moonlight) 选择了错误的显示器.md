@@ -1,3 +1,10 @@
+---
+tags:
+  - 操作系统/Windows
+  - 软件/串流/NVIDIA-Shield
+  - 软件/串流/Moonlight
+  - 软件/Windows/regedit
+---
 # 修复：NVidia Shield (Moonlight) 选择了错误的显示器 – Lighthouse @ theCloudiest 
 
 来源：https://lighthouse.thecloudiest.com/2020/12/20/fix-nvidia-shield-moonlight-selecting-the-wrong-monitor/

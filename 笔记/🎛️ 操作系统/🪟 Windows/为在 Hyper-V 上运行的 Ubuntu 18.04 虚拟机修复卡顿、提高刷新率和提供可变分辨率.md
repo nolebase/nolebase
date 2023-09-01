@@ -1,3 +1,27 @@
+---
+tags:
+  - 操作系统/Windows
+  - 操作系统/Ubuntu
+  - 开发/虚拟机
+  - 知识领域/计算机图形学
+  - 课程/GAMES101
+  - 命令行/apt
+  - 命令行/scoope
+  - 命令行/vim
+  - 命令行/Powershell
+  - 命令行/wget
+  - 命令行/chmod
+  - 操作系统/Windows-Server
+  - 命令行/vbmanage
+  - 操作系统/Ubuntu/Ubuntu-18.04
+  - 命令行/python/python-2.7
+  - 库/opencv/opencv2
+  - CPU指令集/arm64
+  - 芯片/Apple-Silicon-M1
+  - 软件/虚拟机/VirtualBox
+  - 软件/虚拟机/Hyper-V
+  - 计算机科学/虚拟化
+---
 # 为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率
 
 ### 文档兼容性
@@ -112,17 +136,17 @@ sudo reboot
 
 这个时候我们再通过 Hyper-V 连接到 Ubuntu 的时候就会自动选择「Enhanced Session Mode 增强会话模式」进行连接了，不过如果没有使用这个模式的话也可以在左上角菜单选项中的最后一个选项中主动点击切换：
 
-![](./assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png)
+![](hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png)
 
 切换之后应该就能看到这样的界面了：
 
-![](./assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot02.png)
+![](hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot02.png)
 
 这个时候我们只需要输入我们以往在 Ubuntu 中登录时使用的用户名和密码就可以进入到系统当中。
 
 不过先别着急，你可能会遇到和我一样的错误，比如像下面这样完全蓝屏：
 
-![](./assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot03.png)
+![](hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot03.png)
 
 或者看到左上角提示出现类似的错误：
 
@@ -141,7 +165,7 @@ sudo apt install xorgxrdp-hwe-18.04
 
 安装完成之后我们还是照常重启一下，然后再次重复之前的登录操作，这下就能看到 Ubuntu 的完整大屏幕界面啦！
 
-![](./assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png)
+![](hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png)
 
 ## 错误排查
 
