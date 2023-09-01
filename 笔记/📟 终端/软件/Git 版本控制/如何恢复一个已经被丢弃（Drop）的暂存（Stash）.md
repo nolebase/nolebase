@@ -1,13 +1,17 @@
 ---
 tags:
   - 开发
+  - 开发/git
   - 开发/版本控制
   - 开发/版本管理
-  - 命令行/Git
-  - 命令行/Git/Stash
-  - 命令行/Git/历史
-  - 命令行/Git/操作
-  - 命令行/Git/恢复
+  - 命令行/git
+  - 命令行/git/Stash
+  - 命令行/git/历史
+  - 命令行/git/操作
+  - 命令行/git/恢复
+  - 命令行/cut
+  - 命令行/grep
+  - 命令行/xargs
   - Linux/命令行
   - Unix/命令行
 ---
@@ -172,7 +176,7 @@ xargs git log --merges --no-walk --grep=WIP
 那为什么我们会需要使用 `xargs` 呢？这是因为在使用 Unix / Linux 和通过命令行进行很多操作的时候都会遇到很多不支持管道符 `|` 来传入参数的命令工具，使用 `xargs` 可以很好的解决这个问题，虽然 `xargs` 的原始功能其实是[^2]：
 
 > **xargs** reads items from the standard input, delimited by blanks (which can be protected with double or single quotes or a backslash) or newlines, and executes the _command_ (default is _echo_) one or more times with any _initial-arguments_ followed by items read from standard input.
-   
+
 中文解释：
 
 > xargs 从标准输入中读取以空格（可以用双引号、单引号或反斜线保护）或换行符分隔的条目，然后执行命令（默认为 echo）一次或多次，并在从标准输入读取的条目后面加上任何初始参数。
