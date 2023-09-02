@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
     "@headlessui/vue": "^1.7.15",
     "@iconify-json/eos-icons": "^1.1.6",
     "@iconify-json/octicon": "^1.1.45",
@@ -25,9 +26,12 @@
     "@types/md5": "^2.3.2",
     "@types/node-fetch": "^2.6.4",
     "@types/qs": "^6.9.7",
+    "@unocss/eslint-config": "^0.55.4",
     "@unocss/reset": "^0.54.1",
     "@vueuse/core": "^10.3.0",
     "body-parser": "^1.20.2",
+    "define-models": "link:@vue-macros/volar/define-models",
+    "define-slots": "link:@vue-macros/volar/define-slots",
     "emoji-regex": "^10.2.1",
     "express": "^4.18.2",
     "fast-glob": "^3.3.1",
@@ -37,8 +41,6 @@
     "less": "^4.2.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
-    "define-models": "link:@vue-macros/volar/define-models",
-    "define-slots": "link:@vue-macros/volar/define-slots",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-mathjax3": "^4.3.2",
     "md5": "^2.3.0",
@@ -53,7 +55,7 @@
     "unplugin-vue-components": "^0.25.1",
     "uuid": "^9.0.0",
     "vite": "^4.4.8",
-    "vitepress": "1.0.0-beta.7",
+    "vitepress": "1.0.0-rc.10",
     "vue": "^3.3.4",
     "vuedraggable": "^4.1.0"
   }

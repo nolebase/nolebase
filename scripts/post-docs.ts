@@ -56,6 +56,8 @@ async function generateSVG(article: ArticleTree, output: string) {
 
 
 async function buildOG() {
+
+  
   const files = await fg(`${dist}/**/*.html`, {
     onlyFiles: true,
     cwd: DIR_ROOT,

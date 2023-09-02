@@ -1,12 +1,8 @@
-import { defineConfigWithTheme } from 'vitepress'
-import { sidebar } from './docsMetadata.json'
-import {
-  siteName,
-  siteDescription,
-  githubRepoLink,
-} from './meta'
-import MarkdownItFootnote from 'markdown-it-footnote'
-import MarkdownItMathjax3 from 'markdown-it-mathjax3'
+import { defineConfigWithTheme } from 'vitepress';
+import { sidebar } from './docsMetadata.json';
+import { siteName, siteDescription, githubRepoLink } from './meta';
+import MarkdownItFootnote from 'markdown-it-footnote';
+import MarkdownItMathjax3 from 'markdown-it-mathjax3';
 
 export default defineConfigWithTheme({
   lang: 'zh-CN',
@@ -16,23 +12,54 @@ export default defineConfigWithTheme({
   ignoreDeadLinks: true,
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        href: '/apple-touch-icon.png',
+        sizes: '180x180',
+      },
+    ],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
-    ['link', { rel: 'alternate icon', href: '/favicon.ico', type: 'image/png', sizes: '16x16' }],
+    [
+      'link',
+      {
+        rel: 'alternate icon',
+        href: '/favicon.ico',
+        type: 'image/png',
+        sizes: '16x16',
+      },
+    ],
     ['meta', { name: 'author', content: `Ayaka Neko, Ayaka Rizumu` }],
-    ['meta', { name: 'keywords', content: 'markdown, knowledgebase, 知识库, vitepress, obsidian, notebook, notes, nekomeowww, littlesound' }],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content:
+          'markdown, knowledgebase, 知识库, vitepress, obsidian, notebook, notes, nekomeowww, littlesound',
+      },
+    ],
 
     ['meta', { property: 'og:title', content: siteName }],
-    ['meta', { property: 'og:image', content: 'https://nolebase.ayaka.io/og.png' }],
+    [
+      'meta',
+      { property: 'og:image', content: 'https://nolebase.ayaka.io/og.png' },
+    ],
     ['meta', { property: 'og:description', content: siteDescription }],
     ['meta', { property: 'og:site_name', content: siteName }],
 
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:creator', content: 'Ayaka Neko, Ayaka Rizumu' }],
-    ['meta', { name: 'twitter:image', content: 'https://nolebase.ayaka.io/og.png' }],
+    [
+      'meta',
+      { name: 'twitter:image', content: 'https://nolebase.ayaka.io/og.png' },
+    ],
 
-    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#927baf' }],
-    ['link', {rel: 'manifest', href: '/site.webmanifest' }],
+    [
+      'link',
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#927baf' },
+    ],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['meta', { name: 'msapplication-TileColor', content: '#603cba' }],
   ],
   themeConfig: {
@@ -44,12 +71,14 @@ export default defineConfigWithTheme({
     localeLinks: {
       text: '简体中文',
     },
-    socialLinks: [
-      { icon: 'github', link: githubRepoLink },
-    ],
+    socialLinks: [{ icon: 'github', link: githubRepoLink }],
     footer: {
       message: '用 <span style="color: #e25555;">&#9829;</span> 撰写',
-      copyright: '<a class="footer-cc-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> © 2022-PRESENT Nólëbase 的创作者们',
+      copyright:
+        '<a class="footer-cc-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> © 2022-PRESENT Nólëbase 的创作者们',
+    },
+    search: {
+      provider: 'local',
     },
     nav: [
       { text: '主页', link: '/' },
@@ -64,8 +93,8 @@ export default defineConfigWithTheme({
       dark: 'one-dark-pro',
     },
     config: (md) => {
-      md.use(MarkdownItFootnote)
-      md.use(MarkdownItMathjax3)
-    }
-  }
-})
+      md.use(MarkdownItFootnote);
+      md.use(MarkdownItMathjax3);
+    },
+  },
+});
