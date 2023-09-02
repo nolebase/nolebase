@@ -1,12 +1,12 @@
 ---
 tags:
- - postgres
- - postgresql
- - sql
- - jsonb
+ - 数据库/postgres
+ - 数据库/postgresql
+ - 开发/语言/SQL
+ - 编码/jsonb
  - i18n
  - 国际化
- - 嵌套查询
+ - 开发/数据/嵌套查询
 ---
 
 # 国际化查询中将查询得到的 Object 数组重新映射为 `language_code` 列为键的 Object
@@ -21,7 +21,7 @@ tags:
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | -- | -- | -- |
-| PostgreSQL | 14 | http://www.postgres.cn/docs/14/functions-aggregate.html |
+| PostgreSQL | 14 | [http://www.postgres.cn/docs/14/functions-aggregate.html](http://www.postgres.cn/docs/14/functions-aggregate.html) |
 
 ## 说明
 

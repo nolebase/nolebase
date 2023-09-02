@@ -6,7 +6,7 @@
 
 >在只读卷上运行时无法更新。 该应用程序位于只读卷上。 请移动应用程序并重试。 如果您使用的是 macOS Sierra 或更高版本，则需要将应用程序移出下载目录。 有关更多信息，请参阅此链接。
 
-#### 解决方案：
+#### 解决方案
 
 ```shell
 sudo chown -R $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt

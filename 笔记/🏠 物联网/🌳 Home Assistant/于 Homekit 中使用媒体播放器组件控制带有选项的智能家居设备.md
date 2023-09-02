@@ -17,6 +17,7 @@ tags:
   - 信号源选择器
   - Additional Tools for Xcode
 ---
+
 # 于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备
 
 ## 说明
@@ -220,7 +221,6 @@ media_player:
 注意这里的 `unique_id` 是可选的，如果你也要填写这个字段的话，需要保证在整个 Home Assistant 中的 `media_player` 下是唯一的。为了让 Homekit 将我们的「电视型电热毯」展示为一个正确的电视配件，我们需要将 [`device_class`](https://www.home-assistant.io/integrations/universal/#device_class) 设置为 `tv`。
 
 ##### 配置 `attributes`
-
 
 ```yaml
 media_player:

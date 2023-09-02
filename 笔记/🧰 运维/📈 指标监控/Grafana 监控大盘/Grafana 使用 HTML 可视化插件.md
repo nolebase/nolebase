@@ -2,14 +2,14 @@
 
 Grafana 展示数据时，如果只有简单的状态和字符串信息，Table（表格）可视化就已经足够使用了，但是对于有多种媒体资源或是更复杂的逻辑需求，Table 亦或是别的模版可视化都无法恰当处理。不过，HTML 可视化提供了更多的选项和自由编辑能力。
 
-#### HTML 可视化的优势：
+#### HTML 可视化的优势
 
 - Grafana 提供原有数据结构的自动化处理
 - 完全自由的排版和编辑能力
 - 更好的交互以及展示体验
 - 多媒体资源的处理
 
-#### HTML 可视化的劣势：
+#### HTML 可视化的劣势
 
 - Grafana 提供的 API 无法支持动态加载内容
 - 无法加载和使用外部 JavaScript 库
@@ -57,7 +57,7 @@ Grafana 展示数据时，如果只有简单的状态和字符串信息，Table�
 
 ```javascript
 const div = htmlnode.getElementById("data")
-// 如果需要在每次刷新时移除上一次的节点，可以使用下面的代码来更新： 
+// 如果需要在每次刷新时移除上一次的节点，可以使用下面的代码来更新：
 div.innerHTML = ""
 ```
 
@@ -85,7 +85,7 @@ this.refresh()
 loadDatasource(param).then(r => {
     data = r
     console.log('data', r);
- 
+
     // Wait till data exists has loaded before we handle any data
     this.events.on('render', this.onRender.bind(this));
     this.events.on('data-received', this.onDataReceived.bind(this));
@@ -93,7 +93,7 @@ loadDatasource(param).then(r => {
     this.events.on('panel-size-changed', this.onResize.bind(this));
     this.events.on('data-snapshot-load', this.onDataSnapshotLoad.bind(this));
     this.events.on('refresh', this.onRefresh.bind(this));
- 
+
     // Refresh after data is loaded
     this.refresh();
 });
@@ -133,16 +133,16 @@ function getEnvVariables(name) {
             break
         }
     }
- 
+
     if (value !== "" && value.indexOf(",") !== -1) {
         const valueArr = value.split(",")
         const resArr = []
-        for (let i = 0; i < valueArr.length; i++) {           
+        for (let i = 0; i < valueArr.length; i++) {
             let res = parseInt(valueArr[i])
             if (isNaN(res)) {
                 continue
             }
- 
+
             resArr.push(res)
         }
         return resArr
@@ -150,8 +150,6 @@ function getEnvVariables(name) {
     return []
 }
 ```
-
-
 
 **设定字符串为变量**：
 
@@ -210,7 +208,7 @@ async function get() {
     const res = await resp.json()
     console.log(res)
 }
- 
+
 get()
 ```
 
@@ -225,13 +223,13 @@ get()
     width: 5px;
     height: 5px;
 }
- 
+
 #data::-webkit-scrollbar-thumb {
   background-color: #0d0d0d;
   border-radius: 999px;
 }
- 
- 
+
+
 #data::-webkit-scrollbar-corner {
   background-color: transparent;
 }
@@ -255,10 +253,9 @@ get()
 function getTwoDigitFormat(number) {
     return String(number).slice(-2).padStart(2, "0")
 }
- 
+
 // 用法示例
 const d = new Date()
 const generalFormat = `${d.getFullYear()}-${getTwoDigitFormat(d.getMonth() + 1)}-${getTwoDigitFormat(d.getDate())} ${getTwoDigitFormat(d.getHours())}:${getTwoDigitFormat(d.getMinutes())}:${getTwoDigitFormat(d.getSeconds())}`
 console.log(generalFormat)
 ```
-

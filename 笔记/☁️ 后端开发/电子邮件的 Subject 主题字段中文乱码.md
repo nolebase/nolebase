@@ -1,6 +1,15 @@
-# 电子邮件的 Subject 主题字段中文乱码
+---
+tags:
+  - 开发/后端/SMTP
+  - 开发/语言/Golang
+  - 开发/后端/邮件
+  - 开发/后端/Email
+  - 邮件/Gmail
+  - 编码/UTF-8
+  - 规范/RFC
+---
 
-#golang #go #gmail #smtp #email #电子邮件 #编码 #utf8 #rfc
+# 电子邮件的 Subject 主题字段中文乱码
 
 ##### 文档版本
 

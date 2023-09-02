@@ -1,6 +1,7 @@
 ## 安装和配置
 
 ### 安装前置软件
+
 使用 `yum` 或者 `dnf`（两者都一样的效果，[yum dnf 包管理器](yum%20dnf%20包管理器.md)）进行安装
 
 1. 优先安装 epel-release（一个很大的软件库源，安装后可以搜索和安装更多的软件包）
@@ -9,9 +10,9 @@
 4. -y 参数表示无需询问是否安装，直接静默安装
 
 ```shell
-$ sudo yum install epel-release -y
-$ sudo yum update -y
-$ sudo yum install nginx vim git -y
+sudo yum install epel-release -y
+sudo yum update -y
+sudo yum install nginx vim git -y
 ```
 
 如果此处提示找不到 nginx，我们需要手动添加一下 nginx 官方的软件源
@@ -21,7 +22,7 @@ $ sudo yum install nginx vim git -y
 创建一个 nginx.repo 文件并且写入 nginx 官方源配置：
 
 ```shell
-$ sudo vim /etc/yum.repos.d/nginx.repo
+sudo vim /etc/yum.repos.d/nginx.repo
 ```
 
 nginx.repo 内容，其中需要替换一些字符串：
@@ -49,14 +50,15 @@ enabled=1
 编辑之后输入 `:wq` 退出
 
 运行下面的命令来更新软件源和系统
+
 ```shell
-$ sudo yum update
+sudo yum update
 ```
 
 再次尝试安装
 
 ```shell
-$ sudo yum install nginx
+sudo yum install nginx
 ```
 
 如果还是不行，可以选择手动编译
@@ -66,7 +68,7 @@ $ sudo yum install nginx
 安装编译需要的依赖包
 
 ```shell
-$ sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libxslt libxslt-devel gd-devel perl-devel perl-ExtUtils-Embed GeoIP GeoIP-devel GeoIP-data gperftools-devel
+sudo yum -y install gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel libxml2 libxml2-devel libxslt libxslt-devel gd-devel perl-devel perl-ExtUtils-Embed GeoIP GeoIP-devel GeoIP-data gperftools-devel
 ```
 
 使用 `wget` 命令（参考 [wget HTTP 客户端](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/wget%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）下载 nginx 的源码
@@ -92,13 +94,13 @@ curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
 执行完之后执行安装 nodejs 本体：
 
 ```shell
-$ sudo yum install nodejs gcc-c++ make -y
+sudo yum install nodejs gcc-c++ make -y
 ```
 
 安装 pnpm：
 
 ```shell
-$ sudo npm install -g pnpm
+sudo npm install -g pnpm
 ```
 
 ### 设定 Nginx 服务为开机自启，并且开始运行
@@ -106,11 +108,11 @@ $ sudo npm install -g pnpm
 使用 `systemctl`（参考 [🚧  systemctl 服务管理](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/%F0%9F%9A%A7%20%20systemctl%20%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86.md)）设定开机自启和运行
 
 ```shell
-$ sudo systemctl enable nginx
-$ sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
 ```
 
-运行后应该可以从 http://IP:80 的访问到初始的网站
+运行后应该可以从 `http://IP:80` 的访问到初始的网站
 如果访问不到，可以看一下防火墙配置
 
 ### 防火墙配置
@@ -120,7 +122,7 @@ $ sudo systemctl start nginx
 1. 先检查 iptables（一个老牌防火墙服务，命令参考：[🚧  iptables 防火墙配置](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF/%F0%9F%9A%A7%20%20iptables%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）是否在运行
 
 ```shell
-$ sudo systemctl status iptables
+sudo systemctl status iptables
 ```
 
 如果运行命令后提示 `Unit iptables.service could not be found.` 则表示服务不存在
@@ -138,16 +140,15 @@ $ sudo systemctl status iptables
 以下命令的含义是： **使用 iptables 命令添加允许（ACCEPT） 80 端口的 TCP 流量**
 
 ```shell
-$ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 ```
-
 
 #### 检查 firewalld
 
 2. 检查 firewalld（现在主流防火墙服务，命令参考 [🚧  firewalld 防火墙配置](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AF/%F0%9F%9A%A7%20%20firewalld%20%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE.md)）是否在运行
 
 ```shell
-$ sudo systemctl status firewalld
+sudo systemctl status firewalld
 ```
 
 如果运行命令后提示 `Unit firewalld.service could not be found.` 则表示服务不存在
@@ -166,9 +167,8 @@ $ sudo systemctl status firewalld
 以下命令的含义是： **使用 firwall-cmd 在 public 域永久（permanent）添加允许 80 端口的 TCP 流量**
 
 ```shell
-$ sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 ```
-
 
 ## 准备前端
 
@@ -177,8 +177,8 @@ $ sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 #### 克隆
 
 ```shell
-$ git clone <仓库地址>
-$ cd <项目文件夹>
+git clone <仓库地址>
+cd <项目文件夹>
 ```
 
 #### 编译
@@ -186,7 +186,7 @@ $ cd <项目文件夹>
 对于 vitesse 而言，直接运行 `pnpm build` 就好了，执行依赖更新和 `build` 命令
 
 ```shell
-$ pnpm i && pnpm build
+pnpm i && pnpm build
 ```
 
 编译后文件会被放到 `dist` 文件夹下，这个时候为了方便我们版本切换，可以把 `dist` 文件夹里的文件单独放到另一个文件夹里面，这样下次更新前端的时候就不会由于运行 `pnpm build` 指令导致 `dist` 文件夹被清空，因而导致页面无法访问
@@ -196,25 +196,24 @@ $ pnpm i && pnpm build
 这个目录使用 `mkdir` （参考 [mkdir 创建目录](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/mkdir%20%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95.md)）创建的时候带上 `sudo` 就可以限制为仅可 `root` 或 root 权限访问：
 
 ```shell
-$ sudo mkdir -p /usr/local/frontend/<项目名称>
+sudo mkdir -p /usr/local/frontend/<项目名称>
 ```
 
 还可以授予 `wheel` 用户组权限（可选），`wheel` 用户组就等同于「超级管理组」，在这个组的人都有 `sudo` 权限，`chown` 命令（参考 [chown 变更所属权](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chown%20%E5%8F%98%E6%9B%B4%E6%89%80%E5%B1%9E%E6%9D%83.md)）表示「**ch**ange **own**ership（变更归属权）」， root:wheel 表示：「root 用户和 wheel 用户组」，-R 表示使用递归策略，遍历并应用规则到下面的目录和文件
 
 ```shell
-$ sudo chown -R root:whell /usr/local/frontend
+sudo chown -R root:whell /usr/local/frontend
 ```
 
 如果没有特别的需求，可以放到原地，比如新建一个 app 文件夹用来存编译产物也是完全没问题的；使用 `mv` 命令（参考 [mv 剪贴、移动](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/mv%20%E5%89%AA%E8%B4%B4%E3%80%81%E7%A7%BB%E5%8A%A8.md)）把编译好的内容放到新的地方：
 
 ```shell
-$ sudo mv dist <文件夹地址>
+sudo mv dist <文件夹地址>
 ```
 
 ## 配置网页服务器
 
 此处有两种方案可以选择，一种是直接通过 Nginx 读取静态文件，还有一种是基于一个 serve 命令的服务来实现静态文件的服务器，请求该网站的时候，流量会通过 Nginx 重定向到 serve 提供的地址，从而把数据通过 Nginx 从 serve 反代理到服务器外部，实现对内部数据的访问
-
 
 ### 静态文件
 
@@ -223,7 +222,7 @@ $ sudo mv dist <文件夹地址>
 新建一个 Nginx 配置文件（配置的时候可以把里面的中文注释删一下，避免编码问题）
 
 ```shell
-$ sudo vim /etc/nginx/conf.d/<域名>.conf
+sudo vim /etc/nginx/conf.d/<域名>.conf
 ```
 
 配置文件内容：
@@ -232,10 +231,10 @@ $ sudo vim /etc/nginx/conf.d/<域名>.conf
 server {
 		listen <端口>;
 		server_name <域名（不带 http 前缀）>;
-		location / { 
+		location / {
 				root /front; // 前端文件路径，绝对路径
-				index index.html; // hash 模式只配置这行支持访问 html 文件就可以了 
-				try_files $uri $uri/ /index.html; // history 模式下需要加一行这个 
+				index index.html; // hash 模式只配置这行支持访问 html 文件就可以了
+				try_files $uri $uri/ /index.html; // history 模式下需要加一行这个
 		}
 }
 ```
@@ -246,9 +245,9 @@ server {
 server {
 		listen <端口>;
 		server_name <域名（不带 http 前缀）>;
-		location /demo { // 子级目录 
-				alias /front/demo; 
-				index index.html; 
+		location /demo { // 子级目录
+				alias /front/demo;
+				index index.html;
 				try_files $uri $uri/ /demo/index.html;
 		}
 }
@@ -283,15 +282,15 @@ server {
         # add_header X-Frame-Options DENY;
         add_header X-Content-Type-Options nosniff;
 
-		location / { 
+		location / {
 				root /front; // 前端文件路径，绝对路径
-				index index.html; // hash 模式只配置这行支持访问 html 文件就可以了 
-				try_files $uri $uri/ /index.html; // history 模式下需要加一行这个 
+				index index.html; // hash 模式只配置这行支持访问 html 文件就可以了
+				try_files $uri $uri/ /index.html; // history 模式下需要加一行这个
 		}
-		
-		location /demo { // 子级目录 
-				alias /front/demo; 
-				index index.html; 
+
+		location /demo { // 子级目录
+				alias /front/demo;
+				index index.html;
 				try_files $uri $uri/ /demo/index.html;
 		}
 }
@@ -302,7 +301,7 @@ server {
 测试 Nginx 配置文件是否正确：
 
 ```shell
-$ sudo nginx -t
+sudo nginx -t
 ```
 
 如果有错误的话会提示具体的文件和行号
@@ -310,7 +309,7 @@ $ sudo nginx -t
 使用 `nginx` 命令（参考 [Nginx 网页服务器](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/Nginx%20%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8.md)）加上参数 `s` 重新载入 Nginx 配置文件并应用
 
 ```shell
-$ sudo nginx -s reload
+sudo nginx -s reload
 ```
 
 ### 反代理
@@ -318,19 +317,19 @@ $ sudo nginx -s reload
 安装 serve
 
 ```shell
-$ sudo npm install -g serve
+sudo npm install -g serve
 ```
 
 反代理图示：
 
-客户端 <------> Nginx <------> serve
+`客户端 <------> Nginx <------> serve`
 
 Nginx 从接收到客户端的请求（比如请求 a.com）了解到需要去找 serve 开的端口和地址要数据，于是把流量转发过去，serve 接收到之后，了解路由的参数，并且把静态文件提取出来返回给 Nginx，Nginx 拿到返回值之后直接返回给客户端，这个流程就叫做「反代理」
 
 反代理需要额外配置一个服务，新建一个 service 文件
 
 ```shell
-$ sudo nano /usr/lib/systemd/system/<项目名称>.service
+sudo nano /usr/lib/systemd/system/<项目名称>.service
 ```
 
 写入服务信息
@@ -354,25 +353,25 @@ WantedBy=multi-user.target
 重载 systemctl 的服务配置
 
 ```shell
-$ sudo systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 
 开启 serve 服务开机自启
 
 ```shell
-$ sudo systemctl enable <项目名称>
+sudo systemctl enable <项目名称>
 ```
 
 开始 serve 服务
 
 ```shell
-$ sudo systemctl start <项目名称>
+sudo systemctl start <项目名称>
 ```
 
 新建一个 Nginx 配置文件（配置的时候可以把里面的中文注释删一下，避免编码问题）
 
 ```shell
-$ sudo vim /etc/nginx/conf.d/<域名>.conf
+sudo vim /etc/nginx/conf.d/<域名>.conf
 ```
 
 配置文件内容：
@@ -382,7 +381,7 @@ $ sudo vim /etc/nginx/conf.d/<域名>.conf
 server {
 		listen <外部可访问端口>;
 		server_name <域名（不带 http 前缀）>;
-		location / { 
+		location / {
                 proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
@@ -398,7 +397,7 @@ server {
 server {
 		listen <外部可访问端口>;
 		server_name <域名（不带 http 前缀）>;
-		location /demo { // 子级目录 
+		location /demo { // 子级目录
 				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
@@ -437,15 +436,15 @@ server {
         # add_header X-Frame-Options DENY;
         add_header X-Content-Type-Options nosniff;
 
-		location / { 
+		location / {
 				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
 				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 添加一个头部 X-Forwarded-For，简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。它不是RFC中定义的标准请求头信息
-				proxy_pass http://127.0.0.1:<端口号>; 
+				proxy_pass http://127.0.0.1:<端口号>;
 		}
-		
-		location /demo { // 子级目录 
+
+		location /demo { // 子级目录
 				proxy_set_header Host $http_host; # 添加一个头部 Host，值为客户端访问的域名
 				proxy_set_header X-Real-IP $remote_addr; # 添加一个头部 X-Real-IP，值为客户端来源 IP
                 proxy_set_header X-Real-PORT $remote_port; # 添加一个头部 X-Real-Port，值为客户端来源端口
@@ -458,7 +457,7 @@ server {
 测试 Nginx 配置文件是否正确：
 
 ```shell
-$ sudo nginx -t
+sudo nginx -t
 ```
 
 如果有错误的话会提示具体的文件和行号
@@ -466,13 +465,13 @@ $ sudo nginx -t
 重新载入 Nginx 配置文件并应用
 
 ```shell
-$ sudo nginx -s reload
+sudo nginx -s reload
 ```
 
 使用 `setsebool` 命令（参考 [🚧  setsebool 配置 SELinux 参数](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/%F0%9F%9A%A7%20%20setsebool%20%E9%85%8D%E7%BD%AE%20SELinux%20%E5%8F%82%E6%95%B0.md)）配置 SELinux （参见 [SELinux 安全 Linux](SELinux%20安全%20Linux.md)）规则以允许 Nginx 访问内网：
 
 ```shell
-$ sudo setsebool -P httpd_can_network_connect on
+sudo setsebool -P httpd_can_network_connect on
 ```
 
 ## 错误排查
@@ -483,7 +482,7 @@ $ sudo setsebool -P httpd_can_network_connect on
 serve 服务启用了吗？可以检查以下服务运行状态：
 
 ```shell
-$ sudo systemctl status <项目名称>
+sudo systemctl status <项目名称>
 ```
 
 如果出现问题，可以检查以下是否是端口占用，重复执行命令导致的。
@@ -494,7 +493,7 @@ $ sudo systemctl status <项目名称>
 如果是使用的静态文件配置，可以检查一下文件的权限，是不是 root，还可以看一下文件具体的权限值：
 
 ```shell
-$ sudo ls -l <目录> | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
+sudo ls -l <目录> | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
              *2^(8-i));if(k)printf("%0o ",k);print}'
 ```
 
@@ -508,24 +507,24 @@ $ sudo ls -l <目录> | awk '{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/
 
 一般 600 的话访问不到，不是 root 的话也可能没办法访问到，需要根据具体情况重新设定一下权限才行。
 
-变更权限值，755 是一个例子，具体根据情况而定（参见 https://www.jianshu.com/p/aa0ae40204ae）
+变更权限值，755 是一个例子，具体根据情况而定（参见 [https://www.jianshu.com/p/aa0ae40204ae](https://www.jianshu.com/p/aa0ae40204ae)）
 一般常用的是 655 或者 755
 
 ```shell
-$ sudo chmod 755 <文件>
+sudo chmod 755 <文件>
 ```
 
 如果设定到 777 才能访问的话，和 CentOS 内置的 SELinux 保护安全策略有关，需要执行以下：
 静态文件的话，授予 Nginx 针对特定目录的访问权限：
 
 ```shell
-$ sudo chcon -Rt httpd_sys_content_t <项目绝对路径>
+sudo chcon -Rt httpd_sys_content_t <项目绝对路径>
 ```
 
 反代理的话，授予 Nginx 访问网络的权限：
 
 ```shell
-$ setsebool -P httpd_can_network_connect on
+setsebool -P httpd_can_network_connect on
 ```
 
 ### 404
@@ -535,9 +534,9 @@ $ setsebool -P httpd_can_network_connect on
 如果是 Nginx 静态文件配置的话，404 可能是 history 模式兼容性配置导致的，`vue-router` 有 hash（哈希）和 history（历史）模式，对于 404 而言需要多加一行
 
 ```nginx
-location / { 
+location / {
 		...
-		try_files $uri $uri/ /index.html; // history 模式下需要加一行这个 
+		try_files $uri $uri/ /index.html; // history 模式下需要加一行这个
 		...
 }
 ```

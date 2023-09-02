@@ -15,13 +15,13 @@ mv <源路径> <目标路径>
 1. 移动单个文件
 
 ```shell
-$ mv meow meow2
+mv meow meow2
 ```
 
 2. 移动文件夹内文件到另一个文件夹
 
 ```shell
-$ mv test/* test2/
+mv test/* test2/
 ```
 
 ## 参数

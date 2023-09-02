@@ -1,6 +1,11 @@
-# Linux 命令索引
+---
+tags:
+  - 命令行/终端
+  - 操作系统/Unix
+  - 操作系统/Linux
+---
 
-#unix #linux #终端
+# Linux 命令索引
 
 ## 文件管理
 

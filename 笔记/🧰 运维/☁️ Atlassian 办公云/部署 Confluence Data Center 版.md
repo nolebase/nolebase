@@ -53,7 +53,7 @@ sudo docker run -it --name postgres -e POSTGRES_PASSWORD=<密码> -d -p 5432:543
 sudo docker exec -it postgres psql -U postgres
 ```
 
-### 建库[^1][^3]：
+### 建库[^1][^3]
 
 ```sql
 CREATE DATABASE confluence WITH
@@ -346,7 +346,7 @@ export JAVA_OPTS="-javaagent:/opt/atlassian-agent/atlassian-agent.jar ${JAVA_OPT
 
 ### 重启 Confluence 的实例
 
-```
+```shell
 sudo systemctl restart confluence
 ```
 
@@ -360,7 +360,7 @@ sudo systemctl restart confluence
 填写到需要许可证的时候就需要输入破解密钥了。
 运行程序以获得破解密钥：
 
-```
+```shell
 java -jar atlassian-agent.jar -p conf -d -m neko@ayaka.moe -n 'Ayaka Neko' -o Ayaka -s <服务器的 ID>
 ```
 
@@ -369,9 +369,9 @@ java -jar atlassian-agent.jar -p conf -d -m neko@ayaka.moe -n 'Ayaka Neko' -o Ay
 `-d`：是否需要 Data Center 许可证
 `-m`：许可证颁发给的邮箱
 `-n`：许可证名称，默认为许可证颁发给的邮箱
-` -o`：许可证颁发给的组织名
+`-o`：许可证颁发给的组织名
 `-p`：产品名称，Confluence 需要填写 conf
- - 支持的参数
+	- 支持的参数
         - crowd: Crowd
         - jsm: JIRA Service Management
         - questions: Questions plugin for Confluence

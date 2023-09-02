@@ -18,5 +18,19 @@
   "MD041": false,
 
   // MD033/no-inline-html - Inline HTML
-  "MD033": false
+  "MD033": false,
+
+  // MD045/no-bare-urls - Images should have alternate text (alt text)
+  "MD045": false,
+
+  // MD010/no-hard-tabs - Hard tabs
+  "MD010": false,
+
+  // MD029/ol-prefix - Ordered list item prefix
+  "MD029": false,
+
+  // MD007/ul-indent - Unordered list indentation
+  "MD007": false,
+
+  "MD028": false
 }

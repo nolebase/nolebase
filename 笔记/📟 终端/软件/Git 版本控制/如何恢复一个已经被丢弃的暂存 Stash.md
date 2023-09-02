@@ -25,6 +25,7 @@ git fsck --unreachable | grep commit | cut -d" " -f3 | xargs git log --merges --
 ```
 
 来源：[recovery - How do I recover a dropped stash in Git? - Stack Overflow](https://stackoverflow.com/a/5879550/19954520)
+
 ## TL;DR
 
 如果你需要寻找你丢失的 Stash，直接运行上面的命令就好了，最后的 `--grep=<你要搜索的 Stash 名称，Stash 一般默认以 WIP 开头>` 是用来帮忙搜索 Stash 标题的，你可以去掉这个 `--grep` 参数，也可以把占位符换成你的 Stash 可能使用过的标题进行搜寻。对我个人而言我都会好好命名 Stash，或者直接用 WIP，所以对我而言使用 `WIP` 或者具体的名字去寻找会比较简单快速。
@@ -108,7 +109,7 @@ grep commit
 
 `grep` 是命令本身，`commit` 是传递给 `grep` 的参数。
 
-`grep` 命令想必你已经很熟悉了，如果不熟悉，可以阅读以下 [`man grep`](https://man7.org/linux/man-pages/man1/grep.1.html)，或者觉得麻烦的话也可以看看[Grep - 维基百科](https://zh.wikipedia.org/zh-tw/Grep)。简而言之，`grep` 命令在这里的作用是在输入的文本数据流中搜索我们给它传递的 `commit` 的字符串，并且把这些命中的行列举出来。如果我们的前一个输出是 
+`grep` 命令想必你已经很熟悉了，如果不熟悉，可以阅读以下 [`man grep`](https://man7.org/linux/man-pages/man1/grep.1.html)，或者觉得麻烦的话也可以看看[Grep - 维基百科](https://zh.wikipedia.org/zh-tw/Grep)。简而言之，`grep` 命令在这里的作用是在输入的文本数据流中搜索我们给它传递的 `commit` 的字符串，并且把这些命中的行列举出来。如果我们的前一个输出是
 
 ```shell
 unreachable blob 6180dc58dc7c3112fff1cdbb7852fbe4fe942b01
@@ -160,7 +161,7 @@ unreachable commit 5fc2505971797600dd926d786499d068d8343b9a
 这意味着我们将字符串切分为了
 
 ```javascript
-["unreachable", "commit", "4a81b846a25c459e8c4ec8ec0f9574e1853ed989"] 
+["unreachable", "commit", "4a81b846a25c459e8c4ec8ec0f9574e1853ed989"]
 ```
 
 这样的数组之后使用 `-f3` 选中了第三个元素，也就是最后一个元素，并且输出这个元素。
@@ -175,7 +176,7 @@ xargs git log --merges --no-walk --grep=WIP
 
 那为什么我们会需要使用 `xargs` 呢？这是因为在使用 Unix / Linux 和通过命令行进行很多操作的时候都会遇到很多不支持管道符 `|` 来传入参数的命令工具，使用 `xargs` 可以很好的解决这个问题，虽然 `xargs` 的原始功能其实是[^2]：
 
-> **xargs** reads items from the standard input, delimited by blanks (which can be protected with double or single quotes or a backslash) or newlines, and executes the _command_ (default is _echo_) one or more times with any _initial-arguments_ followed by items read from standard input.
+> **xargs** reads items from the standard input, delimited by blanks (which can be protected with double or single quotes or a backslash) or newlines, and executes the *command* (default is *echo*) one or more times with any *initial-arguments* followed by items read from standard input.
 
 中文解释：
 
@@ -235,6 +236,7 @@ git log --merges --no-walk --grep=WIP
 其实不光是这个命令很有用，在我找到这个命令的回答里也有其他很多非常有意思的解法，有兴趣的话也可以去阅读和尝试看看！
 
 祝你开发旅程顺利，永远都能找到你需要的提交，以及，记得不要在喝醉了或者嗑药的情况下执行危险的操作哦！
+
 ## 参考资料
 
 - [Git - gitglossary Documentation (git-scm.com)](https://git-scm.com/docs/gitglossary/#Documentation)
@@ -242,4 +244,4 @@ git log --merges --no-walk --grep=WIP
 - [Git - git-log Documentation](https://git-scm.com/docs/git-log)
 
 [^1]: [Git - git-fsck Documentation (git-scm.com)](https://git-scm.com/docs/git-fsck/zh_HANS-CN#_%E6%8F%8F%E8%BF%B0)
-[^2]: [xargs(1) - Linux manual page](https://man7.org/linux/man-pages/man1/xargs.1.html)
+[^2]: [xargs - Linux manual page](https://man7.org/linux/man-pages/man1/xargs.1.html)

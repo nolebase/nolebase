@@ -54,6 +54,7 @@ cd $HOME/.ssh
 ##### 使用 `ssh-keygen` 命令创建密钥对
 
 我们可以使用 `ssh-keygen` 命令（参考 [ssh-keygen 创建 SSH 密钥](../SSH%20%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5/ssh-keygen%20%E5%88%9B%E5%BB%BA%20SSH%20%E5%AF%86%E9%92%A5.md)）来创建 `SSH` 密钥对，此处的参数：
+
 1. t 表示算法，我们指定算法为 RSA
 2. b 表示位数，我们指定为 4096 位的 RSA 密钥
 
@@ -73,7 +74,7 @@ Enter file in which to save the key (/home/neko/.ssh/id_rsa): github_rsa
 设定私钥的密码，如果不希望每次使用都输入密码，可以留空，直接回车
 
 ```shell
-Enter passphrase (empty for no passphrase): 
+Enter passphrase (empty for no passphrase):
 ```
 
 确认密码，如果留空，直接回车
@@ -123,6 +124,7 @@ The key's randomart image is: # 随机码的可视化
 ![github.com.20211008135202](assets/github.com.20211008135202.png)
 
 #### 填写标题和公钥内容
+
 标题只需要你看得懂，作为备注信息就好了。
 获取公钥可以通过 `cat` 命令（参考 [cat 输出文件](../../Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/cat%20%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6.md)）完成
 
@@ -149,7 +151,7 @@ Host hostname
     IdentityFile ~/.ssh/github_rsa
 ```
 
-1. **Host**：域，等同于别名，比如我们可以在这个地方填写 `gh`，下面的 HostName 填写 `github.com`，则连接的时候我们写 `gh` 就可以自动指向到 `github.com`，这个地方选择自己喜欢的方式命名即可，比如我喜欢 <用户名>.git 这样（nekomeowww.git），这样多用户的时候可以方便配置
+1. **Host**：域，等同于别名，比如我们可以在这个地方填写 `gh`，下面的 HostName 填写 `github.com`，则连接的时候我们写 `gh` 就可以自动指向到 `github.com`，这个地方选择自己喜欢的方式命名即可，比如我喜欢 `<用户名>.git` 这样（`nekomeowww.git`），这样多用户的时候可以方便配置
 2. **HostName**：域名，需要连接的远程服务器域名或是 IP 地址，GitHub 的 SSH 需要填写 github.com，GitLab 则填写 gitlab.com，如果是自建的 GitLab 实例，则需要填写对应的实例域名或是 IP
 3. **User**：用户，连接时使用的用户，对于 GitHub SSH 而言，默认填写 git，不用写为自己的用户名，服务器那边会通过你的公钥自动判断的
 4. **IdentityFile**：身份文件，一般是 RSA 密钥的私钥文件，格式不限，只要是复合 OpenSSH 规范的即可

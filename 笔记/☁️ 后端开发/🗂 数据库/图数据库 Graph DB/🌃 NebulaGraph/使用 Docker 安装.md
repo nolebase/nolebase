@@ -10,7 +10,7 @@
 
 | 主体 | 版本号 | 文档地址（如果有） |
 | --- | ----- | --------------- |
-| NebulaGraph | v2.6.0 | https://docs.nebula-graph.com.cn/2.6.0/ |
+| NebulaGraph | v2.6.0 | [https://docs.nebula-graph.com.cn/2.6.0/](https://docs.nebula-graph.com.cn/2.6.0/) |
 
 ## 克隆 Docker Compose[^1] 配置仓库
 
@@ -38,8 +38,9 @@ git checkout v2.6.0
 
 使用 `docker-compose`[^2] 命令启动容器
 参数说明：
- - `up`，表示启动，相当于 `docker start` 或者 `docker run`
- - `-d`，表示在背景（分离模式）运行，不将容器内日志和运行状态、结果输出到命令行上
+
+- `up`，表示启动，相当于 `docker start` 或者 `docker run`
+- `-d`，表示在背景（分离模式）运行，不将容器内日志和运行状态、结果输出到命令行上
 
 ```shell
 docker-compose up -d
@@ -47,7 +48,7 @@ docker-compose up -d
 
 成功之后应该会看到类似的字样：
 
-```
+```shell
 Status: Downloaded newer image for vesoft/nebula-graphd:v2.6.0
 Creating nebula-docker-compose_metad0_1 ... done
 Creating nebula-docker-compose_metad1_1 ... done
@@ -62,7 +63,7 @@ Creating nebula-docker-compose_graphd_1    ... done
 
 ## 连接到 NebulaGraph
 
-### 选项一：使用 Nebula Console 镜像启动一个容器，并连接到 NebulaGraph 服务所在的网络（`nebula-docker-compose_nebula-net`）中。
+### 选项一：使用 Nebula Console 镜像启动一个容器，并连接到 NebulaGraph 服务所在的网络（`nebula-docker-compose_nebula-net`）中
 
 此处 `nebula-docker-compose_nebula-net` 是 Docker 网络名称，实际情况可能与安装的环境名称不符，在执行前建议使用 `docker network` 命令查看一下是否有该网络存在：
 
@@ -79,7 +80,7 @@ f353ba5e0af0   nebula-docker-compose_nebula-net   bridge    local
 示例：
 
 ```shell
-$ docker run --rm -ti --network nebula-docker-compose_nebula-net --entrypoint=/bin/sh vesoft/nebula-console:v2-nightly
+docker run --rm -ti --network nebula-docker-compose_nebula-net --entrypoint=/bin/sh vesoft/nebula-console:v2-nightly
 ```
 
 连接之后输入 `SHOW HOSTS` 即可获取当前的集群信息

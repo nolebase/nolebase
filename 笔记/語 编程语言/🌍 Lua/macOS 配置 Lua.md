@@ -5,7 +5,7 @@
 
 ## 下载
 
-前往 http://www.lua.org/download.html 来查看可用的最新版本
+前往 [http://www.lua.org/download.html](http://www.lua.org/download.html) 来查看可用的最新版本
 ![](assets/image_20211015121714.png)
 
 **右键箭头指示的文件名**（由于版本更新或时间问题，你看到的可能不是 lua-5.4.3.tar.gz），在浏览器菜单中选择 **「复制链接」**。

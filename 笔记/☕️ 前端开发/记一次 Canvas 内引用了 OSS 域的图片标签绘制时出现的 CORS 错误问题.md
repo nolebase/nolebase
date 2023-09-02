@@ -31,7 +31,7 @@
 
 于是我又通过命令行直接检查了相关资源的 OPTIONS 请求结果：
 
-```
+```shell
 curl -H "Origin: https://localhost:3333" -H 'Access-Control-Request-Method: GET' -X OPTIONS 'https://oss.domain/image_key.jpg' -v
 ```
 

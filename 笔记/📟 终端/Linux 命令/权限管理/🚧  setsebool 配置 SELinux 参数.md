@@ -1,1 +1,0 @@
-# `setsebool` 配置 SELinux 参数

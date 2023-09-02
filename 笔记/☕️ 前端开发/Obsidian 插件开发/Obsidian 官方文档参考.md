@@ -1,6 +1,11 @@
-# Obsidian 官方文档参考
+---
+tags:
+  - 软件/Obsidian
+  - 软件/Obsidian/插件
+  - 开发/前端
+---
 
-#obsidian-plugin 
+# Obsidian 官方文档参考
 
 ## 关于 `main.ts`
 

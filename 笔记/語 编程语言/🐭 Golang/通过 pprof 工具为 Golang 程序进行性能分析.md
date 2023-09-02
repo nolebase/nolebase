@@ -44,7 +44,7 @@ import _ "net/http/pprof"
 
 ```go
     r := gin.Default()
- 
+
     r.Handle(http.MethodGet, "/debug/pprof/", gin.WrapF(pprof.Index))
     r.Handle(http.MethodGet, "/debug/pprof/cmdline", gin.WrapF(pprof.Cmdline))
     r.Handle(http.MethodGet, "/debug/pprof/profile", gin.WrapF(pprof.Profile))

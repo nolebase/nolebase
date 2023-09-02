@@ -1,12 +1,17 @@
-# CORS 重定向问题 
+---
+tags:
+  - 开发/后端/CORS
+  - 开发/后端/跨域
+  - 网络/网关/Nginx
+---
+
+# CORS 重定向问题
 
 ##### 文档版本
 
 | 编辑者 | 版本 | 变更日期 | 变更说明 |
 | ----- | --- | ------- | ------- |
 | Neko | v1.0.0 | 2022-07-20 | 创建 |
-
-#nginx #cors #后端 #跨域
 
 ```nginx
 server {
@@ -43,7 +48,7 @@ server {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header Host $http_host;
         proxy_redirect off;
-        
+
         proxy_pass http://<K8S API service srv Domain>:<ServicePort>;
     }
 

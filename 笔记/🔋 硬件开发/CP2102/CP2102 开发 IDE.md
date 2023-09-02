@@ -1,5 +1,6 @@
 Simplicity Studio Software
-https://www.silabs.com/developers/simplicity-studio
+
+[https://www.silabs.com/developers/simplicity-studio](https://www.silabs.com/developers/simplicity-studio)
 
 | **Operating System** | **Tested Version** |
 | -----------------| ---------------|

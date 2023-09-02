@@ -13,7 +13,7 @@
 | -- | -- | -- |
 | Windows 10 | ? |  |
 | Windows 11 | ? |  |
-| Airytec Switch Off | 3.5.1.950 | http://www.airytec.com/en/switch-off/get.aspx |
+| Airytec Switch Off | 3.5.1.950 | [http://www.airytec.com/en/switch-off/get.aspx](http://www.airytec.com/en/switch-off/get.aspx) |
 | Home Assistant | ? |  |
 
 ## 说明
@@ -29,6 +29,7 @@
 在 设置 -> 网络与 Internet -> 网络 中找到自己当前插入网线的网络适配器/网卡，点击属性就可以获取到网卡的信息，此处需要记录下 MAC 地址稍后使用。
 在 设备管理器 -> 网络适配器 中找到上一步找到的网卡，点击右键，选择属性。
 在新打开的窗口中：
+
 1. 需要在『电源选项』中勾选允许网络唤醒，如果有顾虑，可以额外勾选『只允许幻数据包网络唤醒计算机』
 2. 需要在『高级』中找到 Wake on LAN（网络唤醒）并且打开该项，设定为『开启』或是『Enable』
 
@@ -44,6 +45,7 @@
 安装完成之后可以下载额外的简体中文语言包：[下载地址](http://lsls.airytec.com/files/translations/224/zh-CN.lng)。
 
 打开 Airytec Switch Off 之后，不会有主界面程序，需要在程序托盘中找到该程序，然后选择『选项』，在打开的选项中可以设定语言（Language），下拉菜单中选择『Chinese (Simplified)』就可以设定为简体中文；设定之后可以关闭窗口，重新从托盘图标中找到 Airytec Switch Off 并点击『选项』：
+
 1. 在『通用』中请务必勾选『无论是否是当前登录用户都启动』，以确保开机能够自动启动
 2. 在『远程管理』标签页中可以打开『启用网页界面』，如果不需要验证信息直接操纵系统关机、休眠等操作的话，可以取消勾选『启用验证（基本 Basic）』，然后点击应用
 
@@ -69,13 +71,13 @@
 
 在 `configuration.yaml` 中我们需要配置以下内容，使用下面的内容可以创建一个开关实体，以及一个服务脚本命令。：
 其中：
+
 - `switch` 定义了这个实体是一个开关
 - `platform` 表示该实体使用的平台 API，此处为 [wake_on_lan](https://www.home-assistant.io/integrations/wake_on_lan/)
 - `mac` 表示电脑网卡的硬件物理地址，MAC 地址，可以在 Windows 10/11 中的 设置 - 网络和 Internet - 适配器属性中找到
 - `name` 表示该实体的人类友好名称
 - `turn_off` 表示执行关闭操作时行为如何
 	- `service` 表示一个服务，我们定义该服务为 `shell_command`
-
 - `shell_command` 定义了一个脚本命令服务类型
 	- `turn_off_rizumu_desktop` 表示服务的字段名，必须和上面的 service 里面填写的值一致，此处里面的值为一个脚本命令，该脚本命令使用 `curl` （参见 [curl HTTP 客户端](../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF%2F%E8%BD%AF%E4%BB%B6%2Fcurl%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)）并使用 HTTP GET 请求访问了我们在 Windows 配置中配置的 Airytec Switch Off 的网页地址，填写地址的时候需要把之前复制的链接中的 `localhost` 替换为计算机的实际内网 IP，比如 192.168.0.2 或是 10.0.0.2 等。
 

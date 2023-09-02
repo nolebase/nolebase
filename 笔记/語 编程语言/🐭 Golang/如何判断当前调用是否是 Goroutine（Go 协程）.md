@@ -36,7 +36,7 @@ func Go(f func()) {
 		}()
 		f() // 传入的需要进行协程的函数 f
 	}
-	
+
 	// 实际控制开关与否的逻辑
 	if disableGoroutine {
 		internal()
@@ -65,7 +65,7 @@ func TestSetDisableGoroutine(t *testing.T) {
 	var wg sync.WaitGroup // 创建 waitgroup 来等待协程结束
 	var afterGoroutineCount int // 协程 go 出去之后的 Goroutine 计数
 	aquireCurrentGoroutineID := func() {
-	    afterGoroutineCount = runtime.NumGoroutine() // 使用 runtime.NumGoroutine() 获取 Go 协程总数 
+	    afterGoroutineCount = runtime.NumGoroutine() // 使用 runtime.NumGoroutine() 获取 Go 协程总数
 		wg.Done() // 标记 waitgroup 为完成
 	}
 
@@ -88,4 +88,3 @@ func TestSetDisableGoroutine(t *testing.T) {
 	assert.Equal(beforeGoroutineCount, afterGoroutineCount) // 可以断言此时没有变化，Go 函数的调用并没有产生新的协程
 }
 ```
-

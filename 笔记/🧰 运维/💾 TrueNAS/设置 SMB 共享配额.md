@@ -8,7 +8,7 @@
 2. 在打开的设置中点选 **高级选项**
 3. 在附加参数中添加如下配置
 
-```
+```txt
 ixnas:base_user_quota=<容量，例如 100G｜100T｜100M >
 ixnas:zfs_quota_enabled=True
 ```

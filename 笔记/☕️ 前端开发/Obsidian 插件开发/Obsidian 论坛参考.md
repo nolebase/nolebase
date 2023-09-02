@@ -1,6 +1,11 @@
-# Obsidian 论坛参考
+---
+tags:
+  - 软件/Obsidian
+  - 软件/Obsidian/插件
+  - 开发/前端
+---
 
-#obsidian-plugin 
+# Obsidian 论坛参考
 
 [Add a markdown preprocessor - Feature requests - Obsidian Forum](https://forum.obsidian.md/t/add-a-markdown-preprocessor/1451)
 

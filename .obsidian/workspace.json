@@ -11,8 +11,12 @@
             "id": "ca34456897d2ce24",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/📐 图形学/↗️ 向量长度.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "OS/",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -105,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/📐 图形学/↗️ 向量长度.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,6 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/📐 图形学/↗️ 向量长度.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +148,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/📐 图形学/↗️ 向量长度.md"
+              }
             }
           }
         ],
@@ -165,6 +173,18 @@
   },
   "active": "ca34456897d2ce24",
   "lastOpenFiles": [
+    "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
+    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
+    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/mTLS/Golang mTLS 实现.md",
+    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/mTLS/配置 mTLS.md",
+    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
+    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/☁️ 后端开发/🚪 网关/Nginx 迁移 OpenResty.md",
+    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/命令和语句/常用控制台指令.md",
+    "笔记/📃 Archives/📖 文章/微信公众号文章/why技术/【求锤得锤的故事】Redis锁从面试连环炮聊到神仙打架。.md",
+    "笔记/☕️ 前端开发/「自适应」与「响应式」布局.md",
+    "vite.config.ts.timestamp-1693643719302-d31271a9d7577.mjs",
+    "vite.config.ts.timestamp-1693642895990-981aa48613766.mjs",
     "node_modules/@eslint",
     "node_modules/@eslint-community",
     "node_modules/@antfu",
@@ -183,8 +203,6 @@
     "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140515.png",
     "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
     "vite.config.ts.timestamp-1693546072372-0b43887901709.mjs",
-    "vite.config.ts.timestamp-1693546020372-be1107e136b05.mjs",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets",
     "笔记/📟 终端/assets/image_20211012140400.png",
     "笔记/📟 终端/assets/image_20211012135645.png",
     "笔记/🎛️ 操作系统/🪟 Windows/修复 NVidia Shield (Moonlight) 选择了错误的显示器.md",
@@ -194,23 +212,13 @@
     "笔记/📟 终端/Linux 命令索引.md",
     "笔记/📟 终端/Linux 权限.md",
     "笔记/📟 终端/Linux 文件系统.md",
-    "笔记/🎛️ 操作系统/🍎 macOS",
     "笔记/index.md",
     "笔记/🎞️ 代码片段/未命名.md",
-    "笔记/💾 软件/笔记软件/笔记软件.md",
     "未命名.canvas",
-    "未命名.md",
-    "toc.md",
     "scripts/og-template.svg",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot03.png",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot02.png",
-    "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png",
-    "笔记/🧰 运维/🚢 Kubernetes/KubeSphere/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
-    "笔记/🧰 运维/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
-    "笔记/🧰 运维/🖥 Dell 戴尔服务器/配置 iDRAC 的 TLS SSL 证书.md",
-    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/安装 ELK.md",
-    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
-    "笔记/🧰 运维/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md"
+    "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot01.png"
   ]
 }

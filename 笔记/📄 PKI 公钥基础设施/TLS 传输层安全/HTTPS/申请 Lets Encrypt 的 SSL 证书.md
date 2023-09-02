@@ -1,6 +1,18 @@
-# 申请 Let's Encrypt 的 SSL 证书
+---
+tags:
+  - 密码学/证书/TLS/SSL
+  - 密码学/证书/TLS/HTTPS
+  - 密码学/证书/TLS/域名证书
+  - 密码学/证书/LetsEncrypt
+  - 命令行/openssl
+  - 操作系统/Debian
+  - 操作系统/CentOS
+  - 操作系统/Debian/Debian-11
+  - 操作系统/CentOS/CentOS-8
+  - 操作系统/CentOS/CentOS-7
+---
 
-#openssl #域名证书 #https #letsencrypt #ssl #certificate 
+# 申请 Let's Encrypt 的 SSL 证书
 
 ## CentOS 7/8
 

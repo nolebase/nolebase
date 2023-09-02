@@ -38,8 +38,6 @@ export default function onMedia(query: string, callback: (matches: boolean) => v
 
 ```
 
-
-
 ## 使用方法
 
 调用该方法的组件在 `Mounted` 时会触发一次回调函数，之后每当查询结果变更时会触发一次。如果因为浏览器不支持或者参数错误导致媒体查询失败，会在 `console` 中打印一条错误，并且不会触发任何的 `callback`
@@ -47,9 +45,9 @@ export default function onMedia(query: string, callback: (matches: boolean) => v
 ```vue
 <script setup lang="ts">
 import onMedia from '~/util/matchMedia'
+
 onMedia('max-width: 640px', (matches) => {
   console.log('媒体查结果是否匹配：', matches)
 })
 </script>
 ```
-

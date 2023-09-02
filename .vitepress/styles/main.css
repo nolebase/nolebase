@@ -72,7 +72,7 @@
   src: url(/tengwar-annatar-glaemscrafu.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: block
+  font-display: block;
 }
 
 /* 标题所需要的字体 */
@@ -81,41 +81,41 @@
   src: url(/tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: block
+  font-display: block;
 }
 
 /* 首页标题样式 */
-.VPHomeHero>.container>.main>h1 {
+.VPHomeHero > .container > .main > h1 {
   font-size: 5rem;
   font-family: 'tengwarannatar-bold';
 }
 
 /* 首页子标题样式 */
-.VPHomeHero>.container>.main>.text {
+.VPHomeHero > .container > .main > .text {
   padding-top: 45px;
   font-size: 4rem;
 }
 
 /* 首页介绍样式 */
-.VPHomeHero>.container>.main>.tagline {
+.VPHomeHero > .container > .main > .tagline {
   padding-top: 24px;
 }
 
 /* 自适应样式 */
 @media (max-width: 1024px) {
   /* 首页标题样式 */
-  .VPHomeHero>.container>.main>h1 {
+  .VPHomeHero > .container > .main > h1 {
     font-size: 3.5rem;
   }
 
   /* 首页子标题样式 */
-  .VPHomeHero>.container>.main>.text {
+  .VPHomeHero > .container > .main > .text {
     padding-top: 30px;
     font-size: 3rem;
   }
 
   /* 首页介绍样式 */
-  .VPHomeHero>.container>.main>.tagline {
+  .VPHomeHero > .container > .main > .tagline {
     padding-top: 20px;
   }
 }
@@ -123,18 +123,18 @@
 /* 自适应样式 */
 @media (max-width: 640px) {
   /* 首页标题样式 */
-  .VPHomeHero>.container>.main>h1 {
+  .VPHomeHero > .container > .main > h1 {
     font-size: 2.5rem;
   }
 
   /* 首页子标题样式 */
-  .VPHomeHero>.container>.main>.text {
+  .VPHomeHero > .container > .main > .text {
     padding-top: 20px;
     font-size: 2rem;
   }
 
   /* 首页介绍样式 */
-  .VPHomeHero>.container>.main>.tagline {
+  .VPHomeHero > .container > .main > .tagline {
     padding-top: 20px;
   }
 }
@@ -183,4 +183,8 @@
 /* 覆盖正文的 h1 标题样式 */
 .vp-doc > div > h1 {
   margin-bottom: 16px;
+}
+
+.VPLocalSearchBox > mark {
+  color: white;
 }

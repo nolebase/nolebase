@@ -1,6 +1,12 @@
-# `asciinema-player` 插件开发记录
+---
+tags:
+  - 开发/前端
+  - 开发/语言/TypeScript
+  - 开发/工具/Rollup
+  - 软件/Obsidian/插件
+---
 
-#typescript #obsidian-plugin #rollup #前端
+# `asciinema-player` 插件开发记录
 
 ## 说明
 
@@ -125,7 +131,7 @@ import { App, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian'
 export default class MyPlugin extends Plugin {
   // 定义了设定的结构
   settings: MyPluginSettings;
- 
+
   // onload 是默认挂载插件时执行的事件函数
   async onload() {
     // TODO

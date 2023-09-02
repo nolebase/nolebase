@@ -1,7 +1,7 @@
 应用程序未在运行
 错误：
 
-```
+```txt
 {
 	NSAppleScriptErrorAppName = "Google Chrome";
     NSAppleScriptErrorBriefMessage = "Application isn\U2019t running.";
@@ -39,7 +39,7 @@
 
 添加许可以后重新运行，发现新的错误：
 
-```
+```txt
 {
     NSAppleScriptErrorAppName = "Google Chrome";
     NSAppleScriptErrorBriefMessage = "Not authorized to send Apple events to Google Chrome.";
@@ -55,7 +55,7 @@
 
 [激活 App 沙盒](https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW25)
 
-具体可以参考一下这篇文章：[  
+具体可以参考一下这篇文章：[
 Executing AppleScript in a Mac app on macOS Mojave and dealing with AppleEvent sandboxing](https://www.jessesquires.com/blog/2018/11/17/executing-applescript-in-mac-app-on-macos-mojave/)
 
 [^1]: [applescript - Apple Script 在基于 Swift 的 macOS 应用程序上运行时失败 - Stack Overflow](https://stackoverflow.com/questions/52432402/apple-script-fails-when-run-from-within-a-macos-swift-based-application)

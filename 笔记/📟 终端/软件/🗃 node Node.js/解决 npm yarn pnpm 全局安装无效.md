@@ -39,7 +39,7 @@ source /etc/profile
 
 ### 在 Windows 下
 
-1.  按Win+R键打开运行窗口
+1. 按Win+R键打开运行窗口
 2. 输入下面的命令， 回车
 
 ```shell

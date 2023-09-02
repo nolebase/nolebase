@@ -1,6 +1,20 @@
-# 配置 mTLS
+---
+tags:
+  - 网络/网关/Nginx
+  - 密码学/证书/TLS/SSL
+  - 密码学/证书/TLS
+  - 密码学/证书/证书机构
+  - 密码学/证书/证书机构/CA
+  - 密码学/证书/p12
+  - 安全/网络安全/ZTNA
+  - 开发/后端/CORS
+  - 安全/操作系统安全/KeyStore
+  - 密码学/证书/PKI
+  - 命令行/openssl
+  - 密码学/证书/TLS/mTLS
+---
 
-#nginx #keystore #ssl #tls #certificate #p12 #ztna #ca #openssl 
+# 配置 mTLS
 
 本文章着重参考了 [OpenSSL Certificate Authority — Jamie Nguyen](https://jamielinux.com/docs/openssl-certificate-authority/introduction.html) 一站的文章说明和讲解。
 
@@ -24,16 +38,16 @@ openssl req -x509 -new -nodes -key ca.pem -sha256 -days 18250 -out ca.crt
 
 ```shell
 Enter pass phrase for myCA.key:
-You are about to be asked to enter information that will be incorporated 
+You are about to be asked to enter information that will be incorporated
 into your certificate request.
-What you are about to enter is what is called a Distinguished Name or a DN. 
-There are quite a few fields but you can leave some blank 
-For some fields there will be a default value, 
-If you enter '.', the field will be left blank. 
------ 
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
 Country Name (2 letter code) [AU]: CN # 国家代码
-State or Province Name (full name) [Some-State]: Shanghai # 省份/州名称 
-State Locality Name (eg, city) []: Shanghai # 所在城市名称 
+State or Province Name (full name) [Some-State]: Shanghai # 省份/州名称
+State Locality Name (eg, city) []: Shanghai # 所在城市名称
 Organization Name (eg, company) [Internet Widgits Pty Ltd]: Ayaka iHome # 此处输入组织名称
 Organizational Unit Name (eg, section) []: Home # 此处输入部门名称
 Common Name (e.g. server FQDN or YOUR name) []: Ayaka iHome Root CA # 此处输入证书名称
@@ -134,8 +148,8 @@ For some fields there will be a default value,
 If you enter '.', the field will be left blank.
 -----
 Country Name (2 letter code) []:CN # 国家代码
-State or Province Name (full name) []:Shanghai # 省份/州名称 
-Locality Name (eg, city) []:Shanghai # 所在城市名称 
+State or Province Name (full name) []:Shanghai # 省份/州名称
+Locality Name (eg, city) []:Shanghai # 所在城市名称
 Organization Name (eg, company) []:Ayaka Home Users # 此处输入组织名称
 Organizational Unit Name (eg, section) []:Users # 此处输入部门名称
 Common Name (eg, fully qualified host name) []:neko@ayaka.moe # 此处输入证书名称
@@ -223,7 +237,7 @@ server {
 
     # 添加 ssl_client_certificate 参数配置，填写 证书链 bundle 的路径
     ssl_client_certificate /etc/nginx/client_certs/home_ca_intermediate_1_bundle.crt;
-    
+
     # 添加 ssl_verify_client 参数配置，填写为 optional。
     # 注：该参数配置支持三个值，分别是：
     # 1. on: 强制 TLS 证书验证，不满足时拒绝连接;
@@ -231,7 +245,7 @@ server {
     # 3. off; 关闭 TLS 证书验证。
     ssl_verify_client      optional;
     ...
-    
+
     location / {
 
         # 进行 if 判断，对 TLS 客户端证书验证结果进行判断，如果验证不成功，则返回 496 错误代码

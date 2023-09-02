@@ -1,5 +1,11 @@
+---
+tags:
+  - 游戏/街机游戏
+  - 游戏/音乐游戏/音击/ONGEKI
+  - 游戏/音乐游戏/世嘉游戏/HDD
+---
+
 # SDDT 1.35 HDD 配置
-#HDD #音乐游戏 #音游 #音击 #ongeki #街机
 
 ##### 文档版本
 
@@ -245,6 +251,7 @@ service=0x76
 ```
 
 #### dinput 部分的配置
+
 和之前提到的 dinput 部分的配置一样，只不过下面的配置文件列出了可能更适合玩家操作的配置，也提供了将鼠标左右键设置为音击的左右侧键的配置，大家可以参考并复制粘贴到 `segatools.ini` 中。
 
 ```ini
@@ -508,4 +515,3 @@ cd D:\Games\O.N.G.E.K.I_Bright_Memory\SDDT_1.35.01\package
 在 `segatools.ini` 文件中有 vfs 部分配置，检查其中 `amfs` 字段中配置的 `amfs` 文件夹内是否含有 IC1 文件，如果没有，可以从 segatools 中重新解压获取。
 
 在 `segatools.ini` 文件中有 dns 部分配置，检查其中 startup 字段或是 default 字段所填写的域名或是 IP 是否在线和可被访问并支持你所运行的 O.N.G.E.K.I Bright Memory 游戏版本。
-

@@ -12,8 +12,6 @@ It might not look like much of a video game, but Akili Interactive’s EndeavorR
 
 That’s the landmark decision [from the Food and Drug Administration (FDA)](https://www.fda.gov/news-events/press-announcements/fda-permits-marketing-first-game-based-digital-therapeutic-improve-attention-function-children-adhd), which is authorizing doctors to prescribe the iPhone and iPad game for kids between ages eight and 12 years old with ADHD, after it underwent seven years of clinical trials that studied over 600 children to figure out whether a game could actually make a difference.
 
-<iframe src="https://www.youtube.com/embed/6RR8hjBGBac?rel=0" allowfullscreen="" scrolling="no" allow="encrypted-media; accelerometer; gyroscope; picture-in-picture"></iframe>
-
 According to the company’s favorite of the five studies, the answer is yes: one-third of kids treated “no longer had a measurable attention deficit on at least one measure of objective attention” after playing the obstacle-dodging, target-collecting game for 25 minutes a day, five days a week for four weeks.
 
 “Improvements in ADHD impairments following a month of treatment with EndeavorRx were maintained for up to a month,” [the company cites](https://www.businesswire.com/news/home/20200615005739/en/Akili-Announces-FDA-Clearance-EndeavorRxTM-Children-ADHD), with the most common side effects being frustration and headache — seemingly mild compared to traditional drugs, as you’d hope from so-called virtual medicine.

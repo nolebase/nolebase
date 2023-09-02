@@ -21,7 +21,7 @@ $ tree
 └── tests
     ├── meow
     └── test1
-	
+
 $ find ./ -name meow
 ./tests/meow
 ```
@@ -46,7 +46,7 @@ $ tree # 当前目录下的文件结构
     ├── meow
     └── test1
         └── meow2
-		
+
 $ find ./ -name meow2 -maxdepth 2
 
 $ find ./ -maxdepth 2 -name meow
@@ -64,7 +64,7 @@ $ find ./ -maxdepth 3 -name meow2
 
 有时候不想搜索到目录，有时候不想搜索到文件，我们可以限制搜索的类型，需要添加**参数 `type`**， type（类型）的含义。`type` 参数接受两种字符串类型的值，分别是 **f**（file 文件）和 **d**（directory 目录）。
 
-1. 限制文件 
+1. 限制文件
 
 ```shell
 $ tree # 当前目录下的文件结构
@@ -74,7 +74,7 @@ $ tree # 当前目录下的文件结构
     ├── meow
     └── test1
         └── meow2
-		
+
 $ find ./ -name meow -type f
 ./tests/meow
 
@@ -94,7 +94,7 @@ $ tree # 当前目录下的文件结构
     ├── meow
     └── test1
         └── meow2
-		
+
 $ find ./ -name test1 -type d
 ./tests/test1
 

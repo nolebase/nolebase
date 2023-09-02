@@ -1,6 +1,13 @@
-# OpenResty 记录 JWT 中的 userId
+---
+tags:
+  - 网络/网关/Nginx
+  - 网络/网关/OpenResty
+  - 开发/语言/Lua
+  - 开发/JWT
+  - 开发/语言/Lua/luajit
+---
 
-#jwt #nginx #openresty #lua #luajit #网关
+# OpenResty 记录 JWT 中的 userId
 
 ##### 文档版本
 
@@ -16,8 +23,6 @@
 | OpenResty | openresty/1.21.4.1 | [OpenResty® - Official Site](https://openresty.org/en/) |
 | SkyLothar/lua-resty-jwt | 0.1.11 | [SkyLothar/lua-resty-jwt: JWT For The Great Openresty](https://github.com/SkyLothar/lua-resty-jwt) |
 | cloudflare/lua-resty-cookie | 0.0.0 | [cloudflare/lua-resty-cookie: Lua library for HTTP cookie manipulations for OpenResty/ngx_lua](https://github.com/cloudflare/lua-resty-cookie) |
-
-
 
 ## 安装 lua-resty-jwt
 

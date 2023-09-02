@@ -15,13 +15,13 @@ cp [参数] <源路径> <目标路径>
 1. 复制单个文件
 
 ```shell
-$ cp meow meow2
+cp meow meow2
 ```
 
 2. 移动文件夹内文件到另一个文件夹
 
 ```shell
-$ cp test1/* test2/
+cp test1/* test2/
 ```
 
 ## 参数
@@ -29,7 +29,7 @@ $ cp test1/* test2/
 ### 复制时包含子文件夹中的文件 - 参数 r
 
 ```shell
-$ cp -r test1/* test2/
+cp -r test1/* test2/
 ```
 
 ### 其他参数

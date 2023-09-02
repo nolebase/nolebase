@@ -1,6 +1,12 @@
-# Nginx 迁移 OpenResty
+---
+tags:
+  - 网络/网关/Nginx
+  - 网络/网关/OpenResty
+  - 操作系统/Debian
+  - 开发/迁移
+---
 
-#nginx #openresty  #debian #网关 #迁移指南
+# Nginx 迁移 OpenResty
 
 ##### 文档版本
 

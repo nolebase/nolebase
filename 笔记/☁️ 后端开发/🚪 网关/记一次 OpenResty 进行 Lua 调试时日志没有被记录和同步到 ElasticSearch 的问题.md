@@ -1,6 +1,18 @@
-# 记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题
+---
+tags:
+  - 网络/网关/Nginx
+  - 网络/网关/OpenResty
+  - 开发/语言/Lua
+  - 开发/后端/日志
+  - 开发/云原生/可观测
+  - 开发/云原生/日志
+  - 软件/Elastic/ElasticSearch
+  - 软件/Elastic/ElasticStack
+  - 软件/Elastic/ELK
+  - 开发/故障排查
+---
 
-#网关 #nginx #openresty #lua #elastic #elasticsearch #elk #故障排查
+# 记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题
 
 ### 文档兼容性
 

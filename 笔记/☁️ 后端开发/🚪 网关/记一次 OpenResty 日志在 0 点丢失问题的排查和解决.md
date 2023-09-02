@@ -1,6 +1,11 @@
-# 记一次 OpenResty 日志在 0 点丢失问题的排查和解决
+---
+tags:
+  - 网络/网关/Nginx
+  - 网络/网关/OpenResty
+  - 开发/故障排查
+---
 
-#网关 #nginx #openresty #故障排查
+# 记一次 OpenResty 日志在 0 点丢失问题的排查和解决
 
 ### 文档兼容性
 
@@ -45,7 +50,7 @@ drwxr-xr-x 12 root     root        0  8月 28 00:00 ..
 我们可以打开 `/etc/logrotate/conf.d/nginx` 看看，可以发现里面有一行 `postrotate` 配置，这行配置下面有一个 `if` 条件判断的语句伴随，其含义是：
 如果 `/var/run/nginx.pid` 存在的话，那么使用 `kill -USR1 <Nginx 进程 ID>` 命令将 Nginx 杀掉并重新载入。我印象里我在迁移 OpenResty 的时候对 pid 路径进行过修改，有可能是因为没有读取到 `/var/run/nginx.pid`，且 Logrotate 依然把原先的文件切分到了新的文件里，导致原先 OpenResty 打开的日志文件的 file descriptor 无法再次进行写入了，但是也无法正常关闭，也许是这么个原因？
 
-```
+```txt
 /var/log/nginx/*.log {
         daily
         missingok
@@ -93,7 +98,7 @@ fi
 
 得到下面的 Logrotate 文件：
 
-```
+```txt
 /usr/local/openresty/nginx/logs/*.log {
         daily
         missingok

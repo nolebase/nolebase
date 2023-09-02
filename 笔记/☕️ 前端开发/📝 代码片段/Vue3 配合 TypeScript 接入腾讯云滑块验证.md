@@ -1,6 +1,7 @@
 # Vue3 配合 TypeScript 接入腾讯云滑块验证
 
 ### 引入 SDK
+
 找到 `index.html` 在 `<head>` 标签中增加腾讯云验证器 SDK 引用
 `./index.html`:
 
@@ -11,15 +12,13 @@
 <script src="https://ssl.captcha.qq.com/TCaptcha.js" ></script>
 ```
 
-
-
 ### 封装 TypeScript 调用方法
 
 为了兼容 TypeScript 类型提示，并且优雅的在 Vue3 中使用，我们用下面这个 `.ts` 文件对 SDK 的 `TencentCaptcha` 方法进行封装。
 
 `./src/util/sliderValidator.ts`:
 
-``````typescript
+```typescript
 /** 验证结果 */
 export type SliderValidatorResult = {
   /** 验证结果，0：验证成功。2：用户主动关闭验证码。 */
@@ -83,26 +82,7 @@ type Reject = (reason?: any) => void
 export type ApplySlider = () => Promise<SliderValidatorResult>
 
 /**
-  # 腾讯滑块验证器
-  ### 使用方法:
-  ```vue
-  <script lang="ts" setup>
-  import { sliderVerification, ApplySlider } from '~/util/SliderValidator'
-  let applySlider: ApplySlider
-  // 初始化滑块验证器
-  // 初始化参数，参考 TencentCaptchaOptions
-  onMounted(() => { applySlider = sliderVerification() })
-
-  // 开始验证
-  async function onVerify() {
-    const res = await applySlider()
-    console.log('SliderValidatorResult:', res)
-  }
-  </script>
-  <template>
-    <button @click="onVerify"> 滑块验证 </button>
-  </template>
-  ```
+  腾讯滑块验证器
 **/
 export function sliderVerification(options?: TencentCaptchaOptions): ApplySlider {
   if (!TencentCaptcha) throw new Error('TencentCaptcha is not defined')
@@ -129,11 +109,30 @@ export function sliderVerification(options?: TencentCaptchaOptions): ApplySlider
     })
   }
 }
-``````
+```
+
+### 使用方法
+
+```vue
+<script lang="ts" setup>
+import { sliderVerification, ApplySlider } from '~/util/SliderValidator'
+let applySlider: ApplySlider
+// 初始化滑块验证器
+// 初始化参数，参考 TencentCaptchaOptions
+onMounted(() => { applySlider = sliderVerification() })
+
+// 开始验证
+async function onVerify() {
+  const res = await applySlider()
+  console.log('SliderValidatorResult:', res)
+}
+</script>
+<template>
+  <button @click="onVerify"> 滑块验证 </button>
+</template>
+```
 
 这边会用到一个 `import.meta.env.VITE_TENCENT_CAPTCHA_APP_ID` 的参数，可以从从腾讯云的验证码控制台中获取, 验证码控制台页面内【图形验证】>【验证列表】进行查看 。如果未新建验证，请根据业务需求选择适合的验证渠道、验证场景进行新建。
-
-
 
 ### 使用方法
 
@@ -161,7 +160,7 @@ async function onVerify() {
 
 ```
 
-#### Options 提供以下配置参数：
+#### Options 提供以下配置参数
 
 | 配置名 | 值类型 | 说明 |
 | --- | --- | --- |

@@ -1,19 +1,27 @@
-# 单元测试工具 testify 用法
-#golang #godailylib #testing #单元测试 #go
+---
+tags:
+  - 开发/代码/代码片段
+  - 开发/语言/Golang
+  - 开发/单元测试
+  - 开发/语言/Golang/godailylib
+---
 
-> ## 简述
+# 单元测试工具 testify 用法
+
+> **简述**
 > testify可以说是最流行的（从 GitHub star 数来看）Go 语言测试库了。testify提供了很多方便的函数帮助我们做assert和错误信息输出。使用标准库testing，我们需要自己编写各种条件判断，根据判断结果决定输出对应的信息。
 
 ---
+
 ## 简介
 
 [`testify`](https://github.com/stretchr/testify)可以说是最流行的（从 GitHub star 数来看）Go 语言测试库了。`testify` 提供了很多方便的函数帮助我们做 `assert` 和错误信息输出。使用标准库 `testing`，我们需要自己编写各种条件判断，根据判断结果决定输出对应的信息。
 
 `testify` 核心有三部分内容：
 
--   `assert`：断言；
--   `mock`：测试替身；
--   `suite`：测试套件。
+- `assert`：断言；
+- `mock`：测试替身；
+- `suite`：测试套件。
 
 ## 准备工作
 
@@ -22,14 +30,14 @@
 创建目录并初始化：
 
 ```shell
-$ mkdir -p testify && cd testify
-$ go mod init github.com/darjun/go\-daily-lib/testify
+mkdir -p testify && cd testify
+go mod init github.com/darjun/go\-daily-lib/testify
 ```
 
 安装 `testify` 库：
 
 ```shell
-$ go get -u github.com/stretchr/testify
+go get -u github.com/stretchr/testify
 ```
 
 ## `assert`
@@ -164,12 +172,12 @@ func (a *Assertions) Zero(i interface{}, msgAndArgs ...interface{})
 
 `Zero` 函数断言参数 `i` 为其所属类型的零值。不同的类型零值不同，参考：
 
--   指针：`nil`；
--   整数：0；
--   浮点数：0.0；
--   字符串：空字符串`""`；
--   布尔：false；
--   切片或 channel：长度为 0。
+- 指针：`nil`；
+- 整数：0；
+- 浮点数：0.0；
+- 字符串：空字符串`""`；
+- 布尔：false；
+- 切片或 channel：长度为 0。
 
 ### `NotZero`
 
@@ -181,13 +189,12 @@ func (a *Assertions) NotZero(i interface{}, msgAndArgs ...interface{})
 
 `NotZero` 函数断言参数 `i` **不**为其所属类型的零值。不同的类型**非**零值不同，参考：
 
-
--   指针：不为 `nil`；
--   整数：不为 0；
--   浮点数：不为 0.0；
--   字符串：不为空字符串`""`；
--   布尔：true；
--   切片或 channel：长度不为 0。
+- 指针：不为 `nil`；
+- 整数：不为 0；
+- 浮点数：不为 0.0；
+- 字符串：不为空字符串`""`；
+- 布尔：true；
+- 切片或 channel：长度不为 0。
 
 ### `Condition`
 
@@ -259,12 +266,12 @@ func Empty(t TestingT, object interface{}, msgAndArgs ...interface{}) bool
 
 `Empty`断言 `object` 是空，根据 `object` 中存储的实际类型，空的含义不同：
 
--   指针：`nil`；
--   整数：0；
--   浮点数：0.0；
--   字符串：空字符串`""`；
--   布尔：false；
--   切片或 channel：长度为 0。
+- 指针：`nil`；
+- 整数：0；
+- 浮点数：0.0；
+- 字符串：空字符串`""`；
+- 布尔：false；
+- 切片或 channel：长度为 0。
 
 ### `NotEmpty`
 
@@ -276,12 +283,12 @@ func (a *Assertions) NotEmpty(object interface{}, msgAndArgs ...interface{})
 
 `NotEmpty` 断言 `object` **不**为空，根据 `object` 中存储的实际类型，非空的含义不同：
 
--   指针：不为 `nil`；
--   整数：不为 0；
--   浮点数：不为 0.0；
--   字符串：不为空字符串`""`；
--   布尔：true；
--   切片或 channel：长度不为 0。
+- 指针：不为 `nil`；
+- 整数：不为 0；
+- 浮点数：不为 0.0；
+- 字符串：不为空字符串`""`；
+- 布尔：true；
+- 切片或 channel：长度不为 0。
 
 ### `Equal`
 
@@ -360,7 +367,7 @@ func ObjectsAreEqualValues(expected, actual interface{}) bool {
   if actualType == nil {
     return false
   }
-  // 通过反射包在运行时获取 expected 参数的类型  
+  // 通过反射包在运行时获取 expected 参数的类型
   expectedValue := reflect.ValueOf(expected)
   // 如果两者的值和对象都是相同的，并且可以从期望值转换到实际值
   if expectedValue.IsValid() && expectedValue.Type().ConvertibleTo(actualType) {
@@ -545,7 +552,7 @@ func (a *Assertions) Less(e1 interface{}, e2 interface{}, msgAndArgs ...interfac
 
 `Less` 函数可以对比大小，断言参数 `e1` 小于参数 `e2` 。
 
-### `LessOrEqual` 
+### `LessOrEqual`
 
 函数类型：
 
@@ -604,7 +611,6 @@ func (a *Assertions) PanicsWithValue(expected interface{}, f PanicTestFunc, msgA
 ```
 
 `PanicsWithValue` 函数期望回调函数 `f` 发生恐慌 panic，并且恐慌返回一个值，值为参数 `expected`。
-
 
 ### 逆断言
 
