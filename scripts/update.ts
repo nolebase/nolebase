@@ -1,14 +1,14 @@
 #!/usr/bin/env tsx
+import { fileURLToPath } from 'node:url'
+import { dirname, join, resolve } from 'node:path'
+import { createHash } from 'node:crypto'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
-import { fileURLToPath } from 'url'
-import { join, resolve, dirname } from 'path'
 import Git from 'simple-git'
 import matter from 'gray-matter'
-import { createHash } from 'crypto'
-import type { DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
-import TagsAlias from '../.vitepress/docsTagsAlias.json'
 import uniq from 'lodash/uniq'
+import TagsAlias from '../.vitepress/docsTagsAlias.json'
+import type { DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
 
 const dir = './'
 const target = '笔记/'
@@ -24,10 +24,10 @@ const git = Git(DIR_ROOT)
  * @param options
  * @returns
  */
-export async function listPages(dir: string, options: { target?: string, ignore?: string[] }) {
+export async function listPages(dir: string, options: { target?: string; ignore?: string[] }) {
   const {
     target = '',
-    ignore = []
+    ignore = [],
   } = options
 
   const files = await fg(`${target}**/*.md`, {
@@ -60,7 +60,7 @@ async function addRouteItem(indexes: any[], path: string, upgradeIndex = false) 
     index: title,
     text: title,
     link: `/${path.slice(0, suffixIndex)}`,
-    lastUpdated: +await git.raw(['log', '-1', '--format=%at', path]) * 1000
+    lastUpdated: +await git.raw(['log', '-1', '--format=%at', path]) * 1000,
   }
   const linkItems = item.link.split('/')
   linkItems.shift()
@@ -70,9 +70,8 @@ async function addRouteItem(indexes: any[], path: string, upgradeIndex = false) 
       linkItems.shift()
   })
 
-  if (linkItems.length === 1) {
+  if (linkItems.length === 1)
     return
-  }
 
   indexes = addRouteItemRecursion(indexes, item, linkItems, upgradeIndex)
 }
@@ -98,7 +97,8 @@ function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgrad
       // 如果没有找到，就创建一个
       obj = { index: onePath, text: onePath, collapsed: true, items: [] }
       indexes.push(obj)
-    } else if (!obj.items) {
+    }
+    else if (!obj.items) {
       // 如果找到了，但是没有 items，就创建对应的 items 和标记为可折叠
       obj.collapsed = true
       obj.items = []
@@ -108,7 +108,8 @@ function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgrad
       // 如果只有一个元素，并且是 index.md，直接写入 link 和 lastUpdated
       obj.link = item.link
       obj.lastUpdated = item.lastUpdated
-    } else {
+    }
+    else {
       // 否则，递归遍历
       obj.items = addRouteItemRecursion(obj.items, item, path, upgradeIndex)
     }
@@ -187,7 +188,9 @@ async function processTags(doc: string, docsMetadata: DocsMetadata, tags: string
   for (const tag of tags) {
     docsMetadata.tags = docsMetadata.tags || []
     const found = docsMetadata.tags.find((item) => {
-      if (item.name === tag) return item
+      if (item.name === tag)
+        return item
+      return null
     })
 
     // 优先查找所有的 alias
@@ -208,7 +211,7 @@ async function processTags(doc: string, docsMetadata: DocsMetadata, tags: string
         alias: aliases,
         appearedInDocs: [],
         description: '',
-        count: 1
+        count: 1,
       }
 
       // 将当前 doc 加入到 appearedInDocs 中
@@ -219,7 +222,8 @@ async function processTags(doc: string, docsMetadata: DocsMetadata, tags: string
     }
 
     found.count++
-    if (!found.appearedInDocs.includes(doc)) found.appearedInDocs.push(doc)
+    if (!found.appearedInDocs.includes(doc))
+      found.appearedInDocs.push(doc)
     found.alias = uniq([...found.alias, ...aliases])
   }
 }
@@ -230,14 +234,17 @@ async function processTags(doc: string, docsMetadata: DocsMetadata, tags: string
  * @param docsMetadata docsMetadata.json 的内容
  */
 async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
-  if (!docsMetadata.docs) docsMetadata.docs = []
+  if (!docsMetadata.docs)
+    docsMetadata.docs = []
 
-  const tagsToBeProcessed: { doc: string, tags: string[] }[] = []
+  const tagsToBeProcessed: { doc: string; tags: string[] }[] = []
 
   docsMetadata.docs = docs.map((docPath) => {
     // 尝试在 docsMetadata.docs 中找到当前文件的历史 hash 记录
-    let found = docsMetadata.docs.find((item) => {
-      if (item.relativePath === docPath) return item
+    const found = docsMetadata.docs.find((item) => {
+      if (item.relativePath === docPath)
+        return item
+      return null
     })
 
     // 读取源文件
@@ -246,6 +253,9 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
     const parsedPageContent = matter(content)
 
     if (Array.isArray(parsedPageContent.data.tags)) {
+      if (parsedPageContent.data.tags.includes(null))
+        console.error('null tag found in', docPath)
+
       tagsToBeProcessed.push({ doc: docPath, tags: parsedPageContent.data.tags })
     }
 
@@ -258,13 +268,17 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
         relativePath: docPath,
         hashes: { sha256: { content: tempSha256Hash } },
       }
-    } else {
+    }
+    else {
       // 如果 found.hashes 不存在，就初始化
-      if (!found.hashes) found.hashes = { sha256: { content: tempSha256Hash } }
+      if (!found.hashes)
+        found.hashes = { sha256: { content: tempSha256Hash } }
       // 如果 found.hashes.sha256 不存在，就初始化
-      if (!found.hashes.sha256) found.hashes.sha256 = { content: tempSha256Hash }
+      if (!found.hashes.sha256)
+        found.hashes.sha256 = { content: tempSha256Hash }
       // 如果历史记录的 sha256 hash 与当前的相同，就不标记 contentDiff，并且直接返回
-      if (found.hashes.sha256.content === tempSha256Hash && !found.hashes.sha256.contentDiff) return found
+      if (found.hashes.sha256.content === tempSha256Hash && !found.hashes.sha256.contentDiff)
+        return found
 
       // 否则，标记 contentDiff
       found.hashes.sha256.contentDiff = tempSha256Hash

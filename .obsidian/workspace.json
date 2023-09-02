@@ -173,6 +173,7 @@
   },
   "active": "ca34456897d2ce24",
   "lastOpenFiles": [
+    "vite.config.ts.timestamp-1693658222391-cfca6ec2ecb36.mjs",
     "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
     "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
     "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/mTLS/Golang mTLS 实现.md",
@@ -213,7 +214,6 @@
     "笔记/📟 终端/Linux 权限.md",
     "笔记/📟 终端/Linux 文件系统.md",
     "笔记/index.md",
-    "笔记/🎞️ 代码片段/未命名.md",
     "未命名.canvas",
     "scripts/og-template.svg",
     "笔记/🎛️ 操作系统/🪟 Windows/assets/hyper-v-ubuntu-lag-and-resolutions-fixes-screenshot04.png",

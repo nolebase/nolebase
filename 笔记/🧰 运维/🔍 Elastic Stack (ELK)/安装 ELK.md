@@ -1,8 +1,3 @@
----
-tags:
-  - 
----
-
 # 使用 Docker 安装和部署 ELK
 
 **ELK 即 ElasticSearch、Logstash、Kibana 栈，用于日志分析、日志搜索。**
