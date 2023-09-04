@@ -51,5 +51,5 @@ export default {
 
     app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
-  }
+  },
 }

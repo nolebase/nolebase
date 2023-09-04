@@ -1,7 +1,10 @@
 {
   "name": "nolebase",
-  "version": "1.0.0",
   "type": "module",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "scripts": {
     "docs:dev": "pnpm run update && vitepress dev",
     "docs:build": "pnpm run update && vitepress build && tsx scripts/post-docs.ts",
@@ -9,9 +12,6 @@
     "update": "tsx scripts/update.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
     "@headlessui/vue": "^1.7.15",

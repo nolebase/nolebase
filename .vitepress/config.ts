@@ -1,8 +1,10 @@
-import { defineConfigWithTheme } from 'vitepress';
-import { sidebar } from './docsMetadata.json';
-import { siteName, siteDescription, githubRepoLink } from './meta';
-import MarkdownItFootnote from 'markdown-it-footnote';
-import MarkdownItMathjax3 from 'markdown-it-mathjax3';
+import process from 'node:process'
+import { defineConfigWithTheme } from 'vitepress'
+import MarkdownItFootnote from 'markdown-it-footnote'
+import MarkdownItMathjax3 from 'markdown-it-mathjax3'
+import { MarkdownItBiDirectionalLinks } from './plugins/vitepress-plugin-bidirectional-links/src'
+import { sidebar } from './docsMetadata.json'
+import { githubRepoLink, siteDescription, siteName } from './meta'
 
 export default defineConfigWithTheme({
   lang: 'zh-CN',
@@ -30,7 +32,7 @@ export default defineConfigWithTheme({
         sizes: '16x16',
       },
     ],
-    ['meta', { name: 'author', content: `Ayaka Neko, Ayaka Rizumu` }],
+    ['meta', { name: 'author', content: 'Ayaka Neko, Ayaka Rizumu' }],
     [
       'meta',
       {
@@ -113,8 +115,11 @@ export default defineConfigWithTheme({
       dark: 'one-dark-pro',
     },
     config: (md) => {
-      md.use(MarkdownItFootnote);
-      md.use(MarkdownItMathjax3);
+      md.use(MarkdownItFootnote)
+      md.use(MarkdownItMathjax3)
+      md.use(MarkdownItBiDirectionalLinks({
+        dir: process.cwd(),
+      }))
     },
   },
-});
+})

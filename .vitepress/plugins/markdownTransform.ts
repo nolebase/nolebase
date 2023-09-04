@@ -1,6 +1,6 @@
+import { relative, resolve } from 'node:path'
 import type { Plugin } from 'vite'
 import { include } from '../meta'
-import { resolve, relative } from 'path'
 
 const ROOT = resolve(__dirname, '../../')
 
@@ -12,11 +12,10 @@ export function MarkdownTransform(): Plugin {
       if (!id.endsWith('.md'))
         return null
 
-        // 将 ID 转换为相对路径，便于进行正则匹配
-        id = relative(ROOT, id)
+      // 将 ID 转换为相对路径，便于进行正则匹配
+      id = relative(ROOT, id)
 
       if (id.match(RegExp(`^(${include.join('|')})\\/`))) {
-
         const { footer } = await getFunctionMarkdown()
         code = `${code}\n\n${footer}`
       }
@@ -25,7 +24,6 @@ export function MarkdownTransform(): Plugin {
     },
   }
 }
-
 
 export async function getFunctionMarkdown() {
   // return {

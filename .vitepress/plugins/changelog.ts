@@ -1,5 +1,5 @@
 import type { Plugin } from 'vite'
-import { CommitInfo } from '../../scripts/types'
+import type { CommitInfo } from '../../scripts/types'
 
 const ID = '/virtual-changelog'
 

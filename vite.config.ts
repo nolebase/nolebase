@@ -1,3 +1,6 @@
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path'
+import process from 'node:process'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
@@ -6,8 +9,6 @@ import { ChangeLog } from './.vitepress/plugins/changelog'
 import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
 import { EasyTag } from './.vitepress/plugins/vitepress-plugin-docsmd-easytag/src'
 import { include } from './.vitepress/meta'
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
 
 const ROOT = dirname(fileURLToPath(import.meta.url))
 
