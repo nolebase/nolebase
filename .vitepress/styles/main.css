@@ -185,6 +185,11 @@
   margin-bottom: 16px;
 }
 
-.VPLocalSearchBox > mark {
-  color: white;
+.vp-doc a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
 }

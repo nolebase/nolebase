@@ -7,49 +7,49 @@ const props = defineProps<{
   editing?: boolean
 }>()
 
-const tag = ref(props.tag)
-
 const emits = defineEmits<{
   (e: 'deleteTag', value: { content: string }): void
   (e: 'editTag', value: { content: string }): void
 }>()
 
-const deleteTag = () => {
-  emits("deleteTag", props.tag)
+const tag = ref(props.tag)
+
+function deleteTag() {
+  emits('deleteTag', props.tag)
 }
 
-const editTag = () => {
-  emits("editTag", props.tag)
+function editTag() {
+  emits('editTag', props.tag)
 }
 </script>
 
 <template>
   <TagItem>
-    <template #pre v-if="props.editing">
+    <template v-if="props.editing" #pre>
       <div
         class="tags-draggable-handle"
-        w-5 h-5
-        rounded
+
+        h-5 w-5 rounded
         hover="bg-zinc-300 dark:bg-zinc-800"
-        active="opacity-0">
+        active="opacity-0"
+        transition="all duration-200 ease"
+      >
         <div flex items-center opacity="50" class="i-octicon:grabber-16" />
       </div>
     </template>
     <template #default>
       <span text-sm>{{ props.tag.content }}</span>
     </template>
-    <template #post v-if="props.editing">
+    <template v-if="props.editing" #post>
       <div flex items-center justify-center>
         <button
-          w-5 h-5 mr-1
-          select-none
-          rounded
-          flex items-center justify-center
+
           title="删除"
-          transition-all
-          @click="deleteTag"
+          mr-1 h-5 w-5 flex select-none items-center justify-center rounded transition-all
           hover="bg-zinc-300 dark:bg-zinc-800"
           active="bg-zinc-400 dark:bg-zinc-900"
+          transition="all duration-200 ease"
+          @click="deleteTag"
         >
           <div flex items-center opacity="50" class="i-octicon:x-16" />
         </button>

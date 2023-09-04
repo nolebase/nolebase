@@ -2,6 +2,7 @@
 import { fileURLToPath } from 'node:url'
 import { dirname, join, resolve } from 'node:path'
 import { createHash } from 'node:crypto'
+import process from 'node:process'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
 import Git from 'simple-git'
