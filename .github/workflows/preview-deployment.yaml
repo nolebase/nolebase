@@ -9,6 +9,9 @@ jobs:
   build:
     name: 构建
     runs-on: ubuntu-22.04
+    environment:
+      name: 预览 Preview
+      url: ${{ steps.netlify-deployment.outputs.NETLIFY_URL }}
     steps:
       - name: 签出代码
         uses: actions/checkout@v3
@@ -51,21 +54,12 @@ jobs:
         run: pnpm docs:build
 
       - name: 部署到 Netlify
-        uses: nwtgck/actions-netlify@v2
+        id: netlify-deployment
+        uses: netlify/actions/cli@master
         timeout-minutes: 10
         with:
-          publish-dir: './.vitepress/dist'
-          production-branch: main
-          production-deploy: false
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: Deploy from GitHub Actions
-          enable-pull-request-comment: true
-          enable-commit-comment: true
-          enable-commit-status: true
-          overwrites-pull-request-comment: true
-          functions-dir: './netlify/functions'
-          enable-github-deployment: false
-          fails-without-credentials: true
+          args: deploy --dir=.vitepress/dist --functions=netlify/functions
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
