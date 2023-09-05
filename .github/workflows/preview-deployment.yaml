@@ -1,0 +1,72 @@
+name: 构建预览并部署到 Netlify
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: 构建
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 签出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 安装 Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: 8
+
+      - name: 获取 pnpm store 目录
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: 配置 pnpm 缓存
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 安装思源黑体
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cp public/source-han-sans.ttf ~/.local/share/fonts/source-han-sans.ttf
+
+      - name: 构建
+        run: pnpm docs:build
+
+      - name: 部署到 Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        timeout-minutes: 10
+        with:
+          publish-dir: './.vitepress/dist'
+          production-branch: main
+          production-deploy: false
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: Deploy from GitHub Actions
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          enable-commit-status: true
+          overwrites-pull-request-comment: true
+          functions-dir: './netlify/functions'
+          enable-github-deployment: false
+          fails-without-credentials: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+

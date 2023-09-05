@@ -93,9 +93,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md"
-              }
+              "state": {}
             }
           },
           {
@@ -120,7 +118,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +134,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,8 +171,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ad6a678511e6815c",
+  "active": "b3c5391030f6ddd3",
   "lastOpenFiles": [
+    "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
+    "vite.config.ts.timestamp-1693844974167-a88b6ffadb3b3.mjs",
     "vite.config.ts.timestamp-1693844620285-2fcaffe5f240a.mjs",
     "vite.config.ts.timestamp-1693841932514-28d9a051fdf16.mjs",
     "vite.config.ts.timestamp-1693841920444-5dbc27b1228fc.mjs",
@@ -186,10 +184,7 @@
     "vite.config.ts.timestamp-1693841685183-0d1e9cdc6a23e.mjs",
     "vite.config.ts.timestamp-1693841551926-8688a8c1c2386.mjs",
     "vite.config.ts.timestamp-1693841527771-c0ae388ea5a48.mjs",
-    "vite.config.ts.timestamp-1693841504623-8a688ee396f4c.mjs",
     "笔记/bl.md",
-    "vite.config.ts.timestamp-1693841123977-0c58455972c9a.mjs",
-    "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
     "笔记/🎬 项目/Notion.md",
     "笔记/💾 软件/笔记软件/Obsidian.md",
     "笔记/💾 软件/笔记软件/Notion.md",
