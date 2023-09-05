@@ -51,7 +51,7 @@ jobs:
         run: pnpm docs:build
 
       - name: 部署到 Netlify
-        uses: nwtgck/actions-netlify@v2.0
+        uses: nwtgck/actions-netlify@v2
         timeout-minutes: 10
         with:
           publish-dir: './.vitepress/dist'
