@@ -2,7 +2,7 @@ import process from 'node:process'
 import { defineConfigWithTheme } from 'vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
-import { MarkdownItBiDirectionalLinks } from './plugins/vitepress-plugin-bidirectional-links/src'
+import { MarkdownItBiDirectionalLinks } from './plugins/markdown-it-bidirectional-links/src'
 import { sidebar } from './docsMetadata.json'
 import { githubRepoLink, siteDescription, siteName } from './meta'
 

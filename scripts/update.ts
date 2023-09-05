@@ -293,13 +293,20 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
 }
 
 async function run() {
+  let now = (new Date()).getTime()
   const docs = await listPages(dir, { target })
-  console.log('matched', docs.length, 'files')
+  console.log('listed pages in', `${(new Date()).getTime() - now}ms`)
+  now = (new Date()).getTime()
 
   const docsMetadata: DocsMetadata = { docs: [], sidebar: [], tags: [] }
 
   await processDocs(docs, docsMetadata)
+  console.log('processed docs in', `${(new Date()).getTime() - now}ms`)
+  now = (new Date()).getTime()
+
   await processSidebar(docs, docsMetadata)
+  console.log('processed sidebar in', `${(new Date()).getTime() - now}ms`)
+
   await fs.writeJSON(join(DIR_VITEPRESS, 'docsMetadata.json'), docsMetadata, { spaces: 2 })
 }
 

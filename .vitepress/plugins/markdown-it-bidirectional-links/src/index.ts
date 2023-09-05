@@ -1,4 +1,4 @@
-import { basename, extname, join, relative, resolve } from 'node:path'
+import { basename, extname, join, relative } from 'node:path'
 import fg from 'fast-glob'
 import type { PluginSimple } from 'markdown-it'
 
@@ -77,22 +77,22 @@ export const MarkdownItBiDirectionalLinks: (options: {
         return false
 
       const newLink = findBiDirectionalLinks(alreadyMatchedBiDirectionalLinks, possibleBiDirectionalLinksInFilePaths, possibleBiDirectionalLinksInFullFilePaths, link)
-      if (newLink) {
-        const resolvedNewLink = join(options.baseDir ?? '/', relative(rootDir, newLink))
+      if (!newLink)
+        return false
 
-        // Create new link_open, text, and link_close tokens
-        const openToken = state.push('link_open', 'a', 1)
-        openToken.attrSet('href', resolvedNewLink)
-        const textToken = state.push('text', '', 0)
-        textToken.content = link[1].replace('[[', '').replace(']]', '')
-        state.push('link_close', 'a', -1)
+      const resolvedNewLink = join(options.baseDir ?? '/', relative(rootDir, newLink))
 
-        // Update the position in the source string
-        state.pos += link[0].length
+      // Create new link_open, text, and link_close tokens
+      const openToken = state.push('link_open', 'a', 1)
+      openToken.attrSet('href', resolvedNewLink)
+      const textToken = state.push('text', '', 0)
+      textToken.content = link[1].replace('[[', '').replace(']]', '')
+      state.push('link_close', 'a', -1)
 
-        return true
-      }
-      return false
+      // Update the position in the source string
+      state.pos += link[0].length
+
+      return true
     })
   }
 }
