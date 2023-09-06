@@ -5,6 +5,7 @@ import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { MarkdownItBiDirectionalLinks } from './plugins/markdown-it-bidirectional-links/src'
 import { sidebar } from './docsMetadata.json'
 import { githubRepoLink, siteDescription, siteName } from './meta'
+import { MarkdownItTokenTransform } from './plugins/markdown-it-element-transform/src'
 
 export default defineConfigWithTheme({
   lang: 'zh-CN',
@@ -119,6 +120,17 @@ export default defineConfigWithTheme({
       md.use(MarkdownItMathjax3)
       md.use(MarkdownItBiDirectionalLinks({
         dir: process.cwd(),
+      }))
+      md.use(MarkdownItTokenTransform({
+        transformToken: (token) => {
+          switch (token.type) {
+            case 'link_open':
+              token.tag = 'NolebaseLinkPreviewPopup'
+              break
+            case 'link_close':
+              token.tag = 'NolebaseLinkPreviewPopup'
+          }
+        },
       }))
     },
   },

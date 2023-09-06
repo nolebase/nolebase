@@ -17,6 +17,9 @@ devDependencies:
   '@iconify-json/octicon':
     specifier: ^1.1.45
     version: 1.1.45
+  '@iconify-json/svg-spinners':
+    specifier: ^1.1.2
+    version: 1.1.2
   '@netlify/functions':
     specifier: ^1.6.0
     version: 1.6.0
@@ -997,6 +1000,12 @@ packages:
 
   /@iconify-json/octicon@1.1.45:
     resolution: {integrity: sha512-F0McN9nyabgeJ2DmHmtShvZWBRStkH6D0cLuFzqiUhd0PeLBxP/ro9sMgBwORNP80X07SKx9HWijw3i5QU9gRw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/svg-spinners@1.1.2:
+    resolution: {integrity: sha512-Aab6SqkORaTJ1W+ooufn6C8BsBitrn3uk8iRQLPA6pjhyvQAhkKCGMctyXIL5ZjrycnoFVsZ4mx7KnwEMra8qg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

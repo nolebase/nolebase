@@ -1,3 +1,4 @@
+import type { App } from 'vue'
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import '../styles/main.css'
@@ -19,6 +20,8 @@ import TocList from './components/TocList.vue'
 import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
+import LinkPreviewPopup from './components/LinkPreviewPopup.vue'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -29,7 +32,7 @@ export default {
       'nav-bar-content-after': () => h(Share),
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }: { app: App<Element> }) {
     app.component('HomePage', HomePage)
     app.component('DocFooter', DocFooter)
     app.component('Share', Share)
@@ -51,5 +54,7 @@ export default {
 
     app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
+
+    app.component('NolebaseLinkPreviewPopup', LinkPreviewPopup)
   },
 }
