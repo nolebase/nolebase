@@ -2,7 +2,8 @@ import { basename, extname, join, relative } from 'node:path'
 import fg from 'fast-glob'
 import type { PluginSimple } from 'markdown-it'
 
-const biDirectionalLinkPattern = /\[\[([^|\]\n]+)(\|([^\]\n]+))?\]\]/
+const biDirectionalLinkPattern = /\[\[([^|\]\n]+)(\|([^\]\n]+))?\]\](?!\()/
+const biDirectionalLinkPatternWithStart = /^\[\[([^|\]\n]+)(\|([^\]\n]+))?\]\](?!\()/
 
 function findBiDirectionalLinks(alreadyMatchedBiDirectionalLinks: Record<string, string>, possibleBiDirectionalLinksInFilePaths: Record<string, string>, possibleBiDirectionalLinksInFullFilePaths: Record<string, string>, link: RegExpMatchArray) {
   if (link.length < 2 || (!link[0] || !link[1]))
@@ -76,17 +77,27 @@ export const MarkdownItBiDirectionalLinks: (options: {
       if (!link)
         return false
 
+      if (!link.input)
+        return false
+
+      if (!biDirectionalLinkPatternWithStart.exec(link.input))
+        return false
+
       const newLink = findBiDirectionalLinks(alreadyMatchedBiDirectionalLinks, possibleBiDirectionalLinksInFilePaths, possibleBiDirectionalLinksInFullFilePaths, link)
       if (!newLink)
         return false
 
       const resolvedNewLink = join(options.baseDir ?? '/', relative(rootDir, newLink))
 
-      // Create new link_open, text, and link_close tokens
+      // Create new link_open
       const openToken = state.push('link_open', 'a', 1)
       openToken.attrSet('href', resolvedNewLink)
+
+      // text
       const textToken = state.push('text', '', 0)
-      textToken.content = link[1].replace('[[', '').replace(']]', '')
+      textToken.content = link[1]
+
+      // and link_close tokens
       state.push('link_close', 'a', -1)
 
       // Update the position in the source string

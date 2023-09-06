@@ -57,7 +57,11 @@ function handleMouseLeave() {
 function querySelectUntilFind(iframeElement: HTMLIFrameElement, selector: string) {
   return new Promise<HTMLElement>((resolve) => {
     setTimeout(() => {
+      if (!iframeElement.contentDocument)
+        querySelectUntilFind(iframeElement, selector).then(resolve)
+
       const targetElement = iframeElement.contentDocument.querySelector(selector)
+
       if (!targetElement)
         querySelectUntilFind(iframeElement, selector).then(resolve)
 

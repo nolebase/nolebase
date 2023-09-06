@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
+                "file": "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md"
+                "file": "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md"
               }
             }
           },
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
+                "file": "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
+                "file": "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,20 +180,20 @@
   },
   "active": "ad6a678511e6815c",
   "lastOpenFiles": [
-    "vite.config.ts.timestamp-1693984643626-3fd4317eb4dec.mjs",
-    "vite.config.ts.timestamp-1693984159825-3169454985836.mjs",
-    "vite.config.ts.timestamp-1693976520967-90f38a54b091c.mjs",
-    "vite.config.ts.timestamp-1693976079562-a7689e4e3c25a.mjs",
-    "vite.config.ts.timestamp-1693975990118-9def930bf5e04.mjs",
-    "vite.config.ts.timestamp-1693975799213-fb5e9b78d80e4.mjs",
-    "vite.config.ts.timestamp-1693975780894-a956aca52586f.mjs",
-    "vite.config.ts.timestamp-1693975712619-a7aa6915c855f.mjs",
-    "vite.config.ts.timestamp-1693975454649-67f95ce85cd12.mjs",
-    "vite.config.ts.timestamp-1693975425833-797e29ee27636.mjs",
-    "笔记/link.md",
-    "vite.config.ts.timestamp-1693970274857-f7061189bdf99.mjs",
-    "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
+    "vite.config.ts.timestamp-1693986842543-bd19347e55462.mjs",
     "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
+    "vite.config.ts.timestamp-1693986795903-0c9438397639d.mjs",
+    "vite.config.ts.timestamp-1693986618107-83f23663dbe1a.mjs",
+    "vite.config.ts.timestamp-1693986388226-23dcc3bc0ac36.mjs",
+    "vite.config.ts.timestamp-1693986224739-88cd88bc157cf.mjs",
+    "vite.config.ts.timestamp-1693986115235-31d37a6004e9c.mjs",
+    "vite.config.ts.timestamp-1693986003433-1de81cf2ae04d.mjs",
+    "vite.config.ts.timestamp-1693985549178-fefdb1f9baa01.mjs",
+    "vite.config.ts.timestamp-1693985520113-7d84cf378708a.mjs",
+    "vite.config.ts.timestamp-1693985281659-eaaf1be5f21b7.mjs",
+    "vite.config.ts.timestamp-1693985156912-aa50c68985cd9.mjs",
+    "笔记/link.md",
+    "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
     "笔记/bl.md",
     "笔记/🎬 项目/Notion.md",
     "笔记/💾 软件/笔记软件/Obsidian.md",
