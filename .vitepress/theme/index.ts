@@ -5,6 +5,7 @@ import '../styles/main.css'
 import '../styles/vars.css'
 import 'uno.css'
 
+import LinkPreviewPopup from '../plugins/vue3-plugin-link-preview-popup/src/index'
 import HomePage from './components/HomePage.vue'
 import DocFooter from './components/DocFooter.vue'
 import Share from './components/Share.vue'
@@ -19,8 +20,6 @@ import TocList from './components/TocList.vue'
 
 import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
-
-import LinkPreviewPopup from './components/LinkPreviewPopup.vue'
 
 export default {
   extends: DefaultTheme,
@@ -55,6 +54,6 @@ export default {
     app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
 
-    app.component('NolebaseLinkPreviewPopup', LinkPreviewPopup)
+    app.use(LinkPreviewPopup)
   },
 }
