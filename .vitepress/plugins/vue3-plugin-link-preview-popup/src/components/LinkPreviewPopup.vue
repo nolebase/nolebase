@@ -17,14 +17,18 @@ const hovering = ref(false)
 const { width: windowWidth } = useWindowSize()
 const { livesInIframe } = useInIframe()
 
-const hrefHost = computed<string>(() => {
+const isAnchor = computed<boolean>(() => {
   if (!inInClient.value)
+    return false
+
+  return props.href.startsWith('#')
+})
+
+const hrefHost = computed<string>(() => {
+  if (!inInClient.value || isAnchor.value)
     return ''
 
   try {
-    if (props.href.startsWith('#'))
-      return ''
-
     return new URL(props.href, window.location.href).host
   }
   catch (e) {
@@ -80,7 +84,7 @@ onMounted(() => {
     <div class="link-preview-link-content-container" inline-block flex="~" items-center justify-center>
       <slot />
       <div
-        v-if="!isOneOfPreviewHosts"
+        v-if="!isAnchor && !isOneOfPreviewHosts"
         class="link-preview-link-content-external-icon"
         flex="~"
         i-octicon:link-external-16 items-center justify-center text-xs
