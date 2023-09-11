@@ -1,8 +1,8 @@
 import md5 from 'md5'
 import Git from 'simple-git'
+import { include } from '../.vitepress/meta'
 import type { CommitInfo, ContributorInfo } from './types'
 import { uniq } from './utils'
-import { include } from '../.vitepress/meta'
 
 const git = Git({
   maxConcurrentProcesses: 200,
