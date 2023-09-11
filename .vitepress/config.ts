@@ -125,10 +125,10 @@ export default defineConfigWithTheme({
         transformToken: (token) => {
           switch (token.type) {
             case 'link_open':
-              token.tag = 'NolebaseLinkPreviewPopup'
+              token.tag = 'LinkPreviewPopup'
               break
             case 'link_close':
-              token.tag = 'NolebaseLinkPreviewPopup'
+              token.tag = 'LinkPreviewPopup'
           }
         },
       }))

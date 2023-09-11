@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { inject, onUnmounted, ref } from 'vue'
+import { inject, ref } from 'vue'
 import type { LinkPreviewPopupOptions } from '../types'
 import { defaultLinkPreviewPopupOptions, linkPreviewPopupInjectionKey } from '../types'
-import LocalLink from './LocalLink.vue'
+import LinkButton from './LinkButton.vue'
 
 const props = defineProps < {
   href: string
 }>()
 
-const options = inject<LinkPreviewPopupOptions>(linkPreviewPopupInjectionKey, defaultLinkPreviewPopupOptions)
-
 const iframeNotReady = ref(true)
+
+const options = inject<LinkPreviewPopupOptions>(linkPreviewPopupInjectionKey, defaultLinkPreviewPopupOptions)
 
 function querySelectUntilFind(iframeElement: HTMLIFrameElement, selector: string) {
   return new Promise<HTMLElement>((resolve) => {
@@ -55,19 +55,15 @@ async function handleIframeOnLoad(e: Event) {
 
   setTimeout(() => {
     iframeNotReady.value = false
-  }, 500)
+  }, 250)
 }
-
-onUnmounted(() => {
-  iframeNotReady.value = true
-})
 </script>
 
 <template>
   <iframe
     v-show="!iframeNotReady"
     border="none"
-    m-0 w-full p-0
+    m-0 w-full overflow-hidden rounded-lg p-0
     class="live-preview-popup-iframe"
     flex="1"
     :src="props.href"
@@ -80,13 +76,26 @@ onUnmounted(() => {
     flex="~ col 1" m-0 w-full items-center justify-center p-0
     class="live-preview-popup-loading"
   >
-    <div i-svg-spinners:3-dots-bounce text-3xl />
+    <span i-svg-spinners:3-dots-bounce text-3xl />
     <span>加载中</span>
   </div>
-  <LocalLink
+  <LinkButton
     show-external-icon :href="props.href" border="none"
-    bg="zinc-100 dark:zinc-800" absolute bottom-0 m-4 rounded-lg px-4 py-2 text-sm
+    absolute bottom-0 m-4 rounded-lg px-4 py-2 text-sm
   >
     <span flex="1">在当前页面打开</span>
-  </LocalLink>
+  </LinkButton>
 </template>
+
+<style scoped less>
+.link-preview-popup-pointer {
+  height: 8px;
+  width: 16px;
+  position: absolute;
+  background: inherit;
+  z-index: 30;
+  top: -8px;
+  left: 0;
+  border: 1px solid blue;
+}
+</style>

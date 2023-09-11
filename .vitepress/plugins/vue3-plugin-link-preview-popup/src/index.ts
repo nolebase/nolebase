@@ -1,6 +1,6 @@
 import type { Plugin } from 'vue'
 import LinkPreviewPopup from './components/LinkPreviewPopup.vue'
-import { linkPreviewPopupInjectionKey } from './types'
+import { defaultLinkPreviewPopupOptions, linkPreviewPopupInjectionKey } from './types'
 import type { LinkPreviewPopupOptions } from './types'
 
 export default {
@@ -8,8 +8,8 @@ export default {
     if (options)
       app.provide(linkPreviewPopupInjectionKey, options)
     else
-      app.provide(linkPreviewPopupInjectionKey, {})
+      app.provide(linkPreviewPopupInjectionKey, defaultLinkPreviewPopupOptions)
 
-    app.component('NolebaseLinkPreviewPopup', LinkPreviewPopup)
+    app.component('LinkPreviewPopup', LinkPreviewPopup)
   },
 } as Plugin
