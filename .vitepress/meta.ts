@@ -7,7 +7,7 @@ export const siteDescription = '记录回忆，知识和畅想的地方'
 export const include = ['笔记', '生活']
 
 /** Repo */
-export const githubRepoLink = 'https://github.com/LittleSound/notebook'
+export const githubRepoLink = 'https://github.com/nolebase/nolebase'
 
 /** 社交媒体 */
 // ...

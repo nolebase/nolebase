@@ -68,7 +68,7 @@ export default defineConfigWithTheme({
   themeConfig: {
     outline: 'deep',
     editLink: {
-      pattern: 'https://github.com/LittleSound/notebook/tree/main/:path',
+      pattern: 'https://github.com/nolebase/nolebase/tree/main/:path',
       text: '编辑本页面',
     },
     localeLinks: {
