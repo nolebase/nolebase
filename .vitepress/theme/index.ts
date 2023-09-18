@@ -1,9 +1,11 @@
-import type { App } from 'vue'
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
-import '../styles/main.css'
-import '../styles/vars.css'
-import 'uno.css'
+import type { Theme } from 'vitepress'
+
+import {
+  NolebaseEnhancedReadabilitiesMenu,
+  NolebaseEnhancedReadabilitiesScreenMenu,
+} from '@nolebase/vitepress-plugin-enhanced-readabilities'
 
 import LinkPreviewPopup from '../plugins/vue3-plugin-link-preview-popup/src/index'
 import HomePage from './components/HomePage.vue'
@@ -21,17 +23,29 @@ import TocList from './components/TocList.vue'
 import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
-export default {
+import '../styles/main.css'
+import '../styles/vars.css'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
+
+import 'uno.css'
+
+const ExtendedTheme: Theme = {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'home-features-after': () => h(HomePage),
       'doc-footer-before': () => h(DocFooter),
-      'nav-bar-content-after': () => h(Share),
+      'nav-bar-content-after': () => [
+        h(NolebaseEnhancedReadabilitiesMenu),
+        h(Share),
+      ],
+      'nav-screen-content-after': () => [
+        h(NolebaseEnhancedReadabilitiesScreenMenu),
+      ],
     })
   },
-  enhanceApp({ app }: { app: App<Element> }) {
+  enhanceApp({ app }) {
     app.component('HomePage', HomePage)
     app.component('DocFooter', DocFooter)
     app.component('Share', Share)
@@ -57,3 +71,5 @@ export default {
     app.use(LinkPreviewPopup)
   },
 }
+
+export default ExtendedTheme
