@@ -24,8 +24,8 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@nolebase/vitepress-plugin-enhanced-readabilities':
-    specifier: ^1.0.0
-    version: 1.0.0(postcss@8.4.27)(vite@4.4.8)(vitepress@1.0.0-rc.10)(vue@3.3.4)
+    specifier: ^1.0.1
+    version: 1.0.1(postcss@8.4.27)(vite@4.4.8)(vitepress@1.0.0-rc.10)(vue@3.3.4)
   '@types/body-parser':
     specifier: ^1.19.2
     version: 1.19.2
@@ -1117,8 +1117,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@1.0.0(postcss@8.4.27)(vite@4.4.8)(vitepress@1.0.0-rc.10)(vue@3.3.4):
-    resolution: {integrity: sha512-GMHMZwwnYr/+Add90VbkAWhtIyh1WV3ljT6YSVon58vXUKTSmuP3+WkCVzc+l5LGPSzMq4Yzk0I/7Huvkg6gBw==}
+  /@nolebase/vitepress-plugin-enhanced-readabilities@1.0.1(postcss@8.4.27)(vite@4.4.8)(vitepress@1.0.0-rc.10)(vue@3.3.4):
+    resolution: {integrity: sha512-nKlFLd6HYqKIHEMGfeAxy9RvycEhCbAkEdvEIlVVFJcoOLdScbn+ylGvy1jXpAzyK1FwQER/iKo3ChT1AWZGvg==}
     peerDependencies:
       vitepress: 1.0.0-rc.12
       vue: ^3.3.4

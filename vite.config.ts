@@ -25,7 +25,6 @@ export default defineConfig(async () => {
       exclude: ['vitepress'],
     },
     plugins: [
-      // custom
       EasyTag({
         rootDir: ROOT,
         includes: [...include],
@@ -41,5 +40,8 @@ export default defineConfig(async () => {
       }),
       UnoCSS(),
     ],
+    ssr: {
+      noExternal: ['@nolebase/vitepress-plugin-enhanced-readabilities'],
+    },
   }
 })
