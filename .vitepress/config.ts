@@ -2,10 +2,11 @@ import process from 'node:process'
 import { defineConfigWithTheme } from 'vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
-import MarkdownItBiDirectionalLinks from '@nolebase/markdown-it-bi-directional-links'
+import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
+import type { Options } from '@nolebase/markdown-it-element-transform'
+import { ElementTransform } from '@nolebase/markdown-it-element-transform'
 import { sidebar } from './docsMetadata.json'
 import { githubRepoLink, siteDescription, siteName } from './meta'
-import { MarkdownItTokenTransform } from './plugins/markdown-it-element-transform/src'
 
 export default defineConfigWithTheme({
   lang: 'zh-CN',
@@ -118,11 +119,11 @@ export default defineConfigWithTheme({
     config: (md) => {
       md.use(MarkdownItFootnote)
       md.use(MarkdownItMathjax3)
-      md.use(MarkdownItBiDirectionalLinks({
+      md.use(BiDirectionalLinks({
         dir: process.cwd(),
       }))
-      md.use(MarkdownItTokenTransform({
-        transformToken: (token) => {
+      md.use(ElementTransform, {
+        transform: (token) => {
           switch (token.type) {
             case 'link_open':
               token.tag = 'LinkPreviewPopup'
@@ -131,7 +132,7 @@ export default defineConfigWithTheme({
               token.tag = 'LinkPreviewPopup'
           }
         },
-      }))
+      } as Options)
     },
   },
 })
