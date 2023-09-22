@@ -2,7 +2,10 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 
+import type { Options as NolebaseEnhancedReadabilitiesOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import {
+  InjectionKey as NolebaseEnhancedReadabilitiesInjectionKey,
+  LayoutMode as NolebaseEnhancedReadabilitiesLayoutMode,
   NolebaseEnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities'
@@ -67,6 +70,15 @@ const ExtendedTheme: Theme = {
 
     app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
+
+    app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
+      layoutSwitch: {
+        defaultMode: NolebaseEnhancedReadabilitiesLayoutMode.FullWidth,
+      },
+      spotlight: {
+        defaultToggle: true,
+      },
+    } as NolebaseEnhancedReadabilitiesOptions)
 
     app.use(LinkPreviewPopup)
   },
