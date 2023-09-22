@@ -3,15 +3,11 @@ import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
 </script>
 
 <template>
-  <div flex justify-center items-center>
+  <div flex items-center justify-center>
     <Menu as="div" class="relative inline-block">
       <div>
         <MenuButton
-          w-fit
-          select-none
-          rounded-full
-          flex items-center justify-center
-          transition-all
+          w-fit flex select-none items-center justify-center rounded-full transition-all
           hover="bg-zinc-300 dark:bg-zinc-800"
           active="bg-zinc-400 dark:bg-zinc-900"
         >
@@ -28,17 +24,10 @@ import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          absolute
-          z-20
-          left-0 mt-2 w-56
-          origin-top-right
-          divide-y divide-zinc-700
-          rounded-md
           bg="white dark:zinc-800"
           text="dark:zinc-200"
-          shadow-lg
           ring="1 opacity-5 black dark:zinc-700"
-          focus:outline-none
+          absolute left-0 z-20 mt-2 w-56 origin-top-right rounded-md shadow-lg divide-y divide-zinc-700 focus:outline-none
         >
           <slot name="items" />
         </MenuItems>

@@ -2,7 +2,7 @@
 // @ts-expect-error virtual
 import changelog from '/virtual-changelog'
 import { computed } from 'vue'
-import { ContributorInfo, CommitInfo } from '../../../scripts/types'
+import type { CommitInfo, ContributorInfo } from '../../../scripts/types'
 import { useRawPath } from '../composables/route'
 import { useCommits } from '../composables/changelog'
 
@@ -30,8 +30,8 @@ const contributors = computed<ContributorInfo[]>(() => {
 <template>
   <div class="flex flex-wrap gap-4 pt-2">
     <em v-if="!contributors.length">暂无相关贡献者</em>
-    <div v-else v-for="c of contributors" :key="c.hash" class="flex gap-2 items-center">
-      <img :src="`https://gravatar.com/avatar/${c.hash}?d=retro`" class="w-8 h-8 rounded-full">
+    <div v-for="c of contributors" v-else :key="c.hash" class="flex items-center gap-2">
+      <img :src="`https://gravatar.com/avatar/${c.hash}?d=retro`" class="h-8 w-8 rounded-full">
       {{ c.name }}
     </div>
   </div>

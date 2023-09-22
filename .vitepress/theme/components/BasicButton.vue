@@ -6,7 +6,6 @@ const props = defineProps<{
 
 <template>
   <button
-
     inline h-8 flex
     flex-row select-none items-center justify-center
     rounded-lg px-1 py-1 font-bold text-white transition="all duration-200 ease"

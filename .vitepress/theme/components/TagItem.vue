@@ -9,7 +9,6 @@ function hasSlot(name) {
 
 <template>
   <div
-
     my-1 mr-2 inline-block h-32px w-fit
     flex-inline cursor-help select-none items-center justify-center
     rounded-lg bg-zinc-200 px-2 py-1 dark:bg-zinc-700
