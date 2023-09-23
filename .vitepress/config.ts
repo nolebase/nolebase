@@ -126,10 +126,10 @@ export default defineConfigWithTheme({
         transform: (token) => {
           switch (token.type) {
             case 'link_open':
-              token.tag = 'LinkPreviewPopup'
+              token.tag = 'VPNolebaseInlineLinkPreview'
               break
             case 'link_close':
-              token.tag = 'LinkPreviewPopup'
+              token.tag = 'VPNolebaseInlineLinkPreview'
           }
         },
       } as Options)

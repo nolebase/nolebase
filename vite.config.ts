@@ -41,7 +41,10 @@ export default defineConfig(async () => {
       UnoCSS(),
     ],
     ssr: {
-      noExternal: ['@nolebase/vitepress-plugin-enhanced-readabilities'],
+      noExternal: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/vitepress-plugin-inline-link-preview',
+      ],
     },
   }
 })

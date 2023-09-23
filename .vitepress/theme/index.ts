@@ -10,7 +10,10 @@ import {
   NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 
-import LinkPreviewPopup from '../plugins/vue3-plugin-link-preview-popup/src/index'
+import {
+  NolebaseInlineLinkPreviewPlugin,
+} from '@nolebase/vitepress-plugin-inline-link-preview'
+
 import HomePage from './components/HomePage.vue'
 import DocFooter from './components/DocFooter.vue'
 import Share from './components/Share.vue'
@@ -29,6 +32,7 @@ import Contributors from './components/Contributors.vue'
 import '../styles/main.css'
 import '../styles/vars.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
+import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
 
 import 'uno.css'
 
@@ -80,7 +84,7 @@ const ExtendedTheme: Theme = {
       },
     } as NolebaseEnhancedReadabilitiesOptions)
 
-    app.use(LinkPreviewPopup)
+    app.use(NolebaseInlineLinkPreviewPlugin)
   },
 }
 
