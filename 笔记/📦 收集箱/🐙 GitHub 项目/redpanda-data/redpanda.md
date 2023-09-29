@@ -7,7 +7,10 @@ tags:
   - 开发/数据开发
   - 开发/后端开发/分布式
   - 开发/数据开发/数据流
-  - 项目/Apache Kafka
+  - 网站/GiHub/组织/redpanda-data
+  - 开源/项目/软件/Kafka
+  - 开源/项目/软件/ApacheKafka
+  - 分类/收集箱
 ---
 
 # Redpanda

@@ -1,0 +1,321 @@
+---
+tags:
+  - 命令行/openssl
+  - 密码学/证书
+  - 密码学/证书/TLS
+  - 密码学/证书/TLS/mTLS
+  - 密码学/证书/TLS/HTTPS
+  - 密码学/证书/TLS/SSL
+  - 密码学/证书/PKI
+  - 密码学/证书/证书机构/CA
+  - 开发/git
+  - 命令行/git
+  - 密码学/证书/证书机构/中间CA
+  - 密码学/证书/证书机构/IntermediateCA
+  - 密码学/证书/证书机构/RootCA
+  - 密码学/证书/TLS/域名证书
+  - 密码学/证书/证书吊销列表
+  - 密码学/证书/证书吊销列表/CRL
+---
+# 用最佳实践去创建、配置和使用 Intermediate CA（中间 CA）
+
+## 创建
+
+### 创建配置文件
+
+我们可以在 Root CA 所在的目录下新建一个用于创建中间 CA 本身的新的 OpenSSL 配置文件 `intermediates/domains/self_openssl.cnf`：
+
+```toml
+[req]
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+# 配置基础信息的提示，这个不要删
+countryName            = 国家代号（两位字母）
+stateOrProvinceName    = 州/省
+localityName           = 市
+0.organizationName     = 组织名称
+organizationalUnitName = 部门名称
+commonName             = 中间 CA 名称
+
+# 配置默认值
+countryName_default            = CN
+stateOrProvinceName_default    = Shanghai
+localityName_default           = Shanghai
+0.organizationName_default     = Ayaka Home Domains
+organizationalUnitName_default = Ayaka Home Domains
+commonName_default             = Ayaka Home Domains Intermediate CA v1
+
+# 创建证书的时候需要激活的扩展
+[v3_intermediate_ca]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+# 要注意的是，这里 pathlen 写了 0 是因为这个中间证书专门为了
+basicConstraints = critical, CA:true, pathlen:0
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
+```
+
+### 创建创建证书需要的目录
+
+我们在 `intermediates/domains/self_openssl.cnf` 的这个 OpenSSL 配置文件中指定的目录是需要预先创建和准备好的：
+
+1. `private`：用于存储  Intermediate CA（中间证书）的私钥的目录
+2. `certs`：用于存储 Intermediate CA（中间证书）的目录
+3. `csr`：用于存储我们创建的 CSR（证书签发申请文件）
+
+```shell
+mkdir intermediates/domains/private intermediates/domains/certs intermediates/domains/csr
+```
+
+### 创建和申请中间 CA
+
+#### 创建私钥
+
+::: warning 关于为什么文件命名后缀带有日期，以及 PKI 和版本控制
+另外值得一提的是，对于有的环境而言（比如我），可能会需要把 PKI 下面的配置和文件纳入版本管理中方便审计和操控，但是由于一般私钥是不纳入版本控制的（会有需要纳入的吗？），如果我们在本地同时拥有和需要管理多个私钥，甚至是在临时的部署中需要操作这些私钥的时候，如果只使用一个 `intermediate.key.pem` 作为命名的话可能之后需要涉及到来回重命名文件，所以在下面的命令中，我会偏好于在后缀中或者在文件夹中加入一个年份和月份来提示开发者和管理者操作的目标 key 和证书是什么时候生成的。
+:::
+
+你可以执行下面的命令生成一个新的私钥：
+
+::: code-group
+
+```shell [RSA]
+openssl genrsa 4096 -out intermediates/domains/private/intermediate.202309.key.pem
+```
+
+```shell [Secp256k1]
+openssl ecparam -genkey -name secp256k1 -out intermediates/domains/private/intermediate.202309.key.pem
+```
+:::
+#### 创建 CSR（证书签发申请文件）
+
+```shell
+openssl req -new -sha256 -config intermediates/domains/self_openssl.cnf -key intermediates/domains/private/intermediate.202309.key.pem -out intermediates/domains/csr/intermediate.202309.csr
+```
+
+#### 使用 Root CA 根据 CSR 签发证书
+
+```shell
+openssl ca -config home_ca.cnf -extensions v3_intermediate_ca -days 3650 -notext -md sha256 -in intermediates/domains/csr/intermediate.202309.csr -out intermediates/domains/certs/intermediate.202309.crt
+```
+
+结果：
+
+```shell
+$ openssl ca -config home_ca.cnf -extensions v3_intermediate_ca -days 3650 -notext -md sha256 -in intermediates/domains/csr/intermediate.202309.csr -out intermediates/domains/certs/intermediate.202309.crt
+Using configuration from home_ca.cnf
+Check that the request matches the signature
+Signature ok
+The Subject\'s Distinguished Name is as follows
+countryName           :PRINTABLE:'CN'
+stateOrProvinceName   :ASN.1 12:'Shanghai'
+localityName          :ASN.1 12:'Shanghai'
+organizationName      :ASN.1 12:'Ayaka Home Domains'
+organizationalUnitName:ASN.1 12:'Ayaka Home Domains'
+commonName            :ASN.1 12:'Ayaka Home Domains Intermediate CA v1'
+emailAddress          :IA5STRING:'neko@ayaka.moe'
+Certificate is to be certified until Sep 25 13:44:32 2033 GMT (3650 days)
+Sign the certificate? [y/n]:y
+
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+```
+
+这个时候我们的中间 CA 证书就被创建好了，如果你前往 Root CA 的 `database` 字段中指向的文件（我这里是 `/opt/certs/home/database.txt`）中查看，会发现新增了一条：
+
+```
+V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/OU=Ayaka Home Domains/CN=Ayaka Home Domains Intermediate CA v1/emailAddress=neko@ayaka.moe
+```
+
+这个 `1009` 的数字就是我们证书的序列号了，你也可以在 Root CA 的 `serial` 字段所指向的文件（我这里是 `/opt/certs/home/serial`）文件中查看，它会变成下一个证书应该使用的序列号：
+
+```
+1010
+```
+
+这个时候如果你不启用版本控制的话，就可以开始进行后续的操作了。如果你启用了版本控制，那我们可以把：
+
+- `self_openssl.cnf` 
+- 生成的证书签名请求
+- 签发的新证书
+- Root CA 附属的 `database` 对应的 `database.txt`，`database.txt.attr` 和 `database.txt.old`
+- `serial` 对应的 `serial`，`serial.old`
+
+等以上文件都安全地添加到暂存中，然后提交到自己可信的 Repository 将他们存放起来方便之后我们参考和进行审计。
+
+## 配置
+### 创建配置文件
+
+我们可以在 Root CA 所在的目录下新建一个用于中间 CA 创建证书的时候使用的新的 OpenSSL 配置文件 `intermediates/domains/issuer_openssl.cnf`：
+
+```toml
+[ca]
+default_ca = CA_intermediate
+
+[CA_intermediate]
+# dir 这个字段这里改成中间 CA 所收录的目录所在的位置哦
+# 我这里因为是专门给域名相关的操作单开了一个中间 CA 所以开了一个 domains
+# 的目录放在 intermediates 下面方便操作
+dir           = ./intermediates/domains
+private_key   = $dir/private/intermediate.202309.key.pem # 这个文件名注意要和我们创建的必须一致
+certificate   = $dir/certs/intermediate.202309.crt # 中间的时间注意和我们创建的必须一致
+# 因为这个文件是随着时间不断新增和配置的，理论上要么纳入到版本控制中，要么
+# 上传和同步到 OSS 是最好的，方便分发到终端并方便终端网关和设备进行鉴权控制
+crl           = $dir/crl/intermediate.crl
+database      = $dir/index.txt
+new_certs_dir = $dir/domains/certs
+serial        = $dir/serial
+policy        = policy_intermediate
+
+# 配置一下中间 CA 之下的证书的策略
+[policy_intermediate]
+countryName            = optional
+stateOrProvinceName    = optional
+localityName           = optional
+organizationName       = optional
+organizationalUnitName = optional
+commonName             = supplied
+emailAddress           = optional
+
+# 服务端证书（HTTPS 证书，mTLS 服务端侧证书）
+[server_cert_ext]
+authorityKeyIdentifier = keyid,issuer:always
+basicConstraints       = CA:FALSE
+keyUsage               = critical, digitalSignature, keyEncipherment
+extendedKeyUsage       = serverAuth # 如果不需要 mTLS 的话可以注释掉这行
+nsCertType             = server # 如果不需要 mTLS 的话可以注释掉这行
+subjectKeyIdentifier   = hash
+```
+
+### 创建配置文件中关联的其他目录
+
+我们在 `intermediates/domains/issuer_openssl.cnf` 的这个 OpenSSL 配置文件中指定的目录是需要预先创建和准备好的：
+
+1. `domains`：新的域名证书将会被存放的目录（因为我这里是以域名业务作为例子嘛所以这里你可以改成自己需要的目录名称，保持和 `intermediates/domains/self_openssl.cnf` 中的 `newcerts` 配置项一致就好了）
+2. `crl`：用于存储 CRL（证书吊销列表）文件的目录
+
+```shell
+mkdir intermediates/domains/domains intermediates/domains/crl
+```
+
+### 初始化相关文件
+
+```shell
+touch database.txt
+```
+
+```shell
+echo 1000 > serial
+```
+## 使用
+
+### 签发域名和泛域名证书
+
+接下来我们给 `ihome.cat` 创建域名证书吧。
+
+#### 准备域名目录
+
+域名需要方便我们针对文件夹进行打包和部署，所以这里我们使用 2023 作为目录名称而不是像之前一样使用时间后缀作为文件名的一部分：
+
+```shell
+mkdir -p intermediates/domains/domains/ihome.cat/2023
+```
+#### 创建目标终端证书的私钥
+
+::: code-group
+
+```shell [RSA]
+openssl genrsa 4096 -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem
+```
+
+```shell [Secp256k1]
+openssl ecparam -genkey -name secp256k1 -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem
+```
+:::
+
+#### 创建域名证书的 CSR（证书签发申请文件）
+
+创建一个域名专属的配置文件 `intermediates/domains/domains/ihome.cat/ihome.cat.cnf`：
+
+```toml
+[req]
+req_extensions = req_ext
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+# 配置基础信息
+countryName            = 国家代号（两位字母）
+stateOrProvinceName    = 州/省
+localityName           = 市
+0.organizationName     = 组织名称
+organizationalUnitName = 部门名称
+commonName             = 域名
+emailAddress           = 联系邮箱
+
+# 配置默认值
+countryName_default            = CN
+stateOrProvinceName_default    = Shanghai
+localityName_default           = Shanghai
+0.organizationName_default     = Ayaka Home Domains
+organizationalUnitName_default = Ayaka Home Domains
+commonName_default             = ihome.cat
+
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = *.ihome.cat
+DNS.2 = ihome.cat
+```
+
+```shell
+openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.cat.cnf -key intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr
+```
+
+#### 签发域名证书
+
+```shell
+openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
+```
+
+## 问题排查
+
+### `variable lookup failed for ca::default_ca`
+
+完整输出：
+
+```shell
+$ openssl ca -days 375 -notext -md sha256 -config intermediates/domains/domains/ihome.cat/ihome.cat.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
+Using configuration from intermediates/domains/domains/ihome.cat/ihome.cat.cnf
+variable lookup failed for ca::default_ca
+8493538816:error:0EFFF06C:configuration file routines:CRYPTO_internal:no value:/AppleInternal/Library/BuildRoots/c2cb9645-dafc-11ed-aa26-6ec1e3b3f7b3/Library/Caches/com.apple.xbs/Sources/libressl/libressl-3.3/crypto/conf/conf_lib.c:322:group=ca name=default_ca
+```
+
+是不是配置错文件了，签发证书的时候需要的是中间 CA 或者 Root CA 的配置文件，不是域名的配置文件。
+### `wrong number of fields on line 1`
+
+完整输出：
+
+```shell
+$ openssl ca -days 375 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
+
+Using configuration from home_ca.cnf
+wrong number of fields on line 1 (looking for field 6, got 1, '' left)
+```
+
+是不是修改了 `database.txt` 之后出现多行少行或者 Tab？[^1]
+## 延伸阅读
+
+[Implementing MTLS with Apache and OpenSSL on OpenShift | by Oren Oichman | Medium](https://two-oes.medium.com/implementing-mtls-with-apache-and-openssl-on-openshift-31719be13e7a)
+
+[Create the intermediate pair — OpenSSL Certificate Authority — Jamie Nguyen](https://jamielinux.com/docs/openssl-certificate-authority/create-the-intermediate-pair.html)
+
+[Intermediate CA configuration file — OpenSSL Certificate Authority — Jamie Nguyen](https://jamielinux.com/docs/openssl-certificate-authority/appendix/intermediate-configuration-file.html)
+
+[/docs/man1.1.1/man5/config.html OpenSSL](https://www.openssl.org/docs/man1.1.1/man5/config.html)
+
+[OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs | DigitalOcean](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
+
+[^1]: [indexing - Wrong number of fields with openssl - Stack Overflow](https://stackoverflow.com/questions/33503190/wrong-number-of-fields-with-openssl)

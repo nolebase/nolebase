@@ -3,12 +3,12 @@ tags:
   - 项目/Nólëbase
   - 知识领域/个人知识管理/PKM
   - 个人知识管理/知识库
-  - 开发/开源项目
   - 开发/前端/VitePress
-  - 开发/Node.js/Vite
   - 开发/标记语言/Markdown
   - 软件/Obsidian
   - 软件/Notion
+  - 开发/Nodejs/Vite
+  - 开源/项目/软件
 ---
 # Nólëbase
 
