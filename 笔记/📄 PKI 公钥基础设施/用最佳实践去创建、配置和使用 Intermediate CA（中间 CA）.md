@@ -123,7 +123,7 @@ Write out database with 1 new entries
 Data Base Updated
 ```
 
-这个时候我们的中间 CA 证书就被创建好了，如果你前往 Root CA 的 `database` 字段中指向的文件（我这里是 `/opt/certs/home/database.txt`）中查看，会发现新增了一条：
+这个时候我们的中间 CA 证书就被创建好了，如果你前往 Root CA 的 `database` 字段中指向的文件（我这里是 `/opt/certs/home/index.txt`）中查看，会发现新增了一条：
 
 ```
 V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/OU=Ayaka Home Domains/CN=Ayaka Home Domains Intermediate CA v1/emailAddress=neko@ayaka.moe
@@ -140,7 +140,7 @@ V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/
 - `self_openssl.cnf` 
 - 生成的证书签名请求
 - 签发的新证书
-- Root CA 附属的 `database` 对应的 `database.txt`，`database.txt.attr` 和 `database.txt.old`
+- Root CA 附属的 `database` 对应的 `index.txt`，`index.txt.attr` 和 `index.txt.old`
 - `serial` 对应的 `serial`，`serial.old`
 
 等以上文件都安全地添加到暂存中，然后提交到自己可信的 Repository 将他们存放起来方便之后我们参考和进行审计。
@@ -203,7 +203,13 @@ mkdir intermediates/domains/domains intermediates/domains/crl
 ### 初始化相关文件
 
 ```shell
-touch database.txt
+touch index.txt
+```
+
+因为我们签署的是相同 subject 内容的域名证书，所以这里我们需要在签署用的中间 CA 所在的目录下创建 `index.txt.attr` 文件并添加 `unique_subject = no`
+
+```shell
+echo 'unique_subject = no' > index.txt.attr
 ```
 
 ```shell
@@ -280,6 +286,14 @@ openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.c
 openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
 ```
 
+#### 打包为 P12
+
+如果你还需要在 Windows 上部署的话，可以在这个时候打包为 p12 证书：
+
+```shell
+openssl pkcs12 -export -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt -inkey intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -certfile intermediates/domains/certs/intermediate.202309.bundle.crt -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.p12
+```
+
 ## 问题排查
 
 ### `variable lookup failed for ca::default_ca`
@@ -306,6 +320,37 @@ wrong number of fields on line 1 (looking for field 6, got 1, '' left)
 ```
 
 是不是修改了 `database.txt` 之后出现多行少行或者 Tab？[^1]
+
+### `TXT_DB error number 2`
+
+完整输出：
+
+```shell
+openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
+Using configuration from intermediates/domains/issuer_openssl.cnf
+Check that the request matches the signature
+Signature ok
+The Subject\'s Distinguished Name is as follows
+countryName           :PRINTABLE:'CN'
+stateOrProvinceName   :ASN.1 12:'Shanghai'
+localityName          :ASN.1 12:'Shanghai'
+organizationName      :ASN.1 12:'Ayaka Home Domains'
+organizationalUnitName:ASN.1 12:'Ayaka Home Domains'
+commonName            :ASN.1 12:'ihome.cat'
+emailAddress          :IA5STRING:'neko@ayaka.moe'
+Certificate is to be certified until Sep 28 04:51:42 2024 GMT (365 days)
+Sign the certificate? [y/n]:y
+failed to update database
+TXT_DB error number 2
+```
+
+因为我们签署的是相同 subject 内容的域名证书，所以这里我们需要在签署用的中间 CA 所在的目录下的 `index.txt.attr`（如果没有的话直接创建就好了）中添加
+
+```
+unique_subject = no
+```
+
+这样的配置。
 ## 延伸阅读
 
 [Implementing MTLS with Apache and OpenSSL on OpenShift | by Oren Oichman | Medium](https://two-oes.medium.com/implementing-mtls-with-apache-and-openssl-on-openshift-31719be13e7a)
