@@ -17,7 +17,32 @@ tags:
   - 密码学/证书/证书吊销列表
   - 密码学/证书/证书吊销列表/CRL
 ---
-# 用最佳实践去创建、配置和使用 Intermediate CA（中间 CA）
+# 在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）
+
+::: warning ⚠️ 开始前请阅读
+正如[官方文档](https://www.openssl.org/docs/man1.1.1/man1/ca.html)所述：
+
+> The ca command is quirky and at times downright unfriendly.
+> ca 命令很古怪，有时甚至完全不友好。
+
+以及
+
+> The ca utility was originally meant as an example of how to do things in a CA. It was not supposed to be used as a full blown CA itself: nevertheless some people are using it for this purpose.
+> ca 实用程序最初是作为如何在 CA 中执行操作的示例。它本身不应该被用作一个完整的 CA：尽管如此，还是有人将它用于此目的。
+
+> The ca command is effectively a single user command: no locking is done on the various files and attempts to run more than one ca command on the same database can have unpredictable results.
+> ca 命令实际上是一个单用户命令：不会对各个文件进行锁定，并且尝试在同一数据库上运行多个 ca 命令可能会产生不可预测的结果。
+
+所以这篇文档并不是推荐大家用 `openssl ca` 这样的命令去管理和维护自己的 CA 和下面的证书，而是希望提供一个方向和指南来说明 `openssl ca` 是如何运行和使用的，我也仅仅只有在自己的 Homelab 上的小部分领域使用了这样的方式来管理自己的 CA 和证书。
+
+如果你喜欢的话，你大可以理解为这是一种「古法手搓 CA 和证书」的行为，而非生产环境中建议的行为，这很 Geek，需要你了解你在做什么。我建议你在学习和实操之后多阅读阅读[官方文档](https://www.openssl.org/docs/man1.1.1/man1/ca.html)的警告部分。
+:::
+
+::: warning ⚠️ 关于版本控制
+在 2023 年这样的云原生时代下，我依然没有找到一个适合终端管理用户去使用的比较友好的 CA 管理工具，所以我在这里使用了 Git 作为版本控制工具来管理我的 CA 和证书。这不代表我推荐你也这么做，生产环境上也不建议这么做，你在版本控制中也应该时时刻刻关注你的私钥是否被添加到了暂存，Stash，推送到了目标远程服务器，一旦你在 Git 历史中留下了任何的私钥的脚印，这将会引入非常大的安全隐患，允许黑客在入侵电脑后直接通过 Git Reflog 相关的命令直接把含有私钥的历史记录解析和提取出来。
+
+**我这么做只是因为没有更好用直观的管理工具，且我自己使用类似于 1Password 这样的工具去细致地管理我的所有私钥，如果你也想这样实践和尝试 CA 和 PKI，请务必注意你的私钥的安全。**
+:::
 
 ## 创建
 
@@ -72,7 +97,7 @@ mkdir intermediates/domains/private intermediates/domains/certs intermediates/do
 #### 创建私钥
 
 ::: warning 关于为什么文件命名后缀带有日期，以及 PKI 和版本控制
-另外值得一提的是，对于有的环境而言（比如我），可能会需要把 PKI 下面的配置和文件纳入版本管理中方便审计和操控，但是由于一般私钥是不纳入版本控制的（会有需要纳入的吗？），如果我们在本地同时拥有和需要管理多个私钥，甚至是在临时的部署中需要操作这些私钥的时候，如果只使用一个 `intermediate.key.pem` 作为命名的话可能之后需要涉及到来回重命名文件，所以在下面的命令中，我会偏好于在后缀中或者在文件夹中加入一个年份和月份来提示开发者和管理者操作的目标 key 和证书是什么时候生成的。
+由于一般私钥是不纳入版本控制的，如果我们在本地同时拥有和需要管理多个私钥，甚至是在临时的部署中需要操作这些私钥的时候，如果只使用一个 `intermediate.key.pem` 作为命名的话可能之后需要涉及到来回重命名文件，所以在下面的命令中，我会偏好于在后缀中或者在文件夹中加入一个年份和月份来提示开发者和管理者操作的目标 key 和证书是什么时候生成的。
 :::
 
 你可以执行下面的命令生成一个新的私钥：
@@ -137,7 +162,7 @@ V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/
 
 这个时候如果你不启用版本控制的话，就可以开始进行后续的操作了。如果你启用了版本控制，那我们可以把：
 
-- `self_openssl.cnf` 
+- `self_openssl.cnf`
 - 生成的证书签名请求
 - 签发的新证书
 - Root CA 附属的 `database` 对应的 `index.txt`，`index.txt.attr` 和 `index.txt.old`
@@ -151,33 +176,38 @@ V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/
 我们可以在 Root CA 所在的目录下新建一个用于中间 CA 创建证书的时候使用的新的 OpenSSL 配置文件 `intermediates/domains/issuer_openssl.cnf`：
 
 ```toml
-[ca]
-default_ca = CA_intermediate
+[ ca ]
+# `man ca`
+default_ca = CA_default
 
-[CA_intermediate]
+[CA_default]
 # dir 这个字段这里改成中间 CA 所收录的目录所在的位置哦
 # 我这里因为是专门给域名相关的操作单开了一个中间 CA 所以开了一个 domains
 # 的目录放在 intermediates 下面方便操作
-dir           = ./intermediates/domains
-private_key   = $dir/private/intermediate.202309.key.pem # 这个文件名注意要和我们创建的必须一致
-certificate   = $dir/certs/intermediate.202309.crt # 中间的时间注意和我们创建的必须一致
+dir             = ./intermediates/domains
+private_key     = $dir/private/intermediate.202309.key.pem # 这个文件名注意要和我们创建的必须一致
+certificate     = $dir/certs/intermediate.202309.crt # 中间的时间注意和我们创建的必须一致
 # 因为这个文件是随着时间不断新增和配置的，理论上要么纳入到版本控制中，要么
 # 上传和同步到 OSS 是最好的，方便分发到终端并方便终端网关和设备进行鉴权控制
-crl           = $dir/crl/intermediate.crl
-database      = $dir/index.txt
-new_certs_dir = $dir/domains/certs
-serial        = $dir/serial
-policy        = policy_intermediate
+crl             = $dir/crl/intermediate.crl
+database        = $dir/index.txt
+new_certs_dir   = $dir/domains/certs
+serial          = $dir/serial
+policy          = policy_intermediate
+# 因为我们接下来都会在证书的 CSR 当中直接包含拓展信息，比如
+# subjectAltName，所以这里需要指明我们需要将拓展复制到签发
+# 的证书中
+copy_extensions = copy
 
-# 配置一下中间 CA 之下的证书的策略
+# 配置一下中间 CA 之下的策略
 [policy_intermediate]
-countryName            = optional
-stateOrProvinceName    = optional
-localityName           = optional
-organizationName       = optional
-organizationalUnitName = optional
-commonName             = supplied
-emailAddress           = optional
+countryName             = optional
+stateOrProvinceName     = optional
+localityName            = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
 
 # 服务端证书（HTTPS 证书，mTLS 服务端侧证书）
 [server_cert_ext]
@@ -247,7 +277,7 @@ openssl ecparam -genkey -name secp256k1 -out intermediates/domains/domains/ihome
 
 ```toml
 [req]
-req_extensions = req_ext
+req_extensions     = v3_req
 distinguished_name = req_distinguished_name
 
 [req_distinguished_name]
@@ -268,7 +298,7 @@ localityName_default           = Shanghai
 organizationalUnitName_default = Ayaka Home Domains
 commonName_default             = ihome.cat
 
-[req_ext]
+[v3_req]
 subjectAltName = @alt_names
 
 [alt_names]
@@ -276,16 +306,29 @@ DNS.1 = *.ihome.cat
 DNS.2 = ihome.cat
 ```
 
+然后搭配 `-noout` 和 `-text` 参数预览一下 CSR 文件吧：
+
 ```shell
-openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.cat.cnf -key intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr
+openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.cat.cnf -key intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -extensions v3_req -noout -text
+```
+
+如果没问题了就可以继续创建了：
+
+```shell
+openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.cat.cnf -key intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -extensions v3_req
 ```
 
 #### 签发域名证书
 
 ```shell
-openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
+openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt -verbose
 ```
 
+#### 查看域名证书
+
+```shell
+openssl x509 -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt -noout -text
+```
 #### 打包为 P12
 
 如果你还需要在 Windows 上部署的话，可以在这个时候打包为 p12 证书：
@@ -314,7 +357,6 @@ variable lookup failed for ca::default_ca
 
 ```shell
 $ openssl ca -days 375 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
-
 Using configuration from home_ca.cnf
 wrong number of fields on line 1 (looking for field 6, got 1, '' left)
 ```
@@ -326,7 +368,7 @@ wrong number of fields on line 1 (looking for field 6, got 1, '' left)
 完整输出：
 
 ```shell
-openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
+$ openssl ca -days 365 -notext -md sha256 -config intermediates/domains/issuer_openssl.cnf -extensions server_cert_ext -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt
 Using configuration from intermediates/domains/issuer_openssl.cnf
 Check that the request matches the signature
 Signature ok
@@ -362,5 +404,11 @@ unique_subject = no
 [/docs/man1.1.1/man5/config.html OpenSSL](https://www.openssl.org/docs/man1.1.1/man5/config.html)
 
 [OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs | DigitalOcean](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
+
+[SSL/TLS 自签名证书](https://runsisi.com/2019/12/11/cert/)
+
+[Openssl.conf](https://www.phildev.net/ssl/opensslconf.html)
+
+[Managing a CA](https://www.phildev.net/ssl/managing_ca.html)
 
 [^1]: [indexing - Wrong number of fields with openssl - Stack Overflow](https://stackoverflow.com/questions/33503190/wrong-number-of-fields-with-openssl)
