@@ -222,7 +222,7 @@ sudo systemctl cat kubelet
 
 源文件：
 
-```toml
+```ini
 # Note: This dropin only works with kubeadm and kubelet v1.11+
 [Service]
 Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf"
@@ -245,7 +245,7 @@ ExecStart=/usr/local/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $
 
 变更后的文件：
 
-```toml
+```ini
 # Note: This dropin only works with kubeadm and kubelet v1.11+
 [Service]
 Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf"

@@ -28,11 +28,11 @@ tags:
 以及
 
 > The ca utility was originally meant as an example of how to do things in a CA. It was not supposed to be used as a full blown CA itself: nevertheless some people are using it for this purpose.
-> 
+>
 > ca 实用程序最初是作为如何在 CA 中执行操作的示例。它本身不应该被用作一个完整的 CA：尽管如此，还是有人将它用于此目的。
 
 > The ca command is effectively a single user command: no locking is done on the various files and attempts to run more than one ca command on the same database can have unpredictable results.
-> 
+>
 > ca 命令实际上是一个单用户命令：不会对各个文件进行锁定，并且尝试在同一数据库上运行多个 ca 命令可能会产生不可预测的结果。
 
 所以这篇文档并不是推荐大家用 `openssl ca` 这样的命令去管理和维护自己的 CA 和下面的证书，而是希望提供一个方向和指南来说明 `openssl ca` 是如何运行和使用的，我也仅仅只有在自己的 Homelab 上的小部分领域使用了这样的方式来管理自己的 CA 和证书。
@@ -52,7 +52,7 @@ tags:
 
 我们可以在 Root CA 所在的目录下新建一个用于创建中间 CA 本身的新的 OpenSSL 配置文件 `intermediates/domains/self_openssl.cnf`：
 
-```toml
+```ini
 [req]
 distinguished_name = req_distinguished_name
 
@@ -177,7 +177,7 @@ V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/
 
 我们可以在 Root CA 所在的目录下新建一个用于中间 CA 创建证书的时候使用的新的 OpenSSL 配置文件 `intermediates/domains/issuer_openssl.cnf`：
 
-```toml
+```ini
 [ ca ]
 # `man ca`
 default_ca = CA_default
@@ -277,7 +277,7 @@ openssl ecparam -genkey -name secp256k1 -out intermediates/domains/domains/ihome
 
 创建一个域名专属的配置文件 `intermediates/domains/domains/ihome.cat/ihome.cat.cnf`：
 
-```toml
+```ini
 [req]
 req_extensions     = v3_req
 distinguished_name = req_distinguished_name
