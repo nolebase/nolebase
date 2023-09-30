@@ -85,7 +85,7 @@ export default defineConfigWithTheme({
       provider: 'local',
       options: {
         locales: {
-          zh: {
+          root: {
             translations: {
               button: {
                 buttonText: '搜索文档',
@@ -122,17 +122,29 @@ export default defineConfigWithTheme({
       md.use(BiDirectionalLinks({
         dir: process.cwd(),
       }))
-      md.use(ElementTransform, {
-        transform: (token) => {
-          switch (token.type) {
-            case 'link_open':
-              token.tag = 'VPNolebaseInlineLinkPreview'
-              break
-            case 'link_close':
-              token.tag = 'VPNolebaseInlineLinkPreview'
-          }
-        },
-      } as Options)
+      md.use(ElementTransform, (() => {
+        let transformNextLinkCloseToken = false
+
+        return {
+          transform(token) {
+            switch (token.type) {
+              case 'link_open':
+                if (token.attrGet('class') !== 'header-anchor') {
+                  token.tag = 'VPNolebaseInlineLinkPreview'
+                  transformNextLinkCloseToken = true
+                }
+                break
+              case 'link_close':
+                if (transformNextLinkCloseToken) {
+                  token.tag = 'VPNolebaseInlineLinkPreview'
+                  transformNextLinkCloseToken = false
+                }
+
+                break
+            }
+          },
+        }
+      })())
     },
   },
 })

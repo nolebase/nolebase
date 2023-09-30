@@ -31,10 +31,10 @@ devDependencies:
     version: 1.0.2(markdown-it@13.0.1)
   '@nolebase/vitepress-plugin-enhanced-readabilities':
     specifier: ^1.2.1
-    version: 1.2.1(vitepress@1.0.0-rc.10)(vue@3.3.4)
+    version: 1.2.1(vitepress@1.0.0-rc.20)(vue@3.3.4)
   '@nolebase/vitepress-plugin-inline-link-preview':
     specifier: 1.1.2
-    version: 1.1.2(vitepress@1.0.0-rc.10)(vue@3.3.4)
+    version: 1.1.2(vitepress@1.0.0-rc.20)(vue@3.3.4)
   '@types/body-parser':
     specifier: ^1.19.2
     version: 1.19.2
@@ -153,8 +153,8 @@ devDependencies:
     specifier: ^4.4.8
     version: 4.4.8(less@4.2.0)
   vitepress:
-    specifier: 1.0.0-rc.10
-    version: 1.0.0-rc.10(@algolia/client-search@4.20.0)(less@4.2.0)(search-insights@2.8.2)
+    specifier: 1.0.0-rc.20
+    version: 1.0.0-rc.20(@algolia/client-search@4.20.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.30)(search-insights@2.8.2)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -927,23 +927,23 @@ packages:
       markdown-it: 13.0.1
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@1.2.1(vitepress@1.0.0-rc.10)(vue@3.3.4):
+  /@nolebase/vitepress-plugin-enhanced-readabilities@1.2.1(vitepress@1.0.0-rc.20)(vue@3.3.4):
     resolution: {integrity: sha512-wLIRw5N1nQ9xAc+Tn40zlVxqvHkFgrUikRN4iZgmLyxCe9fhN0gvyZaWroUemmPpKTMznc1YAdXwU4SS2RFKwA==}
     peerDependencies:
       vitepress: '>=v1.0.0-beta.1'
       vue: '>=3.2.0'
     dependencies:
-      vitepress: 1.0.0-rc.10(@algolia/client-search@4.20.0)(less@4.2.0)(search-insights@2.8.2)
+      vitepress: 1.0.0-rc.20(@algolia/client-search@4.20.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.30)(search-insights@2.8.2)
       vue: 3.3.4
     dev: true
 
-  /@nolebase/vitepress-plugin-inline-link-preview@1.1.2(vitepress@1.0.0-rc.10)(vue@3.3.4):
+  /@nolebase/vitepress-plugin-inline-link-preview@1.1.2(vitepress@1.0.0-rc.20)(vue@3.3.4):
     resolution: {integrity: sha512-O39uCPqIQ5mtVbx7RZCW922lkF0umZ0YExlw0SYmjeprwOAvhfcVPl/41rZw591wq+TZT1jupiSUMr8vpkLgag==}
     peerDependencies:
       vitepress: '>=v1.0.0-beta.1'
       vue: '>=3.2.0'
     dependencies:
-      vitepress: 1.0.0-rc.10(@algolia/client-search@4.20.0)(less@4.2.0)(search-insights@2.8.2)
+      vitepress: 1.0.0-rc.20(@algolia/client-search@4.20.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.30)(search-insights@2.8.2)
       vue: 3.3.4
     dev: true
 
@@ -1043,6 +1043,13 @@ packages:
 
   /@types/markdown-it@12.2.3:
     resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
+    dependencies:
+      '@types/linkify-it': 3.0.3
+      '@types/mdurl': 1.0.2
+    dev: true
+
+  /@types/markdown-it@13.0.2:
+    resolution: {integrity: sha512-Tla7hH9oeXHOlJyBFdoqV61xWE9FZf/y2g+gFVwQ2vE1/eBzjUno5JCd3Hdb5oATve5OF6xNjZ/4VIZhVVx+hA==}
     dependencies:
       '@types/linkify-it': 3.0.3
       '@types/mdurl': 1.0.2
@@ -5595,18 +5602,29 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.10(@algolia/client-search@4.20.0)(less@4.2.0)(search-insights@2.8.2):
-    resolution: {integrity: sha512-+MsahIWqq5WUEmj6MR4obcKYbT7im07jZPCQPdNJExkeOSbOAJ4xypSLx88x7rvtzWHhHc5aXbOhCRvGEGjFrw==}
+  /vitepress@1.0.0-rc.20(@algolia/client-search@4.20.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.30)(search-insights@2.8.2):
+    resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==}
     hasBin: true
+    peerDependencies:
+      markdown-it-mathjax3: ^4.3.2
+      postcss: ^8.4.30
+    peerDependenciesMeta:
+      markdown-it-mathjax3:
+        optional: true
+      postcss:
+        optional: true
     dependencies:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2(@algolia/client-search@4.20.0)(search-insights@2.8.2)
+      '@types/markdown-it': 13.0.2
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.4.1(vue@3.3.4)
       '@vueuse/integrations': 10.4.1(focus-trap@7.5.2)(vue@3.3.4)
       focus-trap: 7.5.2
       mark.js: 8.11.1
+      markdown-it-mathjax3: 4.3.2
       minisearch: 6.1.0
+      postcss: 8.4.30
       shiki: 0.14.4
       vite: 4.4.9(less@4.2.0)
       vue: 3.3.4
