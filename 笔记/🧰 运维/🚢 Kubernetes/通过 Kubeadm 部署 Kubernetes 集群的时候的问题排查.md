@@ -19,6 +19,18 @@ tags:
   - 软件/云原生/kubelet
   - 网络
 ---
+# 通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查
+
+### 文档兼容性
+
+| 主体         | 版本号 | 文档地址（如果有）                |
+| ------------ | ------ | --------------------------------- |
+| Debian       | 11     |                                   |
+| Kubernetes   | 1.28   | https://v1-28.docs.kubernetes.io/ |
+| Docker       | 24.0.2 | https://docs.docker.com/          |
+| containerd   | 1.7.6  |                                   |
+| Linux kernel | 5.10.0 |                                   |
+
 ### `malformed header: missing HTTP content-type`
 
 ```shell

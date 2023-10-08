@@ -15,11 +15,20 @@ tags:
   - 操作系统/Debian/Debian-11
   - 网络
 ---
-## 删除相关资源
+# 完全卸载使用 KubeKey 安装的 Calico
 
-::: warning ⚠️ 注意
-这一步执行完之后需要重启一下集群节点以应用配置。
-:::
+### 文档兼容性
+
+| 主体         | 版本号 | 文档地址（如果有）                |
+| ------------ | ------ | --------------------------------- |
+| Debian       | 11     |                                   |
+| Kubernetes   | 1.22.12   | https://v1-22.docs.kubernetes.io/ |
+| Docker       | 24.0.2 | https://docs.docker.com/          |
+| containerd   | 1.7.6  |                                   |
+| Linux kernel | 5.10.0 |                                   |
+| Calico       |        |                                   |
+
+## 删除相关资源
 
 ```shell
 sudo kubectl -n kube-system delete ds calico-node
@@ -32,29 +41,17 @@ sudo kubectl -n kube-system delete secret calico-config
 
 ## 移除 Calico 的 CNI 配置
 
-::: warning ⚠️ 注意
-这一步执行完之后需要重启一下集群节点以应用配置。
-:::
-
 ```shell
 sudo rm -rf /etc/cni/net.d/calico-kubeconfig
 ```
 
 ## 移除相关 CRD
 
-::: warning ⚠️ 注意
-这一步执行完之后需要重启一下集群节点以应用配置。
-:::
-
 ```shell
 sudo kubectl get crd | grep calico | awk '{print $1}' | xargs sudo kubectl delete crd
 ```
 
 ## 移除网卡
-
-::: warning ⚠️ 注意
-这一步执行完之后需要重启一下集群节点以应用配置。
-:::
 
 ```shell
 sudo ifconfig tunl0 down
@@ -67,3 +64,7 @@ sudo kubectl get all --all-namespaces | egrep "calico|tigera"
 sudo kubectl api-resources --verbs=list --namespaced -o name | egrep "calico|tigera"
 sudo kubectl api-resources --verbs=list -o name  | egrep "calico|tigera"
 ```
+
+## 重启节点
+
+执行完之后请务必重启节点。

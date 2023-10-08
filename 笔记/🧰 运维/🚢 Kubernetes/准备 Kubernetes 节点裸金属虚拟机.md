@@ -31,6 +31,16 @@ tags:
 ---
 # 准备 Kubernetes 节点裸金属虚拟机
 
+### 文档兼容性
+
+| 主体         | 版本号 | 文档地址（如果有）                |
+| ------------ | ------ | --------------------------------- |
+| Debian       | 11     |                                   |
+| Kubernetes   | 1.28   | https://v1-28.docs.kubernetes.io/ |
+| Docker       | 24.0.2 | https://docs.docker.com/          |
+| containerd   | 1.7.6  |                                   |
+| Linux kernel | 5.10.0 |                                   |
+
 ## 配置内核参数
 
 ```shell

@@ -19,6 +19,12 @@ tags:
 ---
 # 重置 Kubernetes 集群
 
+### 文档兼容性
+
+| 主体         | 版本号 | 文档地址（如果有）                |
+| ------------ | ------ | --------------------------------- |
+| kubeadm   | 1.28   | https://v1-28.docs.kubernetes.io/ |
+
 用于删除集群，删除 CNI 配置，清空 IPVS，重设 Docker 和 containerd 的命令：
 
 ```shell

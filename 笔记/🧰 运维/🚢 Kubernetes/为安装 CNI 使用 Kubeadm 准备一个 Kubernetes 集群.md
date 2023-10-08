@@ -17,6 +17,16 @@ tags:
 ---
 # 为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群
 
+### 文档兼容性
+
+| 主体         | 版本号 | 文档地址（如果有）                |
+| ------------ | ------ | --------------------------------- |
+| Debian       | 11     |                                   |
+| Kubernetes   | 1.28   | https://v1-28.docs.kubernetes.io/ |
+| Docker       | 24.0.2 | https://docs.docker.com/          |
+| containerd   | 1.7.6  |                                   |
+| Linux kernel | 5.10.0 |                                   |
+
 ## 先决条件
 
 - [[重置 Kubernetes 集群]]

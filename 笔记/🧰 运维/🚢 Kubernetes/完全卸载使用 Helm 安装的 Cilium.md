@@ -23,6 +23,18 @@ tags:
 ---
 # 完全卸载使用 Helm 安装的 Cilium
 
+### 文档兼容性
+
+| 主体         | 版本号 | 文档地址（如果有）                |
+| ------------ | ------ | --------------------------------- |
+| Debian       | 11     |                                   |
+| Kubernetes   | 1.28   | https://v1-28.docs.kubernetes.io/ |
+| Docker       | 24.0.2 | https://docs.docker.com/          |
+| containerd   | 1.7.6  |                                   |
+| Linux kernel | 5.10.0 |                                   |
+| Cilium       | 1.14.2 | https://docs.cilium.io/en/v1.14/  |
+| helm         | v3.9.0 | https://helm.sh/docs/             |
+
 ```shell
 sudo cilium uninstall
 ```
