@@ -1,0 +1,26 @@
+---
+tags:
+  - 命令行/kubeadm
+  - 软件/云原生/kubeadm
+  - 软件工程/容器网络接口
+  - 软件工程/容器网络接口/CNI
+  - 命令行/systemd
+  - 命令行/docker
+  - 开发/容器/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - 命令行/containerd
+  - 软件/云原生/containerd
+  - 命令行/ipvsadm
+  - 软件/云原生/ipvsadm
+  - Linux
+  - Linux/命令行
+  - 操作系统/Linux
+---
+# 重置 Kubernetes 集群
+
+用于删除集群，删除 CNI 配置，清空 IPVS，重设 Docker 和 containerd 的命令：
+
+```shell
+sudo kubeadm reset --force && sudo rm -rf /etc/cni/net.d && sudo ipvsadm --clear && sudo systemctl restart docker && sudo systemctl restart containerd
+```

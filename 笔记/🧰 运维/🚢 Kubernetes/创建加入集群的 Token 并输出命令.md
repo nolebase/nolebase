@@ -1,0 +1,28 @@
+---
+tags:
+  - 开发/云原生/Kubernetes
+  - 运维/Kubernetes
+  - 开发/后端/CORS
+  - 运维/Kubernetes/K8s
+  - 命令行/kubeadm
+  - 软件/云原生/kubeadm
+  - 开发/云原生
+  - 开发/云原生/Kubernetes/K8s
+  - Linux
+  - Linux/命令行
+  - 操作系统/Linux
+---
+# 创建加入集群的 Token 并输出命令
+
+创建集群之后我们可以用下面的命令输出其他节点加入集群时使用的命令：
+
+```shell
+sudo kubeadm token create --print-join-command
+```
+
+效果：
+
+```shell
+$ sudo kubeadm token create --print-join-command
+kubeadm join 10.24.0.2:6443 --token abcdef.0123456789abcdef --discovery-token-ca-cert-hash sha256:206e3d7b40a7b52e3ca1f9553a9384f3947b362d4878afcf007671f91e3c3efc
+```

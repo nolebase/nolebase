@@ -1,3 +1,19 @@
+---
+tags:
+  - 开发/云原生/Kubernetes
+  - 命令行/kubectl
+  - 软件/云原生/kubelet
+  - 命令行/systemd
+  - 命令行/journalctl
+  - 计算机科学/内存/虚拟内存
+  - 计算机科学/内存/虚拟内存/swap
+  - 命令行/docker
+  - 开发/容器/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - Linux
+  - 操作系统/Linux
+---
 # 因打开了 swap 导致的 Kubernetes 重启后无法自愈问题
 
 ### 文档兼容性
