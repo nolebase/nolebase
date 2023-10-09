@@ -12,6 +12,8 @@ jobs:
     environment:
       name: 预览 Preview
       url: ${{ steps.netlify-deployment.outputs.NETLIFY_URL }}
+    permissions:
+      pull-requests: write
     steps:
       - name: 搜索评论 ID
         uses: peter-evans/find-comment@v2
