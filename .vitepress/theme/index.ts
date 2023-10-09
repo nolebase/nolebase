@@ -14,6 +14,10 @@ import {
   NolebaseInlineLinkPreviewPlugin,
 } from '@nolebase/vitepress-plugin-inline-link-preview'
 
+import {
+  NolebaseHighlightTargetedHeading,
+} from '@nolebase/vitepress-plugin-highlight-targeted-heading'
+
 import HomePage from './components/HomePage.vue'
 import DocFooter from './components/DocFooter.vue'
 import Share from './components/Share.vue'
@@ -29,18 +33,23 @@ import TocList from './components/TocList.vue'
 import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
-import '../styles/main.css'
-import '../styles/vars.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
+import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
 
 import 'uno.css'
+
+import '../styles/main.css'
+import '../styles/vars.css'
 
 const ExtendedTheme: Theme = {
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'doc-top': () => [
+        h(NolebaseHighlightTargetedHeading),
+      ],
       'home-features-after': () => h(HomePage),
       'doc-footer-before': () => h(DocFooter),
       'nav-bar-content-after': () => [

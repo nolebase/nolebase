@@ -32,6 +32,9 @@ devDependencies:
   '@nolebase/vitepress-plugin-enhanced-readabilities':
     specifier: ^1.2.1
     version: 1.2.1(vitepress@1.0.0-rc.20)(vue@3.3.4)
+  '@nolebase/vitepress-plugin-highlight-targeted-heading':
+    specifier: 1.0.0
+    version: 1.0.0(vue@3.3.4)
   '@nolebase/vitepress-plugin-inline-link-preview':
     specifier: 1.1.2
     version: 1.1.2(vitepress@1.0.0-rc.20)(vue@3.3.4)
@@ -934,6 +937,14 @@ packages:
       vue: '>=3.2.0'
     dependencies:
       vitepress: 1.0.0-rc.20(@algolia/client-search@4.20.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.30)(search-insights@2.8.2)
+      vue: 3.3.4
+    dev: true
+
+  /@nolebase/vitepress-plugin-highlight-targeted-heading@1.0.0(vue@3.3.4):
+    resolution: {integrity: sha512-zrPFiNqlap4LUiIUc4Jwl0cQ0x4BSMVE6Fk/gHutsu++V/PrtoMTF0IiGyPSRc+9N2RARXGBKIHNR8v+AGbO7A==}
+    peerDependencies:
+      vue: '>=3.2.0'
+    dependencies:
       vue: 3.3.4
     dev: true
 
