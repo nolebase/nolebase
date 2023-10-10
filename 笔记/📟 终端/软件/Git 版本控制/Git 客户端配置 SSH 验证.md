@@ -14,34 +14,42 @@ SSH 密钥对是两个基于非对称加密算法生成的文件：
 SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就是个人用户目录的 `.ssh` 目录，这个目录下，存放着以下几种文件：
 
 1. `config` - SSH 连接配置文件
-2. `xxx_rsa` - RSA 私钥文件
-3. `xxx_rsa.pub` - RSA 私钥对应的公钥文件
-4. `authorized_keys`  - 远程连接 SSH 时验证的公钥文件，每行一个公钥
+2. `xxx_rsa` - RSA 私钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
+3. `xxx_rsa.pub` - RSA 私钥对应的公钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
+4. `authorized_keys`  - 远程连接 SSH 时验证的公钥文件，每行一个公钥，**发起请求用的 SSH 客户端是不会需要配置的**。
 
-**如果没有这个目录，需要使用 `mkdir` 命令（参考 [mkdir 创建目录](../../Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/mkdir%20%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95.md)）手动创建该目录，创建时应该使用对应的用户进行创建，如果在 `/home/rizumu` 目录，则应该使用 `rizumu` 用户创建，而不是 `root`**
+::: info 如果没有这个目录，需要使用 `mkdir` 命令（参考 [[mkdir 创建目录]]）手动创建该目录
+
+```shell
+mkdir $HOME/.ssh
+```
+
+⚠️ 注意：创建时应该使用对应的用户进行创建。如果你现在在 `/home/rizumu` 目录（如果不知道你现在在哪个目录，可以通过 `pwd` 命令来获得），则应该使用 `rizumu` 用户创建，而不是 `root`
 
 ```shell
 sudo su rizumu # 切换用户到 rizumu
-```
-
-```shell
 mkdir $HOME/.ssh # 创建目录
 ```
 
+:::
 #### SSH 密钥对存储位置的权限配置
 
 此处还需要注意的是 `.ssh` 目录和该目录下的文件权限，都有不同的要求：
 权限说明：[Linux 权限](../../Linux%20%E6%9D%83%E9%99%90.md)
 
-1. `.ssh` 目录要求 700 (drwx------)
-2. `.pub` 公钥文件（包括但不限于 `.pub` 文件）要求 644 (-rw-r--r--)
-3. `authorized_keys`（远程服务端）和 私钥文件（本地）要求 600 (-rw-------)
+1. `.ssh` 目录要求 700 (`drwx------``)
+2. `.pub` 公钥文件（包括但不限于 `.pub` 文件）要求 644 (`-rw-r--r--`)
+3. `authorized_keys`（远程服务端）和 私钥文件（本地）要求 600 (`-rw-------`)
 
-新建目录之后需要改变权限值，使用 `chmod` 命令（参考 [chmod 变更权限](../../Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）进行调整
+::: warning 新建 `.ssh` 目录之后需要改变权限值
+
+使用 `chmod` 命令（参考 [chmod 变更权限](../../Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）进行调整
 
 ```shell
 chmod 644 .ssh
 ```
+
+:::
 
 #### 开始生成 SSH 密钥对
 
@@ -55,8 +63,8 @@ cd $HOME/.ssh
 
 我们可以使用 `ssh-keygen` 命令（参考 [ssh-keygen 创建 SSH 密钥](../SSH%20%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5/ssh-keygen%20%E5%88%9B%E5%BB%BA%20SSH%20%E5%AF%86%E9%92%A5.md)）来创建 `SSH` 密钥对，此处的参数：
 
-1. t 表示算法，我们指定算法为 RSA
-2. b 表示位数，我们指定为 4096 位的 RSA 密钥
+1. `t` 表示算法，我们指定算法为 RSA
+2. `b` 表示位数，我们指定为 4096 位的 RSA 密钥
 
 ```shell
 ssh-keygen -t rsa -b 4096 -C "<GitHub 账号的电子邮件地址>"
@@ -136,27 +144,82 @@ cat ~/.ssh/github_rsa.pub # github_rsa 是上一步命名的私钥名称，公�
 
 ### 配置本地 SSH 连接
 
-我们需要去 `~/.ssh/config` 文件中配置我们的连接，使用偏好的编辑器打开这个文件
+我们需要去 `$HOME/.ssh/config` 文件中配置我们的连接，使用偏好的编辑器打开这个文件：
 
-```shell
+::: code-group
+
+```shell [喜欢 vim]
+vim ~/.ssh/config
+```
+
+```shell [喜欢 Visual Studio Code]
+# 需要预先在 Visual Studio Code 中通过命令面板 Command Palette（可以在 Windows 和 Linux 上通过 Ctrl + Shift + P 或者在 macOS 上通过 Command + Shift + P）
+code ~/.ssh/config
+```
+
+```shell [喜欢 nano]
 nano ~/.ssh/config
 ```
 
-SSH 配置文件的格式如下
+:::
+
+一般情况下，为 Git 配置的 SSH 配置文件的格式如下
 
 ```ssh-config
-Host hostname
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/github_rsa
+Host <连接时在输入 ssh 命令时引用的域名别名>
+    HostName <Git 服务器>
+    User <用户名>
+    Port <端口>
+    IdentityFile <公钥所在的路径>
 ```
 
-1. **Host**：域，等同于别名，比如我们可以在这个地方填写 `gh`，下面的 HostName 填写 `github.com`，则连接的时候我们写 `gh` 就可以自动指向到 `github.com`，这个地方选择自己喜欢的方式命名即可，比如我喜欢 `<用户名>.git` 这样（`nekomeowww.git`），这样多用户的时候可以方便配置
+1. **Host**：域，等同于别名，比如我们可以在这个字段中填写 `gh`，下面的 `HostName` 填写 `github.com`，则连接的时候我们输入并执行 `ssh gh` 就可以自动指向到 `github.com`，这个地方选择自己喜欢的方式命名即可，比如我喜欢 `<用户名>.git` 这样（`nekomeowww.git`），这样多用户的时候可以方便配置
 2. **HostName**：域名，需要连接的远程服务器域名或是 IP 地址，GitHub 的 SSH 需要填写 github.com，GitLab 则填写 gitlab.com，如果是自建的 GitLab 实例，则需要填写对应的实例域名或是 IP
 3. **User**：用户，连接时使用的用户，对于 GitHub SSH 而言，默认填写 git，不用写为自己的用户名，服务器那边会通过你的公钥自动判断的
 4. **IdentityFile**：身份文件，一般是 RSA 密钥的私钥文件，格式不限，只要是复合 OpenSSH 规范的即可
 
-我们往 `~/.ssh/config` 文件中写入上面自定义好的内容即可。
+::: info 如果你使用 1Password CLI，也可以省略掉 `IdentityFile`
+
+```ssh-config
+Host <连接时在输入 ssh 命令时引用的域名别名>
+    HostName <Git 服务器>
+    User <用户名>
+    Port <端口>
+```
+
+:::
+
+我们往 `~/.ssh/config` 文件中写入上面自定义好的内容即可。也可以参考下面的配置：
+
+::: code-group
+
+```shell [GitHub]
+Host github.com
+  User git
+  HostName github.com
+  Port 22
+  IdentityFile ~/.ssh/id_rsa.pub # 记得改成自己的公钥所在的位置
+```
+
+```shell [GitLab]
+Host gitlab.com
+  User git
+  HostName gitlab.com
+  Port 22
+  IdentityFile ~/.ssh/id_rsa.pub # 记得改成自己的公钥所在的位置
+```
+
+:::
+
+当然你也可以参考我的配置：
+
+```ssh-config
+Host nekomeowww.git
+    HostName ssh.github.com
+    User git
+    Port 443
+    IdentityFile ~/.ssh/nekomeowww_rsa
+```
 
 ### 测试 GitHub 连接
 
@@ -166,16 +229,41 @@ Host hostname
 ssh -T <别名> # 别名填写上面 Host 字段的值
 ```
 
-以我的配置为例，配置：
+比如如果用大家最常用的配置的话：
 
 ```ssh-config
-Host nekomeowww.git
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/nekomeowww_rsa
+Host github.com
+  User git
+  HostName github.com
+  Port 22
+  IdentityFile ~/.ssh/id_rsa.pub # 记得改成自己的公钥所在的位置
 ```
 
-测试结果：
+那么就输入
+
+```shell
+ssh -T github.com
+```
+
+来进行配置。
+
+::: info 遭遇到了 `error: kex_exchange_identification: Connection closed by remote host` 错误？
+
+如果你在中国大陆进行访问，那么首先在中国大陆通过 `22` 端口连接到 `github.com` 就是被防火墙禁止的，如果你已经使用了梯子进行科学上网，也依然可能会遭遇因梯子提供商封禁 `22` 端口的代理而遭遇上述错误。
+
+这个时候你需要根据官方指引的[通过 HTTPS 端口使用 SSH](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port) 配置使用 `ssh.github.com` 域名和 `443` 端口进行访问：
+
+```ssh-config
+Host github.com
+  User git
+  HostName ssh.github.com
+  Port 443
+  IdentityFile ~/.ssh/id_rsa.pub
+```
+
+:::
+
+正常情况下的测试结果：
 
 ```shell
 ssh -T nekomeowww.git
@@ -189,10 +277,11 @@ Hi nekomeowww! You've successfully authenticated, but GitHub does not provide sh
 以我的配置为例：
 
 ```ssh-config
-Host nekomeowww.git
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/nekomeowww_rsa
+Host github.com
+  User git
+  HostName ssh.github.com
+  Port 443
+  IdentityFile ~/.ssh/nekomeowww_2023.pub
 ```
 
 Git 克隆命令：

@@ -21,9 +21,9 @@ tags:
 
 | 主体       | 版本号 | 文档地址（如果有）                |
 | ---------- | ------ | --------------------------------- |
-| Kubernetes | 1.28   | https://v1-28.docs.kubernetes.io/ |
-| Cilium     | 1.14.2 | https://docs.cilium.io/en/v1.14/  |
-| helm         | v3.9.0 | https://helm.sh/docs/             |
+| Kubernetes | 1.28   | [https://v1-28.docs.kubernetes.io/](https://v1-28.docs.kubernetes.io/) |
+| Cilium     | 1.14.2 | [https://docs.cilium.io/en/v1.14/](https://docs.cilium.io/en/v1.14/)  |
+| helm         | v3.9.0 | [https://helm.sh/docs/](https://helm.sh/docs/)             |
 
 ## 先决条件
 
@@ -68,7 +68,7 @@ enableIPv6Masquerade: true
 sudo cilium install --version 1.14.2 --values cilium-values.yml --dry-run-helm-values > cilium-values-initial.yml
 ```
 
-我们可以使用 
+我们可以使用
 
 ```shell
 cat cilium-values-initial.yml

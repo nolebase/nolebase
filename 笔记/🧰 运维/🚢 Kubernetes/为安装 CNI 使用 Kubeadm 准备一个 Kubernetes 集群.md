@@ -164,7 +164,7 @@ kubeadm join 10.24.0.2:6443 --token <加入集群使用的 TOKEN> \
 有两个选择：
 
 1. 复制为 `/root/.kube/config`
-2. 我们在 root 用户下配置 `.bash_profile` 或者 `.zshrc` 
+2. 我们在 root 用户下配置 `.bash_profile` 或者 `.zshrc`
 #### 复制为 `/root/.kube/config`
 
 ```shell
@@ -178,7 +178,7 @@ sudo chown root:root /root/.kube/config
 
 ```shell [bash]
 echo "export KUBECONFIG=/etc/kubernetes/admin.conf" > .bashrc
-source .zshrc
+source .bashrc
 ```
 
 ```shell [zsh]
