@@ -19,14 +19,12 @@ brew install go
 
 1. 打开 GO111MODULE 以支持在 GOPATH 外引用 go module 依赖
 2. 由于特殊的原因，在国内访问 Golang 的依赖下载会十分缓慢，需要设定代理
-3. 设定 GOPRIVATE 并指定 github.com/MiaoSiLa/* 库为私有仓库以跳过代理和服务器检查
 
 运行下面的代码即可设定：
 
 ```sh
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.io,direct
-go env -w GOPRIVATE=github.com/MiaoSiLa/*
 ```
 
 ## 安装 Visual Studio Code
@@ -44,18 +42,3 @@ Visual Studio Code 可以作为 IDE 配合开发进行使用，[下载链接](ht
 4. 搜索 Generate Tests Flags（Go 插件），填入两个参数值：-i -count=1 （注意中间使用空格隔开）
 
 Visual Studio Code 的配置文档可以参考：[User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
-
-## 编译和安装 golangci-lint
-
-```shell
-cd $GOPATH/src/github.com # 进入 GOPATH
-git clone https://github.com/MiaoSiLa/golangci-lint.git # 克隆修改后的代码库
-cd golangci-lint && make
-```
-
-这个过程中可能会有类似「`importShadow: shadow of imported from 'github.com/stretchr/testify/assert' package 'assert'`」错误提示，忽略即可
-接下来，创建 golangci-lint 到 `/usr/local/bin` 的软链接
-
-```shell
-ln -s $GOPATH/src/github.com/golangci-lint/golangci-lint /usr/local/bin
-```

@@ -203,7 +203,7 @@ data.style.cssText += ` max-height: ${maxHeight}px;"
 ```javascript
 async function get() {
     // 获取数据
-    const resp = await fetch("https://fm.uat.missevan.com/api/v2/[path]")
+    const resp = await fetch("https://example.com/api/[path]")
     // 解析为 JSON
     const res = await resp.json()
     console.log(res)
