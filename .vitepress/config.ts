@@ -113,7 +113,7 @@ export default defineConfigWithTheme({
   },
   markdown: {
     theme: {
-      light: 'one-dark-pro',
+      light: 'github-light',
       dark: 'one-dark-pro',
     },
     config: (md) => {
