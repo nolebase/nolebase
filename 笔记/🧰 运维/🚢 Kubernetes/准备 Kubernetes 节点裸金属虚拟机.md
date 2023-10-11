@@ -63,7 +63,9 @@ sudo sysctl --system
 
 ## 配置用于下载 `kubectl`，`kubeadm` 和 `kubelet` 的 `apt` 源
 
-```shell
+::: code-group
+
+```shell [多行]
 sudo apt update
 sudo apt install -y apt-transport-https ca-certificates curl
 sudo mkdir -p /etc/apt/keyrings/
@@ -72,19 +74,43 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt update
 ```
 
+```shell [单行]
+sudo apt update && sudo apt install -y apt-transport-https ca-certificates curl && sudo mkdir -p /etc/apt/keyrings/ && curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg && echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list && sudo apt update
+```
+
+:::
+
 安装并保持其版本号：
 
-```shell
+::: code-group
+
+```shell [多行]
 sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
+```shell [单行]
+sudo apt install -y kubelet kubeadm kubectl && sudo apt-mark hold kubelet kubeadm kubectl
+```
+
+:::
+
 ## 初始化 `containerd` 的配置
 
-```shell
+::: code-group
+
+```shell [多行]
+sudo rm -rf /etc/containerd/config.toml
+sudo containerd config default | sudo tee /etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo systemctl restart docker
+```
+
+```shell [单行]
 sudo rm -rf /etc/containerd/config.toml && sudo containerd config default | sudo tee /etc/containerd/config.toml && sudo systemctl restart containerd && sudo systemctl restart docker
 ```
 
+:::
 ## 配置 CGroup
 
 查看 Docker 用的 CGroup：
@@ -102,14 +128,33 @@ $ sudo docker info | grep -i cgroup
 
 如果是 `systemd` 的话，我们需要同步配置 `containerd` 也是 `systemd` 作为 CGroup Driver[^1] ：
 
-```shell
+::: code-group
+
+```shell [多行]
+sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+export PAUSE_IMAGE="$(kubeadm config images list | grep pause)"
+sudo sed -i 's,sandbox_image = .*,sandbox_image = '\"$PAUSE_IMAGE\"',' /etc/containerd/config.toml
+```
+
+```shell [单行]
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml && export PAUSE_IMAGE="$(kubeadm config images list | grep pause)" && sudo sed -i 's,sandbox_image = .*,sandbox_image = '\"$PAUSE_IMAGE\"',' /etc/containerd/config.toml
 ```
 
+:::
+
 然后重启 `docker` 和 `containerd` 的 `systemd` 服务：
 
-```shell
+::: code-group
+
+```shell [多行]
+sudo systemctl restart containerd
+sudo systemctl restart docker
+```
+
+```shell [单行]
 sudo systemctl restart containerd && sudo systemctl restart docker
 ```
+
+:::
 
 [^1]: 对于，CGroup Driver，在 [容器运行时 | Kubernetes](https://kubernetes.io/zh-cn/docs/setup/production-environment/container-runtimes/) 和 [配置 cgroup 驱动 | Kubernetes](https://kubernetes.io/zh-cn/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/) 文档中有讲解到，是 CRI 的一部分。

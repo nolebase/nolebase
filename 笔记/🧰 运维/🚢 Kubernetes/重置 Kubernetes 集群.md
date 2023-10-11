@@ -27,6 +27,18 @@ tags:
 
 用于删除集群，删除 CNI 配置，清空 IPVS，重设 Docker 和 containerd 的命令：
 
-```shell
+::: code-group
+
+```shell [多行]
+sudo kubeadm reset --force
+sudo rm -rf /etc/cni/net.d
+sudo ipvsadm --clear
+sudo systemctl restart docker
+sudo systemctl restart containerd
+```
+
+```shell [单行]
 sudo kubeadm reset --force && sudo rm -rf /etc/cni/net.d && sudo ipvsadm --clear && sudo systemctl restart docker && sudo systemctl restart containerd
 ```
+
+:::

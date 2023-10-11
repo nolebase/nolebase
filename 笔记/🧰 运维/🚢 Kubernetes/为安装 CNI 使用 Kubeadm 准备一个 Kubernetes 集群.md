@@ -39,8 +39,11 @@ tags:
 sudo kubeadm config print init-defaults --kubeconfig ClusterConfiguration > kubeadm.yml
 ```
 
-```yaml
+::: code-group
+
+```yaml [高亮修改的部分]
 apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
 bootstrapTokens:
 - groups:
   - system:bootstrappers:kubeadm:default-node-token
@@ -49,7 +52,56 @@ bootstrapTokens:
   usages:
   - signing
   - authentication
+localAPIEndpoint:
+  # 这里填写控制平面节点的 IP
+  advertiseAddress: 10.24.0.2 // [!code hl]
+  bindPort: 6443
+nodeRegistration:
+  # 记得确认一下是否是使用的 containerd 和 UNIX Socket 是否配置到了这个路径上
+  criSocket: unix:///var/run/containerd/containerd.sock
+  imagePullPolicy: IfNotPresent
+  # 这里填写我们的节点 1 的名字
+  name: node1 // [!code hl]
+  taints: null
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+apiServer:
+  timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 // [!code hl]
+  # 这里可以添加一下你期望在生成 Kubernetes API Server 
+  # 证书的时候额外支持的 SAN（Subject Alternative Names）
+  certSANs: // [!code hl]
+   - node01 // [!code hl]
+   - 10.24.0.2 // [!code hl]
+   - k8s.ihome.cat // [!code hl]
+certificatesDir: /etc/kubernetes/pki
+clusterName: homelab-kubernetes-1 # 可以改成自己期望的集群名字 // [!code hl]
+controllerManager: {}
+dns: {}
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+imageRepository: registry.k8s.io
+kubernetesVersion: 1.28.0
+networking:
+  # 选择一个喜欢的 Pod 使用的 CIDR，之后安装 Cilium 的时候也会用到
+  podSubnet: 10.244.0.0/16 // [!code hl]
+  dnsDomain: cluster.local
+  serviceSubnet: 10.96.0.0/12
+scheduler: {}
+```
+
+```yaml [高亮与默认配置对比后的差异]
+apiVersion: kubeadm.k8s.io/v1beta3
 kind: InitConfiguration
+bootstrapTokens:
+- groups:
+  - system:bootstrappers:kubeadm:default-node-token
+  token: abcdef.0123456789abcdef
+  ttl: 24h0m0s
+  usages:
+  - signing
+  - authentication
 localAPIEndpoint:
   # 这里填写控制平面节点的 IP
   advertiseAddress: 1.2.3.4 // [!code --]
@@ -64,19 +116,26 @@ nodeRegistration:
   name: node1 // [!code ++]
   taints: null
 ---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
 apiServer:
   timeoutForControlPlane: 4m0s # 这里我们可以稍微调大一些 // [!code --]
   timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 // [!code ++]
-apiVersion: kubeadm.k8s.io/v1beta3
+  # 这里可以添加一下你期望在生成 Kubernetes API Server 
+  # 证书的时候额外支持的 SAN（Subject Alternative Names）
+  certSANs: // [!code ++]
+   - node01 // [!code ++]
+   - 10.24.0.2 // [!code ++]
+   - k8s.ihome.cat // [!code ++]
 certificatesDir: /etc/kubernetes/pki
-clusterName: kubernetes
+clusterName: kubernetes // [!code --]
+clusterName: homelab-kubernetes-1 # 可以改成自己期望的集群名字 // [!code ++]
 controllerManager: {}
 dns: {}
 etcd:
   local:
     dataDir: /var/lib/etcd
 imageRepository: registry.k8s.io
-kind: ClusterConfiguration
 kubernetesVersion: 1.28.0
 networking:
   # 选择一个喜欢的 Pod 使用的 CIDR，之后安装 Cilium 的时候也会用到
@@ -85,6 +144,8 @@ networking:
   serviceSubnet: 10.96.0.0/12
 scheduler: {}
 ```
+
+:::
 
 ## 准备镜像
 

@@ -90,6 +90,7 @@ const ExtendedTheme: Theme = {
       },
       spotlight: {
         defaultToggle: true,
+        hoverBlockColor: 'rgb(240 197 52 / 7%)',
       },
     } as NolebaseEnhancedReadabilitiesOptions)
 
