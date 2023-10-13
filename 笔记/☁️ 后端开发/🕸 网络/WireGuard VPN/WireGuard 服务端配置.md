@@ -78,7 +78,7 @@ title: 警告
 ::: code-group
 
 ```shell [以非 root 用户执行]
-sudo wg genkey | sudo tee /etc/wireguard/privatekey | sudo wg pubkey | sudo tee /etc/wireguard/publickey
+wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
 ```
 
 ```shell [以 root 用户执行]
