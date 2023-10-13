@@ -5,7 +5,7 @@ import type { RequestHandler } from 'express'
 import DocsMetadata from '../../../../../../docsMetadata.json'
 import type { Doc } from '../../../../../../../scripts/types/metadata'
 import { isVerboseOn } from '../../../utils/verbose'
-import { tagOpenAI } from '../../../lib/openai'
+import { getTaggingOpenAIClient } from '../../../lib/openai'
 
 function checkTagsForPageCanBeGenerated(filePath: string): {
   reason?: string
@@ -16,6 +16,8 @@ function checkTagsForPageCanBeGenerated(filePath: string): {
     const found = DocsMetadata.docs.find((item) => {
       if (item.relativePath === filePath)
         return item
+
+      return null
     }) as Doc | undefined
 
     if (!found) {
@@ -31,6 +33,7 @@ function checkTagsForPageCanBeGenerated(filePath: string): {
 
     if (parsedContent.data.ignoreWhenGenerateTagsFromGPT) {
       if (isVerboseOn())
+        // eslint-disable-next-line no-console
         console.log(`由于文档内 frontmatter 中已标记「${filePath}」的 ignoreWhenGenerateTagsFromGPT，跳过本次标签生成...`)
       return {
         reason: `由于文档内 frontmatter 中已标记「${filePath}」的 ignoreWhenGenerateTagsFromGPT，跳过本次标签生成...`,
@@ -39,6 +42,7 @@ function checkTagsForPageCanBeGenerated(filePath: string): {
     }
     if (!found.hashes.sha256.contentDiff && (Array.isArray(parsedContent.data.tags) && parsedContent.data.tags.length > 0)) {
       if (isVerboseOn())
+        // eslint-disable-next-line no-console
         console.log(`由于 docsMetadata.json 中已标记「${filePath}」的 hashes.sha256.contentDiff 为空且文档内 frontmatter 中已有标签，跳过本次标签生成...`)
       return {
         reason: `由于 docsMetadata.json 中已标记「${filePath}」的 hashes.sha256.contentDiff 为空且文档内 frontmatter 中已有标签，跳过本次标签生成...`,
@@ -47,6 +51,7 @@ function checkTagsForPageCanBeGenerated(filePath: string): {
     }
     if (found.ignoreWhenGenerateTagsFromGPT) {
       if (isVerboseOn())
+        // eslint-disable-next-line no-console
         console.log(`由于 docsMetadata.json 中已标记「${filePath}」的 ignoreWhenGenerateTagsFromGPT，跳过本次标签生成...`)
       return {
         reason: `由于 docsMetadata.json 中已标记「${filePath}」的 ignoreWhenGenerateTagsFromGPT，跳过本次标签生成...`,
@@ -62,7 +67,7 @@ function checkTagsForPageCanBeGenerated(filePath: string): {
   catch (err) {
     console.error(err)
     return {
-      reason: err instanceof Error ? err.message : err,
+      reason: err instanceof Error ? err.message : String(err),
       canBeGenerated: false,
     }
   }
@@ -131,7 +136,7 @@ export const handlePostTagsGeneration: RequestHandler = async (req, res) => {
     if (potentialTagsNum >= 50)
       potentialTagsNum = 50
 
-    const tags = await tagOpenAI.generateTagsForOnePage(canBeGenerated.content.content, category, req.body.tags, potentialTagsNum)
+    const tags = await getTaggingOpenAIClient().generateTagsForOnePage(canBeGenerated.content.content, category, req.body.tags, potentialTagsNum)
 
     res.json({
       tags,
