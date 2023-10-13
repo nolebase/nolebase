@@ -56,7 +56,6 @@
 #### 标题
 
 标题一般为文件名本身，方便查询和记忆。
-
 ##### Markdown 撰写示例
 
 ```markdown
@@ -64,17 +63,19 @@
 ```
 
 标签不易于展示渲染后效果，此处不再赘述。
-
 #### 标签
 
 标签可以使得文档易于检索和串联在一起，也可以使得在阅读一篇文档之后再去阅读相关标签的其他文档时变得方便检索和寻找。
 
+过去 Nólëbase 使用 Obsidian 的[基本标签](https://help.obsidian.md/Editing+and+formatting/Tags) `#标签内容`（我叫它「裸标签」）来对页面进行标记，但是存在于正文的裸标签并不利于程序化的处理，而且在实践[结构化标签（或者嵌套标签）](https://help.obsidian.md/Editing+and+formatting/Tags#Nested+tags)的时候存在于正文中的结构化标签将会在一定程度上混淆视听，为了能够更好的集成到 [Nólëbase 集成](https://nolebase-integrations.ayaka.io) 来全自动处理标签，优化整体阅读体验，现在 Nólëbase 在 Obsidian 所兼容的 Markdown 的 [frontmatter](https://github.com/jonschlinkert/gray-matter) 添加使用 `tags` 字段来配置页面的标签。
 ##### Markdown 撰写示例
 
-通常使用 # 作为开头：
-
-```markdown
-#知识库
+```
+---
+tags:
+ - 根层级
+ - 另一个根层级/某个标签
+---
 ```
 
 #### Archive 信息
@@ -84,7 +85,6 @@
 对于存放在 **📃 Archives** 目录中的文件（包括文档、静态资源），都应添加 **Archive 信息** 显著的标记其来源，创建时间、以及原始资源的信息等内容。
 这将确保我们在 Archive 文档或静态资源时可以保留其作者的信息和采集信息，方便未来的资料查证、资料溯源等变成可能。
 另外需要注意的是，我们在进行 Archive 采集时都应该注意创作者所使用的共享协议，如果不允许转载，则不能进行 Archive 采集。
-
 ##### 字段
 
 ###### Archive 自
