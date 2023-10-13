@@ -1,10 +1,12 @@
+import { fileURLToPath } from 'node:url'
+import { dirname, relative, resolve } from 'node:path'
+import { Buffer } from 'node:buffer'
+import { exit } from 'node:process'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
-import { fileURLToPath } from 'url'
-import { resolve, relative, dirname } from 'path'
-import { ArticleTree } from './types/metadata'
-import { sidebar } from '../.vitepress/docsMetadata.json'
 import sharp from 'sharp'
+import { sidebar } from '../.vitepress/docsMetadata.json'
+import type { ArticleTree } from './types/metadata'
 import { removeEmoji } from './utils'
 
 export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -13,14 +15,12 @@ const dist = '.vitepress/dist/'
 
 const ogSvg = fs.readFileSync(resolve(DIR_ROOT, './scripts/og-template.svg'), 'utf-8')
 
-
 let articles: ArticleTree[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))] || []))
 for (let i = 0; i < articles.length; i++) {
   const items = articles[i].items
-  if (items) {
+  if (items)
 
     articles.push(...items.map(item => ({ ...item, category: articles[i].category })))
-  }
 }
 articles = articles.filter(item => item.link)
 
@@ -43,10 +43,20 @@ async function generateSVG(article: ArticleTree, output: string) {
     name1: lines[0] || '',
     name2: lines[1] || '',
     name3: `${lines[2] || ''}${lines[3] ? '...' : ''}`,
-    category: category,
+    category,
   }
 
-  const svg = ogSvg.replace(/\{\{([^}]+)}}/g, (_, name) => data[name])
+  const svg = ogSvg.replace(/\{\{([^}]+)}}/g, (_, name) => {
+    if (!name)
+      return ''
+    if (typeof name !== 'string')
+      return ''
+    if (!(name in data))
+      return ''
+
+    const nameKeyOf = name as keyof typeof data
+    return data[nameKeyOf]
+  })
 
   await sharp(Buffer.from(svg))
     .resize(1200, 630)
@@ -54,10 +64,7 @@ async function generateSVG(article: ArticleTree, output: string) {
     .toFile(output)
 }
 
-
 async function buildOG() {
-
-  
   const files = await fg(`${dist}/**/*.html`, {
     onlyFiles: true,
     cwd: DIR_ROOT,
@@ -67,13 +74,13 @@ async function buildOG() {
     let html = await fs.readFile(file, 'utf-8')
 
     const relativePath = relative(dist, file)
-    const link = '/' + relativePath.slice(0, relativePath.lastIndexOf('.'))
+    const link = `/${relativePath.slice(0, relativePath.lastIndexOf('.'))}`
 
-    const article = articles.find((item) => item.link === link)
+    const article = articles.find(item => item.link === link)
     if (article) {
       const ogName = `${dirname(file)}/og-${article.index}.png`
       await generateSVG(article, ogName)
-      html = html.replace(/nolebase\.ayaka\.io\/og\.png/g, `nolebase.ayaka.io/${relative(dist,ogName)}`.toLocaleLowerCase())
+      html = html.replace(/nolebase\.ayaka\.io\/og\.png/g, `nolebase.ayaka.io/${relative(dist, ogName)}`.toLocaleLowerCase())
       html = html.replace(
         /<meta property="og:title" content="([^"]+)">/g,
         `<meta property="og:title" content="${article.text}">`,
@@ -92,5 +99,5 @@ async function buildOG() {
   buildOG()
 }()).catch((err) => {
   console.error(err)
-  process.exit(1)
+  exit(1)
 })

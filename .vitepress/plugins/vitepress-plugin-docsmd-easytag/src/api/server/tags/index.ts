@@ -1,5 +1,5 @@
-import { extname } from 'path'
-import { readFileSync, writeFileSync } from 'fs'
+import { extname } from 'node:path'
+import { readFileSync, writeFileSync } from 'node:fs'
 import matter from 'gray-matter'
 import type { RequestHandler } from 'express'
 
@@ -11,7 +11,8 @@ export const handlePutTags: RequestHandler = async (req, res) => {
     }
 
     let filePath = decodeURIComponent(req.body.path).replace(extname(decodeURIComponent(req.body.path)), '.md')
-    if (filePath.startsWith('/')) filePath = filePath.slice(1)
+    if (filePath.startsWith('/'))
+      filePath = filePath.slice(1)
 
     const content = readFileSync(filePath, 'utf-8')
     const parsedContent = matter(content)
@@ -23,9 +24,10 @@ export const handlePutTags: RequestHandler = async (req, res) => {
     res.json({
       saved: true,
     })
-  } catch (err) {
-    res.
-      status(500).
-      json({ error: err instanceof Error ? err.message : err })
+  }
+  catch (err) {
+    res
+      .status(500)
+      .json({ error: err instanceof Error ? err.message : err })
   }
 }

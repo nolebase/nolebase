@@ -71,22 +71,3 @@ export async function getContributorsAt(path: string) {
     return []
   }
 }
-
-// export async function getFunctionContributors() {
-//   const result = await Promise.all(functions.map(async (i) => {
-//     return [i.name, await getContributorsAt(`packages/${i.package}/${i.name}`)] as const
-//   }))
-//   return Object.fromEntries(result)
-// }
-
-// 测试
-// ;(async function() {
-//   const log = await getChangeLog(20)
-//   console.log('changelog:', log)
-// })()
-
-// 测试 getContributorsAt
-// ;(async function() {
-//   const log = await getContributorsAt('笔记/☕️ 前端开发/用 TypeScript 写 sh 脚本.md')
-//   console.log('contributors:', log)
-// })()

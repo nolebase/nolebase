@@ -9,7 +9,7 @@ import Git from 'simple-git'
 import matter from 'gray-matter'
 import uniq from 'lodash/uniq'
 import TagsAlias from '../.vitepress/docsTagsAlias.json'
-import type { DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
+import type { ArticleTree, DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
 
 const dir = './'
 const target = '笔记/'
@@ -21,9 +21,11 @@ const git = Git(DIR_ROOT)
 
 /**
  * 列出所有的页面
- * @param dir
- * @param options
- * @returns
+ * @param dir 目录
+ * @param options 选项
+ * @param options.target 目标
+ * @param options.ignore 忽略
+ * @returns 符合 glob 的文件列表
  */
 export async function listPages(dir: string, options: { target?: string; ignore?: string[] }) {
   const {
@@ -48,12 +50,12 @@ export async function listPages(dir: string, options: { target?: string; ignore?
 
 /**
  * 添加和计算路由项
- * @param indexes
- * @param path
- * @param upgradeIndex
- * @returns
+ * @param indexes 路由树
+ * @param path 路径
+ * @param upgradeIndex 是否升级 index
+ * @returns 路由树
  */
-async function addRouteItem(indexes: any[], path: string, upgradeIndex = false) {
+async function addRouteItem(indexes: ArticleTree[], path: string, upgradeIndex = false) {
   const suffixIndex = path.lastIndexOf('.')
   const nameStartsAt = path.lastIndexOf('/') + 1
   const title = path.slice(nameStartsAt, suffixIndex)
@@ -79,19 +81,22 @@ async function addRouteItem(indexes: any[], path: string, upgradeIndex = false) 
 
 /**
  * 递归式添加和计算路由项
- * @param indexes
- * @param item
- * @param path
- * @param upgradeIndex
- * @returns
+ * @param indexes 路由树
+ * @param item 路由项
+ * @param path 路径
+ * @param upgradeIndex 是否升级 index
+ * @returns 路由树
  */
-function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgradeIndex: boolean) {
+function addRouteItemRecursion(indexes: ArticleTree[], item: any, path: string[], upgradeIndex: boolean) {
   if (path.length === 1) {
     indexes.push(item)
     return indexes
   }
   else {
     const onePath = path.shift()
+    if (!onePath)
+      return indexes
+
     let obj = indexes.find(obj => obj.index === onePath)
 
     if (!obj) {
@@ -112,7 +117,7 @@ function addRouteItemRecursion(indexes: any[], item: any, path: string[], upgrad
     }
     else {
       // 否则，递归遍历
-      obj.items = addRouteItemRecursion(obj.items, item, path, upgradeIndex)
+      obj.items = addRouteItemRecursion(obj.items ?? [], item, path, upgradeIndex)
     }
 
     return indexes
@@ -137,9 +142,9 @@ async function processSidebar(docs: string[], docsMetadata: DocsMetadata) {
  * 1. srcTag === targetTag
  * 2. srcTag.toUpperCase() === targetTag.toUpperCase()
  *
- * @param srcTag
- * @param targetTag
- * @returns
+ * @param srcTag 原始 tag
+ * @param targetTag 目标 tag
+ * @returns 是否是别名
  */
 function isTagAliasOfTag(srcTag: string, targetTag: string) {
   return srcTag === targetTag || srcTag.toUpperCase() === targetTag.toUpperCase()

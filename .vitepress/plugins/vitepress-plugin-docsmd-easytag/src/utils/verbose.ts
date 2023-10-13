@@ -1,3 +1,5 @@
+import { env } from 'node:process'
+
 export function isVerboseOn(): boolean {
-    return process.env.VERBOSE === 'true' || process.env.VERBOSE === '1' || process.env.VERBOSE === 'on'
+  return env.VERBOSE === 'true' || env.VERBOSE === '1' || env.VERBOSE === 'on'
 }

@@ -1,11 +1,12 @@
+import { env } from 'node:process'
 import { ChatOpenAI } from 'langchain/chat_models/openai'
 import { CallbackManager } from 'langchain/callbacks'
 import type { LLMResult } from 'langchain/schema'
-import { SystemMessagePromptTemplate, PromptTemplate } from 'langchain/prompts'
+import { PromptTemplate, SystemMessagePromptTemplate } from 'langchain/prompts'
 import { TokenTextSplitter } from 'langchain/text_splitter'
+import uniq from 'lodash/uniq'
 import { isVerboseOn } from '../utils/verbose'
 import { toRetriable } from '../utils/reliability'
-import uniq from 'lodash/uniq'
 
 const verbose = isVerboseOn()
 
@@ -46,19 +47,23 @@ const callbackManager = CallbackManager.fromHandlers({
   },
 })
 
-type TagOpenAI = {
-  tryTagAndClassifyTextualContent(content: string, existingTags: string[], category: string, tagsNum: number): Promise<string[]>,
+interface TagOpenAI {
+  tryTagAndClassifyTextualContent(content: string, existingTags: string[], category: string, tagsNum: number): Promise<string[]>
   generateTagsForOnePage(content: string, category: string, existingTags: string[], tagsNum: number): Promise<string[]>
 }
 
-export let tagOpenAI: TagOpenAI
+let taggingOpenAI: TagOpenAI
+
+export function getTaggingOpenAIClient(): TagOpenAI {
+  return taggingOpenAI
+}
 
 export function initOpenAI(config: {
-  chunkSize?: number,
-  chunkOverlap?: number,
-  openAIAPISecret?: string,
-  openAIAPIHost?: string,
-  modelName?: string,
+  chunkSize?: number
+  chunkOverlap?: number
+  openAIAPISecret?: string
+  openAIAPIHost?: string
+  modelName?: string
 }) {
   const chatOpenAI = new ChatOpenAI({
     openAIApiKey: config.openAIAPISecret || 'sk-testkey',
@@ -67,24 +72,24 @@ export function initOpenAI(config: {
     configuration: {
       basePath: config.openAIAPIHost ? `${config.openAIAPIHost}/v1` : undefined,
     },
-    verbose: verbose,
+    verbose,
     callbacks: verbose ? callbackManager : undefined,
   })
 
   const pageSplitterForTagsGeneration = new TokenTextSplitter({
     encodingName: 'cl100k_base',
     chunkSize: config.chunkSize || 10000,
-    chunkOverlap: config.chunkOverlap || 100
+    chunkOverlap: config.chunkOverlap || 100,
   })
 
-  tagOpenAI = {
+  taggingOpenAI = {
     /**
      * 生成标签
-     * @param content
-     * @param existingTags
-     * @param category
-     * @param strategy
-     * @returns
+     * @param content 文章内容
+     * @param existingTags 已有标签
+     * @param category 分类
+     * @param tagsNum 目标标签数量
+     * @returns 生成的标签
      */
     async tryTagAndClassifyTextualContent(content: string, existingTags: string[] = [], category: string, tagsNum: number): Promise<string[]> {
       const genTags = toRetriable(1000, 1000, async (content: string) => {
@@ -93,14 +98,13 @@ export function initOpenAI(config: {
             amount: tagsNum,
             tags: JSON.stringify(existingTags),
             category,
-            content
-          })
+            content,
+          }),
         ])
 
         const tags = JSON.parse(res.text)
-        if (!Array.isArray(tags)) {
+        if (!Array.isArray(tags))
           throw new Error('Tags must be an array.')
-        }
 
         return tags
       })
@@ -110,15 +114,15 @@ export function initOpenAI(config: {
 
     /**
      * 生成一个页面的标签
-     * @param content
-     * @param category
-     * @param strategy
-     * @returns
+     * @param content 文章内容
+     * @param category 分类
+     * @param existingTags 已有标签
+     * @param tagsNum 目标标签数量
+     * @returns 生成的标签
      */
     async generateTagsForOnePage(content: string, category: string, existingTags: string[], tagsNum: number) {
-      if (!process.env.OPENAI_API_SECRET) {
+      if (!env.OPENAI_API_SECRET)
         throw new Error('OPENAI_API_SECRET is not set.')
-      }
 
       const chunks = await pageSplitterForTagsGeneration.createDocuments([content])
 
@@ -128,13 +132,16 @@ export function initOpenAI(config: {
         const tags: { lessRun: string[]; mediumRun: string[]; fullyRun: string[] } = { lessRun: [], mediumRun: [], fullyRun: [] }
 
         tags.lessRun = await this.tryTagAndClassifyTextualContent(chunk.pageContent, totalTags, category, tagsNum)
+        // eslint-disable-next-line no-console
         console.log(`generated the tags from less run with targeting ${tagsNum} tags`, `[ ${tags.lessRun.join(', ')} ]`)
         if (tagsNum >= 15) {
           tags.mediumRun = await this.tryTagAndClassifyTextualContent(chunk.pageContent, uniq([...totalTags, ...tags.lessRun]), category, tagsNum)
+          // eslint-disable-next-line no-console
           console.log(`generated the tags from medium run with targeting ${tagsNum} tags`, `[ ${tags.mediumRun.join(', ')} ]`)
         }
         if (tagsNum >= 30) {
           tags.fullyRun = await this.tryTagAndClassifyTextualContent(chunk.pageContent, uniq([...totalTags, ...tags.lessRun, ...tags.mediumRun]), category, tagsNum)
+          // eslint-disable-next-line no-console
           console.log(`generated the tags from large run with targeting ${tagsNum} tags`, `[ ${tags.fullyRun.join(', ')} ]`)
         }
 
@@ -143,6 +150,6 @@ export function initOpenAI(config: {
 
       // slice tags to base * multiplier
       return totalTags.slice(0, tagsNum)
-    }
+    },
   }
 }
