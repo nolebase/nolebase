@@ -1,3 +1,24 @@
+---
+tags:
+  - Linux
+  - Linux/命令行
+  - 操作系统/Linux
+  - 操作系统/Debian
+  - 操作系统/Debian/Debian-11
+  - 操作系统/CentOS
+  - 操作系统/CentOS/CentOS-8
+  - 操作系统/Fedora/Fedora-33
+  - 操作系统/Fedora
+  - 命令行/apt
+  - 命令行/dnf
+  - 命令行/brew
+  - 网络/WireGuard
+  - 网络/VPN
+  - 网络/UDP
+  - Linux/内核
+  - 操作系统/macOS
+  - 计算机网络/组网
+---
 # WireGuard 安装
 
 ## 说明
@@ -39,7 +60,8 @@ sudo apt -t buster-backports install wireguard wireguard-tools wireguard-dkms
 ##### 检查先决条件
 
 请确保有安装 `epel-release` 和 `elrepo-release`：
-检查是否有安装: 
+检查是否有安装:
+
 1. `rpm` 是 **RHEL 软件包管理器** 的缩写，用于安装静态安装包或管理已经安装的包
 2. `-qa` 参数表示查询全部已有安装包，q 代表查询，a 代表全部
 
