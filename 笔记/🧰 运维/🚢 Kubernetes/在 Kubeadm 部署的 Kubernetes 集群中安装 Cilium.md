@@ -14,6 +14,7 @@ tags:
   - 网络/Cilium
   - 命令行/helm
   - 软件/云原生/helm
+  - 开发/标记语言/YAML
 ---
 # 在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium
 

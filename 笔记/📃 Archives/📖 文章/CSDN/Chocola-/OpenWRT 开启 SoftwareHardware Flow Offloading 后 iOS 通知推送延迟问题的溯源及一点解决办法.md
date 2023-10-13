@@ -1,4 +1,18 @@
-# OpenWrt开启SoftwareHardware Flow Offloading后iOS通知推送延迟问题的溯源及一点解决办法
+---
+tags:
+  - 运维
+  - 网络
+  - 软件/开源/OpenWRT
+  - 软件/开源/OpenWRT/Lede
+  - 操作系统/iOS
+  - 操作系统/iPadOS
+  - 网络/路由/OpenWRT
+  - 操作系统/iOS/通知
+  - 命令行/iptables
+  - Archive
+  - Archive/CSDN
+---
+# OpenWRT 开启 SoftwareHardware Flow Offloading 后 iOS 通知推送延迟问题的溯源及一点解决办法
 
 ---
 

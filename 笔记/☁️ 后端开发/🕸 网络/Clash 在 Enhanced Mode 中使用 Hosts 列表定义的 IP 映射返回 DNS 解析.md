@@ -1,13 +1,16 @@
 ---
 tags:
-  - ClashX Pro
-  - 代理
-  - 增强模式
-  - 透明代理
-  - Hosts
-  - 路由
+  - 软件/开源/Clash
+  - 网络/VPN/Clash
+  - 网络/代理/Clash
+  - 软件/ClashX
+  - 网络/路由
+  - 网络/透明代理
+  - 软件/开源/Clash/增强模式
+  - 开发/标记语言/YAML
+  - 软件/Visual-Studio-Code
+  - 软件/Visual-Studio-Code/vscode
 ---
-
 # Clash 在 Enhanced Mode 中使用 Hosts 列表定义的 IP 映射返回 DNS 解析
 
 ### 文档兼容性

@@ -1,21 +1,25 @@
 ---
 tags:
-  - HASS
-  - Home Assistant
-  - Home Assistant 服务
-  - Home Assistant 实体
-  - iOS
-  - iPadOS
-  - Homekit
-  - 媒体播放器
-  - 智能家居
-  - 电热毯
-  - 温度档位
-  - 电视
-  - 模式选择器
-  - 空调控制器
-  - 信号源选择器
-  - Additional Tools for Xcode
+  - 开发/标记语言/YAML
+  - 软件/开源/Home-Assistant
+  - 软件/开源/Home-Assistant/HASS
+  - 软件/iOS/Homekit
+  - 软件/macOS/Homekit
+  - 软件/iPadOS/Homekit
+  - 智能家居/电热毯
+  - 智能家居/电视
+  - 开发/Xcode/Additional-Tools-for-Xcode
+  - 开发/Xcode
+  - 软件/开源/Home-Assistant/模式选择器
+  - 软件/开源/Home-Assistant/空调控制器
+  - 软件/开源/Home-Assistant/媒体选择器
+  - 物联网/智能家居
+  - 物联网/智能家居/Home-Assistant
+  - 物联网/智能家居/Home-Assistant/HASS
+  - 物联网/智能家居/Homekit
+  - 运维/物联网
+  - 操作系统/iOS
+  - 操作系统/iPadOS
 ---
 
 # 于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备

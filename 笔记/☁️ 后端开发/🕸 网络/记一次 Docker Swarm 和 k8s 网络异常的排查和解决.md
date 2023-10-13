@@ -1,4 +1,24 @@
-# 记一次 Docker Swarm 和 K8S 网络异常的排查和解决
+---
+tags:
+  - 命令行/docker
+  - 开发/容器/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - 网络
+  - 网络/网关/Nginx
+  - 网络/网关/OpenResty
+  - 软件/Wireshark
+  - 网络/抓包/Wireshark
+  - 网络/抓包
+  - 操作系统/Debian
+  - 操作系统/Debian/Debian-11
+  - 开发/容器/Docker/Docker-Swarm
+  - 运维/Kubernetes
+  - 运维/Kubernetes/K8s
+  - 开发/云原生/Kubernetes
+  - 开发/云原生/Kubernetes/K8s
+---
+# 记一次 Docker Swarm 和 K8s 网络异常的排查和解决
 
 ##### 文档版本
 

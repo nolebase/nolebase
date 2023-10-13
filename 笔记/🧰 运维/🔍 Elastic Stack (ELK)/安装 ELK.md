@@ -1,8 +1,31 @@
+---
+tags:
+  - 命令行/docker
+  - 开发/容器/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - 开发/云原生/可观测
+  - 软件/Elastic
+  - 软件/Elastic/ELK
+  - 软件/Elastic/ElasticStack
+  - 软件/Elastic/ElasticSearch
+  - 软件/Elastic/Kibana
+  - 软件/Elastic/Logstash
+  - 开发/云原生/可观测/日志
+  - 开发/云原生/可观测/指标
+  - 开发/云原生/可观测/监控
+  - 基础设施
+  - 命令行/apt
+  - 操作系统/Debian
+  - 操作系统/Debian/Debian-11
+  - 开发/标记语言/YAML
+  - 开发/容器/Docker/Docker-Compose
+  - 命令行/sysctl
+  - 命令行/curl
+---
 # 使用 Docker 安装和部署 ELK
 
 **ELK 即 ElasticSearch、Logstash、Kibana 栈，用于日志分析、日志搜索。**
-
-#elasticsearch #elastic #kibana #logstash #日志 #监控 #基础架构
 
 ### 文档兼容性
 

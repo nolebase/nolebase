@@ -1,3 +1,11 @@
+---
+tags:
+  - 软件/Visual-Studio-Code/vscode
+  - 操作系统/macOS
+  - 命令行/xattr
+  - 命令行/chown
+  - 软件/Visual-Studio-Code
+---
 #### VS Code 提示
 
 > Cannot update while running on a read-only volume. The application is on a read-only volume. Please move the application and try again. If you're on macOS Sierra or later, you'll need to move the application out of the Downloads directory. See this link for more information.
@@ -14,7 +22,7 @@ sudo chown -R $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt
 xattr -dr com.apple.quarantine /Applications/Visual\ Studio\ Code.app
 ```
 
-`chown` —— 改变文件的归属者（[chown 变更所属权](../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）
+`chown` —— 改变文件的归属者（[chown 变更所属权](chmod%20变更权限.md)）
 
 `xattr` —— 操作文件的扩展信息，这里用来删除文件和子文件的扩展信息
 

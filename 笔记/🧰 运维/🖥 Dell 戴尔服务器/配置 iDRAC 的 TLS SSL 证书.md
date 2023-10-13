@@ -1,3 +1,20 @@
+---
+tags:
+  - 运维
+  - 运维/物理机
+  - 运维/服务器
+  - 运维/服务器/戴尔/PowerEdgeR730
+  - 运维/服务器/戴尔/iDRAC9
+  - 运维/服务器/戴尔/iDRAC
+  - 密码学/证书/TLS
+  - 密码学/证书/TLS/SSL
+  - 密码学/证书/TLS/HTTPS
+  - 密码学/证书
+  - 密码学/证书/TLS/域名证书
+  - 命令行/racadm
+  - 操作系统/Windows
+  - 操作系统/Windows-Server
+---
 # 配置 iDRAC 的 TLS SSL 证书
 
 ## 下载 Windows 管理需要使用的 racadm 命令
@@ -81,7 +98,5 @@ racadm -r <ip_address> -u root -p <password> racreset
 
 ## 延伸阅读
 
-Dell : How to install a custom issued SSL certificate on iDRAC | ITechLounge.net
-https://www.itechlounge.net/2018/03/dell-how-to-install-a-custom-issued-ssl-certificate-on-idrac/
-支援 PowerEdge R730 | 驅動程式與下載 | Dell 香港
-https://www.dell.com/support/home/zh-hk/product-support/product/poweredge-r730/drivers
+- [Dell : How to install a custom issued SSL certificate on iDRAC | ITechLounge.net](https://www.itechlounge.net/2018/03/dell-how-to-install-a-custom-issued-ssl-certificate-on-idrac/)
+- [支援 PowerEdge R730 | 驅動程式與下載 | Dell 香港](https://www.dell.com/support/home/zh-hk/product-support/product/poweredge-r730/drivers)

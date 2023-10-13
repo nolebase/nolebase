@@ -1,6 +1,23 @@
+---
+tags:
+  - 网站/GitLab
+  - 开发/CICD
+  - 开发/CICD/GitLab-CI
+  - 开发/标记语言/YAML
+  - 操作系统/CentOS
+  - 命令行/yum
+  - 命令行/chmod
+  - 开发/DevOps
+  - 开发/git
+  - 命令行/git
+  - 开发/标记语言/TOML
+  - 命令行
+  - Linux
+  - Linux/命令行
+  - 操作系统/Linux
+---
 # 配置 GitLab CI 自动部署
 
-作者：小音，标签: #gitlab #ci
 本教程预期实现将前端代码提交到 test 分支或者合并到 test 分支时触发自动部署脚本，从而实现自动部署测试环境的目的。
 
 > 本篇不包含如何建立网站服务器的内容，只讲述如何配置 GitLab CI。

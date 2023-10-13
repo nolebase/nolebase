@@ -32,6 +32,7 @@ tags:
   - 软件/开源/Calico
   - 软件/云原生/Calico
   - 网络/Cilium
+  - 开发/标记语言/YAML
 ---
 # ”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium
 

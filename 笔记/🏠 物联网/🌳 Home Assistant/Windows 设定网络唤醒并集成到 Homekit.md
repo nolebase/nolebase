@@ -1,3 +1,19 @@
+---
+tags:
+  - 软件/Windows
+  - 软件/iOS/Homekit
+  - 软件/macOS/Homekit
+  - 物联网/智能家居/Homekit
+  - 软件/iPadOS/Homekit
+  - 物联网
+  - 物联网/智能家居
+  - 运维/物联网
+  - 开发/标记语言/YAML
+  - 物联网/智能家居/Home-Assistant
+  - 软件/开源/Home-Assistant/HASS
+  - 物联网/智能家居/Home-Assistant/HASS
+  - 软件/开源/Home-Assistant
+---
 # Windows 设定网络唤醒并集成到 Homekit
 
 ##### 文档版本

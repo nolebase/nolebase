@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "5e97688436fc4139",
+        "id": "685399533d98d3fe",
         "type": "tabs",
         "children": [
           {
-            "id": "f4fa62453ad7b890",
+            "id": "cb319a42d547d53e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#命令行/git  ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,11 +69,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 227.50260543823242
+    "width": 311.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -93,9 +90,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md"
-              }
+              "state": {}
             }
           },
           {
@@ -103,6 +98,24 @@
             "type": "leaf",
             "state": {
               "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "d05b2adb58e8f322",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          },
+          {
+            "id": "8d1f5bc853febe22",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
               "state": {}
             }
           }
@@ -120,7 +133,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +149,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,10 +170,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 348.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-spaced-repetition:复习卡片": false,
       "graph:查看关系图谱": false,
       "switcher:打开快速切换": false,
       "canvas:新建白板": false,
@@ -175,44 +187,45 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f4fa62453ad7b890",
+  "active": "cb319a42d547d53e",
   "lastOpenFiles": [
-    "笔记/link.md",
+    "笔记/📃 Archives/📖 文章/知乎/百心全说/认知行为疗法（CBT）对成人 ADHD 的干预.md",
+    "笔记/📟 终端/软件/Git 版本控制/使用变基和堆叠整合提交和拉取请求.md",
+    "笔记/🟢 持续集成 持续交付 CICD/GitLab/配置 GitLab CI CD 自动部署.md",
+    "笔记/🧰 运维/🔍 Elastic Stack (ELK)/安装 ELK.md",
+    "笔记/🟢 持续集成 持续交付 CICD/GitHub Actions/仓库内的 GitHub Actions 工作流使用 GitHub Actions Bot 来提交.md",
+    "笔记/☁️ 后端开发/🕸 网络/记一次 Docker Swarm 和 K8s 网络异常的排查和解决.md",
+    "笔记/🧰 运维/☁️ Atlassian 办公云/部署 Confluence Data Center 版.md",
+    "笔记/📄 PKI 公钥基础设施/证书部署/在 Windows Server 上部署.md",
+    "笔记/☁️ 后端开发/🕸 网络/Clash 在 Enhanced Mode 中使用 Hosts 列表定义的 IP 映射返回 DNS 解析.md",
+    "笔记/💾 软件/🛠 VS Code/解决 VS Code 不能在只读卷上更新.md",
+    "笔记/📐 图形学/↗️ 向量长度.md",
+    "笔记/📐 图形学/▶️ 三角函数.md",
+    "笔记/📐 图形学/✖️ 叉乘.md",
+    "笔记/📐 图形学/🌐 齐次坐标.md",
+    "笔记/📐 图形学/📐 向量之间的夹角.md",
+    "笔记/📐 图形学/复平面和四元数.md",
+    "笔记/📐 图形学/单位向量.md",
+    "笔记/📐 图形学/🔢 矩阵乘法.md",
+    "笔记/📐 图形学/🔢 标量、向量、张量.md",
+    "笔记/📐 图形学/🔘 点乘.md",
+    "笔记/📃 Archives/📖 文章/CSDN/Chocola-/OpenWRT 开启 SoftwareHardware Flow Offloading 后 iOS 通知推送延迟问题的溯源及一点解决办法.md",
+    "笔记/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
+    "笔记/🏠 物联网/🌳 Home Assistant/Windows 设定网络唤醒并集成到 Homekit.md",
+    "笔记/🧰 运维/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
+    "笔记/🧰 运维/🚢 Kubernetes/重置 Kubernetes 集群.md",
+    "笔记/🧰 运维/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
+    "vite.config.ts.timestamp-1697016783987-6e00ae1224e55.mjs",
+    "vite.config.ts.timestamp-1697016636175-3fd7ee6447792.mjs",
+    "vite.config.ts.timestamp-1697010479183-f8760a387091b.mjs",
+    "笔记/🧩 开源贡献/Kubernetes",
+    "笔记/🧩 开源贡献",
+    "vite.config.ts.timestamp-1696951813236-fbe05743cf186.mjs",
     "vite.config.ts.timestamp-1694056851736-2a9f9cc07dabb.mjs",
     "vite.config.ts.timestamp-1694055746053-b42b1caa43b49.mjs",
     "vite.config.ts.timestamp-1694054029774-2bdc5e697a3ab.mjs",
-    "笔记/🎬 项目/Nólëbase.md",
-    "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
-    "笔记/☕️ 前端开发/VitePress.md",
-    "笔记/💾 软件/笔记软件/Obsidian.md",
-    "笔记/📟 终端/软件/Git 版本控制/如何恢复一个已经被丢弃的暂存 Stash.md",
     "vite.config.ts.timestamp-1693986842543-bd19347e55462.mjs",
-    "vite.config.ts.timestamp-1693986795903-0c9438397639d.mjs",
-    "vite.config.ts.timestamp-1693986618107-83f23663dbe1a.mjs",
-    "vite.config.ts.timestamp-1693986388226-23dcc3bc0ac36.mjs",
-    "vite.config.ts.timestamp-1693986224739-88cd88bc157cf.mjs",
-    "vite.config.ts.timestamp-1693986115235-31d37a6004e9c.mjs",
-    "vite.config.ts.timestamp-1693986003433-1de81cf2ae04d.mjs",
-    "笔记/bl.md",
-    "笔记/🎬 项目/Notion.md",
-    "笔记/💾 软件/笔记软件/Notion.md",
-    "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
     "笔记/📚 个人知识管理/assets/obsidian-vitepress-and-nolebase-problems-ideas-vault-01.png.png",
-    "日记/2023-09-04.md",
-    "笔记/☁️ 后端开发/⛶ 边缘计算/使用 Cloudflare Workers 实现一个链接预览服务.md",
-    "笔记/☁️ 后端开发/🚪 网关/记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题.md",
-    "笔记/📟 终端/Linux 命令/权限管理/chmod 变更权限.md",
-    "笔记/📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md",
-    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
-    "笔记/📐 图形学/↗️ 向量长度.md",
-    "笔记/📄 PKI 公钥基础设施/证书疑难解答和问题质询.md",
-    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/OpenSSL 通过指定的证书吊销列表手动验证证书有效性.md",
-    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/mTLS/Golang mTLS 实现.md",
-    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/mTLS/配置 mTLS.md",
-    "笔记/📄 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
-    "笔记/☁️ 后端开发/🚪 网关/Nginx 迁移 OpenResty.md",
-    "笔记/☁️ 后端开发/🗂 数据库/关系型数据库 Relational DB/🐘 PostgreSQL/命令和语句/常用控制台指令.md",
-    "笔记/📃 Archives/📖 文章/微信公众号文章/why技术/【求锤得锤的故事】Redis锁从面试连环炮聊到神仙打架。.md",
     "笔记/🎛️ 操作系统/🍎 macOS/assets/twitter-status-1690198922210189312-image.png",
     "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140355.png",
     "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140515.png",

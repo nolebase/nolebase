@@ -14,6 +14,7 @@ tags:
   - 软件/云原生/kubelet
   - 软件/云原生/kubectl
   - 运维
+  - 开发/标记语言/YAML
 ---
 # 为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群
 

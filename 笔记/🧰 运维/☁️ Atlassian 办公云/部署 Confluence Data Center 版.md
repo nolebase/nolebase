@@ -1,3 +1,22 @@
+---
+tags:
+  - 命令行/apt
+  - 命令行/docker
+  - 开发/容器/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - 软件/Atlassian/Confluence
+  - 操作系统/Debian
+  - 操作系统/Debian/Debian-11
+  - 开发/语言/Java
+  - 开发/语言/Java/JDK
+  - 网络/网关/Nginx
+  - 密码学/证书/TLS/HTTPS
+  - 命令行/systemd
+  - 开发/标记语言/XML
+  - 密码学/证书/TLS/SSL
+  - 密码学/证书/TLS/域名证书
+---
 # 部署 Confluence Data Center 版
 
 ##### 文档版本

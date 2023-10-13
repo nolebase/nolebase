@@ -28,21 +28,20 @@ Grafana 展示数据时，如果只有简单的状态和字符串信息，Table�
 
 在 HTML 可视化选项的下方，有两种 JavaScript 回调函数用于输入和更新 HTML 面板。
 
-1. onInit(ctrl, htmlnode) 只会执行一次
-2. onHandleMetric(ctrl, htmlnode) 这段代码在每次刷新时都会执行
+1. `onInit(ctrl, htmlnode)` 只会执行一次
+2. `onHandleMetric(ctrl, htmlnode)` 这段代码在每次刷新时都会执行
 
 传入参数都是完全一致的：
 
-1. 第一个参数：ctrl {MetricsPanelCtrl} 当前 Grafana 面板的实例
-2. 第二个参数：htmlnode {HTMLElement} HTML 面板内容的 HTML DOM 节点
+1. 第一个参数：`ctrl {MetricsPanelCtrl}` 当前 Grafana 面板的实例
+2. 第二个参数：`htmlnode {HTMLElement}` HTML 面板内容的 HTML DOM 节点
 
 我们可以通过 ctrl 对象获取数据和 Grafana 面板的设定（比如：全局变量），htmlnode 来编辑和更新 HTML 节点。
 
 ### 查询后的数据对象
 
-![](assets/image_20211015122207.png)
-
-以外观中心为例，在 ctrl.data 就存放着我们从数据源查询的数据（同样的数据也可以取用 ctrl.table，文档缺失，没办法确定具体区别）。data 对象是一个数组，对应的是 Query 页面的不同查询（顺序排列），每一个 data 中存放的元素则对应了查询获取的列名（columnNames），以及行数据（rows），行数据的属性顺序也对应了列名的顺序，如果有需要进行遍历，也可以直接映射关系。
+在 `ctrl.data` 就存放着我们从数据源查询的数据（同样的数据也可以取用 `ctrl.table`，文档缺失，没办法确定具体区别）。
+`data` 对象是一个数组，对应的是 Query 页面的不同查询（顺序排列），每一个 `data` 中存放的元素则对应了查询获取的列名（columnNames），以及行数据（rows），行数据的属性顺序也对应了列名的顺序，如果有需要进行遍历，也可以直接映射关系。
 
 ## 编写面板
 
@@ -67,13 +66,13 @@ div.innerHTML = ""
 
 ### Grafana 8 已失效 刷新整个面板
 
-常规的直接刷新：**window.location.reload()** 会刷新整个页面。体验并不好，而且状态不易于存储，甚至可能需要借助于 SessionStorage 或是 LocalStorage。
+常规的直接刷新：**`window.location.reload()`** 会刷新整个页面。体验并不好，而且状态不易于存储，甚至可能需要借助于 SessionStorage 或是 LocalStorage。
 
 Grafana 的 JavaScript 调用文档并不是很清晰明了，而且由于各个版本使用的 Angular/React 版本和 API 接口并不相同，查询文档会显得十分困难。
 
 **如果有需要调用到 Grafana 自己的整个调用钩子的话，可以尝试使用 this，或者 ctrl.$injector 的内联函数来完成功能调用。**
 
-此处如果需要刷新整个面板（dashboard，不是一个一个的面板（panel））可以直接调用：
+此处如果需要刷新整个面板（Dashboard，不是一个一个的面板（Panel））可以直接调用：
 
 ```javascript
 this.refresh()
