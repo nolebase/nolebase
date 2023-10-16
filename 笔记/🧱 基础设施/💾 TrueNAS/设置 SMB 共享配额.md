@@ -15,4 +15,4 @@ ixnas:zfs_quota_enabled=True
 
 4. 保存设置
 
-![](truenas-SMB-设置.png)
+![](./assets/truenas-SMB-设置.png)

@@ -23,7 +23,7 @@ tags:
 
 下载 Dell EMC OpenManage DRAC Tools, includes Racadm (64bit),v9.2.0
 
-![](dell-idrac-1.png)
+![](./assets/dell-idrac-1.png)
 
 下载后解压并打开安装包进行安装。
 安装后可以选择配置 Windows 系统变量 Path，将 Dell OpenManage 程序安装位置目录下的 rac5 目录添加到 Path 中，如果不希望配置，则可以选择直接打开 Windows Terminal (管理员权限) 并切换目录到 rac5 的目录：
@@ -53,13 +53,13 @@ racadm -r 10.0.0.100 -i sslkeyupload -t 1 -f 'F:\certs\home.cat\general \home.ca
 ```
 
 ```shell
-PS rac5> racadm -r 10.0.0.100 -i sslkeyupload -t 1 -f 'F:\certs\home.cat\general  
-\home.cat.key'  
-Security Alert: Certificate is invalid - Certificate is not signed by Trusted Third Party  
-Continuing execution. Use -S option for racadm to stop execution on certificate-related errors.  
-UserName: root  
-Password:  
-SSL key successfully uploaded to the RAC.  
+PS rac5> racadm -r 10.0.0.100 -i sslkeyupload -t 1 -f 'F:\certs\home.cat\general
+\home.cat.key'
+Security Alert: Certificate is invalid - Certificate is not signed by Trusted Third Party
+Continuing execution. Use -S option for racadm to stop execution on certificate-related errors.
+UserName: root
+Password:
+SSL key successfully uploaded to the RAC.
 ```
 
 #### 上传证书
@@ -77,14 +77,14 @@ racadm -r 10.0.0.100 -i sslcertupload -t 1 -f 'F:\certs\home.cat\general\home.ca
 ```
 
 ```shell
-PS rac5> racadm -r 10.0.0.100 -i sslkeyupload -t 1 -f 'F:\certs\home.cat\general\home.cat.cer'  
-Security Alert: Certificate is invalid - Certificate is not signed by Trusted Third Party  
-Continuing execution. Use -S option for racadm to stop execution on certificate-related errors.  
-UserName: root  
-Password:  
-DH010: Reset iDRAC to apply new certificate. Until iDRAC is reset, the old  
-certificate will be active. Reset the iDRAC. The iDRAC can be reset by pressing  
-the Identify button for 15 seconds. Using the RACADM command line utility, run  
+PS rac5> racadm -r 10.0.0.100 -i sslkeyupload -t 1 -f 'F:\certs\home.cat\general\home.cat.cer'
+Security Alert: Certificate is invalid - Certificate is not signed by Trusted Third Party
+Continuing execution. Use -S option for racadm to stop execution on certificate-related errors.
+UserName: root
+Password:
+DH010: Reset iDRAC to apply new certificate. Until iDRAC is reset, the old
+certificate will be active. Reset the iDRAC. The iDRAC can be reset by pressing
+the Identify button for 15 seconds. Using the RACADM command line utility, run
 "racadm racreset".
 ```
 
