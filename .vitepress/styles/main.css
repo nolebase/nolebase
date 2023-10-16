@@ -204,10 +204,45 @@ kbd {
   padding: 4px 8px;
   box-shadow: 0px 2px 0 2px #ccc;
   border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* 夜间模式的键盘按键样式 */
 .dark kbd {
   background: #6f6f6f;
   box-shadow: 0px 2px 0 2px #4d4d4d;
+}
+
+/* macOS Command 图标 */
+kbd[data-keyboard-key="macos-command"]::before {
+  content: "⌘";
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* macOS Option 图标 */
+kbd[data-keyboard-key="macos-option"]::before {
+  content: "⌥";
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* macOS Control 图标 */
+kbd[data-keyboard-key="macos-control"]::before {
+  content: "⌃";
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* macOS Shift 图标 */
+kbd[data-keyboard-key="macos-shift"]::before {
+  content: "⇧";
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 4px;
 }
