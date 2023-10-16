@@ -211,8 +211,8 @@ kbd {
 
 /* 夜间模式的键盘按键样式 */
 .dark kbd {
-  background: #6f6f6f;
-  box-shadow: 0px 2px 0 2px #4d4d4d;
+  background: #3c3c3c;
+  box-shadow: 0 2px 0 2px #292929;
 }
 
 /* macOS Command 图标 */
