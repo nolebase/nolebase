@@ -16,7 +16,6 @@ tags:
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
   - 命令行/cilium
-  - 软件/开源/Cilium
   - 软件/云原生/Cilium
   - 运维/Cilium
   - 网络/Cilium

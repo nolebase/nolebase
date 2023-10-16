@@ -8,13 +8,13 @@ tags:
   - 命令行/yum
   - 命令行/chmod
   - 开发/DevOps
-  - 开发/git
   - 命令行/git
   - 开发/标记语言/TOML
   - 命令行
   - Linux
   - Linux/命令行
   - 操作系统/Linux
+  - 开发/Git
 ---
 # 配置 GitLab CI 自动部署
 

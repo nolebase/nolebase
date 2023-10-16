@@ -1,8 +1,8 @@
 ---
 tags:
   - 开发/标记语言/YAML
-  - 软件/开源/Home-Assistant
-  - 软件/开源/Home-Assistant/HASS
+  - 开源/软件/Home-Assistant
+  - 开源/软件/Home-Assistant/HASS
   - 软件/iOS/Homekit
   - 软件/macOS/Homekit
   - 软件/iPadOS/Homekit
@@ -10,9 +10,9 @@ tags:
   - 智能家居/电视
   - 开发/Xcode/Additional-Tools-for-Xcode
   - 开发/Xcode
-  - 软件/开源/Home-Assistant/模式选择器
-  - 软件/开源/Home-Assistant/空调控制器
-  - 软件/开源/Home-Assistant/媒体选择器
+  - 开源/软件/Home-Assistant/模式选择器
+  - 开源/软件/Home-Assistant/空调控制器
+  - 开源/软件/Home-Assistant/媒体选择器
   - 物联网/智能家居
   - 物联网/智能家居/Home-Assistant
   - 物联网/智能家居/Home-Assistant/HASS

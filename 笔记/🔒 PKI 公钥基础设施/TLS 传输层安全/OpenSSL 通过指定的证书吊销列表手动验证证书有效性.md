@@ -37,7 +37,7 @@ openssl s_client -connect wikipedia.org:443 2>&1 < /dev/null | sed -n '/-----BEG
 
 ### 获取上一步获取证书所关联的 CRL 文件的 URL
 
-该步骤通过 `openssl` 命令读取上一步中获取的 `wikipedia.pem` 文件，并且使用 `grep`[^1] 命令查找了 `X509v3 CRL Distribution Points` 字段，打印它所相关的 4 行内的值
+该步骤通过 `openssl` 命令读取上一步中获取的 `wikipedia.pem` 文件，并且使用 `grep` 命令查找了 `X509v3 CRL Distribution Points` 字段，打印它所相关的 4 行内的值
 
 ```shell
 openssl x509 -noout -text -in wikipedia.pem | grep -A 4 'X509v3 CRL Distribution Points'
@@ -49,12 +49,11 @@ openssl x509 -noout -text -in wikipedia.pem | grep -A 4 'X509v3 CRL Distribution
 X509v3 CRL Distribution Points:
     Full Name:
       URI:http://crl.globalsign.com/gs/gsorganizationvalsha2g2.crl
-
 ```
 
 ### 通过 CRL 文件的 URL 获取 CRL 文件
 
-该步骤通过 `wget`[^2]命令通过上一步获取的 URL 下载了一个文件，并且保存为 `crl.der`（`.der` 拓展名表示该文件使用 DER 编码）
+该步骤通过 `wget` 命令通过上一步获取的 URL 下载了一个文件，并且保存为 `crl.der`（`.der` 拓展名表示该文件使用 DER 编码）
 
 ```shell
 wget -O crl.der http://crl.globalsign.com/gs/gsorganizationvalsha2g2.crl
@@ -134,6 +133,3 @@ openssl crl -inform DER -in <CRL 文件路径> -out <转换后的 CRL 文件路�
 ```shell
 openssl x509 -in <CER/CRT 文件路径> -inform DER -out <转换后的 CER/CRT 文件路径> -outform PEM
 ```
-
-[^1]: [🚧  grep 查找文件](../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E6%A1%A3%E8%AF%BB%E5%86%99/%F0%9F%9A%A7%20%20grep%20%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6.md)
-[^2]: [wget HTTP 客户端](../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/wget%20HTTP%20%E5%AE%A2%E6%88%B7%E7%AB%AF.md)

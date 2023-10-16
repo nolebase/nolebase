@@ -1,3 +1,12 @@
+---
+tags:
+  - 开发/语言/Golang
+  - 开发/语言/Golang/性能优化
+  - 开发/语言/Golang/Profiling
+  - 开发/语言/Golang/工具/pprof
+  - 命令行/go
+---
+
 # 通过 pprof 工具为 Golang 程序进行性能分析
 
 ## 准备工作

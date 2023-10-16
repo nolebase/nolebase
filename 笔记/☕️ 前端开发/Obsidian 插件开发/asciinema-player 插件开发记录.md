@@ -2,7 +2,7 @@
 tags:
   - 开发/前端
   - 开发/语言/TypeScript
-  - 开发/工具/Rollup
+  - 开发/Node.js/Rollup
   - 软件/Obsidian/插件
 ---
 

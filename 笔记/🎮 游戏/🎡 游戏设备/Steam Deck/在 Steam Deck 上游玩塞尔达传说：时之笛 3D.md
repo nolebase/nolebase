@@ -1,3 +1,14 @@
+---
+tags:
+  - 游戏
+  - 游戏/主机游戏
+  - 游戏/任天堂/Nintendo/塞尔达系列
+  - 游戏/任天堂/Nintendo/塞尔达传说-时之笛-3D
+  - 游戏/主机设备/任天堂/Nintendo/Nintendo-64
+  - 游戏/主机设备/任天堂/Nintendo/Nintendo-3DS
+  - 游戏/掌机设备/Valve/Steam-Deck
+  - 游戏/掌机设备/Valve
+---
 # 在 Steam Deck 上游玩塞尔达传说：时之笛 3D
 
 ::: warning

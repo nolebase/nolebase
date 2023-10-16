@@ -2,8 +2,8 @@
 tags:
   - 运维
   - 网络
-  - 软件/开源/OpenWRT
-  - 软件/开源/OpenWRT/Lede
+  - 开源/软件/OpenWRT
+  - 开源/软件/OpenWRT/Lede
   - 操作系统/iOS
   - 操作系统/iPadOS
   - 网络/路由/OpenWRT

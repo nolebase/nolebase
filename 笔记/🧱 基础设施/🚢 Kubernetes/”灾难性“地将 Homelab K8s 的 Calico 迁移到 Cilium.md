@@ -2,11 +2,10 @@
 tags:
   - 开发/云原生
   - 计算机科学/虚拟化
-  - 开发/容器
   - 开发/云原生/Kubernetes
-  - 软件工程/容器化
-  - 软件工程/虚拟化
-  - 开发/容器/Docker
+  - 开发/容器化
+  - 开发/虚拟化
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 命令行/kubectl
   - 命令行/kubeadm
@@ -24,12 +23,10 @@ tags:
   - 网络
   - 运维/Cilium
   - 命令行/cilium
-  - 软件/开源/Cilium
   - 软件/云原生/Cilium
   - 软件/云原生/kube-proxy
   - 网络/Calico
   - 运维/Calico
-  - 软件/开源/Calico
   - 软件/云原生/Calico
   - 网络/Cilium
   - 开发/标记语言/YAML
@@ -461,7 +458,7 @@ default via 10.0.0.1 dev eth0
 我们重新翻阅文档 [Cluster Scope (Default) — Cilium 1.14.2 documentation](https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool/#ipam-crd-cluster-pool): 可以发现文档中描述说：
 
 > `10.0.0.0/8` 是默认的 Pod CIDR。如果您的节点网络位于同一范围内，您将失去与其他节点的连接。假定所有出口流量都针对给定节点上的 Pod，而不是其他节点。
-> 
+>
 > 您可以通过两种方式解决：
 > - 显式将 `clusterPoolIPv4PodCIDRList` 设置为不冲突的 CIDR
 > - 为您的节点使用不同的 CIDR

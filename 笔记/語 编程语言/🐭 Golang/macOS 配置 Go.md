@@ -1,3 +1,12 @@
+---
+tags:
+  - 开发/语言/Golang
+  - 软件/macOS
+  - 命令行/go
+  - 软件/Visual-Studio-Code/vscode
+  - 软件/Visual-Studio-Code
+---
+
 ## 安装 Go
 
 ### 通过 Homebrew（macOS 的包管理器）安装

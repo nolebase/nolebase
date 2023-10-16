@@ -1,3 +1,12 @@
+---
+tags:
+  - 命令行/docker
+  - 开发/容器化/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - 数据库/图数据库/nebulagraph
+  - 开发/容器化/Docker/Docker-Compose
+---
 # 使用 Docker 安装
 
 ##### 文档版本
@@ -12,7 +21,7 @@
 | --- | ----- | --------------- |
 | NebulaGraph | v2.6.0 | [https://docs.nebula-graph.com.cn/2.6.0/](https://docs.nebula-graph.com.cn/2.6.0/) |
 
-## 克隆 Docker Compose[^1] 配置仓库
+## 克隆 Docker Compose 配置仓库
 
 ```shell
 git clone https://github.com/vesoft-inc/nebula-docker-compose.git
@@ -36,7 +45,7 @@ git checkout v2.6.0
 
 ## 启动容器
 
-使用 `docker-compose`[^2] 命令启动容器
+使用 `docker-compose` 命令启动容器
 参数说明：
 
 - `up`，表示启动，相当于 `docker start` 或者 `docker run`
@@ -106,7 +115,7 @@ Thu, 25 Nov 2021 13:43:14 CST
 如果此前没有安装过 nebula-console（Docker 镜像和 docker-compose 不会附带安装这个命令），则需要去 [nebula-console 官方仓库 - 发行页面](https://github.com/vesoft-inc/nebula-console/releases/)下载对应的版本（我安装的镜像版本是 2.6.0，此处我也下载 2.6.0 的 nebula-console 程序）。
 
 下载后是一个对应系统 CPU 类型和架构的二进制可执行文件，在我们执行下一个命令之前我们需要先授权和移动到适合我们运行的地方。
-使用 `mv`[^3]命令移动下载好的文件到 `/usr/local/bin` 目录下面（了解为什么放到这个目录[^4]）
+使用 `mv` 命令移动下载好的文件到 `/usr/local/bin` 目录下面：
 
 ```shell
 mv nebula-console-darwin-amd64-v2.6.0 /usr/local/bin/nebula-console
@@ -131,8 +140,3 @@ nebula-console -u root -p password --address=graphd --port=9669
 [Docker Compose部署Nebula Graph - Nebula Graph Database 手册](https://docs.nebula-graph.com.cn/2.0.1/2.quick-start/2.deploy-nebula-graph-with-docker-compose/#nebula_graph)
 
 [nebula-docker-compose/README_zh-CN.md at v2.0.0 · vesoft-inc/nebula-docker-compose](https://github.com/vesoft-inc/nebula-docker-compose/blob/v2.0.0/README_zh-CN.md)
-
-[^1]: [docker-compose 容器化批处理](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/%E5%AE%B9%E5%99%A8%E5%8C%96/docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
-[^2]: [docker-compose 容器化批处理](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/%E8%BD%AF%E4%BB%B6/%E5%AE%B9%E5%99%A8%E5%8C%96/docker-compose%20%E5%AE%B9%E5%99%A8%E5%8C%96%E6%89%B9%E5%A4%84%E7%90%86.md)
-[^3]: [mv 剪贴、移动](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/mv%20%E5%89%AA%E8%B4%B4%E3%80%81%E7%A7%BB%E5%8A%A8.md)
-[^4]: [Linux 文件系统](../../../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.md)

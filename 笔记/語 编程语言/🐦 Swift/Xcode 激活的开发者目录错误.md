@@ -1,3 +1,10 @@
+---
+tags:
+  - 开发/Xcode
+  - 操作系统/macOS
+---
+# Xcode 激活的开发者目录错误
+
 错误：
 
 ```shell

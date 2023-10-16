@@ -1,3 +1,17 @@
+---
+tags:
+  - 开发/API/Protobuf
+  - 网站/GitHub
+  - 开发/CICD/GitHub-Actions
+  - 开发/API/gRPC
+  - 开发/语言/Golang
+  - 开发/语言/TypeScript
+  - 开发/Monorepo
+  - 开发/代码/代码生成
+  - 命令行/protoc
+  - 命令行/buf
+---
+
 # 中心化 Protobuf 仓库如何为多个语言进行分布式地构建，管理和发布
 
 ::: warning

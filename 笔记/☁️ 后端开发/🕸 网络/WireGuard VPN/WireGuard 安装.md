@@ -14,10 +14,10 @@ tags:
   - 命令行/brew
   - 网络/WireGuard
   - 网络/VPN
-  - 网络/UDP
   - Linux/内核
   - 操作系统/macOS
   - 计算机网络/组网
+  - 网络/协议/UDP
 ---
 # WireGuard 安装
 

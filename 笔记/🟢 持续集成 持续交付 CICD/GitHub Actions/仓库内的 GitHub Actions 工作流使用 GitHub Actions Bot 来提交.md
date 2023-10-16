@@ -5,14 +5,14 @@ tags:
   - 开发/CICD/GitHub-Actions
   - 开发/标记语言/YAML
   - 开发/DevOps
-  - 开发/容器/Docker
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 开发/API/GraphQL
   - 开发/API/Protobuf
   - 开发/API/Swagger
   - 开发/API/OpenAPI
   - 命令行/git
-  - 开发/git
+  - 开发/Git
 ---
 # 仓库内的 GitHub Actions 工作流使用 GitHub Actions Bot 来提交
 

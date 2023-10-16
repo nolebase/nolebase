@@ -2,8 +2,6 @@
 tags:
   - 网站/GitHub
   - 网站/GitHub/组织/opennaslab
-  - 开源/项目/软件
-  - 开发/开源
   - 基础设施/NAS
   - 基础设施/NAS/刮削系统
   - 基础设施/NAS/下载编排系统

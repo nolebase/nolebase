@@ -8,7 +8,7 @@ tags:
   - 密码学/证书/TLS/SSL
   - 密码学/证书/PKI
   - 密码学/证书/证书机构/CA
-  - 开发/git
+  - 开发/Git
   - 命令行/git
   - 密码学/证书/证书机构/中间CA
   - 密码学/证书/证书机构/IntermediateCA

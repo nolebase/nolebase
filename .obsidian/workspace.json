@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1d6985d8ed5953c5",
+        "id": "a74a93c10f6bc1ef",
         "type": "tabs",
         "children": [
           {
-            "id": "d09791ef14853a86",
+            "id": "9cc7607473b202b8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dc04beb1fb9c3bac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "699d0df2e50e5cd5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🧱 基础设施/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+                "file": "笔记/🏠 物联网/🌾 米家/未命名.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:开发/嵌入式",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -119,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧱 基础设施/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md"
+                "file": "笔记/🏠 物联网/🌾 米家/未命名.md"
               }
             }
           },
@@ -129,7 +104,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🧱 基础设施/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+                "file": "笔记/🏠 物联网/🌾 米家/未命名.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -152,7 +127,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.7377879464668842,
+                  "scale": 0.6989606412938277,
                   "close": true
                 }
               }
@@ -190,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧱 基础设施/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+                "file": "笔记/🏠 物联网/🌾 米家/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧱 基础设施/📦 Homelab/记一次升级内存导致的服务不可用和硬盘数据错误.md",
+                "file": "笔记/🏠 物联网/🌾 米家/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -229,7 +204,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 448.5
+    "width": 473.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -246,44 +221,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "699d0df2e50e5cd5",
+  "active": "9cc7607473b202b8",
   "lastOpenFiles": [
+    "笔记/🏠 物联网/🌾 米家/未命名.md",
+    "笔记/🏠 物联网/🌾 米家",
+    "笔记/🧱 基础设施/📈 指标监控/Prometheus/Prometheus 配置.md",
+    "笔记/語 编程语言/🐦 Swift/Xcode 激活的开发者目录错误.md",
+    "笔记/🔋 硬件开发/Zigbee 相关/SiliconLabs 的 Zigbee 文档.md",
+    "笔记/🔋 硬件开发/CP2102/CP2102 开发 IDE.md",
+    "笔记/☕️ 前端开发/用 TypeScript 写 sh 脚本.md",
+    "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md",
+    "笔记/語 编程语言/🐭 Golang/构建 Go 的最小镜像.md",
+    "笔记/📟 终端/软件/🗃 node Node.js/解决 npm yarn pnpm 全局安装无效.md",
+    "笔记/語 编程语言/🐍 Python/macOS 安装 pip2.md",
+    "笔记/🎛️ 操作系统/🪟 Windows/为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率.md",
+    "笔记/☕️ 前端开发/Monorepo.md",
+    "笔记/☁️ 后端开发/🕸 网络/一般情况下的 Linux 网络故障排查.md",
+    "笔记/📃 Archives/📰 新闻/ADDitude/训练大脑集中注意力的视频游戏.md",
+    "笔记/🧱 基础设施/🔍 Elastic Stack (ELK)/ELK TLS 配置.md",
+    "笔记/🎮 游戏/🎡 游戏设备/Steam Deck/在 Steam Deck 上游玩塞尔达传说：时之笛 3D.md",
+    "笔记/📈 软件工程/十二因素应用.md",
+    "笔记/📟 终端/软件/Git 版本控制/国内 GitHub 加速.md",
+    "笔记/✍️ 文档工程/图表即代码（CaC）图表绘制.md",
+    "笔记/🧱 基础设施/💾 TrueNAS/设置 SMB 共享配额.md",
+    "笔记/☁️ 后端开发/🕸 网络/为 Nginx 配置 TCP 反向代理.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 服务端配置.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 安装.md",
+    "笔记/☁️ 后端开发/🕸 网络/WireGuard VPN/WireGuard 搭配 dnsmasq 实现内网自定义解析.md",
+    "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/☁️ 后端开发/🕸 网络/同一个 Header 键的多个值应该如何按照规范处理？.md",
     "vite.config.ts.timestamp-1697460953549-57c2d31056cb7.mjs",
     "vite.config.ts.timestamp-1697460891697-bfb44c1511149.mjs",
     "vite.config.ts.timestamp-1697460891029-b7028a110902d.mjs",
     "vite.config.ts.timestamp-1697455171342-a7b980d91c58e.mjs",
     "vite.config.ts.timestamp-1697455132136-8c5413f28e59b.mjs",
     "vite.config.ts.timestamp-1697455131397-17882fbeb2fea.mjs",
-    "笔记/語 编程语言/🐭 Golang/在 Visual Studio Code 中使用 go.work 时根目录的 go.mod 会提示 no go.mod file found in.md",
     "vite.config.ts.timestamp-1697441443981-dce4191ae6617.mjs",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/WG.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/KEP.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/SIG.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/概念",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/透过 Cloudflare Access（ZTNA）安全地远程访问 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/重置 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
-    "笔记/📈 软件工程/设计模式.md",
-    "笔记/📈 软件工程/十二因素应用.md",
-    "笔记/✍️ 文档工程/API 文档系统.md",
     "笔记/🧱 基础设施/🚢 Kubernetes",
-    "笔记/☁️ 云原生",
-    "笔记/✍️ 文档工程/图表即代码（CaC）图表绘制.md",
-    "笔记/✍️ 文档工程",
-    "笔记/📚 个人知识管理/未命名.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
     "笔记/📚 个人知识管理/assets/obsidian-vitepress-and-nolebase-problems-ideas-vault-01.png.png",
     "笔记/🎛️ 操作系统/🍎 macOS/assets/twitter-status-1690198922210189312-image.png",
     "笔记/🎛️ 操作系统/🍥 Debian/assets/image_20220215140355.png",

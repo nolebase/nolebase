@@ -2,11 +2,11 @@
 tags:
   - 命令行/kubeadm
   - 软件/云原生/kubeadm
-  - 软件工程/容器网络接口
-  - 软件工程/容器网络接口/CNI
+  - 开发/云原生/容器网络接口
+  - 开发/云原生/容器网络接口/CNI
   - 命令行/systemd
   - 命令行/docker
-  - 开发/容器/Docker
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
   - 命令行/containerd

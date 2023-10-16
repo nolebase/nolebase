@@ -8,7 +8,7 @@ tags:
   - 计算机科学/内存/虚拟内存
   - 计算机科学/内存/虚拟内存/swap
   - 命令行/docker
-  - 开发/容器/Docker
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
   - Linux

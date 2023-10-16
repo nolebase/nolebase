@@ -5,6 +5,7 @@ tags:
   - 开发/语言/Golang
   - 命令行/go
 ---
+
 # 在 Visual Studio Code 中使用 go.work 时根目录的 go.mod 会提示 no go.mod file found in
 
 如果你在根目录配置了 `go.work` 作为 `monorepo` 的配置文件，然后通过
@@ -25,7 +26,7 @@ go mod init
 no go.mod file found in /Users/neko/Git/<路径>
 ```
 
-你很可能遇到了这个[现在依然存在的 Visual Studio Code 的 Go 插件所引用的 `gopls` 库的 bug](https://github.com/golang/go/issues/56570)，你可以试图检查 Visual Studio Code 的 Go 插件所引用的 `gopls` 库在 Visual Studio Code 中对应的 [`build.allowModfileModifications`](build.allowModfileModifications) 配置选项是否开启，
+你很可能遇到了这个[现在依然存在的 Visual Studio Code 的 Go 插件所引用的 `gopls` 库的 bug](https://github.com/golang/go/issues/56570)，你可以试图检查 Visual Studio Code 的 Go 插件所引用的 `gopls` 库在 Visual Studio Code 中对应的 [`build.allowModfileModifications`](https://github.com/golang/vscode-go/wiki/settings#buildallowmodfilemodifications) 配置选项是否开启，
 
 通过命令面板打开 Visual Studio Code 的配置：
 

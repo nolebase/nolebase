@@ -1,3 +1,11 @@
+---
+tags:
+  - 开发/语言/Golang
+  - 开发/并发
+  - 开发/并发/协程
+  - 开发/语言/Golang/Goroutine
+---
+
 # 如何判断当前调用是否是 Goroutine
 
 ## TL;DR

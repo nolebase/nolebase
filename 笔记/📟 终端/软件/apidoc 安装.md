@@ -1,6 +1,6 @@
 # apidoc 安装
 
-此教程默认已安装 [node Node.js](node%20Node.js.md) 环境
+此教程默认已安装 Node.js 环境
 
 ## 安装
 

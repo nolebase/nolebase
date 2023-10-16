@@ -8,7 +8,6 @@ tags:
   - 软件/Obsidian
   - 软件/Notion
   - 开发/Nodejs/Vite
-  - 开源/项目/软件
 ---
 # Nólëbase
 

@@ -1,3 +1,13 @@
+---
+tags:
+  - 开发/Nodejs
+  - 开发/Nodejs/npm
+  - 开发/Nodejs/pnpm
+  - 开发/Nodejs/yarn
+  - 操作系统/macOS
+  - 操作系统/Linux
+  - 操作系统/Windows
+---
 # 解决 npm yarn pnpm 全局安装无效
 
 把 `npm` 或 `yarn` 的执行目录添加到 `PATH` 就行了。

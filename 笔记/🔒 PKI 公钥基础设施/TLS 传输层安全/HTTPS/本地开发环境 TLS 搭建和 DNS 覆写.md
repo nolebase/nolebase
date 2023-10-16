@@ -3,9 +3,9 @@ tags:
   - 密码学/证书/TLS/SSL
   - 密码学/证书/TLS/HTTPS
   - 密码学/证书/TLS/域名证书
-  - 网络/DNS
   - 开发/开发环境
   - 命令行/openssl
+  - 网络/协议/DNS
 ---
 
 # 本地开发环境 TLS 搭建和 DNS 覆写

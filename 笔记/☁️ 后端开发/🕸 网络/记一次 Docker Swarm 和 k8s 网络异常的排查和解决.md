@@ -1,7 +1,7 @@
 ---
 tags:
   - 命令行/docker
-  - 开发/容器/Docker
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
   - 网络
@@ -12,7 +12,7 @@ tags:
   - 网络/抓包
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
-  - 开发/容器/Docker/Docker-Swarm
+  - 开发/容器化/Docker/Docker-Swarm
   - 运维/Kubernetes
   - 运维/Kubernetes/K8s
   - 开发/云原生/Kubernetes

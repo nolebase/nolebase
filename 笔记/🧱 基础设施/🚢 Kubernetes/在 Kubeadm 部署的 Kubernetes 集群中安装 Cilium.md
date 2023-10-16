@@ -6,7 +6,6 @@ tags:
   - 开发/云原生/Kubernetes
   - 运维/Cilium
   - 命令行/cilium
-  - 软件/开源/Cilium
   - 软件/云原生/Cilium
   - 命令行/kubeadm
   - 软件/云原生/kubeadm

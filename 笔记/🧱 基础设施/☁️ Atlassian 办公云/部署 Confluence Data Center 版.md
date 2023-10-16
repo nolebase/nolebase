@@ -2,7 +2,7 @@
 tags:
   - 命令行/apt
   - 命令行/docker
-  - 开发/容器/Docker
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
   - 软件/Atlassian/Confluence
@@ -17,6 +17,7 @@ tags:
   - 密码学/证书/TLS/SSL
   - 密码学/证书/TLS/域名证书
 ---
+
 # 部署 Confluence Data Center 版
 
 ##### 文档版本
@@ -171,7 +172,7 @@ Use default ports (HTTP: 8090, Control: 8000) - Recommended [1, Enter], Set cust
 
 #### 安装中命令行交互：要安装为服务么？
 
-安装为服务后可以使用 systemd（参加：[🚧  systemctl 服务管理](../../%F0%9F%93%9F%20%E7%BB%88%E7%AB%AF/Linux%20%E5%91%BD%E4%BB%A4/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/%F0%9F%9A%A7%20%20systemctl%20%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86.md)）进行管理。
+安装为服务后可以使用 `systemd` 进行管理。
 
 ```shell
 Confluence can be run in the background.
@@ -273,7 +274,7 @@ sudo apt install nginx
 
 #### 申请 Let's Encrypt 证书
 
-参见 [申请 Lets Encrypt 的 SSL 证书](../../%F0%9F%93%84%20PKI%20%E5%85%AC%E9%92%A5%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/TLS%20SSL%20%E4%BC%A0%E8%BE%93%E5%B1%82%E5%AE%89%E5%85%A8/HTTPS/%E7%94%B3%E8%AF%B7%20Lets%20Encrypt%20%E7%9A%84%20SSL%20%E8%AF%81%E4%B9%A6.md)
+参见 [[申请 Lets Encrypt 的 SSL 证书]]
 
 #### 创建 Confluence 反代理配置文件
 

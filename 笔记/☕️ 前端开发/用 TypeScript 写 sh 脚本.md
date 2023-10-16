@@ -1,3 +1,8 @@
+---
+tags:
+  - 开发/语言/TypeScript
+  - 命令行/sh
+---
 # 用 TypeScript 写 shell 脚本
 
 想要直接执行 TypeScript 或者把它当作 shell 脚本时可以尝试以下方法

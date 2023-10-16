@@ -1,4 +1,9 @@
-# monorepo
+---
+tags:
+  - 开发/Monorepo
+  - 开发/Nodejs
+---
+# Monorepo
 
 > 这里可能会写一篇关于如何构建 Vite Vue 生态下的 Monorepo 的文档
 

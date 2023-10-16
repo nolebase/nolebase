@@ -1,15 +1,12 @@
 ---
 tags:
   - 命令行/curl
-  - 软件/开源/bash
-  - 软件/开源/zsh
+  - 开源/软件/bash
+  - 开源/软件/zsh
   - 运维
   - Linux
   - 操作系统/Linux
-  - Unix
-  - 操作系统/Unix
   - Linux/命令行
-  - Unix/命令行
 ---
 # 获取当前 Unix 机器的公网 IP 地址
 

@@ -1,3 +1,11 @@
+---
+tags:
+  - 密码学/证书/TLS
+  - 密码学/证书/TLS/HTTPS
+  - 密码学/证书/TLS/SSL
+  - 密码学/证书/PKI
+  - 命令行/openssl
+---
 # 2023 年轮替 ihome.cat 证书
 
 Gateway 那边 Intermediate CA 的流程和系统还没有建立起来，继续先用 Root CA 签发证书。

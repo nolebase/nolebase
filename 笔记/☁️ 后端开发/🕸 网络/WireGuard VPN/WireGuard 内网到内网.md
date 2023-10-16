@@ -1,3 +1,10 @@
+---
+tags:
+  - 网络/WireGuard
+  - 网络/VPN/WireGuard
+  - 网络
+---
+
 # WireGuard 内网到内网 mesh
 
 ## 参考资料

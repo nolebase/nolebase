@@ -2,7 +2,6 @@
 tags:
   - 网络/Calico
   - 运维/Calico
-  - 软件/开源/Calico
   - 软件/云原生/Calico
   - 运维/Kubernetes
   - 运维/Kubernetes/K8s

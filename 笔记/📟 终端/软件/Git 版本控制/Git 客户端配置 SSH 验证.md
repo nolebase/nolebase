@@ -223,7 +223,7 @@ Host nekomeowww.git
 
 ### 测试 GitHub 连接
 
-使用 `ssh` 命令（参考 [ssh 远程登入](../SSH%20%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5/ssh%20%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5.md)）加上参数 `T` 来测试
+使用 `ssh` 命令加上参数 `T` 来测试
 
 ```shell
 ssh -T <别名> # 别名填写上面 Host 字段的值

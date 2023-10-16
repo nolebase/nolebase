@@ -1,3 +1,12 @@
+---
+tags:
+  - 开发/容器化/Docker
+  - 开发/云原生/Docker
+  - 软件/云原生/docker
+  - 开发/语言/Golang
+  - 开发/容器化/Docker/Dockerfile
+---
+
 # 构建 Go 的最小镜像
 
 ##### 文档版本

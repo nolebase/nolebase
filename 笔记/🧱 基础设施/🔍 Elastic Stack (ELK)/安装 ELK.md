@@ -1,7 +1,7 @@
 ---
 tags:
   - 命令行/docker
-  - 开发/容器/Docker
+  - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
   - 开发/云原生/可观测
@@ -19,7 +19,7 @@ tags:
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
   - 开发/标记语言/YAML
-  - 开发/容器/Docker/Docker-Compose
+  - 开发/容器化/Docker/Docker-Compose
   - 命令行/sysctl
   - 命令行/curl
 ---

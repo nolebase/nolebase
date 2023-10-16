@@ -1,3 +1,13 @@
+---
+tags:
+  - 软件/TrueNAS
+  - 基础设施/Homelab/NAS
+  - 基础设施/NAS
+  - 基础设施/Homelab
+  - 网络/协议/SMB
+  - 软件/TrueNAS-SCALE
+---
+
 # 设置 SMB 共享配额
 
 **适用版本:** `TrueNAS-12.0-U6.1`

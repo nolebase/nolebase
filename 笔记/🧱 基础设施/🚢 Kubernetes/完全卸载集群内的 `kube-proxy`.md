@@ -12,12 +12,10 @@ tags:
   - 软件/云原生/ipvsadm
   - 网络/Calico
   - 运维/Calico
-  - 软件/开源/Calico
   - 软件/云原生/Calico
   - 运维/Cilium
   - 网络/Cilium
   - 命令行/cilium
-  - 软件/开源/Cilium
   - 软件/云原生/Cilium
 ---
 # 完全卸载集群内的 `kube-proxy`

@@ -1,3 +1,8 @@
+---
+tags:
+  - 开发/硬件
+  - 开发/硬件/嵌入式
+---
 Simplicity Studio Software
 
 [https://www.silabs.com/developers/simplicity-studio](https://www.silabs.com/developers/simplicity-studio)

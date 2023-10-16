@@ -7,7 +7,7 @@ tags:
   - Linux
   - Linux/命令行
   - 操作系统/Linux
-  - 软件工程/容器网络接口/CNI
+  - 开发/云原生/容器网络接口/CNI
   - 命令行/kubeadm
   - 软件/云原生/kubeadm
   - 命令行/kubectl
@@ -69,7 +69,7 @@ apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
 apiServer:
   timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 // [!code hl]
-  # 这里可以添加一下你期望在生成 Kubernetes API Server 
+  # 这里可以添加一下你期望在生成 Kubernetes API Server
   # 证书的时候额外支持的 SAN（Subject Alternative Names）
   certSANs: // [!code hl]
    - node01 // [!code hl]
@@ -122,7 +122,7 @@ kind: ClusterConfiguration
 apiServer:
   timeoutForControlPlane: 4m0s # 这里我们可以稍微调大一些 // [!code --]
   timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 // [!code ++]
-  # 这里可以添加一下你期望在生成 Kubernetes API Server 
+  # 这里可以添加一下你期望在生成 Kubernetes API Server
   # 证书的时候额外支持的 SAN（Subject Alternative Names）
   certSANs: // [!code ++]
    - node01 // [!code ++]
