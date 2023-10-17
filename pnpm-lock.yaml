@@ -24,8 +24,8 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@nolebase/markdown-it-bi-directional-links':
-    specifier: ^1.2.0
-    version: 1.2.0(markdown-it@13.0.2)
+    specifier: ^1.3.0
+    version: 1.3.0(markdown-it@13.0.2)
   '@nolebase/markdown-it-element-transform':
     specifier: ^1.1.0
     version: 1.1.0(markdown-it@13.0.2)
@@ -36,8 +36,8 @@ devDependencies:
     specifier: ^1.1.0
     version: 1.1.0(vue@3.3.4)
   '@nolebase/vitepress-plugin-inline-link-preview':
-    specifier: ^1.2.1
-    version: 1.2.1(vitepress@1.0.0-rc.20)(vue@3.3.4)
+    specifier: ^1.3.0
+    version: 1.3.0(vitepress@1.0.0-rc.20)(vue@3.3.4)
   '@types/body-parser':
     specifier: ^1.19.3
     version: 1.19.3
@@ -902,8 +902,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nolebase/markdown-it-bi-directional-links@1.2.0(markdown-it@13.0.2):
-    resolution: {integrity: sha512-hh7ui9a8dM8NrGrV/tCRfuREhUe+YtRLANIfojOgIMEf6AzY8Bpzg3fglevgeZWfEy/1kWv0RHdWGEYknRLQ9g==}
+  /@nolebase/markdown-it-bi-directional-links@1.3.0(markdown-it@13.0.2):
+    resolution: {integrity: sha512-vGu3rK8iFqGan3BGQ7/08ohsFBzWFWndXOra8w4ctVxehmGcypdnr2sZPi/9tWBpGG900VObY50/Jr+Ssd8Eyw==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
@@ -937,8 +937,8 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@nolebase/vitepress-plugin-inline-link-preview@1.2.1(vitepress@1.0.0-rc.20)(vue@3.3.4):
-    resolution: {integrity: sha512-RxrqCWKUDtLBZZ+nD/+4E5dD4AoD8cHg1S5/6a1jdzZuL3IORBX5A9AXFPAx4zE6JYa2UbWhX0Ihv57cZ6jdiw==}
+  /@nolebase/vitepress-plugin-inline-link-preview@1.3.0(vitepress@1.0.0-rc.20)(vue@3.3.4):
+    resolution: {integrity: sha512-u/YxXRQ6GTOzpkklD7ojDM8IcpIqXfDMQLHkdt2SVewvaRnt3MHak3Dq6dAkOc3rutR1TJQR3ITS3OEbmxgGSA==}
     peerDependencies:
       vitepress: '>=v1.0.0-beta.1'
       vue: '>=3.2.0'
