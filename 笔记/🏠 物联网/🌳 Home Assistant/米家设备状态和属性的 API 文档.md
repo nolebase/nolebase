@@ -25,21 +25,21 @@ tags:
 
 一般会带你去[小米/米家产品库 - Xiaomi Miot Spec](https://home.miot-spec.com/s/) 然后自动附上产品的 API ID：
 
-![](mihome-device-states-n-properties-screenshot-1.png)
+![](./assets/mihome-device-states-n-properties-screenshot-1.png)
 
 比如 [米家夜灯2 蓝牙版 yeelink.light.nl1 - 小米/米家产品库](https://home.miot-spec.com/s/yeelink.light.nl1)。
 
 这个时候你点击产品右侧的「规格」，就会跳出来一个弹窗。
 
-![](mihome-device-states-n-properties-screenshot-2.png)
+![](./assets/mihome-device-states-n-properties-screenshot-2.png)
 
 我们点击下面的固件版本号（一般不知道就点最后冒号之后的最大的数字的）：
 
-![](mihome-device-states-n-properties-screenshot-3.png)
+![](./assets/mihome-device-states-n-properties-screenshot-3.png)
 
 然后就能去到 API 文档了：
 
-![](mihome-device-states-n-properties-screenshot-4.png)
+![](./assets/mihome-device-states-n-properties-screenshot-4.png)
 
 比如上图前往了 [米家夜灯2 蓝牙版 - 产品规格](https://home.miot-spec.com/spec?type=urn:miot-spec-v2:device:night-light:0000A0AB:yeelink-nl1:1)。
 
