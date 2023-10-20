@@ -6,8 +6,6 @@ tags:
   - 软件/iOS/Homekit
   - 软件/macOS/Homekit
   - 软件/iPadOS/Homekit
-  - 智能家居/电热毯
-  - 智能家居/电视
   - 开发/Xcode/Additional-Tools-for-Xcode
   - 开发/Xcode
   - 开源/软件/Home-Assistant/模式选择器
