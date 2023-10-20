@@ -70,6 +70,7 @@ sudo mkdir /usr/local/etc/wireguard
 title: 警告
 🚧 施工中
 :::
+
 ## 配置
 
 ### 创建公私密钥对
