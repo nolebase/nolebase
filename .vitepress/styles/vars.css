@@ -106,11 +106,13 @@
 :root {
   /* 配置一下 tips 的自定义块的颜色为非默认的产品色，避免与文字不兼容导致可读性下降 */
   --vp-custom-block-tip-bg: #def4f4;
+  --vp-custom-block-tip-code-bg: #cbd9dd7d;
 }
 
 .dark:root {
   /* 配置一下在暗色模式下 tips 的自定义块的颜色为非默认的产品色，避免与文字不兼容导致可读性下降 */
   --vp-custom-block-tip-bg: #02474e;
+  --vp-custom-block-tip-code-bg: #0d1e1e9c;
 }
 
 :root {
