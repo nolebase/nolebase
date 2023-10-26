@@ -48,9 +48,22 @@ tags:
 
 ## 创建
 
-### 创建配置文件
+### 创建存储中间 CA 相关所有文件的目录
 
-我们可以在 Root CA 所在的目录下新建一个用于创建中间 CA 本身的新的 OpenSSL 配置文件 `intermediates/domains/self_openssl.cnf`：
+我们可以在 Root CA 所在的目录下新建一个用于存储中间 CA 本身的各种配置文件，历史文件的目录：
+
+```shell
+mkdir intermediates/domains
+```
+### 创建 OpenSSL 配置文件
+
+在这个新创建的 `intermediates/domains` 下创建一个新的 OpenSSL 配置文件 `intermediates/domains/self_openssl.cnf` 来配置中间 CA 本身的元数据信息：
+
+```shell
+touch intermediates/domains/self_openssl.cnf
+```
+
+然后填充下面的内容
 
 ```ini
 [req]
@@ -175,7 +188,7 @@ V	330925162823Z		1010	unknown	/C=CN/ST=Shanghai/L=Shanghai/O=Ayaka Home Domains/
 ## 配置
 ### 创建配置文件
 
-我们可以在 Root CA 所在的目录下新建一个用于中间 CA 创建证书的时候使用的新的 OpenSSL 配置文件 `intermediates/domains/issuer_openssl.cnf`：
+我们可以在先前新创建的 `intermediates/domains` 下创建一个用于中间 CA 创建证书的时候使用的新的 OpenSSL 配置文件 `intermediates/domains/issuer_openssl.cnf`
 
 ```ini
 [ ca ]
@@ -235,17 +248,17 @@ mkdir intermediates/domains/domains intermediates/domains/crl
 ### 初始化相关文件
 
 ```shell
-touch index.txt
+touch intermediates/domains/index.txt
 ```
 
 因为我们签署的是相同 subject 内容的域名证书，所以这里我们需要在签署用的中间 CA 所在的目录下创建 `index.txt.attr` 文件并添加 `unique_subject = no`
 
 ```shell
-echo 'unique_subject = no' > index.txt.attr
+echo 'unique_subject = no' > intermediates/domains/index.txt.attr
 ```
 
 ```shell
-echo 1000 > serial
+echo 1000 > intermediates/domains/serial
 ```
 ## 使用
 
@@ -272,7 +285,6 @@ openssl genrsa 4096 -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.
 openssl ecparam -genkey -name secp256k1 -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem
 ```
 :::
-
 #### 创建域名证书的 CSR（证书签发申请文件）
 
 创建一个域名专属的配置文件 `intermediates/domains/domains/ihome.cat/ihome.cat.cnf`：
@@ -319,7 +331,6 @@ openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.c
 ```shell
 openssl req -new -sha256 -config intermediates/domains/domains/ihome.cat/ihome.cat.cnf -key intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.csr -extensions v3_req
 ```
-
 #### 签发域名证书
 
 ```shell
@@ -338,6 +349,7 @@ openssl x509 -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt -noo
 ```shell
 openssl pkcs12 -export -in intermediates/domains/domains/ihome.cat/2023/ihome.cat.crt -inkey intermediates/domains/domains/ihome.cat/2023/ihome.cat.key.pem -certfile intermediates/domains/certs/intermediate.202309.bundle.crt -out intermediates/domains/domains/ihome.cat/2023/ihome.cat.p12
 ```
+
 
 ## 问题排查
 
