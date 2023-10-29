@@ -1,0 +1,7 @@
+
+
+```json
+{
+  "skipDefaultLibCheck": true,
+}
+```
