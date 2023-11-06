@@ -1,3 +1,18 @@
+---
+tags:
+  - 开发/Git
+  - 命令行/git
+  - 网站/GitLab
+  - 网站/GitHub
+  - 命令行/ssh
+  - 开源/软件/ssh
+  - 操作系统/macOS
+  - 操作系统/Linux
+  - 安全
+  - 密码学/非对称加密
+  - 密码学/算法/RSA
+  - 密码学/算法/ECDSA
+---
 # Git 客户端配置 SSH 验证
 
 ## macOS / Linux

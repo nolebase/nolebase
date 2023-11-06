@@ -104,6 +104,13 @@ GitHub 仓库地址： [https://github.com/SilentVoid13/Templater](https://githu
 项目名称：blacksmithgu/obsidian-dataview
 项目介绍：A high-performance data index and query language over Markdown files, for [https://obsidian.md/](https://obsidian.md)
 GitHub 仓库地址： [https://github.com/blacksmithgu/obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview)
+正在开发的平替：[blacksmithgu/datacore: Work-in-progress successor to Dataview with a focus on UX and speed.](https://github.com/blacksmithgu/datacore)
+
+### 数据核心
+
+项目名称：blacksmithgu/datacore
+介绍：blacksmithgu/datacore: Work-in-progress successor to Dataview with a focus on UX and speed.
+仓库地址：[https://github.com/blacksmithgu/datacore](https://github.com/blacksmithgu/datacore)
 
 ### 思维导图
 
