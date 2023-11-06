@@ -6,6 +6,8 @@ tags:
   - 开发/Node.js/Vite
 ---
 
+# VitePress
+
 > Simple, powerful, and fast. Meet the modern SSG framework you've always wanted.
 > 简单，强大，以及快速。一款满足你一直以来需求的现代 SSG 框架。
 
