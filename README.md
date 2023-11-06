@@ -24,6 +24,77 @@
 - 🗃 由 Obsidian 驱动：
   - 强大的知识库管理工具，支持花样繁多的插件和拓展，让知识管理变得更加简单。
 
+## 想要自己部署和在本地启动强大的 Nólëbase 知识库？
+
+很高兴你对 [Nólëbase](https://nolebase.ayaka.io) 感兴趣！首先 [Nólëbase](https://nolebase.ayaka.io) 是完全可以在本地无网络环境的情况下使用的！你可以使用 [Obsidian](https://obsidian.md) 和 [Logseq](https://logseq.com/) 这样的知识库软件打开，也可以用 [Typora](https://typora.io/) 这样的 Markdown 编辑器打开进行浏览和编辑，这意味着即便你不具备任何的编程技能，也可以使用或者借鉴我们的知识库分类和组织方法。
+
+### 如何下载到本地？
+
+如果你没有熟练掌握诸如命令行和 [Git](https://git-scm.com/)的使用，我们在这里建议你使用 [GitHub](https://github.com) 本身提供的 [下载源代码存档](https://docs.github.com/zh/repositories/working-with-files/using-files/downloading-source-code-archives) 功能直接从 [GitHub](https://github.com)站点上下载打包好的压缩文件包，然后到本地解压后查看和使用。
+
+如果你掌握了命令行和 [Git](https://git-scm.com/) 的使用，可以通过下面的命令克隆项目仓库到名为 `nolebase` 的目录中：
+
+```shell
+git clone https://github.com/nolebase/nolebase
+```
+
+### 如何使用、运行或者部署？
+
+很好，恭喜你已经完成了 [Nólëbase](https://nolebase.ayaka.io) 知识库的下载！
+
+#### 背景介绍
+
+在继续之前，请容许我对项目进行一些基本的技术和架构的介绍。
+
+和其他的由 [Hexo](https://hexo.io) 驱动和生成的博客和静态网站类似，[Nólëbase](https://nolebase.ayaka.io) 其实也使用了名为 [VitePress](https://vitepress.dev) 的静态生成器来驱动和生成网站，像 [VitePress](https://vitepress.dev) 这样的静态生成器支持在 Markdown 文件中使用 [Vue](https://vuejs.org/) 组件来嵌入并增强文档的阅读和使用体验。而 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 是 [Node.js](https://nodejs.org/en) 生态的一部分，你需要先配置一下 [Node.js](https://nodejs.org/en) 和添加和管理 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 作为底层管理依赖的工具 [pnpm](https://pnpm.io/) 。
+
+所以你在继续下面的步骤之前，需要完成另外的两件事情：
+
+1. 安装和配置 [Node.js](https://nodejs.org/en)，要校验 Node.js 是否安装成功，可以通过打开命令行窗口然后运行 `node --version` 和 `npm --version` 来查看是否会报错
+2. 安装和配置 [pnpm]，要校验 pnpm 是否安装成功，可以通过打开命令行窗口然后运行 `pnpm --version`
+
+准备好之后，使用下面的命令前往下载好的 Nólëbase 知识库所在的目录吧：
+
+```shell
+cd nolebase
+```
+
+#### 安装依赖和运行开发服务器
+
+然后我们需要安装依赖，把之前提及的 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 添加到本地：
+
+```shell
+pnpm install
+```
+
+接下来你可以直接运行下面的命令开启一个本地运行的 Nólëbase 知识库前端服务器，通常而言我们称之为开发服务器，在本地直接访问渲染完成的页面：
+
+```shell
+pnpm docs:dev
+```
+
+当你看到下面的字样的时候，就可以前往本地的 [http://localhost:5173](http://localhost:5173) 查看渲染完成的页面了：
+
+```shell
+  vitepress v1.0.0-rc.20
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+```
+
+在这个本地运行的 Nólëbase 知识库前端服务器启动的情况下，你针对所有 Markdown 文件、样式文件、配置文件的变更，都会实时响应到网页中，如果刷新不及时或者更新有异常，也可以试试看使用 <kbd data-keyboard-key="macos-command">Command</kbd> + <kbd>R</kbd> （macOS 系统） <kbd>Ctrl</kbd> + <kbd>R</kbd> （Windows 和 Linux 系统）快捷键强制刷新。
+
+#### 构建并渲染为可部署的静态页面
+
+想要部署页面，首先先确保你已经执行过了[安装依赖和运行开发服务器](#安装依赖和运行开发服务器) 的步骤，一般而言构建和渲染的时候可能遇到的问题都可以在运行开发服务器的时候发现，接下来你只需要一个简单的命令就能完成构建了：
+
+```shell
+pnpm docs:build
+```
+
+构建完成后，渲染出来的 HTML 和各种资源将会被存储在 `.vitepress/dist` 目录下面，你可以通过上传 `.vitepress/dist` 目录来完成 Nólëbase 知识库的部署。
+
 ## 知识库编写须知
 
 由于很多时候需要重复编排和调整文档的结构和注解以适应和满足使用者的阅读习惯或是文档叙述的内容需求，以及说明使用的 API 的版本号和破坏性更新说明，可能会导致在以上或是更多外部因素的影响下导致文档结构混乱不一，查询造成困难，或是索引和快速查阅文档的时候需要花费大量的时间和精力去了解文章结构和内容，以下提出了一个较为完善（任需商议）的知识库结构、使用规范的提案。
