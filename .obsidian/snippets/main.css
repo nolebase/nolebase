@@ -1,12 +1,28 @@
 /* 键盘按键样式 */
 kbd {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  bottom: 2px;
+}
+
+kbd::after {
+  display: inline;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
   background: #656565;
   box-shadow: 0 2px 0 2px #4f4f4f;
-  padding: 4px 8px;
   border-radius: 6px;
   font-size: 0.8rem;
   cursor: pointer;
   user-select: none;
+  z-index: -1;
 }
 
 /* macOS Command 图标 */
@@ -36,6 +52,7 @@ kbd[data-keyboard-key="macos-shift"]::before {
   font-size: 1.2rem;
   margin-right: 4px;
 }
+
 
 .internal-embed.media-embed.image-embed {
   display: flex;
