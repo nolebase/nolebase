@@ -1,0 +1,49 @@
+/* 键盘按键样式 */
+kbd {
+  background: #656565;
+  box-shadow: 0 2px 0 2px #4f4f4f;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* macOS Command 图标 */
+kbd[data-keyboard-key="macos-command"]::before {
+  content: "⌘";
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+/* macOS Option 图标 */
+kbd[data-keyboard-key="macos-option"]::before {
+  content: "⌥";
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+/* macOS Control 图标 */
+kbd[data-keyboard-key="macos-control"]::before {
+  content: "⌃";
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+/* macOS Shift 图标 */
+kbd[data-keyboard-key="macos-shift"]::before {
+  content: "⇧";
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+.internal-embed.media-embed.image-embed {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.internal-embed.media-embed.image-embed > img {
+  max-width: 1000px;
+  width: 100%;
+}

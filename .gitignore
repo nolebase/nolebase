@@ -1,19 +1,48 @@
 .Trash/
 .trash/
 .DS_Store
+
+# IDE related
+
+.idea
+
+# Obsidian
+
 **/.obsidian/*
 !**/.obsidian/workspace*
 !**/.obsidian/graph*
+!**/.obsidian/snippets/
 
-.idea
-.nuxt
+# Temporary files
+
 .temp
-*.local
-*.log
-components.d.ts
-dist
+
+# Nuxt
+
+.nuxt
+
+# Node.js
+
 node_modules
+
+# VitePress
+
+**/.vitepress/dist
 **/.vitepress/docsMetadata.json
 **/.vitepress/cache/
 
+# Netlify
+
 .netlify/functions-serve/*
+
+# Generated files
+
+components.d.ts
+
+# Local env files
+
+*.local
+
+# Logs
+
+*.log
