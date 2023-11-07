@@ -1,3 +1,8 @@
+---
+tags:
+  - 软件/Obsidian/插件
+  - 软件/Obsidian
+---
 ### 待办事项清单
 
 项目名称：delashum/obsidian-checklist-plugin
