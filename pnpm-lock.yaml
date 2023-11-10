@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^1.1.0
     version: 1.1.0(markdown-it@13.0.2)
   '@nolebase/vitepress-plugin-enhanced-readabilities':
-    specifier: ^1.5.0
-    version: 1.5.0(vitepress@1.0.0-rc.20)(vue@3.3.4)
+    specifier: ^1.5.1
+    version: 1.5.1(vitepress@1.0.0-rc.20)(vue@3.3.4)
   '@nolebase/vitepress-plugin-highlight-targeted-heading':
     specifier: ^1.1.0
     version: 1.1.0(vue@3.3.4)
@@ -919,8 +919,8 @@ packages:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@1.5.0(vitepress@1.0.0-rc.20)(vue@3.3.4):
-    resolution: {integrity: sha512-++/zQ8xAnltmBwGvx/m31JGhJqcw6Hnj3h7/1KbcC8gNqBgpofaqAkcId8tyZ2Tr9yB5kMpak/vWlRRZrBdFTg==}
+  /@nolebase/vitepress-plugin-enhanced-readabilities@1.5.1(vitepress@1.0.0-rc.20)(vue@3.3.4):
+    resolution: {integrity: sha512-9QWvw2lDTdWXHr746A0tEgwkhDnrVF6Gbz9mT8kE9kE2APMD29DUa/471i2HBUB0hUWGtjcXtipd/HNosgjxSg==}
     peerDependencies:
       vitepress: '>=v1.0.0-beta.1'
       vue: '>=3.2.0'
