@@ -1,7 +1,8 @@
 export interface ContributorInfo {
   name: string
   count: number
-  hash: string
+  avatarUrl?: string
+  url?: string
 }
 
 export interface CommitInfo {
@@ -14,5 +15,5 @@ export interface CommitInfo {
   body?: string
   author_name: string
   author_email: string
-  authorAvatar: string
+  author_avatar: string
 }

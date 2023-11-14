@@ -1,7 +1,7 @@
 import md5 from 'md5'
 import Git from 'simple-git'
 import { include } from '../.vitepress/meta'
-import type { CommitInfo, ContributorInfo } from './types'
+import type { CommitInfo } from './types'
 import { uniq } from './utils'
 
 const git = Git({
@@ -36,38 +36,10 @@ export async function getChangeLog(count = 200) {
         .filter(i => !!i[1]?.match(RegExp(`^(${include.join('|')})\\/.+\\.md$`))?.[0]),
     )
 
-    log.authorAvatar = md5(log.author_email)
+    log.author_avatar = md5(log.author_email)
   }
 
   const result = logs.filter(i => i.path?.length || i.version)
   cache = result
   return result
-}
-
-export async function getContributorsAt(path: string) {
-  try {
-    const list = (await git.raw(['log', '--pretty=format:"%an|%ae"', '--', path]))
-      .split('\n')
-      .map(i => i.slice(1, -1).split('|') as [string, string])
-    const map: Record<string, ContributorInfo> = {}
-
-    list
-      .filter(i => i[1])
-      .forEach((i) => {
-        if (!map[i[1]]) {
-          map[i[1]] = {
-            name: i[0],
-            count: 0,
-            hash: md5(i[1]),
-          }
-        }
-        map[i[1]].count++
-      })
-
-    return Object.values(map).sort((a, b) => b.count - a.count)
-  }
-  catch (e) {
-    console.error(e)
-    return []
-  }
 }
