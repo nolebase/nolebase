@@ -1,25 +1,24 @@
 /* 键盘按键样式 */
 kbd {
-  padding: 4px 8px;
-  font-size: 0.8rem;
+  padding: 2px 8px;
   cursor: pointer;
   user-select: none;
   position: relative;
-  bottom: 2px;
+  bottom: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI Adjusted","Segoe UI","Liberation Sans",sans-serif;
 }
 
 kbd::after {
-  display: inline;
   content: '';
+  display: inline;
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background: #656565;
-  box-shadow: 0 2px 0 2px #4f4f4f;
-  border-radius: 6px;
-  font-size: 0.8rem;
+  background: #414141;
+  box-shadow: 0 0 0px 2px #414141;
+  border-radius: 4px;
   cursor: pointer;
   user-select: none;
   z-index: -1;
@@ -28,28 +27,24 @@ kbd::after {
 /* macOS Command 图标 */
 kbd[data-keyboard-key="macos-command"]::before {
   content: "⌘";
-  font-size: 1.2rem;
   margin-right: 4px;
 }
 
 /* macOS Option 图标 */
 kbd[data-keyboard-key="macos-option"]::before {
   content: "⌥";
-  font-size: 1.2rem;
   margin-right: 4px;
 }
 
 /* macOS Control 图标 */
 kbd[data-keyboard-key="macos-control"]::before {
   content: "⌃";
-  font-size: 1.2rem;
   margin-right: 4px;
 }
 
 /* macOS Shift 图标 */
 kbd[data-keyboard-key="macos-shift"]::before {
   content: "⇧";
-  font-size: 1.2rem;
   margin-right: 4px;
 }
 
