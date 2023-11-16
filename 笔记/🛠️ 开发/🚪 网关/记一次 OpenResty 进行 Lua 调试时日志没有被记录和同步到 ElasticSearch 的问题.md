@@ -10,9 +10,14 @@ tags:
   - 软件/Elastic/ElasticStack
   - 软件/Elastic/ELK
   - 开发/故障排查
+status: 尚未完成
 ---
 
 # 记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题
+
+::: warning
+⚠️ 该文档尚未完成，仍在编写中...
+:::
 
 ### 文档兼容性
 
@@ -23,5 +28,3 @@ tags:
 | ElasticSearch | 8.3.2 | |
 | FileBeat | 1.6.0 | |
 | Logstash | 8.3.2 | |
-
-WIP

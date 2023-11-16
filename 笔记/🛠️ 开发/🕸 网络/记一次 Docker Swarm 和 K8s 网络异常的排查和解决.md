@@ -17,6 +17,7 @@ tags:
   - 运维/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 开发/云原生/Kubernetes/K8s
+status: 尚未完成
 ---
 # 记一次 Docker Swarm 和 K8s 网络异常的排查和解决
 

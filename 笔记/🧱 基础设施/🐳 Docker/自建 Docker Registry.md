@@ -1,3 +1,6 @@
+---
+status: 尚未完成
+---
 # 自建 Docker Registry
 
 ### 安装 Docker

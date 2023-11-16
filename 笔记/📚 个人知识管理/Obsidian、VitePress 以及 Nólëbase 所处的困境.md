@@ -6,6 +6,7 @@ tags:
   - 开发/前端/VitePress
   - 项目/Nólëbase
   - 个人知识管理/知识库
+status: 尚未完成
 ---
 # Nólëbase 和我们所使用的 Obsidian 以及 VitePress 所处的困境
 

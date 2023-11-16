@@ -1,3 +1,6 @@
+---
+status: 尚未完成
+---
 # 将 chatGPT 与文档结合
 
 ::: warning

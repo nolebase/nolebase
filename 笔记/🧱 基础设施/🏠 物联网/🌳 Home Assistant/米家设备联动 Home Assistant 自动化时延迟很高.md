@@ -12,6 +12,7 @@ tags:
   - 物联网/智能家居/生态/Homekit
   - 物联网
   - 物联网/IoT
+status: 尚未完成
 ---
 
 # 米家设备联动 Home Assistant 自动化时延迟很高

@@ -3,6 +3,7 @@ tags:
   - Linux
   - 操作系统/Linux
   - 操作系统/macOS
+status: 尚未完成
 ---
 
 # Linux 中的 `XDG_CONFIG_HOME`

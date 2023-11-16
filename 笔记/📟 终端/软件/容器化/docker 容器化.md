@@ -1,3 +1,6 @@
+---
+status: 尚未完成
+---
 ## 安装 Docker
 
 ### CentOS

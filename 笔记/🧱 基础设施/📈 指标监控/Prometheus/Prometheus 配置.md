@@ -5,6 +5,7 @@ tags:
   - 开发/云原生/可观测/指标
   - 运维/云原生/可观测/Prometheus
   - 开源/软件/Prometheus
+status: 尚未完成
 ---
 
 # Prometheus 配置

@@ -6,6 +6,8 @@ tags:
   - 命令行/chown
   - 软件/Visual-Studio-Code
 ---
+# 解决 VS Code 不能在只读卷上更新
+
 #### VS Code 提示
 
 > Cannot update while running on a read-only volume. The application is on a read-only volume. Please move the application and try again. If you're on macOS Sierra or later, you'll need to move the application out of the Downloads directory. See this link for more information.

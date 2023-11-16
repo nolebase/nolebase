@@ -1,3 +1,6 @@
+---
+status: 尚未完成
+---
 ## Figma
 
 [Figma 汉化版](https://www.figma.cool/cn)

@@ -6,6 +6,7 @@ tags:
   - 开发/开发环境
   - 命令行/openssl
   - 网络/协议/DNS
+status: 尚未完成
 ---
 
 # 本地开发环境 TLS 搭建和 DNS 覆写

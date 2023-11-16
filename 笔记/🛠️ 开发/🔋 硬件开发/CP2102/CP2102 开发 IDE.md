@@ -2,6 +2,7 @@
 tags:
   - 开发/硬件
   - 开发/硬件/嵌入式
+status: 尚未完成
 ---
 Simplicity Studio Software
 

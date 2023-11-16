@@ -8,6 +8,7 @@ tags:
   - 游戏/主机设备/任天堂/Nintendo/Nintendo-3DS
   - 游戏/掌机设备/Valve/Steam-Deck
   - 游戏/掌机设备/Valve
+status: 尚未完成
 ---
 # 在 Steam Deck 上游玩塞尔达传说：时之笛 3D
 
