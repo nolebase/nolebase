@@ -105,23 +105,23 @@ cd nolebase
 
 ##### 使用的是 macOS 吗
 
-使用 <kbd data-keyboard-key="macos-command">Command</kbd> + <kbd>空格</kbd> 打开「终端」应用，然后输入下面的命令：
+使用 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd data-keyboard-key="space">空格</kbd> 打开「终端」应用，然后输入下面的命令：
 
 ```shell
 cd
 ```
 
-先多输入一个空格，然后接下来打开访达，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到终端窗口中，最后按下 <kbd>return</kbd> 键，就可以告诉终端前往 Nólëbase 知识库所在的目录了。
+先多输入一个空格，然后接下来打开访达，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到终端窗口中，最后按下 <kbd data-keyboard-key="return">return</kbd> 键，就可以告诉终端前往 Nólëbase 知识库所在的目录了。
 
 ##### 使用的是 Windows 吗
 
-使用 <kbd>Win</kbd> + <kbd>Q</kbd> 打开搜索，键入「Powershell」之后点击搜索结果中的蓝色方块，然后输入下面的命令：
+使用 <kbd data-windows-keyboard-key="windows">Win</kbd> + <kbd>Q</kbd> 打开搜索，键入「Powershell」之后点击搜索结果中的蓝色方块，然后输入下面的命令：
 
 ```shell
 cd
 ```
 
-先多输入一个空格，然后接下来打开文件管理器，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到运行窗口中，最后按下 <kbd>回车</kbd> 键，就可以告诉 Powershell 前往 Nólëbase 知识库所在的目录了。
+先多输入一个空格，然后接下来打开文件管理器，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到运行窗口中，最后按下 <kbd data-keyboard-key="enter">回车</kbd> 键，就可以告诉 Powershell 前往 Nólëbase 知识库所在的目录了。
 
 ##### 使用的是 Linux 吗
 
@@ -157,7 +157,7 @@ $ pnpm docs:dev
 
 在这个本地运行的 Nólëbase 知识库前端服务器启动的情况下，你针对所有 Markdown 文件、样式文件、配置文件的变更，都会实时响应到网页中。
 
-如果刷新不及时或者更新有异常，也可以试试看使用 <kbd data-keyboard-key="macos-command">Command</kbd> + <kbd>R</kbd> （macOS 系统） <kbd>Ctrl</kbd> + <kbd>R</kbd> （Windows 和 Linux 系统）快捷键强制刷新。
+如果刷新不及时或者更新有异常，也可以试试看使用 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd>R</kbd> （macOS 系统） <kbd>Ctrl</kbd> + <kbd>R</kbd> （Windows 和 Linux 系统）快捷键强制刷新。
 
 #### 构建并渲染为可部署的静态页面
 

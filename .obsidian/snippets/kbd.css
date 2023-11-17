@@ -1,0 +1,70 @@
+/* 键盘按键样式 */
+kbd {
+  padding: 2px 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  bottom: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI Adjusted","Segoe UI","Liberation Sans",sans-serif;
+}
+
+kbd::after {
+  content: '';
+  display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #414141;
+  box-shadow: 0 0 0px 2px #414141;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  z-index: -1;
+}
+
+/* macOS command 图标 */
+kbd[data-macos-keyboard-key="command"]::before {
+  content: "⌘";
+  margin-right: 4px;
+}
+
+/* macOS Option 图标 */
+kbd[data-macos-keyboard-key="option"]::before {
+  content: "⌥";
+  margin-right: 4px;
+}
+
+kbd[data-windows-keyboard-key="windows"]::before {
+  content: "⊞";
+  margin-right: 4px;
+  font-size: 1.4em;
+}
+
+kbd[data-keyboard-key="shift"]::before {
+  content: "⇧";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="return"]::before {
+  content: "⏎";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="control"]::before {
+  content: "⌃";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="enter"]::before {
+  content: "⌅";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="space"]::before {
+  content: "␣";
+  margin-right: 4px;
+  font-weight: bold;
+  vertical-align: top;
+}

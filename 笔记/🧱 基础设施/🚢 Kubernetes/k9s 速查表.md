@@ -31,7 +31,7 @@ status: 尚未完成
 
 按键顺序可视化：
 
-<kbd data-keyboard-key="macos-shift">Shift</kbd> + <kbd>:</kbd> + <kbd>namespace</kbd> + <kbd>Enter</kbd>
+<kbd data-keyboard-key="shift">Shift</kbd> + <kbd>:</kbd> + <kbd>namespace</kbd> + <kbd>Enter</kbd>
 
 ### `:ctx` 选择集群配置（Context）
 
@@ -43,7 +43,7 @@ status: 尚未完成
 
 按键顺序可视化：
 
-<kbd data-keyboard-key="macos-shift">Shift</kbd> + <kbd>:</kbd> + <kbd>ctx</kbd> + <kbd>Enter</kbd>
+<kbd data-keyboard-key="shift">Shift</kbd> + <kbd>:</kbd> + <kbd>ctx</kbd> + <kbd>Enter</kbd>
 
 ## 数据处理
 

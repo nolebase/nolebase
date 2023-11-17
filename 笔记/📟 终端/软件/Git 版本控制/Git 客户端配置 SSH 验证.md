@@ -168,7 +168,7 @@ vim ~/.ssh/config
 ```
 
 ```shell [喜欢 Visual Studio Code]
-# 需要预先在 Visual Studio Code 中通过命令面板 Command Palette（可以在 Windows 和 Linux 上通过 Ctrl + Shift + P 或者在 macOS 上通过 Command + Shift + P）
+# 需要预先在 Visual Studio Code 中通过命令面板 command Palette（可以在 Windows 和 Linux 上通过 Ctrl + Shift + P 或者在 macOS 上通过 command + Shift + P）
 code ~/.ssh/config
 ```
 

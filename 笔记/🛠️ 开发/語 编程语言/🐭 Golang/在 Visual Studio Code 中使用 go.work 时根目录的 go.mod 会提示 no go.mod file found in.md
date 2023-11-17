@@ -30,7 +30,7 @@ no go.mod file found in /Users/neko/Git/<路径>
 
 通过命令面板打开 Visual Studio Code 的配置：
 
-- 在 macOS 上按 <kbd data-keyboard-key="macos-command">command</kbd> + <kbd data-keyboard-key="macos-option">option</kbd> + <kbd>P</kbd> 可以激活命令面板
+- 在 macOS 上按 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd data-macos-keyboard-key="option">option</kbd> + <kbd>P</kbd> 可以激活命令面板
 - 在 Windows 和 Linux 上按 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd>
 
 然后输入选择下面的内容来配置**全局** Visual Studio Code 配置：

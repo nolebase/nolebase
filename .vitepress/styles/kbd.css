@@ -1,0 +1,86 @@
+/* 键盘按键样式 */
+.VPDoc kbd {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  bottom: 2px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI Adjusted","Segoe UI","Liberation Sans",sans-serif;
+  font-weight: 600;
+}
+
+.VPDoc kbd::after {
+  display: inline;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(0 0% 94% / 1);
+  box-shadow: 0px 2px 0 2px hsl(0 0% 88% / 1);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+  z-index: -1;
+}
+
+/* 夜间模式的键盘按键样式 */
+.dark .VPDoc kbd::after {
+  background: #3c3c3c;
+  box-shadow: 0 2px 0 2px #292929;
+}
+
+/* macOS command 图标 */
+.VPDoc kbd[data-macos-keyboard-key="command"]::before {
+  content: "⌘";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+/* macOS Option 图标 */
+.VPDoc kbd[data-macos-keyboard-key="option"]::before {
+  content: "⌥";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-windows-keyboard-key="windows"]::before {
+  content: "⊞";
+  vertical-align: top;
+  margin-right: 4px;
+  font-size: 1.4em;
+}
+
+.VPDoc kbd[data-keyboard-key="shift"]::before {
+  content: "⇧";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="return"]::before {
+  content: "⏎";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="control"]::before {
+  content: "⌃";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="enter"]::before {
+  content: "⌅";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="space"]::before {
+  content: "␣";
+  vertical-align: top;
+  margin-right: 4px;
+  font-weight: bold;
+}
