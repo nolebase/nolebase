@@ -38,11 +38,9 @@
 
 ### 所以，也有别人在这样使用 [VitePress](https://vitepress.dev) 作为可部署的知识库吗？
 
-> 等等，有别人在这样使用 [VitePress](https://vitepress.dev) 作为知识库吗？
-
 哦，当然！
 
-这里有一些我们在 GitHub 上发现的使用 VitePress 作为知识库的项目：
+这里有一些我们在 GitHub 上发现的使用 [VitePress](https://vitepress.dev) 作为知识库的项目：
 
 - [Charles7c/charles7c.github.io：基于 VitePress 构建的个人知识库/博客。](https://github.com/Charles7c/charles7c.github.io)
 
@@ -111,13 +109,13 @@ cd
 
 #### 安装依赖和运行开发服务器
 
-在倒数第二步中，我们需要安装依赖，这样 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 就会被下载到本地的 [Nólëbase](https://nolebase.ayaka.io) 目录/文件夹下的 `node_modules` 目录下了：
+在倒数第二步中，我们需要安装依赖，这样 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 就会被下载到本地的 [Nólëbase](https://nolebase.ayaka.io) 目录/文件夹下的 `node_modules` 目录/文件夹下了：
 
 ```shell
 pnpm install
 ```
 
-接下来你可以直接运行下面的命令开启一个本地运行的 Nólëbase 知识库前端服务器，通常而言我们称之为「开发服务器」，用这个服务器，可以通过浏览器在本地直接访问渲染完成的页面：
+接下来你可以直接运行下面的命令开启一个本地运行的 [Nólëbase](https://nolebase.ayaka.io) 知识库前端服务器，通常而言我们称之为「开发服务器」，用这个服务器，可以通过浏览器在本地直接访问渲染完成的页面：
 
 ```shell
 pnpm docs:dev

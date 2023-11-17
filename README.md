@@ -19,9 +19,9 @@
   - 本知识库和所生成的页面均由创作者们维护，涉及到生活中各方面知识和内容，也不乏我们的回忆和畅想。
 - 📃 皆为 Markdown：
   - 使用 Markdown 和 Markdown 拓展语法编写和记录笔记，每一个页面都是 Markdown 文件。
-- 🚀 由 VitePress 驱动：
+- 🚀 由 [VitePress](https://vitepress.dev) 驱动：
   - 基于 Vite 的强大静态文档页面生成器，它生成了我们知识库的页面，提供了简单易用的主题和工具。
-- 🗃 由 Obsidian 驱动：
+- 🗃 由 [Obsidian](https://obsidian.md) 驱动：
   - 强大的知识库管理工具，支持花样繁多的插件和拓展，让知识管理变得更加简单。
 
 ## 想要自己部署和在本地启动强大的 Nólëbase 知识库，或者自己拥有一份？
@@ -58,11 +58,9 @@
 
 ### 所以，也有别人在这样使用 [VitePress](https://vitepress.dev) 作为可部署的知识库吗？
 
-> 等等，有别人在这样使用 [VitePress](https://vitepress.dev) 作为知识库吗？
-
 哦，当然！
 
-这里有一些我们在 GitHub 上发现的使用 VitePress 作为知识库的项目：
+这里有一些我们在 GitHub 上发现的使用 [VitePress](https://vitepress.dev) 作为知识库的项目：
 
 - [Charles7c/charles7c.github.io：基于 VitePress 构建的个人知识库/博客。](https://github.com/Charles7c/charles7c.github.io)
 
@@ -131,13 +129,13 @@ cd
 
 #### 安装依赖和运行开发服务器
 
-在倒数第二步中，我们需要安装依赖，这样 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 就会被下载到本地的 [Nólëbase](https://nolebase.ayaka.io) 目录/文件夹下的 `node_modules` 目录下了：
+在倒数第二步中，我们需要安装依赖，这样 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 就会被下载到本地的 [Nólëbase](https://nolebase.ayaka.io) 目录/文件夹下的 `node_modules` 目录/文件夹下了：
 
 ```shell
 pnpm install
 ```
 
-接下来你可以直接运行下面的命令开启一个本地运行的 Nólëbase 知识库前端服务器，通常而言我们称之为「开发服务器」，用这个服务器，可以通过浏览器在本地直接访问渲染完成的页面：
+接下来你可以直接运行下面的命令开启一个本地运行的 [Nólëbase](https://nolebase.ayaka.io) 知识库前端服务器，通常而言我们称之为「开发服务器」，用这个服务器，可以通过浏览器在本地直接访问渲染完成的页面：
 
 ```shell
 pnpm docs:dev
@@ -194,7 +192,7 @@ pnpm docs:build
 4. 使用二级标题的**说明**
 5. 有完善标题分级和注解、甚至是脚注的**正文**
 6. *非强制* · 使用二级标题的**延伸阅读**或是**参考资料**（仅针对如果引用了文章、网页的绝大多数内容；没有实际引用到文档内但是值得参考和阅读的文章、网页的内容；查阅资料时遇到的（非强关联，但是也有关系的）相关内容时需要添加）
-7. *非强制* · 不使用标题的**脚注**（如果有的话，通过使用脚注插件 Footnote shortcu（参考[🔌 知识库插件列表](%F0%9F%94%8C%20%E7%9F%A5%E8%AF%86%E5%BA%93%E6%8F%92%E4%BB%B6%E5%88%97%E8%A1%A8.md) ）创建，可以避免过多的引用和链接出现在正文里）
+7. *非强制* · 不使用标题的**脚注**（如果有的话，通过使用脚注插件 Footnote shortcut（参考[🔌 知识库插件列表](%F0%9F%94%8C%20%E7%9F%A5%E8%AF%86%E5%BA%93%E6%8F%92%E4%BB%B6%E5%88%97%E8%A1%A8.md) ）创建，可以避免过多的引用和链接出现在正文里）
 
 每一项的内容和说明都会在下方的文档中一一说明
 
@@ -203,18 +201,19 @@ pnpm docs:build
 #### 标题
 
 标题一般为文件名本身，方便查询和记忆。
+
 ##### Markdown 撰写示例
 
 ```markdown
-#标题
+# 标题
 ```
 
-标签不易于展示渲染后效果，此处不再赘述。
 #### 标签
 
 标签可以使得文档易于检索和串联在一起，也可以使得在阅读一篇文档之后再去阅读相关标签的其他文档时变得方便检索和寻找。
 
-过去 Nólëbase 使用 Obsidian 的[基本标签](https://help.obsidian.md/Editing+and+formatting/Tags) `#标签内容`（我叫它「裸标签」）来对页面进行标记，但是存在于正文的裸标签并不利于程序化的处理，而且在实践[结构化标签（或者嵌套标签）](https://help.obsidian.md/Editing+and+formatting/Tags#Nested+tags)的时候存在于正文中的结构化标签将会在一定程度上混淆视听，为了能够更好的集成到 [Nólëbase 集成](https://nolebase-integrations.ayaka.io) 来全自动处理标签，优化整体阅读体验，现在 Nólëbase 在 Obsidian 所兼容的 Markdown 的 [frontmatter](https://github.com/jonschlinkert/gray-matter) 添加使用 `tags` 字段来配置页面的标签。
+过去 [Nólëbase](https://nolebase.ayaka.io) 使用 [Obsidian](https://obsidian.md) 的[基本标签](https://help.obsidian.md/Editing+and+formatting/Tags) `#标签内容`（我叫它「裸标签」）来对页面进行标记，但是存在于正文的裸标签并不利于程序化的处理，而且在实践[结构化标签（或者嵌套标签）](https://help.obsidian.md/Editing+and+formatting/Tags#Nested+tags)的时候存在于正文中的结构化标签将会在一定程度上混淆视听，为了能够更好的集成到 [Nólëbase 集成](https://nolebase-integrations.ayaka.io) 来全自动处理标签，优化整体阅读体验，现在 [Nólëbase](https://nolebase.ayaka.io) 在 [Obsidian](https://obsidian.md) 所兼容的 Markdown 的 [frontmatter](https://github.com/jonschlinkert/gray-matter) 添加使用 `tags` 字段来配置页面的标签。
+
 ##### Markdown 撰写示例
 
 ```
@@ -232,6 +231,7 @@ tags:
 对于存放在 **📃 Archives** 目录中的文件（包括文档、静态资源），都应添加 **Archive 信息** 显著的标记其来源，创建时间、以及原始资源的信息等内容。
 这将确保我们在 Archive 文档或静态资源时可以保留其作者的信息和采集信息，方便未来的资料查证、资料溯源等变成可能。
 另外需要注意的是，我们在进行 Archive 采集时都应该注意创作者所使用的共享协议，如果不允许转载，则不能进行 Archive 采集。
+
 ##### 字段
 
 ###### Archive 自
