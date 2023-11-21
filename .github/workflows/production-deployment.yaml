@@ -57,13 +57,12 @@ jobs:
       - name: 构建
         run: pnpm docs:build
 
-      - name: 部署到 Netlify
-        id: netlify-deployment
-        uses: netlify/actions/cli@master
+      - name: 推送到 Netlify
+        run: pnpm install -g netlify-cli
+
+      - name:
         timeout-minutes: 10
-        with:
-          args: deploy --dir=.vitepress/dist --functions=netlify/functions --prod
-          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+        run: netlify deploy --dir .vitepress/dist --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
