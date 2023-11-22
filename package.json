@@ -58,12 +58,12 @@
     "simple-git": "^3.21.0",
     "tsx": "^3.14.0",
     "typescript": "^5.3.2",
-    "unocss": "^0.52.7",
+    "unocss": "^0.57.7",
     "unplugin-vue-components": "^0.25.2",
     "uuid": "^9.0.1",
-    "vite": "^4.4.11",
+    "vite": "^5.0.2",
     "vitepress": "1.0.0-rc.29",
-    "vue": "^3.3.4",
+    "vue": "^3.3.8",
     "vuedraggable": "^4.1.0"
   }
 }
