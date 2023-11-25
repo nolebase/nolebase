@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1cc0a552b8578118",
+        "id": "9b2db669b4778960",
         "type": "tabs",
         "children": [
           {
-            "id": "54f83dbc98b1eea5",
+            "id": "91f60946c812c67b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ".conda",
+                "query": "tag:#笔记",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 411.5
+    "width": 322.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -82,14 +86,16 @@
       {
         "id": "166ecf9eee3475b0",
         "type": "tabs",
-        "dimension": 40.1954795357361,
+        "dimension": 21.78262846748522,
         "children": [
           {
             "id": "475eb9b30293eb6b",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md"
+              }
             }
           },
           {
@@ -98,6 +104,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -120,7 +127,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.8276068547580339,
+                  "scale": 1.0555500594442462,
                   "close": true
                 }
               }
@@ -150,7 +157,7 @@
       {
         "id": "00f8f8ad2cb9f9b0",
         "type": "tabs",
-        "dimension": 59.8045204642639,
+        "dimension": 78.21737153251478,
         "children": [
           {
             "id": "ccb7652bb733a848",
@@ -158,6 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,6 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +204,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 396.5
+    "width": 344.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,54 +220,54 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "54f83dbc98b1eea5",
+  "active": "91f60946c812c67b",
   "lastOpenFiles": [
-    "笔记/🛠️ 开发/如何调试有着浏览器引擎前缀的伪元素 CSS？.md",
-    "笔记/🛠️ 开发/如何调试有着浏览器引擎前缀的伪元素 CSS？~.md",
-    "笔记/🛠️ 开发/assets/how-to-debug-vendor-prefix-css-screenshot-3.png",
-    "笔记/🛠️ 开发/assets/how-to-debug-vendor-prefix-css-screenshot-2.png",
-    "笔记/🛠️ 开发/assets/how-to-debug-vendor-prefix-css-screenshot-1.png",
-    "笔记/🛠️ 开发/assets/how-to-debug-vendor-prefix-css-screenshot-4.png",
-    "Pasted image 20231107164412.png",
-    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/大语言模型 LLM/使用 FastEdit 微调大语言模型 LLM.md",
-    "笔记/🛠️ 开发/語 编程语言/🐍 Python/配置 Anaconda 的环境目录和包目录.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
-    "视图/未添加标签的页面.md",
-    "笔记/🎮 游戏/💡 游戏设计/如何无需作恶就让玩家沉迷游戏.md",
-    "笔记/💾 软件/笔记软件/Obsidian 插件收藏.md",
-    "笔记/💾 软件/NeoVim/发行版.md",
-    "笔记/📦 收集箱/🌍 网站/help.mirrorz.org.md",
-    "笔记/📟 终端/Neko 配置使用的 zsh alias.md",
-    "笔记/📃 Archives/📰 新闻/The Verge/FDA 刚刚批准了第一个处方视频游戏——它是为患有 ADHD 多动症的孩子准备的.md",
-    "笔记/🛠️ 开发/🕸 网络/IP 后面的斜杠是什么？.md",
-    "笔记/🛠️ 开发/語 编程语言/🐍 Python/在 macOS 上使用 brew 安装配置 Anaconda.md",
-    "笔记/📦 收集箱/🤖️ AI/有一个服务该领域的 AI 应用 - AI 应用索引中心.md",
-    "笔记/📦 收集箱/🌍 网站/There's An AI For That (TAAFT).md",
-    "笔记/📦 收集箱/🌍 网站/Solarlint.md",
-    "笔记/🤖 AI 人工智能/大语言模型 LLM",
-    "笔记/🛠️ 开发/🕸 网络/获取当前 Linux 机器的公网 IP 地址.md",
+    "vite.config.ts.timestamp-1700915426588-22909012028af.mjs",
+    "笔记/📦 收集箱/💾 软件/Noteable.io.md",
+    "笔记/📦 收集箱/💾 软件/Observable.md",
+    "笔记/📦 收集箱/💾 软件/assets/observable-screenshot-1.png",
+    "笔记/📦 收集箱/💾 软件/assets/noteable-screenshot-2.png",
+    "笔记/🛠️ 开发/有意思的 Notebook SaaS.md",
+    "笔记/📦 收集箱/💾 软件/assets/noteable-screenshot-1.png",
+    "笔记/📦 收集箱/💾 软件/assets",
+    "笔记/📦 收集箱/💾 软件/assets/observable-screenshot-2.png",
+    "笔记/📦 收集箱/💾 软件/assets/noteable-screenshot-3.png",
+    "Pasted image 20231113161155.png",
+    "笔记/🛠️ 开发/🕸 网络/WireGuard VPN/WireGuard 服务端配置.md",
+    "笔记/🎬 项目/Nolebase.md",
+    "笔记/🛠️ 开发/前端动画库调研记录（2023）.md",
+    "笔记/🛠️ 开发/assets/animation-frameworks-for-frontend-3.png",
+    "笔记/🛠️ 开发/assets/animation-frameworks-for-frontend-2.png",
+    "笔记/🛠️ 开发/assets/animation-frameworks-for-frontend-1.png",
     "笔记/📟 终端/软件/Git 版本控制/清理 Git 分支.md",
-    "笔记/📟 终端/软件/Git 版本控制/Git 命令速记.md",
-    "笔记/🧱 基础设施/🐳 Docker/Docker 快捷操作 Cheat Sheet.md",
-    "README.md",
-    "🔌 知识库插件列表.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
-    "vite.config.ts.timestamp-1699239833340-484b5aa517b46.mjs",
-    "笔记/📚 个人知识管理/ACCESS 组织方法论.md",
-    "视图",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 的插件管理器 krew.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 插件之 kubecm 配置文件管理器.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
+    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/平均传感器.md",
     "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/assets/Pasted image 20231022010149.png",
-    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/assets/Pasted image 20231022010140.png",
-    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/assets/Pasted image 20231022005918.png",
-    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/assets/Pasted image 20231022005707.png",
-    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-3.png",
+    "笔记/🧱 基础设施/使用 Amazon S3 进行静态文件分发.md",
+    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
+    "笔记/🧩 开源贡献/Kubernetes/加入 Slack 社区.md",
     "笔记/🧩 开源贡献/Kubernetes/assets",
     "笔记/🧩 开源贡献/Kubernetes",
     "笔记/🧩 开源贡献",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/Promtps",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering",
+    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
+    "笔记/🤖 AI 人工智能/用 AutoGen 写一个 LLM 应用.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
+    "笔记/🤖 AI 人工智能/快速在本地运行一个 XAgent 尝鲜图形化和智能化的 Agent 智能体.md",
+    "笔记/🤖 AI 人工智能/学习网站.md",
     "笔记/🛠️ 开发/🗂 数据库/向量数据库 Vector DB",
     "笔记/🛠️ 开发/⛶ 边缘计算",
+    "node_modules/@vueuse",
+    "node_modules/@types",
+    "node_modules/@nolebase",
+    "node_modules/@netlify",
     "未命名.canvas"
   ]
 }
