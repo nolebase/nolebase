@@ -1,7 +1,0 @@
-
-
-```json
-{
-  "skipDefaultLibCheck": true,
-}
-```
