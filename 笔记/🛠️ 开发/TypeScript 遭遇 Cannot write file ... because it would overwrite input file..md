@@ -36,8 +36,6 @@ Found 1 error.
  ELIFECYCLE  Command failed with exit code 1.
 ```
 
-这是因为
-
 ## 原因
 
 ### `tsconfig.json` 中缺失了必要的 `outDir` 配置
@@ -92,8 +90,8 @@ Found 1 error.
 ├── src
 │   ├── components
 │   │   ├── HighlightTargetedHeading.vue
-│   │   └── HighlightTargetedHeading.vue.d.ts // [!code focus]
-│   ├── index.d.ts // [!code focus]
+│   │   └── HighlightTargetedHeading.vue.d.ts # [!code focus]
+│   ├── index.d.ts # [!code focus]
 │   └── index.ts
 ├── tsconfig.json
 ├── tsconfig.node.json
@@ -169,6 +167,7 @@ error TS5055: Cannot write file '~/Git/nolebase/integrations/packages/vitepress-
 ```
 
 这个时候再次运行 `vue-tsc --declaration --emitDeclarationOnly` 就不会再报错了，再次观察 `dist` 目录的时候也能发现类型正确地输出了。
+
 ## 参考资料
 
 - [TypeScript error: Cannot write file 'index.d.ts' because it would overwrite input file - Stack Overflow](https://stackoverflow.com/questions/37013665/typescript-error-cannot-write-file-index-d-ts-because-it-would-overwrite-inpu)
