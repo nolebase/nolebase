@@ -2,8 +2,8 @@
 tags:
   - 开发/前端
   - 开发/语言/TypeScript
-  - 开发/Node.js/Rollup
   - 软件/Obsidian/插件
+  - 开发/Nodejs/Rollup
 ---
 
 # `asciinema-player` 插件开发记录
