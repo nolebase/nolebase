@@ -3,7 +3,8 @@ tags:
   - 开发/前端/VitePress
   - 开发/前端
   - 开发/前端/Vue
-  - 开发/Node.js/Vite
+  - 开发/Nodejs/Vite
+  - 开发/前端/Vite
 ---
 
 # VitePress
