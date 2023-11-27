@@ -73,7 +73,7 @@ kind create cluster
 
 ### 部署一个 Hello World 工作负载方便之后测试
 
-```
+```shell
 kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
 ```
 
@@ -84,6 +84,7 @@ kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agn
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/clusterpedia-io/clusterpedia/main/deploy/clusterpedia_namespace.yaml
 ```
+
 ### 在希望测试的集群中应用 CRD
 
 Clusterpedia 用到了 `ClusterSyncResources` 和 `PediaCluster` 两种自定义资源类型，你需要通过
@@ -288,7 +289,7 @@ curl -fv -k --cert-type P12 --cert client.p12:password \
 /apis/clusterpedia.io/v1beta1/resources/apis/apps/v1/deployments
 ```
 
-这个接口尝试请求访问 Kubernetes 当前集群中的 Deployments 的工作负载的话，你可能会发现服务器返回了 404 Not Found 的错误，这是因为 Clusterpedia 的 `apiserver` 组件并不会在启动之后自动遍历并且更新当前集群内已经存在的资源到 Clusterpedia 下属的数据持久化层，我们需要引入另一个名为 
+这个接口尝试请求访问 Kubernetes 当前集群中的 Deployments 的工作负载的话，你可能会发现服务器返回了 404 Not Found 的错误，这是因为 Clusterpedia 的 `apiserver` 组件并不会在启动之后自动遍历并且更新当前集群内已经存在的资源到 Clusterpedia 下属的数据持久化层，我们需要引入另一个名为
 
 ```
 clustersynchro-manager
@@ -341,18 +342,18 @@ nvim pediacluster.yaml
 apiVersion: cluster.clusterpedia.io/v1alpha2
 kind: PediaCluster
 metadata:
-  name: cluster-example # 按需修改  // [code hl]
+  name: cluster-example # 按需修改 # [code hl]
 spec:
-  apiserver: "https://localhost:8443" # Kubernetes 集群 apiserver 的服务地址 // [code hl]
-  kubeconfig: <base64 编码的 kubeconfig 文件内容>  // [code hl]
+  apiserver: "https://localhost:8443" # Kubernetes 集群 apiserver 的服务地址 # [code hl]
+  kubeconfig: <base64 编码的 kubeconfig 文件内容>  # [code hl]
   caData:
   tokenData:
   certData:
   keyData:
-  syncResources:  // [code hl]
-  - group: apps  // [code hl]
-    resources:  // [code hl]
-     - deployments  // [code hl]
+  syncResources:  # [code hl]
+  - group: apps  # [code hl]
+    resources:  # [code hl]
+     - deployments  # [code hl]
 ```
 
 需要注意的是，我们必须在 `spec.syncResources` 中添加我们希望 Clusterpedia 的 `clustersynchro-manager` 的资源类型和分组才能让 `clustersynchro-manager` 正常工作：
@@ -369,17 +370,17 @@ spec:
   tokenData:
   certData:
   keyData:
-  syncResources:  // [code focus]
-  - group: apps  // [code focus]
-    resources:  // [code focus]
-     - deployments  // [code focus]
+  syncResources:  # [code focus]
+  - group: apps  # [code focus]
+    resources:  # [code focus]
+     - deployments  # [code focus]
 ```
 
 有关 `spec.syncResources` 的更多信息，可以到 [Synchronize Cluster Resources | Clusterpedia.io](https://clusterpedia.io/docs/usage/sync-resources/) 文档中阅读了解。
 
 然后执行
 
-```
+```shell
 kubectl apply -f pediacluster.yaml
 ```
 
@@ -394,7 +395,7 @@ kubectl get pediacluster
 来观察是否完成索引，就像这样：
 
 ```shell
-❯ kubectl get pediacluster          
+❯ kubectl get pediacluster
 NAME              READY   VERSION   APISERVER
 cluster-example   False   v1.27.3   https://127.0.0.1:61487
 ```
@@ -402,7 +403,7 @@ cluster-example   False   v1.27.3   https://127.0.0.1:61487
 可以注意关注一下 `READY` 字段的状态，只有为 `true` 的时候才代表资源都被遍历和索引完毕，就像这样：
 
 ```shell
-❯ kubectl get pediacluster          
+❯ kubectl get pediacluster
 NAME              READY   VERSION   APISERVER
 cluster-example   True    v1.27.3   https://127.0.0.1:61487
 ```
