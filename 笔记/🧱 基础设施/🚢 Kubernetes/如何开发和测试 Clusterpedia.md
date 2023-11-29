@@ -332,7 +332,7 @@ cat ~/.kube/config | base64 | pbcopy
 
 接下来我们创建一个用于部署 PediaCluster 的文件：
 
-```
+```shell
 nvim pediacluster.yaml
 ```
 
@@ -342,18 +342,18 @@ nvim pediacluster.yaml
 apiVersion: cluster.clusterpedia.io/v1alpha2
 kind: PediaCluster
 metadata:
-  name: cluster-example # 按需修改 # [code hl]
+  name: cluster-example # 按需修改 # [!code hl]
 spec:
-  apiserver: "https://localhost:8443" # Kubernetes 集群 apiserver 的服务地址 # [code hl]
-  kubeconfig: <base64 编码的 kubeconfig 文件内容>  # [code hl]
+  apiserver: "https://localhost:8443" # Kubernetes 集群 apiserver 的服务地址 # [!code hl]
+  kubeconfig: <base64 编码的 kubeconfig 文件内容>  # [!code hl]
   caData:
   tokenData:
   certData:
   keyData:
-  syncResources:  # [code hl]
-  - group: apps  # [code hl]
-    resources:  # [code hl]
-     - deployments  # [code hl]
+  syncResources:  # [!code hl]
+  - group: apps  # [!code hl]
+    resources:  # [!code hl]
+     - deployments  # [!code hl]
 ```
 
 需要注意的是，我们必须在 `spec.syncResources` 中添加我们希望 Clusterpedia 的 `clustersynchro-manager` 的资源类型和分组才能让 `clustersynchro-manager` 正常工作：
@@ -370,10 +370,10 @@ spec:
   tokenData:
   certData:
   keyData:
-  syncResources:  # [code focus]
-  - group: apps  # [code focus]
-    resources:  # [code focus]
-     - deployments  # [code focus]
+  syncResources:  # [!code focus]
+  - group: apps  # [!code focus]
+    resources:  # [!code focus]
+     - deployments  # [!code focus]
 ```
 
 有关 `spec.syncResources` 的更多信息，可以到 [Synchronize Cluster Resources | Clusterpedia.io](https://clusterpedia.io/docs/usage/sync-resources/) 文档中阅读了解。
