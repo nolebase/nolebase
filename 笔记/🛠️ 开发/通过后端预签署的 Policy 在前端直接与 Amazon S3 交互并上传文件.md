@@ -90,7 +90,7 @@ import { createPresignedPost } from '@aws-sdk/s3-presigned-post';
 import { createPresignedPost } from '@aws-sdk/s3-presigned-post';
 
 export enum UploadingPolicyContentType {
-  Image = 'image/*',
+  Image = 'image/',
 }
 
 export async getSignedUploadPolicy(
