@@ -13,6 +13,57 @@ tags:
 
 这种技术也被称之为「服务端签名直传」、「客户端直传」、「Web 端直传」、「前端直传」，在阿里云 OSS 中也有支持[^1]。
 
+## IAM 的权限配置
+
+没有文档可以参考具体权限是如何配置的，但是我自己实践了一下基本的权限配置，你可以复制粘贴下面的这个策略配置 JSON 来作为 Presigned Post Policy 的其中一部分授权给相关的 IAM 用户：
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PresignedPostPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname/temp/*"
+        }
+    ]
+}
+```
+
+注意这里 `Resource` 背后的 `arn:aws:s3:::yourbucketname/temp/*` 代表了授权该 Policy 的 IAM 用户可以签署 Post Policy 并在之后允许直接对 Bucket 接入点进行 POST 操作下面的资源：
+
+- `yourbucketname` 的存储桶
+- 存储桶下方目录为 `temp/` 开头的任意文件
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PresignedPostPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname/temp/*" // [!code hl]
+        }
+    ]
+}
+```
+
+当然，这里只是对 IAM 用户做一层限制，实际的 `temp/*` 目录下的权限可以根据具体的业务需求再去通过 Policy 去限制一次。
+
+最终看起来大概是这样的
+
+![](./assets/use-backend-presigned-post-policy-to-upload-files-directly-to-aws-s3-screenshot-3.png)
+
 ## Node.js 服务端
 
 其实很简单，首先在本地 Node.js 服务端项目中安装 `@aws-sdk/s3-presigned-post`
@@ -155,7 +206,7 @@ export async function uploadFile(options: {
     formData.append('Content-Disposition', toRawFileName(options.filename));
 
   // 待上传的文件
-  // !!!: file参数必须在最后append,不然 `Content-Type` 和 `Content-Disposition` 不生效
+  // !!!: file 参数必须在最后 append ，不然 `Content-Type` 和 `Content-Disposition` 不生效
   formData.append('file', options.file);
 
   return await axios.post(options.url, formData);
