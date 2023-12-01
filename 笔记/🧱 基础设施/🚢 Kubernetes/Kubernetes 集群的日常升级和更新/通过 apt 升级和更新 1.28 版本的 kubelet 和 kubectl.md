@@ -20,7 +20,7 @@ tags:
 
 # 通过 apt 升级和更新 1.28 版本的 `kubelet` 和 `kubectl`
 
-## 检查 `kubelet` 和 `kubectl` 的依赖状态
+## 检查依赖状态
 
 ```shell
 sudo apt info kubelet
@@ -57,7 +57,7 @@ N: 有 4 条附加记录。请加上 ‘-a’ 参数来查看它们
 
 那么我们再继续。
 
-## 解除 `kubelet` 和 `kubectl` 的 Debian `apt` 依赖锚定（hold）
+## 解除 Debian `apt` 依赖锚定（hold）
 
 可以先看看 `apt-mark` 里面是否记录了 `kubelet` 的锚定（hold）：
 
@@ -87,7 +87,7 @@ sudo apt-mark unhold kubelet
 sudo apt-mark unhold kubectl
 ```
 
-## 明确 `kubelet` 和 `kubectl` 的版本目标并升级
+## 明确目标版本并升级
 
 ```shell
 sudo apt search kubelet
@@ -100,7 +100,7 @@ sudo apt search kubectl
 $ sudo apt search kubelet
 正在排序... 完成
 全文搜索... 完成
-kubelet/未知,now 1.28.4-1.1 amd64 [已安装]
+kubelet/未知,now 1.28.4-1.1 amd64 [已安装] # [!code hl]
   Node agent for Kubernetes clusters
 ```
 
@@ -111,7 +111,7 @@ $ sudo apt search kubectl
 kubecolor/oldstable 0.0.9-2+b5 amd64
   colorizes kubectl output
 
-kubectl/未知,now 1.28.4-1.1 amd64 [已安装]
+kubectl/未知,now 1.28.4-1.1 amd64 [已安装] # [!code hl]
   Command-line utility for interacting with a Kubernetes cluster
 
 kubernetes-client/oldstable 1.20.5+really1.20.2-1 amd64
@@ -138,11 +138,11 @@ Kubernetes v1.28.4
 
 ```shell
 $ kubectl version
-Client Version: v1.28.4
+Client Version: v1.28.4  # [!code hl]
 Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
 ```
 
-## 还原 `kubelet` 和 `kubectl` 的 Debian `apt` 依赖锚定（hold）
+## 还原 Debian `apt` 依赖锚定（hold）
 
 ```shell
 sudo apt-mark hold kubelet
@@ -174,7 +174,7 @@ $ sudo systemctl status kubelet
      Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
     Drop-In: /usr/lib/systemd/system/kubelet.service.d
              └─10-kubeadm.conf
-     Active: active (running) since Fri 2023-12-01 13:34:24 CST; 46s ago
+     Active: active (running) since Fri 2023-12-01 13:34:24 CST; 46s ago  # [!code hl]
        Docs: https://kubernetes.io/docs/
    Main PID: 21764 (kubelet)
       Tasks: 15 (limit: 9830)

@@ -18,9 +18,9 @@ tags:
   - 软件/云原生/Cilium
 ---
 
-# 通过 apt 升级和更新 kubeadm
+# 通过 apt 升级和更新 `kubeadm`
 
-## 解除 `kubeadm` 的 Debian `apt` 依赖锚定（hold）
+## 解除 Debian `apt` 依赖锚定（hold）
 
 可以先看看 `apt-mark` 里面是否记录了 `kubeadm` 的锚定（hold）：
 
@@ -38,7 +38,7 @@ sudo dpkg --get-selections | grep 'hold$' | more
 
 ```shell
 $ sudo apt-mark showhold | more
-kubeadm
+kubeadm # [!code hl]
 kubectl
 kubelet
 ```
@@ -49,7 +49,7 @@ kubelet
 sudo apt-mark unhold kubeadm
 ```
 
-## 明确 `kubeadm` 的版本目标并升级
+## 明确目标版本并升级
 
 ```shell
 sudo apt search kubeadm
@@ -61,7 +61,7 @@ sudo apt search kubeadm
 $ sudo apt search kubeadm
 正在排序... 完成
 全文搜索... 完成
-kubeadm/未知 1.28.4-1.1 amd64 [可从该版本升级：1.28.2-1.1]
+kubeadm/未知 1.28.4-1.1 amd64 [可从该版本升级：1.28.2-1.1] # [!code hl]
   Command-line utility for administering a Kubernetes cluster
 ```
 
@@ -84,7 +84,7 @@ $ sudo kubeadm version
 kubeadm version: &version.Info{Major:"1", Minor:"28", GitVersion:"v1.28.4", GitCommit:"bae2c62678db2b5053817bc97181fcc2e8388103", GitTreeState:"clean", BuildDate:"2023-11-15T16:56:18Z", GoVersion:"go1.20.11", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-## 还原 `kubeadm` 的 Debian `apt` 依赖锚定（hold）
+## 还原 Debian `apt` 依赖锚定（hold）
 
 ```shell
 sudo apt-mark hold kubeadm
