@@ -108,17 +108,22 @@ export async getSignedUploadPolicy(
   }
 
   return await createPresignedPost(this.s3Client, {
-    Bucket: '<AWS S3 >',
-    Key: normalizedDir + '/${filename}',
-    Conditions: [
-      ['starts-with', '$key', dir],
-      { acl: 'public-read' },
-      ['starts-with', '$Content-Type', contentType.toString()],
-    ],
-    Fields: {
-      acl: 'public-read',
-    },
-    Expires: 600,
+    Bucket: '<AWS S3 >', // [!code hl]
+    // 使用 ${filename} 结尾可以让前端或者用户自行决定文件名，或者上传 N 个文件 [!code hl]
+    // 这对于需要自定义文件名的业务很重要 [!code hl] 
+    Key: normalizedDir + '/${filename}', // [!code hl]
+    Conditions: [ // [!code hl]
+      // 限制上传路径中必须以「传入的目录」这个参数作为开头 // [!code hl]
+      ['starts-with', '$key', dir], // [!code hl]
+      // 这里按照自己的需求进行调整即可，一般会配置为 public-read，因为用户也需要预览自己上传的文件 // [!code hl]
+      { acl: 'public-read' }, // [!code hl]
+      // 限制上传文件的类型。注意，如果加了这一行策略配置，这意味着上传的时候需要在 FormData 里面或者头里面指定一下 Content-Type // [!code hl]
+      ['starts-with', '$Content-Type', contentType.toString()], // [!code hl]
+    ], // [!code hl]
+    Fields: { // [!code hl]
+      acl: 'public-read', // [!code hl]
+    }, // [!code hl]
+    Expires: 600, // [!code hl]
   });
 }
 ```
@@ -184,6 +189,8 @@ export async function uploadFile(options: {
   fields: Record<string, string>;
   /** 文件 */
   file: File;
+  /** 文件的 MIME 类型 */
+  contentType: string;
   /**
    * 是否通过 Content-Disposition 头部保存文件名（供文件下载时使用）
    * @default false
@@ -195,12 +202,10 @@ export async function uploadFile(options: {
    * @default file.name
    */
   filename?: string;
-  /** 文件的 MIME 类型 */
-  contentType?: string;
 }) {
   const formData = objectToFormData(options.fields);
   // 文件的 MIME 类型
-  if (options.contentType) formData.append('Content-Type', options.contentType);
+  formData.append('Content-Type', options.contentType)
   // 原始文件名（下载时使用）
   if (options.saveRawFilename)
     formData.append('Content-Disposition', toRawFileName(options.filename));
@@ -213,7 +218,88 @@ export async function uploadFile(options: {
 }
 ```
 
-## AWS S3 的 JavaScript SDK 有关 Pre-signed Post 功能的文档
+## 补充：上传完成后的复制和删除
+
+通常，基于浏览器的到 S3 的前端浏览器直传功能会涉及到一个问题：
+
+如果上面签名的 Policy 中你也使用了 `${filename}` 允许上传的时候上传任意多个文件，或者说，如果用户上传的文件数量不受控的话：
+
+1. 对于头像上传这样的业务需求，如果每次都上传一个带有随机数的文件，可能会出现用户一直选一直选，最终 bucket 里面会有很多个用户临时上传的一大堆不需要的头像文件
+2. 对于用户可以批量上传的业务需求，如果每次都可以上传若干临时文件，依然会出现用户一直选一直选，不断重新上传，最终导致 bucket 里面会有很多个用户临时上传的一大堆不需要的批量上传的文件
+
+这个时候要介绍一个新的流程，「上传完成后的复制和删除」。
+
+简单来说，这样的流程允许我们在允许用户上传多个文件的时候，让服务端通过「复制」和「删除」，也就是「剪切」的操作，留下那些用户不要的文件到临时文件夹中，设定定时任务来清理和删除临时文件夹中的资源，最终实现对临时文件的管理和销毁的流程。
+
+步骤是这样的：
+
+1. 用户选择希望上传的文件
+2. 获取上传的预签名 Policy
+3. 对 S3 存储桶 API 进行 POST Object 操作，上传文件到临时文件夹
+4. 将用户最终决定好最终上传完成的文件通过 API 告知服务端
+5. 服务端定向「复制」这些前端已经上传完成的对象到特定的，只有服务端可写的目录
+6. 服务端定向「删除」这些已经「复制」完成的对象原先在的临时文件夹的位置
+
+最终留在临时文件夹中的文件就都是可能用户再也不会触碰到或者访问的临时文件了，我们也许可以创建一些 AWS Lambda 函数或者定时任务来批量删除那些长时间不再修改和访问的临时文件夹中的资源，并最终实现对临时文件的管理和销毁的流程。
+
+在这个流程中最麻烦的是 AWS 的 IAM 策略，经过我的测试之后发现，「预签名」，「复制对象」和「删除对象」三个操作需要下面的这四个 IAM 策略：
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowPresignedPostForTempDir",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::yourbucketname/temp/*"
+        },
+        {
+            "Sid": "AllowCopyFromTempDirToRoot",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectAcl",
+                "s3:GetObjectTagging",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:PutObjectTagging"
+            ],
+            "Resource": [
+                "arn:aws:s3:::yourbucketname/*",
+                "arn:aws:s3:::yourbucketname/temp/*"
+            ]
+        },
+        {
+            "Sid": "AllowDeleteTempDir",
+            "Effect": "Allow",
+            "Action": [
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::yourbucketname/temp/*"
+            ]
+        },
+        {
+            "Sid": "AllowReadBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::yourbucketname"
+            ]
+        }
+    ]
+}
+```
+
+如果你也需要这样的流程，可以参考我的 IAM 权限策略配置看看，然后进一步根据业务需求去实现。
+## 寻找 AWS S3 的 JavaScript SDK 文档中有关 Pre-signed Post 功能的文档真的很困难
 
 [`@aws-sdk/s3-presigned-post` - AWS SDK for JavaScript v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-s3-presigned-post/)
 ### 是如何找到与之相关的文档的？
