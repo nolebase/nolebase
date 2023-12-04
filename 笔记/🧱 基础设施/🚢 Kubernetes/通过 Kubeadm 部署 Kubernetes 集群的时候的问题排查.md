@@ -19,7 +19,7 @@ tags:
   - 软件/云原生/kubelet
   - 网络
 ---
-# 通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查
+# 通过 `kubeadm` 部署 Kubernetes 集群的时候的问题排查
 
 ### 文档兼容性
 
