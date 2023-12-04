@@ -7,6 +7,7 @@ tags:
   - 开发/Nodejs/TypeScript
   - 开发/Nodejs/npm
 ---
+# 进行 Vite 监听构建的同时输出 Vue 组件的 TypeScript 类型定义
 
 核心是，只需要寻找到一个方式来同时执行 `vite build --watch` 和 `vue-tsx --declaration --emitDeclarationOnly` 这两条命令就好了。
 
