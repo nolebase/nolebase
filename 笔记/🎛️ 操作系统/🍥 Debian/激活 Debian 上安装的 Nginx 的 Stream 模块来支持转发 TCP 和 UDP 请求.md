@@ -31,7 +31,7 @@ sudo mv /etc/nginx/modules-enabled/50-mod-stream.conf.removed /etc/nginx/modules
 ```
 
 然后继续使用 `stream` 块就好了。
-## 说明
+## 背景
 
 今天在刚升级过的 Debian 网关设备之后访问 TCP/UDP 服务的时候遭遇了发起连接的客户端报错
 
@@ -87,6 +87,8 @@ configure arguments: --with-cc-opt='-g -O2 -ffile-prefix-map=/build/nginx-AoTv4W
 load_module /usr/lib/nginx/modules/ngx_stream_module.so;
 ```
 
+## 解决
+
 我又检查了一下 Nginx 的根配置文件 `nginx.conf`，发现内部是对模块有可选配置的文件定义的：
 
 ```nginx
@@ -140,6 +142,12 @@ sudo apt install libnginx-mod-stream
 stream {
 	include /etc/nginx/tcp.d/*.conf;
 }
+```
+
+再次运行
+
+```shell
+sudo nginx -t
 ```
 
 最终就发现它能正常工作了！
