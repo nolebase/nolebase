@@ -11,6 +11,7 @@ tags:
   - 命令行/终端
   - 运维/网络
   - 基础设施/Homelab
+  - 开发/故障排查
 ---
 
 # 激活 Debian 上安装的 Nginx 的 Stream 模块来支持转发 TCP 和 UDP 请求
