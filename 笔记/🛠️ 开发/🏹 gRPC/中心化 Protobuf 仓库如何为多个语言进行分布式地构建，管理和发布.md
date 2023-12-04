@@ -61,22 +61,22 @@ $ tree
 在中心化仓库中的根目录创建一个 buf 工具的配置文件 `buf.yaml`，并在其中写入如下内容：
 
 ```yaml
-version: v1 // [!code ++]
+version: v1 # [!code ++]
 ```
 
 为了能够为我们的目标语言 Go 进行代码生成（codegen），我们还需要在其根目录中创建一个 buf 工具用来完成代码生成的配置文件 `buf.gen.yaml`，并在其中写下如下内容：
 
 ```yaml
-version: v1 // [!code ++]
+version: v1 # [!code ++]
 
-plugins: // [!code ++]
-- name: go // [!code ++]
-  out: "gen/go/proto" // [!code ++]
-  opt: paths=source_relative // [!code ++]
+plugins: # [!code ++]
+- name: go # [!code ++]
+  out: "gen/go/proto" # [!code ++]
+  opt: paths=source_relative # [!code ++]
 
-- name: go-grpc // [!code ++]
-  out: "gen/go/proto" // [!code ++]
-  opt: paths=source_relative // [!code ++]
+- name: go-grpc # [!code ++]
+  out: "gen/go/proto" # [!code ++]
+  opt: paths=source_relative # [!code ++]
 ```
 
 **TO BE CONTINUE...**

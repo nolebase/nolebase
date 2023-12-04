@@ -36,10 +36,10 @@ $ conda info
   conda av metadata url : https://repo.anaconda.com/pkgs/main
            channel URLs : https://conda.anaconda.org/conda-forge/linux-64
                           https://conda.anaconda.org/conda-forge/noarch
-          package cache : /opt/conda/pkgs // [!code hl]
-                          /home/neko/.conda/pkgs // [!code hl]
-       envs directories : /opt/conda/envs // [!code hl]
-                          /home/neko/.conda/envs // [!code hl]
+          package cache : /opt/conda/pkgs # [!code hl]
+                          /home/neko/.conda/pkgs # [!code hl]
+       envs directories : /opt/conda/envs # [!code hl]
+                          /home/neko/.conda/envs # [!code hl]
                platform : linux-64
              user-agent : conda/4.10.1 requests/2.28.2 CPython/3.8.10 Linux/6.2.0-35-generic ubuntu/20.04.5 glibc/2.31
                 UID:GID : 0:0
@@ -94,8 +94,8 @@ $ conda info
   conda av metadata url : https://repo.anaconda.com/pkgs/main
            channel URLs : https://conda.anaconda.org/conda-forge/linux-64
                           https://conda.anaconda.org/conda-forge/noarch
-          package cache : /mnt/data/disk1/notebooks/demo-1/.conda/pkgs // [!code hl]
-       envs directories : /mnt/data/disk1/notebooks/demo-1/.conda/envs // [!code hl]
+          package cache : /mnt/data/disk1/notebooks/demo-1/.conda/pkgs # [!code hl]
+       envs directories : /mnt/data/disk1/notebooks/demo-1/.conda/envs # [!code hl]
                           /opt/conda/envs
                           /home/neko/.conda/envs
                platform : linux-64

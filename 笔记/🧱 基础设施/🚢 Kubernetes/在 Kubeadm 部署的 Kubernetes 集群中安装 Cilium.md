@@ -92,9 +92,9 @@ ipam:
     clusterPoolIPv4PodCIDRList: 10.244.0.0/16
 ipv4NativeRoutingCIDR: 10.244.0.0/16
 # 注意确认一下 Kubernetes API Server 的 IP 是否是这个
-k8sServiceHost: 10.24.0.2 // [!code hl]
+k8sServiceHost: 10.24.0.2 # [!code hl]
 # 注意确认一下 Kubernetes API Server 的端口是否是这个
-k8sServicePort: 6443 // [!code hl]
+k8sServicePort: 6443 # [!code hl]
 kubeProxyReplacement: strict
 operator:
   replicas: 1
@@ -230,6 +230,7 @@ sudo kubectl get pods -n kube-system
 - `CrashLoopBackOff`：比如业务 Pod 中会尝试访问外部互联网拉取信息，或者依赖的别的 Pod 出现了异常，无法建立与另一个 Pod 的 TCP 连接或者进行 HTTP 请求；在我的例子中是：
 	- 一个服务 Pod 连不到 Redis 所在的 Pod 了，因为 Redis Pod 的镜像拉不下来
 	- 一个基于互联网拉取配置的 Pod 连不到互联网了，无法拉取到它希望的配置文件，写了 panic 和 fatal 所以一直在 crash
+
 #### 深层原因
 
 如果我们这个时候检查一下路由表：
@@ -248,6 +249,7 @@ default via 10.0.0.1 dev eth0
 
 我们可以发现 `10.0.0.1` 的路由被改变了，如果你的网关路由和我一样是 `eth0` 上的 `10.0.0.1` 的话，那说明我们的 CIDR 冲突了，我们得解决一下 Cilium 可分配和应该接管的 CIDR。所以综上所述，出现这个问题最主要的原因可能是 Cilium 和 Kubernetes 节点所属的主路由所使用的 CIDR，或者说和 DNS 和网关路由器所使用的 CIDR 和 IP 冲突了。
 但这个问题也许会体现在 `ImagePullBackOff` 和 `ErrImagePull` 上，也许不会，但是由于 Cilium 安装之后会尝试接管 Pod，并且重新创建 Pod，所以相比之下 `ImagePullBackOff` 的错误会更加容易发现，所以如果你也遇到了不知道是不是这样的原因的问题，你也可以试着看看是不是和镜像相关，看看路由表是不是也是有一样的问题。
+
 #### 为什么会冲突？
 
 如果你按照 Cilium 官方的指南直接用
@@ -259,6 +261,7 @@ sudo cilium install --version 1.14.2
 这样的命令在 Kubernetes 集群中安装，那 `cilium` 是默认使用的 [Cluster Scope (Default)](https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool/#ipam-crd-cluster-pool) 作为 IPAM 的模式来运行，而 [Cluster Scope (Default)](https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool/#ipam-crd-cluster-pool) 好巧不巧使用的默认的 CIDR 是 `10.0.0.0/8`[^3]，如果你学过 CIDR（没有学过也不要紧，可以看看[[IP 后面的斜杠是什么？]]），你可以看出来 `10.0.0.0/8` 意味着 `10.` 后面的数字都是可以被分配的，这也就意味着 `10.0.0.1` 也是 `cilium` 接管的流量的一部分了，所以会出现这样的问题。
 
 正确的做法是我们在安装的时候给参数或者在给 `cilium install` 使用的或者 `helm install` 使用的配置文件中配置一下 `ipam.operator.clusterPoolIPv4PodCIDRList` 和 `ipv4NativeRoutingCIDR` 这两个字段，配置的字面量与 Kubernetes 集群的配置相同即可。如果你想要删除 Cilium 重新部署，可以参考一下[[完全卸载使用 Helm 安装的 Cilium]] 这篇文档的指引。
+
 ### Pod 网络异常
 
 #### 我的集群配置
@@ -269,6 +272,7 @@ sudo cilium install --version 1.14.2
 2. 一个是我专门为构建 Kubernetes 集群所配置静态 IP `10.24.0.2`，使用的网段 CIDR 是 `10.24.0.0/16`
 
 这样的问题有以下几个病症体现。
+
 #### Hubble Relay 组件报错
 
 输出：
@@ -342,6 +346,7 @@ $ sudo cilium connectivity test
 ```
 
 :::
+
 #### `[to-entities-world]` 用例失败
 
 ::: details 输出
@@ -373,6 +378,7 @@ $ sudo cilium connectivity test
 ```
 
 :::
+
 #### `[to-cidr-external]` 用例失败
 
 ::: details 输出
@@ -402,6 +408,7 @@ $ sudo cilium connectivity test
 ```
 
 :::
+
 #### `[to-cidr-external-knp]` 用例失败
 
 ::: details 输出
@@ -480,6 +487,7 @@ Nodes:
       ICMP to stack:   OK, RTT=880.497µs
       HTTP to agent:   OK, RTT=1.102096ms
 ```
+
 #### 是什么造成的？
 
 上面的几个问题都体现在外部网络的访问，无论是基于 CIDR 的访问，还是域名访问，无论是有规则还是无规则都无法通过 `curl` 去请求成功，如果我们仔细观察这几个测试用例的话我们能发现测试目标都是 `one.one.one.one` 和 `1.1.1.1` ，是 Cloudflare 的 DNS，那这里可能会有几种情况：
@@ -506,10 +514,10 @@ ipam:
     clusterPoolIPv4PodCIDRList: '10.244.0.0/16'
 
 ipv4NativeRoutingCIDR: '10.244.0.0/16'
-enableIPv4Masquerade: false // [!code hl]
-enableIPv6Masquerade: false // [!code hl]
-autoDirectNodeRoutes: true // [!code hl]
-tunnel: disabled // [!code hl]
+enableIPv4Masquerade: false # [!code hl]
+enableIPv6Masquerade: false # [!code hl]
+autoDirectNodeRoutes: true # [!code hl]
+tunnel: disabled # [!code hl]
 ```
 
 可以看到高亮的这几个选项和我在上面提到的安装的选项是不一样的。

@@ -53,7 +53,7 @@ You may have to restart your shell or source your shell init files.
 Afterwards, you should start broot with br in order to use its full power.
 ```
 
-首次使用的时候会请求安装 `br` 函数来方便 `broot` 在交互式导航的时候能够来回导航并且 `cd` 到不同的目录下进行导航和操作，在看到 
+首次使用的时候会请求安装 `br` 函数来方便 `broot` 在交互式导航的时候能够来回导航并且 `cd` 到不同的目录下进行导航和操作，在看到
 
 > Can I install it now? [Y/n]
 
@@ -67,7 +67,7 @@ Afterwards, you should start broot with br in order to use its full power.
 4. 修改 `$HOME/.bash_profile` 新增一条 `br` 函数相关的引用
 
 ```shell
-source /Users/neko/.config/broot/launcher/bash/br // [!code ++]
+source /Users/neko/.config/broot/launcher/bash/br # [!code ++]
 ```
 
 ### 如果你使用 zsh
@@ -75,7 +75,7 @@ source /Users/neko/.config/broot/launcher/bash/br // [!code ++]
 1. 修改 `$HOME/.zshrc` 并新增一条 `br` 函数相关的引用
 
 ```shell
-source /Users/neko/.config/broot/launcher/bash/br // [!code ++]
+source /Users/neko/.config/broot/launcher/bash/br # [!code ++]
 ```
 
 ### 如果你使用 fish

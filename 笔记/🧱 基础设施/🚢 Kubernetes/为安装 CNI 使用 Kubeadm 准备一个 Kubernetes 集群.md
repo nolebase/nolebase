@@ -23,8 +23,8 @@ tags:
 | 主体         | 版本号 | 文档地址（如果有）                |
 | ------------ | ------ | --------------------------------- |
 | Debian       | 11     |                                   |
-| Kubernetes   | 1.28   | https://v1-28.docs.kubernetes.io/ |
-| Docker       | 24.0.2 | https://docs.docker.com/          |
+| Kubernetes   | 1.28   | <https://v1-28.docs.kubernetes.io/> |
+| Docker       | 24.0.2 | <https://docs.docker.com/>          |
 | containerd   | 1.7.6  |                                   |
 | Linux kernel | 5.10.0 |                                   |
 
@@ -32,6 +32,7 @@ tags:
 
 - [[重置 Kubernetes 集群]]
 - [[准备 Kubernetes 节点裸金属虚拟机]]
+
 ## 准备配置文件
 
 我们用配置文件的形式来安装和部署 Kubernetes 集群，首先我们产出一下 部署用的配置文件：
@@ -55,28 +56,28 @@ bootstrapTokens:
   - authentication
 localAPIEndpoint:
   # 这里填写控制平面节点的 IP
-  advertiseAddress: 10.24.0.2 // [!code hl]
+  advertiseAddress: 10.24.0.2 # [!code hl]
   bindPort: 6443
 nodeRegistration:
   # 记得确认一下是否是使用的 containerd 和 UNIX Socket 是否配置到了这个路径上
   criSocket: unix:///var/run/containerd/containerd.sock
   imagePullPolicy: IfNotPresent
   # 这里填写我们的节点 1 的名字
-  name: node1 // [!code hl]
+  name: node1 # [!code hl]
   taints: null
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
 apiServer:
-  timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 // [!code hl]
+  timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 # [!code hl]
   # 这里可以添加一下你期望在生成 Kubernetes API Server
   # 证书的时候额外支持的 SAN（Subject Alternative Names）
-  certSANs: // [!code hl]
-   - node01 // [!code hl]
-   - 10.24.0.2 // [!code hl]
-   - k8s.ihome.cat // [!code hl]
+  certSANs: # [!code hl]
+   - node01 # [!code hl]
+   - 10.24.0.2 # [!code hl]
+   - k8s.ihome.cat # [!code hl]
 certificatesDir: /etc/kubernetes/pki
-clusterName: homelab-kubernetes-1 # 可以改成自己期望的集群名字 // [!code hl]
+clusterName: homelab-kubernetes-1 # 可以改成自己期望的集群名字 # [!code hl]
 controllerManager: {}
 dns: {}
 etcd:
@@ -86,7 +87,7 @@ imageRepository: registry.k8s.io
 kubernetesVersion: 1.28.0
 networking:
   # 选择一个喜欢的 Pod 使用的 CIDR，之后安装 Cilium 的时候也会用到
-  podSubnet: 10.244.0.0/16 // [!code hl]
+  podSubnet: 10.244.0.0/16 # [!code hl]
   dnsDomain: cluster.local
   serviceSubnet: 10.96.0.0/12
 scheduler: {}
@@ -105,32 +106,32 @@ bootstrapTokens:
   - authentication
 localAPIEndpoint:
   # 这里填写控制平面节点的 IP
-  advertiseAddress: 1.2.3.4 // [!code --]
-  advertiseAddress: 10.24.0.2 // [!code ++]
+  advertiseAddress: 1.2.3.4 # [!code --]
+  advertiseAddress: 10.24.0.2 # [!code ++]
   bindPort: 6443
 nodeRegistration:
   # 记得确认一下是否是使用的 containerd 和 UNIX Socket 是否配置到了这个路径上
   criSocket: unix:///var/run/containerd/containerd.sock
   imagePullPolicy: IfNotPresent
   # 这里填写我们的节点 1 的名字
-  name: node // [!code --]
-  name: node1 // [!code ++]
+  name: node # [!code --]
+  name: node1 # [!code ++]
   taints: null
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: ClusterConfiguration
 apiServer:
-  timeoutForControlPlane: 4m0s # 这里我们可以稍微调大一些 // [!code --]
-  timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 // [!code ++]
+  timeoutForControlPlane: 4m0s # 这里我们可以稍微调大一些 # [!code --]
+  timeoutForControlPlane: 20m0s # 这里我们可以稍微调大一些 # [!code ++]
   # 这里可以添加一下你期望在生成 Kubernetes API Server
   # 证书的时候额外支持的 SAN（Subject Alternative Names）
-  certSANs: // [!code ++]
-   - node01 // [!code ++]
-   - 10.24.0.2 // [!code ++]
-   - k8s.ihome.cat // [!code ++]
+  certSANs: # [!code ++]
+   - node01 # [!code ++]
+   - 10.24.0.2 # [!code ++]
+   - k8s.ihome.cat # [!code ++]
 certificatesDir: /etc/kubernetes/pki
-clusterName: kubernetes // [!code --]
-clusterName: homelab-kubernetes-1 # 可以改成自己期望的集群名字 // [!code ++]
+clusterName: kubernetes # [!code --]
+clusterName: homelab-kubernetes-1 # 可以改成自己期望的集群名字 # [!code ++]
 controllerManager: {}
 dns: {}
 etcd:
@@ -140,7 +141,7 @@ imageRepository: registry.k8s.io
 kubernetesVersion: 1.28.0
 networking:
   # 选择一个喜欢的 Pod 使用的 CIDR，之后安装 Cilium 的时候也会用到
-  podSubnet: 10.244.0.0/16 // [!code ++]
+  podSubnet: 10.244.0.0/16 # [!code ++]
   dnsDomain: cluster.local
   serviceSubnet: 10.96.0.0/12
 scheduler: {}
@@ -221,12 +222,14 @@ kubeadm join 10.24.0.2:6443 --token <加入集群使用的 TOKEN> \
 ::: warning ⚠️ 注意
 这样的操作仅适用于部署和维护 Kubernetes 集群的第一个用户，或者 root 用户，对于其他用户而言，请参照 Kubernetes 文档中对于多用户和授权的描述来分配权限。
 :::
+
 ### 仅 root 用户使用或普通用户需要 sudoer 权限才能使用
 
 有两个选择：
 
 1. 复制为 `/root/.kube/config`
 2. 我们在 root 用户下配置 `.bash_profile` 或者 `.zshrc`
+
 #### 复制为 `/root/.kube/config`
 
 ```shell
@@ -234,6 +237,7 @@ mkdir -p /root/.kube
 sudo cp -i /etc/kubernetes/admin.conf /root/.kube/config
 sudo chown root:root /root/.kube/config
 ```
+
 #### 复用配置文件路径
 
 ::: code-group
@@ -291,6 +295,7 @@ sudo systemctl status kubelet
 ```
 
 观察 `kubelet` 的日志输出的话能够发现它会报错说 `cni plugin not initialized`。我们之后安装像是 Cilium 或者 Calico 这样的 CNI 插件之后就会恢复正常了。
+
 ### 查看 Pod 列表
 
 ::: code-group

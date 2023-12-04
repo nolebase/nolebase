@@ -140,8 +140,8 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-input_select: // [!code ++]
-media_player: // [!code ++]
+input_select: # [!code ++]
+media_player: # [!code ++]
 ```
 
 #### 编辑 `input_select` 配置
@@ -150,20 +150,20 @@ media_player: // [!code ++]
 
 ```yaml
 input_select:
-  electric_blanket_heat_level: // [!code ++]
-    name: '电热毯温度档位' // [!code ++]
-    options: // [!code ++]
-      - '1 档' // [!code ++]
-      - '2 档' // [!code ++]
-      - '3 档' // [!code ++]
-    icon: 'mdi:application' // [!code ++]
+  electric_blanket_heat_level: # [!code ++]
+    name: '电热毯温度档位' # [!code ++]
+    options: # [!code ++]
+      - '1 档' # [!code ++]
+      - '2 档' # [!code ++]
+      - '3 档' # [!code ++]
+    icon: 'mdi:application' # [!code ++]
 ```
 
 ##### 配置说明
 
 ```yaml
 input_select:
-  electric_blanket_heat_level: // [!code focus]
+  electric_blanket_heat_level: # [!code focus]
     name: '电热毯温度档位'
     options:
       - '1 档'
@@ -177,12 +177,12 @@ input_select:
 ```yaml
 input_select:
   electric_blanket_heat_level:
-    name: '电热毯温度档位' // [!code focus]
-    options: // [!code focus]
-      - '1 档' // [!code focus]
-      - '2 档' // [!code focus]
-      - '3 档' // [!code focus]
-    icon: 'mdi:application' // [!code focus]
+    name: '电热毯温度档位' # [!code focus]
+    options: # [!code focus]
+      - '1 档' # [!code focus]
+      - '2 档' # [!code focus]
+      - '3 档' # [!code focus]
+    icon: 'mdi:application' # [!code focus]
 ```
 
 `name` 是输入选择器的名称，`options` 是输入选择器的选项，`icon` 是输入选择器的图标。
@@ -206,18 +206,18 @@ input_select:
 
 ```yaml
 media_player:
-  - platform: universal // [!code ++]
-    unique_id: 'ihome_cat_electric_blanket' // [!code ++]
-    name: '电热毯' // [!code ++]
-    device_class: tv // [!code ++]
+  - platform: universal # [!code ++]
+    unique_id: 'ihome_cat_electric_blanket' # [!code ++]
+    name: '电热毯' # [!code ++]
+    device_class: tv # [!code ++]
 ```
 
 ```yaml
 media_player:
   - platform: universal
-    unique_id: 'ihome_cat_electric_blanket' // [!code focus]
+    unique_id: 'ihome_cat_electric_blanket' # [!code focus]
     name: '电热毯'
-    device_class: tv // [!code focus]
+    device_class: tv # [!code focus]
 ```
 
 注意这里的 `unique_id` 是可选的，如果你也要填写这个字段的话，需要保证在整个 Home Assistant 中的 `media_player` 下是唯一的。为了让 Homekit 将我们的「电视型电热毯」展示为一个正确的电视配件，我们需要将 [`device_class`](https://www.home-assistant.io/integrations/universal/#device_class) 设置为 `tv`。
@@ -230,10 +230,10 @@ media_player:
     unique_id: 'ihome_cat_electric_blanket'
     name: '电热毯'
     device_class: tv
-    attributes: // [!code ++]
-      state: switch.hddz_zndrt_d3d8_electric_blanket // [!code ++]
-      source: select.hddz_zndrt_d3d8_heat_level // [!code ++]
-      source_list: input_select.electric_blanket_heat_level|options // [!code ++]
+    attributes: # [!code ++]
+      state: switch.hddz_zndrt_d3d8_electric_blanket # [!code ++]
+      source: select.hddz_zndrt_d3d8_heat_level # [!code ++]
+      source_list: input_select.electric_blanket_heat_level|options # [!code ++]
 ```
 
 我们添加了 `attributes` 和其附属的属性字段。这里的 `attributes` 是一个字典。
@@ -251,7 +251,7 @@ media_player:
     attributes:
       state: switch.hddz_zndrt_d3d8_electric_blanket
       source: select.hddz_zndrt_d3d8_heat_level
-      source_list: input_select.electric_blanket_heat_level|options // [!code focus]
+      source_list: input_select.electric_blanket_heat_level|options # [!code focus]
 ```
 
 注意这里的 `attributes` 的 `source_list` 是 `input_select.electric_blanket_heat_level|options` 作为字段值，别把 `|options` 漏掉了，这是 Home Assistant 的模板语法，用来获取 `input_select` 实体的选项列表。
@@ -270,31 +270,31 @@ media_player:
       state: switch.hddz_zndrt_d3d8_electric_blanket
       source: select.hddz_zndrt_d3d8_heat_level
       source_list: input_select.electric_blanket_heat_level|options
-    commands:  // [!code ++]
-      turn_on:  // [!code ++]
-        service: switch.turn_on  // [!code ++]
-        data: {}  // [!code ++]
-        target:  // [!code ++]
-          entity_id: switch.hddz_zndrt_d3d8_electric_blanket  // [!code ++]
+    commands:  # [!code ++]
+      turn_on:  # [!code ++]
+        service: switch.turn_on  # [!code ++]
+        data: {}  # [!code ++]
+        target:  # [!code ++]
+          entity_id: switch.hddz_zndrt_d3d8_electric_blanket  # [!code ++]
 
-      turn_off:  // [!code ++]
-        service: switch.turn_off  // [!code ++]
-        data: {}  // [!code ++]
-        target:  // [!code ++]
-          entity_id: switch.hddz_zndrt_d3d8_electric_blanket  // [!code ++]
+      turn_off:  # [!code ++]
+        service: switch.turn_off  # [!code ++]
+        data: {}  # [!code ++]
+        target:  # [!code ++]
+          entity_id: switch.hddz_zndrt_d3d8_electric_blanket  # [!code ++]
 
-      select_source:  // [!code ++]
-        service: select.select_option  // [!code ++]
-        data:  // [!code ++]
-          option: >  // [!code ++]
-            {% set source_map = {  // [!code ++]
-                '1 档': 'Gear 1',  // [!code ++]
-                '2 档': 'Gear 2',  // [!code ++]
-                '3 档': 'Gear 3'  // [!code ++]
-            } %}  // [!code ++]
-            {{ source_map[source] if source in source_map else 'Gear 1' }}  // [!code ++]
-        target:  // [!code ++]
-          entity_id: select.hddz_zndrt_d3d8_heat_level  // [!code ++]
+      select_source:  # [!code ++]
+        service: select.select_option  # [!code ++]
+        data:  # [!code ++]
+          option: >  # [!code ++]
+            {% set source_map = {  # [!code ++]
+                '1 档': 'Gear 1',  # [!code ++]
+                '2 档': 'Gear 2',  # [!code ++]
+                '3 档': 'Gear 3'  # [!code ++]
+            } %}  # [!code ++]
+            {{ source_map[source] if source in source_map else 'Gear 1' }}  # [!code ++]
+        target:  # [!code ++]
+          entity_id: select.hddz_zndrt_d3d8_heat_level  # [!code ++]
 ```
 
 现在 `commands` 下新增了 `turn_on`、`turn_off` 和 `select_source` 三个命令，分别对应了开关电热毯的开和关的操作以及选择信号源的操作。
@@ -316,25 +316,25 @@ media_player:
 :::
 
 ```yaml
-    commands: // [!code focus]
-      turn_on: // [!code focus]
-        service: switch.turn_on // [!code focus]
-        data: {} // [!code focus]
-        target: // [!code focus]
-          entity_id: switch.hddz_zndrt_d3d8_electric_blanket // [!code focus]
+    commands: # [!code focus]
+      turn_on: # [!code focus]
+        service: switch.turn_on # [!code focus]
+        data: {} # [!code focus]
+        target: # [!code focus]
+          entity_id: switch.hddz_zndrt_d3d8_electric_blanket # [!code focus]
 
-      turn_off: // [!code focus]
-        service: switch.turn_off // [!code focus]
-        data: {} // [!code focus]
-        target: // [!code focus]
-          entity_id: switch.hddz_zndrt_d3d8_electric_blanket // [!code focus]
+      turn_off: # [!code focus]
+        service: switch.turn_off # [!code focus]
+        data: {} # [!code focus]
+        target: # [!code focus]
+          entity_id: switch.hddz_zndrt_d3d8_electric_blanket # [!code focus]
 ```
 
 开和关这两个命令的 `service` 都是 `switch.turn_on` 和 `switch.turn_off`，`target` 都是 `switch.hddz_zndrt_d3d8_electric_blanket`，由于是 `switch` 类型的实体，不需要 `data` 字段，所以此处 `data` 留空就好。
 
 ```yaml
       select_source:
-        service: select.select_option // [!code focus]
+        service: select.select_option # [!code focus]
         data:
           option: >
             {% set source_map = {
@@ -343,8 +343,8 @@ media_player:
                 '3 档': 'Gear 3'
             } %}
             {{ source_map[source] if source in source_map else 'Gear 1' }}
-        target: // [!code focus]
-          entity_id: select.hddz_zndrt_d3d8_heat_level // [!code focus]
+        target: # [!code focus]
+          entity_id: select.hddz_zndrt_d3d8_heat_level # [!code focus]
 ```
 
 最后一个属性！`select_source` 将会在我们选择该媒体播放器的信号源（信号源）时被调用，在这份例子中，我们为电热毯选择档位时，`select_source` 就会被调用。此处由于我们需要操作的目标对象（即最下方的 `target.entity_id` 指向的电热毯温度档位实体 `select.hddz_zndrt_d3d8_heat_level` 是一个 `select` 实体，所以我们需要调用 `select.*` 相关的服务），所以 `service` 为 `select.select_option`。
@@ -352,14 +352,14 @@ media_player:
 ```yaml
       select_source:
         service: select.select_option
-        data: // [!code focus]
-          option: > // [!code focus]
-            {% set source_map = { // [!code focus]
-                '1 档': 'Gear 1', // [!code focus]
-                '2 档': 'Gear 2', // [!code focus]
-                '3 档': 'Gear 3' // [!code focus]
-            } %} // [!code focus]
-            {{ source_map[source] if source in source_map else 'Gear 1' }} // [!code focus]
+        data: # [!code focus]
+          option: > # [!code focus]
+            {% set source_map = { # [!code focus]
+                '1 档': 'Gear 1', # [!code focus]
+                '2 档': 'Gear 2', # [!code focus]
+                '3 档': 'Gear 3' # [!code focus]
+            } %} # [!code focus]
+            {{ source_map[source] if source in source_map else 'Gear 1' }} # [!code focus]
         target:
           entity_id: select.hddz_zndrt_d3d8_heat_level
 ```

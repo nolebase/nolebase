@@ -30,23 +30,23 @@ alias getip='echo "国内 IPv4: $(chinaip)" && echo "海外 IPv4: $(globalip)"'
 # 获取海外 IP
 alias globalip="curl -s http://api.myip.la | grep -E -o '((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.?){4}'"
 # 获取海外 IP 的别名
-alias gip="globalip" // [!code ++]
+alias gip="globalip" # [!code ++]
 
 # 获取国内 IP
 alias chinaip="curl -s https://myip.ipip.net | grep -E -o '((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.?){4}'"
 # 获取国内 IP 的别名
-alias cip="chinaip" // [!code ++]
+alias cip="chinaip" # [!code ++]
 
 alias getip='echo "国内 IPv4: $(chinaip)" && echo "海外 IPv4: $(globalip)"'
 # 表示 all ip
-alias aip="getip" // [!code ++]
+alias aip="getip" # [!code ++]
 ```
 
 ## 用法
 
 ### 获取海外 IP
 
-```
+```shell
 $ globalip
 54.1.1.100
 ```
@@ -57,6 +57,7 @@ $ globalip
 $ gip
 54.1.1.100
 ```
+
 ### 获取国内 IP
 
 ```shell
@@ -68,6 +69,7 @@ $ chinaip
 $ cip
 222.1.1.30
 ```
+
 ### 获取全部 IP
 
 ```shell

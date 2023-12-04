@@ -55,13 +55,13 @@ proxies:
 
 proxy-groups:
 
-dns: // [!code ++]
-  use-hosts: true // [!code ++]
+dns: # [!code ++]
+  use-hosts: true # [!code ++]
 
-hosts: // [!code ++]
-  # --- 项目域名 ---- // [!code ++]
-  'service.test.com': '127.0.0.1' // [!code ++]
-  # ---------------- // [!code ++]
+hosts: # [!code ++]
+  # --- 项目域名 ---- # [!code ++]
+  'service.test.com': '127.0.0.1' # [!code ++]
+  # ---------------- # [!code ++]
 
 rules:
   - DOMAIN-SUFFIX,google.com,DIRECT

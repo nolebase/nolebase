@@ -38,13 +38,14 @@ tags:
 | 主体         | 版本号 | 文档地址（如果有）                |
 | ------------ | ------ | --------------------------------- |
 | Debian       | 11     |                                   |
-| Kubernetes   | 1.28   | https://v1-28.docs.kubernetes.io/ |
-| Docker       | 24.0.2 | https://docs.docker.com/          |
+| Kubernetes   | 1.28   | <https://v1-28.docs.kubernetes.io/> |
+| Docker       | 24.0.2 | <https://docs.docker.com/>          |
 | containerd   | 1.7.6  |                                   |
 | Linux kernel | 5.10.0 |                                   |
 | Calico       |        |                                   |
-| Cilium       | 1.14.2 | https://docs.cilium.io/en/v1.14/  |
-| helm         | v3.9.0 | https://helm.sh/docs/             |
+| Cilium       | 1.14.2 | <https://docs.cilium.io/en/v1.14/>  |
+| helm         | v3.9.0 | <https://helm.sh/docs/>             |
+
 ## 简单删除 Calico 之后安装 Cilium
 
 ### 安装 Cilium
@@ -461,6 +462,7 @@ default via 10.0.0.1 dev eth0
 > `10.0.0.0/8` 是默认的 Pod CIDR。如果您的节点网络位于同一范围内，您将失去与其他节点的连接。假定所有出口流量都针对给定节点上的 Pod，而不是其他节点。
 >
 > 您可以通过两种方式解决：
+>
 > - 显式将 `clusterPoolIPv4PodCIDRList` 设置为不冲突的 CIDR
 > - 为您的节点使用不同的 CIDR
 
@@ -614,6 +616,7 @@ Events:  <none>
 #### 卸载 Cilium
 
 那我们现在先根据[[完全卸载使用 Helm 安装的 Cilium]] 文档的指引完全删除 cilium 然后再试一次。
+
 #### 检查网络是否恢复
 
 清理之后我们再次检查网络联通性：
@@ -749,9 +752,9 @@ ipam:
     clusterPoolIPv4PodCIDRList: 10.244.0.0/16
 ipv4NativeRoutingCIDR: 10.244.0.0/16
 # 注意确认一下 Kubernetes API Server 的 IP 是否是这个
-k8sServiceHost: lb.kubesphere.local // [!code hl]
+k8sServiceHost: lb.kubesphere.local # [!code hl]
 # 注意确认一下 Kubernetes API Server 的端口是否是这个
-k8sServicePort: 6443 // [!code hl]
+k8sServicePort: 6443 # [!code hl]
 kubeProxyReplacement: strict
 operator:
   replicas: 1
@@ -768,6 +771,7 @@ tunnel: vxlan
 ::: tips 如果你选择使用 `kubeProxyReplacement` 参数替代 `kube-proxy`
 可以跟随[[完全卸载集群内的 `kube-proxy`]] 文档的指引备份和删除 `kube-proxy` 相关的配置和资源。
 :::
+
 #### 安装 Cilium
 
 如果你还没有添加 Cilium 的 Repo，可以加一下：
@@ -819,6 +823,7 @@ $ sudo cilium connectivity test
 
 ✅ All 42 tests (295 actions) successful, 13 tests skipped, 0 scenarios skipped.
 ```
+
 ## 参考资料
 
 - [k8s系列15-calico有损迁移至cilium - TinyChen's Studio - 互联网技术学习工作经验分享](https://tinychen.com/20230201-k8s-15-migrate-cni-from-calico-to-cilium/)
