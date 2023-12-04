@@ -41,7 +41,7 @@ sudo dpkg --configure -a
 
 这是一个很有意思的问题：
 
-![[Pasted image 20231201113549.png]]
+![](./assets/during-apt-upgrading-ssh-broken-pipe-and-no-tty-wrapper-what-to-do-screenshot-1.png)
 
 我之前在滚更新的时候离开了电脑，结果更新的途中弹窗提示并且 hold 住了整个更新，结果跑 SSH 连接去更新的设备和远端服务器的连接故障了，发生了 Broken Pipe，而且我还没有开 `tmux` 和 `screen` 去维持住 `tty`。
 
