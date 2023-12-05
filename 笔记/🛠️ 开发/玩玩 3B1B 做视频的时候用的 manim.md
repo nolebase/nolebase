@@ -193,7 +193,7 @@ media/videos/scene/480p15/CreateCircle.mp4
 
 它看起来是这样的：
 
-![](have-a-play-on-the-animation-engine-that-3b1b-uses-video-1.mp4)
+![](./assets/have-a-play-on-the-animation-engine-that-3b1b-uses-video-1.mp4)
 
 ## 渲染更高级的
 
