@@ -172,21 +172,21 @@ media/videos/scene/480p15/CreateCircle.mp4
 ❯ tree
 .
 ├── README.md
-├── media
-│   ├── images
-│   │   └── scene
-│   └── videos
-│       └── scene
-│           └── 480p15
-│               ├── CreateCircle.mp4 # [!code hl]
-│               └── partial_movie_files
-│                   └── CreateCircle
-│                       ├── 1185818338_1912650126_223132457.mp4
-│                       └── partial_movie_file_list.txt
+├── media # [!code ++]
+│   ├── images # [!code ++]
+│   │   └── scene # [!code ++]
+│   └── videos # [!code ++]
+│       └── scene # [!code ++]
+│           └── 480p15  # [!code ++]
+│               ├── CreateCircle.mp4 # [!code ++]
+│               └── partial_movie_files # [!code ++]
+│                   └── CreateCircle # [!code ++]
+│                       ├── 1185818338_1912650126_223132457.mp4 # [!code ++]
+│                       └── partial_movie_file_list.txt # [!code ++]
 ├── poetry.lock
 ├── project
-│   ├── __pycache__
-│   │   └── scene.cpython-311.pyc
+│   ├── __pycache__ # [!code ++]
+│   │   └── scene.cpython-311.pyc # [!code ++]
 │   └── scene.py
 └── pyproject.toml
 ```
@@ -318,12 +318,12 @@ Manim Community v0.18.0
 │   │   └── scene
 │   └── videos
 │       └── scene
-│           ├── 2160p60
-│           │   ├── CreateCircle.mp4
-│           │   └── partial_movie_files
-│           │       └── CreateCircle
-│           │           ├── 1457378895_1912650126_223132457.mp4
-│           │           └── partial_movie_file_list.txt
+│           ├── 2160p60 # [!code ++]
+│           │   ├── CreateCircle.mp4 # [!code ++]
+│           │   └── partial_movie_files # [!code ++]
+│           │       └── CreateCircle # [!code ++]
+│           │           ├── 1457378895_1912650126_223132457.mp4 # [!code ++]
+│           │           └── partial_movie_file_list.txt # [!code ++]
 │           └── 480p15
 │               ├── CreateCircle.mp4
 │               └── partial_movie_files
