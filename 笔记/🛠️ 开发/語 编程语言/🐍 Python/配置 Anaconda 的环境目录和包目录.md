@@ -18,8 +18,8 @@ conda info
 ```shell
 $ conda info
 
-     active environment : base
-    active env location : /opt/conda
+     active environment : base # [!code hl]
+    active env location : /opt/conda # [!code hl]
             shell level : 1
        user config file : /home/neko/.condarc
  populated config files : /opt/conda/.condarc
@@ -75,8 +75,8 @@ conda config --prepend envs_dirs $(pwd)/.conda/envs
 ```shell
 $ conda info
 
-     active environment : base
-    active env location : /opt/conda
+     active environment : base # [!code hl]
+    active env location : /opt/conda # [!code hl]
             shell level : 1
        user config file : /home/neko/.condarc
  populated config files : /opt/conda/.condarc
@@ -104,3 +104,54 @@ $ conda info
              netrc file : None
            offline mode : False
 ```
+
+当然你也可以通过直接修改
+
+```shell
+/home/neko/.condarc
+```
+
+或者
+
+```shell
+/opt/conda/.condarc
+```
+
+来达到同样的效果。
+
+修改之后不要着急安装依赖，这是因为现在我们的环境依然是 `base`（也就是 Anaconda 的默认环境），这个环境的包目录是 `/opt/conda`，这个时候如果强行开始安装依赖的话，会导致依赖被安装到 `/opt/conda` 目录中，而不是我们刚刚配置的目录中。
+
+所以我们需要先创建一个新的环境，然后再安装依赖：
+
+```shell
+conda create -n demo-1 python=3.8
+conda activate demo-1
+```
+
+然后再安装依赖：
+
+```shell
+pip install -r requirements.txt
+```
+
+如果创建环境的时候没有指定 `python` 的版本，那么默认会使用 `base` 环境中的 `python` 版本，这个时候依然会导致依赖被安装到 `/opt/conda` 目录中，而不是我们刚刚配置的目录中。你可以通过
+
+```shell
+which pip
+```
+
+来查看当前环境中的 `pip` 命令的路径，如果是 `/opt/conda/bin/pip` 的话，那么就是使用了 `base` 环境中的 `python` 版本。
+
+现在要来修复这个问题的话，就需要执行
+
+```shell
+conda install pip
+```
+
+来安装 `pip`，然后再执行
+
+```shell
+pip install -r requirements.txt
+```
+
+完成依赖的安装。
