@@ -18,7 +18,7 @@ hero:
       link: /笔记/index
     - theme: alt
       text: GitHub 上浏览
-      link: https://github.com/nolebase/notebook
+      link: https://github.com/nolebase/nolebase
 
 features:
   - title: 多样的主题和内容
