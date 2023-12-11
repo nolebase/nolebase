@@ -76,6 +76,8 @@ Host * # [!code hl]
 我觉得也许是我对 `rclone` 的理解不够深入，所以根据文档和交互式的 `rclone` 配置引导进行了调试和排查，我发现我的配置已经很简洁了，而且 `rclone` 也在官方文档中声明：
 
 > If you don't specify `pass`, `key_file`, or `key_pem` or `ask_password` then rclone will attempt to contact an ssh-agent. You can also specify `key_use_agent` to force the usage of an ssh-agent. In this case `key_file` or `key_pem` can also be specified to force the usage of a specific key in the ssh-agent.
+>
+> -- [SFTP](https://rclone.org/sftp/)
 
 这意味着我现在不指定 `pass`，`key_file`，`key_pem` 和 `ask_password` 的情况下，默认就会与 SSH Agent 通信并尝试完成密钥交互的流程。
 
@@ -119,11 +121,13 @@ ssh-add -l
 
 > If your SSH client offers the SSH server a seventh key, the server will refuse the connection and you'll see this error message in your SSH client:
 >
->```
+> ```shell
 > Too many authentication failures
->```
+> ```
 >
 > Server administrators _can_ increase the limit by setting `MaxAuthTries` in the [server's `/etc/ssh/sshd_config`](https://linux.die.net/man/5/sshd_config), but in many cases you can't (or don't want to) change this.
+>
+> -- [Advanced use cases | 1Password Developer](https://developer.1password.com/docs/ssh/agent/advanced)
 
 好方向，我之前还真不知道 `sshd` 可以这样配置，于是我去服务端修改了一下 `MaxAuthTries` 的数值：
 
@@ -132,7 +136,7 @@ ssh-add -l
 MaxAuthTries 20 # [!code ++]
 ```
 
-然后运行 
+然后运行
 
 ```shell
 sudo sshd -t
