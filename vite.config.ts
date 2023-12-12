@@ -43,6 +43,7 @@ export default defineConfig(async () => {
     ssr: {
       noExternal: [
         '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading',
         '@nolebase/vitepress-plugin-inline-link-preview',
       ],
     },
