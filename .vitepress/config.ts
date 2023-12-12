@@ -1,14 +1,13 @@
 import process from 'node:process'
-import { defineConfigWithTheme } from 'vitepress'
+import { defineConfig } from 'vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
-import type { Options } from '@nolebase/markdown-it-element-transform'
 import { ElementTransform } from '@nolebase/markdown-it-element-transform'
 import { sidebar } from './docsMetadata.json'
 import { githubRepoLink, siteDescription, siteName } from './meta'
 
-export default defineConfigWithTheme({
+export default defineConfig({
   lang: 'zh-CN',
   title: siteName,
   description: siteDescription,
@@ -67,13 +66,12 @@ export default defineConfigWithTheme({
     ['meta', { name: 'msapplication-TileColor', content: '#603cba' }],
   ],
   themeConfig: {
-    outline: 'deep',
+    outline: { label: '页面大纲', level: 'deep' },
+    lastUpdated: { text: '最后更新' },
+    darkModeSwitchLabel: '切换主题',
     editLink: {
       pattern: 'https://github.com/nolebase/nolebase/tree/main/:path',
       text: '编辑本页面',
-    },
-    localeLinks: {
-      text: '简体中文',
     },
     socialLinks: [{ icon: 'github', link: githubRepoLink }],
     footer: {
