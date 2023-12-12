@@ -415,7 +415,7 @@ VRM 格式中除去必要的模型的多边形、骨骼、材质贴图和贴图�
 1. 默认的情况下，VCam 会激活手臂和手指的追踪，但是我感觉在默认的算法的配置情况下，手臂和手指的追踪效果很差，经常会出现穿模和卡 Bug 的情况，感觉很多时候还不如不开，所以我会在「Tracking（追踪）」侧边栏选单的「Hand（手）」配置为「None（无）」
 2. 默认的情况下，VCam 将会使用麦克风的音频振幅大小来判断是否让模型人物的嘴巴张开，如果环境不够安静的话，很容易造成自己的人物模型一直处于一个张嘴的形态。我会选择在「Tracking（追踪）」侧边栏选单的「Lip-sync（嘴唇同步）」配置选项选择「Camera（摄像头）」，而非默认的「Microphone（麦克风）」
 
-![[live-streaming-as-a-vtuber-on-macos-screenshot-41 1.png]]
+![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-43.png)
 
 ## 延伸阅读
 
