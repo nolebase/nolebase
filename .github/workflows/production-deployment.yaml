@@ -57,10 +57,10 @@ jobs:
       - name: 构建
         run: pnpm docs:build
 
-      - name: 推送到 Netlify
+      - name: 安装 Netlify CLI
         run: pnpm install -g netlify-cli
 
-      - name:
+      - name: 推送到 Netlify
         timeout-minutes: 10
         run: netlify deploy --dir .vitepress/dist --prod
         env:
