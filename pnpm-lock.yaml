@@ -14,6 +14,9 @@ devDependencies:
   '@iconify-json/eos-icons':
     specifier: ^1.1.9
     version: 1.1.9
+  '@iconify-json/ic':
+    specifier: ^1.1.17
+    version: 1.1.17
   '@iconify-json/octicon':
     specifier: ^1.1.51
     version: 1.1.51
@@ -1272,6 +1275,12 @@ packages:
 
   /@iconify-json/eos-icons@1.1.9:
     resolution: {integrity: sha512-DV+pbjpqzioqwi2thLrkyu8ixl/6irzgRlWHJh3Nj3+/GAmHKQMLt0tnEFOylNkIOk+PJoYxb59e6dYKw88v4Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ic@1.1.17:
+    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

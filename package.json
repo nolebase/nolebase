@@ -16,6 +16,7 @@
     "@antfu/eslint-config": "^0.41.4",
     "@headlessui/vue": "^1.7.16",
     "@iconify-json/eos-icons": "^1.1.9",
+    "@iconify-json/ic": "^1.1.17",
     "@iconify-json/octicon": "^1.1.51",
     "@iconify-json/svg-spinners": "^1.1.2",
     "@netlify/functions": "^1.6.0",
