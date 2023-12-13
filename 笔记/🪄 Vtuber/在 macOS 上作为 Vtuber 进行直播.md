@@ -4,6 +4,8 @@
 
 整得我也想套皮直播。又因为我之前在 Booth.me 上是买过 3D 的 VRChat 的皮的，觉得这个事情似乎没有想象中这么复杂，于是我就去找了找现有的 macOS 直播 VTuber 的方案。
 
+很庆幸的是，我真的找到了一个 UI/UX 虽然有点小复杂，但是还算不错的方案，在这里分享给大家！
+
 ## 配置直播软件 OBS
 
 在 OBS 的官网 [Open Broadcaster Software | OBS (obsproject.com)](https://obsproject.com/) 就可以下载到 OBS 啦，网上有很多教程教过了这里就不赘述了。
@@ -22,17 +24,32 @@
 
 > 其他的软件我将会在之后的笔记中包含，如果阅读完之后觉得我选择的软件不够好的话，也可以把本文档收藏起来之后等过两天再来看看对于不同软件不同效果的介绍。
 
+### 操作概览
+
+1. 在 [VCam 的 GitHub 上的 Release 页面](https://github.com/vcamapp/app/releases) 上下载最新版本的 VCam
+2. 安装 VCam
+
+### 开始吧
+
 官方建议的下载地点在 [VCam 的 GitHub 上的 Release 页面](https://github.com/vcamapp/app/releases)上，所以在 Release 页面中寻找最新版本的 VCam 下载即可：
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-1.png)
 
 接下来可以执行正常的 Mac App 的安装步骤来进行安装。
 
+::: warning 如果安装的时候有个「<span class="i-ic:baseline-block" />」图标，或者如果开启之后报错
+
+这意味着下载到了与当前 macOS 版本不兼容的 VCam 版本。
+
+可以在 [VCam 的 GitHub 上的 Release 页面](https://github.com/vcamapp/app/releases) 上再往前找一个版本来下载，一直这样操作直到找到可以用的 VCam 版本就好了！
+
+:::
+
 ::: details 如何安装？
 
 没问题，教你。
 
-在上面的链接和页面上点击下载了拓展名为 `.dmg` 的文件之后，可以在浏览器的下载窗口中，或者 macOS 访达（Finder）的下载目录（Downloads）中找到这个由 `VCam` 开头，由 `.dmg` 结尾的文件，双击这个文件之后将会打开下面这样的窗口：
+在上面的链接和页面上点击下载了拓展名为 `.dmg` 的文件之后，可以在浏览器的下载窗口中，或者 macOS 的「访达（Finder）」的「下载目录（Downloads）」中找到这个由 `VCam` 开头，由 `.dmg` 结尾的文件，双击这个文件之后将会打开下面这样的窗口：
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-2.png)
 
@@ -75,6 +92,13 @@
 > 模型需要提前准备吗？
 
 不需要！我们先配置，然后之后会教如何通过 VRoid Studio 这样的软件自己捏人的！开启 VCam 之后的模型是开源的模型，也可以自己拿来直播玩玩看w
+
+### 操作概览
+
+1. 授予摄像头权限
+2. （可选）授予麦克风权限
+3. 授予安装虚拟摄像头驱动的权限
+4. 配置绿幕需要的绿色背景
 
 ### 授予权限
 
@@ -200,13 +224,13 @@ VCam 支持安装一个虚拟的摄像头驱动以方便作为一个「摄像头
 
 选中之后就会出现下面这样的三个滑块，分别对应了
 
-- Red 红色通道
-- Green 绿色通道
-- Blue 蓝色通道
+- <span rounded-full class="bg-[#FF0000] w-[0.8rem] h-[0.8rem]" inline-block /> Red 红色通道
+- <span rounded-full class="bg-[#00FF00] w-[0.8rem] h-[0.8rem]" inline-block /> Green 绿色通道
+- <span rounded-full class="bg-[#0000FF] w-[0.8rem] h-[0.8rem]" inline-block /> Blue 蓝色通道
 
 也就是物理上说的三基色，是像素点的基本构成单位。
 
-我们需要将滑块调整到和下图一样的位置，或者说把 Red（红色通道）和 Blue（蓝色通道）降至最低（也就是 0），然后把 Green（绿色通道）调整为最高（也就是 255）：
+我们需要将滑块调整到和下图一样的位置，或者说把 <span rounded-full class="bg-[#FF0000] w-[0.8rem] h-[0.8rem]" inline-block /> Red（红色通道）和 <span rounded-full class="bg-[#0000FF] w-[0.8rem] h-[0.8rem]" inline-block /> Blue（蓝色通道）降至最低（也就是 0），然后把 <span rounded-full class="bg-[#00FF00] w-[0.8rem] h-[0.8rem]" inline-block /> Green（绿色通道）调整为最高（也就是 255）：
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-14.png)
 
@@ -338,6 +362,8 @@ VRoid Studio 的界面其实和游戏里的捏人十分相像，顶部 Tab 栏�
 
 ::: details 想要猫耳朵？没问题！
 
+在顶部 Tab 栏中找到 Accessories（配件）这个 Tab，然后在左侧的选单中找到「Add Accessory（添加配件）」，然后在弹出的选单中找到「Cat Ears（猫耳朵）」，然后点击「Add（添加）」就可以添加猫耳朵了：
+
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-32.png)
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-33.png)
@@ -348,7 +374,7 @@ VRoid Studio 的界面其实和游戏里的捏人十分相像，顶部 Tab 栏�
 
 恭喜你创建好了自己的模型，这个时候我们来导出创建好的模型给 VCam 使用。
 
-在导出的时候，在右上角找到「分享」图标，然后选择「Export as VRM（导出为 VRM）」的选项来开始导出的向导：
+在导出的时候，在右上角找到「<span class="i-octicon:share-24"/>」图标，然后选择「Export as VRM（导出为 VRM）」的选项来开始导出的向导：
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-34.png)
 
@@ -380,11 +406,15 @@ VRM 格式中除去必要的模型的多边形、骨骼、材质贴图和贴图�
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-42.png)
 
-`VRM0.0` 选项下的字段
+<div w-full flex="~" items-center justify-center>
+  <p>VRM0.0 选项下的字段</p>
+</div>
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-36.png)
 
-`VRM1.0` 选项下的字段
+<div w-full flex="~" items-center justify-center>
+  <p>VRM1.0 选项下的字段</p>
+</div>
 
 :::
 
@@ -416,6 +446,37 @@ VRM 格式中除去必要的模型的多边形、骨骼、材质贴图和贴图�
 2. 默认的情况下，VCam 将会使用麦克风的音频振幅大小来判断是否让模型人物的嘴巴张开，如果环境不够安静的话，很容易造成自己的人物模型一直处于一个张嘴的形态。我会选择在「Tracking（追踪）」侧边栏选单的「Lip-sync（嘴唇同步）」配置选项选择「Camera（摄像头）」，而非默认的「Microphone（麦克风）」
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-43.png)
+
+## 额外的 [VRoid Studio](https://vroid.com/en/studio) 配件，衣服和外观
+
+> 想要额外的给 [VRoid Studio](https://vroid.com/en/studio) 建模出来的人物角色配装、更替衣物、添加更可爱的猫耳朵或者兽耳朵，甚至是外观？
+
+没问题的，可以的。
+
+如果你有尝试探索 [VRoid Studio](https://vroid.com/en/studio) 编辑器，你应该可以发现，很多地方是可以添加自己的 Preset 预设的。这里就要介绍到，其实在 VRChat 和 Vtuber 模型的生态里，人设、本体模型和外观，以及配件是可以分开创作、购买、下载和加载的。这也是为什么绝大多数的 Vtuber 能在特殊节日或者活动的时候换上特别的衣服或者打扮的根本原因。
+
+这意味着其实模型之外，我们还可以在
+
+1. [VRoid Studio](https://vroid.com/en/studio) 生态下的 [VRoid Hub](https://hub.vroid.com/en)
+2. [Booth](https://booth.pm/)（同样是 [Pixiv](https://www.pixiv.net/) 旗下的产品，现在应该是仅次于 VRChat Mod 最大的模型和配装售卖平台？）
+
+购买和下载到更多的配件。然后导入到 [VRoid Studio](https://vroid.com/en/studio) 进行使用。
+
+![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-45.png)
+
+<div w-full flex="~" items-center justify-center>
+  <p><a href="https://hub.vroid.com/en">VRoid Hub</a> 正在售卖的多种不同的服装</p>
+</div>
+
+![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-44.png)
+
+<div w-full flex="~" items-center justify-center>
+  <p><a href="https://booth.pm/">Booth</a> 里可见的从 VRChat 可以用的袜子、人物模型、Vtuber 直播软件，到直播用的背景和人设商品</p>
+</div>
+
+当然，大到人设、本体模型和外观，以及配件这样与人物模型强相关的物件，小到作为 Vtuber 的时候使用的背景、背景中的小道具，乃至是上舰和 Subscribe 之后的物品也都可以通过这两个平台购入或者下载然后集成到自己的直播间里面。
+
+当然如果你在 [Booth](https://booth.pm/) 上遇到了自己非常喜欢的创作者，你也完全可以像是在 [Pixiv](https://www.pixiv.net/) 里那样找他们约稿，约件！
 
 ## 延伸阅读
 
