@@ -44,7 +44,7 @@ brew install dotnet@8
 
 安装完成之后可以通过 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd data-keyboard-key="shift">Shift</kbd> + <kbd>P</kbd> 打开 VSCode 的命令面板然后输入
 
-```
+```txt
 Reload Window
 ```
 
@@ -52,11 +52,11 @@ Reload Window
 
 接下来，用 VSCode 打开包含有期望反编译的 `.dll` 文件的目录，在这个 `.dll` 文件上点击右键，然后点选「Decompile selected assembly」：
 
-![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-1.png){width=30%}
+![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-1.png)
 
 这个时候在侧边栏就能找到 ILSPY 的反编译结果和界面了：
 
-![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-4.png){width=30%}
+![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-4.png)
 
 ## 方案二：用 [AvaloniaILSpy](https://github.com/icsharpcode/AvaloniaILSpy)
 
@@ -78,7 +78,7 @@ Reload Window
 
 ::: details 遇到了「“ILSpy” 已损坏，无法打开，您应该将它移到废纸篓」的提示？
 
-![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-2.png){width=400px}
+![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-2.png)
 
 应该根据 [icsharpcode/AvaloniaILSpy: Avalonia-based .NET Decompiler (port of ILSpy)](https://github.com/icsharpcode/AvaloniaILSpy) 的文档，对 ILSpy 解除 macOS 系统保护限制：
 
@@ -90,9 +90,9 @@ xattr -rd com.apple.quarantine /Applications/ILSpy.app
 
 然后就能看到这样的界面了：
 
-![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-3.png){width=50%}
+![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-3.png)
 
-![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-5.png){width=50%}
+![](./assets/discompile-a-dll-that-dotnet-uses-on-macos-5.png)
 
 其他相关的反编译插件：
 
