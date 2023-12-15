@@ -1,6 +1,6 @@
-import { h } from 'vue'
-import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import { h } from 'vue'
 
 import type { Options as NolebaseEnhancedReadabilitiesOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import {
@@ -18,8 +18,10 @@ import {
   NolebaseHighlightTargetedHeading,
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading'
 
-import HomePage from './components/HomePage.vue'
+import AppContainer from './components/AppContainer.vue'
+
 import DocFooter from './components/DocFooter.vue'
+import HomePage from './components/HomePage.vue'
 import Share from './components/Share.vue'
 
 import BasicButton from './components/BasicButton.vue'
@@ -34,8 +36,8 @@ import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
-import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
+import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
 
 import 'uno.css'
 
@@ -82,6 +84,8 @@ const ExtendedTheme: Theme = {
 
     app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
+
+    app.component('AppContainer', AppContainer)
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {
