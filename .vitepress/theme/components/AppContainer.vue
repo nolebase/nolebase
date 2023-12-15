@@ -9,8 +9,8 @@ const props = defineProps<{
 
 <template>
   <div bg="zinc-100 dark:zinc-800" w-full flex rounded-xl p-4>
-    <div max-w-auto flex="~" justify-center>
-      <img :src="props.iconSrc" max-h-40 max-w-40>
+    <div flex="~" max-h-40 max-w-40 justify-center>
+      <slot name="image" />
     </div>
     <div flex="~ col" p-5>
       <div flex="~ col 1">

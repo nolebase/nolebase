@@ -63,6 +63,9 @@ Reload Window
 上面提到的例子，是使用 VSCode 作为界面 UI 去跑 ILSPY 完成反编译，而实际上 ILSPY 也是有自己的社区封装的 GUI 可以使用的，这在你不喜欢 VSCode 或者不想折腾 VSCode 插件的时候会很有用。
 
 <AppContainer :icon-src="ILSpy" href="https://github.com/icsharpcode/AvaloniaILSpy">
+  <template #image>
+    <img src="./assets/ILSpy.png" p-4 />
+  </template>
   <template #name>
     ILSpy
   </template>
