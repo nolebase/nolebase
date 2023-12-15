@@ -10,6 +10,15 @@
 
 在 OBS 的官网 [Open Broadcaster Software | OBS (obsproject.com)](https://obsproject.com/) 就可以下载到 OBS 啦，网上有很多教程教过了这里就不赘述了。
 
+<AppContainer icon-src="./assets/OBS.png" href="https://obsproject.com/">
+  <template #name>
+    OBS
+  </template>
+  <template #by>
+    OBS Project
+  </template>
+</AppContainer>
+
 安装完成之后在来源分栏中点击右键，然后点选「添加」，再点选「macOS 屏幕采集」就可以添加显示屏采集了：
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-15.png)
@@ -21,6 +30,15 @@
 ## 安装面捕和动捕软件 [VCam](https://vcamapp.com/en)
 
 我在这期间找到了非常多的 VTuber 软件，其中只有 [VCam](https://vcamapp.com/en)（它也是开源的，开源在 [vcamapp/app](https://github.com/vcamapp/app)）的 UI，兼容性，适配性和功能效果上让我比较满足。
+
+<AppContainer icon-src="./assets/VCam.png" href="https://vcamapp.com/en">
+  <template #name>
+    VCam
+  </template>
+  <template #by>
+    Tatsuya Tanaka
+  </template>
+</AppContainer>
 
 > 其他的软件我将会在之后的笔记中包含，如果阅读完之后觉得我选择的软件不够好的话，也可以把本文档收藏起来之后等过两天再来看看对于不同软件不同效果的介绍。
 
@@ -81,7 +99,14 @@
 
 没问题！它的图标是这样的，找找有没有类似的吧！
 
-![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-11.png)
+<AppContainer icon-src="./assets/VCam.png" href="https://vcamapp.com/en">
+  <template #name>
+    VCam
+  </template>
+  <template #by>
+    Tatsuya Tanaka
+  </template>
+</AppContainer>
 
 :::
 
@@ -224,9 +249,11 @@ VCam 支持安装一个虚拟的摄像头驱动以方便作为一个「摄像头
 
 选中之后就会出现下面这样的三个滑块，分别对应了
 
-- <span rounded-full class="bg-[#FF0000] w-[0.8rem] h-[0.8rem]" inline-block /> Red 红色通道
-- <span rounded-full class="bg-[#00FF00] w-[0.8rem] h-[0.8rem]" inline-block /> Green 绿色通道
-- <span rounded-full class="bg-[#0000FF] w-[0.8rem] h-[0.8rem]" inline-block /> Blue 蓝色通道
+<ul>
+  <li><span rounded-full class="bg-[#FF0000] w-[0.8rem] h-[0.8rem]" inline-block /> Red 红色通道</li>
+  <li><span rounded-full class="bg-[#00FF00] w-[0.8rem] h-[0.8rem]" inline-block /> Green 绿色通道</li>
+  <li><span rounded-full class="bg-[#0000FF] w-[0.8rem] h-[0.8rem]" inline-block /> Blue 蓝色通道</li>
+</ul>
 
 也就是物理上说的三基色，是像素点的基本构成单位。
 
@@ -311,6 +338,15 @@ VCam 支持安装一个虚拟的摄像头驱动以方便作为一个「摄像头
 ## 用 [VRoid Studio](https://vroid.com/en/studio) 创建属于自己的模型
 
 创建一个模型其实比想象中简单得多，其实 [Pixiv](https://www.pixiv.net/) 旗下有一个名为 [VRoid Studio](https://vroid.com/en/studio) 的 3D 二次元人物建模软件，借助这个软件我们可以像是游戏里捏脸一样通过 GUI 快速地创建自己的模型，然后输出成 VCam 这样的 Vtuber 模型交互和渲染程序支持的 VRM 格式的模型文件，最后让这些 Vtuber 程序串流渲染好的画面到 OBS 中就可以完成直播啦！
+
+<AppContainer icon-src="./assets/VRoidStudio.png" href="https://vroid.com/en/studio">
+  <template #name>
+    VRoid Studio
+  </template>
+  <template #by>
+    Pixiv
+  </template>
+</AppContainer>
 
 在 [VRoid Studio](https://vroid.com/en/studio) 的官网首页就可以直接点击下载下载到适用于 macOS 和 Apple Silicon 的 VRoid Studio 了，这里我们直接跳过这个步骤，讲解
 
