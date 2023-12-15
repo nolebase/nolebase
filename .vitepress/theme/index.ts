@@ -50,7 +50,6 @@ const ExtendedTheme: Theme = {
       'doc-top': () => [
         h(NolebaseHighlightTargetedHeading),
       ],
-      'home-features-after': () => h(HomePage),
       'doc-footer-before': () => h(DocFooter),
       'nav-bar-content-after': () => [
         h(NolebaseEnhancedReadabilitiesMenu),
