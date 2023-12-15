@@ -5,7 +5,7 @@ import type { ArticleTree } from '../../../scripts/types/metadata'
 import { sidebar } from '../../docsMetadata.json'
 
 const list = computed(() => {
-  const list: ArticleTree[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))] || []))
+  const list: ArticleTree[] = ([] as any).concat(...sidebar.map(series => [...series?.items.map(item => ({ ...item, category: series.text }))]))
   for (let i = 0; i < list.length; i++) {
     const items = list[i].items
     if (items)

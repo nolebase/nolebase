@@ -1,5 +1,11 @@
 # 在 macOS 上作为 Vtuber 进行直播
 
+<script setup>
+import OBS from './assets/OBS.png'
+import VCam from './assets/VCam.png'
+import VRoidStudio from './assets/VRoidStudio.png'
+</script>
+
 最近天天看 [Suzume](https://space.bilibili.com/6610851/) 和 [Neuro Sama](https://www.twitch.tv/vedal987)，已经彻底地被**耳濡目染**了啊！
 
 整得我也想套皮直播。又因为我之前在 Booth.me 上是买过 3D 的 VRChat 的皮的，觉得这个事情似乎没有想象中这么复杂，于是我就去找了找现有的 macOS 直播 VTuber 的方案。
@@ -10,7 +16,7 @@
 
 在 OBS 的官网 [Open Broadcaster Software | OBS (obsproject.com)](https://obsproject.com/) 就可以下载到 OBS 啦，网上有很多教程教过了这里就不赘述了。
 
-<AppContainer icon-src="./assets/OBS.png" href="https://obsproject.com/">
+<AppContainer :icon-src="OBS" href="https://obsproject.com/">
   <template #name>
     OBS
   </template>
@@ -31,7 +37,7 @@
 
 我在这期间找到了非常多的 VTuber 软件，其中只有 [VCam](https://vcamapp.com/en)（它也是开源的，开源在 [vcamapp/app](https://github.com/vcamapp/app)）的 UI，兼容性，适配性和功能效果上让我比较满足。
 
-<AppContainer icon-src="./assets/VCam.png" href="https://vcamapp.com/en">
+<AppContainer :icon-src="VCam" href="https://vcamapp.com/en">
   <template #name>
     VCam
   </template>
@@ -99,7 +105,7 @@
 
 没问题！它的图标是这样的，找找有没有类似的吧！
 
-<AppContainer icon-src="./assets/VCam.png" href="https://vcamapp.com/en">
+<AppContainer :icon-src="VCam" href="https://vcamapp.com/en">
   <template #name>
     VCam
   </template>
@@ -339,7 +345,7 @@ VCam 支持安装一个虚拟的摄像头驱动以方便作为一个「摄像头
 
 创建一个模型其实比想象中简单得多，其实 [Pixiv](https://www.pixiv.net/) 旗下有一个名为 [VRoid Studio](https://vroid.com/en/studio) 的 3D 二次元人物建模软件，借助这个软件我们可以像是游戏里捏脸一样通过 GUI 快速地创建自己的模型，然后输出成 VCam 这样的 Vtuber 模型交互和渲染程序支持的 VRM 格式的模型文件，最后让这些 Vtuber 程序串流渲染好的画面到 OBS 中就可以完成直播啦！
 
-<AppContainer icon-src="./assets/VRoidStudio.png" href="https://vroid.com/en/studio">
+<AppContainer :icon-src="VRoidStudio" href="https://vroid.com/en/studio">
   <template #name>
     VRoid Studio
   </template>

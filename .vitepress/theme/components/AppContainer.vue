@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { withBase } from 'vitepress'
+
 const props = defineProps<{
   iconSrc: string
   href: string
@@ -21,13 +23,14 @@ const props = defineProps<{
       </div>
       <a
         :href="props.href"
-        border="1 solid $vp-c-brand-1"
-        class="hover:bg-zinc-50 hover:no-underline!"
+        border="1 solid zinc-200 dark:zinc-900"
+        class="hover:no-underline!"
+        bg="zinc-50 dark:zinc-700 hover:zinc-100 dark:hover:zinc-800 active:zinc-200 dark:active:zinc-900"
         transition="all 200 ease"
-        mt-2 block w-fit flex items-center rounded-lg p-2 text-xs
+        mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
         target="_blank"
       >
-        View <span class="i-ic:outline-arrow-outward" />
+        <span class="i-ic:outline-arrow-outward" /> View
       </a>
     </div>
   </div>
