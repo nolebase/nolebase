@@ -16,7 +16,7 @@ tags:
 
 配置 `sshd` 的 `MaxAuthTries` 选项即可：
 
-```sshconfig
+```ssh-config
 # MaxAuthTries 6 # [!code --]
 MaxAuthTries 20 # [!code ++]
 ```
@@ -66,7 +66,7 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock # [!code hl]
 
 也会要求在 `.ssh/config` 中配置 `IdentityAgent` 字段来实现这部分的劫持行为：
 
-```sshconfig
+```ssh-config
 Host * # [!code hl]
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" # [!code hl]
 ```
@@ -131,7 +131,7 @@ ssh-add -l
 
 好方向，我之前还真不知道 `sshd` 可以这样配置，于是我去服务端修改了一下 `MaxAuthTries` 的数值：
 
-```sshconfig
+```ssh-config
 # MaxAuthTries 6 # [!code --]
 MaxAuthTries 20 # [!code ++]
 ```

@@ -259,14 +259,14 @@ VCam 支持安装一个虚拟的摄像头驱动以方便作为一个「摄像头
 选中之后就会出现下面这样的三个滑块，分别对应了
 
 <ul>
-  <li><span rounded-full class="bg-[#FF0000] w-[0.8rem] h-[0.8rem]" inline-block /> Red 红色通道</li>
-  <li><span rounded-full class="bg-[#00FF00] w-[0.8rem] h-[0.8rem]" inline-block /> Green 绿色通道</li>
-  <li><span rounded-full class="bg-[#0000FF] w-[0.8rem] h-[0.8rem]" inline-block /> Blue 蓝色通道</li>
+  <li><span class="rounded-full bg-[#FF0000] w-[0.8rem] h-[0.8rem] inline-block"></span> Red 红色通道</li>
+  <li><span class="rounded-full bg-[#00FF00] w-[0.8rem] h-[0.8rem] inline-block"></span> Green 绿色通道</li>
+  <li><span class="rounded-full bg-[#0000FF] w-[0.8rem] h-[0.8rem] inline-block "></span> Blue 蓝色通道</li>
 </ul>
 
 也就是物理上说的三基色，是像素点的基本构成单位。
 
-我们需要将滑块调整到和下图一样的位置，或者说把 <span rounded-full class="bg-[#FF0000] w-[0.8rem] h-[0.8rem]" inline-block /> Red（红色通道）和 <span rounded-full class="bg-[#0000FF] w-[0.8rem] h-[0.8rem]" inline-block /> Blue（蓝色通道）降至最低（也就是 0），然后把 <span rounded-full class="bg-[#00FF00] w-[0.8rem] h-[0.8rem]" inline-block /> Green（绿色通道）调整为最高（也就是 255）：
+我们需要将滑块调整到和下图一样的位置，或者说把 <span class="rounded-full bg-[#FF0000] w-[0.8rem] h-[0.8rem] inline-block"></span> Red（红色通道）和 <span class="rounded-full bg-[#0000FF] w-[0.8rem] h-[0.8rem] inline-block" /> Blue（蓝色通道）降至最低（也就是 0），然后把 <span class="rounded-full bg-[#00FF00] w-[0.8rem] h-[0.8rem] inline-block" /> Green（绿色通道）调整为最高（也就是 255）：
 
 ![](./assets/live-streaming-as-a-vtuber-on-macos-screenshot-14.png)
 
