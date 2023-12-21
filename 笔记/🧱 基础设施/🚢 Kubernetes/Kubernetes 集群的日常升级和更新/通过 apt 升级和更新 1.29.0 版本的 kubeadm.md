@@ -2,7 +2,6 @@
 tags:
   - Linux
   - 操作系统/Debian
-  - 操作系统/Debian/Debian-11
   - 操作系统/Unix
   - 运维/Kubernetes/K8s
   - 运维/Kubernetes
@@ -16,9 +15,10 @@ tags:
   - 运维/Cilium
   - 命令行/cilium
   - 软件/云原生/Cilium
+  - 操作系统/Debian/Debian-12
 ---
 
-# 通过 apt 升级和更新 `kubeadm`
+# 通过 apt 升级和更新 1.29.0 版本的 `kubeadm`
 
 ## 解除 Debian `apt` 依赖锚定（hold）
 
@@ -52,23 +52,14 @@ sudo apt-mark unhold kubeadm
 ## 明确目标版本并升级
 
 ```shell
-sudo apt search kubeadm
-```
-
-就像这样
-
-```shell
-$ sudo apt search kubeadm
-正在排序... 完成
-全文搜索... 完成
-kubeadm/未知 1.28.4-1.1 amd64 [可从该版本升级：1.28.2-1.1] # [!code hl]
-  Command-line utility for administering a Kubernetes cluster
+$ sudo apt-cache madison kubeadm
+   kubeadm | 1.29.0-1.1 | https://pkgs.k8s.io/core:/stable:/v1.29/deb  Packages
 ```
 
 接下来定向升级：
 
 ```shell
-sudo apt update && sudo apt install -y kubeadm='1.28.4-*'
+sudo apt update && sudo apt install -y kubeadm='1.29.0-*'
 ```
 
 升级完成之后确保 `kubeadm version` 的输出符合预期
@@ -81,7 +72,7 @@ sudo kubeadm version
 
 ```shell
 $ sudo kubeadm version
-kubeadm version: &version.Info{Major:"1", Minor:"28", GitVersion:"v1.28.4", GitCommit:"bae2c62678db2b5053817bc97181fcc2e8388103", GitTreeState:"clean", BuildDate:"2023-11-15T16:56:18Z", GoVersion:"go1.20.11", Compiler:"gc", Platform:"linux/amd64"}
+kubeadm version: &version.Info{Major:"1", Minor:"29", GitVersion:"v1.29.0", GitCommit:"3f7a50f38688eb332e2a1b013678c6435d539ae6", GitTreeState:"clean", BuildDate:"2023-12-13T08:50:10Z", GoVersion:"go1.21.5", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
 ## 还原 Debian `apt` 依赖锚定（hold）
@@ -96,4 +87,4 @@ sudo apt-mark hold kubeadm
 sudo apt-mark showhold | more
 ```
 
-接下来返回 [[1.28 升级和更新的操作步骤]]继续操作吧。
+接下来返回 [[1.28.4 升级和更新到 1.29.0 的操作步骤]]继续操作吧。

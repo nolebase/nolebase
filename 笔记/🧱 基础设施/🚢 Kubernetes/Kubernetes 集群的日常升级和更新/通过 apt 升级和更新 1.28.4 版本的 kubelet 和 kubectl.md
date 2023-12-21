@@ -18,7 +18,7 @@ tags:
   - 软件/云原生/Cilium
 ---
 
-# 通过 apt 升级和更新 1.28 版本的 `kubelet` 和 `kubectl`
+# 通过 apt 升级和更新 1.28.4 版本的 `kubelet` 和 `kubectl`
 
 ## 检查依赖状态
 
@@ -197,4 +197,4 @@ $ sudo systemctl status kubelet
 
 不慌，`kubelet` 能正常起来就行。
 
-接下来返回 [[1.28 升级和更新的操作步骤]]继续操作吧。
+接下来返回 [[1.28.2 升级和更新的操作步骤]]继续操作吧。
