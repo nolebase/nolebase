@@ -338,6 +338,8 @@ Manim Community v0.18.0
 └── pyproject.toml
 ```
 
-![](./assets/have-a-play-on-the-animation-engine-that-3b1b-uses-video-2.mp4)
+<video controls muted>
+  <source src="./assets/have-a-play-on-the-animation-engine-that-3b1b-uses-video-2.mp4" type="video/mp4">
+</video>
 
 锵锵，这样就可以了！清晰且丝滑。
