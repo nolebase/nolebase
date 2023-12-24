@@ -22,7 +22,7 @@
     "@netlify/functions": "^1.6.0",
     "@nolebase/markdown-it-bi-directional-links": "^1.3.2",
     "@nolebase/markdown-it-element-transform": "^1.1.0",
-    "@nolebase/vitepress-plugin-enhanced-readabilities": "^1.7.3",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^1.8.0",
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^1.4.0",
     "@nolebase/vitepress-plugin-inline-link-preview": "^1.5.1",
     "@types/body-parser": "^1.19.5",
