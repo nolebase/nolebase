@@ -18,6 +18,10 @@ import {
   NolebaseHighlightTargetedHeading,
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading'
 
+import {
+  NolebaseGitChangelogPlugin,
+} from '@nolebase/vitepress-plugin-git-changelog/client'
+
 import AppContainer from './components/AppContainer.vue'
 
 import DocFooter from './components/DocFooter.vue'
@@ -32,12 +36,12 @@ import TagItem from './components/TagItem.vue'
 import Tags from './components/Tags.vue'
 import TocList from './components/TocList.vue'
 
-import Changelog from './components/Changelog.vue'
 import Contributors from './components/Contributors.vue'
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
 import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 
 import 'uno.css'
 
@@ -82,7 +86,6 @@ const ExtendedTheme: Theme = {
     app.component('Tags', Tags)
     app.component('TocList', TocList)
 
-    app.component('Changelog', Changelog)
     app.component('Contributors', Contributors)
 
     app.component('AppContainer', AppContainer)
@@ -98,6 +101,7 @@ const ExtendedTheme: Theme = {
     } as NolebaseEnhancedReadabilitiesOptions)
 
     app.use(NolebaseInlineLinkPreviewPlugin)
+    app.use(NolebaseGitChangelogPlugin)
   },
 }
 

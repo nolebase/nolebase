@@ -12,7 +12,7 @@
     "jsx": "preserve",
     "skipLibCheck": true,
     "isolatedModules": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
@@ -27,6 +27,9 @@
     "**/*.ts",
     "**/*.d.ts",
     "**/*.tsx",
-    "**/*.vue"
+    "**/*.vue",
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.tsx",
+    ".vitepress/**/*.vue"
   ]
 }

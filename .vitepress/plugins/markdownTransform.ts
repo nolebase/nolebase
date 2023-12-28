@@ -26,21 +26,12 @@ export function MarkdownTransform(): Plugin {
 }
 
 export async function getFunctionMarkdown() {
-  // return {
-  //   footer: '',
-  // }
   const contributorsSection = `
 ## 贡献者
 
 <Contributors />
 `
-
-  const changelogSection = `
-## 变更记录
-
-<Changelog />
-`
-  const footer = `${contributorsSection}\n${changelogSection}\n`
+  const footer = `${contributorsSection}`
 
   return {
     footer,

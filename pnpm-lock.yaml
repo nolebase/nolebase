@@ -35,6 +35,9 @@ devDependencies:
   '@nolebase/vitepress-plugin-enhanced-readabilities':
     specifier: ^1.9.0
     version: 1.9.0(vitepress@1.0.0-rc.31)(vue@3.3.13)
+  '@nolebase/vitepress-plugin-git-changelog':
+    specifier: ^1.1.0
+    version: 1.1.0(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.21.0)(vitepress@1.0.0-rc.31)(vue@3.3.13)
   '@nolebase/vitepress-plugin-highlight-targeted-heading':
     specifier: ^1.5.0
     version: 1.5.0(vitepress@1.0.0-rc.31)(vue@3.3.13)
@@ -56,9 +59,9 @@ devDependencies:
   '@types/markdown-it':
     specifier: ^12.2.3
     version: 12.2.3
-  '@types/md5':
-    specifier: ^2.3.5
-    version: 2.3.5
+  '@types/markdown-it-footnote':
+    specifier: ^3.0.3
+    version: 3.0.3
   '@types/node-fetch':
     specifier: ^2.6.9
     version: 2.6.9
@@ -131,9 +134,6 @@ devDependencies:
   markdown-it-mathjax3:
     specifier: ^4.3.2
     version: 4.3.2
-  md5:
-    specifier: ^2.3.0
-    version: 2.3.0
   node-fetch:
     specifier: ^3.3.2
     version: 3.3.2
@@ -143,9 +143,6 @@ devDependencies:
   sharp:
     specifier: ^0.32.6
     version: 0.32.6
-  simple-git:
-    specifier: ^3.21.0
-    version: 3.21.0
   tsx:
     specifier: ^3.14.0
     version: 3.14.0
@@ -164,6 +161,9 @@ devDependencies:
   vite:
     specifier: ^5.0.10
     version: 5.0.10(less@4.2.0)
+  vite-plugin-inspect:
+    specifier: ^0.8.1
+    version: 0.8.1(vite@5.0.10)
   vitepress:
     specifier: 1.0.0-rc.31
     version: 1.0.0-rc.31(@algolia/client-search@4.22.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3)
@@ -1420,6 +1420,22 @@ packages:
       vue: 3.3.13(typescript@5.3.3)
     dev: true
 
+  /@nolebase/vitepress-plugin-git-changelog@1.1.0(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.21.0)(vitepress@1.0.0-rc.31)(vue@3.3.13):
+    resolution: {integrity: sha512-YmjYfvFoEUF1K6EoSBREtR8Ng4bq1yAMkb4Wb3wCIXxpO/jK1spXMxs0P5c5gTZ9mY8Wk/qdtWr7tuy7lQYpmA==}
+    peerDependencies:
+      dayjs: '>=1.11.0'
+      md5: '>=2.3.0'
+      simple-git: '>=3.21.0'
+      vitepress: '>=1.0.0-rc.32'
+      vue: '>=3.3.8'
+    dependencies:
+      dayjs: 1.11.10
+      md5: 2.3.0
+      simple-git: 3.21.0
+      vitepress: 1.0.0-rc.31(@algolia/client-search@4.22.0)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3)
+      vue: 3.3.13(typescript@5.3.3)
+    dev: true
+
   /@nolebase/vitepress-plugin-highlight-targeted-heading@1.5.0(vitepress@1.0.0-rc.31)(vue@3.3.13):
     resolution: {integrity: sha512-OnHLuwu//XBSDTgIlwWv2rvpNhBjc/89cTivAQ2Kr/SP+FJiSCLuYJnF/TGaqyrARajLDpqkwfC7sDJjcLo3LQ==}
     peerDependencies:
@@ -1644,6 +1660,12 @@ packages:
     resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
     dev: true
 
+  /@types/markdown-it-footnote@3.0.3:
+    resolution: {integrity: sha512-sMLBj0VcWo/4vi1J7jx3DNdup2w+14RwDMdQtcFJPabeDwt945ghc8sFBgsUfnEjcBOuKaELY22JwGb7KGmsVw==}
+    dependencies:
+      '@types/markdown-it': 12.2.3
+    dev: true
+
   /@types/markdown-it@12.2.3:
     resolution: {integrity: sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ==}
     dependencies:
@@ -1656,10 +1678,6 @@ packages:
     dependencies:
       '@types/linkify-it': 3.0.5
       '@types/mdurl': 1.0.5
-    dev: true
-
-  /@types/md5@2.3.5:
-    resolution: {integrity: sha512-/i42wjYNgE6wf0j2bcTX6kuowmdL/6PE4IVitMpm2eYKBUuYCprdcWVK+xEF0gcV6ufMCRhtxmReGfc6hIK7Jw==}
     dev: true
 
   /@types/mdast@3.0.15:
@@ -3059,6 +3077,10 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: true
+
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -3324,6 +3346,10 @@ packages:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
     dependencies:
       is-arrayish: 0.2.1
+    dev: true
+
+  /error-stack-parser-es@0.1.1:
+    resolution: {integrity: sha512-g/9rfnvnagiNf+DRMHEVGuGuIBlCIMDFoTA616HaP2l9PlCjGjVhD98PNbVSJvmK4TttqT5mV5tInMhoFgi+aA==}
     dev: true
 
   /esbuild@0.18.20:
@@ -6690,6 +6716,30 @@ packages:
       '@types/unist': 3.0.2
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
+    dev: true
+
+  /vite-plugin-inspect@0.8.1(vite@5.0.10):
+    resolution: {integrity: sha512-oPBPVGp6tBd5KdY/qY6lrbLXqrbHRG0hZLvEaJfiZ/GQfDB+szRuLHblQh1oi1Hhh8GeLit/50l4xfs2SA+TCA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@nuxt/kit': '*'
+      vite: ^3.1.0 || ^4.0.0 || ^5.0.0-0
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+    dependencies:
+      '@antfu/utils': 0.7.7
+      '@rollup/pluginutils': 5.1.0
+      debug: 4.3.4
+      error-stack-parser-es: 0.1.1
+      fs-extra: 11.2.0
+      open: 9.1.0
+      picocolors: 1.0.0
+      sirv: 2.0.4
+      vite: 5.0.10(less@4.2.0)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /vite@5.0.10(less@4.2.0):
