@@ -16,11 +16,10 @@ export default defineConfig(async () => {
   return {
     assetsInclude: ['**/*.mov'],
     optimizeDeps: {
+      // vitepress is aliased with replacement `join(DIST_CLIENT_PATH, '/index')`
+      // This needs to be excluded from optimization
       exclude: [
-        // vitepress is aliased with replacement `join(DIST_CLIENT_PATH, '/index')`
-        // This needs to be excluded from optimization
         'vitepress',
-        '@nolebase/vitepress-plugin-git-changelog/client',
       ],
     },
     plugins: [
@@ -55,7 +54,6 @@ export default defineConfig(async () => {
     ssr: {
       noExternal: [
         '@nolebase/vitepress-plugin-enhanced-readabilities',
-        '@nolebase/vitepress-plugin-git-changelog',
         '@nolebase/vitepress-plugin-highlight-targeted-heading',
         '@nolebase/vitepress-plugin-inline-link-preview',
       ],

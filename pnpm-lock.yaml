@@ -36,8 +36,8 @@ devDependencies:
     specifier: ^1.9.0
     version: 1.9.0(vitepress@1.0.0-rc.31)(vue@3.3.13)
   '@nolebase/vitepress-plugin-git-changelog':
-    specifier: ^1.0.3
-    version: 1.0.3(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.21.0)(vitepress@1.0.0-rc.31)(vue@3.3.13)
+    specifier: ^1.1.0
+    version: 1.1.0(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.21.0)(vitepress@1.0.0-rc.31)(vue@3.3.13)
   '@nolebase/vitepress-plugin-highlight-targeted-heading':
     specifier: ^1.5.0
     version: 1.5.0(vitepress@1.0.0-rc.31)(vue@3.3.13)
@@ -1420,8 +1420,8 @@ packages:
       vue: 3.3.13(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-git-changelog@1.0.3(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.21.0)(vitepress@1.0.0-rc.31)(vue@3.3.13):
-    resolution: {integrity: sha512-XIrpZcPx1gZUJ50p+5b3BrViUhaoOeXOHTYLvCOXLXyxcFpmSkRSa9NqfC16oENPi14jdeKkV/cZ/+PpJePD8w==}
+  /@nolebase/vitepress-plugin-git-changelog@1.1.0(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.21.0)(vitepress@1.0.0-rc.31)(vue@3.3.13):
+    resolution: {integrity: sha512-YmjYfvFoEUF1K6EoSBREtR8Ng4bq1yAMkb4Wb3wCIXxpO/jK1spXMxs0P5c5gTZ9mY8Wk/qdtWr7tuy7lQYpmA==}
     peerDependencies:
       dayjs: '>=1.11.0'
       md5: '>=2.3.0'
