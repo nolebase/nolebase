@@ -5,7 +5,6 @@ import { createHash } from 'node:crypto'
 import process from 'node:process'
 import fs from 'fs-extra'
 import fg from 'fast-glob'
-import Git from 'simple-git'
 import matter from 'gray-matter'
 import uniq from 'lodash/uniq'
 import TagsAlias from '../.vitepress/docsTagsAlias.json'
@@ -16,8 +15,6 @@ const target = '笔记/'
 
 export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 export const DIR_VITEPRESS = resolve(dirname(fileURLToPath(import.meta.url)), '../.vitepress')
-
-const git = Git(DIR_ROOT)
 
 /**
  * 列出所有的页面
@@ -63,7 +60,6 @@ async function addRouteItem(indexes: ArticleTree[], path: string, upgradeIndex =
     index: title,
     text: title,
     link: `/${path.slice(0, suffixIndex)}`,
-    lastUpdated: +await git.raw(['log', '-1', '--format=%at', path]) * 1000,
   }
   const linkItems = item.link.split('/')
   linkItems.shift()

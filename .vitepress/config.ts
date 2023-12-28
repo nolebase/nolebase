@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
+import type { Options as ElementTransformOptions } from '@nolebase/markdown-it-element-transform'
 import { ElementTransform } from '@nolebase/markdown-it-element-transform'
 import { sidebar } from './docsMetadata.json'
 import { githubRepoLink, siteDescription, siteName } from './meta'
@@ -11,7 +12,6 @@ export default defineConfig({
   lang: 'zh-CN',
   title: siteName,
   description: siteDescription,
-  lastUpdated: true,
   ignoreDeadLinks: true,
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
@@ -67,7 +67,6 @@ export default defineConfig({
   ],
   themeConfig: {
     outline: { label: '页面大纲', level: 'deep' },
-    lastUpdated: { text: '最后更新' },
     darkModeSwitchLabel: '切换主题',
     editLink: {
       pattern: 'https://github.com/nolebase/nolebase/tree/main/:path',
@@ -141,7 +140,7 @@ export default defineConfig({
                 break
             }
           },
-        }
+        } as ElementTransformOptions
       })())
     },
   },

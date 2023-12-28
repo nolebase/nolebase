@@ -1,16 +1,18 @@
 <script setup lang="ts">
 // @ts-expect-error virtual
-import changelog from '/virtual-changelog'
+import ChangelogData from 'virtual:nolebase-git-changelog'
 import { computed } from 'vue'
+import type { Changelog } from '@nolebase/vitepress-plugin-git-changelog/client'
+
 import { creators } from '../../creators'
-import type { CommitInfo, ContributorInfo } from '../../../scripts/types'
+import type { ContributorInfo } from '../../../scripts/types'
 import { useRawPath } from '../composables/route'
 import { useCommits } from '../composables/changelog'
 
 const rawPath = useRawPath()
 
-const allCommits = changelog as CommitInfo[]
-const commits = useCommits(allCommits, rawPath)
+const changelogData = ChangelogData as Changelog
+const commits = useCommits(changelogData.commits, rawPath)
 
 const contributors = computed<ContributorInfo[]>(() => {
   const map: Record<string, ContributorInfo> = {}

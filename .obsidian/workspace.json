@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9b2db669b4778960",
+        "id": "ef9fbc5e5d1b43a0",
         "type": "tabs",
         "children": [
           {
-            "id": "91f60946c812c67b",
+            "id": "9cc5afb381047be0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#笔记",
+                "query": "kbd",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 334.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -86,25 +86,15 @@
       {
         "id": "166ecf9eee3475b0",
         "type": "tabs",
-        "dimension": 21.78262846748522,
+        "dimension": 31.92019950124688,
         "children": [
-          {
-            "id": "475eb9b30293eb6b",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md"
-              }
-            }
-          },
           {
             "id": "d9c447a5c56d10b5",
             "type": "leaf",
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -127,7 +117,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 1.0555500594442462,
+                  "scale": 0.9501813006936926,
                   "close": true
                 }
               }
@@ -144,7 +134,17 @@
             }
           },
           {
-            "id": "8d1f5bc853febe22",
+            "id": "dedba0695c22f869",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md"
+              }
+            }
+          },
+          {
+            "id": "2ac176b8dbb5d7eb",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -152,12 +152,12 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "00f8f8ad2cb9f9b0",
         "type": "tabs",
-        "dimension": 78.21737153251478,
+        "dimension": 68.07980049875312,
         "children": [
           {
             "id": "ccb7652bb733a848",
@@ -165,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/📟 终端/软件/cloc 统计代码行数/如何统计当前目录下所有源代码的行数.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -204,70 +204,72 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 366.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-spaced-repetition:复习卡片": false,
-      "graph:查看关系图谱": false,
       "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
       "canvas:新建白板": false,
-      "command-palette:打开命令面板": false,
-      "templates:插入模板": false,
-      "random-note:开始漫游笔记": false,
       "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "random-note:开始漫游笔记": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian42-brat:BRAT": false
     }
   },
-  "active": "91f60946c812c67b",
+  "active": "9cc5afb381047be0",
   "lastOpenFiles": [
-    "vite.config.ts.timestamp-1700915426588-22909012028af.mjs",
+    "vite.config.ts.timestamp-1703748596039-fca2f1e6d59e4.mjs",
+    "vite.config.ts.timestamp-1703748546763-be6e0ec038f87.mjs",
+    "vite.config.ts.timestamp-1703748518793-72700cd6d7038.mjs",
+    "vite.config.ts.timestamp-1703748185313-f5400efee8281.mjs",
+    "vite.config.ts.timestamp-1703748081673-bce351ca418c.mjs",
+    "vite.config.ts.timestamp-1703748032373-2f3494e3cdb6f.mjs",
+    "vite.config.ts.timestamp-1703747995582-f49fcd3bf3a12.mjs",
+    "vite.config.ts.timestamp-1703747941477-48d5ebaececc9.mjs",
+    "vite.config.ts.timestamp-1703747818905-2ab7be875bd1e.mjs",
+    "vite.config.ts.timestamp-1703747777812-610eb44c04d3.mjs",
+    "vite.config.ts.timestamp-1703747743990-ba0f56c0ec3c7.mjs",
+    "笔记/🛠️ 开发/Vue Vapor Discussion.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubeadm.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubelet 和 kubectl.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubeadm.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.2 升级和更新的操作步骤.md",
+    "笔记/🤖 AI 人工智能/LLM 是如何工作的？.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/从 Debian 11 升级到 Debian 12.md",
+    "笔记/🛠️ 开发/Vite 部署.md",
+    "Pasted image 20231221111216.png",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-4.jpg",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-4_副本.jpg",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-5.png",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-6.png",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-3.jpg",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-3_副本.jpg",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-2.jpg",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-2_副本.jpg",
+    "笔记/🤖 AI 人工智能/assets/how-llm-works-1.jpg",
+    "笔记/🤖 AI 人工智能/GPT 能做什么？.md",
+    "笔记/🪄 Vtuber/在 macOS 上作为 Vtuber 进行直播.md",
+    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
+    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/于 Homekit 中使用媒体播放器组件控制带有选项的智能家居设备.md",
+    "🔌 知识库插件列表.md",
+    "README.md",
+    "index.md",
+    "笔记/🛠️ 开发/在 macOS 上反编译一个 .NET 用的 DLL 文件.md",
     "笔记/📦 收集箱/💾 软件/Noteable.io.md",
     "笔记/📦 收集箱/💾 软件/Observable.md",
-    "笔记/📦 收集箱/💾 软件/assets/observable-screenshot-1.png",
-    "笔记/📦 收集箱/💾 软件/assets/noteable-screenshot-2.png",
-    "笔记/🛠️ 开发/有意思的 Notebook SaaS.md",
-    "笔记/📦 收集箱/💾 软件/assets/noteable-screenshot-1.png",
-    "笔记/📦 收集箱/💾 软件/assets",
-    "笔记/📦 收集箱/💾 软件/assets/observable-screenshot-2.png",
-    "笔记/📦 收集箱/💾 软件/assets/noteable-screenshot-3.png",
-    "Pasted image 20231113161155.png",
-    "笔记/🛠️ 开发/🕸 网络/WireGuard VPN/WireGuard 服务端配置.md",
-    "笔记/🎬 项目/Nolebase.md",
-    "笔记/🛠️ 开发/前端动画库调研记录（2023）.md",
-    "笔记/🛠️ 开发/assets/animation-frameworks-for-frontend-3.png",
-    "笔记/🛠️ 开发/assets/animation-frameworks-for-frontend-2.png",
-    "笔记/🛠️ 开发/assets/animation-frameworks-for-frontend-1.png",
-    "笔记/📟 终端/软件/Git 版本控制/清理 Git 分支.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 的插件管理器 krew.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 插件之 kubecm 配置文件管理器.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
-    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/平均传感器.md",
-    "笔记/🧱 基础设施/🏠 物联网/🌳 Home Assistant/assets/Pasted image 20231022010149.png",
-    "笔记/🧱 基础设施/使用 Amazon S3 进行静态文件分发.md",
-    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
-    "笔记/🧩 开源贡献/Kubernetes/加入 Slack 社区.md",
-    "笔记/🧩 开源贡献/Kubernetes/assets",
-    "笔记/🧩 开源贡献/Kubernetes",
-    "笔记/🧩 开源贡献",
-    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/用 AutoGen 写一个 LLM 应用.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
-    "笔记/🤖 AI 人工智能/快速在本地运行一个 XAgent 尝鲜图形化和智能化的 Agent 智能体.md",
-    "笔记/🤖 AI 人工智能/学习网站.md",
-    "笔记/🛠️ 开发/🗂 数据库/向量数据库 Vector DB",
-    "笔记/🛠️ 开发/⛶ 边缘计算",
-    "node_modules/@vueuse",
-    "node_modules/@types",
-    "node_modules/@nolebase",
-    "node_modules/@netlify",
+    "笔记/🛠️ 开发/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
+    "笔记/🛠️ 开发/通过后端预签署的 Policy 在前端直接与 Amazon S3 交互并上传文件.md",
+    "笔记/🛠️ 开发/在集成和研读 Auth0 文档和最佳实践之后的想法.md",
     "未命名.canvas"
   ]
 }
