@@ -108,11 +108,17 @@ kubectl expose deployment grafana --name=grafana-nodeport --type=NodePort
 ## 直接原地修改 NodePort 服务的暴露端口号为配置文件中定义的任何一个端口
 
 ```shell
-kubectl patch service --name=<Deployment 名称>-nodeport --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":<同步上面 kind 配置文件中的端口号>}]'
+kubectl patch service <服务名称> --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":<同步上面 kind 配置文件中的端口号>}]'
+```
+
+以上面的 Deployment 为例子的话，我一般会给 Deployment 添加后缀 -nodeport 来区分暴露的 Service 类型，那这个时候其实是可以写成这样的：
+
+```shell
+kubectl patch service <Deployment 名称>-nodeport --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":<同步上面 kind 配置文件中的端口号>}]'
 ```
 
 比如如果是有一个 Grafana 的服务希望暴露并且映射为 `30001` 端口的话：
 
 ```shell
-kubectl patch service --name=grafana-nodeport --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":30001}]'
+kubectl patch service grafana-nodeport --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":30001}]'
 ```
