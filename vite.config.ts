@@ -5,8 +5,6 @@ import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
-import Inspect from 'vite-plugin-inspect'
-import { MarkdownTransform } from './.vitepress/plugins/markdownTransform'
 import { EasyTag } from './.vitepress/plugins/vitepress-plugin-docsmd-easytag/src'
 import { include } from './.vitepress/meta'
 
@@ -23,7 +21,6 @@ export default defineConfig(async () => {
       ],
     },
     plugins: [
-      Inspect(),
       EasyTag({
         rootDir: ROOT,
         includes: [...include],
@@ -43,7 +40,6 @@ export default defineConfig(async () => {
           join(ROOT, 'toc.md'),
         ],
       }),
-      MarkdownTransform(),
       Components({
         include: [/\.vue$/, /\.md$/],
         dirs: '.vitepress/theme/components',
