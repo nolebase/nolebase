@@ -2,7 +2,6 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 
-import type { Options as NolebaseEnhancedReadabilitiesOptions } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import {
   InjectionKey as NolebaseEnhancedReadabilitiesInjectionKey,
   LayoutMode as NolebaseEnhancedReadabilitiesLayoutMode,
@@ -19,9 +18,11 @@ import {
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading'
 
 import {
+  InjectionKey as NolebaseGitChangelogInjectionKey,
   NolebaseGitChangelogPlugin,
 } from '@nolebase/vitepress-plugin-git-changelog/client'
 
+import { creators } from '../creators'
 import AppContainer from './components/AppContainer.vue'
 
 import DocFooter from './components/DocFooter.vue'
@@ -35,8 +36,6 @@ import Tag from './components/Tag.vue'
 import TagItem from './components/TagItem.vue'
 import Tags from './components/Tags.vue'
 import TocList from './components/TocList.vue'
-
-import Contributors from './components/Contributors.vue'
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
@@ -86,8 +85,6 @@ const ExtendedTheme: Theme = {
     app.component('Tags', Tags)
     app.component('TocList', TocList)
 
-    app.component('Contributors', Contributors)
-
     app.component('AppContainer', AppContainer)
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
@@ -98,7 +95,11 @@ const ExtendedTheme: Theme = {
         defaultToggle: true,
         hoverBlockColor: 'rgb(240 197 52 / 7%)',
       },
-    } as NolebaseEnhancedReadabilitiesOptions)
+    })
+
+    app.provide(NolebaseGitChangelogInjectionKey, {
+      mapContributors: creators,
+    })
 
     app.use(NolebaseInlineLinkPreviewPlugin)
     app.use(NolebaseGitChangelogPlugin)
