@@ -35,6 +35,9 @@ export default defineConfig(async () => {
         getChangelogTitle: (): string => {
           return '文件历史'
         },
+        getContributorsTitle: (): string => {
+          return '贡献者'
+        },
         excludes: [
           join(ROOT, 'index.md'),
           join(ROOT, 'toc.md'),
