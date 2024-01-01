@@ -6,6 +6,9 @@
   "license": "ISC",
   "keywords": [],
   "scripts": {
+    "dev": "pnpm run docs:dev",
+    "build": "pnpm run docs:build",
+    "serve": "pnpm run docs:serve",
     "docs:dev": "pnpm run update && vitepress dev",
     "docs:build": "pnpm run update && vitepress build && tsx scripts/post-docs.ts",
     "docs:serve": "vitepress serve",
