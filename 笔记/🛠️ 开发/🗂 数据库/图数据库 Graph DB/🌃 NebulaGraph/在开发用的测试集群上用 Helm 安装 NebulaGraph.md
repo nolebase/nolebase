@@ -21,7 +21,7 @@ tags:
 
 - 有可用的容器环境（比如 Docker）
 - 安装 [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
-- 安装 [`kind`]([kind (k8s.io)](https://kind.sigs.k8s.io/))
+- 安装 [`kind`](https://kind.sigs.k8s.io/)
 - 安装 [`helm`](https://helm.sh/)
 
 ## 用 [`kind`](https://kind.sigs.k8s.io/) 创建一个测试用的 Kubernetes 集群
@@ -418,7 +418,7 @@ nebula-studio-service      ClusterIP   10.96.122.0     <none>        7001/TCP   
 它会生成这样的 nSQL 语句：
 
 ```SQL
-CREATE SPACE `test_space` (partition_num = 10, vid_type = INT64) 
+CREATE SPACE `test_space` (partition_num = 10, vid_type = INT64)
 ```
 
 创建完成之后应该是这样的：
