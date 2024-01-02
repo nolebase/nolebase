@@ -1,6 +1,6 @@
 <!-- 目录 -->
 <script lang="ts" setup>
-import { computed, reactive } from 'vue'
+import { computed } from 'vue'
 import type { ArticleTree } from '../../../scripts/types/metadata'
 import { sidebar } from '../../docsMetadata.json'
 
