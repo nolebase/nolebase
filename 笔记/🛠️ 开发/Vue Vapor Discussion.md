@@ -11,6 +11,61 @@
 6. 如何混用 Vapor Component 和 vDom Component？
 7. 关于其它未实现功能的讨论
 
+
+<!-- ## 讨论总结
+
+### 将 onEffectCleanup 直接集成到 reactivity package 中
+
+问题：onEffectCleanup 调用时机受到 flush 影响，而 flush 是通过 scheduler.ts 实现的，它在 reactivity 外部进行管理，将 onEffectCleanup 移入 reactivity 后难以实现调用时机控制
+
+### Render Watch / Render Effect：
+
+这里有一个问题，我们除了 watchEffect 的 render 版本之外，应该还需要 watch 的 render 版本，例如 v-if 场景
+
+### Component 是否需要将 render 和挂载分离，现在 Ubugeeei 的设计是不分离的
+
+昨天和智子讨论的是需要分离的
+
+### 如何混用 Vapor Component 和 vDom Component？
+
+其中一部分问题与 scheduler 有关
+
+### beforeUpdate 和 updated 生命周期
+
+与实现 renderEffect 有关
+
+### 拆任务，我计划的 PR：
+1. 添加 render watchEffect 和 render watch （api 函数名字可能要定一下）
+2. onEffectCleanup 集成
+3. beforeUpdate 和 updated 生命周期钩子实现（对 render watch 相关代码进行拓展和完善
+... -->
+
+## EffectID
+
+如果把 v-if 这类对 EffectID 有需求的场景做成类似这样的 runtime code，好像就不需要 effect id 了呢
+
+```typescript
+const t0 = template("<div></div>")
+
+// ...
+
+renderWatch(() => /* vIfExpression */, (bool) => {
+  if (bool) {
+    const scope = new EffectScope()
+    onEffectCleanup(scope.stop.bind(scope))
+    scope.run(() => {
+      const t1 = template("<div></div>")
+
+      // ...
+
+      renderEffect(() => {
+        setText(n1, undefined, bar.value)
+      })
+    })
+  }
+})
+```
+
 ## runtime-vapor 和 runtime-core 代码复用
 主要涉及 `scheduler.ts` 文件，这个文件负责调度 effect 的 flush，也就是 `sync`/`pre`/`post` 这些，因为考虑到之后需要支持  Vapor Component 和 vDom Component？的混用问题，现在的 vapor 和 core 各有一个 scheduler.ts 文件的形式是有问题的。
 
