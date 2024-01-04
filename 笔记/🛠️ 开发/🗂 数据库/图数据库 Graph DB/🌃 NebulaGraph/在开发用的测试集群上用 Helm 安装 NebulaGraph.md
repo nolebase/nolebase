@@ -44,12 +44,6 @@ nodes:
   - containerPort: 30102 # [!code highlight]
     hostPort: 30102 # [!code highlight]
     protocol: TCP
-  - containerPort: 30103
-    hostPort: 30103
-    protocol: TCP
-  - containerPort: 30104
-    hostPort: 30104
-    protocol: TCP
 ```
 
 用 `kind` 根据配置文件创建

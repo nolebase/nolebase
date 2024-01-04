@@ -71,3 +71,7 @@ rules:
   - GEOIP,CN,DIRECT
   - MATCH,DIRECT
 ```
+
+## 延伸阅读
+
+[clash for windows 的 rule 模式没法连接公司内网怎么破 - V2EX](https://www.v2ex.com/t/865599)
