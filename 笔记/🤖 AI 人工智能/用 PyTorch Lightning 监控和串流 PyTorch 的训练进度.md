@@ -1,3 +1,22 @@
+---
+tags:
+  - AI
+  - 开发/Kubernetes
+  - 开发/Kubernetes/工具
+  - 开发/云原生/Kubernetes
+  - 开发/Python/Notebook
+  - 开发/Python/PyTorch
+  - 开发/Python/PyTorchLightning
+  - AI/PyTorch
+  - AI/训练
+  - AI/Tensorflow
+  - AI/TensorBoard
+  - 开发/Python/TensorBoard
+  - 开发/Python/HuggingFace
+  - AI/Trainer
+  - AI/HuggingFace
+  - AI/数据集/MNIST
+---
 # 用 PyTorch Lightning 监控和串流 PyTorch 的训练进度
 
 这里以 PyTorch Lightning 为例子，跑 pytorch/examples 里面的 MNIST 这样的通用训练为例。
