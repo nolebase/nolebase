@@ -2,19 +2,21 @@
 
 这里以 PyTorch Lightning 为例子，跑 pytorch/examples 里面的 MNIST 这样的通用训练为例。
 
-## 克隆 [pytorch/examples](https://github.com/pytorch/examples)
+## 环境准备
+
+### 克隆 [pytorch/examples](https://github.com/pytorch/examples)
 
 ```shell
 git clone https://github.com/pytorch/examples
 ```
 
-## 构建环境
+### 构建环境
 
 ```shell
 conda create -n demo-1 python=3.10
 ```
 
-## 安装依赖
+### 安装依赖
 
 ```shell
 pip install lightning torch torchvision
@@ -87,7 +89,7 @@ yarl==1.9.4
 
 :::
 
-## 修改代码
+### 修改代码
 
 把 `examples/mnist/main.py` 里面的代码修改成使用 PyTorch Lightning 的 Trainer 的代码来跑。
 
@@ -366,7 +368,7 @@ if __name__ == '__main__':
 
 :::
 
-## 运行
+## 开始训练
 
 用
 
