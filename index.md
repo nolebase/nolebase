@@ -7,7 +7,7 @@ titleTemplate: 视界 | 心怀好奇，睁大眼睛，探索一切未知
 
 hero:
   name: g~Nj$3J2^
-  text: 记录回忆，知识和畅想的地方
+  text: 心怀好奇，睁大眼睛，探索一切未知
   tagline: 一个基于 MarkDown 和 Obsidian 的双链信息中心。让每个想法如阳光般闪耀。
   image:
     src: /logo.svg
