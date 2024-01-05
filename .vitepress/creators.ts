@@ -1,4 +1,4 @@
-const creatorNames = ['nekomeowww', 'LittleSound']
+const creatorNames = ['nekomeowww', 'LittleSound', 'olivla']
 
 export interface UserAvatar {
   name: string
@@ -33,6 +33,17 @@ export const users = creatorNames.reduce((acc, name) => {
 }, [] as UserAvatar[])
 
 const creators: Creators[] = [
+  {
+    name: '超级小镇',
+    avatar: creatorAvatars.olivla,
+    title: 'Vision Surf 作者',
+    desc: '产品顾问、开源开发者，专注于用户交互体验、产品管理、前端',
+    links: [
+      { type: 'github', icon: 'github', link: 'https://github.com/olivla' },
+    ],
+    nameAliases: ['刘俊', 'olivla', 'vurcy'],
+    emailAliases: ['neko@ayaka.moe'],
+  },
   {
     name: '絢香猫',
     avatar: creatorAvatars.nekomeowww,
