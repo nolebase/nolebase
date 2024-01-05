@@ -2,13 +2,13 @@
 layout: home
 sidebar: false
 
-title: Nólëbase
-titleTemplate: 记录回忆，知识和畅想的地方
+title: Vision
+titleTemplate: 视界 | 心怀好奇，睁大眼睛，探索一切未知
 
 hero:
   name: g~Nj$3J2^
   text: 记录回忆，知识和畅想的地方
-  tagline: 以 Nólëbase 为名，读作 nole-base，取自意为「知识」的昆雅语 nólë 和意为「基础」的英文 base，即「知识库」
+  tagline: 一个基于 MarkDown 和 Obsidian 的双链信息中心。让每个想法如阳光般闪耀。
   image:
     src: /logo.svg
     alt: Vitest
