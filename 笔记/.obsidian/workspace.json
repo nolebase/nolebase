@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "7ed82e9bc7ec8f84",
+    "type": "split",
+    "children": [
+      {
+        "id": "9497a0d9a76f3f0e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "03ea5645443fd0f2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f594e123b8b7462e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6239530c3f9b78c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7c8e1024a445fbe",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime"
+              }
+            }
+          },
+          {
+            "id": "a8b20a5aefeca9e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5fb374a0e03e5882",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 231.5
+  },
+  "right": {
+    "id": "11ea0716b6d091fb",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa9cbd2bdc8266d5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddb11c93eeb35950",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "你好 Obsidian.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d964944b60d0956a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "你好 Obsidian.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "05d1ab5b72a880d7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7c725102156216c7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "你好 Obsidian.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "f7c8e1024a445fbe",
+  "lastOpenFiles": [
+    "生活",
+    "你好 Obsidian.md",
+    "产品与设计/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
+    "札记",
+    "泛微/模板编辑器.md",
+    "产品与设计",
+    "泛微/应用包上传云商店.md",
+    "泛微/编辑器动作流的配置.md",
+    "泛微/条款库.md",
+    "泛微/范文库.md",
+    "泛微",
+    "mmmm.md"
+  ]
+}
