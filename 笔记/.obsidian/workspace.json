@@ -11,8 +11,12 @@
             "id": "03ea5645443fd0f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "你好 Obsidian.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "你好 Obsidian.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "你好 Obsidian.md"
+                "file": "index.md"
               }
             }
           }
@@ -142,14 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f7c8e1024a445fbe",
+  "active": "03ea5645443fd0f2",
   "lastOpenFiles": [
-    "生活",
-    "你好 Obsidian.md",
-    "产品与设计/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
-    "札记",
+    "Work Life Balance/index.md",
+    "泛微/账号.md",
     "泛微/模板编辑器.md",
-    "产品与设计",
+    "index.md",
+    "札记",
+    "你好 Obsidian.md",
+    "产品/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
+    "Work Life Balance",
+    "产品",
     "泛微/应用包上传云商店.md",
     "泛微/编辑器动作流的配置.md",
     "泛微/条款库.md",

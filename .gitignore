@@ -8,10 +8,10 @@
 
 # Obsidian
 
-**/.obsidian/*
-!**/.obsidian/workspace*
-!**/.obsidian/graph*
-!**/.obsidian/snippets/
+# **/.obsidian/*
+# **/.obsidian/workspace*
+# **/.obsidian/graph*
+# **/.obsidian/snippets/
 
 # Temporary files
 
@@ -46,3 +46,6 @@ components.d.ts
 # Logs
 
 *.log
+
+# 涉及账号密码
+**/账号.md
