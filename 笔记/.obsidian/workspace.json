@@ -11,8 +11,12 @@
             "id": "90fc7f939c30d2f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "产品/index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "产品/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "产品/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "产品/index.md"
+              }
             }
           }
         ]
@@ -140,6 +148,8 @@
   },
   "active": "90fc7f939c30d2f2",
   "lastOpenFiles": [
+    "泛微/数据标准.md",
+    "产品/index.md",
     "Work Life Balance/下班回家应该怎么做？.md",
     "Work Life Balance/index.md",
     "index.md",
