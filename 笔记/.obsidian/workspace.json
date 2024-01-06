@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9497a0d9a76f3f0e",
+        "id": "4ea49ee2c683e982",
         "type": "tabs",
         "children": [
           {
-            "id": "03ea5645443fd0f2",
+            "id": "90fc7f939c30d2f2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "index.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,12 +138,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "03ea5645443fd0f2",
+  "active": "90fc7f939c30d2f2",
   "lastOpenFiles": [
+    "Work Life Balance/下班回家应该怎么做？.md",
     "Work Life Balance/index.md",
+    "index.md",
     "泛微/账号.md",
     "泛微/模板编辑器.md",
-    "index.md",
     "札记",
     "你好 Obsidian.md",
     "产品/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
