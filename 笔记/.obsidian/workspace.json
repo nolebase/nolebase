@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5,
-    "collapsed": true
+    "width": 257.5
   },
   "right": {
     "id": "11ea0716b6d091fb",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md"
+                "file": "index.md"
               }
             }
           }
@@ -147,10 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f7c8e1024a445fbe",
+  "active": "f877ad48322e6d79",
   "lastOpenFiles": [
-    "Pasted image 20240106225146.png",
     "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+    "Pasted image 20240106225146.png",
     "色调.md",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",

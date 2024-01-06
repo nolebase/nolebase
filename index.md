@@ -2,8 +2,8 @@
 layout: home
 sidebar: false
 
-title: Vision
-titleTemplate: 视界 | 心怀好奇，睁大眼睛，探索一切未知
+title: Mind Solar
+titleTemplate: 心晖 | 心怀好奇，睁大眼睛，探索一切未知
 
 hero:
   name: g~Nj$3J2^
