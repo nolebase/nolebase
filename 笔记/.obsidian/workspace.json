@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "141093fb58700e5b",
+        "id": "35f96ff5f1407da0",
         "type": "tabs",
         "children": [
           {
-            "id": "f0e6bd71bab88995",
+            "id": "f877ad48322e6d79",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.5
+    "width": 257.5,
+    "collapsed": true
   },
   "right": {
     "id": "11ea0716b6d091fb",
@@ -81,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🎨 UI 用户界面设计/index.md",
+                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🎨 UI 用户界面设计/index.md",
+                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🎨 UI 用户界面设计/index.md"
+                "file": "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md"
               }
             }
           }
@@ -144,32 +149,47 @@
   },
   "active": "f7c8e1024a445fbe",
   "lastOpenFiles": [
-    "📝 Memo 札记/index.md",
+    "Pasted image 20240106225146.png",
+    "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+    "色调.md",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-33-39.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-26-02.png",
+    "🎨 UI 用户界面设计/UI 重构/in.md",
+    "🎨 UI 用户界面设计/UI 重构/index.md",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-56-38.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-54-41.png",
+    "Pasted image 20240106225432.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-53-18.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-52-19.png",
+    "🎨 UI 用户界面设计/UI 重构/assets",
+    "🎨 UI 用户界面设计/UI 重构/新建文件夹",
+    "🎨 UI 用户界面设计/UI 重构/9. Leveling Up",
+    "🎨 UI 用户界面设计/UI 重构/8. Finishing Touches",
+    "🎨 UI 用户界面设计/UI 重构/7. Working with Images",
+    "🎨 UI 用户界面设计/UI 重构/6. Creating Depth",
+    "🎨 UI 用户界面设计/UI 重构/5. Working with Color",
+    "🎨 UI 用户界面设计/UI 重构/4. Designing Text",
+    "🎨 UI 用户界面设计/UI 重构/3. Layout and Spacing",
+    "🎨 UI 用户界面设计/UI 重构/Hierarchy is Everything/Untitled",
     "🎨 UI 用户界面设计/index.md",
+    "📝 Memo 札记/index.md",
     "🤔 UX 用户体验设计/index.md",
     "index.md",
-    "音乐",
-    "心愿单",
-    "Fin-财务管理",
     "💼 Work 泛微/index.md",
-    "🎨 UI 用户界面设计",
-    "🤔 UX 用户体验设计",
     "📦 PM 产品管理/index.md",
     "💼 Work 泛微/数据标准.md",
     "🌳 Work Life Balance/下班回家应该怎么做？.md",
     "🌳 Work Life Balance/index.md",
     "💼 Work 泛微/账号.md",
     "💼 Work 泛微/模板编辑器.md",
-    "📝 Memo 札记",
     "你好 Obsidian.md",
     "📦 PM 产品管理/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
-    "🌳 Work Life Balance",
-    "📦 PM 产品管理",
     "💼 Work 泛微/应用包上传云商店.md",
     "💼 Work 泛微/编辑器动作流的配置.md",
     "💼 Work 泛微/条款库.md",
     "💼 Work 泛微/范文库.md",
-    "💼 Work 泛微",
     "mmmm.md"
   ]
 }
