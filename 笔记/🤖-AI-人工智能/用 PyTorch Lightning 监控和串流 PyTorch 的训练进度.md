@@ -471,7 +471,7 @@ pip install tensorboard
 
 :::
 
-![](./assets/monitoring-and-streaming-pytorch-training-progress-with-pytorch-lightning-screenshot-1.png)
+![](monitoring-and-streaming-pytorch-training-progress-with-pytorch-lightning-screenshot-1.png)
 
 ## 额外补充
 

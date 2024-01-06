@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4ea49ee2c683e982",
+        "id": "8c018257662b1b3b",
         "type": "tabs",
         "children": [
           {
-            "id": "90fc7f939c30d2f2",
+            "id": "ab889ce06b60ac31",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "产品/index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "产品/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "产品/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "产品/index.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,25 +138,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "90fc7f939c30d2f2",
+  "active": "ab889ce06b60ac31",
   "lastOpenFiles": [
-    "泛微/数据标准.md",
-    "产品/index.md",
-    "Work Life Balance/下班回家应该怎么做？.md",
-    "Work Life Balance/index.md",
     "index.md",
-    "泛微/账号.md",
-    "泛微/模板编辑器.md",
-    "札记",
+    "音乐",
+    "心愿单",
+    "Fin-财务管理",
+    "💼-Work-泛微/index.md",
+    "🎨-UI-用户界面设计",
+    "🤔-UX-用户体验设计",
+    "📦-PM-产品管理/index.md",
+    "💼-Work-泛微/数据标准.md",
+    "🌳-Work-Life-Balance/下班回家应该怎么做？.md",
+    "🌳-Work-Life-Balance/index.md",
+    "💼-Work-泛微/账号.md",
+    "💼-Work-泛微/模板编辑器.md",
+    "📝-Memo-札记",
     "你好 Obsidian.md",
-    "产品/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
-    "Work Life Balance",
-    "产品",
-    "泛微/应用包上传云商店.md",
-    "泛微/编辑器动作流的配置.md",
-    "泛微/条款库.md",
-    "泛微/范文库.md",
-    "泛微",
+    "📦-PM-产品管理/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
+    "🌳-Work-Life-Balance",
+    "📦-PM-产品管理",
+    "💼-Work-泛微/应用包上传云商店.md",
+    "💼-Work-泛微/编辑器动作流的配置.md",
+    "💼-Work-泛微/条款库.md",
+    "💼-Work-泛微/范文库.md",
+    "💼-Work-泛微",
     "mmmm.md"
   ]
 }
