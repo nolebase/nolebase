@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" /></a>
-  <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" /></a>
+  <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a>
 </p>
 
 # Nólëbase
@@ -328,9 +328,9 @@ tags:
 
 本仓库代码以 [MIT License][mit] 协议发布
 
-本仓库除 `笔记/📃 Archives` 目录以外的文档、图片和其引用的资源均以 [CC BY-NC-SA 4.0][cc-by-nc-sa] 协议发布
+本仓库除 `笔记/📃 Archives` 目录以外的文档、图片和其引用的资源均以 [CC BY-SA 4.0][cc-by-sa] 协议发布
 
 [mit]: https://opensource.org/licenses/MIT
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 
 ### 用 ♥ 撰写
