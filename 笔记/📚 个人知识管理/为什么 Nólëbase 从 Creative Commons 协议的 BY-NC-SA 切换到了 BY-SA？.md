@@ -2,12 +2,6 @@
 
 ## 一直以来我们都在用 CC BY-NC-SA 协议
 
-::: info
-
-
-
-:::
-
 其实一直以来如果直接前往 [nolebase/nolebase](https://github.com/nolebase/nolebase) 的仓库的话，可以看到右侧的开源协议是会提示 Unknown 的：
 
 ![](./assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-5.png)
@@ -15,7 +9,7 @@
 如果你阅读过我们的 README 文件，或者直接前往过 [Nolebase](https://nolebase.ayaka.io) 阅读笔记的话，会看到我们自从 2022 年开源 Nolebase 以来，就一直是在使用的 [Creative Commons 的 BY-NC-SA 协议](https://github.com/nolebase/nolebase/blob/0545bce5bf9d012442e4c97f05cece2112768af7/LICENSE-CC-BY-NC-SA)。
 
 > Creative Commons BY-NC-SA 的含义
-> 
+>
 > BY：By 署名
 > NC：No commercial 非商业化使用
 > SA：Share alike 以相同方式分享
@@ -35,7 +29,7 @@
 如果我们在我们所复制出来的 CC 协议来源的 Repository [santisoler/cc-licenses: Creative Commons Licenses for Github](https://github.com/santisoler/cc-licenses) 中搜索，是可以看到有别人提出过类似的问题的：
 
 > It's entirely possible this is a GitHub limitation. I have yet to find a plaintext version of `CC-BY-NC-SA` that GitHub understands, but it would be great if we could find one and correct this repo.
-> 
+>
 > 译文：这完全有可能是 GitHub 的限制。我还没有找到一个 GitHub 可以理解的 `CC-BY-NC-SA` 明文版本，但如果我们能找到一个并纠正这个 repo，那就再好不过了。
 >
 > 来源： [`LICENSE-CC-BY-NC-SA` does not parse correctly · Issue #28](https://github.com/santisoler/cc-licenses/issues/28)
