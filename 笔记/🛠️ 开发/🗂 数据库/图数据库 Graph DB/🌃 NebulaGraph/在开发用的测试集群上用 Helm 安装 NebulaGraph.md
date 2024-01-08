@@ -1,10 +1,7 @@
 ---
 tags:
-  - 开发/Kubernetes
-  - 开发/Kubernetes/工具
   - 命令行/kind
   - 开源/软件/kind
-  - 开发/Kubernetes/工具/kind
   - 命令行/kubectl
   - 软件/云原生/kubectl
   - 命令行/helm

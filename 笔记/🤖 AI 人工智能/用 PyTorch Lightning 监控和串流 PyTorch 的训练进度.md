@@ -1,8 +1,6 @@
 ---
 tags:
   - AI
-  - 开发/Kubernetes
-  - 开发/Kubernetes/工具
   - 开发/云原生/Kubernetes
   - 开发/Python/Notebook
   - 开发/Python/PyTorch

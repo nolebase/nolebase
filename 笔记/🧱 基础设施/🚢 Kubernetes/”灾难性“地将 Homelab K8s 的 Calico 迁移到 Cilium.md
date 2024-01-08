@@ -17,9 +17,9 @@ tags:
   - 软件/云原生/containerd
   - 软件/云原生/docker
   - 开发/虚拟化/cgroup
-  - 运维/Kubernetes/K8s
+  - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes/K8s
-  - 运维/Kubernetes
+  - 运维/云原生/Kubernetes
   - 网络
   - 运维/Cilium
   - 命令行/cilium

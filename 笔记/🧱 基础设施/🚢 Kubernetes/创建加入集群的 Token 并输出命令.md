@@ -1,8 +1,8 @@
 ---
 tags:
   - 开发/云原生/Kubernetes
-  - 运维/Kubernetes
-  - 运维/Kubernetes/K8s
+  - 运维/云原生/Kubernetes
+  - 运维/云原生/Kubernetes/K8s
   - 命令行/kubeadm
   - 软件/云原生/kubeadm
   - 开发/云原生

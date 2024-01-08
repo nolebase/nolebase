@@ -1,14 +1,14 @@
 ---
 tags:
-  - 运维/Kubernetes
-  - 运维/Kubernetes/K8s
+  - 运维/云原生/Kubernetes
+  - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 运维/云原生/Kubernetes
   - 命令行
   - 命令行/k9s
   - 开源/软件/k9s
-  - 运维/Kubernetes/工具/k9s
+  - 运维/云原生/Kubernetes/工具/k9s
 status: 尚未完成
 ---
 # k9s 速查表

@@ -1,7 +1,7 @@
 ---
 tags:
-  - 运维/Kubernetes
-  - 运维/Kubernetes/K8s
+  - 运维/云原生/Kubernetes
+  - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 开发/云原生/Kubernetes/K8s
   - 命令行/systemd
@@ -96,14 +96,14 @@ E1007 18:12:48.784251   62982 remote_runtime.go:294] "ListPodSandbox with filter
 > ```shell
 > # make a copy of the default containerd configuration
 > containerd config default \| sudo tee /etc/containerd/config.toml
-> 
+>
 > # set to use systemd
 > sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
-> 
+>
 > # adjust pause image to what's actually installed
 > PAUSE_IMAGE=$(kubeadm config images list \| grep pause)
 > sudo -E sed -i "s,sandbox_image = .*,sandbox_image = \"$PAUSE_IMAGE\",g" /etc/containerd/config.toml
-> 
+>
 > # restart the containerd service
 > sudo systemctl enable containerd
 > sudo systemctl restart container

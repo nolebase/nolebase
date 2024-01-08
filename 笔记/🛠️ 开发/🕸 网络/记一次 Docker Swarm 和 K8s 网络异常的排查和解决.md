@@ -10,11 +10,11 @@ tags:
   - 软件/Wireshark
   - 网络/抓包/Wireshark
   - 网络/抓包
+  - 运维/云原生/Kubernetes
+  - 运维/云原生/Kubernetes/K8s
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
   - 开发/容器化/Docker/Docker-Swarm
-  - 运维/Kubernetes
-  - 运维/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 开发/云原生/Kubernetes/K8s
 status: 尚未完成

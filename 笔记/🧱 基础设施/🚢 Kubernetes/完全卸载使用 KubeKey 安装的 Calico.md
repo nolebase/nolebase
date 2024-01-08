@@ -3,8 +3,8 @@ tags:
   - 网络/Calico
   - 运维/Calico
   - 软件/云原生/Calico
-  - 运维/Kubernetes
-  - 运维/Kubernetes/K8s
+  - 运维/云原生/Kubernetes
+  - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 开发/云原生/Kubernetes/K8s
   - Linux

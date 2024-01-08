@@ -3,8 +3,8 @@ tags:
   - Linux
   - 操作系统/Debian
   - 操作系统/Unix
-  - 运维/Kubernetes/K8s
-  - 运维/Kubernetes
+  - 运维/云原生/Kubernetes/K8s
+  - 运维/云原生/Kubernetes
   - 命令行/kubectl
   - 软件/云原生/kubectl
   - 命令行/kubeadm

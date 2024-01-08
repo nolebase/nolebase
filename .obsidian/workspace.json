@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ef9fbc5e5d1b43a0",
+        "id": "d7c77477f58724e3",
         "type": "tabs",
         "children": [
           {
-            "id": "9cc5afb381047be0",
+            "id": "6775947faed30b95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "1.29.0 升级和更新的操作步骤",
+                "query": "tag:#运维/云原生/Kubernetes/KubeSphere",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5
+    "width": 289.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -95,7 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md"
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md"
               }
             }
           },
@@ -153,7 +153,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,8 +205,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 366.5,
-    "collapsed": true
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,52 +224,52 @@
   },
   "active": "d5332c2bfa4468de",
   "lastOpenFiles": [
+    "笔记/🧱 基础设施/🚢 Kubernetes/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 Helm 安装的 Cilium.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载集群内的 `kube-proxy`.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubeadm.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubelet 和 kubectl.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubeadm.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
+    "笔记/🛠️ 开发/🕸 网络/记一次 Docker Swarm 和 K8s 网络异常的排查和解决.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.2 升级和更新的操作步骤.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
+    "笔记/🛠️ 开发/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
     "笔记/🛠️ 开发/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/在开发用的测试集群上用 Helm 安装 NebulaGraph.md",
-    "笔记/🪄 Vtuber/给 OBS 添加 Twitch 聊天框组件并且自定义样式.md",
-    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/迁移持久卷.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 的插件管理器 krew.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 插件之 kubecm 配置文件管理器.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
-    "笔记/🧮 数学/空洞的想法.md",
+    "笔记/🤖 AI 人工智能/用 PyTorch Lightning 监控和串流 PyTorch 的训练进度.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/用 kind 创建的测试集群快速部署应用并暴露 NodePort 服务到宿主机方便调试.md",
+    "笔记/🛠️ 开发/使用 Poedit 给用了 GNU 本地化规范 gettext 的 kubectl 做本地化.md",
+    "笔记/🧱 基础设施/GPU 掉卡排查.md",
+    "笔记/🧱 基础设施/云上集群的 GPU.md",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/从用 PyTorch 训练一个模型开始.md",
+    "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
+    "LICENSE-CC-BY-SA",
+    "Pasted image 20240108011807.png",
+    "Pasted image 20240108011737.png",
+    "Pasted image 20240108011647.png",
+    "Pasted image 20240108011620.png",
+    "Pasted image 20240108011558.png",
+    "LICENSE-CC-BY-NC-SA",
+    "笔记/🎮 游戏/🪅 游戏/星际拓荒",
+    "笔记/🎮 游戏/🪅 游戏",
+    "Pasted image 20240107185512.png",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-5.png",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-4.png",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-3.png",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-1.png",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅",
+    "vite.config.ts.timestamp-1704366426268-1aedfdac1cc96.mjs",
+    "diff",
+    "vite.config.ts.timestamp-1704365874262-2f2e06838a48.mjs",
     "笔记/🧮 数学",
-    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
-    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-3.png",
-    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-2.png",
-    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-1.png",
-    "笔记/🧩 开源贡献/Kubernetes/assets",
-    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/用 AutoGen 写一个 LLM 应用.md",
-    "笔记/🤖 AI 人工智能/有意思的项目.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
-    "笔记/🤖 AI 人工智能/扩散模型是如何工作的？.md",
-    "笔记/🤖 AI 人工智能/快速在本地运行一个 XAgent 尝鲜图形化和智能化的 Agent 智能体.md",
-    "笔记/🤖 AI 人工智能/学习网站.md",
-    "笔记/🤖 AI 人工智能/什么时候应该微调大语言模型.md",
-    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
-    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
-    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-it-imagines-itself-video-1.mp4",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-agent-video-1.mp4",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-aftermath-of-llm-video-1.mp4",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-6.png",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-5.png",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-4_副本.jpg",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-4.jpg",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-3.jpg",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-2.jpg",
-    "笔记/🤖 AI 人工智能/assets/how-llm-works-1.jpg",
-    "笔记/🤖 AI 人工智能/LLM 是如何工作的？.md",
-    "笔记/🤖 AI 人工智能/GPT 能做什么？.md",
-    "笔记/🛠️ 开发/🗂 数据库/向量数据库 Vector DB",
-    "笔记/🛠️ 开发/⛶ 边缘计算",
     "未命名.canvas"
   ]
 }

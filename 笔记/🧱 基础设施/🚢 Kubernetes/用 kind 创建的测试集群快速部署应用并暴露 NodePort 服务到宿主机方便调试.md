@@ -1,11 +1,9 @@
 ---
 tags:
-  - 开发/云原生/Kubernetes/K8s
-  - 开发/云原生/Kubernetes
   - 开源/软件/kind
-  - 开发/Kubernetes/工具/kind
   - 命令行/kubectl
   - 命令行/kind
+  - 开发/云原生/Kubernetes
 ---
 # 用 `kind` 创建的测试集群快速部署应用并暴露 NodePort 服务到宿主机方便调试
 
