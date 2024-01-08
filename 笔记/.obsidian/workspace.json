@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "35f96ff5f1407da0",
+        "id": "43443cb273cfdb56",
         "type": "tabs",
         "children": [
           {
-            "id": "f877ad48322e6d79",
+            "id": "085c5511a125b1f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "旅游/每月最佳旅游地.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "旅游/每月最佳旅游地.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "旅游/每月最佳旅游地.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "旅游/每月最佳旅游地.md"
               }
             }
           }
@@ -146,9 +146,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f877ad48322e6d79",
+  "active": "085c5511a125b1f1",
   "lastOpenFiles": [
     "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+    "旅游/每月最佳旅游地.md",
+    "睡眠",
+    "园艺",
+    "摄影",
+    "运动",
+    "旅游",
+    "🎨 UI 用户界面设计/index.md",
+    "🛠️ Dev 开发/前端/Next.js",
+    "🛠️ Dev 开发/前端/Three.js",
+    "🛠️ Dev 开发/Swift",
+    "🛠️ Dev 开发/SQL",
+    "🛠️ Dev 开发/Rust",
+    "3D制作/index.md",
+    "index.md",
     "Pasted image 20240106225146.png",
     "色调.md",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
@@ -162,20 +176,8 @@
     "Pasted image 20240106225432.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-53-18.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-52-19.png",
-    "🎨 UI 用户界面设计/UI 重构/assets",
-    "🎨 UI 用户界面设计/UI 重构/新建文件夹",
-    "🎨 UI 用户界面设计/UI 重构/9. Leveling Up",
-    "🎨 UI 用户界面设计/UI 重构/8. Finishing Touches",
-    "🎨 UI 用户界面设计/UI 重构/7. Working with Images",
-    "🎨 UI 用户界面设计/UI 重构/6. Creating Depth",
-    "🎨 UI 用户界面设计/UI 重构/5. Working with Color",
-    "🎨 UI 用户界面设计/UI 重构/4. Designing Text",
-    "🎨 UI 用户界面设计/UI 重构/3. Layout and Spacing",
-    "🎨 UI 用户界面设计/UI 重构/Hierarchy is Everything/Untitled",
-    "🎨 UI 用户界面设计/index.md",
     "📝 Memo 札记/index.md",
     "🤔 UX 用户体验设计/index.md",
-    "index.md",
     "💼 Work 泛微/index.md",
     "📦 PM 产品管理/index.md",
     "💼 Work 泛微/数据标准.md",
