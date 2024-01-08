@@ -90,7 +90,7 @@
 
 所以如果我们的知识库 [nolebase/nolebase](https://github.com/nolebase/nolebase) 要继续在 GitHub 上开源，并且在内容上希望获得开源社区的贡献和遵守 Open Definition 的支持的话，在遵守开源数据，开源知识，以及开源社区的事实标准 Open Definition 和开源精神的前提下，我们理应跟随社区和对应的协议规范，通过切换到 CC BY-SA，而不是使用一个有悖于社区和支持的 CC BY-NC-SA 协议。
 
-这就是为什么我们要切换到 NC-SA 的原因。
+这就是为什么我们要切换到 BY-SA 的原因。
 
 ::: info 必定会有矛盾吗？
 
