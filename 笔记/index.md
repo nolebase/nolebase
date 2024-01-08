@@ -6,7 +6,8 @@
 #### 本网站的访问链接
 - [vision.surf](https://vision.surf)       基于 [[Vercel]] 部署
 - [mind.solar](https://mind.solar)      基于 [[Netlify]] 部署
-- 备用域名 [v.vercel.app](https://v.vercel.app) [[Vercel]] 二级地址
+- 备用域名 [v.vercel.app](https://v.vercel.app) [[Vercel]] 二级地址 
+- 备用域名 [vurcy.com](https://vurcy.com) SEO
 
 
 
