@@ -37,7 +37,7 @@ title: 06 并发编程
 | core | 线程 1   | 线程 2   | 线程 3   | 线程 4   |
 
 
-![thread01](/java/thread01/png)
+<!--![thread01](/java/thread01/png)-->
 
 
 

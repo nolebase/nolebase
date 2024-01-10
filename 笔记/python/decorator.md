@@ -179,9 +179,7 @@ from index 1:2
 '''
 ```
 
-原理图：
-![多层装饰器](/python/multi-decorator.png)
- 
+
 ::: slot footer
 版权所有，禁止转载 | Copyright © 2022-present [Eabc](https://github.com/mophia)
 :::

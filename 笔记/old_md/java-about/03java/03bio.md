@@ -86,7 +86,7 @@ title: 03 java bio
         }
 
     }
-}   
+}
 
 ```
 
@@ -94,7 +94,7 @@ title: 03 java bio
 一个客户端的消息可以发送给所有的客户端去接收。（群聊实现）
 
 
-![bio04](/java/bio04.png)
+<!--![bio04](/java/bio04.png)-->
 
 **服务端代码**
 ```java

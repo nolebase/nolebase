@@ -50,7 +50,7 @@ Java NIO的通道类似流，但又有些不同：既可以从通道中读取数
 
 Selector是 一个Java NIO组件，可以能够检查一个或多个 NIO 通道，并确定哪些通道已经准备好进行读取或写入。这样，一个单独的线程可以管理多个channel，从而管理多个网络连接，提高效率
 
-![nio01.png](/java/nio01.png)
+<!--![nio01.png](/java/nio01.png)-->
 
 * 每个 channel 都会对应一个 Buffer
 * 一个线程对应Selector ， 一个Selector对应多个 channel(连接)
@@ -66,10 +66,10 @@ Selector是 一个Java NIO组件，可以能够检查一个或多个 NIO 通道�
 **缓冲区（Buffer**
 一个用于特定基本数据类 型的容器。由 java.nio 包定义的，所有缓冲区 都是 Buffer 抽象类的子类.。Java NIO 中的 Buffer 主要用于与 NIO 通道进行 交互，数据是从通道读入缓冲区，从缓冲区写入通道中的
 
-![nio02.png](/java/nio02.png)
+<!--![nio02.png](/java/nio02.png)->
 
 **Buffer 类及其子类**
-Buffer 就像一个数组，可以保存多个相同类型的数据。根 据数据类型不同 ，有以下 Buffer 常用子类： 
+Buffer 就像一个数组，可以保存多个相同类型的数据。根 据数据类型不同 ，有以下 Buffer 常用子类：
 ByteBuffer CharBuffer  ShortBuffer IntBuffer LongBuffer FloatBuffer DoubleBuffer
 
 上述 Buffer 类 他们都采用相似的方法进行管理数据，只是各自 管理的数据类型不同而已。都是通过如下方法获取一个 Buffer 对象：
@@ -78,14 +78,14 @@ static XxxBuffer allocate(int capacity) : 创建一个容量为capacity 的 XxxB
 ```
 
 **缓冲区的基本属性**
-Buffer 中的重要概念： 
+Buffer 中的重要概念：
 * 容量 (capacity) ：作为一个内存块，Buffer具有一定的固定大小，也称为"容量"，缓冲区容量不能为负，并且创建后不能更改。
 * 限制 (limit)：表示缓冲区中可以操作数据的大小（limit 后数据不能进行读写）。缓冲区的限制不能为负，并且不能大于其容量。 写入模式，限制等于buffer的容量。读取模式下，limit等于写入的数据量。
-* 位置 (position)：下一个要读取或写入的数据的索引。缓冲区的位置不能为 负，并且不能大于其限制 
+* 位置 (position)：下一个要读取或写入的数据的索引。缓冲区的位置不能为 负，并且不能大于其限制
 * 标记 (mark)与重置 (reset)：标记是一个索引，通过 Buffer 中的 mark() 方法 指定 Buffer 中一个特定的 position，之后可以通过调用 reset() 方法恢复到这 个 position.
 **标记、位置、限制、容量遵守以下不变式： 0 <= mark <= position <= limit <= capacity**
 
-![nio03.png](/java/nio03.png)
+<!--![nio03.png](/java/nio03.png)-->
 
 **Buffer常见方法**
 ```java
@@ -111,7 +111,7 @@ Buffer 所有子类提供了两个用于数据操作的方法：get()put() 方�
 get() ：读取单个字节
 get(byte[] dst)：批量读取多个字节到 dst 中
 get(int index)：读取指定索引位置的字节(不会移动 position)
-    
+
 放到 入数据到 Buffer 中 中
 put(byte b)：将给定单个字节写入缓冲区的当前位置
 put(byte[] src)：将 src 中的字节写入缓冲区的当前位置
@@ -334,7 +334,7 @@ private static void test() throws Exception {
 概述：
 选择器（Selector） 是 SelectableChannle 对象的多路复用器，Selector 可以同时监控多个 SelectableChannel 的 IO 状况，也就是说，利用 Selector可使一个单独的线程管理多个 Channel。Selector 是非阻塞 IO 的核心
 
-![nio04.png](/java/nio04.png)
+<!--![nio04.png](/java/nio04.png)-->
 
 * Java 的 NIO，用非阻塞的 IO 方式。可以用一个线程，处理多个的客户端连接，就会使用到 Selector(选择器)
 * Selector 能够检测多个注册的通道上是否有事件发生(注意:多个 Channel 以事件的方式可以注册到同一个
@@ -370,12 +370,12 @@ ssChannel.register(selector, SelectionKey.OP_ACCEPT);
 * 连接 : SelectionKey.OP_CONNECT （8）
 * 接收 : SelectionKey.OP_ACCEPT （16）
 * 若注册时不止监听一个事件，则可以使用“位或”操作符连接。
-  int interestSet = SelectionKey.OP_READ|SelectionKey.OP_WRITE 
+  int interestSet = SelectionKey.OP_READ|SelectionKey.OP_WRITE
 
 #### NIO非阻塞式网络通信原理分析
 * Selector 示意图和特点说明
 Selector可以实现： 一个 I/O 线程可以并发处理 N 个客户端连接和读写操作，这从根本上解决了传统同步阻塞 I/O 一连接一线程模型，架构的性能、弹性伸缩能力和可靠性都得到了极大的提升。
-![nio05.png](/java/nio05.png)
+<!--![nio05.png](/java/nio05.png)-->
 
 * 服务端流程
 
@@ -399,7 +399,7 @@ ssChannel.configureBlocking(false);
 
  ssChannel.register(selector, SelectionKey.OP_ACCEPT);
 
-6、轮询式的获取选择器上已经“准备就绪”的事件 
+6、轮询式的获取选择器上已经“准备就绪”的事件
 
 ```java
 //轮询式的获取选择器上已经“准备就绪”的事件

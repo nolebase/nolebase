@@ -72,5 +72,8 @@
     "vitepress": "1.0.0-rc.34",
     "vue": "^3.4.3",
     "vuedraggable": "^4.1.0"
+  },
+  "dependencies": {
+    "sharp": "^0.33.1"
   }
 }

@@ -20,7 +20,7 @@ title: 05 TreeMap
 
  **二叉查找树就是每个节点按照大小排列的二叉树，二叉查找树方便对节点的值进行查找**
 
-![map01.png](/java/map01.png)
+<!--![map01.png](/java/map01.png)-->
 
 **查找方式**
 从根结点开始查找，如果等于则返回
@@ -32,21 +32,21 @@ title: 05 TreeMap
 1.定义：
     为了避免出现“瘸子的现象”，减少树的高度，提高搜索效率，出现了平衡二叉树：**左右两个子树的高度差不超过1，并且左右两个树都是一颗平衡二叉树**
 
-![map02.png](/java/map02.png)
+<!--![map02.png](/java/map02.png)-->
 
 2. 平衡二叉树的选装
 * 左旋
 右支往左拉，右支节点变为父节点，并把晋升之后多余的左子节（s左）点让给降级节点（E）的右子节点
-![map03.png](/java/map03.png)
+<!--![map03.png](/java/map03.png)-->
 
 * 右旋
 左支往右拉，左支节点变为父节点，并把晋升之后多余的右支节点(e右)让给降级节点的左子节点
 
-![map04.png](/java/map04.png)
+<!--![map04.png](/java/map04.png)-->
 
 * 四种左右失衡的情况
-![map06.png](/java/map06.png)
-![map07.png](/java/map07.png)
+<!--![map06.png](/java/map06.png)
+![map07.png](/java/map07.png)-->
 
 ### 2.4 红黑树
 
@@ -62,7 +62,7 @@ title: 05 TreeMap
 * 如果某一个节点是红色，那么它的子节点必须是黑色（不能出现两个红节点相连的情况）
 * 每一个节点，从该结点到其所有后代叶结点的简单路径上，均包含相同数目的黑色结点
 
-![map08.png](/java/map08.png)
+<!--![map08.png](/java/map08.png)-->
 
 ### TreeMap.java
 ```java

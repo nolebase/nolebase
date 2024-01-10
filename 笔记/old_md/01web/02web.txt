@@ -10,16 +10,20 @@ title: 02 web 标签
 
 **根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更清晰。**
 
-###  1.2 标题标签 `<h1> - <h6>`(重要)
+###  1.2 标题标签 (重要)
+
+```
+<h1> - <h6>
+```
 
 为了使网页更具有语义化，我们经常会在页面中用到标题标签。HTML 提供了 6 个等级的网页标题，
 
 ```html
-<h1>标题一共六级选,</h1> 
-<h2>文字加粗一行显。</h2> 
-<h3>由大到小依次减，</h3> 
-<h4>从重到轻随之变。</h4> 
-<h5>语法规范书写后，</h5> 
+<h1>标题一共六级选,</h1>
+<h2>文字加粗一行显。</h2>
+<h3>由大到小依次减，</h3>
+<h4>从重到轻随之变。</h4>
+<h5>语法规范书写后，</h5>
 <h6>具体效果刷新见。</h6>
 ```
 
@@ -42,7 +46,7 @@ title: 02 web 标签
 
 单词 paragraph [ˈpærəgræf] 的缩写，意为段落。
 
-**标签语义:**可以把 HTML 文档分割为若干段落。
+**标签语义:** 可以把 HTML 文档分割为若干段落。
 
 **特点:**
 
@@ -76,9 +80,9 @@ title: 02 web 标签
 
 **同学们重点记住 加粗 和 倾斜。**
 
-### 1.6 `\<div>` 和 `\<span>` 标签
+### 1.6 `div` 和 `span` 标签
 
-`\<div>` 和 `\<span>` 是没有语义的，它们就是一个盒子，用来装内容的。
+`div` 和 `span` 是没有语义的，它们就是一个盒子，用来装内容的。
 
 ```html
 <div> 这是头部 </div>
@@ -89,8 +93,8 @@ div 是 division 的缩写，表示分割、分区。span 意为跨度、跨距�
 
 **特点**
 
-1. `\<div>` 标签用来布局，但是现在一行只能放一个 `\<div>`。 大盒子
-2. `\<span>` 标签用来布局，一行上可以多个 `\<span>` 。小盒子
+1. `div` 标签用来布局，但是现在一行只能放一个 `div`。 大盒子
+2. `span` 标签用来布局，一行上可以多个 `span` 。小盒子
 
 ###  1.7 图像标签和路径 (重点)
 
@@ -191,7 +195,7 @@ Vscode 打开问价夹 文件----打开文件夹. 选择目录文件夹.后期�
 - 锚点链接: 点我们点击链接,可以快速定位到页面中的某个位置.
 
   - 在链接文本的 href 属性中，设置属性值为 #名字 的形式，如\<a href="#two"> 第2集\</a>
-  
+
   - 找到目标位置标签，里面添加一个 id 属性 = 刚才的名字 ，如:\<h3 id="two">第2集介绍\</h3>
 
 ##  ## 2. HTML 中的注释和特殊字符
@@ -225,11 +229,11 @@ HTML中的注释以**<!--开头，以 -->**结束。
 ###  3.2. 表格的基本语法
 
 ```html
-<table> 
+<table>
   <tr>
-  <td>单元格内的文字</td> 
+  <td>单元格内的文字</td>
   ...
-  </tr> 
+  </tr>
   ...
 </table>
 ```
@@ -248,7 +252,7 @@ HTML中的注释以**<!--开头，以 -->**结束。
 ```html
 <table>
   <tr>
-		<th>姓名</th> 
+		<th>姓名</th>
     ...
 	</tr>
   ...
@@ -396,7 +400,7 @@ table 标签 tr 行 标签 td 单元格 标签 th 表头单元格 标签 thead �
 **\<form>** 会把它范围内的表单元素信息提交给服务器.
 
 ```html
-<form action=“url地址” method=“提交方式” name=“表单域名称"> 
+<form action=“url地址” method=“提交方式” name=“表单域名称">
    各种表单元素控件
 </form>
 ```
@@ -407,8 +411,6 @@ table 标签 tr 行 标签 td 单元格 标签 th 表头单元格 标签 thead �
 - 表单域是 form标签
 
 ### 5.2 表单控件(表单元素)
-
- 
 
 - input输入表单元素
 - select下拉表单元素
@@ -455,7 +457,7 @@ type 属性的属性值及其描述如下:
 name 属性后面的值，是自定义的 radio (或者checkbox)如果是一组，我们必须给他们命名相同的名字
 
 ```html
-<input type="radio" name="sex" />男 
+<input type="radio" name="sex" />男
 <input type="radio" name="sex" />女
 ```
 
@@ -463,14 +465,14 @@ name 属性后面的值，是自定义的 radio (或者checkbox)如果是一�
 
 ```html
 性 别:
-<input type="radio" name="sex" value="男" checked="checked" />男 
+<input type="radio" name="sex" value="男" checked="checked" />男
 <input type="radio" name="sex" value="女" />女
 ```
 
 - 4.如何让input表单元素展示不同的形态? 比如单选按钮或者文本框
 
 ```html
-<input type="radio" name="sex" value="男" checked="checked" />男 
+<input type="radio" name="sex" value="男" checked="checked" />男
 <input type="text" value=“请输入用户名”>
 ```
 
@@ -479,11 +481,11 @@ name 属性后面的值，是自定义的 radio (或者checkbox)如果是一�
 使用场景: 在页面中，如果有多个选项让用户选择，并且想要节约页面空间时，我们可以使用\<select>标签控件定义**下拉列表**。
 
 ```html
-	    <select name="se" id="se">
-        <option value="id1">1</option>
-        <option value="id2">2</option>
-        <option value="id3" selected>3</option>
-    </select>
+<select name="se" id="se">
+    <option value="id1">1</option>
+    <option value="id2">2</option>
+    <option value="id3" selected>3</option>
+</select>
 ```
 
 1. \<select> 中至少包含一对\<option> 。
@@ -511,11 +513,11 @@ name 属性后面的值，是自定义的 radio (或者checkbox)如果是一�
 
 ```html
 <form>
-  <input type=“text " name=“username”> 
+  <input type="text" name="username">
    <select name=“jiguan”>
-  			<option>北京</option>
+  	<option>北京</option>
   </select>
-  <textarea name= "message"></textarea>
+  <textarea name="message"></textarea>
 </form>
 ```
 

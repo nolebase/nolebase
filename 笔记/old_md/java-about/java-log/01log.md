@@ -1,7 +1,5 @@
 ---
-
 title: 01 Java的log日志
-
 ---
 
 ## 1.日志的概念
@@ -54,7 +52,7 @@ title: 01 Java的log日志
 
 ##### 3.1.1 架构介绍
 
-​	![01.png](/java-log/01.png)
+​<!--![01.png](/java-log/01.png)-->
 
  - Loggers:被称为记录器，应用程序通过获取Logger对象，调用其API来来发布日志信息。Logger 通常时应用程序访问日志系统的入口程序。
 
@@ -98,12 +96,12 @@ title: 01 Java的log日志
 ```
 * java.util.logging.Level中定义了日志的级别: SEVERE(最高值)
     WARNING
-    INFO (默认级别) 
+    INFO (默认级别)
     CONFIG
     FINE
-    FINER 
+    FINER
     FINEST(最低值)
-* 还有两个特殊的级别: 
+* 还有两个特殊的级别:
 		OFF，可用来关闭日志记录。
 		ALL，启用所有消息的日志记录。
 
@@ -178,7 +176,7 @@ title: 01 Java的log日志
         //所有日志记录器对象的顶级父元素 class为java.util.logging.LogManager$RootLogger name为""
         String s = logger2.getParent() + "name:" + logger2.getParent().getName() +";";
         System.out.println(s); // java.util.logging.LogManager$RootLogger@3581c5f3name:;
-        
+
         logger2.setUseParentHandlers(false);
 
         // 创建ConsoleHandler
@@ -192,7 +190,7 @@ title: 01 Java的log日志
         // 自定义级别
         logger2.setLevel(Level.ALL);
         consoleHandler.setLevel(Level.ALL);
-        
+
         // logger1 的输出回继承logger2 的日志输出级别
         logger1.severe("severe");
         logger1.warning("warning");
@@ -218,7 +216,7 @@ public class LogManager {
 
 		 // Read configuration.
     owner.readPrimordialConfiguration();
-    
+
     public void readConfiguration() throws IOException, SecurityException {
         checkPermission();
 
@@ -260,8 +258,8 @@ public class LogManager {
             readConfiguration(bin);
         }
     }
-    
-    
+
+
 }
 ```
 
@@ -271,7 +269,7 @@ public class LogManager {
 public void TestLogProperties() throws  Exception {
   			 // 开启 log4j 的内部日志1记录
         LogLog.setInternalDebugging(true);
-  			
+
         // 读取配置文件
         // 创建logManager
 //        通过logManager加载配置文件
@@ -347,22 +345,22 @@ org.clxmmTest.useParentHandlers=false
 输出
 
 ```
-严重 severe   [星期一 一月 11 20:26:29 CST 2021] 
-警告 warning   [星期一 一月 11 20:26:29 CST 2021] 
-信息 info   [星期一 一月 11 20:26:29 CST 2021] 
-配置 cofnig   [星期一 一月 11 20:26:29 CST 2021] 
-详细 fine   [星期一 一月 11 20:26:29 CST 2021] 
-较详细 finer   [星期一 一月 11 20:26:29 CST 2021] 
-非常详细 finest   [星期一 一月 11 20:26:29 CST 2021] 
+严重 severe   [星期一 一月 11 20:26:29 CST 2021]
+警告 warning   [星期一 一月 11 20:26:29 CST 2021]
+信息 info   [星期一 一月 11 20:26:29 CST 2021]
+配置 cofnig   [星期一 一月 11 20:26:29 CST 2021]
+详细 fine   [星期一 一月 11 20:26:29 CST 2021]
+较详细 finer   [星期一 一月 11 20:26:29 CST 2021]
+非常详细 finest   [星期一 一月 11 20:26:29 CST 2021]
 ----
-严重 severe test   [星期一 一月 11 20:26:29 CST 2021] 
-警告 warning test   [星期一 一月 11 20:26:29 CST 2021] 
-信息 info test   [星期一 一月 11 20:26:29 CST 2021] 
+严重 severe test   [星期一 一月 11 20:26:29 CST 2021]
+警告 warning test   [星期一 一月 11 20:26:29 CST 2021]
+信息 info test   [星期一 一月 11 20:26:29 CST 2021]
 ```
 
 ### 3.5 日志原理解析
 
-![01.png](/java-log/02.png)
+<!--![01.png](/java-log/02.png)-->
 
 1. 初始化LogManager
 
@@ -438,7 +436,7 @@ org.clxmmTest.useParentHandlers=false
    info 一般和在粗粒度级别上，强调应用程序的运行全程。
    debug 一般用于细粒度级别上，对调试应用程序非常有帮助。
    trace 是程序追踪，可以用于输出程序运行中的变量，显示执行的流程。
-   
+
    * 还有两个特殊的级别: OFF，可用来关闭日志记录。
    ALL，启用所有消息的日志记录。
    ```
@@ -502,7 +500,7 @@ Test.main(Test.java:10)
 #### 4.4 Appender的输出
 
 ```properties
-#指定日志的输出级别与输出端 
+#指定日志的输出级别与输出端
 log4j.rootLogger=INFO,Console,A
 # 控制台输出配置
 log4j.appender.Console=org.apache.log4j.ConsoleAppender log4j.appender.Console.layout=org.apache.log4j.PatternLayout log4j.appender.Console.layout.ConversionPattern=%d [%t] %-5p [%c] - %m%n
@@ -534,10 +532,10 @@ log4j.appender.A1.encoding=UTF-8
 log4j.appender.A1.datePattern='.'yyyy-MM-dd—HH-mm-ss.  ## 以秒为单位进行拆分
 
 #mysql
-log4j.appender.logDB=org.apache.log4j.jdbc.JDBCAppender 
-log4j.appender.logDB.layout=org.apache.log4j.PatternLayout 
-log4j.appender.logDB.Driver=com.mysql.jdbc.Driver 
-log4j.appender.logDB.URL=jdbc:mysql://localhost:3306/test 
+log4j.appender.logDB=org.apache.log4j.jdbc.JDBCAppender
+log4j.appender.logDB.layout=org.apache.log4j.PatternLayout
+log4j.appender.logDB.Driver=com.mysql.jdbc.Driver
+log4j.appender.logDB.URL=jdbc:mysql://localhost:3306/test
 log4j.appender.logDB.User=root
 log4j.appender.logDB.Password=root
 log4j.appender.logDB.Sql=INSERT INTO log(project_name,create_date,level,category,file_name,thread_name,line,all_category,message) values('itcast','%d{yyyy-MM-dd HH:mm:ss}','%p','%c','%F','%t','%L','%l','%m')
@@ -545,7 +543,7 @@ log4j.appender.logDB.Sql=INSERT INTO log(project_name,create_date,level,category
 ```
 
 ```sql
- 
+
 CREATE TABLE `log` (
 `log_id` int(11) NOT NULL AUTO_INCREMENT,
 `project_name` varchar(255) DEFAULT NULL COMMENT '目项名',
@@ -579,7 +577,7 @@ log4j.logger.org.clxmm=info,console
 
 JCL 有两个基本的抽象类:Log(基本记录器)和LogFactory(负责创建Log实例)。
 
-![03.png](/java-log/03.png)
+<!--![03.png](/java-log/03.png)-->
 
 ### 5.1 JCL入门
 
@@ -609,7 +607,7 @@ JCL 有两个基本的抽象类:Log(基本记录器)和LogFactory(负责创建Lo
 
 1. 通过LogFactory动态加载Log实现类
 
-![04.png](/java-log/04.png)
+<!--![04.png](/java-log/04.png)-->
 
 2. 日志门面支持的日志实现数组
 
@@ -626,7 +624,6 @@ new String[]{"org.apache.commons.logging.impl.Log4JLogger", "org.apache.commons.
    ```java
    for(int i = 0; i < classesToDiscover.length && result == null; ++i) { result = this.createLogFromClass(classesToDiscover[i], logCategory,
    true); }
-    
+
    ```
 
-   

@@ -26,7 +26,7 @@ title: 02 log 日志 sel4j
 
 日志门面和日志实现的关系:
 
-![05日志门面与日志实现](/java-log/05.png)
+<!--![05日志门面与日志实现](/java-log/05.png)-->
 
 日志框架出现的历史顺序:
 
@@ -71,7 +71,7 @@ SLF4J日志门面主要提供两大功能:
        public class Slf4jTest {
            // 声明日志对象
            public static final Logger LOGGER = LoggerFactory.getLogger(Slf4jTest.class);
-       
+
            @Test
            public void test01 () throws Exception {
                // 日志输出
@@ -80,12 +80,12 @@ SLF4J日志门面主要提供两大功能:
                LOGGER.info("info");
                LOGGER.debug("debug");
                LOGGER.trace("trace");
-       
+
                // 使用占位符输出日志信息
                String name = "clx";
                Integer age = 18;
                LOGGER.info("name: {} age: {}",name,age);
-       
+
                // 系统的异常信息
                try {
                    int i= 1/0;
@@ -99,23 +99,23 @@ SLF4J日志门面主要提供两大功能:
        ​	**为什么要使用SLF4J作为日志门面?**
 
 1. 使用SLF4J框架，可以在部署时迁移到所需的日志记录框架。
-   
-2. SLF4J提供了对所有流行的日志框架的绑定，例如log4j，JUL，Simple logging和NOP。因此可以在部署时切换到任何这些流行的框架。
-   
-3. 无论使用哪种绑定，SLF4J都支持参数化日志记录消息。由于SLF4J将应用程序和日志记录框架分离， 因此可以轻松编写独立于日志记录框架的应用程序。而无需担心用于编写应用程序的日志记录框架。
-   
-4. SLF4J提供了一个简单的Java工具，称为迁移器。使用此工具，可以迁移现有项目，这些项目使用日志 框架(如Jakarta Commons Logging(JCL)或log4j或Java.util.logging(JUL))到SLF4J。
-        
 
-![06slf4j.png](/java-log/06slf4j.png)
-       
+2. SLF4J提供了对所有流行的日志框架的绑定，例如log4j，JUL，Simple logging和NOP。因此可以在部署时切换到任何这些流行的框架。
+
+3. 无论使用哪种绑定，SLF4J都支持参数化日志记录消息。由于SLF4J将应用程序和日志记录框架分离， 因此可以轻松编写独立于日志记录框架的应用程序。而无需担心用于编写应用程序的日志记录框架。
+
+4. SLF4J提供了一个简单的Java工具，称为迁移器。使用此工具，可以迁移现有项目，这些项目使用日志 框架(如Jakarta Commons Logging(JCL)或log4j或Java.util.logging(JUL))到SLF4J。
+
+
+<!--![06slf4j.png](/java-log/06slf4j.png)-->
+
 
        ### 2.2 绑定日志的实现(Binding)
 
 ​		**使用slf4j的日志绑定流程**
 
 1. 添加slf4j-api的依赖
-2. 使用slf4j的API在项目中进行统一的日志记录 
+2. 使用slf4j的API在项目中进行统一的日志记录
 3. 绑定具体的日志实现框架
 		1. 绑定已经实现了slf4j的日志框架,直接添加对应依赖
 	2. 绑定没有实现slf4j的日志框架,先添加日志的适配器,再添加实现类的依赖
@@ -124,10 +124,10 @@ SLF4J日志门面主要提供两大功能:
 **通过maven引入常见的日志实现框架:**
 
 ```xml
-<!--slf4j core 使用slf4j必須添加--> 
+<!--slf4j core 使用slf4j必須添加-->
 <dependency>
-	<groupId>org.slf4j</groupId> 
-  <artifactId>slf4j-api</artifactId> 
+	<groupId>org.slf4j</groupId>
+  <artifactId>slf4j-api</artifactId>
   <version>1.7.27</version>
 </dependency>
 
@@ -151,9 +151,9 @@ log4j   需要导入适配器
 </dependency>
 
 <!--jcl -->
-<dependency> 
-  	<groupId>org.slf4j</groupId> 
-  	<artifactId>slf4j-jcl</artifactId> 
+<dependency>
+  	<groupId>org.slf4j</groupId>
+  	<artifactId>slf4j-jcl</artifactId>
   	<version>1.7.27</version>
 </dependency>
 
@@ -180,7 +180,7 @@ nop 日志开关
 
    ​	http://www.slf4j.org/images/legacy.png
 
-   ![07legacy.png](/java-log/07legacy.png)
+   <!--![07legacy.png](/java-log/07legacy.png)-->
 
    迁移的方式:
 
@@ -189,22 +189,22 @@ nop 日志开关
    ```xml
    <!-- log4j-->
    <dependency>
-   	<groupId>org.slf4j</groupId> 
-     <artifactId>log4j-over-slf4j</artifactId> 
+   	<groupId>org.slf4j</groupId>
+     <artifactId>log4j-over-slf4j</artifactId>
      <version>1.7.27</version>
    </dependency>
-   
+
    <!-- jul -->
    <dependency>
-   	<groupId>org.slf4j</groupId> 
-     <artifactId>jul-to-slf4j</artifactId> 
+   	<groupId>org.slf4j</groupId>
+     <artifactId>jul-to-slf4j</artifactId>
      <version>1.7.27</version>
    </dependency>
-   
+
    <!--jcl -->
    <dependency>
-   	<groupId>org.slf4j</groupId> 
-     <artifactId>jcl-over-slf4j</artifactId> 
+   	<groupId>org.slf4j</groupId>
+     <artifactId>jcl-over-slf4j</artifactId>
      <version>1.7.27</version>
    </dependency>
    ```
@@ -228,7 +228,7 @@ Logback主要分为三个模块
 - logback-core:其它两个模块的基础模块
 - logback-classic:它是log4j的一个改良版本，同时它完整实现了slf4j API
 - logback-access:访问模块与Servlet容器集成提供通过Http来访问日志的功能
-	
+
 
 后续的日志代码都是通过SLF4J日志门面搭建日志系统，所以在代码是没有区别，主要是通过修改配置 文件和pom.xml依赖
 ### 3.1 logback入门
@@ -243,7 +243,7 @@ Logback主要分为三个模块
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
-        </dependency> 
+        </dependency>
     </dependencies>
 ```
 
@@ -404,14 +404,14 @@ public void test() {
    	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
    	<file>${LOG_DIR}/access.log</file>
    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-   			<fileNamePattern>access.%d{yyyy-MM-dd}.log.zip</fileNamePattern> 
+   			<fileNamePattern>access.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
       </rollingPolicy>
    	<encoder>
-   		<!-- 访问日志的格式 --> 
+   		<!-- 访问日志的格式 -->
        	<pattern>combined</pattern>
        </encoder>
      </appender>
-   <appender-ref ref="FILE"/> 
+   <appender-ref ref="FILE"/>
    </configuration>
    ```
 
@@ -420,7 +420,7 @@ public void test() {
 ## 4. log4j2的使用
 
 - 异常处理，在logback中，Appender中的异常不会被应用感知到，但是在log4j2中，提供了一些异 常处理机制。
-- 性能提升， log4j2相较于log4j 和logback都具有很明显的性能提升，后面会有官方测试的数据。 自动重载配置，参考了logback的设计，当然会提供自动刷新参数配置，最实用的就是我们在生产 上可以动态的修改日志的级别而不需要重启应用。 
+- 性能提升， log4j2相较于log4j 和logback都具有很明显的性能提升，后面会有官方测试的数据。 自动重载配置，参考了logback的设计，当然会提供自动刷新参数配置，最实用的就是我们在生产 上可以动态的修改日志的级别而不需要重启应用。
 - 无垃圾机制，log4j2在大部分情况下，都可以使用其设计的一套无垃圾机制，避免频繁的日志收集 导致的jvm gc。
 
 官网: https://logging.apache.org/log4j/2.x
@@ -626,8 +626,8 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
 ### 5.1 日志使用
 
 ```xml
-<dependency> 
-  <artifactId>spring-boot-starter-logging</artifactId> 
+<dependency>
+  <artifactId>spring-boot-starter-logging</artifactId>
   <groupId>org.springframework.boot</groupId>
 </dependency>
 ```
@@ -642,20 +642,20 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
 
    ```java
    package org.clxmm.springbootlog;
-   
+
    import org.apache.logging.log4j.LogManager;
    import org.junit.jupiter.api.Test;
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    import org.springframework.boot.test.context.SpringBootTest;
-   
+
    @SpringBootTest
    class ApplicationTests {
        public static final Logger logger = LoggerFactory.getLogger(ApplicationTests.class);
-   
+
        @Test
        void contextLoads() {
-   
+
            // 打印日志信息
            logger.error("error");
            logger.warn("warn");
@@ -663,16 +663,16 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
            // 默认日志级别
            logger.debug("debug");
            logger.trace("trace");
-   
-   
+
+
            // log4j 使用桥接器切换为slf4j门面和logback 日志实现
            org.apache.logging.log4j.Logger logger1 = LogManager.getLogger(ApplicationTests.class);
            logger1.info("info");
-   
+
        }
-   
+
    }
-   
+
    ```
 
    修改默认日志配置
@@ -681,10 +681,10 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
    spring.profiles.active=dev
    ### 自动一logger 对象的级别
    logging.level.org.clxmm=trace
-   
+
    # 在控制台输出的日志的格式 同logback
    logging.pattern.console=%d{yyyy-MM-dd} [%thread] [%-5level] %logger{50} -%msg%n
-   
+
    logging.file.name=/Users/yuanmengen/Desktop/log/test/springboot.log
    ## 指定目录 ，默认的文件名 springboot.log
    logging.file.path=/Users/yuanmengen/Desktop/log/test/
@@ -703,12 +703,12 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <configuration>
-   
-   
+
+
        <property name="pattern" value="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L [%thread] -------- %m %n"></property>
-   
-   
-   
+
+
+
        <!--控制台日志输出的 appender-->
        <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
            <!--控制输出流对象 默认 System.out 改为 System.err-->
@@ -723,9 +723,9 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
                </springProfile>
            </encoder>
        </appender>
-   
-   
-   
+
+
+
        <!--自定义 looger 对象
            additivity="false" 自定义 logger 对象是否继承 rootLogger
         -->
@@ -750,7 +750,7 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
                    </exclusion>
                </exclusions>
            </dependency>
-   
+
            <!-- 添加log4j2 -->
            <dependency>
                <groupId>org.springframework.boot</groupId>
@@ -792,5 +792,5 @@ Log4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerCon textSele
 </Configuration>
    ```
 
-   
+
 

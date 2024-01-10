@@ -78,7 +78,7 @@ spring:
             - Path=/user/**
 ```
 ### 2.  测试网关路由转发
-访问：[http://localhost:9110/user/info](http://localhost:9110/user/info) 
+访问：[http://localhost:9110/user/info](http://localhost:9110/user/info)
     请求转发到：[http://localhost:8110/user/info](http://localhost:8110/user/info)
 
 ### 3. 通过nacos注册中心
@@ -168,7 +168,7 @@ public class CorsConfig {
 }
 ```
 
-此时可以删除微服务中的跨域注解 *@CrossOrigin* 
+此时可以删除微服务中的跨域注解 *@CrossOrigin*
 
 否则会有冲突
 
@@ -321,7 +321,7 @@ spring:
 
       https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#global-filters
 
-      ![01gateway.png](/springcloud/01gatway.png)
+      <!--![01gateway.png](/springcloud/01gatway.png)-->
 
       内置全局过滤器的使用举例：负载均衡过滤器
 
@@ -335,7 +335,7 @@ spring:
 
    ```java
    package org.clxmm.infrastructure.apigateway.config;
-   
+
    import com.google.gson.JsonObject;
    import org.clxmm.common.base.result.util.JwtUtils;
    import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -348,10 +348,10 @@ spring:
    import org.springframework.util.AntPathMatcher;
    import org.springframework.web.server.ServerWebExchange;
    import reactor.core.publisher.Mono;
-   
+
    import java.nio.charset.StandardCharsets;
    import java.util.List;
-   
+
    /**
     * @author clxmm
     * @version 1.0
@@ -359,7 +359,7 @@ spring:
     */
    @Component
    public class AuthGlobalFilter  implements GlobalFilter, Ordered {
-   
+
        @Override
        public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
            ServerHttpRequest request = exchange.getRequest();
@@ -368,33 +368,33 @@ spring:
            AntPathMatcher antPathMatcher = new AntPathMatcher();
            if(antPathMatcher.matc("/api/**/auth/**", path)) {
                List<String> tokenList = request.getHeaders().get("token");
-   
+
                //没有token
                if(null == tokenList) {
                    ServerHttpResponse response = exchange.getResponse();
                    return out(response);
                }
-   
-   
+
+
                //token校验失败
                Boolean isCheck = JwtUtils.checkJwtTToken(tokenList.get(0));
                if(!isCheck) {
                    ServerHttpResponse response = exchange.getResponse();
                    return out(response);
                }
-   
+
            }
-   
-   
+
+
            return chain.filter(exchange);    }
-   
+
        // 定义当前过滤器的优先级，值越小，优先级越高
        @Override
        public int getOrder() {
            return 0;
        }
-   
-   
+
+
        // 使用webFlux输出请求信息
        private Mono<Void> out(ServerHttpResponse response) {
            JsonObject message = new JsonObject();
@@ -409,9 +409,8 @@ spring:
            //输出http响应
            return response.writeWith(Mono.just(buffer));
        }
-   
+
    }
-   
+
    ```
 
-   
