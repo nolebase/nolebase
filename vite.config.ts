@@ -1,12 +1,9 @@
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import process from 'node:process'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
-import { EasyTag } from './.vitepress/plugins/vitepress-plugin-docsmd-easytag/src'
-import { include } from './.vitepress/meta'
 
 const ROOT = dirname(fileURLToPath(import.meta.url))
 
@@ -21,12 +18,6 @@ export default defineConfig(async () => {
       ],
     },
     plugins: [
-      EasyTag({
-        rootDir: ROOT,
-        includes: [...include],
-        openAIAPISecret: process.env.OPENAI_API_SECRET!,
-        openAIAPIHost: process.env.OPENAI_API_HOST!,
-      }),
       GitChangelog({
         repoURL: () => 'https://github.com/nolebase/nolebase',
         maxGitLogCount: 1000,
