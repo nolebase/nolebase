@@ -4,8 +4,8 @@
 
 ## hash 模式
 
-![router - hash](./router-hash.png)
+![router - hash](router-hash.png)
 
 ## history
 
-![router - history](./router-history.png)
+![router - history](router-history.png)

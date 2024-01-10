@@ -138,7 +138,7 @@ by [yck](https://github.com/KieSun/)
 
 ## 如何高效自学
 
-![how-to-learn-effectively](../img/how-to-learn-effectively.png)
+![how-to-learn-effectively](how-to-learn-effectively.png)
 
 自学是每个工程师都需要掌握的一项技能。这个学习方法笔者百试百灵，学习任何技术都会用上这个思路。另外我们还能通过这个思路拓宽自己的技术栈，将各个知识联系起来建立自己的知识体系，并且通过这种学习方式学到的知识也不容易遗忘。
 
@@ -513,7 +513,7 @@ Virtual DOM 也就是虚拟节点。通过 JS 的 Object 对象模拟 DOM 中的
 
 ### React 推荐学习路径
 
-![LR1Dyo](../img/reactStudy.png)
+![LR1Dyo](reactStudy.png)
 
 大家可以跟着以上学习路径学习，其中除了概念相关的内容是必须学习之外，生态相关的内容大家可以在使用时再学习。
 

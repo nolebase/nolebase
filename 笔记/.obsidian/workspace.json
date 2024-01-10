@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cc0ece0314f14f30",
+        "id": "ed1a4641bddcb285",
         "type": "tabs",
         "children": [
           {
-            "id": "1c8eefe23c995828",
+            "id": "f6cc17b793f64a25",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 302.5
   },
   "right": {
     "id": "11ea0716b6d091fb",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md"
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md"
               }
             }
           }
@@ -146,52 +146,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c8eefe23c995828",
+  "active": "f6cc17b793f64a25",
   "lastOpenFiles": [
-    "🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
-    "🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
-    "🧱 基础设施/🚢 Kubernetes/用 kind 创建的测试集群快速部署应用并暴露 NodePort 服务到宿主机方便调试.md",
-    "🧱 基础设施/🚢 Kubernetes/完全卸载集群内的 `kube-proxy`.md",
-    "🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
-    "🧱 基础设施/🚢 Kubernetes/完全卸载使用 Helm 安装的 Cilium.md",
-    "🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
-    "🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
-    "🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
-    "🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
-    "🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubeadm.md",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubelet 和 kubectl.md",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubeadm.md",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.2 升级和更新的操作步骤.md",
-    "🧱 基础设施/🚢 Kubernetes/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
-    "🤖 AI 人工智能/用 PyTorch Lightning 监控和串流 PyTorch 的训练进度.md",
-    "🛠️ 开发/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/在开发用的测试集群上用 Helm 安装 NebulaGraph.md",
-    "🛠️ 开发/🕸 网络/记一次 Docker Swarm 和 K8s 网络异常的排查和解决.md",
-    "🛠️ 开发/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
-    "📚 个人知识管理/为什么 Nólëbase 从 Creative Commons 协议的 BY-NC-SA 切换到了 BY-SA？.md",
+    "🛠️ Dev 开发/Next.js/index.md",
+    "🛠️ Dev 开发/GitHub 学生包.md",
+    "在保修期内的商品.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+    "Untitled",
+    "🌳 Life 生活 --Work Life Balance--/影视/video/Stranger.md",
+    "index.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/19.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/18.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/17.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/16.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/15.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/14.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/13.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/12.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/11.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1.png",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1.jam",
+    "📦 Product 产品/启示录：打造用户喜爱的产品",
+    "pm",
+    "🛠️ Dev 开发/Next.js/rendering/index.md",
+    "🛠️ Dev 开发/Next.js/routing-fundamentals.txt",
+    "🛠️ Dev 开发/Next.js/rendering",
+    "🛠️ Dev 开发/Next.js",
+    "🤔 UX 用户体验设计/Google UX Course/2/Understaand-design-ideation.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Creating-User-Stories-and-User-Journey-Map.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Create-Problem-Statements.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Conduct-Competitve-Audits.md",
+    "🤔 UX 用户体验设计/Google UX Course/2",
+    "🤔 UX 用户体验设计/Google UX Course",
+    "🌳 Life 生活 --Work Life Balance--/影视/video",
+    "🛠️ Dev 开发/🛠️ 开发/go/concurrency.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/introduction.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/strings.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/time.md",
+    "README.md",
+    "🛠️ Dev 开发/nodejs/intro.md",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-5.png",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-4.png",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-3.png",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-2.png",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-1.png",
-    "📚 个人知识管理/assets",
-    "📚 个人知识管理",
-    "🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新",
-    "🧱 基础设施/🚢 Kubernetes",
-    "🧱 基础设施",
-    "🛠️ 开发/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph",
-    "🛠️ 开发/🗂 数据库/图数据库 Graph DB",
-    "🛠️ 开发/🕸 网络",
-    "🛠️ 开发/🗂 数据库",
-    "🛠️ 开发",
-    "过去待整理的笔记/java-about/06app/04springboot/04rabbitmq.md",
-    "过去待整理的笔记/java-about/06app/04springboot/03rabbitmq.md",
-    "过去待整理的笔记/public/logo.jpg",
-    "过去待整理的笔记/img/reactStudy.png",
-    "过去待整理的笔记/img/how-to-learn-effectively.webp",
-    "过去待整理的笔记/img/how-to-learn-effectively.png",
-    "过去待整理的笔记/framework/router-hash.png"
+    "过去笔记/public/logo.jpg",
+    "过去笔记/img/reactStudy.png",
+    "过去笔记/img/how-to-learn-effectively.webp",
+    "过去笔记/img/how-to-learn-effectively.png"
   ]
 }

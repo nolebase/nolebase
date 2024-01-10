@@ -88,7 +88,7 @@ const func4 = x => { key: 1, value: 2}      // 错误. 语法错误
 
 :::
 
-箭头函数的简洁语法让其在实际开发中非常常用。尤其是在调用 map() , filter() , reduce() 等[数组 Array](./Array)方法时。
+箭头函数的简洁语法让其在实际开发中非常常用。尤其是在调用 map() , filter() , reduce() 等[数组 Array](🛠️%20Dev%20开发/🛠️%20开发/js/Array.md)方法时。
 
 ```js
 
