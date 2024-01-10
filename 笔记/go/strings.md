@@ -1,0 +1,3 @@
+strings.index
+
+strings.lastindex

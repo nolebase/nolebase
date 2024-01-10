@@ -41,6 +41,6 @@
 ![](https://miro.medium.com/v2/resize:fit:998/format:webp/1*l5qKSazec7hfkT0SmdH9oA.png)
 
 （4）指向国内已备案的大厂，或比如公共域名解析服务DNS： 114.114.114.114
-![](assets/domain.png)
+![](../assets/domain.png)
 
 鸣谢：[Marvin](https://samon127.medium.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%9F%E5%90%8D%E6%8A%A2%E6%95%91-66cde1f83aa0)

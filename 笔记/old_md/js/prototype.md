@@ -1,0 +1,925 @@
+原型与原型链
+===
+
+<!-- 目录开始 -->
+## <a name="chapter-one" id="chapter-one"></a>一 目录
+
+
+| 目录 |
+| --- |
+| [一 目录](#chapter-one) |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| &emsp;[2.1 本文知识点概览](#chapter-two-one) |
+| &emsp;[2.2 为什么需要原型及原型链](#chapter-two-two) |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 普通对象和函数对象](#chapter-three) |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 构造函数](#chapter-four) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 原型](#chapter-five) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 constructor](#chapter-six) |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 new](#chapter-seven) |
+| &emsp;[7.1 手写 new](#chapter-seven-one) |
+| &emsp;[7.2 题目：求输出结果](#chapter-seven-two) |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 __proto__](#chapter-eight) |
+| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 Object 和 Function 的原型指向](#chapter-night) |
+| &emsp;[9.1 回顾前面内容](#chapter-night-one) |
+| &emsp;[9.2 Object 和 Function](#chapter-night-two) |
+| &emsp;[9.3 题目：阐述题](#chapter-night-three) |
+| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 原型链](#chapter-ten) |
+| &emsp;[10.1 万物皆对象](#chapter-ten-one) |
+| &emsp;[10.2 题目 1：求输出结果](#chapter-ten-two) |
+| &emsp;[10.3 题目 2：求输出结果](#chapter-ten-three) |
+| <a name="catalog-chapter-eleven" id="catalog-chapter-eleven"></a>[十一 题目](#chapter-eleven) |
+| &emsp;[11.1 选择题](#chapter-eleven-one) |
+| &emsp;[11.2 阐释原因](#chapter-eleven-two) |
+| <a name="catalog-chapter-twelve" id="catalog-chapter-twelve"></a>[十二 参考文献](#chapter-twelve) |
+<!-- 目录结束 -->
+
+## <a name="chapter-two" id="chapter-two"></a>二 前言
+
+> [返回目录](#chapter-one)
+
+![图](https://github.com/LiangJunrong/document-library/blob/master/%E7%B3%BB%E5%88%97-%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/JavaScript/img/JavaScript-prototype-01.png?raw=true)
+
+上面是原型链神图，如果你能理解，你基本不用看这篇文章了。
+
+如果不能理解那也没关系，下面 **jsliang** 跟你慢慢唠叨。
+
+### <a name="chapter-two-one" id="chapter-two-one"></a>2.1 本文知识点概览
+
+> [返回目录](#chapter-one)
+
+* [x] 构造函数 `funciton Person() {}`
+* [x] 实例 `const person = new Person()`
+* [x] 原型 `Person.prototype`
+* [x] 隐藏属性 `constructor`
+  * [x] 等式 1：`person.constructor === Person`
+  * [x] 等式 2：`Person.prototype.constructor === Person`
+* [x] `new`
+  * [x] `new` 的原生例子
+  * [x] 手写 `new`：一、判断首参为函数；二、通过 `Object.create()` 创建新对象并且绑定原型链；三、通过 `call` 或者 `apply` 修正 `this` 指向和传参；四、通过 `typeof` 判断函数对象和普通对象；五、函数对象和普通对象返回构造函数的 `return` 值，否则返回新对象
+  * [x] 通过对手写 `new` 过程的了解来做题
+* [x] 查找实例对应的对象的原型 `person.__proto__ === Person.prototype`
+* [x] 函数对象指向
+  * [x] `person.__proto__ === Person.prototype`
+  * [x] `Person.__proto__ === Function.prototype`
+* [x] 普通对象指向
+  * [x] `obj.__proto__ === Object.prototype`
+* [x] 原型链
+  * [x] `foo.__proto__ === Object.prototype`
+  * [x] `F.__proto__ === Function.prototype`
+  * [x] `F.__proto__.__proto__ === Object.prototype`
+
+### <a name="chapter-two-two" id="chapter-two-two"></a>2.2 为什么需要原型及原型链
+
+> [返回目录](#chapter-one)
+
+**jsliang** 觉得他 2019 年写过的那个例子可以解释地很清楚：
+
+> [jsliang 2019 - 原型和原型链](https://github.com/LiangJunrong/document-library/blob/master/%E7%B3%BB%E5%88%97-%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/2019/JavaScript-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
+
+```js
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.eat = function() {
+    console.log(age + "岁的" + name + "在吃饭。");
+  }
+}
+
+let p1 = new Person("jsliang", 24);
+let p2 = new Person("jsliang", 24);
+
+console.log(p1.eat === p2.eat); // false
+```
+
+可以看到，对于同一个函数，我们通过 `new` 生成出来的实例，都会开出新的一块堆区，所以上面代码中 `person 1` 和 `person 2` 的吃饭是不同的（返回 `false`）。
+
+拥有属于自己的东西（例如房子、汽车），这样很好。
+
+但它也有不好的地方，毕竟 JavaScript 总共就那么点地儿（内存），你不停地建房子，到最后是不是没有空地了？（内存不足）
+
+所以，咱要想个法子，建个类似于共享库的对象（例如小区公共健身房），这样就可以在需要的时候，大家都跑去公共健身房锻炼，就不需要开辟新空间了。
+
+而如何开辟好这个空间，就需要用到原型 `prototype`。
+
+```js
+function Person(name) {
+  this.name = name;
+}
+
+// Person 在它的原型上定义了一块空间 eat，同一个小区的都可以访问它
+Person.prototype.eat = function() {
+  console.log("吃饭");
+}
+
+let p1 = new Person("jsliang", 24);
+let p2 = new Person("梁峻荣", 24);
+
+console.log(p1.eat === p2.eat); // true
+```
+
+看！这样我们就做好了公共小区健身房了。
+
+> 跟进了，发车啦！一大波知识点正在前面
+
+## <a name="chapter-three" id="chapter-three"></a>三 普通对象和函数对象
+
+> [返回目录](#chapter-one)
+
+在 JavaScript 中，万物皆对象，你要一个吗？`new Object()` 啊！
+
+当然，就好比同样为人，也区分普通人和天才。
+
+对象也是有分类的，分为 **普通对象** 和 **函数对象**。
+
+而 `Object` 和 `Function` 都是 JavaScript **自带的函数对象**。
+
+下面我们做个小区分：
+
+```js
+function fun1() {};
+const fun2 = function() {};
+const fun3 = new Function();
+
+const obj1 = {};
+const obj2 = new Object();
+const obj3 = new fun1();
+
+console.log(typeof Object); // function 
+console.log(typeof Function); // function  
+
+console.log(typeof fun1); // function 
+console.log(typeof fun2); // function 
+console.log(typeof fun3); // function   
+
+console.log(typeof obj1); // object 
+console.log(typeof obj2); // object 
+console.log(typeof obj3); // object
+```
+
+在上面代码中，`fun1`、`fun2`、`fun3` 都是函数对象，`obj1`、`obj2`、`obj3` 都是普通对象。
+
+记住这点，下面我们会很常用~
+
+## <a name="chapter-four" id="chapter-four"></a>四 构造函数
+
+> [返回目录](#chapter-one)
+
+* 什么是构造函数？
+
+当任意一个普通函数用于创建一个类对象时，它就被称作构造函数，或构造器。
+
+它有几点特性：
+
+1. 默认函数首字母大写
+2. 通过 `new` 调用一个函数
+3. 构造函数返回的是一个对象
+
+例如：
+
+```js
+function Person(name) {
+  this.name = name;
+}
+const person = new Person('jsliang');
+```
+
+这里的 `Person` 就是构造函数，而 `person` 则是构造函数 `Person` 的 **实例对象**（后面简称实例）。
+
+要清楚构造函数具体内容，我们应该看一下 `new` 的实现机制，但是现在知识点前置不足，我们后面章节再进行讲解。
+
+小结本章知识点：
+
+* [x] 构造函数 `funciton Person() {}`
+* [x] 实例 `const person = new Person()`
+
+## <a name="chapter-five" id="chapter-five"></a>五 原型
+
+> [返回目录](#chapter-one)
+
+在 JavaScript 中，每当定义一个对象的时候，对象中都会包含一些预定义的属性。
+
+其中每个 **函数对象** 都有一个 `prototype` 属性，这个属性的指向被称为这个函数对象的 **原型对象**（简称原型）。
+
+```js
+function Person() {};
+Person.prototype.name = 'jsliang';
+Person.prototype.sayName = function() {
+  console.log(this.name);
+};
+
+const person1 = new Person();
+person1.sayName(); // jsliang
+
+const person2 = new Person();
+person2.sayName(); // jsliang
+
+// 这两个实例对应的原型方法 sayName 都是一样的
+console.log(person1.sayName === person2.sayName); // true
+```
+
+出来了出来了，呼应前言内容，我们通过 `prototype` 定义了构造函数 `Person` 的小区公共健身房，这样区里邻居（实例 `person1` 和 `person2`）就都可以过去健身了。
+
+小结本章知识点：
+
+* [x] 原型 `Person.prototype`
+
+## <a name="chapter-six" id="chapter-six"></a>六 constructor
+
+> [返回目录](#chapter-one)
+
+讲完原型，我们看看 `constructor` 是什么：
+
+```js
+function Person(name) {
+  this.name = name;
+}
+const person = new Person('jsliang');
+```
+
+在上面代码中，有构造函数 `Person` 和它的实例 `person`。
+
+在 JavaScript 中，每个实例都会有个隐藏属性 `constructor`。
+
+而构造函数和实例存在一个等式：
+
+```js
+person.constructor === Person; // true
+```
+
+所以得出一个结论：
+
+* **实例的属性 `constructor` 指向构造函数**
+
+同时，这个函数的原型的 `constructor` 会指向这个函数：
+
+```js
+Person.prototype.constructor === Person; // true
+```
+
+> `constructor` 暂时没找到合适的题目，所以记住上面 2 个点即可~
+
+小结本章知识点：
+
+* [x] 隐藏属性 `constructor`
+  * [x] 等式 1：`person.constructor === Person`
+  * [x] 等式 2：`Person.prototype.constructor === Person`
+
+## <a name="chapter-seven" id="chapter-seven"></a>七 new
+
+> [返回目录](#chapter-one)
+
+在上面我们了解了 4 个知识点了；
+
+* [x] 构造函数 `funciton Person() {}`
+* [x] 实例 `const person = new Person()`
+* [x] 原型 `Person.prototype`
+* [x] 隐藏属性 `constructor`
+  * [x] 等式 1：`person.constructor === Person`
+  * [x] 等式 2：`Person.prototype.constructor === Person`
+
+那么，`new` 在这里起了啥作用？我们先看看原生 `new` 的一个返回情况：
+
+```js
+function Person( name, age){
+  this.name = name;
+  this.age = age;
+ 
+  // return;                              // 返回 this
+  // return null;                         // 返回 this
+  // return this;                         // 返回 this
+  // return false;                        // 返回 this
+  // return 'hello world';                // 返回 this
+  // return 2;                            // 返回 this
+  
+  // return [];                           // 返回 新建的 [], person.name = undefined
+  // return function(){};                 // 返回 新建的 function，抛弃 this, person.name = undefined
+  // return new Boolean(false);           // 返回 新建的 boolean，抛弃 this, person.name = undefined
+  // return new String('hello world');    // 返回 新建的 string，抛弃 this, person.name = undefined
+  // return new Number(32);               // 返回 新的 number，抛弃 this, person.name = undefined
+}
+var person = new Person("jsliang", 25);
+console.log(person); // Person {name: "jsliang", age: 25}
+```
+
+那么下面根据返回情况，我们试试手写 `new` 吧！
+
+### <a name="chapter-seven-one" id="chapter-seven-one"></a>7.1 手写 new
+
+> [返回目录](#chapter-one)
+
+先看一遍最终版的简版：
+
+```js
+function myNew(func, ...args) {
+  if (typeof func !== 'function') {
+    throw '第一个参数必须是方法体';
+  }
+
+  const obj = {};
+  obj.__proto__ = Object.create(func.prototype);
+
+  let result = func.apply(obj, args);
+
+  const isObject = typeof result === 'object' && result !== null;
+  const isFunction = typeof result === 'function';
+
+  return isObject || isFunction ? result : obj;
+}
+```
+
+它其中的逻辑道道是：
+
+1. **第一个参数必须是个函数**。`const person = new Person()`，但是我们搞不了原汁原味的，那就变成 `const person = myNew(Person)`。
+2. **原型链继承**。我们新建一个对象 `obj`，这个 `obj` 的 `__proto__` 指向 `func` 的原型 `prototype`，即 `obj.__proto__ === func.prototype`。
+3. **修正 `this` 指向**。通过 `apply` 绑定 `obj` 和 `func` 的关系，并且将参数作为一个数组传递进去（方法体定义已经将剩余参数解构为数组）
+4. **判断构造函数是否返回 `Object` 或者 `Function`**。`typeof` 判断 `object` 需要排除 `null`，因为 `typeof null === object`。
+5. **非函数和对象返回新创建的对象，否则返回构造函数的 `return` 值**。
+
+最后贴上详尽注释版本：
+
+```js
+function myNew(func, ...args) {
+  // 1. 判断方法体
+  if (typeof func !== 'function') {
+    throw '第一个参数必须是方法体';
+  }
+
+  // 2. 创建新对象
+  const obj = {};
+
+  // 3. 这个对象的 __proto__ 指向 func 这个类的原型对象
+  // 即实例可以访问构造函数原型（constructor.prototype）所在原型链上的属性
+  obj.__proto__ = Object.create(func.prototype);
+  // 为了兼容 IE 可以让步骤 2 和 步骤 3 合并
+  // const obj = Object.create(func.prototype);
+
+  // 4. 通过 apply 绑定 this 执行并且获取运行后的结果
+  let result = func.apply(obj, args);
+  
+  // 5. 如果构造函数返回的结果是引用数据类型，则返回运行后的结果
+  // 否则返回新创建的 obj
+  const isObject = typeof result === 'object' && result !== null;
+  const isFunction = typeof result === 'function';
+
+  return isObject || isFunction ? result : obj;
+}
+
+// 测试
+function Person(name) {
+  this.name = name;
+  return function() { // 用来测试第 5 点
+    console.log('返回引用数据类型');
+  };
+}
+// 用来测试第 2 点和第 3 点
+Person.prototype.sayName = function() {
+  console.log(`My name is ${this.name}`);
+}
+const me = myNew(Person, 'jsliang'); // 用来测试第 4 点
+me.sayName(); // My name is jsliang
+console.log(me); // Person {name: 'jsliang'}
+
+// 用来测试第 1 点
+// const you = myNew({ name: 'jsliang' }, 'jsliang'); // 报错：第一个参数必须是方法体
+```
+
+### <a name="chapter-seven-two" id="chapter-seven-two"></a>7.2 题目：求输出结果
+
+> [返回目录](#chapter-one)
+
+如果你知道怎么手写一个 `new` 了，那么下面问题就轻而易举了：
+
+```js
+var A = function() {};
+A.prototype.n = 1;
+
+var b = new A();
+A.prototype = {
+  n: 2,
+  m: 3,
+};
+
+var c = new A();
+
+console.log(b.n); // 输出啥？
+console.log(b.m); // 输出啥？
+
+console.log(c.n); // 输出啥？
+console.log(c.m); // 输出啥？
+```
+
+求输出结果？
+
+---
+
+答案：
+
+```
+b.n -> 1
+b.m -> undefined
+
+c.n -> 2
+c.m -> 3
+```
+
+分析：
+
+1. `b.n` 和 `b.m` 考查的是 `new` 的一个实现机制。我们知道这种场景下 `new` 操作会生成一个新对象进行挂载，所以在 `var b = new A()` 的时候，`A` 的原型（`prototype`）上挂载的参数就传递过去了。即 `b.n` 为 `1`，而 `b.m` 为 `undefined`。
+2. 同 1，`c = new A()` 是在 `A.prototype` 改变后定义的，所以这时候 `A` 的原型上的数据挂载上去了。
+
+小结本章知识点：
+
+* [x] `new`
+  * [x] `new` 的原生例子
+  * [x] 手写 `new`
+  * [x] 通过对手写 `new` 过程的了解来做题
+
+## <a name="chapter-eight" id="chapter-eight"></a>八 __proto__
+
+> [返回目录](#chapter-one)
+
+在上面，我们讲过 `Person` 有个属于自己的公共区间：`Person.prototype`。
+
+那么，小区居民如果要去这个公共健身房，这条路怎么走呢？（`person` 怎么找到 `Person.prototype`）
+
+在 JavaScript 中，每个 JavaScript 对象（普通对象和函数对象）都具有一个属性 `__proto__`，这个属性会指向该对象的原型。
+
+看代码：
+
+```js
+function Person() {};
+const person = new Person();
+
+console.log(person.__proto__ === Person.prototype); // true
+```
+
+所以，现在我们小区居民（实例对象）知道怎么找到公共健身房（原型）啦！
+
+小结本章知识点：
+
+* [x] 查找实例对应的对象的原型 `person.__proto__ === Person.prototype`
+
+## <a name="chapter-night" id="chapter-night"></a>九 Object 和 Function 的原型指向
+
+> [返回目录](#chapter-one)
+
+### <a name="chapter-night-one" id="chapter-night-one"></a>9.1 回顾前面内容
+
+> [返回目录](#chapter-one)
+
+在上面我们将这些基础知识点都了解了，是时候回顾拓展下之前的内容了：
+
+```js
+function fun1() {};
+const fun2 = function() {};
+const fun3 = new Function();
+
+const obj1 = {};
+const obj2 = new Object();
+const obj3 = new fun1();
+
+console.log(typeof Object); // function 
+console.log(typeof Function); // function  
+
+console.log(typeof fun1); // function 
+console.log(typeof fun2); // function 
+console.log(typeof fun3); // function   
+
+console.log(typeof obj1); // object 
+console.log(typeof obj2); // object 
+console.log(typeof obj3); // object
+```
+
+**jsliang**：这份代码中，哪些是函数对象，哪些是普通对象，小伙伴们还记得不？
+
+是的，`fun` 开头的都是函数对象：`fun1`、`fun2`、`fun3`，特例 `Object` 和 `Function` 也是。
+
+下文我们要对 `Object` 和 `Function` 动刀了！
+
+### <a name="chapter-night-two" id="chapter-night-two"></a>9.2 Object 和 Function
+
+> [返回目录](#chapter-one)
+
+```js
+function Person() {};
+const person = new Person();
+```
+
+在上面代码中，我们看到实例 `person` 是 `new` 构造函数 `Person` 出来的。
+
+那么，`Person` 又是怎么来的呢？
+
+> 定义一个函数对象的 3 种方法
+
+```js
+const Person = new Function();
+// 相当于 function Person() {};
+// 或者相当于 const Person = function() {};
+console.log(Person.__proto__ === Function.prototype); // true
+```
+
+所以将这两个结合起来：
+
+```js
+const Person = new Function();
+const person = new Person();
+
+console.log(person.__proto__ === Person.prototype); // true
+console.log(Person.__proto__ === Function.prototype); // true
+```
+
+哦豁，有没有一种豁然开朗的感觉？
+
+> **jsliang**：`Person.prototype.__proto__` 对应的是什么？下一章揭晓
+
+那么，如果是对象呢？
+
+```js
+const obj = new Object();
+// 相当于 obj = {};
+console.log(obj.__proto__ === Object.prototype); // true
+```
+
+现在我们就搞懂了普通对象和函数对象以及 JavaScript 内置 `Object` 和 `Function` 的一个指向情况，下面我们做一道小题目。
+
+### <a name="chapter-night-three" id="chapter-night-three"></a>9.3 题目：阐述题
+
+> [返回目录](#chapter-one)
+
+```js
+function Person(name) {
+  this.name = name;
+}
+
+let p = new Person('jsliang');
+```
+
+问题 1：`p.__proto__` 等于什么？
+
+问题 2：`Person.__proto__` 等于什么？
+
+---
+
+答：
+
+* `p.__proto__ === Person.prototype`
+* `Person.__proto__ === Function.prototype`
+
+解析：无。本章内容已经讲解了，不需要这里在累述。
+
+小结本章知识点：
+
+* [x] 函数对象指向
+  * [x] `person.__proto__ === Person.prototype`
+  * [x] `Person.__proto__ === Function.prototype`
+* [x] 普通对象指向
+  * [x] `obj.__proto__ === Object.prototype`
+
+## <a name="chapter-ten" id="chapter-ten"></a>十 原型链
+
+> [返回目录](#chapter-one)
+
+在上文中，**jsliang** 询问 `Person.prototype.__proto__` 对应的是什么？
+
+看完这章你就能找到答案！
+
+### <a name="chapter-ten-one" id="chapter-ten-one"></a>10.1 万物皆对象
+
+> [返回目录](#chapter-one)
+
+首先我们需要从 “万物皆对象” 这句话看起：
+
+```js
+function Person() {};
+const person = new Person();
+
+console.log(person.__proto__ === Person.prototype); // true
+console.log(Person.__proto__ === Function.prototype); // true
+
+console.log(person.__proto__.__proto__ === Object.prototype); // true
+```
+
+我们先科普一个知识点：
+
+* **通过 `__proto__` 最终查找到的是 `null`**
+
+哎，不是万物皆对象吗？
+
+是！但是对象从哪来的，无中生有啊：
+
+* `Object.prototype.__proto__ === null`
+
+对象的原型 `prototype` 通过 `__proto__` 找到最终归宿：`null`。
+
+这就好比小区公共健身房哪里的，通过空地建的，空地 = `null`。
+
+> 这仅仅代表 **jsliang** 的观点，不同大佬有不同的观点，甚至会从 C++ 等角度解释
+
+OK，那 `person.__proto__.__proto__ === Object.prototype` 怎么说？
+
+我们看例子：
+
+```js
+function Person() {};
+Person.prototype.name = 'jsliang2';
+Object.prototype.name = 'jsliang3';
+
+const person = new Person();
+
+// 当前展示
+console.log(person.name); // jsliang2
+
+// 往实例添加属性
+person.name = 'jsliang1';
+console.log(person.name); // jsliang1【person 存在该属性】
+
+// 删除实例属性
+delete person.name;
+console.log(person.name); // jsliang2【Person.prototype 存在该属性】
+
+// 删除构造函数原型
+delete Person.prototype.name;
+console.log(person.name); // jsliang3 【Object.prototype 存在该属性】
+
+// 删除 Object 原型
+delete Object.prototype.name;
+console.log(person.name); // undefined 【都删除了，都不存在了】
+
+console.log(person.__proto__ === Person.prototype); // true
+console.log(person.__proto__.__proto__ === Object.prototype); // true
+```
+
+原型链：如果一个实例对象不存在某个属性，那么 JavaScript 就会往该构造函数的原型上找；如果该构造函数的原型没找到，那么会继续往 `Object` 的原型上找；如果 `Object` 的原型还没有，那就返回 `undefined`。
+
+这条链：
+
+* **实例对象.xxx -> 构造函数.prototype.xxx -> Object.prototype.xxx**
+
+这样是不是就缕清了：
+
+* `person.__proto__ === Person.prototype`
+* `Person.__proto__ === Function.prototype`
+* `person.__proto__.__proto__ === Object.prototype`
+* `Object.prototype.__proto__ === null`
+
+那么如果有代码：
+
+```js
+let str1 = 'jsliang1';
+let str2 = new String('jsliang2');
+```
+
+下面这几个对应啥？
+
+```
+str1.__proto__ === ?
+str1.__proto__.__proto__ === ?
+str2.__proto__ === ?
+str2.__proto__.__proto__ === ?
+```
+
+答案：
+
+* `str1.__proto__` 和 `str2.__proto__` 都等于 `String.prototype`
+* `str1.__proto__.__proto__` 和 `str2.__proto__.__proto__` 都等于 `Object.prototype`
+
+最后再看看其他类型的，相信小伙伴就彻底搞懂 JavaScript 原型链了；
+
+```js
+// 字符串
+let str = 'jsliang';
+console.log(str.__proto__ === String.prototype);             // true
+console.log(str.__proto__.__proto__ === Object.prototype);   // true
+
+// 数字
+let num = 25;
+console.log(num.__proto__ === Number.prototype);             // true
+console.log(num.__proto__.__proto__ === Object.prototype);   // true
+
+// 布尔值
+let bool = false;
+console.log(bool.__proto__ === Boolean.prototype);            // true
+console.log(bool.__proto__.__proto__ === Object.prototype);   // true
+
+// 数组
+let arr = [];
+console.log(arr.__proto__ === Array.prototype);               // true
+console.log(arr.__proto__.__proto__ === Object.prototype);    // true
+
+// 正则
+let reg = /jsliang/g;
+console.log(reg.__proto__ === RegExp.prototype);              // true
+console.log(reg.__proto__.__proto__ === Object.prototype);    // true
+
+// 日期
+let date = new Date();
+console.log(date.__proto__ === Date.prototype);               // true
+console.log(date.__proto__.__proto__ === Object.prototype);   // true
+```
+
+万物皆对象~
+
+下面做两个小测试。
+
+### <a name="chapter-ten-two" id="chapter-ten-two"></a>10.2 题目 1：求输出结果
+
+> [返回目录](#chapter-one)
+
+```js
+var F = function() {};
+
+Object.prototype.a = function() {
+  console.log('a');
+};
+
+Function.prototype.b = function() {
+  console.log('b');
+}
+
+var f = new F();
+
+f.a(); // 输出啥？
+f.b(); // 输出啥？
+
+F.a(); // 输出啥？
+F.b(); // 输出啥？
+```
+
+求输出结果？
+
+---
+
+答案：
+
+```
+f.a() -> a
+f.b() -> f.b is not a function
+
+F.a() -> a
+F.b() -> b
+```
+
+解析：
+
+**首先**，看 `f`：
+
+```js
+var F = function() {};
+var f = new F();
+```
+
+我们知道：
+
+* `f.__proto__ === F.prototype`
+* `F.__proto__ === Function.prototype`
+* `f.__proto__.__proto__ === Object.prototype`
+
+所以，`f.a()` 会先查找 `f` 自身存在 `a` 属性否；如果不存在，往 `F` 原型 `F.prototype` 上，看看有没有 `a` 否；如果不存在，往 `Object.prototype` 上找，发现 `a`。
+
+而 `f.b` 就没有了，它可以通过 `F.__proto__` 去查找到，因为定义到 `Function.prototype` 上了。
+
+### <a name="chapter-ten-three" id="chapter-ten-three"></a>10.3 题目 2：求输出结果
+
+> [返回目录](#chapter-one)
+
+```js
+var foo = {};
+var F = function() {};
+
+Object.prototype.a = 'value a';
+Function.prototype.b = 'value b';
+
+console.log(foo.a); // 输出啥
+console.log(foo.b); // 输出啥
+
+console.log(F.a); // 输出啥
+console.log(F.b); // 输出啥
+```
+
+求输出结果？
+
+---
+
+答：
+
+```
+foo.a -> value a
+foo.b -> undefined
+
+F.a -> value a
+F.b -> value b
+```
+
+列举关系：
+
+* `foo.__proto__ === Object.prototype`
+* `F.__proto__ === Function.prototype`
+* `F.__proto__.__proto__ === Object.prototype`
+
+所以：
+
+1. `foo` 自身没有 `a` 属性，那就往 `Object` 上去找，从而得到 `value a`。而 `foo.b` 就找不到了，返回 `undefined`。
+2. `F` 自身没有 `a` 属性，那就往 `Function` 上去找，没找到；继续往 `Object.prototype` 上找，返回 `value a`。而 `Function.prototype` 存在 `b` 属性，返回 `value b`。
+
+## <a name="chapter-eleven" id="chapter-eleven"></a>十一 题目
+
+> [返回目录](#chapter-one)
+
+JavaScript 原型和原型链的题目挺多的，后面逐步收录到这里吧！
+
+### <a name="chapter-eleven-one" id="chapter-eleven-one"></a>11.1 选择题
+
+> [返回目录](#chapter-one)
+
+```js
+var F = function() {};
+
+Object.prototype.a = function() {};
+Function.prototype.b = function() {};
+
+var f = new F();
+```
+
+请选择：
+
+* A：`f` 能取到 `a`，但取不到 `b`。
+* B：`f` 能取到 `a`、`b`。
+* C：`F` 能取到 `b`，不能取到 `a`。
+* D：`F` 能取到 `a`，不能取到 `b`。
+
+---
+
+答案：A
+
+解析：
+
+* `F.a = function`
+* `F.b = function`
+* `f.a = function`
+* `f.b = undefined`
+
+首先，函数 `F` 通过原型链，可以找到
+
+```js
+Object.prototype.a = function() {};
+Function.prototype.b = function() {};
+```
+
+这两个绑定的 `a` 和 `b`。
+
+但是 `f = new F()` 出来的是一个 Object，而不是 Function。
+
+所以 `f` 能找到 `a`，但是找不到 `b`。
+
+### <a name="chapter-eleven-two" id="chapter-eleven-two"></a>11.2 阐释原因
+
+> [返回目录](#chapter-one)
+
+```js
+Function.prototype.a = 'a';
+Object.prototype.b = 'b';
+function Person();
+var p = new Person();
+
+console.log(p.a); // undefined
+console.log(p.b); // b
+```
+
+请讲述下原因？
+
+---
+
+答案：
+
+`Person` 函数是 `Function` 对象的一个实例，所以可以访问 `Function` 和 `Object` 原型链上的内容。
+
+而 `new Person` 返回的是一个对象，只能访问挂载到 `Object` 原型链上的内容。
+
+所以只有 `p.b`。
+
+## <a name="chapter-twelve" id="chapter-twelve"></a>十二 参考文献
+
+> [返回目录](#chapter-one)
+
+如果小伙伴们觉得看完 **jsliang** 的文章，对原型和原型链还不理解。
+
+或者想更加深入理解，有自己的一套思路，可以看下面的参考文献：
+
+* [x] [jsliang 2019 面试 - JavaScript-原型与原型链](https://github.com/LiangJunrong/document-library/blob/master/%E7%B3%BB%E5%88%97-%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/2019/JavaScript-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)【阅读建议：1h】
+* [x] [【何不三连】比继承家业还要简单的JS继承题-封装篇(牛刀小试)](https://juejin.im/post/6844904094948130824)【阅读建议：2h】
+* [x] [深入理解 JavaScript 原型](https://mp.weixin.qq.com/s/1UDILezroK5wrcK-Z5bHOg)【阅读建议：1h】
+* [x] [【THE LAST TIME】一文吃透所有JS原型相关知识点](https://juejin.im/post/5dba456d518825721048bce9)【阅读建议：30min】
+* [x] [JavaScript深入之从原型到原型链](https://github.com/mqyqingfeng/blog/issues/2)【阅读建议：30min】
+* [x] [JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15)【阅读建议：10min】
+* [x] [JavaScript 引擎基础：原型优化](https://hijiangtao.github.io/2018/08/21/Prototypes/)【阅读建议：10min】
+* [x] [详解JS原型链与继承](http://louiszhai.github.io/2015/12/15/prototypeChain/)【阅读建议：30min】
+* [x] [从proto和prototype来深入理解JS对象和原型链](https://github.com/creeperyang/blog/issues/9)【阅读建议：10min】
+* [x] [代码复用模式](https://github.com/jayli/javascript-patterns/blob/master/chapter6.markdown)【阅读建议：10min】
+* [x] [深度解析原型中的各个难点](https://juejin.im/post/6844903575974313992)【阅读建议：10min】
+* [x] [最详尽的 JS 原型与原型链终极详解，没有「可能是」。（一）](https://www.jianshu.com/p/dee9f8b14771)【阅读建议：内容有些误导】
+* [x] [最详尽的 JS 原型与原型链终极详解，没有「可能是」。（二）](https://www.jianshu.com/p/652991a67186)【阅读建议：高程书摘取，经第一篇后不继续往后看】
+* [x] [最详尽的 JS 原型与原型链终极详解，没有「可能是」。（三）](https://www.jianshu.com/p/a4e1e7b6f4f8)【阅读建议：高程书摘取，经第一篇后不继续往后看】
+
+---
+
+> ![license 图](data:image/png;base64,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)<br/>jsliang 的文档库由 [梁峻荣](https://github.com/LiangJunrong) 采用 [知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可。<br/>基于 [https://github.com/LiangJunrong/document-library](https://github.com/LiangJunrong/document-library) 上的作品创作。<br/>本许可协议授权之外的使用权限可以从 [https://creativecommons.org/licenses/by-nc-sa/2.5/cn/](https://creativecommons.org/licenses/by-nc-sa/2.5/cn/) 处获得。

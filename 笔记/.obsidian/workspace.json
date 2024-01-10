@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e6e9f5fa677f2c99",
+        "id": "cc0ece0314f14f30",
         "type": "tabs",
         "children": [
           {
-            "id": "0250ed638b3b2c54",
+            "id": "1c8eefe23c995828",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md"
+              }
             }
           }
         ]
@@ -138,53 +146,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0250ed638b3b2c54",
+  "active": "1c8eefe23c995828",
   "lastOpenFiles": [
-    "💼 Work 泛微/DEMO/index.md",
-    "💼 Work 泛微/范文库.md",
-    "index.md",
-    "💼 Work 泛微/标准产品/index.md",
-    "💼 Work 泛微/DEMO",
-    "💼 Work 泛微/Untitled.md",
-    "💼 Work 泛微/模板编辑器.md",
-    "💼 Work 泛微/模板库.md",
-    "💼 Work 泛微/账号.md",
-    "💼 Work 泛微/富祥问题清单.md",
-    "Unity",
-    "Fin-财务管理/国际注册会计师",
-    "Fin-财务管理/中级会计",
-    "税务师",
-    "影视",
-    "NPDP",
-    "PMP",
-    "护眼/近视眼从800度降到现在的100度。我今年25岁(转).md",
-    "护眼",
-    "💼 Work 泛微/标准产品",
-    "💼 Work 泛微/产品建议.md",
-    "🎨 UI 用户界面设计/index.md",
-    "🛠️ Dev 开发/域名和DNS/我的域名.md",
-    "💼 Work 泛微/数据标准.md",
-    "🛠️ Dev 开发/MacOS/解压分离的压缩文件.md",
     "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
-    "旅游/每月最佳旅游地.md",
-    "🛠️ Dev 开发/assets/domain.png",
-    "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
-    "3D建模/index.md",
-    "Pasted image 20240106225146.png",
-    "色调.md",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-33-39.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-26-02.png",
-    "🎨 UI 用户界面设计/UI 重构/in.md",
-    "🎨 UI 用户界面设计/UI 重构/index.md",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-56-38.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-54-41.png",
-    "Pasted image 20240106225432.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-53-18.png",
-    "📝 Memo 札记/index.md",
-    "🤔 UX 用户体验设计/index.md",
-    "💼 Work 泛微/index.md",
-    "📦 PM 产品管理/index.md"
+    "old_md/index.md",
+    "old_md/react/refactor-component.md",
+    "old_md/react",
+    "old_md/python/tuple.md",
+    "old_md/python/Object-Oriented_Programming.md",
+    "old_md/python/dict.md",
+    "old_md/python/index.md",
+    "old_md/python/decorator.md",
+    "old_md/python/list.md",
+    "old_md/python",
+    "old_md/public/logo.jpg",
+    "old_md/public",
+    "old_md/network/rendering-principle.md",
+    "old_md/network/http.md",
+    "old_md/network/process-from-entering-URL-to-page-load-completion.md",
+    "old_md/network",
+    "old_md/js/variable.md",
+    "old_md/js/this.md",
+    "old_md/js/regex.md",
+    "old_md/js/prototype.md",
+    "old_md/js/other.md",
+    "old_md/js/echarts.md",
+    "old_md/js/array.md",
+    "old_md/js/default.md",
+    "old_md/js/closure.md",
+    "old_md/js",
+    "old_md/img/how-to-learn-effectively.webp",
+    "old_md/img/how-to-learn-effectively.png",
+    "old_md/img/reactStudy.png",
+    "old_md/img",
+    "old_md/go/41-50.md",
+    "old_md/go/31-40.md",
+    "old_md/go",
+    "old_md/framework/vitual-dom.md",
+    "old_md/framework/router.md",
+    "old_md/framework/router-history.png",
+    "old_md/framework/router-hash.png",
+    "old_md/framework/mvvm.md",
+    "old_md/framework",
+    "old_md/doc",
+    "mysql/base",
+    "old_md/history_docs/public/logo.jpg",
+    "old_md/history_docs/img/reactStudy.png",
+    "old_md/history_docs/img/how-to-learn-effectively.webp",
+    "old_md/history_docs/img/how-to-learn-effectively.png"
   ]
 }
