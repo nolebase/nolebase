@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "5b698a1dd86a9e8e",
+        "id": "e6e9f5fa677f2c99",
         "type": "tabs",
         "children": [
           {
-            "id": "7945a4fb416c34a5",
+            "id": "0250ed638b3b2c54",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "💼 Work 泛微/富祥问题清单.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cce945a4ee95cfa4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "护眼/近视眼从800度降到现在的100度。我今年25岁(转).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "护眼/近视眼从800度降到现在的100度。我今年25岁(转).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "护眼/近视眼从800度降到现在的100度。我今年25岁(转).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "护眼/近视眼从800度降到现在的100度。我今年25岁(转).md"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,32 +138,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cce945a4ee95cfa4",
+  "active": "0250ed638b3b2c54",
   "lastOpenFiles": [
+    "💼 Work 泛微/DEMO/index.md",
+    "💼 Work 泛微/范文库.md",
+    "index.md",
+    "💼 Work 泛微/标准产品/index.md",
+    "💼 Work 泛微/DEMO",
+    "💼 Work 泛微/Untitled.md",
+    "💼 Work 泛微/模板编辑器.md",
+    "💼 Work 泛微/模板库.md",
+    "💼 Work 泛微/账号.md",
     "💼 Work 泛微/富祥问题清单.md",
+    "Unity",
+    "Fin-财务管理/国际注册会计师",
+    "Fin-财务管理/中级会计",
+    "税务师",
+    "影视",
+    "NPDP",
+    "PMP",
     "护眼/近视眼从800度降到现在的100度。我今年25岁(转).md",
     "护眼",
-    "💼 Work 泛微/标准产品/index.md",
-    "💼 Work 泛微/模板编辑器.md",
     "💼 Work 泛微/标准产品",
-    "数据分析与可视化",
     "💼 Work 泛微/产品建议.md",
     "🎨 UI 用户界面设计/index.md",
     "🛠️ Dev 开发/域名和DNS/我的域名.md",
-    "index.md",
-    "SEO",
     "💼 Work 泛微/数据标准.md",
     "🛠️ Dev 开发/MacOS/解压分离的压缩文件.md",
-    "🛠️ Dev 开发/MacOS",
-    "🛠️ Dev 开发/其他/Untitled",
-    "🛠️ Dev 开发/域名和DNS",
     "🛠️ Dev 开发/域名和DNS/域名被ban的解决方案.md",
     "旅游/每月最佳旅游地.md",
     "🛠️ Dev 开发/assets/domain.png",
-    "🛠️ Dev 开发/assets",
     "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
-    "睡眠",
-    "园艺",
     "3D建模/index.md",
     "Pasted image 20240106225146.png",
     "色调.md",
@@ -201,11 +185,6 @@
     "📝 Memo 札记/index.md",
     "🤔 UX 用户体验设计/index.md",
     "💼 Work 泛微/index.md",
-    "📦 PM 产品管理/index.md",
-    "🌳 Work Life Balance/下班回家应该怎么做？.md",
-    "🌳 Work Life Balance/index.md",
-    "💼 Work 泛微/账号.md",
-    "你好 Obsidian.md",
-    "📦 PM 产品管理/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md"
+    "📦 PM 产品管理/index.md"
   ]
 }
