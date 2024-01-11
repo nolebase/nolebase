@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "68e9a4c54f932571",
+        "id": "e650879f944a1184",
         "type": "tabs",
         "children": [
           {
-            "id": "f9202c83e2bf5d0b",
+            "id": "d112d183d47a6bde",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+                "file": "💼 Weaver/契约锁集成/2. 页面重定向配置.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+                "file": "💼 Weaver/契约锁集成/2. 页面重定向配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+                "file": "💼 Weaver/契约锁集成/2. 页面重定向配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md"
+                "file": "💼 Weaver/契约锁集成/2. 页面重定向配置.md"
               }
             }
           }
@@ -146,15 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f9202c83e2bf5d0b",
+  "active": "d112d183d47a6bde",
   "lastOpenFiles": [
+    "💼 Weaver/契约锁集成/1. 新建应用登录到契约锁页面.md",
     "💼 Weaver/契约锁集成/4. 问题自查列表.md",
-    "💼 Weaver/src/20240111113637.png",
+    "💼 Weaver/契约锁集成/2. 页面重定向配置.md",
     "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+    "🌳 Life/index.md",
+    "💼 Weaver/src/20240111113637.png",
     "Pasted image 20240111113253.png",
     "💼 Weaver/src/20240111113406.png",
-    "💼 Weaver/契约锁集成/2. 页面重定向配置.md",
-    "💼 Weaver/契约锁集成/1. 新建应用登录到契约锁页面.md",
     "💼 Weaver/契约锁集成/index.md",
     "💼 Weaver/src/20240111111952.png",
     "💼 Weaver/src/20240111111738.png",
@@ -179,10 +180,9 @@
     "在保修期内的商品.md",
     "README.md",
     "index.md",
-    "🌳 Life【Work Life Balance】/影视/video/Stranger.md",
-    "🌳 Life【Work Life Balance】/旅游/每月最佳旅游地.md",
-    "🌳 Life【Work Life Balance】/下班回家应该怎么做？.md",
-    "🌳 Life【Work Life Balance】/index.md",
+    "🌳 Life/影视/video/Stranger.md",
+    "🌳 Life/旅游/每月最佳旅游地.md",
+    "🌳 Life/下班回家应该怎么做？.md",
     "💼 Weaver/条款库.md",
     "Pasted image 20240111100216.png",
     "💼 Weaver/标准产品/应用包上传云商店.md",
