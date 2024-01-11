@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e650879f944a1184",
+        "id": "db4347f18d557986",
         "type": "tabs",
         "children": [
           {
-            "id": "d112d183d47a6bde",
+            "id": "cf9dc87553f3d5df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md",
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💼 Weaver/契约锁集成/3. 单点登录配置.md"
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md"
               }
             }
           }
@@ -147,52 +146,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d112d183d47a6bde",
+  "active": "cf9dc87553f3d5df",
   "lastOpenFiles": [
-    "💼 Weaver/契约锁集成/2. 页面重定向配置.md",
-    "💼 Weaver/契约锁集成/1. 新建应用登录到契约锁页面.md",
-    "💼 Weaver/契约锁集成/4. 问题自查列表.md",
-    "💼 Weaver/契约锁集成/3. 单点登录配置.md",
-    "🌳 Life/index.md",
-    "💼 Weaver/src/20240111113637.png",
-    "Pasted image 20240111113253.png",
-    "💼 Weaver/src/20240111113406.png",
-    "💼 Weaver/契约锁集成/index.md",
-    "💼 Weaver/src/20240111111952.png",
-    "💼 Weaver/src/20240111111738.png",
-    "💼 Weaver/账号.md",
-    "💼 Weaver/src/20240111104729.png",
-    "💼 Weaver/src/20240111104233.png",
-    "💼 Weaver/src/20240111103814.png",
-    "💼 Weaver/src",
-    "💼 Weaver/src/20240111103856.png",
-    "Eye Protection 护眼/近视眼从800度降到现在的100度。我今年25岁.md",
-    "💼 Weaver/产品建议.md",
-    "📝 Memo/index.md",
-    "Finance 财务管理/税务师",
-    "Finance 财务管理/国际注册会计师",
-    "Finance 财务管理/中级会计",
-    "Finance 财务管理",
-    "Eye Protection 护眼",
-    "Apple Vision Pro",
-    "3D 建模/Blender",
-    "3D 建模/3D Max",
-    "3D 建模",
-    "在保修期内的商品.md",
-    "README.md",
-    "index.md",
-    "🌳 Life/影视/video/Stranger.md",
-    "🌳 Life/旅游/每月最佳旅游地.md",
-    "🌳 Life/下班回家应该怎么做？.md",
-    "💼 Weaver/条款库.md",
-    "Pasted image 20240111100216.png",
-    "💼 Weaver/标准产品/应用包上传云商店.md",
-    "💼 Weaver/范文库.md",
-    "💼 Weaver/编辑器动作流的配置.md",
-    "💼 Weaver/数据标准.md",
-    "💼 Weaver/index.md",
-    "💼 Weaver/DEMO/演示视频.md",
-    "💼 Weaver/DEMO/index.md",
-    "💼 Weaver/标准产品/index.md"
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-52-19.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-33-39.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-26-02.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-53-18.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-56-38.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-54-41.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-49-37.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-45-26.png",
+    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-42-31.png",
+    "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+    "🎨 UI 用户界面设计/UI 重构/index.md",
+    "🎨 UI 用户界面设计/UI 重构/assets",
+    "🎨 UI 用户界面设计/UI 重构/9. Leveling Up",
+    "🎨 UI 用户界面设计/UI 重构/8. Finishing Touches",
+    "🎨 UI 用户界面设计/UI 重构/7. Working with Images",
+    "🎨 UI 用户界面设计/UI 重构/6. Creating Depth",
+    "🎨 UI 用户界面设计/UI 重构/5. Working with Color",
+    "🎨 UI 用户界面设计/UI 重构/4. Designing Text",
+    "🎨 UI 用户界面设计/UI 重构/3. Layout and Spacing",
+    "🎨 UI 用户界面设计/UI 重构/2. Hierarchy is Everything",
+    "🎨 UI 用户界面设计/UI 重构/1. Starting from Scratch",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/UI 重构 - Refactoring UI.md",
+    "🎨 UI 用户界面设计/index.md",
+    "refactoring_ui/1.md",
+    "🌳 Life 生活/index.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Conduct-Competitve-Audits.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Understaand-design-ideation.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Creating-User-Stories-and-User-Journey-Map.md",
+    "🤔 UX 用户体验设计/Google UX Course/2/Create-Problem-Statements.md",
+    "🤔 UX 用户体验设计/index.md",
+    "🛠️ Dev 开发/前端/CSS/tailwind/vite-vue-install.md",
+    "🛠️ Dev 开发/前端/CSS/tailwind/vite-react-install.md",
+    "🛠️ Dev 开发/前端/CSS/tailwind/how.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/Object.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/Loop.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/LocalStorage.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/Function.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/Class.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/Asynchronization.md",
+    "🛠️ Dev 开发/🛠️ 开发/js/Array.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/time.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/struct.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/strings.md",
+    "🛠️ Dev 开发/🛠️ 开发/go/math.md"
   ]
 }
