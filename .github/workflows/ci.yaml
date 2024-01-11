@@ -5,15 +5,15 @@ on:
     branches:
       - main
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
-
 jobs:
   build-test:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number }}-${{ matrix.os }}
+      cancel-in-progress: true
 
     name: 测试构建 - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
