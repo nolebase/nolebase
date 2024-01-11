@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ed1a4641bddcb285",
+        "id": "bff7c65006dbb3cc",
         "type": "tabs",
         "children": [
           {
-            "id": "f6cc17b793f64a25",
+            "id": "50f3de1417c7ab92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+                "file": "💼 Work 泛微/DEMO/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+                "file": "💼 Work 泛微/DEMO/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+                "file": "💼 Work 泛微/DEMO/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md"
+                "file": "💼 Work 泛微/DEMO/index.md"
               }
             }
           }
@@ -146,12 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f6cc17b793f64a25",
+  "active": "50f3de1417c7ab92",
   "lastOpenFiles": [
+    "💼 Work 泛微/标准产品/index.md",
+    "💼 Work 泛微/标准产品/【功能】一键清除演示数据.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
     "🛠️ Dev 开发/Next.js/index.md",
     "🛠️ Dev 开发/GitHub 学生包.md",
     "在保修期内的商品.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
     "Untitled",
     "🌳 Life 生活 --Work Life Balance--/影视/video/Stranger.md",
     "index.md",
@@ -183,8 +185,6 @@
     "🛠️ Dev 开发/🛠️ 开发/go/introduction.md",
     "🛠️ Dev 开发/🛠️ 开发/go/strings.md",
     "🛠️ Dev 开发/🛠️ 开发/go/time.md",
-    "README.md",
-    "🛠️ Dev 开发/nodejs/intro.md",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-5.png",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-4.png",
     "📚 个人知识管理/assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-3.png",
