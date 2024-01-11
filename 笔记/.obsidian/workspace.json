@@ -11,8 +11,12 @@
             "id": "532781add69ea39e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "💼 Weaver 泛微/契约锁集成/3. 单点登录配置.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -61,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -82,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
+                "file": "💼 Weaver 泛微/契约锁集成/3. 单点登录配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
+                "file": "💼 Weaver 泛微/契约锁集成/3. 单点登录配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md"
+                "file": "💼 Weaver 泛微/契约锁集成/3. 单点登录配置.md"
               }
             }
           }
@@ -143,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a8b20a5aefeca9e5",
+  "active": "532781add69ea39e",
   "lastOpenFiles": [
+    "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
     "🌳 Life 生活/我的账单.md",
     "🎨 UI 用户界面设计/index.md",
     "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
@@ -189,7 +193,6 @@
     "🛠️ Dev 开发/🛠️ 开发/js/Class.md",
     "🛠️ Dev 开发/🛠️ 开发/js/Asynchronization.md",
     "🛠️ Dev 开发/🛠️ 开发/js/Array.md",
-    "🛠️ Dev 开发/🛠️ 开发/go/time.md",
-    "🛠️ Dev 开发/🛠️ 开发/go/struct.md"
+    "🛠️ Dev 开发/🛠️ 开发/go/time.md"
   ]
 }
