@@ -1,3 +1,0 @@
-strings.index
-
-strings.lastindex
