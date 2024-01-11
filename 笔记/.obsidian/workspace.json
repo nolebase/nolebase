@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "130c0315b8d0dba3",
+        "id": "ec49457e55845545",
         "type": "tabs",
         "children": [
           {
-            "id": "f7fb757c7af7ebbd",
+            "id": "532781add69ea39e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "🎨 UI 用户界面设计/index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "20240111103856",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +61,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🎨 UI 用户界面设计/index.md",
+                "file": "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "🎨 UI 用户界面设计/index.md",
+                "file": "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "🎨 UI 用户界面设计/index.md"
+                "file": "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md"
               }
             }
           }
@@ -146,12 +143,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f7fb757c7af7ebbd",
+  "active": "a8b20a5aefeca9e5",
   "lastOpenFiles": [
+    "🌳 Life 生活/我的账单.md",
+    "🎨 UI 用户界面设计/index.md",
     "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
     "Saturation 饱和度.md",
     "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/UI 重构 - Refactoring UI.md",
-    "🌳 Life 生活/我的账单.md",
     "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
@@ -174,7 +172,6 @@
     "🎨 UI 用户界面设计/UI 重构/3. Layout and Spacing",
     "🎨 UI 用户界面设计/UI 重构/2. Hierarchy is Everything",
     "🎨 UI 用户界面设计/UI 重构/1. Starting from Scratch",
-    "🎨 UI 用户界面设计/index.md",
     "refactoring_ui/1.md",
     "🌳 Life 生活/index.md",
     "🤔 UX 用户体验设计/Google UX Course/2/Conduct-Competitve-Audits.md",
