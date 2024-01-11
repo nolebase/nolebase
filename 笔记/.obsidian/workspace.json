@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "./20240111113637.png",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "532781add69ea39e",
+  "active": "a8b20a5aefeca9e5",
   "lastOpenFiles": [
     "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
     "🌳 Life 生活/我的账单.md",
