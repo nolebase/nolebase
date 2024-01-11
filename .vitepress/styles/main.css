@@ -1,4 +1,5 @@
 @import 'kbd.css';
+@import 'custom.css';
 
 html, body {
   -webkit-tap-highlight-color: transparent; /* 避免触屏下的点击高亮颜色 */
