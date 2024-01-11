@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "db4347f18d557986",
+        "id": "130c0315b8d0dba3",
         "type": "tabs",
         "children": [
           {
-            "id": "cf9dc87553f3d5df",
+            "id": "f7fb757c7af7ebbd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+                "file": "🎨 UI 用户界面设计/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+                "file": "🎨 UI 用户界面设计/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
+                "file": "🎨 UI 用户界面设计/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1.md"
+                "file": "🎨 UI 用户界面设计/index.md"
               }
             }
           }
@@ -146,8 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cf9dc87553f3d5df",
+  "active": "f7fb757c7af7ebbd",
   "lastOpenFiles": [
+    "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
+    "Saturation 饱和度.md",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/UI 重构 - Refactoring UI.md",
+    "🌳 Life 生活/我的账单.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1.md",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-52-19.png",
@@ -158,8 +163,6 @@
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-54-41.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-49-37.png",
     "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-45-26.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-42-31.png",
-    "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
     "🎨 UI 用户界面设计/UI 重构/index.md",
     "🎨 UI 用户界面设计/UI 重构/assets",
     "🎨 UI 用户界面设计/UI 重构/9. Leveling Up",
@@ -171,7 +174,6 @@
     "🎨 UI 用户界面设计/UI 重构/3. Layout and Spacing",
     "🎨 UI 用户界面设计/UI 重构/2. Hierarchy is Everything",
     "🎨 UI 用户界面设计/UI 重构/1. Starting from Scratch",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/UI 重构 - Refactoring UI.md",
     "🎨 UI 用户界面设计/index.md",
     "refactoring_ui/1.md",
     "🌳 Life 生活/index.md",
@@ -191,8 +193,6 @@
     "🛠️ Dev 开发/🛠️ 开发/js/Asynchronization.md",
     "🛠️ Dev 开发/🛠️ 开发/js/Array.md",
     "🛠️ Dev 开发/🛠️ 开发/go/time.md",
-    "🛠️ Dev 开发/🛠️ 开发/go/struct.md",
-    "🛠️ Dev 开发/🛠️ 开发/go/strings.md",
-    "🛠️ Dev 开发/🛠️ 开发/go/math.md"
+    "🛠️ Dev 开发/🛠️ 开发/go/struct.md"
   ]
 }

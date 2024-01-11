@@ -8,7 +8,7 @@
 
 > Using [[hex]] or [[RGB]], colors that have a lot in common visually look nothing alike in code.
 
-![](2024-01-06_23-26-02.png)
+![](../assets/2024-01-06_23-26-02.png)
 
 而 [[HSL]] 改进了这一点。它使用了人眼直观感知的元素来展示颜色：[[Hue 色调]]、[[ Saturation 饱和度]]  和 [[Lightness 亮度]]。
 
@@ -18,8 +18,7 @@
 
 > **Hue** is a color’s position on the color wheel — it’s the attribute of a color that lets us identify two colors as “blue” even if they aren’t identical.
 
-
-![](2024-01-06_23-33-39.png)
+![](../assets/2024-01-06_23-33-39.png)
 
 [[Hue 色调]] 使用 `°` 度来衡量，其中0° 代表红色， 120° 代表绿色，240° 代表蓝色。
 
@@ -33,13 +32,13 @@
 
 > Saturation is how colorful or vivid a color looks. 0% saturation is grey (no color), and 100% saturation is vibrant and intense.
 
-![](2024-01-06_23-40-32.png)
+![](../assets/2024-01-06_23-40-32.png)
 
 离开了 [[Saturation 饱和度]]，[[Hue 色调]] 便会黯然失色：在 [[Saturation 饱和度]] 为 0% 的情况下，无论如何变换色调，实际上都不会改变颜色。
 
 > Without saturation, hue is irrelevant — rotating the hue when saturation is 0% doesn’t actually change the color at all.
 
-![](2024-01-06_23-43-24.png)
+![](../assets/2024-01-06_23-43-24.png)
 
 [[Lightness 亮度]] 就像它起来的那样，它度量了一个颜色有多接近于黑色或是接近于白色。0% 亮度的颜色是纯黑，而100% 亮度的颜色是纯白，而 50% 亮度的颜色是指定 [[Hue 色调]] 颜色的纯色。
 
@@ -56,11 +55,11 @@
 
 使用颜色生成器当你起一个起始颜色，它们是适合你的网站的最佳颜色吗？
 
-![](2024-01-06_22-39-14.png)
+![](../assets/2024-01-06_22-39-14.png)
 
 >This calculated approach to picking the perfect color scheme is extremely seductive, but it’s not very useful unless you want your site to look like this:
 
-![](2024-01-06_22-42-31.png)
+![](../assets/2024-01-06_22-42-31.png)
 
 ## 你真正需要什么？
 
@@ -68,7 +67,7 @@
 
 > You can’t build anything with five hex codes. To build something real, you need a much more comprehensive set of colors to choose from.
 
-![](2024-01-06_22-45-26.png)
+![](../assets/2024-01-06_22-45-26.png)
 
 一个好的调色板可以分成三个等级。
 
@@ -79,7 +78,7 @@
 Text, backgrounds, panels, form controls — almost everything in an interface
 is grey.
 
-![](2024-01-06_22-49-37.png)
+![](../assets/2024-01-06_22-49-37.png)
 
 You’ll need more greys than you think, too — three or four shades might
 sound like plenty but it won’t be long before you wish you had something a
@@ -90,7 +89,7 @@ your shades up front”). Not so many that you waste time deciding between
 shade #77 and shade #78, but enough to make sure you don’t have to
 compromise too much.
 
-![](2024-01-06_22-52-19.png)
+![](../assets/2024-01-06_22-52-19.png)
 
 True black tends to look pretty unnatural, so start with a really dark grey and
 work your way up to white in steady increments.
@@ -106,7 +105,7 @@ choose from.
 Just like with greys, you need a variety (5-10) of lighter and darker shades to
 choose from.
 
-![](2024-01-06_22-53-18.png)
+![](../assets/2024-01-06_22-53-18.png)
 
 Ultra-light shades can be useful as a tinted background for things like alerts,
 while darker shades work great for text.
@@ -116,12 +115,12 @@ communicating different things to the user.
 For example, you might want to use an eye-grabbing color like yellow, pink,
 or teal to highlight a new feature:
 
-![](2024-01-06_22-54-41.png)
+![](../assets/2024-01-06_22-54-41.png)
 
 You might also need colors to emphasize different semantic states, like red
 for confirming a destructive action:
 
-![](2024-01-06_22-56-38.png)
+![](../assets/2024-01-06_22-56-38.png)
 
 
 You’ll want multiple shades for these colors too, even though they should be
