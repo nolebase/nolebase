@@ -10,6 +10,7 @@ tags:
   - 命令行/kubectl
   - 软件/云原生/kubectl
 ---
+
 # TrueNAS SCALE 发行版本 Bluefin 在更新 TrueCharts 应用时遭遇错误
 
 ## 第一次更新之后遇到的错误
@@ -34,17 +35,15 @@ executing "tc.v1.common.lib.persistence.validation" at <$objectData.static.mode>
 
 导航到 TrueNAS 的「系统设置」，然后点选「更新」：
 
-![[Pasted image 20240111105414.png]]
+![](./assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-1.png)
 
 在更新频道下拉框中选择现在最新的 TrueNAS SCALE 发行版「Cobia」将 Bluefin 更新到 Cobia：
 
-![[Pasted image 20240111105404.png]]
+![](./assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-2.png)
 
 更新完成之后再次前往左侧的「应用」选单即可：
 
-![[Pasted image 20240111105340.png]]
-
-![[Pasted image 20240111105347.png]]
+![](./assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-3.png)
 
 ## 更新为 Cobia 之后的 K3s 应用错误
 
