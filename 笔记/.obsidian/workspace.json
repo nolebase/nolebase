@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "84069b5ac809a306",
+        "id": "85452bcefdbab0d7",
         "type": "tabs",
         "children": [
           {
-            "id": "2631741019e96e88",
+            "id": "a97e11739ce7c99d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "💻 Develop 开发/index.md",
+                "file": "💼 Weaver 泛微/2023年度总结.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💻 Develop 开发/index.md",
+                "file": "💼 Weaver 泛微/2023年度总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💻 Develop 开发/index.md",
+                "file": "💼 Weaver 泛微/2023年度总结.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "💻 Develop 开发/index.md"
+                "file": "💼 Weaver 泛微/2023年度总结.md"
               }
             }
           }
@@ -134,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,19 +147,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2631741019e96e88",
+  "active": "a97e11739ce7c99d",
   "lastOpenFiles": [
+    "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块/第一节课 UI设计，了解一下？.md",
+    "💼 Weaver 泛微/2023年度总结.md",
+    "保密.md",
     "index.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/第 2 章 · 产品管理与产品营销：两者不是一回事.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/第 1 章 · 关键角色及其职责：现代软件产品团队.md",
+    "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/1. Starting from Scratch/UI 重构 - Refactoring UI.md",
+    "🎨 UI 用户界面设计/index.md",
+    "📦 Product 产品/index.md",
+    "🤖 AI 人工智能/Midjourney",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/2. 产品管理与产品营销.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/11. 评估产品机会.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/12.md",
+    "💻 Develop 开发/index.md",
     "🤔 UX 用户体验设计/index.md",
     "🤔 UX 用户体验设计.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/第 11 章 · 评估产品机会：确定待解决的问题.md",
     "📦 Product 产品/基本术语/产品需求文档.md",
     "📦 Product 产品/基本术语",
     "📦 Product 产品/启示录：打造用户喜爱的产品/src/1.png",
     "📦 Product 产品/启示录：打造用户喜爱的产品/src",
-    "💻 Develop 开发/index.md",
     "💼 Weaver 泛微/功能模块的负责人表.md",
     "💼 Weaver 泛微/契约锁集成/4. 问题自查列表.md",
     "💼 Weaver 泛微/标准产品/编辑器动作流的配置.md",
@@ -170,28 +180,20 @@
     "💼 Weaver 泛微/契约锁集成/3. 单点登录配置.md",
     "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
     "🌳 Life 生活/我的账单.md",
-    "🎨 UI 用户界面设计/index.md",
-    "🎨 UI 用户界面设计/UI 重构/5. Working with Color/index.md",
-    "Saturation 饱和度.md",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/UI 重构 - Refactoring UI.md",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-40-32.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-43-24.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-52-19.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-33-39.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_23-26-02.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-53-18.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-56-38.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-54-41.png",
-    "🎨 UI 用户界面设计/UI 重构/assets/2024-01-06_22-49-37.png",
-    "🎨 UI 用户界面设计/UI 重构/index.md",
-    "🎨 UI 用户界面设计/UI 重构/assets",
-    "🎨 UI 用户界面设计/UI 重构/9. Leveling Up",
-    "🎨 UI 用户界面设计/UI 重构/8. Finishing Touches",
-    "🎨 UI 用户界面设计/UI 重构/7. Working with Images",
-    "🎨 UI 用户界面设计/UI 重构/6. Creating Depth",
-    "🎨 UI 用户界面设计/UI 重构/5. Working with Color",
-    "🎨 UI 用户界面设计/UI 重构/4. Designing Text",
-    "🎨 UI 用户界面设计/UI 重构/3. Layout and Spacing",
-    "refactoring_ui/1.md"
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-40-32.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-43-24.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-52-19.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-33-39.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-26-02.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-53-18.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-56-38.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-54-41.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-49-37.png",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/9. Leveling Up",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/8. Finishing Touches",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/7. Working with Images",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/6. Creating Depth",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color"
   ]
 }

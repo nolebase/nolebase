@@ -2,13 +2,13 @@
 layout: home
 sidebar: false
 
-title: Mind Solar
-titleTemplate: 心晖 | 心怀好奇，睁大眼睛，探索一切未知
+title: Vision
+titleTemplate: 视界
 
 hero:
   name: g~Nj$3J2^
-  text: 心怀好奇，睁大眼睛，探索一切未知
-  tagline: 一个基于 MarkDown 和 Obsidian 的双链信息中心。让每个想法如阳光般闪耀。
+  text: 心怀好奇，探索一切未知
+  tagline: 一个基于 MarkDown 和 Obsidian 的双链信息中心。
   image:
     src: /logo.svg
     alt: Vitest
