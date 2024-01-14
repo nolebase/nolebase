@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fcc17308882d5bdd",
+        "id": "d5020641a49e7351",
         "type": "tabs",
         "children": [
           {
-            "id": "418a28084cca844c",
+            "id": "5273faf0c69f09f0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md"
+              }
             }
           }
         ],
@@ -139,12 +143,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "418a28084cca844c",
+  "active": "f7c8e1024a445fbe",
   "lastOpenFiles": [
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/Snipaste_2024-01-14_12-54-02.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-54-02.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-49-28.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-45-09.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第2节课 认识产品经理.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-58-19.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-55-07.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-44-50.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-43-40.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-41-23.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/用户分析.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第1节课 导论.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/Untitled",
+    "src.md",
+    "📦 Product 产品/NPDP",
+    "📦 Product 产品/📺 3节课：产品经理课程/index.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src",
+    "🌳 Life 生活/在保修期内的商品.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程",
+    "📦 Product 产品/📺 3节课：产品经理课程",
+    "保密.md",
     "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color/index.md",
     "💼 Weaver 泛微/乘风破浪、敢为人先、同心协力、严谨细致——刘俊2023年度总结.md",
     "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块/第一节课 UI设计，了解一下？.md",
-    "保密.md",
     "index.md",
     "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块",
     "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/1. Starting from Scratch/UI 重构 - Refactoring UI.md",
@@ -160,32 +185,10 @@
     "🤔 UX 用户体验设计.md",
     "📦 Product 产品/基本术语/产品需求文档.md",
     "📦 Product 产品/基本术语",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/src/1.png",
     "📦 Product 产品/启示录：打造用户喜爱的产品/src",
     "💼 Weaver 泛微/功能模块的负责人表.md",
     "💼 Weaver 泛微/契约锁集成/4. 问题自查列表.md",
     "💼 Weaver 泛微/标准产品/编辑器动作流的配置.md",
-    "💼 Weaver 泛微/产品建议.md",
-    "💼 Weaver 泛微/index.md",
-    "💼 Weaver 泛微/条款库.md",
-    "💼 Weaver 泛微/数据标准.md",
-    "💼 Weaver 泛微/范文库.md",
-    "💼 Weaver 泛微/契约锁集成/3. 单点登录配置.md",
-    "💼 Weaver 泛微/契约锁集成/2. 页面重定向配置.md",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-40-32.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-43-24.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-52-19.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-33-39.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_23-26-02.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-53-18.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-56-38.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-54-41.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets/2024-01-06_22-49-37.png",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/9. Leveling Up",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/8. Finishing Touches",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/7. Working with Images",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/6. Creating Depth",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color"
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets"
   ]
 }
