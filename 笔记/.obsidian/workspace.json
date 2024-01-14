@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d5020641a49e7351",
+        "id": "6feb681963d2f7d0",
         "type": "tabs",
         "children": [
           {
-            "id": "5273faf0c69f09f0",
+            "id": "71b3cb63c2152232",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "./2024",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -143,21 +139,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f7c8e1024a445fbe",
+  "active": "71b3cb63c2152232",
   "lastOpenFiles": [
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/Snipaste_2024-01-14_12-54-02.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第2节课 认识产品经理.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第1节课 导论.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/Snipaste_2024-01-14_12-54-02.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-54-02.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-49-28.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-45-09.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第2节课 认识产品经理.md",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-58-19.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-55-07.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-44-50.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-43-40.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-41-23.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/用户分析.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第1节课 导论.md",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/Untitled",
     "src.md",
     "📦 Product 产品/NPDP",
