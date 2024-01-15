@@ -40,7 +40,7 @@ function render() => {
 
 ### 破坏性
 
-在 Watch API 的 `CallBack` 中包裹 `EffectScope` 可能会带来一些破坏性，因为原来的嵌套 `watch` 在组件被卸载后不会自己停止，需要用户手动管理，对于哪些依赖这种特性的项目而言，这会是一个破坏性更新。但是我认为嵌套使用的 watch 不会被清理，而是每次父 `watch` re-run 都会创建一个新的 watch 是更反知觉的事情。
+在 Watch API 的 `CallBack` 中包裹 `EffectScope` 可能会带来一些破坏性，因为原来的嵌套 `watch` 在组件被卸载后不会自己停止，需要用户手动管理，对于那些依赖这种特性的项目而言，这会是一个破坏性更新。但是我认为嵌套使用的 `watch` 不会被清理，而是每次父 `watch` re-run 都会创建一个新的 `watch` 是更反直觉的事情。
 
 ## Code
 
