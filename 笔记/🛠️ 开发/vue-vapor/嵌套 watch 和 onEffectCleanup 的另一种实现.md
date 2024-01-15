@@ -1,8 +1,32 @@
 # 嵌套 watch 和 onEffectCleanup 的另一种实现
 
-在考虑 Watch API 中嵌套 Watch API 调用的时候，想到需要把 `CallBack` 包在 `EffectScope` 里面，然后突然发现这种情况下 `onScopeDispose` 完全可以取代 `onEffectCleanup` 的作用。
+在思考如何实现 `v-if` 时想到了这种实现方式：
 
-考虑到 onScopeDispose 的名称在 watch 中使用容易产生误解，我们可以采用两种方法解决这个问题：
+```javascript
+// in the generated code
+function render() => {
+  const t0 = template('<div></div>')
+
+  // ...
+  // <div v-if="expression">{{bar}}</div>
+  renderWatch(() => !!(/* vIfExpression */), (bool) => {
+    if (bool) {
+      const t1 = template("<div></div>")
+      // ...
+      renderEffect(() => {
+        setText(n1, undefined, bar.value)
+      })
+    }
+  })
+  return t0()
+}
+```
+
+但是这涉及到嵌套 Watch API，但是经过简单的测试，发现目前并不支持。[在 Playground 中尝试一下](https://play.vuejs.org/#eNp9UclOwzAQ/ZXBlwQpJEK9VWklQJWAAyBA4uJLlE7SFMe2bCetFOXfGTvdDqiHLH7L+M3MwB60TvsO2ZzltjSNdmDRdXrJZdNqZRwMYLBKYFe4cnP4rKoKSwcjVEa1EJE94rJU0jpobQ0L74ijZxRCwY8yYn0T3XLJZTDH8S0sll6Y9oXoMIEJGLiEy/IHXYABfHUlMBWqjqOTN0rOdegGgJHe/smzqRlqgw4OWy0Kh3QCyDf3y2EIQccxz+gU0EbqzkF/16o1igVnxHMGGZF5duFnCXOWwlRNnW6tkjS3kJCzUrW6EWjetWsoLGfzY3bOCprE7jVgzlDLR7zcYPn7D761e49x9mHQoumRsxPnClOjm+jV1xvu6f9EUvpOkPoK+Yk0yM5nnGSPnVxT7AtdSPsStt/I+tuu9g6lPTblg4ZRBz1ntP2nK62f487SWfDRhtj4B4DCz7o=)会发现 Console 中的 log 会随着输入行为变得越来越多，因为之前注册的 `watchEffect` 并没有被销毁。
+
+实现 Watch API 中嵌套 Watch API 调用的时候，需要把 `CallBack` 包在 `EffectScope` 里面，这样就可以在 `cleanup` 时调用 `effectScope.stop()`，然后突然发现这种情况下 `onScopeDispose` 完全可以取代 `onEffectCleanup` 的作用。
+
+但是考虑到 `onScopeDispose` 的名称在 `watch` 中使用容易产生误解，我们可以采用两种方法解决这个问题：
 
 #### 方案 1
 
