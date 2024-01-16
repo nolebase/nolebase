@@ -27,23 +27,23 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@nolebase/markdown-it-bi-directional-links':
-    specifier: ^1.12.1
-    version: 1.12.1(markdown-it@13.0.2)
+    specifier: ^1.12.2
+    version: 1.12.2(markdown-it@13.0.2)
   '@nolebase/markdown-it-element-transform':
-    specifier: ^1.12.1
-    version: 1.12.1(markdown-it@13.0.2)
+    specifier: ^1.12.2
+    version: 1.12.2(markdown-it@13.0.2)
   '@nolebase/vitepress-plugin-enhanced-readabilities':
-    specifier: ^1.12.1
-    version: 1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3)
+    specifier: ^1.12.2
+    version: 1.12.2(vitepress@1.0.0-rc.34)(vue@3.4.3)
   '@nolebase/vitepress-plugin-git-changelog':
-    specifier: ^1.12.1
-    version: 1.12.1(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.34)(vue@3.4.3)
+    specifier: ^1.12.2
+    version: 1.12.2(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.34)(vue@3.4.3)
   '@nolebase/vitepress-plugin-highlight-targeted-heading':
-    specifier: ^1.12.1
-    version: 1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3)
+    specifier: ^1.12.2
+    version: 1.12.2(vitepress@1.0.0-rc.34)(vue@3.4.3)
   '@nolebase/vitepress-plugin-inline-link-preview':
-    specifier: ^1.12.1
-    version: 1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3)
+    specifier: ^1.12.2
+    version: 1.12.2(vitepress@1.0.0-rc.34)(vue@3.4.3)
   '@types/body-parser':
     specifier: ^1.19.5
     version: 1.19.5
@@ -1393,8 +1393,8 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@nolebase/markdown-it-bi-directional-links@1.12.1(markdown-it@13.0.2):
-    resolution: {integrity: sha512-z0eEwny0IJRs36qEyvX3bGBWq/bT+IQlZef6UCSR/dgA1dMWUPH0fSwovXW9tyXSqz04Hfu5lcFnbnF7Ow42Qg==}
+  /@nolebase/markdown-it-bi-directional-links@1.12.2(markdown-it@13.0.2):
+    resolution: {integrity: sha512-waOEs0aCrCuRCemtcSTkEroEdajjj0HZ6oYeZ4XRVXc+F6zaWj8gPQMpg0OVzbDikAvLSA34VAblmk/Ekcv3xw==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
@@ -1402,16 +1402,16 @@ packages:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/markdown-it-element-transform@1.12.1(markdown-it@13.0.2):
-    resolution: {integrity: sha512-sSiM1oxQj6cdveMGrHhOyKc6xixbUW/6Xre4pOE1ZE4QkpCIxxOW2670xCdpFztjfo9veBVwQ+YDFDbXFUXmiA==}
+  /@nolebase/markdown-it-element-transform@1.12.2(markdown-it@13.0.2):
+    resolution: {integrity: sha512-NuhxOMTeaZDbWXV34L8tiNCL8AIubla/AVUI/M2++6J+2s4MWQTHBjk9faW/yOXLEWuNAH6aQdFdilTl3fHo9Q==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3):
-    resolution: {integrity: sha512-+e68VtSTeAtvdl1nCTAUnQZn4Dc9Se5MEMsdykeTgHj3MOwVnDD2itjwgRaHqUZywntpZoNizRyE+UzlPoQc9g==}
+  /@nolebase/vitepress-plugin-enhanced-readabilities@1.12.2(vitepress@1.0.0-rc.34)(vue@3.4.3):
+    resolution: {integrity: sha512-hL7H/1wZC5B5F0kBMxrKxa/VxfHa9Zoerm+TYI+yUCYppcLztShA+SAHbMkCtr/divgi7203Mutbjfvsv6UfEA==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.34'
       vue: '>=3.3.0'
@@ -1420,8 +1420,8 @@ packages:
       vue: 3.4.3(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-git-changelog@1.12.1(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.34)(vue@3.4.3):
-    resolution: {integrity: sha512-NNHsi6Msxx9S+PTBmW/3p9jztMb+5XhePBKbFA6FZMwdCnKTTFtvZgOSVvtV4BEifu3oUrUgA5WjTyXZ8obxwg==}
+  /@nolebase/vitepress-plugin-git-changelog@1.12.2(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.34)(vue@3.4.3):
+    resolution: {integrity: sha512-IBJKn35Jshx72DOiLNXSHBrnTAC7gZOa3MdPZxHDW+ejTk6WxCrrX5asUKI+WpJ5zolfjSM2M99Mn7ELdygVkw==}
     peerDependencies:
       dayjs: '>=1.11.1'
       md5: '>=2.3.0'
@@ -1436,8 +1436,8 @@ packages:
       vue: 3.4.3(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-highlight-targeted-heading@1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3):
-    resolution: {integrity: sha512-f/ubAWDJO/5Dl2PQOJFqBLWu7XDUCXtwLF9LMxbGF4vVbYAlU5WBSVzx8FoNWcBcWGzod5LdurL66hEl4sOfoA==}
+  /@nolebase/vitepress-plugin-highlight-targeted-heading@1.12.2(vitepress@1.0.0-rc.34)(vue@3.4.3):
+    resolution: {integrity: sha512-bq5ceQ+937RrWceegEhzMI09otgLN3aExz1p9ii1GKSCuLtEm/U/DOueLuk9OfTVUXSHvWXaXRnEfVvNwS/WNA==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.34'
       vue: '>=3.3.0'
@@ -1446,8 +1446,8 @@ packages:
       vue: 3.4.3(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-inline-link-preview@1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3):
-    resolution: {integrity: sha512-PqwojEh9B5xLWk8TSz2O9ST2u4E9nYxC9JoiaJ1he5H2AR9pNrggPOpIN7se+sn02dSW8Xfm2nQrbDzAM4ea+g==}
+  /@nolebase/vitepress-plugin-inline-link-preview@1.12.2(vitepress@1.0.0-rc.34)(vue@3.4.3):
+    resolution: {integrity: sha512-CArNO04tjlJc7qVeRwrJ8nJOw12DIH39G+l85vCVS+up2l+x/5S2/g23qzA3CD06ofpychjftcy0LVCV/TSFnw==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.34'
       vue: '>=3.3.0'
