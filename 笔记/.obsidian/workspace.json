@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ea6152d26cbf35b8",
+        "id": "44a49bb87b6d6e7b",
         "type": "tabs",
         "children": [
           {
-            "id": "61334cfeee99b2ab",
+            "id": "03a88e45a89bb54f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📦 Product 产品/书籍/《启示录》/3. 产品管理与项目管理.md",
+                "file": "📦 Product 产品/书籍/《启示录》/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📦 Product 产品/书籍/《启示录》/3. 产品管理与项目管理.md",
+                "file": "📦 Product 产品/书籍/《启示录》/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📦 Product 产品/书籍/《启示录》/3. 产品管理与项目管理.md",
+                "file": "📦 Product 产品/书籍/《启示录》/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📦 Product 产品/书籍/《启示录》/3. 产品管理与项目管理.md"
+                "file": "📦 Product 产品/书籍/《启示录》/index.md"
               }
             }
           }
@@ -147,25 +147,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "61334cfeee99b2ab",
+  "active": "03a88e45a89bb54f",
   "lastOpenFiles": [
-    "📦 Product 产品/书籍/《启示录》/02. 产品管理与产品营销.md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/10..md",
+    "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/07..md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/01. 关键角色及其职责.md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/09..md",
+    "📦 Product 产品/书籍/《启示录》/src",
+    "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）/19. 用户体验设计与实现.md",
+    "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）/20..md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/08..md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/06. 招聘产品经理.md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/03. 产品管理与项目管理.md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/02. 产品管理与产品营销.md",
     "🤔 UX 用户体验设计/index.md",
     "📦 Product 产品/书籍/《启示录》/index.md",
     "💼 Weaver 泛微/DEMO/演示视频地址.md",
     "📦 Product 产品/书籍",
     "📦 Product 产品/📺 视频课程",
-    "📦 Product 产品/书籍/《启示录》/01. 关键角色及其职责.md",
     "职场",
-    "📦 Product 产品/书籍/《启示录》/4. 产品管理与产品设计.md",
-    "📦 Product 产品/书籍/《启示录》/5. 产品管理与软件开发.md",
-    "📦 Product 产品/书籍/《启示录》/6. 招聘产品经理.md",
-    "📦 Product 产品/书籍/《启示录》/11. 评估产品机会.md",
-    "📦 Product 产品/书籍/《启示录》/18. 重新定义产品说明文档.md",
-    "📦 Product 产品/书籍/《启示录》/20..md",
-    "📦 Product 产品/书籍/《启示录》/12.md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/04. 产品管理与产品设计.md",
+    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/05. 产品管理与软件开发.md",
+    "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）/11. 评估产品机会.md",
+    "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）/18. 重新定义产品说明文档.md",
+    "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）/12.md",
     "Pasted image 20240117143250.png",
-    "📦 Product 产品/书籍/《启示录》/3. 产品管理与项目管理.md",
     "📦 Product 产品/书籍/《启示录》/src/1.png",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第5节课：「需求训练」分析用户需求.md",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_09-07-16.png",
@@ -182,18 +190,9 @@
     "💼 Weaver 泛微/DEMO/业务体验站功能和问题核对清单.md",
     "💼 Weaver 泛微/乘风破浪、敢为人先、同心协力、严谨细致——刘俊2023年度总结.md",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第2节课 认识产品经理.md",
-    "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第1节课 导论.md",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程",
-    "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/index.md",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color/index.md",
-    "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块/第一节课 UI设计，了解一下？.md",
-    "保密.md",
-    "index.md",
-    "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块",
-    "🤖 AI 人工智能/Midjourney",
-    "📦 Product 产品/基本术语",
-    "📦 Product 产品/书籍/《启示录》/src"
+    "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块"
   ]
 }
