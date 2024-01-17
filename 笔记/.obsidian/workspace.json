@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "6feb681963d2f7d0",
+        "id": "8d94ee78bc01f673",
         "type": "tabs",
         "children": [
           {
-            "id": "71b3cb63c2152232",
+            "id": "19be7497c3f53256",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "./2024",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md"
+              }
             }
           }
         ],
@@ -139,52 +147,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "71b3cb63c2152232",
+  "active": "19be7497c3f53256",
   "lastOpenFiles": [
+    "📦 Product 产品/启示录：打造用户喜爱的产品/2. 产品管理与产品营销.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/4. 产品管理与产品设计.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/5. 产品管理与软件开发.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/6. 招聘产品经理.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/11. 评估产品机会.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/18. 重新定义产品说明文档.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/20..md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/12.md",
+    "Pasted image 20240117143250.png",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/3. 产品管理与项目管理.md",
+    "📦 Product 产品/启示录：打造用户喜爱的产品/src/1.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第5节课：「需求训练」分析用户需求.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_09-07-16.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_09-07-05.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第4节课：如何用产品视角来认识产品.md",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-14-40.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-14-21.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-13-59.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-13-18.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-12-40.png",
+    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-07-10.png",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
+    "💼 Weaver 泛微/标准产品/应用包上传云商店.md",
+    "💼 Weaver 泛微/DEMO/业务体验站功能和问题核对清单.md",
+    "💼 Weaver 泛微/乘风破浪、敢为人先、同心协力、严谨细致——刘俊2023年度总结.md",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第2节课 认识产品经理.md",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第1节课 导论.md",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/Snipaste_2024-01-14_12-54-02.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-54-02.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-49-28.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-45-09.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-58-19.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-55-07.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-44-50.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-43-40.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-41-23.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/用户分析.png",
-    "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/Untitled",
-    "src.md",
-    "📦 Product 产品/NPDP",
-    "📦 Product 产品/📺 3节课：产品经理课程/index.md",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src",
-    "🌳 Life 生活/在保修期内的商品.md",
     "📦 Product 产品/📺 3节课：产品经理课程/产品助理：产品经理入门课程",
+    "📦 Product 产品/📺 3节课：产品经理课程/index.md",
     "📦 Product 产品/📺 3节课：产品经理课程",
-    "保密.md",
     "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color/index.md",
-    "💼 Weaver 泛微/乘风破浪、敢为人先、同心协力、严谨细致——刘俊2023年度总结.md",
     "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块/第一节课 UI设计，了解一下？.md",
+    "保密.md",
     "index.md",
     "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块",
     "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/1. Starting from Scratch/UI 重构 - Refactoring UI.md",
     "🎨 UI 用户界面设计/index.md",
     "📦 Product 产品/index.md",
     "🤖 AI 人工智能/Midjourney",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/1. 关键角色及其职责.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/2. 产品管理与产品营销.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/11. 评估产品机会.md",
-    "📦 Product 产品/启示录：打造用户喜爱的产品/12.md",
-    "💻 Develop 开发/index.md",
-    "🤔 UX 用户体验设计/index.md",
-    "🤔 UX 用户体验设计.md",
-    "📦 Product 产品/基本术语/产品需求文档.md",
     "📦 Product 产品/基本术语",
     "📦 Product 产品/启示录：打造用户喜爱的产品/src",
-    "💼 Weaver 泛微/功能模块的负责人表.md",
-    "💼 Weaver 泛微/契约锁集成/4. 问题自查列表.md",
-    "💼 Weaver 泛微/标准产品/编辑器动作流的配置.md",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets"
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/9. Leveling Up",
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/8. Finishing Touches"
   ]
 }
