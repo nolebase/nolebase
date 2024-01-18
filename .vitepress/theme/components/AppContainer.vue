@@ -21,9 +21,14 @@ const props = defineProps<{
           <slot name="by" />
         </div>
       </div>
-      <a :href="props.href" class="hover:no-underline!"
+      <a
+        :href="props.href"
+        class="hover:no-underline!"
         bg="zinc-50 dark:zinc-700 hover:white dark:hover:zinc-600 active:zinc-50 dark:active:zinc-700"
-        transition="all 200 ease" mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm target="_blank">
+        transition="all 200 ease"
+        mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
+        target="_blank"
+      >
         <span class="i-ic:outline-arrow-outward" /> View
       </a>
     </div>
