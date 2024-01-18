@@ -6,6 +6,7 @@ import fs from 'fs-extra'
 import fg from 'fast-glob'
 import sharp from 'sharp'
 import { sidebar } from '../.vitepress/docsMetadata.json'
+import { plainTargetDomain } from '../metadata'
 import type { ArticleTree } from './types/metadata'
 import { removeEmoji } from './utils'
 
@@ -80,7 +81,9 @@ async function buildOG() {
     if (article) {
       const ogName = `${dirname(file)}/og-${article.index}.png`
       await generateSVG(article, ogName)
-      html = html.replace(/nolebase\.ayaka\.io\/og\.png/g, `nolebase.ayaka.io/${relative(dist, ogName)}`.toLocaleLowerCase())
+
+      const ogNameRegexp = new RegExp(`${plainTargetDomain}/og.png`, 'g')
+      html = html.replace(ogNameRegexp, `${plainTargetDomain}/${relative(dist, ogName)}`.toLocaleLowerCase())
       html = html.replace(
         /<meta property="og:title" content="([^"]+)">/g,
         `<meta property="og:title" content="${article.text}">`,

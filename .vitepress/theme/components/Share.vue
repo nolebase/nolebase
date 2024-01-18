@@ -2,6 +2,7 @@
 import { useClipboard } from '@vueuse/core'
 import { ref, watch } from 'vue'
 import { useRoute } from 'vitepress'
+import { plainTargetDomain } from '../../../metadata'
 
 interface HyphenResp<T> {
   data: T
@@ -51,7 +52,7 @@ async function createShareLink(url: string) {
 async function getShareLink(): Promise<string> {
   // 本身就是短地址或不是生产环境的话不处理，节省资源
   if (
-    window.location.hostname !== 'nolebase.ayaka.io'
+    window.location.hostname !== plainTargetDomain
     || window.location.pathname.length <= 20
   ) return window.location.href
 

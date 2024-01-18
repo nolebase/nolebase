@@ -9,5 +9,8 @@ export const include = ['笔记', '生活']
 /** Repo */
 export const githubRepoLink = 'https://github.com/nolebase/nolebase'
 
+/** 无协议前缀域名 */
+export const plainTargetDomain = 'nolebase.ayaka.io'
+export const targetDomain = `https://${plainTargetDomain}`
+
 /** 社交媒体 */
-// ...
