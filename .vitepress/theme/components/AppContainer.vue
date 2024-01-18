@@ -11,7 +11,7 @@ const props = defineProps<{
     <div flex="~ shrink-0" max-h-40 max-w-40 w="<sm:34%" justify-center>
       <slot name="image" />
     </div>
-    <div flex="~ col" p="5 <sm:2">
+    <div flex="~ col grow-1" p="5 <sm:2">
       <div flex="~ col 1">
         <div text="2xl <sm:lg" font-semibold>
           <slot name="name" />
