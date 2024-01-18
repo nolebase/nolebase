@@ -8,7 +8,7 @@ const props = defineProps<{
 
 <template>
   <div bg="zinc-100 dark:zinc-800" w-full flex rounded-xl p-4>
-    <div flex="~ shrink-0" max-h-40 max-w-40 w="<sm:30%" justify-center>
+    <div flex="~ shrink-0" max-h-40 max-w-40 w="<sm:34%" justify-center>
       <slot name="image" />
     </div>
     <div flex="~ col" p="5 <sm:2">
