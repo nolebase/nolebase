@@ -1,25 +1,38 @@
-name: 构建并部署到 Netlify
+name: 构建预览
 
 on:
-  push:
+  pull_request:
     branches:
-      - 'main'
+      - main
 
 env:
   STORE_PATH: ''
 
 concurrency:
-  group: ${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
   build:
     name: 构建
-    runs-on: ubuntu-22.04
-    environment:
-      name: 正式 Production
-      url: https://nolebase.ayaka.io
+
+    runs-on: ubuntu-latest
     steps:
+      # This is quite weird.
+      # Eventhough this is the *intended* solution introduces in official blog post here
+      # https://securitylab.github.com/research/github-actions-preventing-pwn-requests/.
+      # But still, as https://github.com/orgs/community/discussions/25220#discussioncomment-7856118 stated,
+      # this is vulnerable since there is no source of truth about which PR in the triggered workflow.
+      - name: 保留 PR 信息
+        run: |
+          echo "${{ github.event.number }}" > pr_num
+
+      - name: 上传 PR 信息
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr-num
+          path: ./pr_num
+
       - name: 签出代码
         uses: actions/checkout@v3
         with:
@@ -58,15 +71,11 @@ jobs:
           cp public/source-han-sans.ttf ~/.local/share/fonts/source-han-sans.ttf
 
       - name: 构建
-        run: pnpm docs:build
+        run: |
+          pnpm docs:build
 
-      - name: 安装 Netlify CLI
-        run: pnpm install -g netlify-cli
-
-      - name: 推送到 Netlify
-        timeout-minutes: 10
-        run: netlify deploy --dir .vitepress/dist --prod
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-build
+          path: .vitepress/dist

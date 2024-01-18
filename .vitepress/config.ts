@@ -5,8 +5,8 @@ import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import type { Options as ElementTransformOptions } from '@nolebase/markdown-it-element-transform'
 import { ElementTransform } from '@nolebase/markdown-it-element-transform'
+import { githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
 import { sidebar } from './docsMetadata.json'
-import { githubRepoLink, siteDescription, siteName } from './meta'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -46,7 +46,7 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: siteName }],
     [
       'meta',
-      { property: 'og:image', content: 'https://nolebase.ayaka.io/og.png' },
+      { property: 'og:image', content: `${targetDomain}/og.png` },
     ],
     ['meta', { property: 'og:description', content: siteDescription }],
     ['meta', { property: 'og:site_name', content: siteName }],
@@ -55,7 +55,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:creator', content: 'Ayaka Neko, Ayaka Rizumu' }],
     [
       'meta',
-      { name: 'twitter:image', content: 'https://nolebase.ayaka.io/og.png' },
+      { name: 'twitter:image', content: `${targetDomain}/og.png` },
     ],
 
     [
@@ -69,7 +69,7 @@ export default defineConfig({
     outline: { label: '页面大纲', level: 'deep' },
     darkModeSwitchLabel: '切换主题',
     editLink: {
-      pattern: 'https://github.com/nolebase/nolebase/tree/main/:path',
+      pattern: `${githubRepoLink}/tree/main/:path`,
       text: '编辑本页面',
     },
     socialLinks: [{ icon: 'github', link: githubRepoLink }],

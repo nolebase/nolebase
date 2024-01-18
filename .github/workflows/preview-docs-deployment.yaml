@@ -1,0 +1,150 @@
+name: 部署预览到 Netlify
+
+on:
+  workflow_run:
+    workflows:
+      - 构建预览
+    types:
+      - completed
+
+env:
+  PR_NUM: 0
+  STORE_PATH: ''
+  NETLIFY_JSON_OUTPUT: ''
+  NETLIFY_URL: ''
+
+jobs:
+  on-success:
+    name: 部署预览到 Netlify
+    runs-on: ubuntu-latest
+    environment:
+      name: 预览 Preview
+      url: ${{ env.NETLIFY_URL }}
+    permissions:
+      pull-requests: write
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: 下载 PR 信息
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          workflow_conclusion: success
+          run_id: ${{ github.event.workflow_run.id }}
+          name: pr-num
+          path: pr-num
+          allow_forks: true
+
+      - name: 获取 PR 信息
+        id: pr-num
+        run: |
+          echo "PR_NUM=$(cat pr-num/pr_num)" >> $GITHUB_ENV
+
+      - name: 下载构建产物
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          workflow_conclusion: success
+          run_id: ${{ github.event.workflow_run.id }}
+          name: docs-build
+          path: docs-build
+          allow_forks: true
+
+      - name: 安装 Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: 8
+
+      - name: 获取 pnpm store 目录
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: 配置 pnpm 缓存
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装 Netlify CLI
+        run: pnpm install -g netlify-cli
+
+      - name: 推送到 Netlify
+        run: |
+          NETLIFY_JSON_OUTPUT=$(netlify deploy --dir docs-build --json)
+          echo $NETLIFY_JSON_OUTPUT
+
+          echo "NETLIFY_JSON_OUTPUT=$(echo $NETLIFY_JSON_OUTPUT)" >> $GITHUB_ENV
+          echo "NETLIFY_URL=$(echo $NETLIFY_JSON_OUTPUT | jq -r .deploy_url)" >> $GITHUB_ENV
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: 搜索评论 ID
+        uses: peter-evans/find-comment@v2
+        id: fc
+        with:
+          issue-number: ${{ env.PR_NUM }}
+          comment-author: 'github-actions[bot]'
+          body-includes: 到 Netlify
+
+      - name: 创建或更新评论
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ env.PR_NUM }}
+          body: |
+            ## ✅ 成功部署到 Netlify
+
+            | 系统     | 状态         | 预览链接                           |
+            |:---------|:------------|:----------------------------------|
+            | Ubuntu   | 成功         | ${{ env.NETLIFY_URL }}            |
+          edit-mode: replace
+
+  on-failure:
+    name: 无法部署预览到 Netlify
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: 下载 PR 信息
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          workflow_conclusion: success
+          run_id: ${{ github.event.workflow_run.id }}
+          name: pr-num
+          path: pr-num
+          allow_forks: true
+
+      - name: 获取 PR 信息
+        id: pr-num
+        run: |
+          echo "PR_NUM=$(cat pr-num/pr_num)" >> $GITHUB_ENV
+
+      - name: 搜索评论 ID
+        uses: peter-evans/find-comment@v2
+        id: fc
+        with:
+          issue-number: ${{ env.PR_NUM }}
+          comment-author: 'github-actions[bot]'
+          body-includes: 到 Netlify
+
+      - name: 创建或更新评论
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ env.PR_NUM }}
+          body: |
+            ## ❌ 无法部署到 Netlify
+
+            | 系统     | 状态         | 预览链接                           |
+            |:---------|:------------|:----------------------------------|
+            | Ubuntu   | 失败         | 请检查工作流程运行的状态和日志。        |
+          edit-mode: replace
