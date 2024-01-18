@@ -6,7 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { EasyTag } from './.vitepress/plugins/vitepress-plugin-docsmd-easytag/src'
-import { include } from './.vitepress/meta'
+import { include } from './metadata'
 
 const ROOT = dirname(fileURLToPath(import.meta.url))
 
