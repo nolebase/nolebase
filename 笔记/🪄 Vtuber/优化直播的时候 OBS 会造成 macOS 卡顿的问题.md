@@ -46,4 +46,4 @@ tags:
 
 在 OBS 中，可以点击「设置」-「视频」-「输出画布分辨率」来修改输出视频的分辨率：
 
-![[reduce-system-load-when-streaming-with-obs-on-macos-4.png]]
+![](./assets/reduce-system-load-when-streaming-with-obs-on-macos-4.png)
