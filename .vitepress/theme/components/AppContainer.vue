@@ -7,11 +7,11 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div bg="zinc-100 dark:zinc-800" w-full flex rounded-xl p-4>
-    <div flex="~ shrink-0" max-h-40 max-w-40 w="<sm:34%" justify-center>
+  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full  rounded-xl p-4>
+    <div flex="~" h-30 min-w-30 w-30 justify-center>
       <slot name="image" />
     </div>
-    <div flex="~ col grow-1" p="5 <sm:2">
+    <div flex="~ col" p="5 <sm:2">
       <div flex="~ col 1">
         <div text="2xl <sm:lg" font-semibold>
           <slot name="name" />
@@ -34,9 +34,3 @@ const props = defineProps<{
     </div>
   </div>
 </template>
-
-<style scoped>
-:slotted(img) {
-  object-fit: contain;
-}
-</style>
