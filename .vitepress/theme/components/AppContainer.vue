@@ -6,7 +6,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full  rounded-xl p-4>
+  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full rounded-xl p-4>
     <div flex="~" h-30 min-w-30 w-30 justify-center>
       <slot name="image" />
     </div>
@@ -15,7 +15,7 @@ const props = defineProps<{
         <div text="2xl <sm:lg" font-semibold>
           <slot name="name" />
         </div>
-        <div text-sm line-clamp-3>
+        <div line-clamp-3 text-sm>
           <span>by</span>
           <slot name="by" />
         </div>
