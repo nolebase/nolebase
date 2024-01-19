@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
-
 const props = defineProps<{
   iconSrc: string
   href: string
@@ -8,17 +6,18 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div bg="zinc-100 dark:zinc-800" w-full flex rounded-xl p-4>
-    <div flex="~" max-h-40 max-w-40 justify-center>
+  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full  rounded-xl p-4>
+    <div flex="~" h-30 min-w-30 w-30 justify-center>
       <slot name="image" />
     </div>
-    <div flex="~ col" p="5 <sm:2" min-w="<sm:[66%]">
+    <div flex="~ col" p="5 <sm:2">
       <div flex="~ col 1">
         <div text="2xl <sm:lg" font-semibold>
           <slot name="name" />
         </div>
-        <div text-sm>
-          <span>by</span><slot name="by" />
+        <div text-sm line-clamp-3>
+          <span>by</span>
+          <slot name="by" />
         </div>
       </div>
       <a
