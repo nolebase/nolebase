@@ -6,7 +6,8 @@
     "iconify",
     "mathjax",
     "nolebase",
-    "vitepress"
+    "vitepress",
+    "vuedraggable"
   ],
   "prettier.enable": false,
   "editor.formatOnSave": false,
