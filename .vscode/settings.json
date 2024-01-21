@@ -15,6 +15,8 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
   // The following is optional.
   // It's better to put under project setting `.vscode/settings.json`
   // to avoid conflicts with working with different eslint configs
@@ -30,5 +32,9 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+  "unocss.root": [
+    "."
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

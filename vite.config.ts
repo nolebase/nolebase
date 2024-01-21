@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url'
-import { dirname, join, sep } from 'node:path'
+import { dirname } from 'node:path'
 import process from 'node:process'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
@@ -39,10 +39,10 @@ export default defineConfig(async () => {
           return '贡献者'
         },
         excludes: [],
-        exclude: (id): boolean => {
-          if (id === join(ROOT, 'toc.md').split(sep).join('/'))
+        exclude: (_, { helpers }): boolean => {
+          if (helpers.idEquals('toc.md'))
             return true
-          if (id === join(ROOT, 'index.md').split(sep).join('/'))
+          if (helpers.idEquals('index.md'))
             return true
 
           return false
