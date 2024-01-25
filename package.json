@@ -69,7 +69,7 @@
     "unplugin-vue-components": "^0.26.0",
     "uuid": "^9.0.1",
     "vite": "^5.0.12",
-    "vitepress": "1.0.0-rc.39",
+    "vitepress": "1.0.0-rc.40",
     "vue": "^3.4.15",
     "vuedraggable": "^4.1.0"
   }
