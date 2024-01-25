@@ -113,6 +113,7 @@ export default defineConfig({
       light: 'github-light',
       dark: 'one-dark-pro',
     },
+    math: true,
     config: (md) => {
       md.use(MarkdownItFootnote)
       md.use(MarkdownItMathjax3)
