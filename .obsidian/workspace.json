@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d7c77477f58724e3",
+        "id": "d72f698081e75d33",
         "type": "tabs",
         "children": [
           {
-            "id": "6775947faed30b95",
+            "id": "73a9b6ff1cd4f3ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#运维/云原生/Kubernetes/KubeSphere",
+                "query": "keyboard",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,12 +73,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 362.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -95,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -130,7 +129,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -140,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md"
+                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md"
               }
             }
           },
@@ -153,7 +154,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -166,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -222,54 +223,54 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "d5332c2bfa4468de",
+  "active": "73a9b6ff1cd4f3ff",
   "lastOpenFiles": [
-    "笔记/🧱 基础设施/🚢 Kubernetes/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 Helm 安装的 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载集群内的 `kube-proxy`.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubeadm.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubelet 和 kubectl.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubeadm.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
-    "笔记/🛠️ 开发/🕸 网络/记一次 Docker Swarm 和 K8s 网络异常的排查和解决.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.2 升级和更新的操作步骤.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
-    "笔记/🛠️ 开发/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
-    "笔记/🛠️ 开发/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/在开发用的测试集群上用 Helm 安装 NebulaGraph.md",
-    "笔记/🤖 AI 人工智能/用 PyTorch Lightning 监控和串流 PyTorch 的训练进度.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/用 kind 创建的测试集群快速部署应用并暴露 NodePort 服务到宿主机方便调试.md",
-    "笔记/🛠️ 开发/使用 Poedit 给用了 GNU 本地化规范 gettext 的 kubectl 做本地化.md",
-    "笔记/🧱 基础设施/GPU 掉卡排查.md",
-    "笔记/🧱 基础设施/云上集群的 GPU.md",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/从用 PyTorch 训练一个模型开始.md",
-    "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
-    "LICENSE-CC-BY-SA",
-    "Pasted image 20240108011807.png",
-    "Pasted image 20240108011737.png",
-    "Pasted image 20240108011647.png",
-    "Pasted image 20240108011620.png",
-    "Pasted image 20240108011558.png",
-    "LICENSE-CC-BY-NC-SA",
-    "笔记/🎮 游戏/🪅 游戏/星际拓荒",
-    "笔记/🎮 游戏/🪅 游戏",
-    "Pasted image 20240107185512.png",
+    "vite.config.ts.timestamp-1706288253112-5e13e31d08f07.mjs",
+    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-3.png",
+    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-2.png",
+    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-1.png",
+    "笔记/🧱 基础设施/💾 TrueNAS/TrueNAS SCALE 发行版本 Bluefin 在更新 TrueCharts 应用时遭遇错误.md",
+    "笔记/🤖 AI 人工智能/监控和串流机器学习的进度，损失和正样本校验数值.md",
+    "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
     "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-5.png",
     "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-4.png",
     "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-3.png",
     "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-1.png",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-2.png",
     "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅",
-    "vite.config.ts.timestamp-1704366426268-1aedfdac1cc96.mjs",
-    "diff",
-    "vite.config.ts.timestamp-1704365874262-2f2e06838a48.mjs",
-    "笔记/🧮 数学",
+    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/1 从用 PyTorch 运行一个模型训练开始.md",
+    "笔记/🛠️ 开发/vue-vapor/嵌套 watch 和 onEffectCleanup 的另一种实现.md",
+    "笔记/🛠️ 开发/vue-vapor",
+    "笔记/📦 收集箱/📁 资源/AI 资源导航.md",
+    "笔记/📦 收集箱/🐙 GitHub 项目/xaboy/form-create.md",
+    "笔记/📦 收集箱/🐙 GitHub 项目/xaboy",
+    "笔记/📦 收集箱/🐙 GitHub 项目/mist-project/对抗 AI 绘画爬取数据的 MIST.md",
+    "笔记/📦 收集箱/🐙 GitHub 项目/mist-project",
+    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan/assets/draggan-showcase-video-1.mp4",
+    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan/assets",
+    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan/DragGAN.md",
+    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan",
+    "笔记/📦 收集箱/🐙 GitHub 项目/DLYuanGod/多模态大模型 TinyGPT-V.md",
+    "笔记/📦 收集箱/🐙 GitHub 项目/DLYuanGod",
+    "笔记/📦 收集箱/🌍 网站/镜像查询 help.mirrorz.org.md",
+    "笔记/📦 收集箱/🌍 网站/正则分析工具 Debuggex Beta.md",
+    "笔记/📦 收集箱/🌍 网站/学习全栈 AI.md",
+    "笔记/📦 收集箱/🌍 网站/学习 OpenGL.md",
+    "笔记/📦 收集箱/🌍 网站/可视化 LLM.md",
+    "笔记/📦 收集箱/🌍 网站/交互式学习 Git.md",
+    "笔记/📦 收集箱/🌍 网站/assets/debuggex-beta-screenshot-1.png.png",
+    "笔记/📦 收集箱/🌍 网站/assets",
+    "笔记/📦 收集箱/🌍 网站/2023 年排名前 10 的 AI 和 LLM 应用.md",
+    "笔记/☀️ 生活/🏠 租房/租房流程.md",
+    "笔记/☀️ 生活/🏠 租房",
+    "笔记/📦 收集箱/🌍 网站/help.mirrorz.org.md",
+    "Pasted image 20240126121238.png",
+    "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+    "笔记/🤖 AI 人工智能/大规模分布式机器学习里的断卡重训和故障恢复.md",
+    "笔记/🤖 AI 人工智能/多机多卡训练的时候的 NCCL 错误.md",
+    "笔记/🤖 AI 人工智能/Megatron-LM 的读取 checkpoint 的错误处理问题.md",
+    "笔记/🛠️ 开发/在 macOS 上反编译一个 .NET 用的 DLL 文件.md",
+    "🔌 知识库插件列表.md",
     "未命名.canvas"
   ]
 }
