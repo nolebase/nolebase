@@ -1,14 +1,8 @@
-import { fileURLToPath } from 'node:url'
-import { dirname } from 'node:path'
-import process from 'node:process'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
-import { EasyTag } from './.vitepress/plugins/vitepress-plugin-docsmd-easytag/src'
-import { include } from './metadata'
-
-const ROOT = dirname(fileURLToPath(import.meta.url))
+import { PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
 
 export default defineConfig(async () => {
   return {
@@ -21,12 +15,6 @@ export default defineConfig(async () => {
       ],
     },
     plugins: [
-      EasyTag({
-        rootDir: ROOT,
-        includes: [...include],
-        openAIAPISecret: process.env.OPENAI_API_SECRET!,
-        openAIAPIHost: process.env.OPENAI_API_HOST!,
-      }),
       GitChangelog({
         repoURL: () => 'https://github.com/nolebase/nolebase',
         maxGitLogCount: 1000,
@@ -38,6 +26,17 @@ export default defineConfig(async () => {
         getContributorsTitle: (): string => {
           return '贡献者'
         },
+        excludes: [],
+        exclude: (_, { helpers }): boolean => {
+          if (helpers.idEquals('toc.md'))
+            return true
+          if (helpers.idEquals('index.md'))
+            return true
+
+          return false
+        },
+      }),
+      PagePropertiesMarkdownSection({
         excludes: [],
         exclude: (_, { helpers }): boolean => {
           if (helpers.idEquals('toc.md'))
