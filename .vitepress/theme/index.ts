@@ -104,6 +104,22 @@ const ExtendedTheme: Theme = {
             type: 'tags',
             title: '标签',
           },
+          {
+            key: 'wordCount',
+            type: 'dynamic',
+            title: '字数',
+            options: {
+              type: 'wordsCount',
+            },
+          },
+          {
+            key: 'readingTime',
+            type: 'dynamic',
+            title: '阅读时间',
+            options: {
+              type: 'readingTime',
+            },
+          },
         ],
       },
     })
