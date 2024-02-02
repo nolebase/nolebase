@@ -1,3 +1,15 @@
+---
+tags:
+  - 软件/开源/OBS
+  - 媒体/直播
+  - 媒体/Vtuber
+  - 操作系统/macOS
+  - 网站/Twitch
+  - 媒体/Vtuber/NeuroSama
+  - 媒体/Vup
+  - 媒体/Vup/撕梓咩
+  - 媒体/Vup/Suzume
+---
 # 在 macOS 上作为 Vtuber 进行直播
 
 最近天天看 [Suzume](https://space.bilibili.com/6610851/) 和 [Neuro Sama](https://www.twitch.tv/vedal987)，已经彻底地被**耳濡目染**了啊！
