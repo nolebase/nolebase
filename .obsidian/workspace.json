@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md"
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,6 +225,8 @@
   },
   "active": "73a9b6ff1cd4f3ff",
   "lastOpenFiles": [
+    "笔记/🧱 基础设施/🚢 Kubernetes/重置 Kubernetes 集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
     "vite.config.ts.timestamp-1706288253112-5e13e31d08f07.mjs",
     "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-3.png",
     "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-2.png",
@@ -262,7 +264,6 @@
     "笔记/📦 收集箱/🌍 网站/assets",
     "笔记/📦 收集箱/🌍 网站/2023 年排名前 10 的 AI 和 LLM 应用.md",
     "笔记/☀️ 生活/🏠 租房/租房流程.md",
-    "笔记/☀️ 生活/🏠 租房",
     "笔记/📦 收集箱/🌍 网站/help.mirrorz.org.md",
     "Pasted image 20240126121238.png",
     "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
@@ -270,7 +271,6 @@
     "笔记/🤖 AI 人工智能/多机多卡训练的时候的 NCCL 错误.md",
     "笔记/🤖 AI 人工智能/Megatron-LM 的读取 checkpoint 的错误处理问题.md",
     "笔记/🛠️ 开发/在 macOS 上反编译一个 .NET 用的 DLL 文件.md",
-    "🔌 知识库插件列表.md",
     "未命名.canvas"
   ]
 }

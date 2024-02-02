@@ -246,7 +246,7 @@ nvidia-operator-validator-ctx5l                               1/1     Running   
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `nvidia-smi` 来尝试列出所有的 GPU 信息。
 
-::: tips 如何进入 DCGM Pod？
+::: tip 如何进入 DCGM Pod？
 
 运行下面的命令就可以进入到正在运行的 Pod 了：
 
@@ -305,7 +305,7 @@ Thu Jan  4 02:14:12 2024
 
 在容器内部可以执行 `curl localhost:9400/metrics` 获得 GPU的 metrics 数据。
 
-::: tips 如何进入 DCGM Pod？
+::: tip 如何进入 DCGM Pod？
 
 运行下面的命令就可以进入到正在运行的 Pod 了：
 
@@ -327,7 +327,7 @@ kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- 
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmi`（对 DCGM API 的本地封装的 CLI 版本）的命令对 GPU 进行故障排查。
 
-::: tips 如何进入 DCGM Pod？
+::: tip 如何进入 DCGM Pod？
 
 运行下面的命令就可以进入到正在运行的 Pod 了：
 
@@ -371,7 +371,7 @@ Error: Unable to connect to host engine. Host engine connection invalid/disconne
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmi`（对 DCGM API 的本地封装的 CLI 版本）的命令对 GPU 进行故障排查。
 
-::: tips 如何进入 DCGM Pod？
+::: tip 如何进入 DCGM Pod？
 
 运行下面的命令就可以进入到正在运行的 Pod 了：
 
@@ -399,7 +399,7 @@ dcgmi health -c
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmi`（对 DCGM API 的本地封装的 CLI 版本）的命令对 GPU 进行故障排查。
 
-::: tips 如何进入 DCGM Pod？
+::: tip 如何进入 DCGM Pod？
 
 运行下面的命令就可以进入到正在运行的 Pod 了：
 
@@ -497,7 +497,7 @@ Successfully ran diagnostic for group.
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmproftester12`（如果驱动安装的是 CUDA 11，那请使用 `dcgmproftester11` 命令）命令对 GPU 进行压力测试和 Profiling 测试来观察效果
 
-::: tips 如何进入 DCGM Pod？
+::: tip 如何进入 DCGM Pod？
 
 运行下面的命令就可以进入到正在运行的 Pod 了：
 
@@ -563,64 +563,6 @@ nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1
 ```
 
 :::
-
-```shell
-#!/bin/bash
-
-echo "=== 0. Checking started jobs ==="
-echo ""
-kubectl get pods -o wide | grep -e neko-distributed-demo-worker-0 -e neko-distributed-demo-worker-1
-
-POD0_ON_NODES=$(kubectl get pods neko-distributed-demo-worker-0 -o json | jq -r '.spec.nodeName')
-POD1_ON_NODES=$(kubectl get pods neko-distributed-demo-worker-1 -o json | jq -r '.spec.nodeName')
-
-POD_ON_NODES=($POD0_ON_NODES $POD1_ON_NODES)
-
-UNIQ_POD_ON_NODES=$(printf "%s\n" "${POD_ON_NODES[@]}" | sort -u)
-
-for i in ${!UNIQ_POD_ON_NODES[@]}
-do
-  POD_ID=$(kubectl get pods -n gpu-operator -o wide | grep 'nvidia-dcgm-exporter' | grep "${UNIQ_POD_ON_NODES[i]}" | awk {'print $1'} | head -n 1)
-
-  echo ""
-  echo "=== 1. Running diagnostics on Node ${UNIQ_POD_ON_NODES[$i]} with DCGM Pod ID $POD_ID ==="
-  echo ""
-
-  set -e
-  DIAG_OUTPUT=$(kubectl exec $POD_ID -n gpu-operator --container nvidia-dcgm-exporter -- bash -c "dcgmi diag -r 2" 2>&1) || true
-  printf "%b" "$DIAG_OUTPUT"
-
-  echo "\n"
-  echo "=== Diagnostics finished ==="
-  echo ""
-
-  if echo "$DIAG_OUTPUT" | grep -q "Fail - All"; then
-    echo "=== 1.0. Failure detected, killing master 0 torchrun ==="
-    kubectl delete pod neko-distributed-demo-master-0
-    echo "=== 1.0. [OK] eliminated ==="
-
-    echo "=== 1.1. Failure detected, killing worker 0 torchrun ==="
-    kubectl exec neko-distributed-demo-worker-0 --container pytorch -- bash -c 'kill -9 $(ps -A | grep python3 | awk {"print \$1"})'
-    kubectl delete pod neko-distributed-demo-worker-0
-    echo "=== 1.1. [OK] eliminated ==="
-    echo ""
-
-    echo "=== 1.2. Failure detected, killing worker 1 torchrun ==="
-    kubectl exec neko-distributed-demo-worker-1 --container pytorch -- bash -c 'kill -9 $(ps -A | grep python3 | awk {"print \$1"})'
-    kubectl delete pod neko-distributed-demo-worker-1
-    echo "=== 1.2. [OK] eliminated ==="
-    echo ""
-
-    echo "=== 1.3. Waiting for recovery ==="
-    echo ""
-    sleep 10
-
-    echo "=== 1.3. Checking recovered jobs ==="
-    echo ""
-    kubectl get pods -o wide | grep neko-distributed-demo
-  fi
-done
-```
 
 ## 参考资料
 
