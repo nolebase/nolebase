@@ -1,0 +1,1 @@
+# Building a fully local LLM voice assistant to control my smart home
