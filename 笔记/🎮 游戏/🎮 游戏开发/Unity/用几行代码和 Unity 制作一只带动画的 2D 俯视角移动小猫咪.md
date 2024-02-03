@@ -21,10 +21,19 @@ tags:
 
 效果是这样的：
 
-
 <video controls muted>
   <source src="./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-42.mov" type="video/mp4">
 </video>
+
+## 从 Unity Hub 创建 2D Sample 项目
+
+![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-52.png)
+
+## 下载游戏素材
+
+在 Unity Asset Store 下载免费的小猫咪资源就好了！
+
+[Pet Cats Pixel Art Pack | 2D 角色 | Unity Asset Store](https://assetstore.unity.com/packages/2d/characters/pet-cats-pixel-art-pack-248340)
 
 ## 创建一个新的 2D 游戏对象（GameObject）
 
