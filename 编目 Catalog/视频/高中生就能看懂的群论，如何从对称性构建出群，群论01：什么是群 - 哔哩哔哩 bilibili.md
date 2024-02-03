@@ -1,0 +1,1 @@
+[高中生就能看懂的群论，如何从对称性构建出群，群论01：什么是群 - 哔哩哔哩 bilibili](https://www.bilibili.com/video/BV1NQ4y1777J)
