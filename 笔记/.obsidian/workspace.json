@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📦 Product 产品/学习笔记/B端产品经理的通用工作流程.md",
+                "file": "📦 Product 产品/面试题整理/请简要描述产品流程.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📦 Product 产品/学习笔记/B端产品经理的通用工作流程.md",
+                "file": "📦 Product 产品/面试题整理/请简要描述产品流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📦 Product 产品/学习笔记/B端产品经理的通用工作流程.md",
+                "file": "📦 Product 产品/面试题整理/请简要描述产品流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📦 Product 产品/学习笔记/B端产品经理的通用工作流程.md"
+                "file": "📦 Product 产品/面试题整理/请简要描述产品流程.md"
               }
             }
           }
@@ -149,11 +149,13 @@
   },
   "active": "394a0b135ce857ce",
   "lastOpenFiles": [
+    "📦 Product 产品/学习笔记/B端产品经理的通用工作流程.md",
+    "📦 Product 产品/面试题整理/请简要描述产品流程.md",
+    "📦 Product 产品/面试题整理",
     "📦 Product 产品/学习笔记/src/2024-01-24_14-46-02.png",
     "📦 Product 产品/学习笔记/src",
     "📦 Product 产品/学习笔记/新建文件夹",
     "Front End 前端/JavaScript/JavaScript Info/2.4 变量 Variables.md",
-    "📦 Product 产品/学习笔记/B端产品经理的通用工作流程.md",
     "📦 Product 产品/学习笔记",
     "💼 Weaver 泛微/标准产品/模板编辑器.md",
     "💼 Weaver 泛微/产品建议.md",
@@ -184,7 +186,6 @@
     "📦 Product 产品/书籍/《启示录》/index.md",
     "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/10..md",
     "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）",
-    "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）",
     "📦 Product 产品/书籍/《启示录》/第 1 部分：人员（1~10）/09..md",
     "📦 Product 产品/书籍/《启示录》/第 2 部分：流程（2~30）/19. 用户体验设计与实现.md",
     "Pasted image 20240117143250.png",
@@ -193,7 +194,6 @@
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_09-07-05.png",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-14-40.png",
     "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-14-21.png",
-    "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-13-59.png",
-    "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-13-18.png"
+    "📦 Product 产品/📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-13-59.png"
   ]
 }
