@@ -3,7 +3,7 @@ progress: 85
 ---
 # LLM 是如何工作的？
 
-::: tips 阅前须知
+::: tip 阅前须知
 
 先叠甲，这篇文档**旨在给普罗大众**推广和介绍 GPT 和 LLM 是什么？GPT 和 LLM 神奇在哪里？为什么会有 AI 热潮？怎么样能用好 GPT 和 LLM？与此同时，这篇文档假定大家（读者）**只**对 ChatGPT 和 LLM（大语言模型）有一个基础的认识。
 
@@ -162,15 +162,9 @@ https://medium.com/nlplanet/two-minutes-nlp-a-taxonomy-of-tokenization-methods-6
 
 更有意思的是，在 Transformer 架构下，GPT 和 LLM 也是在以这样的行为、结构和逻辑中思考的。
 
-::: info 与语言学相关的一点小知识
-
-
-
-:::
-
 那 Transformer 模型里是如何运作的呢？
 
-
+> TODO
 
 那问题来了，「单字接龙」难在哪里？
 
@@ -191,14 +185,25 @@ https://medium.com/nlplanet/two-minutes-nlp-a-taxonomy-of-tokenization-methods-6
 
 这是不是过于简单了？说了等于没说。
 
+> TODO
+
 其实从本质上来说，Q，K，V 三个向量，他们各自的行为模式，就真的像是我们平时在与数据库，或者代码中的字典交互的时候所做的 Query（查询），Key（键）以及 Value（值）那样工作，只不过是以向量为内容的形式来构建的。
+
+> TODO
 
 #### 流动的神经元
 
 Transformer 通过使用自注意力（self-attention）机制和位置编码（positional encoding），可以处理文本中的长距离依赖问题，并保持高效的并行计算。
 
+> TODO
+
 前馈神经网络。
+
+> TODO
+
 反向传播。
+
+> TODO
 
 #### 拟合，一切都可以拟合
 
@@ -232,17 +237,15 @@ RNN，GRU，LASTM 窗口不足。
 
 <https://twitter.com/GregKamradt/status/1727018183608193393>
 
-https://x.com/dotey/status/1727437625194136060
+<https://x.com/dotey/status/1727437625194136060>
 
-https://x.com/dotey/status/1727454708627808261
+<https://x.com/dotey/status/1727454708627808261>
 
 ## 原初智能
 
 > 利用Agent和工具增强模型的泛化能力
 
 [《GPT-4 ，通用人工智能的火花》论文内容精选与翻译](https://orangeblog.notion.site/GPT-4-8fc50010291d47efb92cbbd668c8c893)
-
-[[《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf]]
 
 [拆解追溯 GPT-3.5 各项能力的起源](https://yaofu.notion.site/GPT-3-5-360081d91ec245f29029d37b54573756#e5422f6579d8440f9f592eb03e28eb38)
 
@@ -325,9 +328,7 @@ https://x.com/dotey/status/1727454708627808261
 
 <https://twitter.com/icreatelife/status/1649873812295491584>
 
-字节跳动出品的可以调用 GPT4 的 GPTs 平台
-Coze
-https://www.coze.com/
+[字节跳动出品的可以调用 GPT4 的 GPTs 平台 - Coze](https://www.coze.com/)
 
 ### LangChain 和 LlamaIndex 都做了什么？
 
@@ -362,8 +363,7 @@ https://www.coze.com/
 [大模型鲁棒不鲁棒，PromptBench测一测: 首个大语言模型提示鲁棒性的评测基准PromptBench - 知乎](https://zhuanlan.zhihu.com/p/637219127)
 
 ChatGPT 的 System Prompt
-LouisShark/chatgpt_system_prompt: collect agent's system prompt and share some prompt inject knowledge
-https://github.com/LouisShark/chatgpt_system_prompt
+[LouisShark/chatgpt_system_prompt: collect agent's system prompt and share some prompt inject knowledge](https://github.com/LouisShark/chatgpt_system_prompt)
 
 ### Adversarial Prompt Attack
 
@@ -379,26 +379,21 @@ https://github.com/LouisShark/chatgpt_system_prompt
 
 [The architecture of today's LLM applications - The GitHub Blog](https://github.blog/2023-10-30-the-architecture-of-todays-llm-applications/)
 
-[[量子位智库AIGC产业全景图报告.pdf]]
-
 [Building LLM applications for production](https://huyenchip.com/2023/04/11/llm-engineering.html)
 
-ColossalAI/docs/README-zh-Hans.md at main · hpcaitech/ColossalAI
-<https://github.com/hpcaitech/ColossalAI/blob/main/docs/README-zh-Hans.md>
+[ColossalAI/docs/README-zh-Hans.md at main · hpcaitech/ColossalAI](https://github.com/hpcaitech/ColossalAI/blob/main/docs/README-zh-Hans.md)
 
-![[笔记/🤖 AI 人工智能/assets/how-llm-works-5.png]]
+![](./assets/how-llm-works-5.png)
 
 > Hongyi Jin：“Introducing WebLLM, an open-source chatbot that brings language models (LLMs) directly onto web browsers. We can now run instruction fine-tuned LLaMA (Vicuna) models natively on your browser tab via @WebGPU with no server support. Checkout our demo at <https://t.co/dXII0MzYg1> . <https://t.co/IfgwPq0GTE”> / X
 
-<https://twitter.com/hongyijin258/status/1647062309960028160>
+[https://twitter.com/hongyijin258/status/1647062309960028160](https://twitter.com/hongyijin258/status/1647062309960028160)
 
-SourceGraph 宣布 Cody GA
-Sourcegraph Cody is Generally Available
-https://sourcegraph.com/blog/cody-is-generally-available
+[SourceGraph 宣布 Cody GA](https://sourcegraph.com/blog/cody-is-generally-available)
 
 Poe 发布面向开发者的 API
 
-<https://twitter.com/adamdangelo/status/1658121701077516291>
+[https://twitter.com/adamdangelo/status/1658121701077516291](https://twitter.com/adamdangelo/status/1658121701077516291)
 
 [DeepSpeed Chat：一键搞定不同规模 ChatGPT 类模型训练！](https://mp.weixin.qq.com/s/HhIGAojnZVSu4vMBpMP4yA)
 
