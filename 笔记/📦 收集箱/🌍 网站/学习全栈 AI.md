@@ -7,7 +7,6 @@ tags:
   - 笔记/论文
   - 网站/GitHub
   - 网站/GitHub/用户/chenzomi12
-  - 分类/收集箱
   - AI
 ---
 
