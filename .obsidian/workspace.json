@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6cdc48942bafab5f",
+        "id": "fd55f5c429129263",
         "type": "tabs",
         "children": [
           {
-            "id": "651d28a0b2c095c1",
+            "id": "efd0c9e1b75c68f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🎮 游戏/🎮 游戏开发/Unity/用几行代码和 Unity 制作一只带动画的 2D 俯视角移动小猫咪.md",
+                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🎮 游戏/🎮 游戏开发/Unity/用几行代码和 Unity 制作一只带动画的 2D 俯视角移动小猫咪.md",
+                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🎮 游戏/🎮 游戏开发/Unity/用几行代码和 Unity 制作一只带动画的 2D 俯视角移动小猫咪.md"
+                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🎮 游戏/🎮 游戏开发/Unity/用几行代码和 Unity 制作一只带动画的 2D 俯视角移动小猫咪.md",
+                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🎮 游戏/🎮 游戏开发/Unity/用几行代码和 Unity 制作一只带动画的 2D 俯视角移动小猫咪.md",
+                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,54 +223,54 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "651d28a0b2c095c1",
+  "active": "efd0c9e1b75c68f6",
   "lastOpenFiles": [
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-screenshot-52.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/reverse-sprites-screenshot-6.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-screenshot-51.png",
-    "Pasted image 20240202113229.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/用几行代码和 Unity 制作一只带动画的 2D 俯视角移动小猫咪.md",
-    "vite.config.ts.timestamp-1706874578090-2d8dea588e4ce.mjs",
-    "vite.config.ts.timestamp-1706874509075-188290b4ab4f7.mjs",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/reverse-sprites-screenshot-2.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/reverse-sprites-screenshot-3.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/reverse-sprites-screenshot-4.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/reverse-sprites-screenshot-5.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/反转精灵图动画帧.md",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/reverse-sprites-screenshot-1.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-screenshot-50.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-screenshot-49.png",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-recording-47.mov",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-screenshot-42.mov",
-    "笔记/🎮 游戏/🎮 游戏开发/Unity/assets/unity-movement-animation-of-2d-top-down-characters-recoding-10.mov",
-    "笔记/🪄 Vtuber/在 macOS 上作为 Vtuber 进行直播.md",
-    "笔记/🪄 Vtuber/给 OBS 添加 Twitch 聊天框组件并且自定义样式.md",
-    "笔记/🤖 AI 人工智能/快速在本地运行一个 XAgent 尝鲜图形化和智能化的 Agent 智能体.md",
-    "笔记/🛠️ 开发/给 Nest.js 项目集成 Kafka 消息中间件.md",
-    "笔记/🛠️ 开发/按需更新 Vite 加载的虚拟模块（Virtual Module）.md",
-    "笔记/🛠️ 开发/Vue Vapor Discussion.md",
-    "笔记/🤖 AI 人工智能/Megatron-LM 的读取 checkpoint 的错误处理问题.md",
-    "笔记/🛠️ 开发/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
-    "笔记/🛠️ 开发/因为 dayjs 不能轻松导入全部的 i18n 语言而换用了 date-fns.md",
-    "笔记/🛠️ 开发/Vue 中实践神奇的没有 Await 传染的 Async 范式.md",
-    "笔记/🛠️ 开发/Vite 部署.md",
-    "笔记/🛠️ 开发/CLI 的实现.md",
-    "笔记/🛠️ 开发/Microsoft Exchange SMTP 邮件 OAuth 验证流程.md",
-    "笔记/🛠️ 开发/用 TypeScript 写 sh 脚本.md",
-    "笔记/🛠️ 开发/开发一个 Kubernetes Controller.md",
-    "笔记/🎮 游戏/🕹 街机游戏/再觅 1cc 社区的旅程.md",
-    "笔记/🎮 游戏/🕹 街机游戏/O.N.G.E.K.I 音击/O.N.G.E.K.I Bright Memory SDDT 1.35 HDD 配置.md",
-    "笔记/🎮 游戏/🕹 街机游戏/assets",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
-    "笔记/🎮 游戏/🕹 街机游戏/社区",
-    "笔记/🧱 基础设施/🚢 Kubernetes/重置 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
-    "vite.config.ts.timestamp-1706288253112-5e13e31d08f07.mjs",
-    "笔记/🧱 基础设施/💾 TrueNAS/TrueNAS SCALE 发行版本 Bluefin 在更新 TrueCharts 应用时遭遇错误.md",
-    "笔记/🤖 AI 人工智能/监控和串流机器学习的进度，损失和正样本校验数值.md",
-    "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets",
-    "笔记/🛠️ 开发/vue-vapor",
+    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
+    "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
+    "笔记/🧱 基础设施/🚢 Kubernetes/面向 Kubernetes 开发.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/迁移持久卷.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/用方便好用的工具快速创建测试用的集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 的插件管理器 krew.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 插件之 kubecm 配置文件管理器.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/CustomResourceDefinition.md",
+    "笔记/🧱 基础设施/云上集群的 GPU.md",
+    "笔记/🧮 数学/空洞的想法.md",
+    "笔记/🧮 数学",
+    "笔记/🧩 开源贡献/为 TrueNAS 贡献.md",
+    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
+    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-3.png",
+    "笔记/🧩 开源贡献/Kubernetes/assets",
+    "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
+    "笔记/🤖 AI 人工智能/用 Rust 构建一个神经网络.md",
+    "笔记/🤖 AI 人工智能/用 Megatron-LM 进行分布式训练.md",
+    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
+    "笔记/🤖 AI 人工智能/用 AutoGen 写一个 LLM 应用.md",
+    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
+    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
+    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
+    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
+    "笔记/🤖 AI 人工智能/Neuro",
+    "笔记/🛠️ 开发/🗂 数据库/向量数据库 Vector DB",
+    "笔记/🛠️ 开发/编译原理",
+    "笔记/🛠️ 开发/⛶ 边缘计算",
     "未命名.canvas"
   ]
 }
