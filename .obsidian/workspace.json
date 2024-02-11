@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
+                "file": "视图/尚未编写完成的页面.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
+                "file": "视图/尚未编写完成的页面.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md"
+                "file": "视图/尚未编写完成的页面.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
+                "file": "视图/尚未编写完成的页面.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
+                "file": "视图/尚未编写完成的页面.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -225,6 +225,14 @@
   },
   "active": "efd0c9e1b75c68f6",
   "lastOpenFiles": [
+    "笔记/🛠️ 开发/玩玩 3B1B 做视频的时候用的 manim.md",
+    "视图/尚未编写完成的页面.md",
+    "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/🤖 AI 人工智能/在 Apple Silicon 上用 PyTorch 和 Accelerate 进行训练.md",
+    "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
+    "pnpm-lock.yaml.281114228",
+    "node_modules/@vueuse",
+    "node_modules/@nolebase",
     "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
     "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
     "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
@@ -259,18 +267,10 @@
     "笔记/🤖 AI 人工智能/用 Rust 构建一个神经网络.md",
     "笔记/🤖 AI 人工智能/用 Megatron-LM 进行分布式训练.md",
     "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/用 AutoGen 写一个 LLM 应用.md",
-    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
     "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
     "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
     "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
     "笔记/🤖 AI 人工智能/Neuro",
-    "笔记/🛠️ 开发/🗂 数据库/向量数据库 Vector DB",
-    "笔记/🛠️ 开发/编译原理",
-    "笔记/🛠️ 开发/⛶ 边缘计算",
     "未命名.canvas"
   ]
 }
