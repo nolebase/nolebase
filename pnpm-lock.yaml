@@ -24,26 +24,26 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@nolebase/markdown-it-bi-directional-links':
-    specifier: ^1.22.2
-    version: 1.22.2(markdown-it@13.0.2)
+    specifier: ^1.22.3
+    version: 1.22.3(markdown-it@13.0.2)
   '@nolebase/markdown-it-element-transform':
-    specifier: ^1.22.2
-    version: 1.22.2(markdown-it@13.0.2)
+    specifier: ^1.22.3
+    version: 1.22.3(markdown-it@13.0.2)
   '@nolebase/vitepress-plugin-enhanced-readabilities':
-    specifier: ^1.22.2
-    version: 1.22.2(vitepress@1.0.0-rc.40)
+    specifier: ^1.22.3
+    version: 1.22.3(vitepress@1.0.0-rc.40)
   '@nolebase/vitepress-plugin-git-changelog':
-    specifier: ^1.22.2
-    version: 1.22.2(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.40)
+    specifier: ^1.22.3
+    version: 1.22.3(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.40)
   '@nolebase/vitepress-plugin-highlight-targeted-heading':
-    specifier: ^1.22.2
-    version: 1.22.2(vitepress@1.0.0-rc.40)
+    specifier: ^1.22.3
+    version: 1.22.3(vitepress@1.0.0-rc.40)
   '@nolebase/vitepress-plugin-inline-link-preview':
-    specifier: ^1.22.2
-    version: 1.22.2(vitepress@1.0.0-rc.40)
+    specifier: ^1.22.3
+    version: 1.22.3(vitepress@1.0.0-rc.40)
   '@nolebase/vitepress-plugin-page-properties':
-    specifier: ^1.22.2
-    version: 1.22.2(vitepress@1.0.0-rc.40)
+    specifier: ^1.22.3
+    version: 1.22.3(vitepress@1.0.0-rc.40)
   '@types/fs-extra':
     specifier: ^11.0.4
     version: 11.0.4
@@ -124,7 +124,7 @@ devDependencies:
     version: 5.3.3
   unocss:
     specifier: ^0.58.5
-    version: 0.58.5(postcss@8.4.35)(vite@5.1.0)
+    version: 0.58.5(postcss@8.4.35)(vite@5.1.3)
   unplugin-vue-components:
     specifier: ^0.26.0
     version: 0.26.0(vue@3.4.18)
@@ -132,8 +132,8 @@ devDependencies:
     specifier: ^9.0.1
     version: 9.0.1
   vite:
-    specifier: ^5.1.0
-    version: 5.1.0(less@4.2.0)
+    specifier: ^5.1.3
+    version: 5.1.3(less@4.2.0)
   vitepress:
     specifier: 1.0.0-rc.40
     version: 1.0.0-rc.40(@algolia/client-search@4.22.1)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3)
@@ -1339,8 +1339,8 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@nolebase/markdown-it-bi-directional-links@1.22.2(markdown-it@13.0.2):
-    resolution: {integrity: sha512-E3sWLccvIn7fYmCCFJFhzGCthZE+poIILGdE7JUvK3ZQsrfEjgoBpVm3AFAkaDZZmEDsQFTrAjyLZnTXLpbW/g==}
+  /@nolebase/markdown-it-bi-directional-links@1.22.3(markdown-it@13.0.2):
+    resolution: {integrity: sha512-u5+MGz2tY6VcShLxqXemBPaLuKLKQSkdNNTfuNOqxJPrhhVUprteiKOg05OnPmldzRmobI6QTmRP3EvBTXEzOA==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
@@ -1348,24 +1348,24 @@ packages:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/markdown-it-element-transform@1.22.2(markdown-it@13.0.2):
-    resolution: {integrity: sha512-hWWnZLb876SmXvAhqifmeblIkeCANxm31GO2BlyPX6vxsWuSWtE0+d04Ht61heZFmi+uEmIX+AoL2quZKDNKeQ==}
+  /@nolebase/markdown-it-element-transform@1.22.3(markdown-it@13.0.2):
+    resolution: {integrity: sha512-D8hscFJeFOenWzt+y9lz4I6LHRozz6DcyA9ZT36+ifCUJn+8z4MGkX0cPLnwICfXK+HRFO6BMVNIp7hnpVbzMw==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@1.22.2(vitepress@1.0.0-rc.40):
-    resolution: {integrity: sha512-0CEnnrfaidp2d2R/e7tA3EziqcKzwsTGdF4PYnH20XxBjlmp5A7LxO55KngAnT1U/POFuZ3ir7Eb7OryBX2Dow==}
+  /@nolebase/vitepress-plugin-enhanced-readabilities@1.22.3(vitepress@1.0.0-rc.40):
+    resolution: {integrity: sha512-EuFSHTIyfijaJuIZuWiNQ++LwuI0VTNn0XZlFGDc5vPYCD+vOjJ+45cR+5xDYRg2qBdTjUhXdBpisLmNtWrI7Q==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.42'
     dependencies:
       vitepress: 1.0.0-rc.40(@algolia/client-search@4.22.1)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-git-changelog@1.22.2(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.40):
-    resolution: {integrity: sha512-K5mi6MLgJLbkMgNxcfU/sfkTFVdaTkNFgQ9wHXo83YoMYVXtPk0W/Sawnyxa9aVWkCfba4gF5esQELPWp4LwdQ==}
+  /@nolebase/vitepress-plugin-git-changelog@1.22.3(dayjs@1.11.10)(md5@2.3.0)(simple-git@3.22.0)(vitepress@1.0.0-rc.40):
+    resolution: {integrity: sha512-0Pm8CBOntVQzWgQwPwRERg12x3eivhVkl55LWfuL6VOJlHVUEFC4rxOXpHI7srYDgd6BWaw4m/s9iwNUqmj2gA==}
     peerDependencies:
       dayjs: '>=1.11.1'
       md5: '>=2.3.0'
@@ -1378,24 +1378,24 @@ packages:
       vitepress: 1.0.0-rc.40(@algolia/client-search@4.22.1)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-highlight-targeted-heading@1.22.2(vitepress@1.0.0-rc.40):
-    resolution: {integrity: sha512-+Zd+aQCcqKUUt31Wxenn1QRo7KQEIegfHqRZCJozostBsEbL+D1cuDLR9CYTashGtC91n+9sDGO8OqGB0ipKLQ==}
+  /@nolebase/vitepress-plugin-highlight-targeted-heading@1.22.3(vitepress@1.0.0-rc.40):
+    resolution: {integrity: sha512-h2uQS6lf0okxQjoPar2adGeU9p0bwMeox6lUnaC6/3OGdXvRNM2L5y4zbGLebZBLlzuiZ0cV4xaesxmVCIFjVg==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.42'
     dependencies:
       vitepress: 1.0.0-rc.40(@algolia/client-search@4.22.1)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-inline-link-preview@1.22.2(vitepress@1.0.0-rc.40):
-    resolution: {integrity: sha512-ZVZq87rdYoUVfOUgLfPGYBv/tVtid/W91SOFHwTbiCmLEZQIcjys7bqYthJzCL/uCWW0Mkcd+SfX4kcsoy0mTQ==}
+  /@nolebase/vitepress-plugin-inline-link-preview@1.22.3(vitepress@1.0.0-rc.40):
+    resolution: {integrity: sha512-4/W4lOqvky9ysXWKLBnIbJ5WTMRgncnIirv/KegpgonOk3xRcay6/ZdWJ+F/71Hi1DXZEGx8tb4EUr/KuDT4gA==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.42'
     dependencies:
       vitepress: 1.0.0-rc.40(@algolia/client-search@4.22.1)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.35)(search-insights@2.13.0)(typescript@5.3.3)
     dev: true
 
-  /@nolebase/vitepress-plugin-page-properties@1.22.2(vitepress@1.0.0-rc.40):
-    resolution: {integrity: sha512-2D05bKmSsddljiM+IfW1qjRpFci2xb7knl4IQhsvDBJci9qp2UxNh0c4Chxki74f8mBox8Wx3B/gb9o7ut3fkg==}
+  /@nolebase/vitepress-plugin-page-properties@1.22.3(vitepress@1.0.0-rc.40):
+    resolution: {integrity: sha512-AIZZTZdbxI4IGqi7I6Kz1bM7XXaq3IKUcMEs+dKn7wG64L5SeHCyXmtpNxe26eh1tJkM5M/hO24jUiJvLbI0Vg==}
     peerDependencies:
       vitepress: '>=1.0.0-rc.42'
     dependencies:
@@ -1884,7 +1884,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@unocss/astro@0.58.5(vite@5.1.0):
+  /@unocss/astro@0.58.5(vite@5.1.3):
     resolution: {integrity: sha512-LtuVnj8oFAK9663OVhQO8KpdJFiOyyPsYfnOZlDCOFK3gHb/2WMrzdBwr1w8LoQF3bDedkFMKirVF7gWjyZiaw==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0
@@ -1894,8 +1894,8 @@ packages:
     dependencies:
       '@unocss/core': 0.58.5
       '@unocss/reset': 0.58.5
-      '@unocss/vite': 0.58.5(vite@5.1.0)
-      vite: 5.1.0(less@4.2.0)
+      '@unocss/vite': 0.58.5(vite@5.1.3)
+      vite: 5.1.3(less@4.2.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2104,7 +2104,7 @@ packages:
       '@unocss/core': 0.58.5
     dev: true
 
-  /@unocss/vite@0.58.5(vite@5.1.0):
+  /@unocss/vite@0.58.5(vite@5.1.3):
     resolution: {integrity: sha512-p4o1XNX1rvjmoUqSSdua8XyWNg/d+YUChDd2L/xEty+6j2qv0wUaohs3UQ87vWlv632/UmgdX+2MbrgtqthCtw==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0
@@ -2119,19 +2119,19 @@ packages:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       magic-string: 0.30.7
-      vite: 5.1.0(less@4.2.0)
+      vite: 5.1.3(less@4.2.0)
     transitivePeerDependencies:
       - rollup
     dev: true
 
-  /@vitejs/plugin-vue@5.0.3(vite@5.1.0)(vue@3.4.18):
+  /@vitejs/plugin-vue@5.0.3(vite@5.1.3)(vue@3.4.18):
     resolution: {integrity: sha512-b8S5dVS40rgHdDrw+DQi/xOM9ed+kSRZzfm1T74bMmBDCd8XO87NKlFYInzCtwvtWwXZvo1QxE2OSspTATWrbA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.1.0(less@4.2.0)
+      vite: 5.1.3(less@4.2.0)
       vue: 3.4.18(typescript@5.3.3)
     dev: true
 
@@ -5406,7 +5406,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.58.5(postcss@8.4.35)(vite@5.1.0):
+  /unocss@0.58.5(postcss@8.4.35)(vite@5.1.3):
     resolution: {integrity: sha512-0g4P6jLgRRNnhscxw7nQ9RHGrKJ1UPPiHPet+YT3TXUcmy4mTiYgo9+kGQf5bjyrzsELJ10cT6Qz2y6g9Tls4g==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5418,7 +5418,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      '@unocss/astro': 0.58.5(vite@5.1.0)
+      '@unocss/astro': 0.58.5(vite@5.1.3)
       '@unocss/cli': 0.58.5
       '@unocss/core': 0.58.5
       '@unocss/extractor-arbitrary-variants': 0.58.5
@@ -5437,8 +5437,8 @@ packages:
       '@unocss/transformer-compile-class': 0.58.5
       '@unocss/transformer-directives': 0.58.5
       '@unocss/transformer-variant-group': 0.58.5
-      '@unocss/vite': 0.58.5(vite@5.1.0)
-      vite: 5.1.0(less@4.2.0)
+      '@unocss/vite': 0.58.5(vite@5.1.3)
+      vite: 5.1.3(less@4.2.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -5532,8 +5532,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite@5.1.0(less@4.2.0):
-    resolution: {integrity: sha512-STmSFzhY4ljuhz14bg9LkMTk3d98IO6DIArnTY6MeBwiD1Za2StcQtz7fzOUnRCqrHSD5+OS2reg4HOz1eoLnw==}
+  /vite@5.1.3(less@4.2.0):
+    resolution: {integrity: sha512-UfmUD36DKkqhi/F75RrxvPpry+9+tTkrXfMNZD+SboZqBCMsxKtO52XeGzzuh7ioz+Eo/SYDBbdb0Z7vgcDJew==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -5583,7 +5583,7 @@ packages:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2(@algolia/client-search@4.22.1)(search-insights@2.13.0)
       '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 5.0.3(vite@5.1.0)(vue@3.4.18)
+      '@vitejs/plugin-vue': 5.0.3(vite@5.1.3)(vue@3.4.18)
       '@vue/devtools-api': 6.5.1
       '@vueuse/core': 10.7.2(vue@3.4.18)
       '@vueuse/integrations': 10.7.2(focus-trap@7.5.4)(vue@3.4.18)
@@ -5595,7 +5595,7 @@ packages:
       shikiji: 0.10.0
       shikiji-core: 0.10.0
       shikiji-transformers: 0.10.0
-      vite: 5.1.0(less@4.2.0)
+      vite: 5.1.3(less@4.2.0)
       vue: 3.4.18(typescript@5.3.3)
     transitivePeerDependencies:
       - '@algolia/client-search'
