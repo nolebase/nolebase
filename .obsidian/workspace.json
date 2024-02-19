@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "视图/尚未编写完成的页面.md",
+                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "视图/尚未编写完成的页面.md",
+                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "视图/尚未编写完成的页面.md"
+                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md"
               }
             }
           },
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "视图/尚未编写完成的页面.md",
+                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "视图/尚未编写完成的页面.md",
+                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,16 +223,28 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "efd0c9e1b75c68f6",
+  "active": "b5dfc4e6c8287ee4",
   "lastOpenFiles": [
-    "笔记/🛠️ 开发/玩玩 3B1B 做视频的时候用的 manim.md",
+    "node_modules/@nolebase",
+    "笔记/🎓 学习",
+    "笔记/📚 学习",
+    "笔记/🧩 开源贡献/TrueNAS/assets/Pasted image 20240208200157.png",
+    "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
+    "笔记/🧩 开源贡献/TrueNAS/assets",
+    "笔记/🧩 开源贡献/TrueNAS",
+    "Pasted image 20240202113229.png",
+    "笔记/🧩 开源贡献/TrueNAS/assets/Pasted image 20240208201820.png",
+    "Pasted image 20240208202141.png",
+    "笔记/🧩 开源贡献/WebAssembly/当前的 WASM SOTA 生态.md",
     "视图/尚未编写完成的页面.md",
+    "笔记/🧩 开源贡献/WebAssembly",
+    "笔记/🛠️ 开发/未命名.md",
+    "笔记/🛠️ 开发/玩玩 3B1B 做视频的时候用的 manim.md",
     "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
     "笔记/🤖 AI 人工智能/在 Apple Silicon 上用 PyTorch 和 Accelerate 进行训练.md",
     "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
     "pnpm-lock.yaml.281114228",
     "node_modules/@vueuse",
-    "node_modules/@nolebase",
     "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
     "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
     "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
@@ -241,9 +253,6 @@
     "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
     "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
     "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
     "笔记/🧱 基础设施/🚢 Kubernetes/面向 Kubernetes 开发.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/迁移持久卷.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/用方便好用的工具快速创建测试用的集群.md",
@@ -259,18 +268,9 @@
     "笔记/🧱 基础设施/云上集群的 GPU.md",
     "笔记/🧮 数学/空洞的想法.md",
     "笔记/🧮 数学",
-    "笔记/🧩 开源贡献/为 TrueNAS 贡献.md",
     "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
-    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-3.png",
     "笔记/🧩 开源贡献/Kubernetes/assets",
     "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
-    "笔记/🤖 AI 人工智能/用 Rust 构建一个神经网络.md",
-    "笔记/🤖 AI 人工智能/用 Megatron-LM 进行分布式训练.md",
-    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
-    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
-    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
-    "笔记/🤖 AI 人工智能/Neuro",
     "未命名.canvas"
   ]
 }
