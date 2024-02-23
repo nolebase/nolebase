@@ -584,6 +584,7 @@ nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1
 - [NVIDIA 数据中心 GPU 管理器 (DCGM)  |  操作套件  |  Google Cloud](https://cloud.google.com/stackdriver/docs/managed-prometheus/exporters/nvidia-dcgm?hl=zh-cn)
 - [GPU常见故障及排查方法_51CTO博客_GPU常见故障](https://blog.51cto.com/zaa47/2560477)
 - [NVIDIA GPU Debug Guidelines - GPU Deployment and Management Documentation](https://docs.nvidia.com/deploy/gpu-debug-guidelines/index.html)
+- [A Practical Guide to Running NVIDIA GPUs on Kubernetes | jimangel.io](https://www.jimangel.io/posts/nvidia-rtx-gpu-kubernetes-setup/)
 
 学习 `dcgmi` 在 Kubernetes 使用的时候发现了一个有意思的 AI 算力平台 [openi.pcl.ac.cn/OpenI/Apulis-AI-Platform/commit/da673ab384cb6ea8a5276fad1ffc8695fe1d1d6d.diff](https://openi.pcl.ac.cn/OpenI/Apulis-AI-Platform/commit/da673ab384cb6ea8a5276fad1ffc8695fe1d1d6d.diff)
 
