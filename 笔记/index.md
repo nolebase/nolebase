@@ -1,8 +1,8 @@
 # 🏡 你好，欢迎访问我的数字花园！
 
-我叫刘俊，这里记录了关于我的一切，欢迎来这里坐坐。
+我叫刘俊，笔名超级小镇（Super  Town）. 这里记录了关于我的一切，欢迎来这里坐坐。
 
-
+生活、学习、思考、总结
 #### 本网站的访问链接
 - [vision.surf](https://vision.surf)       基于 [[Vercel]] 部署
 - [mind.solar](https://mind.solar)      基于 [[Netlify]] 部署
