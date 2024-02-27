@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "741032fefbe1505b",
+        "id": "1cdcfdcfd76a582b",
         "type": "tabs",
         "children": [
           {
-            "id": "141f6e65920fcdd5",
+            "id": "d5c5cb25bd2636d5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "💼 Weaver 泛微/标准产品/产品手册/合同起草.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "💼 Weaver 泛微/标准产品/产品手册/合同起草.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "💼 Weaver 泛微/标准产品/产品手册/合同起草.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "💼 Weaver 泛微/标准产品/产品手册/合同起草.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -147,7 +139,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "141f6e65920fcdd5",
+  "active": "d5c5cb25bd2636d5",
   "lastOpenFiles": [
     "💼 Weaver 泛微/标准产品/产品手册/前期准备.md",
     "💼 Weaver 泛微/标准产品/产品手册/合同起草.md",
