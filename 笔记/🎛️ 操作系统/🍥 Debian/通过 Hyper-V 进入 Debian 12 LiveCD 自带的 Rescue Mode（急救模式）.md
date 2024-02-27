@@ -74,8 +74,6 @@ tags:
 
 ![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-13.png]]
 
-![[Pasted image 20240225181432.png]]
-
 ![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-14.png]]
 
 ![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png]]

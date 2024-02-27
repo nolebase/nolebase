@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "fd55f5c429129263",
+        "id": "5238f13d77ee28d8",
         "type": "tabs",
         "children": [
           {
-            "id": "efd0c9e1b75c68f6",
+            "id": "42c81edb6ef96e83",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 388.5
+    "width": 506.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -94,7 +90,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md"
-              }
+              "state": {}
             }
           },
           {
@@ -153,8 +146,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -167,7 +159,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +175,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,18 +213,43 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b5dfc4e6c8287ee4",
+  "active": "42c81edb6ef96e83",
   "lastOpenFiles": [
+    "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/resize-disk-partition-for-debian-12-screenshot-1.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/通过 Hyper-V 进入 Debian 12 LiveCD 自带的 Rescue Mode（急救模式）.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-9.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-8.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-7.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-6.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-5.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-4.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-3.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-2.png",
+    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png",
+    "笔记/🎮 游戏/🎮 游戏开发/GameJam/参考资料.md",
+    "笔记/🎮 游戏/🎮 游戏开发/GameJam/GameJam 2024 - Make Me Laugh.md",
+    "笔记/🎮 游戏/🎮 游戏开发/GameJam",
     "node_modules/@nolebase",
+    "笔记/🎛️ 操作系统/🍥 Debian/激活 Debian 上安装的 Nginx 的 Stream 模块来支持转发 TCP 和 UDP 请求.md",
+    "vite.config.ts.timestamp-1709004241537-182ccf7276d96.mjs",
+    "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/apt upgrade 执行更新到一半发生了 SSH 断连但是没有 tmux 和 screen 帮助创建守护 tty，但是报错了无法获得 lock-frontend 锁的时候怎么办？.md",
+    "笔记/🧱 基础设施/nv-hostengine 的启动和补充知识.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/重置 Kubernetes 集群.md",
+    "笔记/🐾 Fursuit 兽装/index.md",
+    "笔记/🐾 Fursuit 兽装/不同的兽装类型.md",
+    "笔记/🐾 Fursuit 兽装",
+    "笔记/🧱 基础设施/📦 Homelab/未命名.md",
+    "笔记/📦 收集箱/📁 资源/AI 资源导航.md",
+    "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
+    "编目 Catalog/文章/Python, Go, and TypeScript - My Insights on Crafting Command Line Interfaces.md",
     "笔记/🎓 学习",
     "笔记/📚 学习",
-    "笔记/🧩 开源贡献/TrueNAS/assets/Pasted image 20240208200157.png",
-    "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
     "笔记/🧩 开源贡献/TrueNAS/assets",
     "笔记/🧩 开源贡献/TrueNAS",
-    "Pasted image 20240202113229.png",
-    "笔记/🧩 开源贡献/TrueNAS/assets/Pasted image 20240208201820.png",
-    "Pasted image 20240208202141.png",
     "笔记/🧩 开源贡献/WebAssembly/当前的 WASM SOTA 生态.md",
     "视图/尚未编写完成的页面.md",
     "笔记/🧩 开源贡献/WebAssembly",
@@ -244,33 +259,7 @@
     "笔记/🤖 AI 人工智能/在 Apple Silicon 上用 PyTorch 和 Accelerate 进行训练.md",
     "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
     "pnpm-lock.yaml.281114228",
-    "node_modules/@vueuse",
     "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
-    "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
-    "笔记/🧱 基础设施/🚢 Kubernetes/面向 Kubernetes 开发.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/迁移持久卷.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/用方便好用的工具快速创建测试用的集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 的插件管理器 krew.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 插件之 kubecm 配置文件管理器.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/CustomResourceDefinition.md",
-    "笔记/🧱 基础设施/云上集群的 GPU.md",
-    "笔记/🧮 数学/空洞的想法.md",
-    "笔记/🧮 数学",
-    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
-    "笔记/🧩 开源贡献/Kubernetes/assets",
-    "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
     "未命名.canvas"
   ]
 }
