@@ -33,6 +33,11 @@
   box-shadow: 0 2px 0 2px #292929;
 }
 
+/**
+图标可以在这里复制得到
+https://apple.stackexchange.com/a/123577
+*/
+
 /* macOS command 图标 */
 .VPDoc kbd[data-macos-keyboard-key="command"]::before {
   content: "⌘";
@@ -73,7 +78,7 @@
 }
 
 .VPDoc kbd[data-keyboard-key="enter"]::before {
-  content: "⌅";
+  content: "⏎";
   vertical-align: top;
   margin-right: 4px;
 }
@@ -83,4 +88,28 @@
   vertical-align: top;
   margin-right: 4px;
   font-weight: bold;
+}
+
+.VPDoc kbd[data-keyboard-key="up-arrow"]::before {
+  content: "↑";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="down-arrow"]::before {
+  content: "↓";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="left-arrow"]::before {
+  content: "←";
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+.VPDoc kbd[data-keyboard-key="right-arrow"]::before {
+  content: "→";
+  vertical-align: top;
+  margin-right: 4px;
 }
