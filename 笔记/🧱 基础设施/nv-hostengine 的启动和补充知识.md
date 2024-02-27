@@ -184,7 +184,7 @@ sudo kubectl get ClusterPolicy cluster-policy -o yaml
   dcgm:
     enabled: false
     hostPort: 5555
-    image: dcgm
+    image: dcgmçç
     imagePullPolicy: IfNotPresent
     repository: nvcr.io/nvidia/cloud-native
     version: 3.3.0-1-ubuntu22.04
@@ -199,6 +199,10 @@ sudo kubectl edit ClusterPolicy cluster-policy
 ```
 
 对 `ClusterPolicy` 资源进行编辑并修改 `dcgm.enabled` 为 `true` 即可，然后等待 Pod 启动完成就可以继续用了。
+
+## 延伸阅读
+
+- [Data Center GPU Manager User Guide - Data Center GPU Manager Documentation (nvidia.com)](https://docs.nvidia.com/datacenter/dcgm/2.3/dcgm-user-guide/getting-started.html)
 
 ## 参考资料
 
