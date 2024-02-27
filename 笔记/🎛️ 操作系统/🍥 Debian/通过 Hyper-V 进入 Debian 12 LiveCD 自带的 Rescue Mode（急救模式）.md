@@ -19,7 +19,7 @@ tags:
 1. 前往 Hyper-V 的控制面板，添加一个新的 DVD 驱动器设备，选择期望启动的 LiveCD 的 `iso` 文件。
 2. 在 Hyper-V 虚拟机设置的左侧面板中，选定「固件」来配置 BIOS 引导顺序。将 LiveCD 置于最优先的位置。
 
-![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-1.png]]
+![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-1.png)
 
 3. 点击确认保存，然后启动虚拟机。
 ## 进入 Rescue Mode（急救模式）
@@ -68,15 +68,19 @@ tags:
 
 接下来，因为我们需要对硬盘进行配置，因此我们不希望使用任何的根文件系统，选择「不使用根文件系统」即可：
 
-::: detail 什么情况下我会需要根文件系统？
+::: tip 什么情况下我会需要根文件系统？
 
-比如需要直接操作硬盘中的文件的时候，假设自己错误配置了 `/etc/fstab` ，或者是错误配置了 `grub` ，甚至是内核相关的参数，都可以通过挂载硬盘作为「根文件系统」的形式去操作，挂载之后，你依然可以选择使用 LiveCD 中的内核和环境作为主要的 shell 环境，而非选定的硬盘内装载的系统。一般而言，挂载硬盘设备之后，可以选择将目标硬盘挂载为 `/target` 目录，然后依然使用 LiveCD 中的内核和环境去进行操作 `/target` 目录中的文件，这样就不用担心会出现完全没有救援措施的情况了。
+比如需要直接操作硬盘中的文件的时候，假设自己错误配置了 `/etc/fstab` ，或者是错误配置了 `grub` ，甚至是内核相关的参数，都可以通过挂载硬盘作为「根文件系统」的形式去操作。
 
-![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-13.png]]
+![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-13.png)
 
-![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-14.png]]
+挂载之后，你依然可以选择使用 LiveCD 中的内核和环境作为主要的 shell 环境，而非选定的硬盘内装载的系统。避免造成环境污染。
 
-![[enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png]]
+![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-14.png)
+
+一般而言，挂载硬盘设备之后，可以选择将目标硬盘挂载为 `/target` 目录，然后依然使用 LiveCD 中的内核和环境去进行操作 `/target` 目录中的文件，这样就不用担心会出现完全没有救援措施的情况了。
+
+![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png)
 
 :::
 
