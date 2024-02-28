@@ -1,9 +1,9 @@
 ---
 tags:
-  - GPT
-  - Prompt
-  - OpenAI
-  - 特殊角色扮演
+  - AI/大语言模型/GPT
+  - AI/提示词/Prompt
+  - AI/企业/OpenAI
+  - AI/提示词/Prompt/特殊角色扮演
 ---
 
 # 嘴臭锐评 Prompt
