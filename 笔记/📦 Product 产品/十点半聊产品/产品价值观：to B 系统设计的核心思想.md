@@ -1,6 +1,7 @@
 ---
 Author: "@echo 回声"
 URL: https://www.woshipm.com/pd/450394.html
+Date: 2024/3/1
 ---
 > 科学无国界，但科学家有他的祖国。系统产品也是同理，系统无优劣，系统设计者有他的价值观。
 
