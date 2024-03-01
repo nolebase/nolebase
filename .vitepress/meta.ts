@@ -1,6 +1,6 @@
 /** 文本 */
-export const siteName = 'Vision Surf'
-export const siteShortName = 'Vision'
+export const siteName = `刘俊 Super Town's Brain`
+export const siteShortName = '刘俊 Super.Town'
 export const siteDescription = '心怀好奇，睁大眼睛，探索一切未知'
 
 /** 文档所在目录 */

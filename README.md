@@ -7,7 +7,7 @@
   <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a>
 </p>
 
-# Mind Solar
+# 刘俊 Super.Town's Brain
 
 **记录回忆，知识和畅想的地方**
 
