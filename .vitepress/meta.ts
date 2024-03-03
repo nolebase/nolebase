@@ -7,7 +7,7 @@ export const siteDescription = '心怀好奇，睁大眼睛，探索一切未知
 export const include = ['笔记', '生活']
 
 /** Repo */
-export const githubRepoLink = 'https://github.com/olivla/Vision'
+export const githubRepoLink = 'https://github.com/ChristineCharlotte/Vision'
 
 /** 社交媒体 */
 // ...
