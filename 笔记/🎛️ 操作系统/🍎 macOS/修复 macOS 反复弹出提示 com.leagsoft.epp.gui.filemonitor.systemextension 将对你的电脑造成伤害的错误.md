@@ -20,13 +20,13 @@ tags:
 
 的错误。
 
-![[telegram-cloud-photo-size-1-5127572867431640112-x.jpg]]
+![](./assets/fix-macos-com-leagsoft-epp-gui-filemonitor-systemextension-will-damage-your-computer-error-screenshot-1.jpg)
 
 错误弹窗还会提示说这个是一个 malware（病毒软件）。
 
 ## 排查与探索
 
-![[telegram-cloud-photo-size-1-5125139072673754280-y.jpg]]
+![](./assets/fix-macos-com-leagsoft-epp-gui-filemonitor-systemextension-will-damage-your-computer-error-screenshot-2.jpg)
 
 乍一看的话，这个文件是在 System Extensions 目录里面的。
 
