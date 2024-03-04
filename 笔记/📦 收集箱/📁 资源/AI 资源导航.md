@@ -9,6 +9,8 @@ tags:
 ---
 # AI 资源导航
 
+- [AI 探索指南 - Telegram 频道（由 Moonshot 成员创建）](https://t.me/aigc1024)
+- [涓海录 AIGC 学习文档 - 飞书云文档](https://qwu28uf3j5.feishu.cn/docx/Ofp1dBDp2oH1nGxTmk9cRZDvnQe)
 - [AI 产品榜 aicpb.com - Lark云文档](https://dnipkggqxh.feishu.cn/wiki/YTIUwM6Vmij4IQkSm9PctPWunIb)
 - [AI 严选 - Lark云文档](https://aiweaver.feishu.cn/wiki/VsPWwY5VJi3BOTkMimPcWQaRnJe)
 - [Agent 创业大全](https://three-recorder-52a.notion.site/Agent-7b4bc7a71f8d4d4b940abc9b3232954a)
