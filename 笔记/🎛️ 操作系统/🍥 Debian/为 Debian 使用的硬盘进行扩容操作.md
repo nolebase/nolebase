@@ -91,7 +91,7 @@ sudo update-initramfs -u
 
 对于 Debian 12 的 LiveCD 而言，它会提供 BusyBox（一个非常轻量和好用的发行版）给我们使用：
 
-![[resize-disk-partition-for-debian-12-screenshot-1.png]]
+![](./assets/resize-disk-partition-for-debian-12-screenshot-1.png)
 
 接下来我们在这个命令窗口中输入和使用 `parted` 命令就可以修改分区了：
 
