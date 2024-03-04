@@ -11,8 +11,12 @@
             "id": "42c81edb6ef96e83",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "视图/尚未编写完成的页面.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "视图/尚未编写完成的页面.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -135,7 +140,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "视图/尚未编写完成的页面.md"
+              }
             }
           },
           {
@@ -159,6 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "视图/尚未编写完成的页面.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,6 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "视图/尚未编写完成的页面.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,21 +209,24 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "random-note:开始漫游笔记": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian42-brat:BRAT": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "42c81edb6ef96e83",
   "lastOpenFiles": [
+    "视图/未添加标签的页面.md",
+    "视图/尚未编写完成的页面.md",
+    "笔记/Projects/Nolebase.md",
+    "笔记/Awesome-Collections/Resources/2023 年排名前 10 的 AI 和 LLM 应用.md",
+    "笔记/Awesome-Collections/🔖 词条/CN.md",
+    "笔记/Awesome-Collections/Software/Noteable.io.md",
+    "笔记/Awesome-Collections/Software/Synergy 鼠标键盘跨平台协同操作.md",
+    "笔记/Awesome-Collections/🤖️ AI/Bloop.ai.md",
     "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
     "笔记/🎛️ 操作系统/🍥 Debian/assets/resize-disk-partition-for-debian-12-screenshot-1.png",
     "笔记/🎛️ 操作系统/🍥 Debian/通过 Hyper-V 进入 Debian 12 LiveCD 自带的 Rescue Mode（急救模式）.md",
@@ -227,39 +239,32 @@
     "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-3.png",
     "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-2.png",
     "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png",
-    "笔记/🎮 游戏/🎮 游戏开发/GameJam/参考资料.md",
-    "笔记/🎮 游戏/🎮 游戏开发/GameJam/GameJam 2024 - Make Me Laugh.md",
-    "笔记/🎮 游戏/🎮 游戏开发/GameJam",
+    "笔记/Games/🎮 游戏开发/GameJam/参考资料.md",
+    "笔记/Games/🎮 游戏开发/GameJam/GameJam 2024 - Make Me Laugh.md",
+    "笔记/Games/🎮 游戏开发/GameJam",
     "node_modules/@nolebase",
     "笔记/🎛️ 操作系统/🍥 Debian/激活 Debian 上安装的 Nginx 的 Stream 模块来支持转发 TCP 和 UDP 请求.md",
     "vite.config.ts.timestamp-1709004241537-182ccf7276d96.mjs",
     "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
     "笔记/🎛️ 操作系统/🍥 Debian/apt upgrade 执行更新到一半发生了 SSH 断连但是没有 tmux 和 screen 帮助创建守护 tty，但是报错了无法获得 lock-frontend 锁的时候怎么办？.md",
-    "笔记/🧱 基础设施/nv-hostengine 的启动和补充知识.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/重置 Kubernetes 集群.md",
+    "笔记/Infra/nv-hostengine 的启动和补充知识.md",
+    "笔记/Infra/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
+    "笔记/Infra/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
+    "笔记/Infra/🚢 Kubernetes/重置 Kubernetes 集群.md",
     "笔记/🐾 Fursuit 兽装/index.md",
     "笔记/🐾 Fursuit 兽装/不同的兽装类型.md",
     "笔记/🐾 Fursuit 兽装",
     "笔记/🧱 基础设施/📦 Homelab/未命名.md",
-    "笔记/📦 收集箱/📁 资源/AI 资源导航.md",
-    "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
+    "笔记/Awesome-Collections/Resources/AI 资源导航.md",
+    "Notes/OSS/TrueNAS/为 TrueNAS 贡献.md",
     "编目 Catalog/文章/Python, Go, and TypeScript - My Insights on Crafting Command Line Interfaces.md",
-    "笔记/🎓 学习",
+    "Notes/Education",
     "笔记/📚 学习",
-    "笔记/🧩 开源贡献/TrueNAS/assets",
-    "笔记/🧩 开源贡献/TrueNAS",
-    "笔记/🧩 开源贡献/WebAssembly/当前的 WASM SOTA 生态.md",
-    "视图/尚未编写完成的页面.md",
-    "笔记/🧩 开源贡献/WebAssembly",
-    "笔记/🛠️ 开发/未命名.md",
-    "笔记/🛠️ 开发/玩玩 3B1B 做视频的时候用的 manim.md",
-    "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
-    "笔记/🤖 AI 人工智能/在 Apple Silicon 上用 PyTorch 和 Accelerate 进行训练.md",
-    "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
+    "Notes/OSS/TrueNAS/assets",
+    "Notes/OSS/TrueNAS",
+    "Notes/OSS/WebAssembly/当前的 WASM SOTA 生态.md",
+    "Notes/OSS/WebAssembly",
     "pnpm-lock.yaml.281114228",
-    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
     "未命名.canvas"
   ]
 }
