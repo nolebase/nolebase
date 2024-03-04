@@ -16,4 +16,4 @@ tags:
 </h3>
 是联系的拼音 **l**ián **x**ì 的首声母（字母）缩写，一般用在闲鱼，微博这样的平台上交换联系方式用。[^1]
 
-[^1]: [不懂就问lx是什么意思啊](https://www.xiaohongshu.com/explore/6475d8bb00000000120314ab)
+[^1]: 是 [不懂就问lx是什么意思啊](https://www.xiaohongshu.com/explore/6475d8bb00000000120314ab) 笔记中介绍的。最早在闲鱼上遇见到。
