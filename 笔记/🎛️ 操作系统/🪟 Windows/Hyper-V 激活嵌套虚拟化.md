@@ -4,7 +4,7 @@ tags:
   - 软件/虚拟机/Hyper-V
   - 命令行/Powershell
   - 操作系统/Windows-Server
-  - 计算机科学/虚拟化
+  - 计算机/计算机科学/CS/虚拟化
 ---
 
 # Hyper-V 激活嵌套虚拟化

@@ -4,8 +4,8 @@ tags:
   - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 开发/云原生/Kubernetes/K8s
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 开发/云原生/容器网络接口/CNI
   - 命令行/kubeadm

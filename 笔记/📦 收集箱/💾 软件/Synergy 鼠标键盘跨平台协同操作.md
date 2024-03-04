@@ -12,6 +12,6 @@ tags:
 全平台支持：
 - Windows
 - macOS
-- Linux
+- 计算机/操作系统/Linux
 
 感谢 [@LemonNekoGH](https://github.com/LemonNekoGH) 的推荐。

@@ -9,7 +9,7 @@ tags:
   - 命令行/cut
   - 命令行/grep
   - 命令行/xargs
-  - Linux/命令行
+  - 计算机/操作系统/Linux/命令行
   - 开发/Git
 ---
 

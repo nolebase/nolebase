@@ -13,8 +13,8 @@ tags:
   - 软件/云原生/containerd
   - 命令行/ipvsadm
   - 软件/云原生/ipvsadm
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
 ---
 # 重置 Kubernetes 集群

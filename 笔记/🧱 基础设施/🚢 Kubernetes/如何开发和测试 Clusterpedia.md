@@ -12,9 +12,9 @@ tags:
   - 命令行/make
   - 命令行/curl
   - 命令行/openssl
-  - 密码学/证书/TLS/mTLS
-  - 密码学/证书/证书机构/CA
-  - 密码学/证书/TLS
+  - 数学/密码学/证书/TLS/mTLS
+  - 数学/密码学/证书/证书机构/CA
+  - 数学/密码学/证书/TLS
   - 开发/Git
   - 命令行/git
   - 命令行/kubectl

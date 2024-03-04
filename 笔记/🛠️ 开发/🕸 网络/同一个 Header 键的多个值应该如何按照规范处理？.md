@@ -1,7 +1,7 @@
 ---
 tags:
-  - 网络/协议/HTTP
-  - 网络/协议/HTTP/Header
+  - 计算机/网络/协议/HTTP
+  - 计算机/网络/协议/HTTP/Header
 ---
 # 同一个 Header 键的多个值应该如何按照规范处理？
 

@@ -7,8 +7,8 @@ tags:
   - 软件/云原生/kubeadm
   - 开发/云原生
   - 开发/云原生/Kubernetes/K8s
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
 ---
 # 创建加入集群的 Token 并输出命令

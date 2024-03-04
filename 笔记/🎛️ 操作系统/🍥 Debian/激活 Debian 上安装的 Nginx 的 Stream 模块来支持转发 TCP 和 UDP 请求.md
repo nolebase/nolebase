@@ -1,13 +1,13 @@
 ---
 tags:
-  - 网络/网关/Nginx
-  - 网络/网关
+  - 计算机/网络/网关/Nginx
+  - 计算机/网络/网关
   - 命令行/apt
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
   - 操作系统/Debian/Debian-12
-  - 网络/协议/TCP
-  - 网络/协议/UDP
+  - 计算机/网络/协议/TCP
+  - 计算机/网络/协议/UDP
   - 命令行/终端
   - 运维/网络
   - 基础设施/Homelab

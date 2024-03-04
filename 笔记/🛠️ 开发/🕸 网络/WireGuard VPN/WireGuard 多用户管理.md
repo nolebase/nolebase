@@ -1,14 +1,14 @@
 ---
 tags:
-  - 网络/WireGuard
-  - 网络/VPN/WireGuard
-  - Linux
-  - Linux/命令行
+  - 计算机/网络/WireGuard
+  - 计算机/网络/VPN/WireGuard
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 命令行
   - 命令行/sed
-  - 网络
-  - 密码学/非对称加密
+  - 计算机/网络
+  - 数学/密码学/非对称加密
   - 操作系统/macOS
   - 操作系统/Windows
 ---
@@ -183,7 +183,7 @@ cat wg0-client.conf | sed '/^#/d;/^\s*$/d' | tee wg0.conf
 3. `wg0.conf` 是 WireGuard 的配置文件，根据不同的系统，可以放到不同的目录：
     - Windows: ``（我还没有部署过，之后会更新到这里）
     - macOS: `/usr/local/etc/wireguard/wg0.conf`
-    - Linux: `/etc/wireguard/wg0.conf`
+    - 计算机/操作系统/Linux: `/etc/wireguard/wg0.conf`
 
 :::
 

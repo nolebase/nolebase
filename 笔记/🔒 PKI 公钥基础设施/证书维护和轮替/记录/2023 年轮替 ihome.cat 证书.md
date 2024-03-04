@@ -1,9 +1,9 @@
 ---
 tags:
-  - 密码学/证书/TLS
-  - 密码学/证书/TLS/HTTPS
-  - 密码学/证书/TLS/SSL
-  - 密码学/证书/PKI
+  - 数学/密码学/证书/TLS
+  - 数学/密码学/证书/TLS/HTTPS
+  - 数学/密码学/证书/TLS/SSL
+  - 数学/密码学/证书/PKI
   - 命令行/openssl
 ---
 # 2023 年轮替 ihome.cat 证书

@@ -1,11 +1,11 @@
 ---
 tags:
   - 开源/软件/Clash
-  - 网络/VPN/Clash
-  - 网络/代理/Clash
+  - 计算机/网络/VPN/Clash
+  - 计算机/网络/代理/Clash
   - 软件/ClashX
-  - 网络/路由
-  - 网络/透明代理
+  - 计算机/网络/路由
+  - 计算机/网络/透明代理
   - 开源/软件/Clash/增强模式
   - 开发/标记语言/YAML
   - 软件/Visual-Studio-Code

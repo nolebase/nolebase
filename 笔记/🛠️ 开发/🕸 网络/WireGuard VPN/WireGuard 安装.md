@@ -1,7 +1,7 @@
 ---
 tags:
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
@@ -12,12 +12,12 @@ tags:
   - 命令行/apt
   - 命令行/dnf
   - 命令行/brew
-  - 网络/WireGuard
-  - 网络/VPN
-  - Linux/内核
+  - 计算机/网络/WireGuard
+  - 计算机/网络/VPN
+  - 计算机/操作系统/Linux/内核
   - 操作系统/macOS
-  - 计算机网络/组网
-  - 网络/协议/UDP
+  - 计算机/网络/组网
+  - 计算机/网络/协议/UDP
 ---
 # WireGuard 安装
 

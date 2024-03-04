@@ -4,9 +4,9 @@ tags:
   - 开源/软件/bash
   - 开源/软件/zsh
   - 运维
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux/命令行
 ---
 # 获取当前 Unix 机器的公网 IP 地址
 

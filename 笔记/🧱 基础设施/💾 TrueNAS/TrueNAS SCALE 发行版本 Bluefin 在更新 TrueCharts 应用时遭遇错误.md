@@ -6,7 +6,7 @@ tags:
   - 软件/TrueNAS
   - 运维/云原生/Kubernetes
   - 运维/云原生/Kubernetes/K3s
-  - 安全
+  - 计算机/信息技术/安全
   - 命令行/kubectl
   - 软件/云原生/kubectl
 ---

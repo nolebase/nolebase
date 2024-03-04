@@ -6,8 +6,8 @@ tags:
   - 开发/云原生/Kubernetes/K8s
   - 命令行/systemd
   - 命令行/journalctl
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
@@ -17,7 +17,7 @@ tags:
   - 命令行/kubectl
   - 软件/云原生/kubectl
   - 软件/云原生/kubelet
-  - 网络
+  - 计算机/网络
 ---
 # 通过 `kubeadm` 部署 Kubernetes 集群的时候的问题排查
 

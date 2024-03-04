@@ -1,7 +1,7 @@
 ---
 tags:
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 命令行
   - 命令行/base64

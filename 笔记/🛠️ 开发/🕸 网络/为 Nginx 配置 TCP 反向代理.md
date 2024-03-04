@@ -1,18 +1,18 @@
 ---
 tags:
-  - 网络/网关/Nginx
-  - 网络/网关
-  - 网络/网关/OpenResty
+  - 计算机/网络/网关/Nginx
+  - 计算机/网络/网关
+  - 计算机/网络/网关/OpenResty
   - 命令行/systemd
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 操作系统/Debian
-  - 密码学/证书/TLS
-  - 密码学/证书/TLS/mTLS
+  - 数学/密码学/证书/TLS
+  - 数学/密码学/证书/TLS/mTLS
   - 命令行/kubectl
   - 软件/云原生/kubectl
-  - 网络/协议/TCP
+  - 计算机/网络/协议/TCP
 ---
 
 # 为 Nginx 配置 TCP 反向代理

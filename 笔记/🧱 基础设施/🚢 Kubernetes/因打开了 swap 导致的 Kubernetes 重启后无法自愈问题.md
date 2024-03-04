@@ -11,7 +11,7 @@ tags:
   - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Linux
 ---
 # 因打开了 swap 导致的 Kubernetes 重启后无法自愈问题

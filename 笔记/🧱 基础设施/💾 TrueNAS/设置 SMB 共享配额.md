@@ -4,7 +4,7 @@ tags:
   - 基础设施/Homelab/NAS
   - 基础设施/NAS
   - 基础设施/Homelab
-  - 网络/协议/SMB
+  - 计算机/网络/协议/SMB
   - 软件/TrueNAS-SCALE
 ---
 

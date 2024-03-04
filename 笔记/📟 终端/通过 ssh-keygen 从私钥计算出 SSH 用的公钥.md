@@ -6,7 +6,7 @@ tags:
   - 操作系统/Linux
   - 命令行/ssh-keygen
   - 命令行/ssh
-  - 网络/协议/SSH
+  - 计算机/网络/协议/SSH
   - 开源/软件/ssh
 ---
 # 通过 `ssh-keygen` 从私钥计算出 SSH 用的公钥
@@ -20,8 +20,8 @@ ssh-keygen -y -f <私钥地址>
 就像这样：
 
 ```shell
-$ ssh-keygen -y -f ~/.ssh/test_encrypted_ed25519 
-Enter passphrase: 
+$ ssh-keygen -y -f ~/.ssh/test_encrypted_ed25519
+Enter passphrase:
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAyAbAwe4xj/1Or+BrppbdqxO23bcVXt+FhnwXz9tv7C neko@ayaka.moe
 ```
 

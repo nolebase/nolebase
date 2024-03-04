@@ -4,8 +4,9 @@ source: https://shartoo.github.io/2016/10/25/SVD-decomponent/
 tags:
   - 数学/线性代数
   - 数学/高等数学/高数
-  - 机器学习/深度学习
   - 计算机科学/算法
+  - AI/机器学习/ML/Machine-Learning
+  - AI/深度学习/DL/Deep-Learning
 ---
 
 # 深度学习基础：SVD奇异值分解及其意义

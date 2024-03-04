@@ -1,7 +1,7 @@
 ---
 tags:
   - 开发/云原生
-  - 计算机科学/虚拟化
+  - 计算机/计算机科学/CS/虚拟化
   - 开发/云原生/Kubernetes
   - 开发/容器化
   - 开发/虚拟化
@@ -20,15 +20,15 @@ tags:
   - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes/K8s
   - 运维/云原生/Kubernetes
-  - 网络
+  - 计算机/网络
   - 运维/Cilium
   - 命令行/cilium
   - 软件/云原生/Cilium
   - 软件/云原生/kube-proxy
-  - 网络/Calico
+  - 计算机/网络/Calico
   - 运维/Calico
   - 软件/云原生/Calico
-  - 网络/Cilium
+  - 计算机/网络/Cilium
   - 开发/标记语言/YAML
 ---
 # ”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium

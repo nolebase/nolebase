@@ -1,6 +1,6 @@
 ---
 tags:
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Linux
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11

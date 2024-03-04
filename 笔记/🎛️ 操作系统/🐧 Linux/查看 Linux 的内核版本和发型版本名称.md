@@ -1,12 +1,12 @@
 ---
 tags:
   - 操作系统/Linux
-  - Linux/命令行
-  - Linux/内核
+  - 计算机/操作系统/Linux/命令行
+  - 计算机/操作系统/Linux/内核
   - 命令行/uname
   - 命令行/lsb_release
   - 命令行/hostnamectl
-  - Linux/内核/procfs
+  - 计算机/操作系统/Linux/内核/procfs
   - 命令行/dmesg
 ---
 # 查看 Linux 的内核版本和发型版本名称

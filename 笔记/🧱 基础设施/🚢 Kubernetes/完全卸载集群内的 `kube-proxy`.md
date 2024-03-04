@@ -10,11 +10,11 @@ tags:
   - 命令行/ip
   - 命令行/ipvsadm
   - 软件/云原生/ipvsadm
-  - 网络/Calico
+  - 计算机/网络/Calico
   - 运维/Calico
   - 软件/云原生/Calico
   - 运维/Cilium
-  - 网络/Cilium
+  - 计算机/网络/Cilium
   - 命令行/cilium
   - 软件/云原生/Cilium
 ---

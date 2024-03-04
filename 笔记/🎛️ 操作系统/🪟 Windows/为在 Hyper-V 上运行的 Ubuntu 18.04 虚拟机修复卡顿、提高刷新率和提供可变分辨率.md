@@ -12,15 +12,16 @@ tags:
   - 命令行/chmod
   - 操作系统/Windows-Server
   - 命令行/vbmanage
-  - CPU指令集/arm64
-  - 芯片/Apple-Silicon-M1
   - 软件/虚拟机/VirtualBox
   - 软件/虚拟机/Hyper-V
-  - 计算机科学/虚拟化
+  - 计算机/计算机科学/CS/虚拟化
   - 开源/库/opencv
   - 开发/虚拟化
   - 开发/语言/Python
   - 开发/语言/Python/Python2
+  - 计算机/CPU-指令集/arm64
+  - 计算机/硬件/芯片/Apple-Silicon
+  - 计算机/硬件/芯片/Apple-Silicon/M1
 ---
 # 为在 Hyper-V 上运行的 Ubuntu 18.04 虚拟机修复卡顿、提高刷新率和提供可变分辨率
 

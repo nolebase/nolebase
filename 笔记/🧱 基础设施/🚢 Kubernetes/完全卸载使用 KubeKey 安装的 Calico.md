@@ -1,18 +1,18 @@
 ---
 tags:
-  - 网络/Calico
+  - 计算机/网络/Calico
   - 运维/Calico
   - 软件/云原生/Calico
   - 运维/云原生/Kubernetes
   - 运维/云原生/Kubernetes/K8s
   - 开发/云原生/Kubernetes
   - 开发/云原生/Kubernetes/K8s
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
-  - 网络
+  - 计算机/网络
 ---
 # 完全卸载使用 KubeKey 安装的 Calico
 

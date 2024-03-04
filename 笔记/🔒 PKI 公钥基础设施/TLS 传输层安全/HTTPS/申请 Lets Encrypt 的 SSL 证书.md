@@ -1,9 +1,9 @@
 ---
 tags:
-  - 密码学/证书/TLS/SSL
-  - 密码学/证书/TLS/HTTPS
-  - 密码学/证书/TLS/域名证书
-  - 密码学/证书/LetsEncrypt
+  - 数学/密码学/证书/TLS/SSL
+  - 数学/密码学/证书/TLS/HTTPS
+  - 数学/密码学/证书/TLS/域名证书
+  - 数学/密码学/证书/LetsEncrypt
   - 命令行/openssl
   - 操作系统/Debian
   - 操作系统/CentOS

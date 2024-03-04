@@ -4,9 +4,9 @@ tags:
   - 开发/语言/Golang
   - 开发/后端/邮件
   - 开发/后端/Email
-  - 邮件/Gmail
   - 编码/UTF-8
   - 规范/RFC
+  - 计算机/网络/协议/邮件/Email
 ---
 
 # 电子邮件的 Subject 主题字段中文乱码

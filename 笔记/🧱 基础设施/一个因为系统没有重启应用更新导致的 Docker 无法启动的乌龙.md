@@ -9,9 +9,9 @@ tags:
   - 命令行/containerd
   - 软件/云原生/containerd
   - 操作系统/Unix
-  - Linux
-  - Linux/内核
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/内核
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 开发/故障排查
   - 运维/云原生/Kubernetes
@@ -94,7 +94,7 @@ Dec 13 08:36:21 localhost systemd[1]: Started containerd.service - containerd co
 Dec 13 08:36:21 localhost containerd[350077]: time="2023-12-13T08:36:21.688811231Z" level=info msg="containerd successfully booted in 0.069185s"
 ```
 
-据说这个和 `debian` 用的 `iptables` 的 `nftables` 替代有关[^2]，如果用 
+据说这个和 `debian` 用的 `iptables` 的 `nftables` 替代有关[^2]，如果用
 
 ```shell
 sudo update-alternatives --config iptables

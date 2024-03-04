@@ -6,19 +6,19 @@ tags:
   - 开发/云原生/Kubernetes/K8s
   - 命令行/kubectl
   - 软件/云原生/kubectl
-  - 网络
+  - 计算机/网络
   - 命令行/helm
   - 软件/云原生/helm
   - 命令行/ip
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
   - 命令行/cilium
   - 软件/云原生/Cilium
   - 运维/Cilium
-  - 网络/Cilium
+  - 计算机/网络/Cilium
 ---
 # 完全卸载使用 Helm 安装的 Cilium
 

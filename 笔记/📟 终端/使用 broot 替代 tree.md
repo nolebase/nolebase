@@ -5,8 +5,8 @@ tags:
   - 命令行/tree
   - 操作系统/Unix
   - 操作系统/Linux
-  - Linux/命令行
-  - Linux
+  - 计算机/操作系统/Linux/命令行
+  - 计算机/操作系统/Linux
   - 命令行/brew
   - 操作系统/macOS
   - 开源/软件/zsh

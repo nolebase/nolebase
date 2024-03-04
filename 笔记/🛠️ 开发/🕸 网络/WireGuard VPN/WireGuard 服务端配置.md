@@ -1,23 +1,23 @@
 ---
 tags:
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
-  - 网络/WireGuard
-  - 网络/VPN
-  - 网络/VPN/WireGuard
+  - 计算机/网络/WireGuard
+  - 计算机/网络/VPN
+  - 计算机/网络/VPN/WireGuard
   - 操作系统/macOS
   - 命令行/vim
   - 命令行/mkdir
   - 命令行/ip
   - 命令行/sysctl
   - 运维/内核
-  - Linux/内核
+  - 计算机/操作系统/Linux/内核
   - 运维/网络
   - 运维
-  - 计算机网络/组网
+  - 计算机/网络/组网
   - 命令行/chmod
-  - 网络/协议/UDP
+  - 计算机/网络/协议/UDP
 ---
 
 # WireGuard 服务端配置

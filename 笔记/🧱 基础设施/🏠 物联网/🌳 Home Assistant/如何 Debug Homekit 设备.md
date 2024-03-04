@@ -2,7 +2,7 @@
 tags:
   - 物联网/智能家居/Homekit
   - 物联网/智能家居/生态/Homekit
-  - 网络/协议/mDNS
+  - 计算机/网络/协议/mDNS
   - 操作系统/Debian
   - 命令行/apt
   - 命令行

@@ -1,6 +1,6 @@
 ---
 tags:
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11
   - 操作系统/Unix
@@ -12,7 +12,7 @@ tags:
   - 软件/云原生/kubeadm
   - 软件/云原生/kubelet
   - 命令行/apt
-  - 网络/Cilium
+  - 计算机/网络/Cilium
   - 运维/Cilium
   - 命令行/cilium
   - 软件/云原生/Cilium

@@ -5,9 +5,9 @@ tags:
   - 命令行/ssh
   - 命令行/ssh-add
   - 命令行/op
-  - 安全/密码管理器/1Password
-  - 网络/协议/SFTP
-  - 网络/协议/SSH
+  - 计算机/信息技术/安全/密码管理器/1Password
+  - 计算机/网络/协议/SFTP
+  - 计算机/网络/协议/SSH
   - 命令行/systemd
 ---
 # 在配置 1Password 作为 SSH Agent 的环境中 `rclone` 的 SFTP 集成会提示 Too many authentication failures 错误

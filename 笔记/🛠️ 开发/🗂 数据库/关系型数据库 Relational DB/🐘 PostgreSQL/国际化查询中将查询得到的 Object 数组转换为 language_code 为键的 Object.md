@@ -1,12 +1,11 @@
 ---
 tags:
- - 数据库/postgres
- - 数据库/postgresql
- - 开发/语言/SQL
- - 编码/jsonb
- - i18n
- - 国际化
- - 开发/数据/嵌套查询
+  - 计算机/数据库/postgres
+  - 计算机/数据库/postgresql
+  - 开发/语言/SQL
+  - 编码/jsonb
+  - 开发/数据/嵌套查询
+  - 语言/国际化/Internationalization/i18n
 ---
 
 # 国际化查询中将查询得到的 Object 数组重新映射为 `language_code` 列为键的 Object

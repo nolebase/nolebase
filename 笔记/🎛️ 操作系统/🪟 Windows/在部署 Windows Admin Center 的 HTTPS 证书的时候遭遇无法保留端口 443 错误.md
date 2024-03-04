@@ -5,13 +5,13 @@ tags:
   - 软件/Windows/WindowsAdminCenter
   - 软件/Windows/Powershell
   - 命令行/Powershell
-  - 密码学/证书
-  - 密码学/证书/TLS/SSL
+  - 数学/密码学/证书
+  - 数学/密码学/证书/TLS/SSL
   - 命令行/openssl
-  - 密码学/算法/ECDSA
-  - 密码学/算法/ED25519
-  - 密码学/算法/RSA
-  - 密码学/证书/TLS/HTTPS
+  - 数学/密码学/算法/ECDSA
+  - 数学/密码学/算法/ED25519
+  - 数学/密码学/算法/RSA
+  - 数学/密码学/证书/TLS/HTTPS
   - 命令行/msiexec
   - 软件/Windows/msiexec
 ---
@@ -49,22 +49,22 @@ msiexec /i "C:\Users\neko.HOMELAB\Downloads\WindowsAdminCenter2306.msi" /l*v "lo
 
 ```
 MSI (s) (94:D4) [23:46:23:247]: Executing op: ActionStart(Name=BindSslPort,,)
-操作 23:46:23: BindSslPort. 
+操作 23:46:23: BindSslPort.
 MSI (s) (94:D4) [23:46:23:263]: Executing op: CustomActionSchedule(Action=BindSslPort,ActionType=3073,Source=BinaryData,Target=BindSslPort,CustomActionData=SME_PORT=443;SME_THUMBPRINT=46a713bd4e296069908c688837642c458d5700d5;SUPPORTED_SERVER_SKU=1)
 MSI (s) (94:D0) [23:46:23:263]: Invoking remote custom action. DLL: C:\Windows\Installer\MSI74A1.tmp, Entrypoint: BindSslPort
 SFXCA: Extracting custom action to temporary directory: C:\Windows\Installer\MSI74A1.tmp-\
 SFXCA: Binding to CLR version v4.0.30319
 Calling custom action Microsoft.ManagementExperience.Setup.CustomActions!Microsoft.ManagementExperience.Setup.CustomActions.CustomAction.BindSslPort
 操作 23:46:23: 正在绑定 SSL 端口. 正在绑定 SSL 端口
-异常: 
+异常:
 Microsoft.Deployment.WindowsInstaller.InstallerException
-无法保留端口 443 
+无法保留端口 443
    在 Microsoft.ManagementExperience.Setup.CustomActions.CustomAction.<>c__DisplayClass32_0.<BindSslPort>b__0()
    在 Microsoft.ManagementExperience.Setup.CustomActions.CustomAction.RunInstallerAction(Session session, Func`1 action)
-1: 未经处理的异常: Microsoft.Deployment.WindowsInstaller.InstallerException 无法保留端口 443 
+1: 未经处理的异常: Microsoft.Deployment.WindowsInstaller.InstallerException 无法保留端口 443
 MSI (s) (94!94) [23:49:51:915]: Transforming table Error.
 
-MSI (s) (94!94) [23:49:51:915]: 产品: Windows Admin Center -- 1: 未经处理的异常: Microsoft.Deployment.WindowsInstaller.InstallerException 无法保留端口 443 
+MSI (s) (94!94) [23:49:51:915]: 产品: Windows Admin Center -- 1: 未经处理的异常: Microsoft.Deployment.WindowsInstaller.InstallerException 无法保留端口 443
 
 CustomAction BindSslPort returned actual error code 1603 (note this may not be 100% accurate if translation happened inside sandbox)
 操作结束 23:49:51: InstallFinalize。返回值 3。

@@ -4,12 +4,12 @@ tags:
   - 开发/容器化/Docker
   - 开发/云原生/Docker
   - 软件/云原生/docker
-  - 网络
-  - 网络/网关/Nginx
-  - 网络/网关/OpenResty
+  - 计算机/网络
+  - 计算机/网络/网关/Nginx
+  - 计算机/网络/网关/OpenResty
   - 软件/Wireshark
-  - 网络/抓包/Wireshark
-  - 网络/抓包
+  - 计算机/网络/抓包/Wireshark
+  - 计算机/网络/抓包
   - 运维/云原生/Kubernetes
   - 运维/云原生/Kubernetes/K8s
   - 操作系统/Debian

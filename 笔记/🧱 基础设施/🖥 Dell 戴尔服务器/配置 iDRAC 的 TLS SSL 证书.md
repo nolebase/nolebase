@@ -6,11 +6,11 @@ tags:
   - 运维/服务器/戴尔/PowerEdgeR730
   - 运维/服务器/戴尔/iDRAC9
   - 运维/服务器/戴尔/iDRAC
-  - 密码学/证书/TLS
-  - 密码学/证书/TLS/SSL
-  - 密码学/证书/TLS/HTTPS
-  - 密码学/证书
-  - 密码学/证书/TLS/域名证书
+  - 数学/密码学/证书/TLS
+  - 数学/密码学/证书/TLS/SSL
+  - 数学/密码学/证书/TLS/HTTPS
+  - 数学/密码学/证书
+  - 数学/密码学/证书/TLS/域名证书
   - 命令行/racadm
   - 操作系统/Windows
   - 操作系统/Windows-Server

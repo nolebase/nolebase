@@ -1,6 +1,6 @@
 ---
 tags:
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Linux
   - 操作系统/macOS
 status: 尚未完成

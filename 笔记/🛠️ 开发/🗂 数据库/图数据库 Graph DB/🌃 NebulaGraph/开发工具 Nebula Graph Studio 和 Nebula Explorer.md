@@ -1,6 +1,6 @@
 ---
 tags:
-  - 数据库/图数据库/nebulagraph
+  - 计算机/数据库/图数据库/nebulagraph
 ---
 
 # 开发工具 Nebula Graph Studio 和 Nebula Explorer

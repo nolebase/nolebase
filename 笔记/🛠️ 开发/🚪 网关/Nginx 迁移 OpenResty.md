@@ -1,7 +1,7 @@
 ---
 tags:
-  - 网络/网关/Nginx
-  - 网络/网关/OpenResty
+  - 计算机/网络/网关/Nginx
+  - 计算机/网络/网关/OpenResty
   - 操作系统/Debian
   - 开发/迁移
 ---

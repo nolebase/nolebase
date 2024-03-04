@@ -4,7 +4,7 @@ tags:
   - 操作系统/Debian/Debian-12
   - 计算机科学/内存/虚拟内存/swap
   - 操作系统/BIOS/引导/grub
-  - Linux/内核/initramfs
+  - 计算机/操作系统/Linux/内核/initramfs
   - 命令行/parted
   - 操作系统/Busybox
   - 命令行/update-grub
@@ -153,7 +153,7 @@ Disk Flags:
 
 Number  Start   End     Size    File system     Name  Flags
  1      1049kB  538MB   537MB   fat32                 boot, esp
- 2      538MB   41.9GB  41.4GB  ext4    
+ 2      538MB   41.9GB  41.4GB  ext4
 ```
 
 ::: tip
@@ -171,7 +171,7 @@ Disk Flags:
 
 Number  Start   End     Size    File system     Name  Flags
  1      1049kB  538MB   537MB   fat32                 boot, esp
- 2      538MB   41.9GB  41.4GB  ext4    
+ 2      538MB   41.9GB  41.4GB  ext4
  3      41.9GB  42.9GB  1023MB  linux-swap(v1)
 ```
 
@@ -204,7 +204,7 @@ Disk Flags:
 
 Number  Start   End     Size    File system     Name  Flags
  1      1049kB  538MB   537MB   fat32                 boot, esp
- 2      538MB   300GB   299GB   ext4    
+ 2      538MB   300GB   299GB   ext4
 ```
 
 确认无误之后就可以通过输入下面的命令保存退出 `parted` 了：

@@ -5,7 +5,7 @@ tags:
   - 基础设施/存储/对象存储/亚马逊云/AWS/S3
   - 开发/后端
   - 开发/前端
-  - 安全
+  - 计算机/信息技术/安全
   - 开发/Nodejs
   - 开发/Nodejs/pnpm
 ---
@@ -110,7 +110,7 @@ export async getSignedUploadPolicy(
   return await createPresignedPost(this.s3Client, {
     Bucket: '<AWS S3 >', // [!code hl]
     // 使用 ${filename} 结尾可以让前端或者用户自行决定文件名，或者上传 N 个文件 [!code hl]
-    // 这对于需要自定义文件名的业务很重要 [!code hl] 
+    // 这对于需要自定义文件名的业务很重要 [!code hl]
     Key: normalizedDir + '/${filename}', // [!code hl]
     Conditions: [ // [!code hl]
       // 限制上传路径中必须以「传入的目录」这个参数作为开头 // [!code hl]
@@ -324,7 +324,7 @@ export async function uploadFile(options: {
 这让我在尝试集成的时候头疼了好一会儿，翻了好多文档和 StackOverflow 以及技术博客来寻找蛛丝马迹。所幸我在一篇 [javascript - Amazon S3 POST api, and signing a policy with NodeJS](https://stackoverflow.com/a/61998502/19954520) 的 StackOverflow 的问答中找到了一些头绪：
 
 > AWS SDK now provides an easy way to create the POST policy with `createPresignedPost()`.
-> 
+>
 > Docs: [https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#createPresignedPost-property](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#createPresignedPost-property)
 
 所以 AWS SDK 是提供了可以计算和创建预签名的 Policy 的 API 和函数封装的。

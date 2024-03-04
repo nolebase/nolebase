@@ -10,12 +10,12 @@ tags:
   - 操作系统/Debian/Debian-11
   - 开发/语言/Java
   - 开发/语言/Java/JDK
-  - 网络/网关/Nginx
-  - 密码学/证书/TLS/HTTPS
+  - 计算机/网络/网关/Nginx
+  - 数学/密码学/证书/TLS/HTTPS
   - 命令行/systemd
   - 开发/标记语言/XML
-  - 密码学/证书/TLS/SSL
-  - 密码学/证书/TLS/域名证书
+  - 数学/密码学/证书/TLS/SSL
+  - 数学/密码学/证书/TLS/域名证书
 ---
 
 # 部署 Confluence Data Center 版

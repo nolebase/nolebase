@@ -1,12 +1,12 @@
 ---
 tags:
   - 运维
-  - 网络
+  - 计算机/网络
   - 开源/软件/OpenWRT
   - 开源/软件/OpenWRT/Lede
   - 操作系统/iOS
   - 操作系统/iPadOS
-  - 网络/路由/OpenWRT
+  - 计算机/网络/路由/OpenWRT
   - 操作系统/iOS/通知
   - 命令行/iptables
   - Archive

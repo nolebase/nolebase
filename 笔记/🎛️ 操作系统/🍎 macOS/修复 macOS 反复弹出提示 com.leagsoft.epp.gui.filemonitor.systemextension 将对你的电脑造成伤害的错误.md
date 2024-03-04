@@ -1,7 +1,7 @@
 ---
 tags:
   - 操作系统/macOS
-  - 安全/企业安全/监控软件/提供商/联软科技
+  - 计算机/信息技术/安全/企业安全/监控软件/提供商/联软科技
   - 软件/macOS
 ---
 # 修复 macOS 反复弹出提示 `com.leagsoft.epp.gui.filemonitor.systemextension` 将对你的电脑造成伤害的错误
@@ -15,7 +15,7 @@ tags:
 今天在测试一些 i18n 的时候，把平时 macOS 的系统语言从简体中文切换到了 English，结果在切换并重启电脑完成之后，macOS 突然开始报错说：
 
 > `com.leagsoft.epp.gui.filemonitor.systemextension` 将对你的电脑造成伤害
-> 
+>
 > "com.leagsoft.epp.gui.filemonitor.systemextension" will damage your computer
 
 的错误。

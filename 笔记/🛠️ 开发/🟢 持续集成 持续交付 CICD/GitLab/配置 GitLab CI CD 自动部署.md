@@ -11,8 +11,8 @@ tags:
   - 命令行/git
   - 开发/标记语言/TOML
   - 命令行
-  - Linux
-  - Linux/命令行
+  - 计算机/操作系统/Linux
+  - 计算机/操作系统/Linux/命令行
   - 操作系统/Linux
   - 开发/Git
 ---

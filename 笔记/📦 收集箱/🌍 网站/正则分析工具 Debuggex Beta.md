@@ -5,7 +5,7 @@ tags:
   - 网站/工具
   - 网站/工具/开发
   - 网站/工具/运维
-  - 网络/代理
+  - 计算机/网络/代理
 ---
 
 # [Debuggex Beta](https://www.debuggex.com/)

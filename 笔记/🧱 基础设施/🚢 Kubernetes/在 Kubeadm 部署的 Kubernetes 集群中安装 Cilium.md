@@ -10,7 +10,7 @@ tags:
   - 命令行/kubeadm
   - 软件/云原生/kubeadm
   - 软件/云原生/kube-proxy
-  - 网络/Cilium
+  - 计算机/网络/Cilium
   - 命令行/helm
   - 软件/云原生/helm
   - 开发/标记语言/YAML

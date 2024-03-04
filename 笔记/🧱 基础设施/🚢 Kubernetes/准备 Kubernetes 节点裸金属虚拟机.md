@@ -1,7 +1,7 @@
 ---
 tags:
   - 开发/云原生
-  - 计算机科学/虚拟化
+  - 计算机/计算机科学/CS/虚拟化
   - 开发/云原生/Kubernetes
   - 开发/容器化
   - 开发/虚拟化
@@ -19,7 +19,7 @@ tags:
   - 开发/虚拟化/cgroup
   - 命令行/systemd
   - 命令行/journalctl
-  - Linux
+  - 计算机/操作系统/Linux
   - 操作系统/Linux
   - 操作系统/Debian
   - 操作系统/Debian/Debian-11

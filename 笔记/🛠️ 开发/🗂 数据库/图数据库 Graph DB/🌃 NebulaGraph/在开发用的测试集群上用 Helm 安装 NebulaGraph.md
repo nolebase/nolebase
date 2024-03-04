@@ -10,7 +10,7 @@ tags:
   - 开发/云原生/Docker
   - 软件/云原生/docker
   - 开发/云原生/Kubernetes
-  - 数据库/图数据库/nebulagraph
+  - 计算机/数据库/图数据库/nebulagraph
 ---
 # 在开发用的测试集群上用 Helm 安装 NebulaGraph
 
