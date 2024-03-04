@@ -6,6 +6,7 @@ on:
       - 构建预览
     types:
       - completed
+  workflow_dispatch:
 
 env:
   PR_NUM: 0
