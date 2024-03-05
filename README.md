@@ -101,7 +101,6 @@ git clone https://github.com/nolebase/nolebase
 > ```PowerShell
 > git config --global core.protectNTFS false
 > ```
-> [StackOverflow](https://stackoverflow.com/questions/63727594/github-git-checkout-returns-error-invalid-path-on-windows) 上有更多的讨论。
 
 ### 如何使用、运行或者部署
 
