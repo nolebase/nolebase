@@ -83,7 +83,7 @@ git clone https://github.com/nolebase/nolebase
 #### 使用的是 Windows 吗
 
 > [!IMPORTANT]
-> 如果你使用的是 Windows，并且使用的是 [Git for Windows](https://gitforwindows.org/) ，那么你可能会在使用上面的命令的时候遇到类似这样的报错：
+> 如果你使用的是 [Git for Windows](https://gitforwindows.org/) ，那么可能会在执行上述命令时遇到类似这样的报错：
 > 
 > ```PowerShell
 > PS D:\> git clone https://github.com/nolebase/nolebase
