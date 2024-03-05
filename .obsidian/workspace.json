@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "5238f13d77ee28d8",
+        "id": "a72ccebd4be8daa3",
         "type": "tabs",
         "children": [
           {
-            "id": "42c81edb6ef96e83",
+            "id": "77525d030d9cf1d9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "keyboard",
+                "query": "tag:#开发/云原生/Kubernetes/K8s",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,11 +73,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 506.5
+    "width": 234.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -90,6 +95,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md"
+              }
             }
           },
           {
@@ -159,6 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,6 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.5
+    "width": 300.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,28 +215,30 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "random-note:开始漫游笔记": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian42-brat:BRAT": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "42c81edb6ef96e83",
+  "active": "d5332c2bfa4468de",
   "lastOpenFiles": [
+    "笔记/🗺️ 旅行/🏝️ Koh Kham (Ko Kham) 康岛.md",
+    "vite.config.ts.timestamp-1709643031372-c5086066adefc.mjs",
+    "笔记/🗺️ 旅行/assets/image-20240305200526.png",
+    "笔记/🗺️ 旅行/assets/image-20240305200554.png",
+    "笔记/🗺️ 旅行/assets/image-20240305200608.png",
+    "笔记/🗺️ 旅行/assets/image-20240305200652.png",
+    "笔记/🗺️ 旅行/assets/image_20240305200608.png",
+    "笔记/🗺️ 旅行/assets/image_20240305200554.png",
+    "笔记/🗺️ 旅行/assets/image_20240305200526.png",
+    "笔记/🗺️ 旅行/assets/Pasted image 20240305200652.png",
+    "笔记/🗺️ 旅行/assets/Pasted image 20240305200608.png",
+    "笔记/🗺️ 旅行/assets/Pasted image 20240305200554.png",
+    "笔记/🗺️ 旅行/assets",
+    "vite.config.ts.timestamp-1709642403089-1d15d7dd02e2.mjs",
+    "笔记/index.md",
+    "笔记/🗺️ 旅行",
+    "笔记/未命名.md",
     "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/resize-disk-partition-for-debian-12-screenshot-1.png",
     "笔记/🎛️ 操作系统/🍥 Debian/通过 Hyper-V 进入 Debian 12 LiveCD 自带的 Rescue Mode（急救模式）.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-9.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-8.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-7.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-6.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-5.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-4.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-3.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-2.png",
-    "笔记/🎛️ 操作系统/🍥 Debian/assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png",
     "笔记/🎮 游戏/🎮 游戏开发/GameJam/参考资料.md",
     "笔记/🎮 游戏/🎮 游戏开发/GameJam/GameJam 2024 - Make Me Laugh.md",
     "笔记/🎮 游戏/🎮 游戏开发/GameJam",
@@ -248,18 +260,11 @@
     "编目 Catalog/文章/Python, Go, and TypeScript - My Insights on Crafting Command Line Interfaces.md",
     "笔记/🎓 学习",
     "笔记/📚 学习",
-    "笔记/🧩 开源贡献/TrueNAS/assets",
-    "笔记/🧩 开源贡献/TrueNAS",
     "笔记/🧩 开源贡献/WebAssembly/当前的 WASM SOTA 生态.md",
     "视图/尚未编写完成的页面.md",
-    "笔记/🧩 开源贡献/WebAssembly",
     "笔记/🛠️ 开发/未命名.md",
     "笔记/🛠️ 开发/玩玩 3B1B 做视频的时候用的 manim.md",
     "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
-    "笔记/🤖 AI 人工智能/在 Apple Silicon 上用 PyTorch 和 Accelerate 进行训练.md",
-    "笔记/🎛️ 操作系统/🐧 Linux/Linux 中的 XDG_CONFIG_HOME.md",
-    "pnpm-lock.yaml.281114228",
-    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
     "未命名.canvas"
   ]
 }
