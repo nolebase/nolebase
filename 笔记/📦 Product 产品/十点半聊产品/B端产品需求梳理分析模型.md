@@ -1,4 +1,4 @@
-# 产品方法论：B端产品需求梳理分析模型
+# B端产品需求梳理分析模型
 
 [作者：Leon](https://www.woshipm.com/pmd/582416.html)
 
