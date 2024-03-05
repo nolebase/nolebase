@@ -80,6 +80,29 @@
 git clone https://github.com/nolebase/nolebase
 ```
 
+#### 使用的是 Windows 吗
+
+> [!IMPORTANT]
+> 如果你使用的是 Windows，并且使用的是 [Git for Windows](https://gitforwindows.org/) ，那么你可能会在使用上面的命令的时候遇到类似这样的报错：
+> 
+> ```PowerShell
+> PS D:\> git clone https://github.com/nolebase/nolebase
+> ...
+> error: invalid path '编目 Catalog/文章/Python, Go, and TypeScript: My Insights on Crafting Command Line Interfaces.md'
+> fatal: unable to checkout working tree
+> warning: Clone succeeded, but checkout failed.
+> You can inspect what was checked out with 'git status'
+> and retry with 'git restore --source=HEAD :/'
+> ```
+> 
+> 这是 [Git for Windows](https://gitforwindows.org/) 的一个 [bug](https://github.com/git-for-windows/git/issues/2777) 。更具体的说，是由于 [NTFS 文件系统中对文件名的限制](https://github.com/microsoft/WSL/issues/2689#issuecomment-346740836)导致的。
+> 
+> 你可以在命令行窗口中输入下面的命令来解决这个问题：
+> ```PowerShell
+> git config --global core.protectNTFS false
+> ```
+> [StackOverflow](https://stackoverflow.com/questions/63727594/github-git-checkout-returns-error-invalid-path-on-windows) 上有更多的讨论。
+
 ### 如何使用、运行或者部署
 
 完成了下载了吗？很好，恭喜你已经完成了很艰难的一步！
