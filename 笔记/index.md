@@ -60,6 +60,29 @@
 git clone https://github.com/nolebase/nolebase
 ```
 
+#### 使用的是 Windows 吗
+
+> [!IMPORTANT]
+> 如果你使用的是 [Git for Windows](https://gitforwindows.org/) ，那么可能会在执行上述命令时，遇到类似这样的报错：
+> 
+> ```PowerShell
+> PS D:\> git clone https://github.com/nolebase/nolebase
+> ...
+> error: invalid path 'x: xxx.md'
+> fatal: unable to checkout working tree
+> warning: Clone succeeded, but checkout failed.
+> You can inspect what was checked out with 'git status'
+> and retry with 'git restore --source=HEAD :/'
+> ```
+> 
+> 这是 [Git for Windows](https://gitforwindows.org/) 的默认配置导致的[问题](https://github.com/git-for-windows/git/issues/2777)。
+> 
+> 你可以在命令行窗口中输入下面的命令来解决这个问题：
+> ```PowerShell
+> git config --global core.protectNTFS false
+> ```
+
+
 ### 如何使用、运行或者部署
 
 完成了下载了吗？很好，恭喜你已经完成了很艰难的一步！
