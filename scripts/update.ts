@@ -13,6 +13,7 @@ import type { ArticleTree, DocsMetadata, DocsTagsAlias, Tag } from './types/meta
 
 const dir = './'
 const target = '笔记/'
+const folderTop = true
 
 export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 export const DIR_VITEPRESS = resolve(dirname(fileURLToPath(import.meta.url)), '../.vitepress')
@@ -73,8 +74,8 @@ async function addRouteItem(indexes: ArticleTree[], path: string, upgradeIndex =
       linkItems.shift()
   })
 
-  if (linkItems.length === 1)
-    return
+  if (linkItems.length === 1) return
+
 
   indexes = addRouteItemRecursion(indexes, item, linkItems, upgradeIndex)
 }
@@ -133,6 +134,50 @@ async function processSidebar(docs: string[], docsMetadata: DocsMetadata) {
   await Promise.all(docs.map(async (docPath: string) => {
     await addRouteItem(docsMetadata.sidebar, docPath)
   }))
+}
+
+/**
+ * 排序传入的ArticleTree数组
+ * @param articleTree 需要排序的ArticleTree数组
+ * @return 排序后的结果
+ */
+function articleTreeSort(articleTree: ArticleTree[]) {
+  articleTree.sort((itemA, itemB) => {
+    return itemA.text.localeCompare(itemB.text)
+  })
+  return articleTree
+}
+
+
+/**
+ * 排序sidebar,返回新的sidebar数组
+ * @param sidebar 需要排序的ArticleTree数组
+ * @param folderTop 是否优先排序文件夹
+ * @returns ArticleTree[] 排序好了的数组
+ */
+function sidebarSort(sidebar: ArticleTree[], folderTop: boolean = true) {
+  let _sideBar
+  if (folderTop) {
+    // 分别找出直接的文件和嵌套文件夹
+    const files = articleTreeSort(sidebar.filter((item) => {
+      return !item.items || item.items.length === 0
+    }))
+    const folders = articleTreeSort(sidebar.filter((item) => {
+      return item.items && item.items.length > 0
+    }))
+    // 然后在排序完成后合并为新的数组
+    _sideBar = [...folders, ...files]
+  } else {
+    _sideBar = articleTreeSort(sidebar)
+  }
+
+  // 如果有子菜单就递归排序每个子菜单
+  for (const articleTree of _sideBar) {
+    if (articleTree.items && articleTree.items.length > 0) {
+      articleTree.items = sidebarSort(articleTree.items, folderTop)
+    }
+  }
+  return _sideBar
 }
 
 /**
@@ -311,6 +356,10 @@ async function run() {
 
   await processSidebar(docs, docsMetadata)
   console.log('processed sidebar in', `${(new Date()).getTime() - now}ms`)
+  now = (new Date()).getTime()
+
+  docsMetadata.sidebar = sidebarSort(docsMetadata.sidebar, folderTop)
+  console.log('processed sidebar sort in', `${(new Date()).getTime() - now}ms`)
 
   await fs.writeJSON(join(DIR_VITEPRESS, 'docsMetadata.json'), docsMetadata, { spaces: 2 })
 }
