@@ -2,7 +2,7 @@
 layout: home
 sidebar: false
 
-title: Vision
+title: Vision Surf
 titleTemplate: 视界
 
 hero:
