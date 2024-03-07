@@ -63,7 +63,7 @@ jobs:
     name: Ubuntu 构建和推送
     runs-on: ubuntu-latest
     environment:
-      name: 正式 Production
+      name: 正式 Production - GitHub Pages
       url: https://nolebase.github.io/nolebase
     steps:
       - name: 签出代码
