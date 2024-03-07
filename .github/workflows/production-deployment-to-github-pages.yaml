@@ -1,0 +1,116 @@
+name: 构建并部署到 Github Pages
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - 'main'
+  
+
+env:
+  STORE_PATH: ''
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # TODO: 这东西太难搞了，之后修吧
+  # windows-build:
+  #   name: Windows 构建
+  #   runs-on: windows-latest
+  #   steps:
+  #     - name: 签出代码
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+
+  #     - name: 安装 Node.js 20.x
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 20.x
+
+  #     - name: 安装 pnpm
+  #       uses: pnpm/action-setup@v2
+  #       with:
+  #         run_install: false
+  #         version: 8
+
+  #     - name: 获取 pnpm store 目录
+  #       shell: bash
+  #       run: |
+  #         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+  #     - name: 配置 pnpm 缓存
+  #       uses: actions/cache@v3
+  #       with:
+  #         path: ${{ env.STORE_PATH }}
+  #         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-pnpm-store-
+
+  #     - name: 安装依赖
+  #       run: pnpm install --frozen-lockfile
+
+  #     - name: 安装思源黑体
+  #       run: |
+  #         mkdir -p ~/.local/share/fonts
+  #         cp public/source-han-sans.ttf ~/.local/share/fonts/source-han-sans.ttf
+
+  #     - name: 构建
+  #       run: pnpm docs:build
+  build:
+    name: Ubuntu 构建和推送
+    runs-on: ubuntu-latest
+    environment:
+      name: 正式 Production
+      url: https://nolebase.github.io/nolebase
+    steps:
+      - name: 签出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 安装 Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: 8
+
+      - name: 获取 pnpm store 目录
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: 配置 pnpm 缓存
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 安装思源黑体
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cp public/source-han-sans.ttf ~/.local/share/fonts/source-han-sans.ttf
+
+      - name: 构建
+        run: pnpm docs:build
+
+      - name: 推送到 gh-pages 分支
+        timeout-minutes: 10
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .vitepress/dist
+        uses: JamesIves/github-pages-deploy-action@v4
+
