@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a72ccebd4be8daa3",
+        "id": "d420e4707c763add",
         "type": "tabs",
         "children": [
           {
-            "id": "77525d030d9cf1d9",
+            "id": "8ff8069aed0f7393",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
+                "file": "笔记/🔒 PKI 公钥基础设施/通过 OpenSSL 的 s_client 子命令洞悉 mTLS 时的通信和握手步骤.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#开发/云原生/Kubernetes/K8s",
+                "query": "openssl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,13 +72,21 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "0972447421cfef3d",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ],
         "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 305.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -95,7 +103,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
+                "file": "笔记/🔒 PKI 公钥基础设施/通过 OpenSSL 的 s_client 子命令洞悉 mTLS 时的通信和握手步骤.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -142,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md"
+                "file": "笔记/🔒 PKI 公钥基础设施/通过 OpenSSL 的 s_client 子命令洞悉 mTLS 时的通信和握手步骤.md"
               }
             }
           },
@@ -167,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
+                "file": "笔记/🔒 PKI 公钥基础设施/通过 OpenSSL 的 s_client 子命令洞悉 mTLS 时的通信和握手步骤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
+                "file": "笔记/🔒 PKI 公钥基础设施/通过 OpenSSL 的 s_client 子命令洞悉 mTLS 时的通信和握手步骤.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +214,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 359.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,56 +223,61 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "random-note:开始漫游笔记": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian42-brat:BRAT": false
     }
   },
-  "active": "d5332c2bfa4468de",
+  "active": "8ff8069aed0f7393",
   "lastOpenFiles": [
-    "笔记/🗺️ 旅行/🏝️ Koh Kham (Ko Kham) 康岛.md",
-    "vite.config.ts.timestamp-1709643031372-c5086066adefc.mjs",
-    "笔记/🗺️ 旅行/assets/image-20240305200526.png",
-    "笔记/🗺️ 旅行/assets/image-20240305200554.png",
-    "笔记/🗺️ 旅行/assets/image-20240305200608.png",
-    "笔记/🗺️ 旅行/assets/image-20240305200652.png",
-    "笔记/🗺️ 旅行/assets/image_20240305200608.png",
-    "笔记/🗺️ 旅行/assets/image_20240305200554.png",
-    "笔记/🗺️ 旅行/assets/image_20240305200526.png",
-    "笔记/🗺️ 旅行/assets/Pasted image 20240305200652.png",
-    "笔记/🗺️ 旅行/assets/Pasted image 20240305200608.png",
-    "笔记/🗺️ 旅行/assets/Pasted image 20240305200554.png",
-    "笔记/🗺️ 旅行/assets",
-    "vite.config.ts.timestamp-1709642403089-1d15d7dd02e2.mjs",
-    "笔记/index.md",
-    "笔记/🗺️ 旅行",
-    "笔记/未命名.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/通过 Hyper-V 进入 Debian 12 LiveCD 自带的 Rescue Mode（急救模式）.md",
-    "笔记/🎮 游戏/🎮 游戏开发/GameJam/参考资料.md",
-    "笔记/🎮 游戏/🎮 游戏开发/GameJam/GameJam 2024 - Make Me Laugh.md",
-    "笔记/🎮 游戏/🎮 游戏开发/GameJam",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+    "pnpm-lock.yaml.3021958062",
+    "node_modules/@vueuse",
     "node_modules/@nolebase",
-    "笔记/🎛️ 操作系统/🍥 Debian/激活 Debian 上安装的 Nginx 的 Stream 模块来支持转发 TCP 和 UDP 请求.md",
-    "vite.config.ts.timestamp-1709004241537-182ccf7276d96.mjs",
-    "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/apt upgrade 执行更新到一半发生了 SSH 断连但是没有 tmux 和 screen 帮助创建守护 tty，但是报错了无法获得 lock-frontend 锁的时候怎么办？.md",
-    "笔记/🧱 基础设施/nv-hostengine 的启动和补充知识.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/重置 Kubernetes 集群.md",
-    "笔记/🐾 Fursuit 兽装/index.md",
+    "笔记/🤖 AI 人工智能/各种 pip 包和 conda 包的名称都是什么含义？.md",
+    "笔记/🤖 AI 人工智能/安装和配置 NVIDIA 的 Apex.md",
+    "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
+    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
+    "笔记/🤖 AI 人工智能/将 chatGPT 与文档结合.md",
+    "笔记/🛠️ 开发/Vue 组件库.md",
+    "笔记/📟 终端/软件/Git 版本控制/通过环境变量 Debug Git 执行.md",
+    "笔记/📟 终端/Linux 命令索引.md",
+    "笔记/🤖 AI 人工智能/Megatron-LM 训练参数调优.md",
+    "笔记/🤖 AI 人工智能/Megatron-LM 的读取 checkpoint 的错误处理问题.md",
+    "笔记/🧶 手作/术语及词汇表.md",
+    "笔记/🧶 手作/手缝针法.md",
     "笔记/🐾 Fursuit 兽装/不同的兽装类型.md",
-    "笔记/🐾 Fursuit 兽装",
-    "笔记/🧱 基础设施/📦 Homelab/未命名.md",
-    "笔记/📦 收集箱/📁 资源/AI 资源导航.md",
+    "笔记/🐾 Fursuit 兽装/如何前往漫展.md",
+    "笔记/🐾 Fursuit 兽装/术语及词汇表.md",
+    "笔记/🧶 手作/布艺和裁缝/术语及词汇表.md",
+    "笔记/🧶 手作/裁缝/未命名",
+    "笔记/🧶 手作/裁缝/术语及词汇表",
+    "笔记/🧶 手作/布艺和裁缝",
+    "编目 Catalog/书籍/焦慮使用說明書.md",
+    "编目 Catalog/书籍/科技的本质：它是什么以及它如何演化.md",
+    "笔记/🛠️ 开发/用兼容性更好，体积更小的 Rive 渲染和播放 Lottie 动画.md",
+    "笔记/🧶 手作",
+    "笔记/🗺️ 旅行/🏝️ Koh Kham (Ko Kham) 康岛.md",
+    "笔记/🗺️ 旅行/assets/image-20240305200652.png",
+    "笔记/🗺️ 旅行/assets/image-20240305200608.png",
+    "笔记/🗺️ 旅行/assets/image-20240305200554.png",
+    "笔记/🗺️ 旅行/assets/image-20240305200526.png",
+    "笔记/🗺️ 旅行/assets",
+    "笔记/🗺️ 旅行",
+    "笔记/🤖 AI 人工智能/NVIDIA 生态.md",
     "笔记/🧩 开源贡献/TrueNAS/为 TrueNAS 贡献.md",
-    "编目 Catalog/文章/Python, Go, and TypeScript - My Insights on Crafting Command Line Interfaces.md",
-    "笔记/🎓 学习",
-    "笔记/📚 学习",
-    "笔记/🧩 开源贡献/WebAssembly/当前的 WASM SOTA 生态.md",
-    "视图/尚未编写完成的页面.md",
-    "笔记/🛠️ 开发/未命名.md",
-    "笔记/🛠️ 开发/玩玩 3B1B 做视频的时候用的 manim.md",
-    "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/🧩 开源贡献/TrueNAS/assets/contribute-to-truenas-screenshot-5.png",
+    "笔记/🧩 开源贡献/TrueNAS/assets/contribute-to-truenas-screenshot-4.png",
+    "笔记/🧩 开源贡献/TrueNAS/assets/contribute-to-truenas-screenshot-3.png",
+    "笔记/🧩 开源贡献/TrueNAS/assets/contribute-to-truenas-screenshot-2.png",
+    "笔记/🧩 开源贡献/TrueNAS/assets/contribute-to-truenas-screenshot-1.png",
+    "Pasted image 20240126121238.png",
+    "笔记/📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/修复在 macOS 上因为默认 pnpm 在 PATH 中权重过高导致 corepack 失效的问题.md",
+    "vite.config.ts.timestamp-1709534547251-1922f5641ae3e.mjs",
     "未命名.canvas"
   ]
 }
