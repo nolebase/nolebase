@@ -1,4 +1,6 @@
 {
-  "accentColor": "",
-  "baseFontSize": 16
+  "accentColor": "#4d4d4d",
+  "baseFontSize": 16,
+  "cssTheme": "Border",
+  "theme": "obsidian"
 }

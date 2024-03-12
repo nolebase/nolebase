@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "e2b0a64f57f44aec",
+        "id": "ad1107c68f536f5a",
         "type": "tabs",
         "children": [
           {
-            "id": "3d2dfd61ab7b2396",
+            "id": "713244fad00bf071",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📦 Product & Design 产品与设计/学习笔记/B端产品经理的通用工作流程.md",
+                "file": "💼 Weaver 泛微/总结和计划/20240311.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03235f46f2bafdb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "💻 Tech 技术/macOS 如何在合上 MacBook 盖子的时候保持不进入睡眠？.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325.5024719238281
+    "width": 268.5024719238281
   },
   "right": {
     "id": "11ea0716b6d091fb",
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "📦 Product & Design 产品与设计/学习笔记/B端产品经理的通用工作流程.md",
+                "file": "💻 Tech 技术/macOS 如何在合上 MacBook 盖子的时候保持不进入睡眠？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "📦 Product & Design 产品与设计/学习笔记/B端产品经理的通用工作流程.md",
+                "file": "💻 Tech 技术/macOS 如何在合上 MacBook 盖子的时候保持不进入睡眠？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "📦 Product & Design 产品与设计/学习笔记/B端产品经理的通用工作流程.md"
+                "file": "💻 Tech 技术/macOS 如何在合上 MacBook 盖子的时候保持不进入睡眠？.md"
               }
             }
           }
@@ -147,16 +160,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3d2dfd61ab7b2396",
+  "active": "03235f46f2bafdb9",
   "lastOpenFiles": [
-    "🤔 UX 用户体验设计/Google UX Course/2/Understaand-design-ideation.md",
-    "🤔 UX 用户体验设计/Google UX Course/2/Creating-User-Stories-and-User-Journey-Map.md",
-    "🤔 UX 用户体验设计/Google UX Course/2/Create-Problem-Statements.md",
-    "🤔 UX 用户体验设计/Google UX Course/2/Conduct-Competitve-Audits.md",
+    "AIGC 人工智能/Midjourney 咒语.md",
+    "💻 Tech 技术/macOS 如何在合上 MacBook 盖子的时候保持不进入睡眠？.md",
+    "💼 Weaver 泛微/标准产品/模板编辑器.md",
+    "💼 Weaver 泛微/总结和计划/20240311.md",
+    "💼 Weaver 泛微/标准产品/文档比对、文档识别.md",
+    "💼 Weaver 泛微/标准产品/表单布局设计.md",
+    "💼 Weaver 泛微/工作内容记录.md",
+    "💼 Weaver 泛微/开发文档.md",
+    "💼 Weaver 泛微/src/20240111103814.png",
+    "💼 Weaver 泛微/项目/项目支持记录.md",
+    "💼 Weaver 泛微/项目/【内部留言】刘俊-合同项目支持记录- XXXX合同管理项目.md",
+    "💼 Weaver 泛微/标准产品/合同正文的版本管理.md",
+    "💼 Weaver 泛微/标准产品/合同预算管理.md",
+    "💼 Weaver 泛微/标准产品/功能模块的负责人表.md",
+    "💼 Weaver 泛微/标准产品/编辑器动作流的配置.md",
+    "📝 Memo 备忘录/index.md",
+    "📦 Product & Design 产品与设计/产品十点半/B端产品权限体系的构建.md",
+    "📦 Product & Design 产品与设计/产品十点半/B端产品权限体系的构建 1.md",
+    "🐳 听译 @白鲸字幕组/听译 240302.md",
+    "💼 Weaver 泛微/标准产品/应用包上传云商店.md",
+    "🤔 UX 用户体验设计/index.md",
+    "💼 Weaver 泛微/标准产品/产品在项目上有个性化改动的处理.md",
+    "💼 Weaver 泛微/标准产品/【功能】一键清除演示数据.md",
+    "🌳 Life 生活/旅游/每月最佳旅游地.md",
+    "💼 Weaver 泛微/E10 非标组件的应用.md",
+    "💼 Weaver 泛微/E10",
+    "💻 Tech 技术/使用指令解锁Arc 图标.md",
+    "📦 Product & Design 产品与设计/学习笔记/B端产品经理的通用工作流程.md",
     "🤔 UX 用户体验设计/Google UX Course/2",
     "🤔 UX 用户体验设计/Google UX Course",
-    "🤔 UX 用户体验设计/index.md",
-    "📺 视频课程/📺 3节课：产品经理课程/index.md",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-07-10.png",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-13-59.png",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-17_00-05-01.png",
@@ -166,34 +201,12 @@
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/功能分析.png",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_12-49-28.png",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/2024-01-14_11-43-40.png",
-    "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src/流程原型.png",
-    "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第5节课：「需求训练」分析用户需求.md",
-    "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第4节课：如何用产品视角来认识产品.md",
-    "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第3节课 模块一 【导论解密】学习与成长.md",
-    "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第2节课 认识产品经理.md",
-    "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/第1节课 导论.md",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程/src",
     "📺 视频课程/📺 3节课：产品经理课程/产品助理：产品经理入门课程",
     "📺 视频课程/📺 3节课：产品经理课程",
-    "🎨 UI 用户界面设计/学习文章/产品设计提效，10 分钟学会 Figma 组件库的搭建和使用.md",
     "🎨 UI 用户界面设计/学习文章",
-    "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块/第一节课 UI设计，了解一下？.md",
     "🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块",
-    "🎨 UI 用户界面设计/index.md",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color/index.md",
     "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/5. Working with Color",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/1. Starting from Scratch/UI 重构 - Refactoring UI.md",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/index.md",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets",
-    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/1. Starting from Scratch",
-    "📦 Product & Design 产品与设计/🎨 UI 用户界面设计/大鹏教育-UI设计行业实战模块/第一节课 UI设计，了解一下？.md",
-    "📦 Product & Design 产品与设计/学习笔记/B端产品经理的通用工作流程.md",
-    "📦 Product & Design 产品与设计/产品十点半/MVP产品方法论.md",
-    "📦 Product & Design 产品与设计/产品十点半/B端系统设计的核心思想.md",
-    "📦 Product & Design 产品与设计/产品十点半/B端系统配置功能设计.md",
-    "📦 Product & Design 产品与设计/产品十点半/B端产品需求梳理分析模型.md",
-    "📦 Product & Design 产品与设计/产品十点半/B端产品设计基础思维与方法.md",
-    "📦 Product & Design 产品与设计/产品十点半/B端产品权限体系的构建.md",
-    "📦 Product & Design 产品与设计/书籍/《启示录》/第 1 部分：人员（1~10）/01. 关键角色及其职责.md"
+    "🎨 UI 用户界面设计/《UI重构 - Refactoring UI》/assets"
   ]
 }
