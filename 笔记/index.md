@@ -62,7 +62,7 @@ git clone https://github.com/nolebase/nolebase
 
 #### 使用的是 Windows 吗
 
-> [!IMPORTANT]
+> [!WARNING] 注意
 > 如果你使用的是 [Git for Windows](https://gitforwindows.org/) ，那么可能会在执行上述命令时，遇到类似这样的报错：
 >
 > ```PowerShell
