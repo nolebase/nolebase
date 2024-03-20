@@ -66,10 +66,8 @@ sudo mkdir /usr/local/etc/wireguard
 
 #### Windows
 
-::: warning
-title: 警告
-🚧 施工中
-:::
+> [!WARNING]
+> ⚠️ 该文档尚未完成，仍在编写中...
 
 ## 配置
 
@@ -97,10 +95,8 @@ wg genkey | sudo tee /usr/local/etc/wireguard/privatekey | wg pubkey | sudo tee 
 
 #### Windows
 
-::: warning
-title: 警告
-🚧 施工中
-:::
+> [!WARNING]
+> ⚠️ 该文档尚未完成，仍在编写中...
 
 ### 创建一个新的 WireGuard 网络接口配置文件
 

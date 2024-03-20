@@ -36,16 +36,14 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.io,direct
 ```
 
-::: info
-
-有关如何配置 Golang 的代理，可以阅读以下这个文档了解更多的详细情况：[Go 国内加速：Go 国内加速镜像 | Go 技术论坛](https://learnku.com/go/wikis/38122)
-
-
-其他可以参考和推荐的 Go 代理：
-- [goproxy.cn](https://github.com/goproxy/goproxy.cn/blob/master/README.zh-CN.md)
-- [GOPROXY.IO - 一个全球代理 为 Go 模块而生](https://goproxy.io/zh/)
-
-:::
+> [!NOTE]
+>
+> 有关如何配置 Golang 的代理，可以阅读以下这个文档了解更多的详细情况：[Go 国内加速：Go 国内加速镜像 | Go 技术论坛](https://learnku.com/go/wikis/38122)
+>
+>
+> 其他可以参考和推荐的 Go 代理：
+> - [goproxy.cn](https://github.com/goproxy/goproxy.cn/blob/master/README.zh-CN.md)
+> - [GOPROXY.IO - 一个全球代理 为 Go 模块而生](https://goproxy.io/zh/)
 
 ## 安装 Visual Studio Code
 

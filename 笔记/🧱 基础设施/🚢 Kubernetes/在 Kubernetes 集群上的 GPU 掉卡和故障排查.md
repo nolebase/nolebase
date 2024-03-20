@@ -188,11 +188,9 @@ Jan  3 07:39:49 ubuntu kernel: [17261.605632] nvidia 0000:2a:00.0: Direct firmwa
 /run/nvidia/driver/usr/bin/nvidia-bug-report.sh
 ```
 
-::: info
-
-如果你实在找不到，可以在 [Packages/hardware/graphics/nvidia-xconfig/files/nvidia-bug-report.sh](https://github.com/Pardus-Linux/Packages/blob/594b76c80a1ec2c82359602c6318bc1fde867b76/hardware/graphics/nvidia-xconfig/files/nvidia-bug-report.sh) 下载和查阅到这个脚本的具体内容和执行的逻辑信息。
-
-:::
+> [!NOTE]
+>
+> 如果你实在找不到，可以在 [Packages/hardware/graphics/nvidia-xconfig/files/nvidia-bug-report.sh](https://github.com/Pardus-Linux/Packages/blob/594b76c80a1ec2c82359602c6318bc1fde867b76/hardware/graphics/nvidia-xconfig/files/nvidia-bug-report.sh) 下载和查阅到这个脚本的具体内容和执行的逻辑信息。
 
 ```shell
 sudo /run/nvidia/driver/usr/bin/nvidia-bug-report.sh
@@ -246,23 +244,21 @@ nvidia-operator-validator-ctx5l                               1/1     Running   
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `nvidia-smi` 来尝试列出所有的 GPU 信息。
 
-::: tip 如何进入 DCGM Pod？
-
-运行下面的命令就可以进入到正在运行的 Pod 了：
-
-```shell
-kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
-```
-
-以上面 `kubectl get pods` 的返回结果为例，可以这样运行
-
-```shell
-kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
-```
-
-如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
-
-:::
+> [!TIP] 如何进入 DCGM Pod？
+>
+> 运行下面的命令就可以进入到正在运行的 Pod 了：
+>
+> ```shell
+> kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 以上面 `kubectl get pods` 的返回结果为例，可以这样运行
+>
+> ```shell
+> kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
 
 ```shell
 root@nvidia-dcgm-exporter-4f599:/# nvidia-smi
@@ -305,45 +301,41 @@ Thu Jan  4 02:14:12 2024
 
 在容器内部可以执行 `curl localhost:9400/metrics` 获得 GPU的 metrics 数据。
 
-::: tip 如何进入 DCGM Pod？
-
-运行下面的命令就可以进入到正在运行的 Pod 了：
-
-```shell
-kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
-```
-
-以上面 `kubectl get pods` 的返回结果为例，可以这样运行
-
-```shell
-kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
-```
-
-如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
-
-:::
+> [!TIP] 如何进入 DCGM Pod？
+>
+> 运行下面的命令就可以进入到正在运行的 Pod 了：
+>
+> ```shell
+> kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 以上面 `kubectl get pods` 的返回结果为例，可以这样运行
+>
+> ```shell
+> kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
 
 ### 通过 `dcgmi discovery` 检查是否能探测到 GPU 设备
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmi`（对 DCGM API 的本地封装的 CLI 版本）的命令对 GPU 进行故障排查。
 
-::: tip 如何进入 DCGM Pod？
-
-运行下面的命令就可以进入到正在运行的 Pod 了：
-
-```shell
-kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
-```
-
-以上面 `kubectl get pods` 的返回结果为例，可以这样运行
-
-```shell
-kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
-```
-
-如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
-
-:::
+> [!TIP] 如何进入 DCGM Pod？
+>
+> 运行下面的命令就可以进入到正在运行的 Pod 了：
+>
+> ```shell
+> kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 以上面 `kubectl get pods` 的返回结果为例，可以这样运行
+>
+> ```shell
+> kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
 
 想要运行 `dcgmi discovery`，你必须确保自己开启了 `nv-hostengine` 或者为 DCGM 配置了 embedding engine（参考 [Error starting embedded DCGM engine · Issue #16 · triton-inference-server/model_analyzer](https://github.com/triton-inference-server/model_analyzer/issues/16) 给出的说明），想要了解 `nv-hostengine`，请参考这篇文档：[[nv-hostengine 的启动和补充知识]]
 
@@ -355,39 +347,35 @@ dcgmi discovery -l
 
 尝试通过 DCGM 嗅探和列出 GPU 设备信息列表了。
 
-::: info 运行的时候遭遇了 `unable to establish a connection to the specified host: localhost` 和 `Unable to connect to host engine. Host engine connection invalid/disconnected.` 错误？
-
-```shell
-root@nvidia-dcgm-exporter-pkcrb:/$ dcgmi discovery -l
-Error: unable to establish a connection to the specified host: localhost
-Error: Unable to connect to host engine. Host engine connection invalid/disconnected.
-```
-
-请参考 [[nv-hostengine 的启动和补充知识]] 的指南启动或者配置 DCGM 的 embedding engine 激活 nv-hostengine 之后再次尝试。
-
-:::
+> [!NOTE] 运行的时候遭遇了 `unable to establish a connection to the specified host: localhost` 和 `Unable to connect to host engine. Host engine connection invalid/disconnected.` 错误？
+>
+> ```shell
+> root@nvidia-dcgm-exporter-pkcrb:/$ dcgmi discovery -l
+> Error: unable to establish a connection to the specified host: localhost
+> Error: Unable to connect to host engine. Host engine connection invalid/disconnected.
+> ```
+>
+> 请参考 [[nv-hostengine 的启动和补充知识]] 的指南启动或者配置 DCGM 的 embedding engine 激活 nv-hostengine 之后再次尝试。
 
 ### 通过 `dcgmi health` 查看 GPU 设备健康状况
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmi`（对 DCGM API 的本地封装的 CLI 版本）的命令对 GPU 进行故障排查。
 
-::: tip 如何进入 DCGM Pod？
-
-运行下面的命令就可以进入到正在运行的 Pod 了：
-
-```shell
-kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
-```
-
-以上面 `kubectl get pods` 的返回结果为例，可以这样运行
-
-```shell
-kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
-```
-
-如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
-
-:::
+> [!TIP] 如何进入 DCGM Pod？
+>
+> 运行下面的命令就可以进入到正在运行的 Pod 了：
+>
+> ```shell
+> kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 以上面 `kubectl get pods` 的返回结果为例，可以这样运行
+>
+> ```shell
+> kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
 
 除去 `diag` 子命令，如果开启了 `nv-hostengine`，也可以通过下面的命令检查健康状况：
 
@@ -399,23 +387,21 @@ dcgmi health -c
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmi`（对 DCGM API 的本地封装的 CLI 版本）的命令对 GPU 进行故障排查。
 
-::: tip 如何进入 DCGM Pod？
-
-运行下面的命令就可以进入到正在运行的 Pod 了：
-
-```shell
-kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
-```
-
-以上面 `kubectl get pods` 的返回结果为例，可以这样运行
-
-```shell
-kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
-```
-
-如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
-
-:::
+> [!TIP] 如何进入 DCGM Pod？
+>
+> 运行下面的命令就可以进入到正在运行的 Pod 了：
+>
+> ```shell
+> kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 以上面 `kubectl get pods` 的返回结果为例，可以这样运行
+>
+> ```shell
+> kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
 
 其中一个在文档中提及的比较多的是 `diag` 子命令：
 
@@ -425,34 +411,32 @@ dcgmi diag -r 2
 
 `-r` 参数是用于指定诊断时候的「等级」用的，
 
-::: info `dcgmi diag` 的 `-r` 参数有什么用
-
-根据 [DCGMI Workload Profiles | Virtual Client Platform](https://microsoft.github.io/VirtualClient/docs/workloads/dcgmi/dcgmi-profiles/) 文档叙述：
-
-> The runtime is dependent on the value of "Level" parameter.
-
-|Level value|Runtime|
-|---|---|
-|4|1-2 hour|
-|3|30 min|
-|2|2 min|
-|1|few seconds|
-
-不同的 `-r` 参数的数值代表了不同的 Level，Level 就是所谓的「等级」，这样的等级会在背后运行不同的设备测试以方便工程师定位问题，对于不同的 Level 所附加的不同测试，可以参见 [DCGM Diagnostics — NVIDIA DCGM Documentation latest documentation](https://docs.nvidia.com/datacenter/dcgm/latest/user-guide/dcgm-diagnostics.html#run-levels-and-tests) 文档中给出的下表：
-
-|Plugin|Test name|r1 (Short)<br><br>Seconds|r2 (Medium)<br><br>< 2 mins|r3 (Long)<br><br>< 30 mins|r4 (Extra Long)<br><br>1-2 hours|
-|---|---|---|---|---|---|
-|Software|`software`|Yes|Yes|Yes|Yes|
-|PCIe + NVLink|`pcie`||Yes|Yes|Yes|
-|GPU Memory|`memory`||Yes|Yes|Yes|
-|Memory Bandwidth|`memory_bandwidth`||Yes|Yes|Yes|
-|Diagnostics|`diagnostic`|||Yes|Yes|
-|Targeted Stress|`targeted_stress`|||Yes|Yes|
-|Targeted Power|`targeted_power`|||Yes|Yes|
-|Memory Stress|`memtest`||||Yes|
-|Input EDPp|`pulse`||||Yes|
-
-:::
+> [!NOTE] `dcgmi diag` 的 `-r` 参数有什么用
+>
+> 根据 [DCGMI Workload Profiles | Virtual Client Platform](https://microsoft.github.io/VirtualClient/docs/workloads/dcgmi/dcgmi-profiles/) 文档叙述：
+>
+> > The runtime is dependent on the value of "Level" parameter.
+>
+> |Level value|Runtime|
+> |---|---|
+> |4|1-2 hour|
+> |3|30 min|
+> |2|2 min|
+> |1|few seconds|
+>
+> 不同的 `-r` 参数的数值代表了不同的 Level，Level 就是所谓的「等级」，这样的等级会在背后运行不同的设备测试以方便工程师定位问题，对于不同的 Level 所附加的不同测试，可以参见 [DCGM Diagnostics — NVIDIA DCGM Documentation latest documentation](https://docs.nvidia.com/datacenter/dcgm/latest/user-guide/dcgm-diagnostics.html#run-levels-and-tests) 文档中给出的下表：
+>
+> |Plugin|Test name|r1 (Short)<br><br>Seconds|r2 (Medium)<br><br>< 2 mins|r3 (Long)<br><br>< 30 mins|r4 (Extra Long)<br><br>1-2 hours|
+> |---|---|---|---|---|---|
+> |Software|`software`|Yes|Yes|Yes|Yes|
+> |PCIe + NVLink|`pcie`||Yes|Yes|Yes|
+> |GPU Memory|`memory`||Yes|Yes|Yes|
+> |Memory Bandwidth|`memory_bandwidth`||Yes|Yes|Yes|
+> |Diagnostics|`diagnostic`|||Yes|Yes|
+> |Targeted Stress|`targeted_stress`|||Yes|Yes|
+> |Targeted Power|`targeted_power`|||Yes|Yes|
+> |Memory Stress|`memtest`||||Yes|
+> |Input EDPp|`pulse`||||Yes|
 
 使用的时候效果是这样的：
 
@@ -497,23 +481,21 @@ Successfully ran diagnostic for group.
 
 对于已经安装了 GPU Operator 的集群，可以通过 GPU Operator 下属的 `dcgm-exporter` Pod 资源内置的 `dcgmproftester12`（如果驱动安装的是 CUDA 11，那请使用 `dcgmproftester11` 命令）命令对 GPU 进行压力测试和 Profiling 测试来观察效果
 
-::: tip 如何进入 DCGM Pod？
-
-运行下面的命令就可以进入到正在运行的 Pod 了：
-
-```shell
-kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
-```
-
-以上面 `kubectl get pods` 的返回结果为例，可以这样运行
-
-```shell
-kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
-```
-
-如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
-
-:::
+> [!TIP] 如何进入 DCGM Pod？
+>
+> 运行下面的命令就可以进入到正在运行的 Pod 了：
+>
+> ```shell
+> kubectl exec <DCGM Pod 的 ID> -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 以上面 `kubectl get pods` 的返回结果为例，可以这样运行
+>
+> ```shell
+> kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- bash
+> ```
+>
+> 如果你不熟悉 `kubectl` 和 `docker` CLI 的用法，可以通过这篇 [Get a Shell to a Running Container | Kubernetes](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)文档学习和了解相关的用法。
 
 命令是这样的：
 
@@ -521,48 +503,46 @@ kubectl exec nvidia-dcgm-exporter-5fr8d -it --container nvidia-dcgm-exporter -- 
 dcgmproftester12
 ```
 
-::: info 使用了不兼容的版本？报错提示 `Wrong version of dcgmproftester is used.` ？
-
-在 `dcgmproftester12` 之外，还会有 `dcgmproftester11` 命令可以使用，而尾缀中的 `11` 和 `12` 代表的是 CUDA 的版本号，如果在调用 `dcgmproftester` 的时候使用了错误的版本，将会提示错误 `Wrong version of dcgmproftester is used.`：
-
-```shell
-root@nvidia-dcgm-exporter-4f599:/$ dcgmproftester11 --no-dcgm-validation -t 1004 -d 30
-Wrong version of dcgmproftester is used. Expected Cuda version is 11. Installed Cuda version is 12.
-```
-
-这个时候可以根据 [system has unsupported display driver / cuda driver combination · Issue #1256 · NVIDIA/nvidia-docker](https://github.com/NVIDIA/nvidia-docker/issues/1256) 给出的指南，在 Kubernetes 正在运行的节点上检查安装的 NVIDIA 驱动包和 container 必要组件对应的版本号来确认是否正确配置 CUDA 和相关的库：
-
-```shell
-$ dpkg -l '*nvidia*'
-Desired=Unknown/Install/Remove/Purge/Hold
-| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                                                  Version                         Architecture                    Description
-+++-=====================================================-===============================-===============================-================================================================================================================
-un  libgldispatch0-nvidia                                 <none>                          <none>                          (no description available)
-un  libnvidia-container-tools                             <none>                          <none>                          (no description available)
-un  nvidia-304                                            <none>                          <none>                          (no description available)
-un  nvidia-340                                            <none>                          <none>                          (no description available)
-un  nvidia-384                                            <none>                          <none>                          (no description available)
-un  nvidia-container-runtime                              <none>                          <none>                          (no description available)
-un  nvidia-container-runtime-hook                         <none>                          <none>                          (no description available)
-rc  nvidia-container-toolkit                              1.13.2-1                        amd64                           NVIDIA Container toolkit
-rc  nvidia-container-toolkit-base                         1.13.2-1                        amd64                           NVIDIA Container Toolkit Base
-```
-
-作为参考的话，撰写这篇文档的时候，使用的 `dcgm-exporter` 的镜像版本是这个：
-
-```shell
-nvcr.io/nvidia/k8s/dcgm-exporter:3.3.0-3.2.0-ubuntu22.04
-```
-
-使用的 `gpu-operator-validator` 的版本是这个：
-
-```shell
-nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1
-```
-
-:::
+> [!NOTE] 使用了不兼容的版本？报错提示 `Wrong version of dcgmproftester is used.` ？
+>
+> 在 `dcgmproftester12` 之外，还会有 `dcgmproftester11` 命令可以使用，而尾缀中的 `11` 和 `12` 代表的是 CUDA 的版本号，如果在调用 `dcgmproftester` 的时候使用了错误的版本，将会提示错误 `Wrong version of dcgmproftester is used.`：
+>
+> ```shell
+> root@nvidia-dcgm-exporter-4f599:/$ dcgmproftester11 --no-dcgm-validation -t 1004 -d 30
+> Wrong version of dcgmproftester is used. Expected Cuda version is 11. Installed Cuda version is 12.
+> ```
+>
+> 这个时候可以根据 [system has unsupported display driver / cuda driver combination · Issue #1256 · NVIDIA/nvidia-docker](https://github.com/NVIDIA/nvidia-docker/issues/1256) 给出的指南，在 Kubernetes 正在运行的节点上检查安装的 NVIDIA 驱动包和 container 必要组件对应的版本号来确认是否正确配置 CUDA 和相关的库：
+>
+> ```shell
+> $ dpkg -l '*nvidia*'
+> Desired=Unknown/Install/Remove/Purge/Hold
+> | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+> |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+> ||/ Name                                                  Version                         Architecture                    Description
+> +++-=====================================================-===============================-===============================-================================================================================================================
+> un  libgldispatch0-nvidia                                 <none>                          <none>                          (no description available)
+> un  libnvidia-container-tools                             <none>                          <none>                          (no description available)
+> un  nvidia-304                                            <none>                          <none>                          (no description available)
+> un  nvidia-340                                            <none>                          <none>                          (no description available)
+> un  nvidia-384                                            <none>                          <none>                          (no description available)
+> un  nvidia-container-runtime                              <none>                          <none>                          (no description available)
+> un  nvidia-container-runtime-hook                         <none>                          <none>                          (no description available)
+> rc  nvidia-container-toolkit                              1.13.2-1                        amd64                           NVIDIA Container toolkit
+> rc  nvidia-container-toolkit-base                         1.13.2-1                        amd64                           NVIDIA Container Toolkit Base
+> ```
+>
+> 作为参考的话，撰写这篇文档的时候，使用的 `dcgm-exporter` 的镜像版本是这个：
+>
+> ```shell
+> nvcr.io/nvidia/k8s/dcgm-exporter:3.3.0-3.2.0-ubuntu22.04
+> ```
+>
+> 使用的 `gpu-operator-validator` 的版本是这个：
+>
+> ```shell
+> nvcr.io/nvidia/cloud-native/gpu-operator-validator:v23.9.1
+> ```
 
 ## 参考资料
 

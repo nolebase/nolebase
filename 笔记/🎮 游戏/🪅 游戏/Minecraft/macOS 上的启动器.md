@@ -13,11 +13,9 @@ tags:
 Prism Launcher - Download Prism Launcher for macOS
 https://prismlauncher.org/download/mac/
 
-::: info
-
-感谢 Rikumi 推荐
-
-:::
+> [!NOTE]
+>
+> 感谢 Rikumi 推荐
 
 ## 好处
 

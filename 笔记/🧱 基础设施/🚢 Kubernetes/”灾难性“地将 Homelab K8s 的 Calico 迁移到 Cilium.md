@@ -768,9 +768,8 @@ tunnel: vxlan
 
 #### 移除原本的 `kube-proxy`
 
-::: tips 如果你选择使用 `kubeProxyReplacement` 参数替代 `kube-proxy`
-可以跟随[[完全卸载集群内的 `kube-proxy`]] 文档的指引备份和删除 `kube-proxy` 相关的配置和资源。
-:::
+> [!TIP] 如果你选择使用 `kubeProxyReplacement` 参数替代 `kube-proxy`
+> 可以跟随[[完全卸载集群内的 `kube-proxy`]] 文档的指引备份和删除 `kube-proxy` 相关的配置和资源。
 
 #### 安装 Cilium
 

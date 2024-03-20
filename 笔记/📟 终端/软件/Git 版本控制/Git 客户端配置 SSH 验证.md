@@ -33,20 +33,19 @@ SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就�
 3. `xxx_rsa.pub` - RSA 私钥对应的公钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
 4. `authorized_keys`  - 远程连接 SSH 时验证的公钥文件，每行一个公钥，**发起请求用的 SSH 客户端是不会需要配置的**。
 
-::: info 如果没有这个目录，需要使用 `mkdir` 命令（参考 [[mkdir 创建目录]]）手动创建该目录
+> [!NOTE] 如果没有这个目录，需要使用 `mkdir` 命令（参考 [[mkdir 创建目录]]）手动创建该目录
+>
+> ```shell
+> mkdir $HOME/.ssh
+> ```
+>
+> ⚠️ 注意：创建时应该使用对应的用户进行创建。如果你现在在 `/home/rizumu` 目录（如果不知道你现在在哪个目录，可以通过 `pwd` 命令来获得），则应该使用 `rizumu` 用户创建，而不是 `root`
+>
+> ```shell
+> sudo su rizumu # 切换用户到 rizumu
+> mkdir $HOME/.ssh # 创建目录
+> ```
 
-```shell
-mkdir $HOME/.ssh
-```
-
-⚠️ 注意：创建时应该使用对应的用户进行创建。如果你现在在 `/home/rizumu` 目录（如果不知道你现在在哪个目录，可以通过 `pwd` 命令来获得），则应该使用 `rizumu` 用户创建，而不是 `root`
-
-```shell
-sudo su rizumu # 切换用户到 rizumu
-mkdir $HOME/.ssh # 创建目录
-```
-
-:::
 #### SSH 密钥对存储位置的权限配置
 
 此处还需要注意的是 `.ssh` 目录和该目录下的文件权限，都有不同的要求：
@@ -56,15 +55,13 @@ mkdir $HOME/.ssh # 创建目录
 2. `.pub` 公钥文件（包括但不限于 `.pub` 文件）要求 644 (`-rw-r--r--`)
 3. `authorized_keys`（远程服务端）和 私钥文件（本地）要求 600 (`-rw-------`)
 
-::: warning 新建 `.ssh` 目录之后需要改变权限值
-
-使用 `chmod` 命令（参考 [chmod 变更权限](../../Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）进行调整
-
-```shell
-chmod 644 .ssh
-```
-
-:::
+> [!WARNING] 新建 `.ssh` 目录之后需要改变权限值
+>
+> 使用 `chmod` 命令（参考 [chmod 变更权限](../../Linux%20%E5%91%BD%E4%BB%A4/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/chmod%20%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90.md)）进行调整
+>
+> ```shell
+> chmod 644 .ssh
+> ```
 
 #### 开始生成 SSH 密钥对
 
@@ -193,16 +190,14 @@ Host <连接时在输入 ssh 命令时引用的域名别名>
 3. **User**：用户，连接时使用的用户，对于 GitHub SSH 而言，默认填写 git，不用写为自己的用户名，服务器那边会通过你的公钥自动判断的
 4. **IdentityFile**：身份文件，一般是 RSA 密钥的私钥文件，格式不限，只要是复合 OpenSSH 规范的即可
 
-::: info 如果你使用 1Password CLI，也可以省略掉 `IdentityFile`
-
-```ssh-config
-Host <连接时在输入 ssh 命令时引用的域名别名>
-    HostName <Git 服务器>
-    User <用户名>
-    Port <端口>
-```
-
-:::
+> [!NOTE] 如果你使用 1Password CLI，也可以省略掉 `IdentityFile`
+>
+> ```ssh-config
+> Host <连接时在输入 ssh 命令时引用的域名别名>
+>     HostName <Git 服务器>
+>     User <用户名>
+>     Port <端口>
+> ```
 
 我们往 `~/.ssh/config` 文件中写入上面自定义好的内容即可。也可以参考下面的配置：
 
@@ -262,21 +257,19 @@ ssh -T github.com
 
 来进行配置。
 
-::: info 遭遇到了 `error: kex_exchange_identification: Connection closed by remote host` 错误？
-
-如果你在中国大陆进行访问，那么首先在中国大陆通过 `22` 端口连接到 `github.com` 就是被防火墙禁止的，如果你已经使用了梯子进行科学上网，也依然可能会遭遇因梯子提供商封禁 `22` 端口的代理而遭遇上述错误。
-
-这个时候你需要根据官方指引的[通过 HTTPS 端口使用 SSH](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port) 配置使用 `ssh.github.com` 域名和 `443` 端口进行访问：
-
-```ssh-config
-Host github.com
-  User git
-  HostName ssh.github.com
-  Port 443
-  IdentityFile ~/.ssh/id_rsa.pub
-```
-
-:::
+> [!NOTE] 遭遇到了 `error: kex_exchange_identification: Connection closed by remote host` 错误？
+>
+> 如果你在中国大陆进行访问，那么首先在中国大陆通过 `22` 端口连接到 `github.com` 就是被防火墙禁止的，如果你已经使用了梯子进行科学上网，也依然可能会遭遇因梯子提供商封禁 `22` 端口的代理而遭遇上述错误。
+>
+> 这个时候你需要根据官方指引的[通过 HTTPS 端口使用 SSH](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port) 配置使用 `ssh.github.com` 域名和 `443` 端口进行访问：
+>
+> ```ssh-config
+> Host github.com
+>   User git
+>   HostName ssh.github.com
+>   Port 443
+>   IdentityFile ~/.ssh/id_rsa.pub
+> ```
 
 正常情况下的测试结果：
 

@@ -92,11 +92,10 @@ media_player:
 
 为了解决如此使用困难的问题，我尝试在 Home Assistant 中配置了其支持的基础集成 [Input Select](https://www.home-assistant.io/integrations/input_select/) ，希望能在 Homekit 中看到类似于空调运行模式和电视输入选择的模块，但事实证明，使用 Input Select 集成是无法让 Homekit 将其展示为多个模式、多个状态切换的配件的，查阅资料后才了解，Homekit 是有预先定义和限制了配件的组件和工作方式的[^1]，这也解释了为什么像是米家和 Aqara 的配件往往在 Homekit 中会显得简陋，而在他们自己的第三方 App 中功能就会变得繁多起来。
 
-::: tip 小贴士
-如果你想要了解 Homekit 所支持的配件类型，可以在 [More Downloads for Apple Developers](https://developer.apple.com/download/more/?=for%20Xcode) 页面登录 Apple ID 后下载开头名为「Additional Tools for Xcode」的工具集[^2]，然后在下载获得的文件夹中找到「HomeKit Accessory Simulator」应用程序，你可以直接双击打开，也可以先拖放到 macOS 的应用程序文件夹再打开，具体的使用教程可以参考官方的文档：[Testing your app with the HomeKit Accessory Simulator](https://developer.apple.com/documentation/homekit/testing_your_app_with_the_homekit_accessory_simulator)。
-
-**注意：TV（电视或智能电视）类型的配件是无法通过 Homekit Accessory Simulator 进行模拟的（我此时无法找到相关的开发工具，也许是需要单独的应用程序支持才能进行模拟）。**
-:::
+> [!TIP] 小贴士
+> 如果你想要了解 Homekit 所支持的配件类型，可以在 [More Downloads for Apple Developers](https://developer.apple.com/download/more/?=for%20Xcode) 页面登录 Apple ID 后下载开头名为「Additional Tools for Xcode」的工具集[^2]，然后在下载获得的文件夹中找到「HomeKit Accessory Simulator」应用程序，你可以直接双击打开，也可以先拖放到 macOS 的应用程序文件夹再打开，具体的使用教程可以参考官方的文档：[Testing your app with the HomeKit Accessory Simulator](https://developer.apple.com/documentation/homekit/testing_your_app_with_the_homekit_accessory_simulator)。
+>
+> **注意：TV（电视或智能电视）类型的配件是无法通过 Homekit Accessory Simulator 进行模拟的（我此时无法找到相关的开发工具，也许是需要单独的应用程序支持才能进行模拟）。**
 
 那我们换一条路，也许你知道，在众多配件与 Homekit 所兼容的配件中，**电视** （通常是智能电视，比如 LG 和 Sony 的电视）和 **空调控制器** （通常在中国大陆是作为 **空调伴侣** 的形式出现）是最明显的能支持模式选择器的两个设备（我通过 HomeKit Accessory Simulator 没有找到更接近或者更类似的设备，如果大家阅读本文之后有尝试找到更适合的 Homekit 配件的话也可以在本知识库的 GitHub 仓库提交 Issue 告知）。
 
@@ -299,21 +298,19 @@ media_player:
 
 现在 `commands` 下新增了 `turn_on`、`turn_off` 和 `select_source` 三个命令，分别对应了开关电热毯的开和关的操作以及选择信号源的操作。
 
-::: tip 小贴士
-
-我们在不了解实体之前，如何知道如何配置命令下面的服务呢？
-其实我们可以借助于 Home Assistant 的开发者工具，在右手边侧边栏中选择「开发者工具」-> 点选「服务」Tab，然后在「服务」下拉框中选择 `switch.turn_on`，在「实体」下拉框中搜索我们想要的实体，此处我们选择 `switch.hddz_zndrt_d3d8_electric_blanket`，然后点击「调用服务」。
-
-<div flex flex-col justify-center text-center>
-  <img src="./assets/homekit-use-media-player-as-a-controller-hass-screenshot-02.png" />
-  <p>通过服务直接调用 switch 类型的实体的 turn_on 服务</p>
-</div>
-
-点击调用服务之后，我们返回「状态」Tab 再次检查 `switch.hddz_zndrt_d3d8_electric_blanket` 的状态，可以看到状态已经变成了 `on`，这说明我们的操作是成功的。
-
-如果你的智能设备需要使用别的类型的服务完成操作，也可以先通过在右手边侧边栏中选择「开发者工具」-> 点选「状态」Tab，并搜索实体的状态和附属的实体信息来决定如何调用服务。
-
-:::
+>  小贴士
+>
+> 我们在不了解实体之前，如何知道如何配置命令下面的服务呢？
+> 其实我们可以借助于 Home Assistant 的开发者工具，在右手边侧边栏中选择「开发者工具」-> 点选「服务」Tab，然后在「服务」下拉框中选择 `switch.turn_on`，在「实体」下拉框中搜索我们想要的实体，此处我们选择 `switch.hddz_zndrt_d3d8_electric_blanket`，然后点击「调用服务」。
+>
+> <div flex flex-col justify-center text-center>
+>   <img src="./assets/homekit-use-media-player-as-a-controller-hass-screenshot-02.png" />
+>   <p>通过服务直接调用 switch 类型的实体的 turn_on 服务</p>
+> </div>
+>
+> 点击调用服务之后，我们返回「状态」Tab 再次检查 `switch.hddz_zndrt_d3d8_electric_blanket` 的状态，可以看到状态已经变成了 `on`，这说明我们的操作是成功的。
+>
+> 如果你的智能设备需要使用别的类型的服务完成操作，也可以先通过在右手边侧边栏中选择「开发者工具」-> 点选「状态」Tab，并搜索实体的状态和附属的实体信息来决定如何调用服务。
 
 ```yaml
     commands: # [!code focus]
@@ -368,18 +365,16 @@ media_player:
 
 为了方便我们在 Homekit 和 Home Assistant 中使用方便，此处我们还使用了 Home Assistant 的模板功能将我们在 `input_select` 中配置的选项映射为 `select` 实体的选项。
 
-::: tip 小贴士
-
-其实我们可以借助于 Home Assistant 的开发者工具，在右手边侧边栏中选择「开发者工具」-> 点选「模板」来对模板进行调试，这样我们就可以在 Home Assistant 中直接调试模板了。
-
-<div flex flex-col justify-center text-center>
-  <img src="./assets/homekit-use-media-player-as-a-controller-hass-screenshot-03.png" />
-  <p>对模板进行预览和调试</p>
-</div>
-
-在上图中我们直接将刚刚配置的模板粘贴到了模板编辑器中，可以看到当我们传入 `source` 为 `二档` 时，模板的输出为 `Gear 2`，这就是我们想要的结果。
-
-:::
+> [!TIP] 小贴士
+>
+> 其实我们可以借助于 Home Assistant 的开发者工具，在右手边侧边栏中选择「开发者工具」-> 点选「模板」来对模板进行调试，这样我们就可以在 Home Assistant 中直接调试模板了。
+>
+> <div flex flex-col justify-center text-center>
+>   <img src="./assets/homekit-use-media-player-as-a-controller-hass-screenshot-03.png" />
+>   <p>对模板进行预览和调试</p>
+> </div>
+>
+> 在上图中我们直接将刚刚配置的模板粘贴到了模板编辑器中，可以看到当我们传入 `source` 为 `二档` 时，模板的输出为 `Gear 2`，这就是我们想要的结果。
 
 我们通过模板语法定义了一个名为 `source_map` 的变量，里面存储一个字典，字典中将会把我们的中文档位选项映射到 `Gear 1`, `Gear 2`, `Gear 3` 上。这个 `Gear 1` 的值是通过在右手边侧边栏中选择「开发者工具」-> 点选「状态」Tab，搜索 `select.hddz_zndrt_d3d8_heat_level` 了解到的，这个实体中包含了 `Gear 1`, `Gear 2`, `Gear 3` 三个档位的选项值，所以我们映射的目标也就是这三个值。
 

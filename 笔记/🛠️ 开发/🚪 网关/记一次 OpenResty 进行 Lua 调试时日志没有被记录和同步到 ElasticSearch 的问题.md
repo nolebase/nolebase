@@ -15,9 +15,8 @@ status: 尚未完成
 
 # 记一次 OpenResty 进行 Lua 调试时日志没有被记录和同步到 ElasticSearch 的问题
 
-::: warning
-⚠️ 该文档尚未完成，仍在编写中...
-:::
+> [!WARNING]
+> ⚠️ 该文档尚未完成，仍在编写中...
 
 ### 文档兼容性
 

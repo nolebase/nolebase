@@ -32,11 +32,9 @@ tags:
 
 接下来通过 <kbd data-keyboard-key="up-arrow">上</kbd> 和 <kbd data-keyboard-key="down-arrow">下</kbd> 导航直接前往「... Rescue mode（急救模式）」选项，然后用 <kbd data-keyboard-key="enter">Enter</kbd> 或者 <kbd data-keyboard-key="enter">回车</kbd> 键，或者 <kbd data-keyboard-key="right-arrow">右</kbd> 进行「确认」操作：
 
-::: tip
-
-如果不喜欢用下面章节的截图中通过命令行绘制的 UI 去配置 Rescue Mode（急救模式），可以通过 <kbd data-keyboard-key="up-arrow">上</kbd> 和 <kbd data-keyboard-key="down-arrow">下</kbd> 导航直接前往「... Graphical Rescue mode（图形化急救模式）」选项，然后用 <kbd data-keyboard-key="enter">Enter</kbd> 或者 <kbd data-keyboard-key="enter">回车</kbd> 键，或者 <kbd data-keyboard-key="right-arrow">右</kbd> 进行「确认」以进入到「Graphical Rescue mode（图形化急救模式）」中，在图形化界面中，可以使用鼠标进行操作和导航，对于小白用户而言体验会好很多。
-
-:::
+> [!TIP]
+>
+> 如果不喜欢用下面章节的截图中通过命令行绘制的 UI 去配置 Rescue Mode（急救模式），可以通过 <kbd data-keyboard-key="up-arrow">上</kbd> 和 <kbd data-keyboard-key="down-arrow">下</kbd> 导航直接前往「... Graphical Rescue mode（图形化急救模式）」选项，然后用 <kbd data-keyboard-key="enter">Enter</kbd> 或者 <kbd data-keyboard-key="enter">回车</kbd> 键，或者 <kbd data-keyboard-key="right-arrow">右</kbd> 进行「确认」以进入到「Graphical Rescue mode（图形化急救模式）」中，在图形化界面中，可以使用鼠标进行操作和导航，对于小白用户而言体验会好很多。
 
 ![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-3.png)
 
@@ -68,9 +66,9 @@ tags:
 
 接下来，因为我们需要对硬盘进行配置，因此我们不希望使用任何的根文件系统，选择「不使用根文件系统」即可：
 
-::: tip 什么情况下我会需要根文件系统？
-
-比如需要直接操作硬盘中的文件的时候，假设自己错误配置了 `/etc/fstab` ，或者是错误配置了 `grub` ，甚至是内核相关的参数，都可以通过挂载硬盘作为「根文件系统」的形式去操作。
+> [!TIP] 什么情况下我会需要根文件系统？
+>
+> 比如需要直接操作硬盘中的文件的时候，假设自己错误配置了 `/etc/fstab` ，或者是错误配置了 `grub` ，甚至是内核相关的参数，都可以通过挂载硬盘作为「根文件系统」的形式去操作。
 
 ![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-13.png)
 

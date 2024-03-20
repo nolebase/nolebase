@@ -10,9 +10,8 @@ status: 尚未完成
 ---
 # Nólëbase 和我们所使用的 Obsidian 以及 VitePress 所处的困境
 
-::: warning
-⚠️ 该文档尚未完成，仍在编写中...
-:::
+> [!WARNING]
+> ⚠️ 该文档尚未完成，仍在编写中...
 
 ## 前言
 

@@ -219,9 +219,8 @@ kubeadm join 10.24.0.2:6443 --token <加入集群使用的 TOKEN> \
 
 现在我们可以把 `kubectl` 需要的凭据文件复制给用户了。
 
-::: warning ⚠️ 注意
-这样的操作仅适用于部署和维护 Kubernetes 集群的第一个用户，或者 root 用户，对于其他用户而言，请参照 Kubernetes 文档中对于多用户和授权的描述来分配权限。
-:::
+> [!WARNING] ⚠️ 注意
+> 这样的操作仅适用于部署和维护 Kubernetes 集群的第一个用户，或者 root 用户，对于其他用户而言，请参照 Kubernetes 文档中对于多用户和授权的描述来分配权限。
 
 ### 仅 root 用户使用或普通用户需要 sudoer 权限才能使用
 

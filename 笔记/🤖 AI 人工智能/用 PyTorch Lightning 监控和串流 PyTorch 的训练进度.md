@@ -457,17 +457,15 @@ tensorboard --bind_all --logdir .
 
 就可以把 TensorBoard 起起来了：
 
-::: tip
-
-如果没有安装 TensorBoard 的话可以通过
-
-```shell
-pip install tensorboard
-```
-
-原地直接安装。
-
-:::
+> [!TIP]
+>
+> 如果没有安装 TensorBoard 的话可以通过
+>
+> ```shell
+> pip install tensorboard
+> ```
+>
+> 原地直接安装。
 
 ![](./assets/monitoring-and-streaming-pytorch-training-progress-with-pytorch-lightning-screenshot-1.png)
 

@@ -19,32 +19,30 @@ tags:
 ---
 # 在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）
 
-::: warning ⚠️ 开始前请阅读
-正如[官方文档](https://www.openssl.org/docs/man1.1.1/man1/ca.html)所述：
-
-> The ca command is quirky and at times downright unfriendly.
-> ca 命令很古怪，有时甚至完全不友好。
-
-以及
-
-> The ca utility was originally meant as an example of how to do things in a CA. It was not supposed to be used as a full blown CA itself: nevertheless some people are using it for this purpose.
+> [!WARNING] ⚠️ 开始前请阅读
+> 正如[官方文档](https://www.openssl.org/docs/man1.1.1/man1/ca.html)所述：
 >
-> ca 实用程序最初是作为如何在 CA 中执行操作的示例。它本身不应该被用作一个完整的 CA：尽管如此，还是有人将它用于此目的。
-
-> The ca command is effectively a single user command: no locking is done on the various files and attempts to run more than one ca command on the same database can have unpredictable results.
+> > The ca command is quirky and at times downright unfriendly.
+> > ca 命令很古怪，有时甚至完全不友好。
 >
-> ca 命令实际上是一个单用户命令：不会对各个文件进行锁定，并且尝试在同一数据库上运行多个 ca 命令可能会产生不可预测的结果。
+> 以及
+>
+> > The ca utility was originally meant as an example of how to do things in a CA. It was not supposed to be used as a full blown CA itself: nevertheless some people are using it for this purpose.
+> >
+> > ca 实用程序最初是作为如何在 CA 中执行操作的示例。它本身不应该被用作一个完整的 CA：尽管如此，还是有人将它用于此目的。
+>
+> > The ca command is effectively a single user command: no locking is done on the various files and attempts to run more than one ca command on the same database can have unpredictable results.
+> >
+> > ca 命令实际上是一个单用户命令：不会对各个文件进行锁定，并且尝试在同一数据库上运行多个 ca 命令可能会产生不可预测的结果。
+>
+> 所以这篇文档并不是推荐大家用 `openssl ca` 这样的命令去管理和维护自己的 CA 和下面的证书，而是希望提供一个方向和指南来说明 `openssl ca` 是如何运行和使用的，我也仅仅只有在自己的 Homelab 上的小部分领域使用了这样的方式来管理自己的 CA 和证书。
 
-所以这篇文档并不是推荐大家用 `openssl ca` 这样的命令去管理和维护自己的 CA 和下面的证书，而是希望提供一个方向和指南来说明 `openssl ca` 是如何运行和使用的，我也仅仅只有在自己的 Homelab 上的小部分领域使用了这样的方式来管理自己的 CA 和证书。
+> 如果你喜欢的话，你大可以理解为这是一种「古法手搓 CA 和证书」的行为，而非生产环境中建议的行为，这很 Geek，需要你了解你在做什么。我建议你在学习和实操之后多阅读阅读[官方文档](https://www.openssl.org/docs/man1.1.1/man1/ca.html)的警告部分。
 
-如果你喜欢的话，你大可以理解为这是一种「古法手搓 CA 和证书」的行为，而非生产环境中建议的行为，这很 Geek，需要你了解你在做什么。我建议你在学习和实操之后多阅读阅读[官方文档](https://www.openssl.org/docs/man1.1.1/man1/ca.html)的警告部分。
-:::
-
-::: warning ⚠️ 关于版本控制
-在 2023 年这样的云原生时代下，我依然没有找到一个适合终端管理用户去使用的比较友好的 CA 管理工具，所以我在这里使用了 Git 作为版本控制工具来管理我的 CA 和证书。这不代表我推荐你也这么做，生产环境上也不建议这么做，你在版本控制中也应该时时刻刻关注你的私钥是否被添加到了暂存，Stash，推送到了目标远程服务器，一旦你在 Git 历史中留下了任何的私钥的脚印，这将会引入非常大的安全隐患，允许黑客在入侵电脑后直接通过 Git Reflog 相关的命令直接把含有私钥的历史记录解析和提取出来。
-
-**我这么做只是因为没有更好用直观的管理工具，且我自己使用类似于 1Password 这样的工具去细致地管理我的所有私钥，如果你也想这样实践和尝试 CA 和 PKI，请务必注意你的私钥的安全。**
-:::
+> [!WARNING] ⚠️ 关于版本控制
+> 在 2023 年这样的云原生时代下，我依然没有找到一个适合终端管理用户去使用的比较友好的 CA 管理工具，所以我在这里使用了 Git 作为版本控制工具来管理我的 CA 和证书。这不代表我推荐你也这么做，生产环境上也不建议这么做，你在版本控制中也应该时时刻刻关注你的私钥是否被添加到了暂存，Stash，推送到了目标远程服务器，一旦你在 Git 历史中留下了任何的私钥的脚印，这将会引入非常大的安全隐患，允许黑客在入侵电脑后直接通过 Git Reflog 相关的命令直接把含有私钥的历史记录解析和提取出来。
+>
+> **我这么做只是因为没有更好用直观的管理工具，且我自己使用类似于 1Password 这样的工具去细致地管理我的所有私钥，如果你也想这样实践和尝试 CA 和 PKI，请务必注意你的私钥的安全。**
 
 ## 创建
 
@@ -111,9 +109,8 @@ mkdir intermediates/domains/private intermediates/domains/certs intermediates/do
 
 #### 创建私钥
 
-::: warning 关于为什么文件命名后缀带有日期，以及 PKI 和版本控制
-由于一般私钥是不纳入版本控制的，如果我们在本地同时拥有和需要管理多个私钥，甚至是在临时的部署中需要操作这些私钥的时候，如果只使用一个 `intermediate.key.pem` 作为命名的话可能之后需要涉及到来回重命名文件，所以在下面的命令中，我会偏好于在后缀中或者在文件夹中加入一个年份和月份来提示开发者和管理者操作的目标 key 和证书是什么时候生成的。
-:::
+> [!WARNING] 关于为什么文件命名后缀带有日期，以及 PKI 和版本控制
+> 由于一般私钥是不纳入版本控制的，如果我们在本地同时拥有和需要管理多个私钥，甚至是在临时的部署中需要操作这些私钥的时候，如果只使用一个 `intermediate.key.pem` 作为命名的话可能之后需要涉及到来回重命名文件，所以在下面的命令中，我会偏好于在后缀中或者在文件夹中加入一个年份和月份来提示开发者和管理者操作的目标 key 和证书是什么时候生成的。
 
 你可以执行下面的命令生成一个新的私钥：
 

@@ -172,11 +172,9 @@ NAME                 PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE  
 standard (default)   rancher.io/local-path   Delete          WaitForFirstConsumer   false                  4d22h
 ```
 
-::: tip 什么是 `sc` 和 Storage Class？
-
-`sc` 代表了 [Storage Class](https://kubernetes.io/docs/concepts/storage/storage-classes/)，对于使用 [`kind`](https://kind.sigs.k8s.io/) 创建的集群而言，默认填写 `standard` 就可以了。
-
-:::
+> [!TIP] 什么是 `sc` 和 Storage Class？
+>
+> `sc` 代表了 [Storage Class](https://kubernetes.io/docs/concepts/storage/storage-classes/)，对于使用 [`kind`](https://kind.sigs.k8s.io/) 创建的集群而言，默认填写 `standard` 就可以了。
 
 接下来，和创建 NebulaGraph Operator 一样，用 Helm 安装一个 NebulaGraph 集群
 

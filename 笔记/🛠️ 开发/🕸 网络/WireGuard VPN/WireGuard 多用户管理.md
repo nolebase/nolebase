@@ -162,30 +162,29 @@ AllowedIPs = 10.0.0.0/24
 PersistentKeepalive = 25
 ```
 
-::: info 想要直接复制粘贴上面的示例配置文件？
-
-接口配置文件中不允许出现 `#` 字符，这里我们可以把上面的内容复制并粘贴到本地的 `wg0-client.conf`，并且填写好之后，添加到到下面命令中对应的地方：
-
-::: code-group
-
-```shell [以非 root 用户执行]
-cat wg0-client.conf | sed '/^#/d;/^\s*$/d' | sudo tee wg0.conf
-```
-
-```shell [以 root 用户执行]
-cat wg0-client.conf | sed '/^#/d;/^\s*$/d' | tee wg0.conf
-```
-
-命令说明：
-
-1. `cat` 可以读取预先配置好的带注释的文件作为字符串输出给管道符 `|` 并传递给下一个命令，在这里，下一个命令为 `sed`
-2. `sed '/^#/d;/^\s*$/d'` 可以过滤输出 `#` 开头的行和空行
-3. `wg0.conf` 是 WireGuard 的配置文件，根据不同的系统，可以放到不同的目录：
-    - Windows: ``（我还没有部署过，之后会更新到这里）
-    - macOS: `/usr/local/etc/wireguard/wg0.conf`
-    - 计算机/操作系统/Linux: `/etc/wireguard/wg0.conf`
-
-:::
+> [!NOTE] 想要直接复制粘贴上面的示例配置文件？
+>
+> 接口配置文件中不允许出现 `#` 字符，这里我们可以把上面的内容复制并粘贴到本地的 `wg0-client.conf`，并且填写好之后，添加到到下面命令中对应的地方：
+>
+> ::: code-group
+>
+> ```shell [以非 root 用户执行]
+> cat wg0-client.conf | sed '/^#/d;/^\s*$/d' | sudo tee wg0.conf
+> ```
+>
+> ```shell [以 root 用户执行]
+> cat wg0-client.conf | sed '/^#/d;/^\s*$/d' | tee wg0.conf
+> ```
+> :::
+>
+> 命令说明：
+>
+> 1. `cat` 可以读取预先配置好的带注释的文件作为字符串输出给管道符 `|` 并传递给下一个命令，在这里，下一个命令为 `sed`
+> 2. `sed '/^#/d;/^\s*$/d'` 可以过滤输出 `#` 开头的行和空行
+> 3. `wg0.conf` 是 WireGuard 的配置文件，根据不同的系统，可以放到不同的目录：
+>     - Windows: ``（我还没有部署过，之后会更新到这里）
+>     - macOS: `/usr/local/etc/wireguard/wg0.conf`
+>     - 计算机/操作系统/Linux: `/etc/wireguard/wg0.conf`
 
 ## 服务端配置文件删除用户
 

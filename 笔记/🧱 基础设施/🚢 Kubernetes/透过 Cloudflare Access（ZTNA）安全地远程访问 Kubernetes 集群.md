@@ -7,16 +7,14 @@ wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudfla
 sudo apt install ./cloudflared-linux-amd64.deb
 ```
 
-::: info 如果你需要升级
-
-```shell
-mv cloudflared-linux-amd64.deb cloudflared-linux-amd64-<下载日期>.deb
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-mv cloudflared-linux-amd64.deb cloudflared-linux-amd64-<下载日期>.deb
-sudo apt install ./cloudflared-linux-amd64-<下载日期>.deb
-```
-
-:::
+> [!NOTE] 如果你需要升级
+>
+> ```shell
+> mv cloudflared-linux-amd64.deb cloudflared-linux-amd64-<下载日期>.deb
+> wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+> mv cloudflared-linux-amd64.deb cloudflared-linux-amd64-<下载日期>.deb
+> sudo apt install ./cloudflared-linux-amd64-<下载日期>.deb
+> ```
 
 ```shell
 cloudflared tunnel login

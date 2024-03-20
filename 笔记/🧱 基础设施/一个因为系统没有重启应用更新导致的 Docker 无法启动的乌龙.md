@@ -159,29 +159,25 @@ $ cat /boot/config-$(uname -r) | grep CONFIG_IP_NF_NAT
 CONFIG_IP_NF_NAT=m
 ```
 
-::: tip 查看单独的内核模块信息
+> [!TIP] 查看单独的内核模块信息
+>
+> 看了看 `modinfo` 的输出，看起来基本的模块是在的，能返回
+>
+> ```shell
+> modinfo nf_nat_ipv4
+> ```
 
-看了看 `modinfo` 的输出，看起来基本的模块是在的，能返回
-
-```shell
-modinfo nf_nat_ipv4
-```
-
-:::
-
-::: tip 查看完整的内核模块
-
-```shell
-sudo ls /lib/modules/$(uname -r)/kernel/net/netfilter/
-```
-
-查看 IPv4 相关的模块
-
-```shell
-sudo ls /lib/modules/$(uname -r)/kernel/net/ipv4/netfilter/
-```
-
-:::
+> [!TIP] 查看完整的内核模块
+>
+> ```shell
+> sudo ls /lib/modules/$(uname -r)/kernel/net/netfilter/
+> ```
+>
+> 查看 IPv4 相关的模块
+>
+> ```shell
+> sudo ls /lib/modules/$(uname -r)/kernel/net/ipv4/netfilter/
+> ```
 
 然后在看别人的帖子的时候看到说这个和 `nf_nat_ipv4` 有关，这个时候用 `modprobe` 观察就可以发现 `nf_nat_ipv4` 缺失了：
 

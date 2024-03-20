@@ -1015,9 +1015,8 @@ torch.distributed.elastic.multiprocessing.api.SignalException: Process 5836 got 
 
 想要恢复训练，也要确保 `--load` 参数是配置正确的，它将会从 `--save` 参数配置的路径下的名为 `latest_checkpointed_iteration.txt` 读取最后一次的训练迭代次数（iteration）的编号，并且读取 `--save` 参数配置的路径下的形如 `iter_0000004` 的 checkpoint 文件读取并恢复先前的训练进度。
 
-::: warning
-
-需要注意的是，如果在训练的过程中修改了并行训练的时候会使用到的 `--tensor-model-parallel-size` 参数和 `--pipeline-model-parallel-size` 参数，checkpoint 的结构将会发生变化，这个时候先前的 checkpoint 将不会被 Megatron 所接受，需要整个推翻重新训练才行了。
+> [!WARNING]
+> 需要注意的是，如果在训练的过程中修改了并行训练的时候会使用到的 `--tensor-model-parallel-size` 参数和 `--pipeline-model-parallel-size` 参数，checkpoint 的结构将会发生变化，这个时候先前的 checkpoint 将不会被 Megatron 所接受，需要整个推翻重新训练才行了。
 
 :::
 

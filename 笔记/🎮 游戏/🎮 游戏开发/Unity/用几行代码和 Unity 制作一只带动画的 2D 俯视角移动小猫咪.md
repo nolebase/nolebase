@@ -95,11 +95,9 @@ tags:
 
 然后点击组件右侧的三个点来展开更多信息菜单，然后点选「Edit Script」来编辑代码文件。
 
-::: tip 在使用 macOS 进行开发吗？
-
-如果你遭遇了任何编辑代码的时候的问题，可以通过参考[[配置 macOS 上的 VSCode 来编辑 Unity 的 C Sharp 代码]]文档来配置自己的开发环境哦！
-
-:::
+> [!TIP] 在使用 macOS 进行开发吗？
+>
+> 如果你遭遇了任何编辑代码的时候的问题，可以通过参考[[配置 macOS 上的 VSCode 来编辑 Unity 的 C Sharp 代码]]文档来配置自己的开发环境哦！
 
 ![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-51.png)
 
@@ -226,17 +224,15 @@ public class PlayerMovement : MonoBehaviour
 
 ![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-11.png)
 
-::: tip 动画太快或者太慢了？
-
-可以在动画面板的右侧找到三个点，点选之后选择「Show Sample Rate（显示采样频率）」来显示当前的动画帧速率。
-
-![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-12.png)
-
-打开之后在「`Animation`（动画）」面板中的左侧就可以看到新出现的数字，调整这个数字的数值就可以完成动画帧率的编辑和修改了。
-
-![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-19.png)
-
-:::
+> [!TIP] 动画太快或者太慢了？
+>
+> 可以在动画面板的右侧找到三个点，点选之后选择「Show Sample Rate（显示采样频率）」来显示当前的动画帧速率。
+>
+> ![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-12.png)
+>
+> 打开之后在「`Animation`（动画）」面板中的左侧就可以看到新出现的数字，调整这个数字的数值就可以完成动画帧率的编辑和修改了。
+>
+> ![](./assets/unity-movement-animation-of-2d-top-down-characters-screenshot-19.png)
 
 ### 通过 Animator（动画编辑器）配置状态变化
 
