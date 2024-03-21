@@ -80,8 +80,6 @@ tags:
 
 ![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-15.png)
 
-:::
-
 ![](./assets/enter-debian-12-rescue-mode-with-hyper-v-screenshot-10.png)
 
 然后选择「在安装程序环境中运行 shell」就可以启动了：

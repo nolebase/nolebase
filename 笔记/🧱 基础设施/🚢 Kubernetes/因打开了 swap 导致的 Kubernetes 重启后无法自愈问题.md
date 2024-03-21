@@ -82,8 +82,11 @@ sudo journalctl -u kubelet -f
 
 #### 如果没有 swap 分区
 
-> [!WARNING] 注意
-> 下面步骤中使用的 `swapoff -a` 的命令并不是完全有效的，在系统中有配置 `systemd` ，且系统盘中有 swap 分区的情况下（通过执行 `sudo fdisk -l` 或者在 `/etc/fstab` 中可以查询），`systemd` 在启动后扫描到 swap 分区时就会自动挂载 swap 分区，并且将一个名为 `dev-<dev 名称>.swap` 的 `systemd` 单元加载并激活，这会导致 swap 重新被开启，这导致 `swapoff -a` 命令的结果只会在本次已经启动的系统中生效，这个时候如果需要永久性关闭 swap，我们需要执行额外的操作。
+::: warning 注意
+
+下面步骤中使用的 `swapoff -a` 的命令并不是完全有效的，在系统中有配置 `systemd` ，且系统盘中有 swap 分区的情况下（通过执行 `sudo fdisk -l` 或者在 `/etc/fstab` 中可以查询），`systemd` 在启动后扫描到 swap 分区时就会自动挂载 swap 分区，并且将一个名为 `dev-<dev 名称>.swap` 的 `systemd` 单元加载并激活，这会导致 swap 重新被开启，这导致 `swapoff -a` 命令的结果只会在本次已经启动的系统中生效，这个时候如果需要永久性关闭 swap，我们需要执行额外的操作。
+
+:::
 
 要了解当前的 swap 使用情况，我们可以：
 

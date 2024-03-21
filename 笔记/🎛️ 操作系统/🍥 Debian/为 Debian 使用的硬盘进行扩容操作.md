@@ -15,68 +15,70 @@ tags:
 ---
 # 为 Debian 使用的硬盘进行扩容操作
 
-> [!TIP]
->
-> Debian 在安装的时候采取的默认的分区策略中会创建最后一个分区为 swap 分区，这样的 swap 分区是用来提供虚拟内存的，如果你希望在扩容的时候一同操作 swap 分区，甚至希望删除 swap 分区的话（比如正在运行 `kubelet` 的节点），可以通过下面的操作安全地关闭 swap 和移除 swap 分区的引用。
->
-> 1. 先执行 `swapoff` 命令全局关闭 `swap`：
->
-> ```shell
-> sudo swapoff -a
-> ```
->
-> 2. 然后我们需要修改 `/etc/fstab` 中的 swap 分区的引用：
->
-> 使用
->
-> ```shell
-> sudo vim /etc/fstab
-> ```
->
-> 来打开 Vim 编辑器编辑 `/etc/fstab`：
->
-> ```shell
-> # /etc/fstab: static file system information.
-> #
-> # Use 'blkid' to print the universally unique identifier for a
-> # device; this may be used with UUID= as a more robust way to name devices
-> # that works even if disks are added and removed. See fstab(5).
-> #
-> # systemd generates mount units based on this file, see systemd.mount(5).
-> # Please run 'systemctl daemon-reload' after making changes here.
-> #
-> # / was on /dev/sda2 during installation
-> UUID=c10110c9-c86b-4020-ad6c-78e46ec3e642 /               ext4    errors=remount-ro 0       1
-> # /boot/efi was on /dev/sda1 during installation
-> UUID=325D-4C1F  /boot/efi       vfat    umask=0077      0       1
-> # swap was on /dev/sda3 during installation # [!code hl]
-> UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0 # [!code --]
-> # UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0 # [!code ++]
-> /dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
-> ```
->
-> 编辑结束后我们还需要编辑 `initramfs` 配置文件中的 `resume` 配置来进一步关闭 swap
->
-> ```shell
-> sudo vim /etc/initramfs-tools/conf.d/resume
-> ```
->
-> 在文件中找到和之前注释掉的 `/etc/fstab` 中 swap 分区相同的设备 UUID 的 `RESUME` 行：
->
-> ```shell
-> RESUME=UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 # [!code --]
-> # RESUME=UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 # [!code ++]
-> ```
->
-> 然后**按顺序执行**下面的两个命令分别更新 `grub` 和 `initramfs`
->
-> ```shell
-> sudo update-grub
-> ```
->
-> ```shell
-> sudo update-initramfs -u
-> ```
+::: tip
+
+Debian 在安装的时候采取的默认的分区策略中会创建最后一个分区为 swap 分区，这样的 swap 分区是用来提供虚拟内存的，如果你希望在扩容的时候一同操作 swap 分区，甚至希望删除 swap 分区的话（比如正在运行 `kubelet` 的节点），可以通过下面的操作安全地关闭 swap 和移除 swap 分区的引用。
+
+1. 先执行 `swapoff` 命令全局关闭 `swap`：
+
+```shell
+sudo swapoff -a
+```
+
+2. 然后我们需要修改 `/etc/fstab` 中的 swap 分区的引用：
+
+使用
+
+```shell
+sudo vim /etc/fstab
+```
+
+来打开 Vim 编辑器编辑 `/etc/fstab`：
+
+```shell
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# / was on /dev/sda2 during installation
+UUID=c10110c9-c86b-4020-ad6c-78e46ec3e642 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/sda1 during installation
+UUID=325D-4C1F  /boot/efi       vfat    umask=0077      0       1
+# swap was on /dev/sda3 during installation # [!code hl]
+UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0 # [!code --]
+# UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 none            swap    sw              0       0 # [!code ++]
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+```
+
+编辑结束后我们还需要编辑 `initramfs` 配置文件中的 `resume` 配置来进一步关闭 swap
+
+```shell
+sudo vim /etc/initramfs-tools/conf.d/resume
+```
+
+在文件中找到和之前注释掉的 `/etc/fstab` 中 swap 分区相同的设备 UUID 的 `RESUME` 行：
+
+```shell
+RESUME=UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 # [!code --]
+# RESUME=UUID=ec583562-8777-45cb-9512-e19b7ae96ee3 # [!code ++]
+```
+
+然后**按顺序执行**下面的两个命令分别更新 `grub` 和 `initramfs`
+
+```shell
+sudo update-grub
+```
+
+```shell
+sudo update-initramfs -u
+```
+
+:::
 
 ## 先决条件
 
@@ -115,25 +117,27 @@ Welcome to GNU Parted! Type 'help' to view a list of commands.
 print
 ```
 
-> [!NOTE]
->
-> > Warning: Not all the space available to /dev/sda appears to be used, you can fix the GPT to use all of the space (an extra 545259520 blocks) or continue with the current setting?
-> > 警告：`/dev/sda` 的可用空间似乎未全部使用，您可以修复 GPT 以使用全部空间（额外的 `545259520` 块），或者继续使用当前设置？
->
-> 如果出现了这样的提示，不要惊慌，是正常的行为，这意味着我们修改过的 Hyper-V 和其他 VM 控制器提供的虚拟硬盘的数据能被 `parted` 检测到了。
->
-> ```shell
-> (parted) print
-> print
+::: info
+
 > Warning: Not all the space available to /dev/sda appears to be used, you can fix the GPT to use all of the space (an extra 545259520 blocks) or continue with the current setting?
-> Fix/Ignore?
-> ```
->
-> 这个时候我们根据 `parted` 的提示，输入 `Fix` 就可以进行修复和更新以使用全部硬盘空间。
->
-> ```
-> Fix
-> ```
+> 警告：`/dev/sda` 的可用空间似乎未全部使用，您可以修复 GPT 以使用全部空间（额外的 `545259520` 块），或者继续使用当前设置？
+
+如果出现了这样的提示，不要惊慌，是正常的行为，这意味着我们修改过的 Hyper-V 和其他 VM 控制器提供的虚拟硬盘的数据能被 `parted` 检测到了。
+
+```shell
+(parted) print
+print
+Warning: Not all the space available to /dev/sda appears to be used, you can fix the GPT to use all of the space (an extra 545259520 blocks) or continue with the current setting?
+Fix/Ignore?
+```
+
+这个时候我们根据 `parted` 的提示，输入 `Fix` 就可以进行修复和更新以使用全部硬盘空间。
+
+```
+Fix
+```
+
+:::
 
 输出应该是这样的结果：
 
@@ -151,32 +155,34 @@ Number  Start   End     Size    File system     Name  Flags
  2      538MB   41.9GB  41.4GB  ext4
 ```
 
-> [!TIP]
->
-> 如果要删除不要的 swap 分区
->
-> ```shell
-> (parted) print
-> print
-> Model: Msft Virtual Disk (scsi)
-> Disk: /dev/sda 42.9GB
-> Sector Size (logical/physical): 512B/4096B
-> Partition Table: GPT
-> Disk Flags:
->
-> Number  Start   End     Size    File system     Name  Flags
->  1      1049kB  538MB   537MB   fat32                 boot, esp
->  2      538MB   41.9GB  41.4GB  ext4
->  3      41.9GB  42.9GB  1023MB  linux-swap(v1)
-> ```
->
-> 可以通过
->
-> ```shell
-> rm <分区编号>
-> ```
->
-> 的命令进行删除操作。
+::: tip
+
+如果要删除不要的 swap 分区
+
+```shell
+(parted) print
+print
+Model: Msft Virtual Disk (scsi)
+Disk: /dev/sda 42.9GB
+Sector Size (logical/physical): 512B/4096B
+Partition Table: GPT
+Disk Flags:
+
+Number  Start   End     Size    File system     Name  Flags
+1      1049kB  538MB   537MB   fat32                 boot, esp
+2      538MB   41.9GB  41.4GB  ext4
+3      41.9GB  42.9GB  1023MB  linux-swap(v1)
+```
+
+可以通过
+
+```shell
+rm <分区编号
+```
+
+的命令进行删除操作。
+
+:::
 
 现在我希望将分区 2 拓展扩容到 300G，只需要执行下面的命令就可以扩容了：
 
