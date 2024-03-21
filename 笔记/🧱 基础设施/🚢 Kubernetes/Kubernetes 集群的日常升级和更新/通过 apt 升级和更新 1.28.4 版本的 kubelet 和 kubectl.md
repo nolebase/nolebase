@@ -18,7 +18,7 @@ tags:
   - 软件/云原生/Cilium
 ---
 
-# 通过 apt 升级和更新 1.28.4 版本的 `kubelet` 和 `kubectl`
+# 通过 apt 升级和更新 1.28.4 版本的 kubelet 和 kubectl
 
 ## 检查依赖状态
 

@@ -18,7 +18,7 @@ tags:
   - 操作系统/Debian/Debian-12
 ---
 
-# 通过 apt 升级和更新 1.29.0 版本的 `kubelet` 和 `kubectl`
+# 通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl
 
 ## 检查依赖状态
 

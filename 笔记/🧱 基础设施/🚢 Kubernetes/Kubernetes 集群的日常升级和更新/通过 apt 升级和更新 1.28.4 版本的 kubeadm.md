@@ -18,7 +18,7 @@ tags:
   - 软件/云原生/Cilium
 ---
 
-# 通过 apt 升级和更新 1.28.4 版本的 `kubeadm`
+# 通过 apt 升级和更新 1.28.4 版本的 kubeadm
 
 ## 解除 Debian `apt` 依赖锚定（hold）
 
