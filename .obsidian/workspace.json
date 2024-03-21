@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "79320239cd11f856",
+        "id": "fbb62f0c5bff6514",
         "type": "tabs",
         "children": [
           {
-            "id": "64d13dc262357ac2",
+            "id": "780c6c8e1f49f0e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "好用的集大成者启动器",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -103,7 +98,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -149,9 +143,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md"
-              }
+              "state": {}
             }
           },
           {
@@ -175,7 +167,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +183,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -231,54 +221,54 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "64d13dc262357ac2",
+  "active": "b5dfc4e6c8287ee4",
   "lastOpenFiles": [
-    "笔记/📟 终端/软件/Git 版本控制/Git 客户端配置 SSH 验证.md",
-    "笔记/🤖 AI 人工智能/安装和配置 NVIDIA 的 Apex.md",
-    "笔记/🤖 AI 人工智能/用 PyTorch Lightning 监控和串流 PyTorch 的训练进度.md",
-    "编目 Catalog/番剧/迷宮飯（2024）.md",
-    "编目 Catalog/番剧/末班列车去哪里？（2024）.md",
-    "编目 Catalog/番剧/怪异与少女与神隐（2024）.md",
-    "编目 Catalog/番剧/夜晚的水母不游泳（2024）.md",
-    "编目 Catalog/番剧/葬送的芙莉莲（2023）.md",
-    "编目 Catalog/番剧/渴求游戏之神（2024）.md",
-    "Pasted image 20240319183331.png",
-    "telegram-cloud-photo-size-1-5136564463070195043-y.jpg",
-    "telegram-cloud-photo-size-1-5136564463070195042-y.jpg",
-    "telegram-cloud-photo-size-1-5136564463070195041-y.jpg",
-    "telegram-cloud-photo-size-1-5136564463070195040-y.jpg",
-    "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/Grafana 使用 HTML 可视化插件.md",
-    "笔记/🛠️ 开发/因为 SSR 和 SSG 的时候与客户端时区不一致导致的水合错误.md",
-    "Pasted image 20240319140841.png",
-    "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/CustomResourceDefinition.md",
-    "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
-    "笔记/🛠️ 开发/Refactoring UI 读书笔记.md",
-    "笔记/🤖 AI 人工智能/Megatron-LM 的读取 checkpoint 的错误处理问题.md",
-    "标题.md",
-    "笔记/🤖 AI 人工智能/AI 绘画工作流工具和相关 SOTA.md",
-    "笔记/🤖 AI 人工智能/AI 视频工作流工具和相关 SOTA.md",
-    "笔记/🤖 AI 人工智能/LLM 是如何工作的？.md",
-    "笔记/🤖 AI 人工智能/NVIDIA 生态.md",
-    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
-    "笔记/🤖 AI 人工智能/运行一个 mlcommon 的测试（mlperf）.md",
-    "笔记/🤖 AI 人工智能/检查 Anaconda 安装的 PyTorch 和 CUDA 依赖版本是否正确.md",
-    "笔记/🤖 AI 人工智能/大规模分布式机器学习里的断卡重训和故障恢复.md",
-    "笔记/🤖 AI 人工智能/多机多卡训练的时候的 NCCL 错误.md",
-    "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
-    "笔记/🧶 手作/布艺和裁缝",
-    "笔记/🧶 手作",
-    "笔记/🧮 数学",
-    "笔记/🧩 开源贡献/Kubernetes/assets",
-    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
-    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
-    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
-    "笔记/🛠️ 开发/🗂 数据库/向量数据库 Vector DB",
-    "笔记/🛠️ 开发/编译原理",
+    "vite.config.ts.timestamp-1711037150485-b2f1d0fbd8a9c.mjs",
+    "vite.config.ts.timestamp-1711023777129-c6120f6cc2f1.mjs",
+    "node_modules/@rive-app",
+    "vite.config.ts.timestamp-1711023743161-1d3ec560c83f3.mjs",
+    "vite.config.ts.timestamp-1711023713653-22335cd7ca938.mjs",
+    "node_modules/@nolebase",
+    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载集群内的 `kube-proxy`.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 Helm 安装的 Cilium.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/如何开发和测试 Clusterpedia.md",
+    "vite.config.ts.timestamp-1711023574715-9e2e548d44761.mjs",
+    "笔记/🎛️ 操作系统/🍥 Debian/激活 Debian 上安装的 Nginx 的 Stream 模块来支持转发 TCP 和 UDP 请求.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
+    "vite.config.ts.timestamp-1711023391637-df993ffa26c75.mjs",
+    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
+    "vite.config.ts.timestamp-1711023258574-3b36bc79cec3e.mjs",
+    "笔记/🎛️ 操作系统/🍥 Debian/从 Debian 11 升级到 Debian 12.md",
+    "vite.config.ts.timestamp-1711023211037-a82809c0d79c7.mjs",
+    "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
+    "笔记/🎛️ 操作系统/🍥 Debian/apt upgrade 执行更新到一半发生了 SSH 断连但是没有 tmux 和 screen 帮助创建守护 tty，但是报错了无法获得 lock-frontend 锁的时候怎么办？.md",
+    "vite.config.ts.timestamp-1711023079858-7b415ab2a8dfe.mjs",
+    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
+    "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/透过 Cloudflare Access（ZTNA）安全地远程访问 Kubernetes 集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
+    "笔记/🧱 基础设施/nv-hostengine 的启动和补充知识.md",
+    "笔记/🧱 基础设施/通过 AWS CLI 验证并推送镜像到 AWS ECR Public Repository（公开仓库）.md",
+    "笔记/🧱 基础设施/在 AWS EC2 上配置 MSK 交互相关的环境并创建 Topic.md",
+    "笔记/🧱 基础设施/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
+    "笔记/🧱 基础设施/🖥 Dell 戴尔服务器/assets/dell-idrac-1.png",
+    "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/assets/image_20211015122207.png",
+    "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/assets/image_20211015122147.png",
+    "笔记/🧱 基础设施/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-02.png",
+    "笔记/🧱 基础设施/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-01.png",
+    "笔记/🧱 基础设施/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-image-01.png",
+    "笔记/🧱 基础设施/🚢 Kubernetes/assets/how-to-develop-and-test-clusterpedia-screenshot-3.png",
+    "笔记/🧱 基础设施/🚢 Kubernetes/assets/how-to-develop-and-test-clusterpedia-screenshot-2.png",
+    "笔记/🧱 基础设施/🚢 Kubernetes/assets/how-to-develop-and-test-clusterpedia-screenshot-1.png",
+    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-3.png",
     "未命名.canvas"
   ]
 }

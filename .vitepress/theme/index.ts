@@ -38,7 +38,6 @@ import TocList from './components/TocList.vue'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
 import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
-import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 
 import 'uno.css'

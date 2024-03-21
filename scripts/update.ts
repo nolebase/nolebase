@@ -74,8 +74,8 @@ async function addRouteItem(indexes: ArticleTree[], path: string, upgradeIndex =
       linkItems.shift()
   })
 
-  if (linkItems.length === 1) return
-
+  if (linkItems.length === 1)
+    return
 
   indexes = addRouteItemRecursion(indexes, item, linkItems, upgradeIndex)
 }
@@ -148,7 +148,6 @@ function articleTreeSort(articleTree: ArticleTree[]) {
   return articleTree
 }
 
-
 /**
  * 排序sidebar,返回新的sidebar数组
  * @param sidebar 需要排序的ArticleTree数组
@@ -167,15 +166,15 @@ function sidebarSort(sidebar: ArticleTree[], folderTop: boolean = true) {
     }))
     // 然后在排序完成后合并为新的数组
     _sideBar = [...folders, ...files]
-  } else {
+  }
+  else {
     _sideBar = articleTreeSort(sidebar)
   }
 
   // 如果有子菜单就递归排序每个子菜单
   for (const articleTree of _sideBar) {
-    if (articleTree.items && articleTree.items.length > 0) {
+    if (articleTree.items && articleTree.items.length > 0)
       articleTree.items = sidebarSort(articleTree.items, folderTop)
-    }
   }
   return _sideBar
 }

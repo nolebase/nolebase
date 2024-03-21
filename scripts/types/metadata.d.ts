@@ -10,27 +10,27 @@ export interface ArticleTree {
 }
 
 export interface Doc {
-  relativePath: string,
+  relativePath: string
   hashes: {
     sha256: {
       content: string
       contentDiff?: string
-    },
-  },
-  ignoreWhenGenerateTagsFromGPT?: boolean,
+    }
+  }
+  ignoreWhenGenerateTagsFromGPT?: boolean
 }
 
 export interface Tag {
   name: string
-  alias: string[],
-  description: string,
-  appearedInDocs: string[],
-  count: number,
+  alias: string[]
+  description: string
+  appearedInDocs: string[]
+  count: number
 }
 
 export interface DocsMetadata {
-  docs: Doc[],
-  tags: Tag[],
+  docs: Doc[]
+  tags: Tag[]
   sidebar: ArticleTree[]
 }
 
