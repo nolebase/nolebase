@@ -18,7 +18,7 @@ tags:
   - 操作系统/Debian/Debian-12
 ---
 
-# 通过 apt 升级和更新 1.29.0 版本的 `kubeadm`
+# 通过 apt 升级和更新 1.29.0 版本的 kubeadm
 
 ## 解除 Debian `apt` 依赖锚定（hold）
 
