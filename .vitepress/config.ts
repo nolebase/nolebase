@@ -1,4 +1,4 @@
-import process from 'node:process'
+import { cwd, env } from 'node:process'
 import { defineConfig } from 'vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
@@ -11,7 +11,21 @@ import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-i
 import { githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
 import { sidebar } from './docsMetadata.json'
 
+function getVueProdHydrationMismatchDetailsFlag() {
+  if (!env) {
+    console.warn('WARNING: env is not available when trying to get Vue Prod Hydration Mismatch Details Flag')
+    throw new Error('env is not available')
+  }
+
+  return !!env.VUE_PROD_HYDRATION_MISMATCH_DETAILS_FLAG
+}
+
 export default defineConfig({
+  vite: {
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: getVueProdHydrationMismatchDetailsFlag(),
+    },
+  },
   lang: 'zh-CN',
   title: siteName,
   description: siteDescription,
@@ -162,7 +176,7 @@ export default defineConfig({
       md.use(MarkdownItFootnote)
       md.use(MarkdownItMathjax3)
       md.use(BiDirectionalLinks({
-        dir: process.cwd(),
+        dir: cwd(),
       }))
       md.use(ElementTransform, (() => {
         let transformNextLinkCloseToken = false

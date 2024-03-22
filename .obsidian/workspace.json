@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fbb62f0c5bff6514",
+        "id": "58bab66db257614f",
         "type": "tabs",
         "children": [
           {
-            "id": "780c6c8e1f49f0e7",
+            "id": "2ae0004adac8ee42",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "好用的集大成者启动器",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,6 +99,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -120,7 +122,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.9073915546734548,
+                  "scale": 1.3428153072212992,
                   "close": true
                 }
               }
@@ -143,7 +145,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md"
+              }
             }
           },
           {
@@ -167,6 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,6 +188,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -221,8 +227,10 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b5dfc4e6c8287ee4",
+  "active": "d5332c2bfa4468de",
   "lastOpenFiles": [
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubeadm.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
     "vite.config.ts.timestamp-1711037150485-b2f1d0fbd8a9c.mjs",
     "vite.config.ts.timestamp-1711023777129-c6120f6cc2f1.mjs",
     "node_modules/@rive-app",
@@ -244,7 +252,6 @@
     "vite.config.ts.timestamp-1711023211037-a82809c0d79c7.mjs",
     "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
     "笔记/🎛️ 操作系统/🍥 Debian/apt upgrade 执行更新到一半发生了 SSH 断连但是没有 tmux 和 screen 帮助创建守护 tty，但是报错了无法获得 lock-frontend 锁的时候怎么办？.md",
-    "vite.config.ts.timestamp-1711023079858-7b415ab2a8dfe.mjs",
     "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
     "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
@@ -258,7 +265,6 @@
     "笔记/🧱 基础设施/nv-hostengine 的启动和补充知识.md",
     "笔记/🧱 基础设施/通过 AWS CLI 验证并推送镜像到 AWS ECR Public Repository（公开仓库）.md",
     "笔记/🧱 基础设施/在 AWS EC2 上配置 MSK 交互相关的环境并创建 Topic.md",
-    "笔记/🧱 基础设施/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
     "笔记/🧱 基础设施/🖥 Dell 戴尔服务器/assets/dell-idrac-1.png",
     "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/assets/image_20211015122207.png",
     "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/assets/image_20211015122147.png",
