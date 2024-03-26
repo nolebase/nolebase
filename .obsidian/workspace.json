@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "fbb62f0c5bff6514",
+        "id": "e5bd2534b97d925c",
         "type": "tabs",
         "children": [
           {
-            "id": "780c6c8e1f49f0e7",
+            "id": "fe94b3af18d865b0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "好用的集大成者启动器",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,6 +102,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "README.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -120,7 +125,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.9073915546734548,
+                  "scale": 1.3428153072212992,
                   "close": true
                 }
               }
@@ -143,7 +148,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           },
           {
@@ -167,6 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,6 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -221,54 +230,54 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "b5dfc4e6c8287ee4",
+  "active": "fe94b3af18d865b0",
   "lastOpenFiles": [
-    "vite.config.ts.timestamp-1711037150485-b2f1d0fbd8a9c.mjs",
-    "vite.config.ts.timestamp-1711023777129-c6120f6cc2f1.mjs",
-    "node_modules/@rive-app",
-    "vite.config.ts.timestamp-1711023743161-1d3ec560c83f3.mjs",
-    "vite.config.ts.timestamp-1711023713653-22335cd7ca938.mjs",
-    "node_modules/@nolebase",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载集群内的 `kube-proxy`.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 Helm 安装的 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/如何开发和测试 Clusterpedia.md",
-    "vite.config.ts.timestamp-1711023574715-9e2e548d44761.mjs",
-    "笔记/🎛️ 操作系统/🍥 Debian/激活 Debian 上安装的 Nginx 的 Stream 模块来支持转发 TCP 和 UDP 请求.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/修复语言错误.md",
-    "vite.config.ts.timestamp-1711023391637-df993ffa26c75.mjs",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubernetes 集群上的 GPU 掉卡和故障排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/因打开了 swap 导致的 Kubernetes 重启后无法自愈问题.md",
-    "vite.config.ts.timestamp-1711023258574-3b36bc79cec3e.mjs",
-    "笔记/🎛️ 操作系统/🍥 Debian/从 Debian 11 升级到 Debian 12.md",
-    "vite.config.ts.timestamp-1711023211037-a82809c0d79c7.mjs",
-    "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
-    "笔记/🎛️ 操作系统/🍥 Debian/apt upgrade 执行更新到一半发生了 SSH 断连但是没有 tmux 和 screen 帮助创建守护 tty，但是报错了无法获得 lock-frontend 锁的时候怎么办？.md",
-    "vite.config.ts.timestamp-1711023079858-7b415ab2a8dfe.mjs",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
-    "笔记/🔒 PKI 公钥基础设施/在本地用 OpenSSL 用配置文件和版本控制的方式创建、配置和使用 Intermediate CA（中间 CA）.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/准备 Kubernetes 节点裸金属虚拟机.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/透过 Cloudflare Access（ZTNA）安全地远程访问 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
-    "笔记/🧱 基础设施/nv-hostengine 的启动和补充知识.md",
-    "笔记/🧱 基础设施/通过 AWS CLI 验证并推送镜像到 AWS ECR Public Repository（公开仓库）.md",
-    "笔记/🧱 基础设施/在 AWS EC2 上配置 MSK 交互相关的环境并创建 Topic.md",
+    "index.md",
+    "笔记/index.md",
+    "笔记/🐾 Fursuit 兽装/出毛须知.md",
+    "笔记/🐾 Fursuit 兽装/术语及词汇表.md",
+    "笔记/🐾 Fursuit 兽装/如何前往漫展.md",
+    "笔记/💾 软件/将 iTerm2 配置为可以和 VSCode 的 Terminal（终端）有着相似导航体验的模式.md",
+    "笔记/💾 软件/未命名",
+    "Pasted image 20240326110218.png",
+    "Pasted image 20240326110202.png",
+    "Pasted image 20240326110140.png",
+    "Pasted image 20240326110117.png",
     "笔记/🧱 基础设施/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
-    "笔记/🧱 基础设施/🖥 Dell 戴尔服务器/assets/dell-idrac-1.png",
-    "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/assets/image_20211015122207.png",
-    "笔记/🧱 基础设施/📈 指标监控/Grafana 监控大盘/assets/image_20211015122147.png",
-    "笔记/🧱 基础设施/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-02.png",
-    "笔记/🧱 基础设施/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-screenshot-01.png",
-    "笔记/🧱 基础设施/📦 Homelab/assets/troubleshooting-service-unavailable-by-upgrading-mems-image-01.png",
-    "笔记/🧱 基础设施/🚢 Kubernetes/assets/how-to-develop-and-test-clusterpedia-screenshot-3.png",
-    "笔记/🧱 基础设施/🚢 Kubernetes/assets/how-to-develop-and-test-clusterpedia-screenshot-2.png",
-    "笔记/🧱 基础设施/🚢 Kubernetes/assets/how-to-develop-and-test-clusterpedia-screenshot-1.png",
-    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-3.png",
+    "编目 Catalog/番剧/迷宮飯（2024）.md",
+    "编目 Catalog/番剧/葬送的芙莉莲（2023）.md",
+    "编目 Catalog/番剧/渴求游戏之神（2024）.md",
+    "编目 Catalog/番剧/末班列车去哪里？（2024）.md",
+    "编目 Catalog/番剧/怪异与少女与神隐（2024）.md",
+    "编目 Catalog/番剧/夜晚的水母不游泳（2024）.md",
+    "编目 Catalog/番剧",
+    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
+    "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
+    "笔记/🧶 手作/布艺和裁缝/术语及词汇表.md",
+    "笔记/🧶 手作/术语及词汇表.md",
+    "笔记/🧶 手作/手缝针法.md",
+    "笔记/🧶 手作/布艺和裁缝",
+    "笔记/🧶 手作",
+    "笔记/🧱 基础设施/🚢 Kubernetes/面向 Kubernetes 开发.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/迁移持久卷.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/用方便好用的工具快速创建测试用的集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/节点亲和力 Node Affinity.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/污点 Taint.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/更好的 Kubernetes 理解方式.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
+    "笔记/🧮 数学",
+    "笔记/🧩 开源贡献/Kubernetes/assets",
+    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
+    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
+    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
     "未命名.canvas"
   ]
 }
