@@ -232,6 +232,9 @@
   },
   "active": "fe94b3af18d865b0",
   "lastOpenFiles": [
+    "vite.config.ts.timestamp-1711432179274-38e7e6eb93959.mjs",
+    "vite.config.ts.timestamp-1711431859562-910c7b0891c95.mjs",
+    "node_modules/@nolebase",
     "index.md",
     "笔记/index.md",
     "笔记/🐾 Fursuit 兽装/出毛须知.md",
@@ -272,12 +275,9 @@
     "笔记/🧱 基础设施/🚢 Kubernetes/概念/容忍度 Toleration.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/概念/容器组亲和力 Pod Affinity.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/更好的 Kubernetes 理解方式.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
     "笔记/🧮 数学",
     "笔记/🧩 开源贡献/Kubernetes/assets",
     "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
-    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
-    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
     "未命名.canvas"
   ]
 }
