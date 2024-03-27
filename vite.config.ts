@@ -26,27 +26,17 @@ export default defineConfig(async () => {
         getContributorsTitle: (): string => {
           return '贡献者'
         },
-        excludes: [],
-        exclude: (_, { helpers }): boolean => {
-          if (helpers.idEquals('toc.md'))
-            return true
-          if (helpers.idEquals('index.md'))
-            return true
-
-          return false
-        },
+        excludes: [
+          'toc.md',
+          'index.md',
+        ],
       }),
       PageProperties(),
       PagePropertiesMarkdownSection({
-        excludes: [],
-        exclude: (_, { helpers }): boolean => {
-          if (helpers.idEquals('toc.md'))
-            return true
-          if (helpers.idEquals('index.md'))
-            return true
-
-          return false
-        },
+        excludes: [
+          'toc.md',
+          'index.md',
+        ],
       }),
       Components({
         include: [/\.vue$/, /\.md$/],
