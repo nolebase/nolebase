@@ -1,7 +1,8 @@
 import type { Handler, HandlerEvent } from '@netlify/functions'
 import fetch from 'node-fetch'
+import { plainTargetDomain } from '../../metadata'
 
-const TargetDomain = 'nolebase.ayaka.io'
+const TargetDomain = plainTargetDomain
 const FunctionEndpoint = '/.netlify/functions/to'
 const HyphenQueryShortURLEndpoint = 'https://api.ayaka.io/hyphen/api/v1/url/short'
 

@@ -3,6 +3,7 @@ import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
+import { githubRepoLink } from 'metadata'
 
 export default defineConfig(async () => {
   return {
@@ -16,8 +17,7 @@ export default defineConfig(async () => {
     },
     plugins: [
       GitChangelog({
-        repoURL: () => 'https://github.com/nolebase/nolebase',
-        maxGitLogCount: 1000,
+        repoURL: () => githubRepoLink,
       }),
       GitChangelogMarkdownSection({
         getChangelogTitle: (): string => {

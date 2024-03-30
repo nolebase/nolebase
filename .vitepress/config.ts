@@ -9,6 +9,7 @@ import { ElementTransform } from '@nolebase/markdown-it-element-transform'
 import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image'
 
 import { githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
+import { creatorNames, creatorUsernames } from './creators'
 import { sidebar } from './docsMetadata.json'
 
 export default defineConfig({
@@ -45,14 +46,14 @@ export default defineConfig({
     ],
     ['meta', {
       name: 'author',
-      content: 'Ayaka Neko, Ayaka Rizumu',
+      content: creatorNames.join(', '),
     }],
     [
       'meta',
       {
         name: 'keywords',
         content:
-          'markdown, knowledgebase, 知识库, vitepress, obsidian, notebook, notes, nekomeowww, littlesound',
+          ['markdown', 'knowledge-base', '知识库', 'vitepress', 'obsidian', 'notebook', 'notes', ...creatorUsernames].join(', '),
       },
     ],
 
@@ -82,7 +83,7 @@ export default defineConfig({
     }],
     ['meta', {
       name: 'twitter:creator',
-      content: 'Neko, Ayaka, Neko Ayaka',
+      content: creatorUsernames.join(', '),
     }],
     [
       'meta',
@@ -116,7 +117,9 @@ export default defineConfig({
       pattern: `${githubRepoLink}/tree/main/:path`,
       text: '编辑本页面',
     },
-    socialLinks: [{ icon: 'github', link: githubRepoLink }],
+    socialLinks: [
+      { icon: 'github', link: githubRepoLink },
+    ],
     footer: {
       message: '用 <span style="color: #e25555;">&#9829;</span> 撰写',
       copyright:
@@ -191,7 +194,7 @@ export default defineConfig({
   },
   async buildEnd(siteConfig) {
     await buildEndGenerateOpenGraphImages({
-      domain: 'https://nolebase.ayaka.io',
+      baseUrl: targetDomain,
       category: {
         byLevel: 2,
       },

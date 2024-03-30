@@ -1,5 +1,3 @@
-const creatorNames = ['nekomeowww', 'LittleSound']
-
 export interface UserAvatar {
   name: string
   avatar: string
@@ -26,13 +24,7 @@ const creatorAvatars: Record<string, string> = {}
 
 const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
 
-export const users = creatorNames.reduce((acc, name) => {
-  creatorAvatars[name] = getAvatarUrl(name)
-  acc.push({ name, avatar: creatorAvatars[name] })
-  return acc
-}, [] as UserAvatar[])
-
-const creators: Creators[] = [
+export const creators: Creators[] = [
   {
     name: '絢香猫',
     avatar: creatorAvatars.nekomeowww,
@@ -59,4 +51,11 @@ const creators: Creators[] = [
   },
 ]
 
-export { creators }
+export const creatorNames = creators.map(c => c.name)
+export const creatorUsernames = ['nekomeowww', 'LittleSound']
+
+export const users = creatorUsernames.reduce((acc, name) => {
+  creatorAvatars[name] = getAvatarUrl(name)
+  acc.push({ name, avatar: creatorAvatars[name] })
+  return acc
+}, [] as UserAvatar[])
