@@ -3,7 +3,8 @@ import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
-import { githubRepoLink } from 'metadata'
+
+import { githubRepoLink } from './metadata'
 
 export default defineConfig(async () => {
   return {

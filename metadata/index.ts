@@ -11,6 +11,5 @@ export const githubRepoLink = 'https://github.com/nolebase/nolebase'
 
 /** 无协议前缀域名 */
 export const plainTargetDomain = 'nolebase.ayaka.io'
+/** 完整域名 */
 export const targetDomain = `https://${plainTargetDomain}`
-
-/** 社交媒体 */
