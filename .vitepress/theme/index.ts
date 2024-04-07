@@ -26,6 +26,10 @@ import {
   NolebasePagePropertiesPlugin,
 } from '@nolebase/vitepress-plugin-page-properties/client'
 
+import {
+  NolebaseUnlazyImg,
+} from '@nolebase/vitepress-plugin-thumbnail-hash/client'
+
 import { creators } from '../creators'
 
 import AppContainer from './components/AppContainer.vue'
@@ -77,6 +81,7 @@ const ExtendedTheme: Theme = {
     app.component('Share', Share)
     app.component('TocList', TocList)
     app.component('AppContainer', AppContainer)
+    app.component('NolebaseUnlazyImg', NolebaseUnlazyImg)
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {

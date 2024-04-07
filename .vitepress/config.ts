@@ -7,12 +7,20 @@ import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import type { Options as ElementTransformOptions } from '@nolebase/markdown-it-element-transform'
 import { ElementTransform } from '@nolebase/markdown-it-element-transform'
 import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image'
+import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 import { githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
 import { creatorNames, creatorUsernames } from './creators'
 import { sidebar } from './docsMetadata.json'
 
 export default defineConfig({
+  vue: {
+    template: {
+      transformAssetUrls: {
+        NolebaseUnlazyImg: ['src'],
+      },
+    },
+  },
   lang: 'zh-CN',
   title: siteName,
   description: siteDescription,
@@ -167,6 +175,9 @@ export default defineConfig({
       md.use(BiDirectionalLinks({
         dir: process.cwd(),
       }))
+      md.use(UnlazyImages(), {
+        imgElementTag: 'NolebaseUnlazyImg',
+      })
       md.use(ElementTransform, (() => {
         let transformNextLinkCloseToken = false
 
