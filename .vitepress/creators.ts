@@ -1,15 +1,10 @@
-export interface UserAvatar {
-  name: string
-  avatar: string
-}
-
 export interface SocialEntry {
   type: 'github' | 'twitter' | 'email'
   icon: string
   link: string
 }
 
-export interface Creators {
+export interface Creator {
   avatar: string
   name: string
   username?: string
@@ -21,14 +16,12 @@ export interface Creators {
   emailAliases?: string[]
 }
 
-const creatorAvatars: Record<string, string> = {}
-
 const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
 
-export const creators: Creators[] = [
+export const creators: Creator[] = [
   {
     name: '絢香猫',
-    avatar: creatorAvatars.nekomeowww,
+    avatar: '',
     username: 'nekomeowww',
     title: 'Nólëbase 原始创作者',
     desc: '开发者，专注于基础设施维护，数据分析，后端、DevOps 开发',
@@ -41,7 +34,7 @@ export const creators: Creators[] = [
   },
   {
     name: '絢香音',
-    avatar: creatorAvatars.LittleSound,
+    avatar: '',
     username: 'LittleSound',
     title: 'Nólëbase 原始创作者',
     desc: '开源开发者，专注于前端，以及前端相关工具库和工具链开发',
@@ -52,16 +45,10 @@ export const creators: Creators[] = [
     nameAliases: ['LittleSound', '绚香音', '絢香音', 'Rizumu Oikawa', 'Rizumu Ayaka', 'Ayaka Rizumu', 'Rizumu'],
     emailAliases: ['rizumu@ayaka.moe', 'rizumu@oqo.moe'],
   },
-]
+].map<Creator>((c) => {
+  c.avatar = c.avatar || getAvatarUrl(c.username)
+  return c as Creator
+})
 
 export const creatorNames = creators.map(c => c.name)
 export const creatorUsernames = creators.map(c => c.username || '')
-
-export const users = creatorUsernames
-  .reduce<UserAvatar[]>((acc, name) => {
-    creatorAvatars[name] = getAvatarUrl(name)
-    acc.push({ name, avatar: creatorAvatars[name] })
-
-    return acc
-  }, [])
-  .filter(item => !!item.name)

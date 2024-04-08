@@ -60,6 +60,7 @@
     "unplugin-vue-components": "^0.26.0",
     "uuid": "^9.0.1",
     "vite": "^5.2.8",
+    "vite-plugin-inspect": "^0.8.3",
     "vitepress": "^1.0.2",
     "vue": "^3.4.21"
   }
