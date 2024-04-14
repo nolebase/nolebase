@@ -7,15 +7,15 @@ import {
   LayoutMode as NolebaseEnhancedReadabilitiesLayoutMode,
   NolebaseEnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu,
-} from '@nolebase/vitepress-plugin-enhanced-readabilities'
+} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
 import {
   NolebaseInlineLinkPreviewPlugin,
-} from '@nolebase/vitepress-plugin-inline-link-preview'
+} from '@nolebase/vitepress-plugin-inline-link-preview/client'
 
 import {
   NolebaseHighlightTargetedHeading,
-} from '@nolebase/vitepress-plugin-highlight-targeted-heading'
+} from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 
 import {
   InjectionKey as NolebaseGitChangelogInjectionKey,
@@ -38,15 +38,18 @@ import HomePage from './components/HomePage.vue'
 import Share from './components/Share.vue'
 import TocList from './components/TocList.vue'
 
-import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
-import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
-import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
+import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
+import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 
-import 'uno.css'
+import 'virtual:uno.css'
 
 import '../styles/main.css'
 import '../styles/vars.css'
+
+import('@nolebase/vitepress-plugin-inline-link-preview/client')
 
 const ExtendedTheme: Theme = {
   extends: DefaultTheme,

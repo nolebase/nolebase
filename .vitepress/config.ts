@@ -4,8 +4,7 @@ import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
-import type { Options as ElementTransformOptions } from '@nolebase/markdown-it-element-transform'
-import { ElementTransform } from '@nolebase/markdown-it-element-transform'
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image'
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
@@ -226,29 +225,9 @@ export default defineConfig({
       md.use(UnlazyImages(), {
         imgElementTag: 'NolebaseUnlazyImg',
       })
-      md.use(ElementTransform, (() => {
-        let transformNextLinkCloseToken = false
-
-        return {
-          transform(token) {
-            switch (token.type) {
-              case 'link_open':
-                if (token.attrGet('class') !== 'header-anchor') {
-                  token.tag = 'VPNolebaseInlineLinkPreview'
-                  transformNextLinkCloseToken = true
-                }
-                break
-              case 'link_close':
-                if (transformNextLinkCloseToken) {
-                  token.tag = 'VPNolebaseInlineLinkPreview'
-                  transformNextLinkCloseToken = false
-                }
-
-                break
-            }
-          },
-        } as ElementTransformOptions
-      })())
+      md.use(InlineLinkPreviewElementTransform, {
+        tag: 'VPNolebaseInlineLinkPreview',
+      })
     },
   },
   async buildEnd(siteConfig) {

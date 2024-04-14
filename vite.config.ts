@@ -56,6 +56,8 @@ export default defineConfig(async () => {
         '@nolebase/vitepress-plugin-enhanced-readabilities',
         '@nolebase/vitepress-plugin-highlight-targeted-heading',
         '@nolebase/vitepress-plugin-inline-link-preview',
+        '@nolebase/vitepress-plugin-git-changelog',
+        '@nolebase/vitepress-plugin-page-properties',
       ],
     },
   }
