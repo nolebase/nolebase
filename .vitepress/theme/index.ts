@@ -43,6 +43,7 @@ import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-page-properties/client/style.css'
+import '@nolebase/vitepress-plugin-thumbnail-hash/client/style.css'
 
 import 'virtual:uno.css'
 

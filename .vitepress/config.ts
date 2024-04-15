@@ -5,7 +5,7 @@ import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
-import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image'
+import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 import { githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'

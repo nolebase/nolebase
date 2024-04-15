@@ -6,6 +6,7 @@
     "iconify",
     "mathjax",
     "nolebase",
+    "unlazy",
     "vitepress",
     "vuedraggable"
   ],
