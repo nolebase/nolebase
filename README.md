@@ -299,7 +299,7 @@ pnpm docs:build
 
 #### 使用静态网站托管服务部署页面
 
- Nólëbase 知识库使用 Vitepress 静态生成器来驱动和生成网站。您可以参照 Vitepress 官方文档中[《部署静态站点》](https://cn.vitejs.dev/guide/static-deploy)这一章的内容来使用大主流静态网站托管服务部署自己的 Nólëbase 知识库。
+ Nólëbase 知识库使用 Vitepress 静态生成器来驱动和生成网站。您可以参照 Vitepress 官方文档中[部署静态站点](https://cn.vitejs.dev/guide/static-deploy)这一章的内容来使用大主流静态网站托管服务部署自己的 Nólëbase 知识库。
 
 ## 知识库编写须知
 
