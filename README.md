@@ -299,7 +299,21 @@ pnpm docs:build
 
 #### 使用静态网站托管服务部署页面
 
- Nólëbase 知识库使用 Vitepress 静态生成器来驱动和生成网站。您可以参照 Vitepress 官方文档中[部署静态站点](https://cn.vitejs.dev/guide/static-deploy)这一章的内容来使用大主流静态网站托管服务部署自己的 Nólëbase 知识库。
+Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页面，因此可以部署到下列已知的优质**静态网站托管服务**：
+
+- [Netlify](https://netlify.com/)
+- [Vercel](https://vercel.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [AWS Amplify](https://aws.amazon.com/cn/amplify/)
+- [Render](https://render.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Azure Static Web](https://azure.microsoft.com/en-us/products/app-service/static)
+
+> [!NOTE]
+> 与自建单独的虚拟机并使用类似于 Nginx，或者对象存储（OSS）相比，使用上述提及的静态网站托管服务时，**可以省略手动部署流程**，也**无需花费时间与精力维护单独的网站服务器**
+> 让我们把精力放在写作上吧！❤️
+
+请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
 
 ## 知识库编写须知
 
