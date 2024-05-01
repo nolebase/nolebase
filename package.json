@@ -2,9 +2,21 @@
   "name": "nolebase",
   "type": "module",
   "version": "1.0.0",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
+  "author": {
+    "name": "Nólëbase",
+    "email": "nolebase@ayaka.moe",
+    "url": "https://github.com/nolebase"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vitepress",
+    "nolebase",
+    "markdown",
+    "nolebase-integration",
+    "obsidian",
+    "knowledge-base",
+    "vitepress-doc"
+  ],
   "scripts": {
     "dev": "pnpm run docs:dev",
     "build": "pnpm run docs:build",
