@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🧱 基础设施/🛜 OpenWRT/配置 ImmortalWRT 配合 sing-box.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🧱 基础设施/🛜 OpenWRT/配置 ImmortalWRT 配合 sing-box.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -125,7 +125,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 1.3428153072212992,
+                  "scale": 1.9885368456908947,
                   "close": true
                 }
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧱 基础设施/🛜 OpenWRT/配置 ImmortalWRT 配合 sing-box.md"
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md"
               }
             }
           },
@@ -161,8 +161,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -175,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧱 基础设施/🛜 OpenWRT/配置 ImmortalWRT 配合 sing-box.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧱 基础设施/🛜 OpenWRT/配置 ImmortalWRT 配合 sing-box.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,8 +213,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 408.5,
-    "collapsed": true
+    "width": 408.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,11 +233,12 @@
   "active": "f546534296cd7742",
   "lastOpenFiles": [
     "node_modules/@vueuse",
-    "node_modules/@antfu",
     "node_modules/@nolebase",
+    "node_modules/@antfu",
+    "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
     "笔记/🎛️ 操作系统/🍎 macOS/如何卸载 macOS 虚拟声卡.md",
     "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
-    "笔记/🧱 基础设施/🛜 OpenWRT/配置 ImmortalWRT 配合 sing-box.md",
     "笔记/☀️ 生活/🏠 租房/租房指标统计.md",
     "笔记/🧱 基础设施/🛜 OpenWRT",
     "笔记/🧱 基础设施/🚢 Kubernetes/将 TrueNAS 共享存储连接到 K8s 集群.md",
@@ -274,12 +273,10 @@
     "笔记/🤖 AI 人工智能/GPT 能做什么？.md",
     "笔记/🤖 AI 人工智能/LLM 社区.md",
     "笔记/🤖 AI 人工智能/LLM 模型",
-    "笔记/🧩 开源贡献/感谢开发者的 thanks.dev.md",
     "笔记/📦 收集箱/🐙 GitHub 项目/maplibre",
     "笔记/📦 收集箱/🐙 GitHub 项目/protomaps",
     "vite.config.ts.timestamp-1711618957486-d3ed87f76ac4e.mjs",
     "编目 Catalog/番剧",
-    "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
     "未命名.canvas"
   ]
 }
