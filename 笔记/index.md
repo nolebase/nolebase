@@ -297,12 +297,12 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 
 请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
 
-##### vercel 部署
-vercel 部署很简单, 在 vercel 中选择项目后, 修改构建的 output directory 为 .vitepress/dist 就行了（默认是 ./dist）
+##### Vercel 部署
+vercel 部署很简单, 在 vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
 
 如果你选择了用 vercel 部署，可以关闭 netflify 的 workflow.
 
-在 github仓库页面 -> Actions -> netlify 对应 workflow -> 右上角3个点 -> disable workflow
+在 github 仓库页面 -> Actions -> netlify 对应 workflow -> 右上角3个点 -> disable workflow
 
 ## Obsidian 的设置
 ### 关于图片链接问题
@@ -318,8 +318,8 @@ vercel 部署很简单, 在 vercel 中选择项目后, 修改构建的 output di
 - 保持兼容性的markdown: 可以让文档也能在 github 中被正确渲染（github无法解析`[[双链]]`）
 - 方便迁移文件和图片，你只需要把图片文件夹和markdown文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
 
-额外的 tips
-- 对于已有的笔记和图片链接，你可以考虑使用 obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 markdown link
+> [!TIP]
+> 对于已有的笔记和图片链接，你可以考虑使用 obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 markdown link
 
 ## 开启 giscus 评论功能
 giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的github仓库必须是公开的才能使用 giscus）。
