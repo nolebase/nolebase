@@ -319,7 +319,7 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 ##### Vercel 部署
 Vercel 部署很简单, 在 Vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
 
-如果你选择了用 vercel 部署，可以关闭 netflify 的 workflow.
+如果你选择了用 Vercel 部署，可以关闭 Netflify 自带的 CI/CD builder workflow.
 
 在 github 仓库页面 -> Actions -> netlify 对应 workflow -> 右上角3个点 -> disable workflow
 
