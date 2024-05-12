@@ -321,7 +321,7 @@ vercel 部署很简单, 在 vercel 中选择项目后, 修改构建的「Output 
 
 如果你选择了用 vercel 部署，可以关闭 netflify 的 workflow.
 
-在 github仓库页面 -> Actions -> netlify 对应 workflow -> 右上角3个点 -> disable workflow
+在 github 仓库页面 -> Actions -> netlify 对应 workflow -> 右上角3个点 -> disable workflow
 
 ## Obsidian 的设置
 ### 关于图片链接问题
