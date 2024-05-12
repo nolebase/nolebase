@@ -298,41 +298,41 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
 
 ##### Vercel 部署
-vercel 部署很简单, 在 vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
+Vercel 部署很简单, 在 Vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
 
-如果你选择了用 vercel 部署，可以关闭 netflify 的 workflow.
+如果你选择了用 Vercel 部署，可以关闭 Netlify 自带的 CI/CD builder workflow.
 
-在 github 仓库页面 -> Actions -> netlify 对应 workflow -> 右上角3个点 -> disable workflow
+在 GitHub 仓库页面 -> Actions -> Netlify 对应的 workflow -> 右上角 3 个点 -> Disable workflow
 
 ## Obsidian 的设置
 ### 关于图片链接问题
-如果你的 markdown 中的图片链接没有在当前文件所在目录下，会解析出错，无法在 vitepress 中正确渲染。如果没有这个问题，你可以跳过下面的内容
+如果你的 Markdown 中的图片链接没有在当前文件所在目录下，会解析出错，无法在 Vitepress 中正确渲染。如果没有这个问题，你可以跳过下面的内容
 
 解决方法： 推荐的  Obsidian Setting => Files and links 设置如下
 - New link format => Relative path to file
--  Use `[[Wikilinks]]` => False
+- Use `[[Wikilinks]]` => False
 - Default location for new attachments => In subfolder under current folder 
--  Subfolder name => assets
+- Subfolder name => assets
 
 这么做有几个好处
-- 保持兼容性的markdown: 可以让文档也能在 github 中被正确渲染（github无法解析`[[双链]]`）
-- 方便迁移文件和图片，你只需要把图片文件夹和markdown文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
+- 保持兼容性的 Markdown : 可以让文档也能在 Github 中被正确渲染（ Github 无法解析`[[双链]]`）
+- 方便迁移文件和图片，你只需要把图片文件夹和 Markdown 文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
 
 > [!TIP]
-> 对于已有的笔记和图片链接，你可以考虑使用 obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 markdown link
+> 对于已有的笔记和图片链接，你可以考虑使用 Obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 Markdown link
 
-## 开启 giscus 评论功能
-giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的github仓库必须是公开的才能使用 giscus）。
+## 开启 Giscus 评论功能
+Giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的github仓库必须是公开的才能使用 giscus）。
 
 具体配置方法
-- 第一步，访问 giscus 网站： https://giscus.app/zh-CN， 参考网站上的说明，一步步操作，最终你会得到 giscus 的配置信息
-- 第二步，在 nolebase 仓库下执行，
+- 第一步，访问 Giscus 网站： https://giscus.app/zh-CN， 参考网站上的说明，一步步操作，最终你会得到 Giscus 的配置信息
+- 第二步，在 Nólëbase 仓库下执行，
 
-```
+```sh
 pnpm add -D vitepress-plugin-comment-with-giscus
 ```
 
-- 第三步，在 `./vitepress/theme/index.ts` 中添加 giscus 插件代码（注意更改部分内容为你第一步得到的配置信息哦），演示如下，具体请参考[插件文档](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)
+- 第三步，在 `./vitepress/theme/index.ts` 中添加 Giscus 插件代码（注意更改部分内容为你第一步得到的配置信息哦），演示如下，具体请参考[插件文档](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)
 
 ```ts
 import type { Theme } from 'vitepress'
@@ -391,7 +391,7 @@ export default ExtendedTheme
 ```
 
 
-在 markdown 文件上添加这个，可以决定是否在当前文章中开启评论
+在 Markdown 文件上添加下面的属性，可以决定是否在当前文章中开启评论
 ```
 ---
 comment: true
