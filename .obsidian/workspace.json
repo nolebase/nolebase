@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.50390243530273
+    "width": 313.50390243530273
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -102,7 +102,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+                "file": "README.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md"
+                "file": "README.md"
               }
             }
           },
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,10 +213,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 408.5
+    "width": 362.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-spaced-repetition:复习卡片": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -226,17 +227,33 @@
       "markdown-importer:打开 Markdown 格式转换器": false,
       "random-note:开始漫游笔记": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-spaced-repetition:复习卡片": false,
       "obsidian42-brat:BRAT": false
     }
   },
   "active": "f546534296cd7742",
   "lastOpenFiles": [
+    "public/obsidian-screenshot-2.png",
+    "public/obsidian-screenshot-1.png",
+    "笔记/🤖 AI 人工智能/NVIDIA 生态.md",
+    "笔记/📟 终端/软件/Git 版本控制/不同的添加到暂存的 git add 命令有什么区别？.md",
+    "assets/obsidian-screenshot-2.png",
+    "assets/obsidian-screenshot-1.png",
+    "vite.config.ts.timestamp-1715598284999-36b11fc433d1c.mjs",
+    "node_modules/@giscus",
+    "vite.config.ts.timestamp-1715598122984-5e21991274831.mjs",
+    "assets/Pasted image 20240513185356.png",
+    "assets/Pasted image 20240513184453.png",
+    "笔记/🧱 基础设施/🐳 Docker/自建 Docker Registry.md",
+    "笔记/🧱 基础设施/🐳 Docker/Docker 快捷操作 Cheat Sheet.md",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+    "笔记/🛠️ 开发/用纯 CSS 实现无限滚动的跑马灯.md",
+    "笔记/🤖 AI 人工智能/各种 pip 包和 conda 包的名称都是什么含义？.md",
+    "笔记/📟 终端/软件/Git 版本控制/如何在不用 rebase（变基）功能的情况下实现 squash（压缩）？.md",
+    "vite.config.ts.timestamp-1715439748864-2c3330e1bafb6.mjs",
     "node_modules/@vueuse",
     "node_modules/@nolebase",
     "node_modules/@antfu",
     "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
-    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
     "笔记/🎛️ 操作系统/🍎 macOS/如何卸载 macOS 虚拟声卡.md",
     "笔记/🎛️ 操作系统/🍥 Debian/为 Debian 使用的硬盘进行扩容操作.md",
     "笔记/☀️ 生活/🏠 租房/租房指标统计.md",
@@ -248,7 +265,6 @@
     "Pasted image 20240426142600.png",
     "Pasted image 20240426142533.png",
     "Pasted image 20240426142514.png",
-    "Pasted image 20240426142446.png",
     "笔记/🛠️ 开发/語 编程语言/🦀️ Rust/Rust 社区的 AI 生态.md",
     "笔记/🛠️ 开发/語 编程语言/🦀️ Rust/用 Rust 构建一个神经网络.md",
     "笔记/🤖 AI 人工智能/材料化学相关的 Python 计算库.md",
@@ -259,24 +275,8 @@
     "笔记/🧶 手作/布艺和裁缝/术语及词汇表.md",
     "笔记/🧶 手作/术语及词汇表.md",
     "笔记/🧶 手作/布艺和裁缝/手缝针法.md",
-    "笔记/🐔 免费浪漫/为他人而写作，但也更为了自己而写作.md",
-    "编目 Catalog/番剧/assets/frieren-cover-1.png",
-    "编目 Catalog/番剧/assets/Pasted image 20240319183331.png",
-    "编目 Catalog/番剧/assets/telegram-cloud-photo-size-1-5136564463070195043-y.jpg",
-    "编目 Catalog/番剧/assets/telegram-cloud-photo-size-1-5136564463070195042-y.jpg",
-    "编目 Catalog/番剧/assets/telegram-cloud-photo-size-1-5136564463070195041-y.jpg",
     "编目 Catalog/番剧/assets",
-    "笔记/🧱 基础设施/🚢 Kubernetes/最可爱的版本 UwU！今年首个 Kubernetes 大版本 v1.30 发布.md",
-    "笔记/🤖 AI 人工智能/LLM 天梯榜.md",
-    "笔记/📦 收集箱/📁 资源/国内大模型共享平台.md",
-    "笔记/📦 收集箱/📁 资源/AI 资源导航.md",
-    "笔记/🤖 AI 人工智能/GPT 能做什么？.md",
-    "笔记/🤖 AI 人工智能/LLM 社区.md",
     "笔记/🤖 AI 人工智能/LLM 模型",
-    "笔记/📦 收集箱/🐙 GitHub 项目/maplibre",
-    "笔记/📦 收集箱/🐙 GitHub 项目/protomaps",
-    "vite.config.ts.timestamp-1711618957486-d3ed87f76ac4e.mjs",
-    "编目 Catalog/番剧",
     "未命名.canvas"
   ]
 }

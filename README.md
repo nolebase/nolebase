@@ -316,66 +316,89 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 
 请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
 
-##### Vercel 部署
-Vercel 部署很简单, 在 Vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
+##### 使用 Vercel 部署
 
-如果你选择了用 Vercel 部署，可以关闭 Netlify 自带的 CI/CD builder workflow.
+通过 Vercel 的部署很简单, 在 Vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
 
-在 GitHub 仓库页面 -> Actions -> Netlify 对应的 workflow -> 右上角 3 个点 -> Disable workflow
+如果你选择了用 Vercel 部署，可以关闭本仓库自带的 Netlify 自带的 CI/CD builder workflow：
 
-## Obsidian 的设置
-### 关于图片链接问题
-如果你的 Markdown 中的图片链接没有在当前文件所在目录下，会解析出错，无法在 Vitepress 中正确渲染。如果没有这个问题，你可以跳过下面的内容
+1. 在 GitHub 仓库页面顶部找到「Actions」
+2. 点选 Netlify 对应的 workflow
+3. 在 GitHub Actions workflow 详情右上角找到 3 个点，点选 Disable workflow
 
-解决方法： 推荐的  Obsidian Setting => Files and links 设置如下
-- New link format => Relative path to file
-- Use `[[Wikilinks]]` => False
-- Default location for new attachments => In subfolder under current folder 
-- Subfolder name => assets
+## 配置 Obsidian
 
-这么做有几个好处
-- 保持兼容性的 Markdown : 可以让文档也能在 Github 中被正确渲染（ Github 无法解析`[[双链]]`）
-- 方便迁移文件和图片，你只需要把图片文件夹和 Markdown 文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
+### 关于图片链接
+
+如果你的 Markdown 中的图片链接没有在当前文件所在目录下，会解析出错，最终无法在 VitePress 中正确渲染。
+
+> [!WARNING]
+> 如果没有这个问题，请忽略本章节！
+
+解决方法：采用推荐的 Obsidian 设置。
+
+在 Obsidian 中：
+
+- 前往设置（Setting）
+- 在左侧找到「文件与链接（Files and links）」，点选
+- 在其中的「内部链接类型（New link format）」选项中，选择「基于当前笔记的相对路径（Relative path to file）」
+
+配置完成后将会是这样的效果：
+
+![](/public/obsidian-screenshot-1.png)
+
+> [!TIP]
+> 默认情况下，Nólëbase 自带的「[双向链接插件](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/)」将会自动处理所有 Obsidian 支持的 `[[link]]` 和 `![[link]]` 双向链接。
+> 但有的情况下，你可能会想要避免出现和使用双向链接，比如：
+>
+> 1. 保持兼容性的 Markdown : 可以让文档也能在 Github 中被正确渲染（ Github 无法解析`[[双链]]`）
+>
+> 如果你不喜欢，可以通过下面的配置进行自定义配置：
+>
+> - Use `[[Wikilinks]]` => False
+> - 在其中的「附件默认存放路径（Default location for new attachments）」选项中，选择「在当前文件所在文件夹下指定的子文件夹中（In subfolder under current folder）」
+> - 在「子文件夹名称（Subfolder name）」一栏中，配置值为 `assets`
+>
+> 配置完成后将会是这样的效果：
+>
+> ![](/public/obsidian-screenshot-2.png)
+>
+> 这样配置也会有以下几个好处：
+> - 方便迁移文件和图片，你只需要把图片文件夹和 Markdown 文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
 
 > [!TIP]
 > 对于已有的笔记和图片链接，你可以考虑使用 Obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 Markdown link
 
-## 开启 Giscus 评论功能
-Giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的github仓库必须是公开的才能使用 giscus）。
+## 集成 Giscus 评论功能
 
-具体配置方法
-- 第一步，访问 Giscus 网站： https://giscus.app/zh-CN， 参考网站上的说明，一步步操作，最终你会得到 Giscus 的配置信息
-- 第二步，在 Nólëbase 仓库下执行，
+Giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的GitHub 仓库必须是公开的才能使用 Giscus）。
+
+具体配置方法：
+
+1. 访问 [Giscus 网站](https://giscus.app/zh-CN)
+2. 参考网站上的说明，一步步操作，最终你会得到 Giscus 的配置信息
+3. 在 Nólëbase 仓库下执行，
 
 ```sh
 pnpm add -D vitepress-plugin-comment-with-giscus
 ```
 
-- 第三步，在 `./vitepress/theme/index.ts` 中添加 Giscus 插件代码（注意更改部分内容为你第一步得到的配置信息哦），演示如下，具体请参考[插件文档](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)
+4. 在 `./.vitepress/theme/components` 下新建一个 `Gitcus.ts` 的文件，并填充为下面的内容：
 
 ```ts
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress';
-import { toRefs } from "vue";
-import { h } from 'vue'
-// 略过.......
+import { defineComponent, toRefs } from 'vue'
+import giscusTalk from 'vitepress-plugin-comment-with-giscus/lib/giscus'
+import { useData, useRoute } from 'vitepress'
 
-const ExtendedTheme: Theme = {
-  // 略过.......
-  enhanceApp({ app }) {
-  // 略过.......
-  },
-  // 开始！添加下面的内容
+export default defineComponent({
   setup() {
     // Get frontmatter and route
-    const { frontmatter } = toRefs(useData());
-    const route = useRoute();
-    
+    const { frontmatter } = toRefs(useData())
+    const route = useRoute()
+
     // Obtain configuration from: https://giscus.app/
     giscusTalk({
-      repo: 'your github repositor',
+      repo: 'your github repository',
       repoId: 'your repo Id',
       category: 'your category', // default: `General`
       categoryId: 'your category id',
@@ -386,36 +409,72 @@ const ExtendedTheme: Theme = {
       // Configured as an object with key-value pairs inside:
       // [your i18n configuration name]: [corresponds to the language pack name in Giscus]
       locales: {
-          'zh-Hans': 'zh-CN',
-          'en-US': 'en'
+        'zh-Hans': 'zh-CN',
+        'en-US': 'en',
       },
       homePageShowComment: false, // Whether to display the comment area on the homepage, the default is false
       lightTheme: 'light', // default: `light`
       darkTheme: 'transparent_dark', // default: `transparent_dark`
       // ...
     }, {
-      frontmatter, route
+      frontmatter,
+      route,
     },
-      // Whether to activate the comment area on all pages.
-      // The default is true, which means enabled, this parameter can be ignored;
-      // If it is false, it means it is not enabled.
-      // You can use `comment: true` preface to enable it separately on the page.
-      true
-    );
-  }
+    // Whether to activate the comment area on all pages.
+    // The default is true, which means enabled, this parameter can be ignored;
+    // If it is false, it means it is not enabled.
+    // You can use `comment: true` preface to enable it separately on the page.
+    true)
+  },
+})
+```
+
+5. 在 `./vitepress/theme/index.ts` 中将我们上一步创建的 `gitcus.ts` 引入（注意更改部分内容为你第一步得到的配置信息哦），演示如下，具体请参考[插件文档](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)
+
+```ts
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import { h } from 'vue'
+
+// 其他配置.......
+
+import Gitcus from './components/gitcus' // [!code ++]
+
+const ExtendedTheme: Theme = {
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'doc-top': () => [
+        h(NolebaseHighlightTargetedHeading),
+        h(Gitcus),  // [!code ++]
+      ],
+      'doc-footer-before': () => [
+        h(DocFooter),
+      ],
+      'nav-bar-content-after': () => [
+        h(NolebaseEnhancedReadabilitiesMenu),
+        h(Share),
+      ],
+      'nav-screen-content-after': () => [
+        h(NolebaseEnhancedReadabilitiesScreenMenu),
+      ],
+    })
+  },
   // 结束！好了，上面的内容就是你需要修改的部分，其他维持原样就好啦
 }
 
 export default ExtendedTheme
 ```
 
-
-在 Markdown 文件上添加下面的属性，可以决定是否在当前文章中开启评论
-```
----
-comment: true
----
-```
+> [!NOTE]
+> 在 Markdown 文件上添加下面的属性，可以决定是否在当前文章中开启评论
+>
+> ```
+> ---
+> comment: true
+> ---
+> ```
 
 ## 知识库编写须知
 
