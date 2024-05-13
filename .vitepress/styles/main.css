@@ -205,8 +205,9 @@ html, body {
 */
 
 .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"] {
-  color: white;
-  background-color: #404eed;
+  color: #6972d4;
+  border: 2px #6972d4 solid;
+  background-color: transparent;
 }
 
 .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:hover {
@@ -224,8 +225,9 @@ html, body {
 */
 
 .dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"] {
-  color: white;
-  background-color: #444c9e;
+  color: #898fcf;
+  border: 2px #898fcf solid;
+  background-color: transparent;
 }
 
 .dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:hover {
@@ -243,8 +245,9 @@ html, body {
 */
 
 .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"] {
-  color: white;
-  background-color: #000;
+  color: #616161;
+  border: 2px #616161 solid;
+  background-color: transparent;
 }
 
 .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"]:hover {
@@ -262,8 +265,9 @@ html, body {
 */
 
 .dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"] {
-  color: white;
-  background-color: #4b4b4b;
+  color: #a4a4a4;
+  border: 2px #a4a4a4 solid;
+  background-color: transparent
 }
 
 .dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"]:hover {
