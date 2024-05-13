@@ -316,6 +316,107 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 
 请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
 
+##### Vercel 部署
+Vercel 部署很简单, 在 Vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
+
+如果你选择了用 Vercel 部署，可以关闭 Netlify 自带的 CI/CD builder workflow.
+
+在 GitHub 仓库页面 -> Actions -> Netlify 对应的 workflow -> 右上角 3 个点 -> Disable workflow
+
+## Obsidian 的设置
+### 关于图片链接问题
+如果你的 Markdown 中的图片链接没有在当前文件所在目录下，会解析出错，无法在 Vitepress 中正确渲染。如果没有这个问题，你可以跳过下面的内容
+
+解决方法： 推荐的  Obsidian Setting => Files and links 设置如下
+- New link format => Relative path to file
+- Use `[[Wikilinks]]` => False
+- Default location for new attachments => In subfolder under current folder 
+- Subfolder name => assets
+
+这么做有几个好处
+- 保持兼容性的 Markdown : 可以让文档也能在 Github 中被正确渲染（ Github 无法解析`[[双链]]`）
+- 方便迁移文件和图片，你只需要把图片文件夹和 Markdown 文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
+
+> [!TIP]
+> 对于已有的笔记和图片链接，你可以考虑使用 Obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 Markdown link
+
+## 开启 Giscus 评论功能
+Giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的github仓库必须是公开的才能使用 giscus）。
+
+具体配置方法
+- 第一步，访问 Giscus 网站： https://giscus.app/zh-CN， 参考网站上的说明，一步步操作，最终你会得到 Giscus 的配置信息
+- 第二步，在 Nólëbase 仓库下执行，
+
+```sh
+pnpm add -D vitepress-plugin-comment-with-giscus
+```
+
+- 第三步，在 `./vitepress/theme/index.ts` 中添加 Giscus 插件代码（注意更改部分内容为你第一步得到的配置信息哦），演示如下，具体请参考[插件文档](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)
+
+```ts
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import { useData, useRoute } from 'vitepress';
+import { toRefs } from "vue";
+import { h } from 'vue'
+// 略过.......
+
+const ExtendedTheme: Theme = {
+  // 略过.......
+  enhanceApp({ app }) {
+  // 略过.......
+  },
+  // 开始！添加下面的内容
+  setup() {
+    // Get frontmatter and route
+    const { frontmatter } = toRefs(useData());
+    const route = useRoute();
+    
+    // Obtain configuration from: https://giscus.app/
+    giscusTalk({
+      repo: 'your github repositor',
+      repoId: 'your repo Id',
+      category: 'your category', // default: `General`
+      categoryId: 'your category id',
+      mapping: 'pathname', // default: `pathname`
+      inputPosition: 'top', // default: `top`
+      lang: 'zh-CN', // default: `zh-CN`
+      // i18n setting (Note: This configuration will override the default language set by lang)
+      // Configured as an object with key-value pairs inside:
+      // [your i18n configuration name]: [corresponds to the language pack name in Giscus]
+      locales: {
+          'zh-Hans': 'zh-CN',
+          'en-US': 'en'
+      },
+      homePageShowComment: false, // Whether to display the comment area on the homepage, the default is false
+      lightTheme: 'light', // default: `light`
+      darkTheme: 'transparent_dark', // default: `transparent_dark`
+      // ...
+    }, {
+      frontmatter, route
+    },
+      // Whether to activate the comment area on all pages.
+      // The default is true, which means enabled, this parameter can be ignored;
+      // If it is false, it means it is not enabled.
+      // You can use `comment: true` preface to enable it separately on the page.
+      true
+    );
+  }
+  // 结束！好了，上面的内容就是你需要修改的部分，其他维持原样就好啦
+}
+
+export default ExtendedTheme
+```
+
+
+在 Markdown 文件上添加下面的属性，可以决定是否在当前文章中开启评论
+```
+---
+comment: true
+---
+```
+
 ## 知识库编写须知
 
 由于很多时候需要重复编排和调整文档的结构和注解以适应和满足使用者的阅读习惯或是文档叙述的内容需求，以及说明使用的 API 的版本号和破坏性更新说明，可能会导致在以上或是更多外部因素的影响下导致文档结构混乱不一，查询造成困难，或是索引和快速查阅文档的时候需要花费大量的时间和精力去了解文章结构和内容，以下提出了一个较为完善（任需商议）的知识库结构、使用规范的提案。
