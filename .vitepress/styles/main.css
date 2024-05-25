@@ -244,18 +244,18 @@ html, body {
   GitHub 链接按钮样式
 */
 
-.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"] {
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"] {
   color: #616161;
   border: 2px #616161 solid;
   background-color: transparent;
 }
 
-.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"]:hover {
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:hover {
   color: white;
   background-color: #4b4b4b;
 }
 
-.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"]:active {
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:active {
   color: white;
   background-color: #000;
 }
@@ -264,18 +264,18 @@ html, body {
   暗色模式下 GitHub 链接按钮样式
 */
 
-.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"] {
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"] {
   color: #a4a4a4;
   border: 2px #a4a4a4 solid;
   background-color: transparent
 }
 
-.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"]:hover {
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:hover {
   color: white;
   background-color: #252525;
 }
 
-.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/integrations"]:active {
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:active {
   color: white;
   background-color: #4b4b4b;
 }
