@@ -1,10 +1,11 @@
-name: 构建并部署到 Netlify
+name: 构建并部署到 Github Pages
 
 on:
-  push:
-    branches:
-      - 'main'
   workflow_dispatch:
+  # push:
+  #   branches:
+  #     - 'main'
+
 
 env:
   STORE_PATH: ''
@@ -62,8 +63,8 @@ jobs:
     name: Ubuntu 构建和推送
     runs-on: ubuntu-latest
     environment:
-      name: 正式 Production
-      url: https://nolebase.ayaka.io
+      name: 正式 Production - GitHub Pages
+      url: https://nolebase.github.io/nolebase
     steps:
       - name: 签出代码
         uses: actions/checkout@v4
@@ -105,13 +106,11 @@ jobs:
       - name: 构建
         run: pnpm docs:build
 
-      - name: 安装 Netlify CLI
-        run: pnpm install -g netlify-cli
-
-      - name: 推送到 Netlify
+      - name: 推送到 gh-pages 分支
         timeout-minutes: 10
-        run: netlify deploy --dir .vitepress/dist --prod
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .vitepress/dist
+        uses: JamesIves/github-pages-deploy-action@v4
 

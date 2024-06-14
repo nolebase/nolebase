@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d7c77477f58724e3",
+        "id": "ae994d6d2a7605fc",
         "type": "tabs",
         "children": [
           {
-            "id": "6775947faed30b95",
+            "id": "c01998b6274879fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,10 +48,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#运维/云原生/Kubernetes/KubeSphere",
+                "query": "基础设施 AWS",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -72,13 +72,20 @@
               "type": "bookmarks",
               "state": {}
             }
+          },
+          {
+            "id": "0972447421cfef3d",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 313.50390243530273
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -95,7 +102,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -118,7 +125,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.9501813006936926,
+                  "scale": 1.9885368456908947,
                   "close": true
                 }
               }
@@ -130,7 +137,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -140,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md"
+                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md"
               }
             }
           },
@@ -152,8 +161,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -166,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🧱 基础设施/🚢 Kubernetes/k9s 速查表.md",
+                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,10 +213,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 362.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-spaced-repetition:复习卡片": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -218,58 +227,57 @@
       "markdown-importer:打开 Markdown 格式转换器": false,
       "random-note:开始漫游笔记": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-spaced-repetition:复习卡片": false,
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "d5332c2bfa4468de",
+  "active": "c01998b6274879fd",
   "lastOpenFiles": [
-    "笔记/🧱 基础设施/🚢 Kubernetes/KubeSphere 安装了可插拔 Service Mesh 组件后又卸载导致的问题.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/在 Kubeadm 部署的 Kubernetes 集群中安装 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/为安装 CNI 使用 Kubeadm 准备一个 Kubernetes 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 KubeKey 安装的 Calico.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载使用 Helm 安装的 Cilium.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/完全卸载集群内的 `kube-proxy`.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/通过 Kubeadm 部署 Kubernetes 集群的时候的问题排查.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubelet 和 kubectl.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.29.0 版本的 kubeadm.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubelet 和 kubectl.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/通过 apt 升级和更新 1.28.4 版本的 kubeadm.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/配置本地存储类 StorageClass.md",
-    "笔记/🛠️ 开发/🕸 网络/记一次 Docker Swarm 和 K8s 网络异常的排查和解决.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/创建加入集群的 Token 并输出命令.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.4 升级和更新到 1.29.0 的操作步骤.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Kubernetes 集群的日常升级和更新/1.28.2 升级和更新的操作步骤.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/”灾难性“地将 Homelab K8s 的 Calico 迁移到 Cilium.md",
-    "笔记/🛠️ 开发/一个因为系统没有重启应用更新导致的 Docker 无法启动的乌龙.md",
-    "笔记/🛠️ 开发/🗂 数据库/图数据库 Graph DB/🌃 NebulaGraph/在开发用的测试集群上用 Helm 安装 NebulaGraph.md",
+    "node_modules/@vueuse",
+    "pnpm-lock.yaml.3768216865",
+    "node_modules/@nolebase",
+    "node_modules/@antfu",
+    "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
+    "笔记/🧱 基础设施/容器里没有 ps 怎么办？.md",
     "笔记/🤖 AI 人工智能/用 PyTorch Lightning 监控和串流 PyTorch 的训练进度.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/用 kind 创建的测试集群快速部署应用并暴露 NodePort 服务到宿主机方便调试.md",
-    "笔记/🛠️ 开发/使用 Poedit 给用了 GNU 本地化规范 gettext 的 kubectl 做本地化.md",
-    "笔记/🧱 基础设施/GPU 掉卡排查.md",
+    "笔记/🤖 AI 人工智能/验证 Anaconda 和 Mamba 安装的 PyTorch 和 CUDA 是否正确.md",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+    "笔记/🤖 AI 人工智能/安装和配置 NVIDIA 的 Apex.md",
+    "笔记/🛠️ 开发/語 编程语言/🐍 Python/配置 Anaconda 的环境目录和包目录.md",
+    "README.md",
+    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
+    "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
+    "笔记/🧱 基础设施/🛜 OpenWRT",
+    "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/将 TrueNAS 共享存储连接到 K8s 集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
     "笔记/🧱 基础设施/云上集群的 GPU.md",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/从用 PyTorch 训练一个模型开始.md",
-    "笔记/📚 个人知识管理/Obsidian、VitePress 以及 Nólëbase 所处的困境.md",
-    "LICENSE-CC-BY-SA",
-    "Pasted image 20240108011807.png",
-    "Pasted image 20240108011737.png",
-    "Pasted image 20240108011647.png",
-    "Pasted image 20240108011620.png",
-    "Pasted image 20240108011558.png",
-    "LICENSE-CC-BY-NC-SA",
-    "笔记/🎮 游戏/🪅 游戏/星际拓荒",
-    "笔记/🎮 游戏/🪅 游戏",
-    "Pasted image 20240107185512.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-5.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-4.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-3.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-1.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅",
-    "vite.config.ts.timestamp-1704366426268-1aedfdac1cc96.mjs",
-    "diff",
-    "vite.config.ts.timestamp-1704365874262-2f2e06838a48.mjs",
+    "笔记/🧮 数学/空洞的想法.md",
     "笔记/🧮 数学",
+    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
+    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-3.png",
+    "笔记/🧩 开源贡献/Kubernetes/assets",
+    "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
+    "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
+    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
+    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
+    "笔记/🤖 AI 人工智能/扩散模型是如何工作的？.md",
+    "笔记/🤖 AI 人工智能/大规模分布式机器学习里的断卡重训和故障恢复.md",
+    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
+    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
+    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
     "未命名.canvas"
   ]
 }

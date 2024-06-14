@@ -24,6 +24,11 @@ kbd::after {
   z-index: -1;
 }
 
+/**
+图标可以在这里复制得到
+https://apple.stackexchange.com/a/123577
+*/
+
 /* macOS command 图标 */
 kbd[data-macos-keyboard-key="command"]::before {
   content: "⌘";
@@ -58,7 +63,7 @@ kbd[data-keyboard-key="control"]::before {
 }
 
 kbd[data-keyboard-key="enter"]::before {
-  content: "⌅";
+  content: "⏎";
   margin-right: 4px;
 }
 
@@ -67,4 +72,24 @@ kbd[data-keyboard-key="space"]::before {
   margin-right: 4px;
   font-weight: bold;
   vertical-align: top;
+}
+
+kbd[data-keyboard-key="up-arrow"]::before {
+  content: "↑";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="down-arrow"]::before {
+  content: "↓";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="left-arrow"]::before {
+  content: "←";
+  margin-right: 4px;
+}
+
+kbd[data-keyboard-key="right-arrow"]::before {
+  content: "→";
+  margin-right: 4px;
 }

@@ -200,3 +200,83 @@ html, body {
 .vp-doc a:hover {
   text-decoration: underline;
 }
+
+/**
+  Discord 链接按钮样式
+*/
+
+.VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"] {
+  color: #6972d4;
+  border: 2px #6972d4 solid;
+  background-color: transparent;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:hover {
+  color: white;
+  background-color: #6975f2;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:active {
+  color: white;
+  background-color: #404eed;
+}
+
+/**
+  暗色模式下 Discord 链接按钮样式
+*/
+
+.dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"] {
+  color: #898fcf;
+  border: 2px #898fcf solid;
+  background-color: transparent;
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:hover {
+  color: white;
+  background-color: #404eed;
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:active {
+  color: white;
+  background-color: #444c9e;
+}
+
+/**
+  GitHub 链接按钮样式
+*/
+
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"] {
+  color: #616161;
+  border: 2px #616161 solid;
+  background-color: transparent;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:hover {
+  color: white;
+  background-color: #4b4b4b;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:active {
+  color: white;
+  background-color: #000;
+}
+
+/**
+  暗色模式下 GitHub 链接按钮样式
+*/
+
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"] {
+  color: #a4a4a4;
+  border: 2px #a4a4a4 solid;
+  background-color: transparent
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:hover {
+  color: white;
+  background-color: #252525;
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:active {
+  color: white;
+  background-color: #4b4b4b;
+}

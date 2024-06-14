@@ -1,0 +1,82 @@
+name: 构建预览
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  STORE_PATH: ''
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: 构建
+
+    runs-on: ubuntu-latest
+    steps:
+      # This is quite weird.
+      # Eventhough this is the *intended* solution introduces in official blog post here
+      # https://securitylab.github.com/research/github-actions-preventing-pwn-requests/.
+      # But still, as https://github.com/orgs/community/discussions/25220#discussioncomment-7856118 stated,
+      # this is vulnerable since there is no source of truth about which PR in the triggered workflow.
+      - name: 保留 PR 信息
+        run: |
+          echo "${{ github.event.number }}" > pr_num
+
+      - name: 上传 PR 信息
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr-num
+          path: ./pr_num
+
+      - name: 签出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装 Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: '9.1.2'
+
+      - name: 获取 pnpm store 目录
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: 配置 pnpm 缓存
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 安装思源黑体
+        run: |
+          mkdir -p ~/.local/share/fonts
+          cp public/source-han-sans.ttf ~/.local/share/fonts/source-han-sans.ttf
+
+      - name: 构建
+        run: |
+          pnpm docs:build
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-build
+          path: .vitepress/dist

@@ -7,39 +7,55 @@ import {
   LayoutMode as NolebaseEnhancedReadabilitiesLayoutMode,
   NolebaseEnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu,
-} from '@nolebase/vitepress-plugin-enhanced-readabilities'
+} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
 import {
   NolebaseInlineLinkPreviewPlugin,
-} from '@nolebase/vitepress-plugin-inline-link-preview'
+} from '@nolebase/vitepress-plugin-inline-link-preview/client'
 
 import {
   NolebaseHighlightTargetedHeading,
-} from '@nolebase/vitepress-plugin-highlight-targeted-heading'
+} from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 
 import {
   InjectionKey as NolebaseGitChangelogInjectionKey,
   NolebaseGitChangelogPlugin,
 } from '@nolebase/vitepress-plugin-git-changelog/client'
 
-import { creators } from '../creators'
-import AppContainer from './components/AppContainer.vue'
+import {
+  NolebasePagePropertiesPlugin,
+} from '@nolebase/vitepress-plugin-page-properties/client'
 
+import {
+  NolebaseUnlazyImg,
+} from '@nolebase/vitepress-plugin-thumbnail-hash/client'
+
+import { creators } from '../creators'
+
+import AppContainer from './components/AppContainer.vue'
 import DocFooter from './components/DocFooter.vue'
 import HomePage from './components/HomePage.vue'
 import Share from './components/Share.vue'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1276f4089ed8d373ece5e450097ec954a9a5967b
 import TocList from './components/TocList.vue'
 
-import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
-import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
-import '@nolebase/vitepress-plugin-inline-link-preview/dist/style.css'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
+import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
+import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+import '@nolebase/vitepress-plugin-page-properties/client/style.css'
+import '@nolebase/vitepress-plugin-thumbnail-hash/client/style.css'
+import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 
-import 'uno.css'
+import 'virtual:uno.css'
 
 import '../styles/main.css'
 import '../styles/vars.css'
+
+import('@nolebase/vitepress-plugin-inline-link-preview/client')
 
 const ExtendedTheme: Theme = {
   extends: DefaultTheme,
@@ -49,7 +65,9 @@ const ExtendedTheme: Theme = {
       'doc-top': () => [
         h(NolebaseHighlightTargetedHeading),
       ],
-      'doc-footer-before': () => h(DocFooter),
+      'doc-footer-before': () => [
+        h(DocFooter),
+      ],
       'nav-bar-content-after': () => [
         h(NolebaseEnhancedReadabilitiesMenu),
         h(Share),
@@ -72,10 +90,11 @@ const ExtendedTheme: Theme = {
     app.component('Share', Share)
     app.component('TocList', TocList)
     app.component('AppContainer', AppContainer)
+    app.component('NolebaseUnlazyImg', NolebaseUnlazyImg)
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {
-        defaultMode: NolebaseEnhancedReadabilitiesLayoutMode.FullWidth,
+        defaultMode: NolebaseEnhancedReadabilitiesLayoutMode.SidebarWidthAdjustableOnly,
       },
       spotlight: {
         defaultToggle: true,
@@ -89,6 +108,42 @@ const ExtendedTheme: Theme = {
 
     app.use(NolebaseInlineLinkPreviewPlugin)
     app.use(NolebaseGitChangelogPlugin)
+    app.use(NolebasePagePropertiesPlugin<{
+      tags: string[]
+      progress: number
+    }>(), {
+      properties: {
+        'zh-CN': [
+          {
+            key: 'tags',
+            type: 'tags',
+            title: '标签',
+          },
+          {
+            key: 'progress',
+            type: 'progress',
+            title: '完成进度',
+          },
+          {
+            key: 'wordCount',
+            type: 'dynamic',
+            title: '字数',
+            options: {
+              type: 'wordsCount',
+            },
+          },
+          {
+            key: 'readingTime',
+            type: 'dynamic',
+            title: '阅读时间',
+            options: {
+              type: 'readingTime',
+              dateFnsLocaleName: 'zhCN',
+            },
+          },
+        ],
+      },
+    })
   },
 }
 

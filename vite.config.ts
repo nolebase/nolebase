@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
+=======
+import { defineConfig } from 'vite'
+import Components from 'unplugin-vue-components/vite'
+import UnoCSS from 'unocss/vite'
+import Inspect from 'vite-plugin-inspect'
+>>>>>>> 1276f4089ed8d373ece5e450097ec954a9a5967b
 
-const ROOT = dirname(fileURLToPath(import.meta.url))
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
+import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
+import { ThumbnailHashImages } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
+
+import { githubRepoLink } from './metadata'
 
 export default defineConfig(async () => {
   return {
@@ -18,22 +29,27 @@ export default defineConfig(async () => {
       ],
     },
     plugins: [
+<<<<<<< HEAD
+=======
+      Inspect(),
+>>>>>>> 1276f4089ed8d373ece5e450097ec954a9a5967b
       GitChangelog({
-        repoURL: () => 'https://github.com/nolebase/nolebase',
-        maxGitLogCount: 1000,
+        repoURL: () => githubRepoLink,
       }),
       GitChangelogMarkdownSection({
-        getChangelogTitle: (): string => {
-          return '文件历史'
-        },
-        getContributorsTitle: (): string => {
-          return '贡献者'
-        },
         excludes: [
-          join(ROOT, 'index.md'),
-          join(ROOT, 'toc.md'),
+          'toc.md',
+          'index.md',
         ],
       }),
+      PageProperties(),
+      PagePropertiesMarkdownSection({
+        excludes: [
+          'toc.md',
+          'index.md',
+        ],
+      }),
+      ThumbnailHashImages(),
       Components({
         include: [/\.vue$/, /\.md$/],
         dirs: '.vitepress/theme/components',

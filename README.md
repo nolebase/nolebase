@@ -7,7 +7,16 @@
   <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" /></a>
 </p>
 
+<<<<<<< HEAD
 # 刘俊 Super.Town's Brain
+=======
+<p align="center">
+  <a href="https://discord.gg/XuNFDcDZGj"><img src="https://img.shields.io/discord/1229292283657195520?style=flat&logo=discord&logoColor=white&label=Discord&color=%23404eed" /></a>
+  <a href="https://t.me/+6WKTUzWijf1kMzFl"><img src="https://img.shields.io/badge/Group-%235AA9E6?logo=telegram&label=Telegram" /></a>
+</p>
+
+# Nólëbase
+>>>>>>> 1276f4089ed8d373ece5e450097ec954a9a5967b
 
 **记录回忆，知识和畅想的地方**
 
@@ -64,6 +73,24 @@
 
 - [Charles7c/charles7c.github.io：基于 VitePress 构建的个人知识库/博客。](https://github.com/Charles7c/charles7c.github.io)
 - [Lercel/Vision](https://github.com/Lercel/Vision)
+<<<<<<< HEAD
+=======
+- [maomao1996/mm-notes: 茂茂物语: 各种笔记记录（想到啥写啥系列）](https://github.com/maomao1996/mm-notes)
+- [ATQQ/sugar-blog: ✍️📚我写博客的地方🤪🤪🤪记录随笔与学习笔记](https://github.com/ATQQ/sugar-blog)
+- [chodocs/chodocs: 一站式前端内容网站，包括学习路线、知识体系。](https://github.com/chodocs/chodocs)
+- [cangzihan/knolls-think-tank: 基于Nólëbase的个人知识库](https://github.com/cangzihan/knolls-think-tank)
+- [CHENJIAMIAN/Blog: Obsidian笔记库 | 我的笔记分bei享fen | 根据GitHub工作流自动构建vitepress博客 | http://chenjiamian.me/Blog/](https://github.com/CHENJIAMIAN/Blog)
+- [realzhengyiming/YiMingBlog: a... new blog again, hhhh](https://github.com/realzhengyiming/YiMingBlog)
+- [nikitavoloboev/knowledge: Everything I know](https://github.com/nikitavoloboev/knowledge?tab=readme-ov-file)
+- [senup/wiki: wiki](https://github.com/senup/wiki?tab=readme-ov-file)
+- [kkoscielniak/digital-garden: 🥦 Things I know](https://github.com/kkoscielniak/digital-garden)
+- [Merlin-Chest/Blog: 个人学习及知识记录整理](https://github.com/Merlin-Chest/Blog)
+- [selwynpolit/d9book: Drupal at your Fingertips: A developers quick reference for Drupal 9 and 10](https://github.com/selwynpolit/d9book)
+- [vlad196/ALTRegularGnomeWiki: открытое сообщество пользователей операционной системы ALT Regular Gnome](https://github.com/vlad196/ALTRegularGnomeWiki)
+- [shalotts/shalodoc](https://github.com/shalotts/shalodoc)
+- [vdriasworld/manual: Vdrias World! 游玩指南](https://github.com/vdriasworld/manual)
+- [LittleSkinCommspt/manual-ng: under dev](https://github.com/LittleSkinCommspt/manual-ng)
+>>>>>>> 1276f4089ed8d373ece5e450097ec954a9a5967b
 
 ### 如何下载到本地
 
@@ -76,6 +103,28 @@
 ```shell
 git clone https://github.com/nolebase/nolebase
 ```
+
+#### 使用的是 Windows 吗
+
+> [!IMPORTANT]
+> 如果你使用的是 [Git for Windows](https://gitforwindows.org/) ，那么可能会在执行上述命令时，遇到类似这样的报错：
+>
+> ```PowerShell
+> PS D:\> git clone https://github.com/nolebase/nolebase
+> ...
+> error: invalid path 'x: xxx.md'
+> fatal: unable to checkout working tree
+> warning: Clone succeeded, but checkout failed.
+> You can inspect what was checked out with 'git status'
+> and retry with 'git restore --source=HEAD :/'
+> ```
+>
+> 这是 [Git for Windows](https://gitforwindows.org/) 的默认配置导致的[问题](https://github.com/git-for-windows/git/issues/2777)。
+>
+> 你可以在命令行窗口中输入下面的命令来解决这个问题：
+> ```PowerShell
+> git config --global core.protectNTFS false
+> ```
 
 ### 如何使用、运行或者部署
 
@@ -93,36 +142,121 @@ git clone https://github.com/nolebase/nolebase
 
 所以你在继续下面的步骤之前，需要完成另外的两件事情：
 
-1. 安装和配置 [Node.js](https://nodejs.org/en)，要校验 Node.js 是否安装成功，可以通过打开命令行窗口然后运行 `node --version` 和 `npm --version` 来查看是否会报错
-2. 安装和配置 [pnpm](https://pnpm.io/)，要校验 pnpm 是否安装成功，可以通过打开命令行窗口然后运行 `pnpm --version`
-
-准备好之后，使用下面的命令将命令行窗口指向下载好的 Nólëbase 知识库所在的目录吧：
-
-```shell
-cd nolebase
-```
-
-不会命令行？不要紧，跟着下面的步骤来吧。
-
-##### 使用的是 macOS 吗
-
-使用 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd data-keyboard-key="space">空格</kbd> 打开「终端」应用，然后输入下面的命令：
-
-```shell
-cd
-```
-
-先多输入一个空格，然后接下来打开访达，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到终端窗口中，最后按下 <kbd data-keyboard-key="return">return</kbd> 键，就可以告诉终端前往 Nólëbase 知识库所在的目录了。
+1. 安装和配置 [Node.js](https://nodejs.org/en)，要校验 Node.js 是否安装成功，可以通过打开命令行窗口然后运行 `node --version` 和 `npm --version` 来查看是否会报错；
+2. 安装和配置 [pnpm](https://pnpm.io/)，要校验 pnpm 是否安装成功，可以通过打开命令行窗口然后运行 `pnpm --version`。
 
 ##### 使用的是 Windows 吗
 
+> [!IMPORTANT]
+> 如果你使用的是 Windows，可以选择通过 [`scoop`](https://scoop.sh/)（一款在 Windows 上面向开发者可用的包管理器）来安装这些必要的工具，这样可以避免在 Windows 上面安装和配置这些工具的时候遇到的一些问题。
+>
+> 想要快速安装 Scoop，使用 <kbd data-windows-keyboard-key="windows">Win</kbd> + <kbd>Q</kbd> 打开搜索，键入「Powershell」之后点击搜索结果中的蓝色方块，然后输入下面的命令：
+>
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+>
+> ```powershell
+> Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+> ```
+
 使用 <kbd data-windows-keyboard-key="windows">Win</kbd> + <kbd>Q</kbd> 打开搜索，键入「Powershell」之后点击搜索结果中的蓝色方块，然后输入下面的命令：
+
+```shell
+node --version
+```
+
+如果你看到了类似于 `vxx.xx.xx` 的版本号（比如 `v21.1.0`），那么恭喜你，你已经成功安装了 [Node.js](https://nodejs.org/en)。
+
+如果没有看到，那么你需要先安装 [Node.js](https://nodejs.org/en)。如果采用了上面提到的 `scoop`，可以使用下面的命令来安装 [Node.js](https://nodejs.org/en)：
+
+```shell
+scoop install nodejs
+```
+
+> [!IMPORTANT]
+> 由于我们使用到了 `sharp` 这个依赖来生成图片，而 `sharp` 依赖需要使用到 Python，因此你也需要安装 Python。
+>
+> 如果采用了上面提到的 `scoop`，可以使用下面的命令来安装 Python：
+> ```shell
+> scoop install python
+> ```
+
+接下来让我们来安装 [pnpm](https://pnpm.io/)，使用下面的命令来安装 [pnpm](https://pnpm.io/)：
+
+```shell
+corepack enable
+```
+
+```shell
+corepack prepare pnpm@latest --activate
+```
+
+首次安装完成之后需要运行一下
+
+```shell
+pnpm setup
+```
+
+来配置 [pnpm](https://pnpm.io/) 所需要的目录，完成之后需要关掉当前的 Powershell 窗口，然后重新打开一个新的 Powershell 窗口。
+
+差不多准备好啦，让我们前往 Nólëbase 知识库所在的目录吧，使用下面的命令来前往 Nólëbase 知识库所在的目录：
 
 ```shell
 cd
 ```
 
 先多输入一个空格，然后接下来打开文件管理器，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到运行窗口中，最后按下 <kbd data-keyboard-key="enter">回车</kbd> 键，就可以告诉 Powershell 前往 Nólëbase 知识库所在的目录了。
+
+##### 使用的是 macOS 吗
+
+> [!IMPORTANT]
+> 如果你使用的是 macOS，可以选择通过 [`Homebrew`](https://brew.sh/)（一款在 macOS 上面向开发者可用的包管理器）来安装这些必要的工具，这样可以避免在 macOS 上面安装和配置这些工具的时候遇到的一些问题。
+>
+> 想要快速安装 Homebrew，使用 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd data-keyboard-key="space">空格</kbd> 打开「终端」应用，然后输入下面的命令：
+> ```shell
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+> ```
+
+使用 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd data-keyboard-key="space">空格</kbd> 打开「终端」应用，然后输入下面的命令：
+
+```shell
+node --version
+```
+
+如果你看到了类似于 `vxx.xx.xx` 的版本号（比如 `v21.1.0`），那么恭喜你，你已经成功安装了 [Node.js](https://nodejs.org/en)。
+
+如果没有看到，那么你需要先安装 [Node.js](https://nodejs.org/en)。如果采用了上面提到的 `Homebrew`，可以使用下面的命令来安装 [Node.js](https://nodejs.org/en)：
+
+```shell
+brew install node
+```
+
+接下来让我们来安装 [pnpm](https://pnpm.io/)，使用下面的命令来安装 [pnpm](https://pnpm.io/)：
+
+```shell
+corepack enable
+```
+
+```shell
+corepack prepare pnpm@latest --activate
+```
+
+首次安装完成之后需要运行一下
+
+```shell
+pnpm setup
+```
+
+来配置 [pnpm](https://pnpm.io/) 所需要的目录，完成之后需要关掉当前的终端窗口，然后重新打开一个新的终端窗口。
+
+差不多准备好啦，让我们前往 Nólëbase 知识库所在的目录吧，使用下面的命令来前往 Nólëbase 知识库所在的目录：
+
+```shell
+cd
+```
+
+先多输入一个空格，然后接下来打开访达，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到终端窗口中，最后按下 <kbd data-keyboard-key="return">return</kbd> 键，就可以告诉终端前往 Nólëbase 知识库所在的目录了。
 
 ##### 使用的是 Linux 吗
 
@@ -169,6 +303,185 @@ pnpm docs:build
 ```
 
 构建完成后，渲染出来的 HTML 和各种资源将会被存储在 `.vitepress/dist` 目录下面，你可以通过上传 `.vitepress/dist` 目录来完成 Nólëbase 知识库的部署。
+
+#### 使用静态网站托管服务部署页面
+
+Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页面，因此可以部署到下列已知的优质**静态网站托管服务**：
+
+- [Netlify](https://netlify.com/)
+- [Vercel](https://vercel.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [AWS Amplify](https://aws.amazon.com/cn/amplify/)
+- [Render](https://render.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Azure Static Web](https://azure.microsoft.com/en-us/products/app-service/static)
+
+> [!NOTE]
+> 与自建单独的虚拟机并使用类似于 Nginx，或者对象存储（OSS）相比，使用上述提及的静态网站托管服务时，**可以省略手动部署流程**，也**无需花费时间与精力维护单独的网站服务器**。
+>
+> 让我们把精力放在写作上吧！❤️
+
+请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
+
+##### 使用 Vercel 部署
+
+通过 Vercel 的部署很简单, 在 Vercel 中选择项目后, 修改构建的「Output directory」为 `.vitepress/dist` 就行了（默认是 `./dist`）
+
+如果你选择了用 Vercel 部署，可以关闭本仓库自带的 Netlify 自带的 CI/CD builder workflow：
+
+1. 在 GitHub 仓库页面顶部找到「Actions」
+2. 点选 Netlify 对应的 workflow
+3. 在 GitHub Actions workflow 详情右上角找到 3 个点，点选 Disable workflow
+
+## 配置 Obsidian
+
+### 关于图片链接
+
+如果你的 Markdown 中的图片链接没有在当前文件所在目录下，会解析出错，最终无法在 VitePress 中正确渲染。
+
+> [!WARNING]
+> 如果没有这个问题，请忽略本章节！
+
+解决方法：采用推荐的 Obsidian 设置。
+
+在 Obsidian 中：
+
+- 前往设置（Setting）
+- 在左侧找到「文件与链接（Files and links）」，点选
+- 在其中的「内部链接类型（New link format）」选项中，选择「基于当前笔记的相对路径（Relative path to file）」
+
+配置完成后将会是这样的效果：
+
+![](/public/obsidian-screenshot-1.png)
+
+> [!TIP]
+> 默认情况下，Nólëbase 自带的「[双向链接插件](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/)」将会自动处理所有 Obsidian 支持的 `[[link]]` 和 `![[link]]` 双向链接。
+> 但有的情况下，你可能会想要避免出现和使用双向链接，比如：
+>
+> 1. 保持兼容性的 Markdown : 可以让文档也能在 Github 中被正确渲染（ Github 无法解析`[[双链]]`）
+>
+> 如果你不喜欢，可以通过下面的配置进行自定义配置：
+>
+> - Use `[[Wikilinks]]` => False
+> - 在其中的「附件默认存放路径（Default location for new attachments）」选项中，选择「在当前文件所在文件夹下指定的子文件夹中（In subfolder under current folder）」
+> - 在「子文件夹名称（Subfolder name）」一栏中，配置值为 `assets`
+>
+> 配置完成后将会是这样的效果：
+>
+> ![](/public/obsidian-screenshot-2.png)
+>
+> 这样配置也会有以下几个好处：
+> - 方便迁移文件和图片，你只需要把图片文件夹和 Markdown 文件一起复制就行（如果是全部汇总在某个文件夹下，以后复制比较麻烦）
+
+> [!TIP]
+> 对于已有的笔记和图片链接，你可以考虑使用 Obsidian 插件[obsidian-link-converter](https://github.com/ozntel/obsidian-link-converter) 来帮你做自动的转换 `[[wikilink]]` 为 relative_path 的 Markdown link
+
+## 集成 Giscus 评论功能
+
+Giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 实现的评论系统，让访客借助 GitHub 在你的网站上留下评论！（你的GitHub 仓库必须是公开的才能使用 Giscus）。
+
+具体配置方法：
+
+1. 访问 [Giscus 网站](https://giscus.app/zh-CN)
+2. 参考网站上的说明，一步步操作，最终你会得到 Giscus 的配置信息
+3. 在 Nólëbase 仓库下执行，
+
+```sh
+pnpm add -D vitepress-plugin-comment-with-giscus
+```
+
+4. 在 `./.vitepress/theme/components` 下新建一个 `Gitcus.ts` 的文件，并填充为下面的内容：
+
+```ts
+import { defineComponent, toRefs } from 'vue'
+import giscusTalk from 'vitepress-plugin-comment-with-giscus/lib/giscus'
+import { useData, useRoute } from 'vitepress'
+
+export default defineComponent({
+  setup() {
+    // Get frontmatter and route
+    const { frontmatter } = toRefs(useData())
+    const route = useRoute()
+
+    // Obtain configuration from: https://giscus.app/
+    giscusTalk({
+      repo: 'your github repository',
+      repoId: 'your repo Id',
+      category: 'your category', // default: `General`
+      categoryId: 'your category id',
+      mapping: 'pathname', // default: `pathname`
+      inputPosition: 'top', // default: `top`
+      lang: 'zh-CN', // default: `zh-CN`
+      // i18n setting (Note: This configuration will override the default language set by lang)
+      // Configured as an object with key-value pairs inside:
+      // [your i18n configuration name]: [corresponds to the language pack name in Giscus]
+      locales: {
+        'zh-Hans': 'zh-CN',
+        'en-US': 'en',
+      },
+      homePageShowComment: false, // Whether to display the comment area on the homepage, the default is false
+      lightTheme: 'light', // default: `light`
+      darkTheme: 'transparent_dark', // default: `transparent_dark`
+      // ...
+    }, {
+      frontmatter,
+      route,
+    },
+    // Whether to activate the comment area on all pages.
+    // The default is true, which means enabled, this parameter can be ignored;
+    // If it is false, it means it is not enabled.
+    // You can use `comment: true` preface to enable it separately on the page.
+    true)
+  },
+})
+```
+
+5. 在 `./vitepress/theme/index.ts` 中将我们上一步创建的 `gitcus.ts` 引入（注意更改部分内容为你第一步得到的配置信息哦），演示如下，具体请参考[插件文档](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)
+
+```ts
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+import { h } from 'vue'
+
+// 其他配置.......
+
+import Gitcus from './components/gitcus' // [!code ++]
+
+const ExtendedTheme: Theme = {
+  extends: DefaultTheme,
+  Layout: () => {
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'doc-top': () => [
+        h(NolebaseHighlightTargetedHeading),
+        h(Gitcus),  // [!code ++]
+      ],
+      'doc-footer-before': () => [
+        h(DocFooter),
+      ],
+      'nav-bar-content-after': () => [
+        h(NolebaseEnhancedReadabilitiesMenu),
+        h(Share),
+      ],
+      'nav-screen-content-after': () => [
+        h(NolebaseEnhancedReadabilitiesScreenMenu),
+      ],
+    })
+  },
+  // 结束！好了，上面的内容就是你需要修改的部分，其他维持原样就好啦
+}
+
+export default ExtendedTheme
+```
+
+> [!NOTE]
+> 在 Markdown 文件上添加下面的属性，可以决定是否在当前文章中开启评论
+>
+> ```
+> ---
+> comment: true
+> ---
+> ```
 
 ## 知识库编写须知
 

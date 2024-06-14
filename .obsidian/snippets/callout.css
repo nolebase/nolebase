@@ -1,0 +1,16 @@
+body {
+  /** Tweak the padding of the callout */
+  --callout-padding: var(--size-4-6) var(--size-4-6) var(--size-4-4) var(--size-4-6);
+}
+
+.cm-callout .callout {
+  /** Make the callout look like a card */
+  border-radius: 8px;
+  /** Add border to the callout */
+  border: 2px solid rgba(var(--callout-color), 0.2);
+}
+
+.cm-callout .callout[data-callout="caution"] {
+  /** Force the caution callout to be red */
+  --callout-color: var(--callout-error);
+}
