@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
+            "id": "47fe3dc59f801dd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "笔记/🎨 设计/调色版设计入门.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "c01998b6274879fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
+                "file": "笔记/🛠️ 开发/Refactoring UI 读书笔记.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
+                "file": "笔记/🎨 设计/调色版设计入门.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -149,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md"
+                "file": "笔记/🎨 设计/调色版设计入门.md"
               }
             }
           },
@@ -174,7 +186,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
+                "file": "笔记/🎨 设计/调色版设计入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +203,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
+                "file": "笔记/🎨 设计/调色版设计入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,25 +225,36 @@
       }
     ],
     "direction": "horizontal",
-    "width": 362.5
+    "width": 362.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-spaced-repetition:复习卡片": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "random-note:开始漫游笔记": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian42-brat:BRAT": false
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "c01998b6274879fd",
+  "active": "47fe3dc59f801dd1",
   "lastOpenFiles": [
+    "笔记/🎨 设计/assets/Pasted image 20240618235052.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618233038.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618232940.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618232924.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618232602.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618232551.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618232241.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618232100.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618231748.png",
+    "笔记/🎨 设计/assets/Pasted image 20240618231500.png",
+    "笔记/🎨 设计/image.png",
+    "笔记/🛠️ 开发/Refactoring UI 读书笔记.md",
+    "笔记/🎨 设计/调色版设计入门.md",
+    "笔记/🎨 设计/assets",
+    "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
     "node_modules/@vueuse",
     "pnpm-lock.yaml.3768216865",
     "node_modules/@nolebase",
@@ -246,15 +269,6 @@
     "README.md",
     "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
     "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
     "笔记/🧱 基础设施/🛜 OpenWRT",
     "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/将 TrueNAS 共享存储连接到 K8s 集群.md",
@@ -264,7 +278,6 @@
     "笔记/🧮 数学/空洞的想法.md",
     "笔记/🧮 数学",
     "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
-    "笔记/🧩 开源贡献/Kubernetes/assets/before-begin-easy-cla-sign-screenshot-3.png",
     "笔记/🧩 开源贡献/Kubernetes/assets",
     "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
     "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
@@ -272,12 +285,7 @@
     "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
     "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
     "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/提示工程工具.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/学习和参考最佳实践.md",
-    "笔记/🤖 AI 人工智能/扩散模型是如何工作的？.md",
-    "笔记/🤖 AI 人工智能/大规模分布式机器学习里的断卡重训和故障恢复.md",
     "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
-    "笔记/🤖 AI 人工智能/assets/《GPT_4，通用人工智能的火花》论文内容精选与翻译_.pdf",
-    "笔记/🤖 AI 人工智能/assets/midjourney辞典.pdf",
     "未命名.canvas"
   ]
 }
