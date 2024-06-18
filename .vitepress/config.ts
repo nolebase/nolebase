@@ -183,7 +183,7 @@ export default defineConfig({
 
           contentPart = content ||= src
 
-          const headingMatch = content.match(/^#{1} .*/m)
+          const headingMatch = content.match(/^# .*/m)
           const hasHeading = !!(headingMatch && headingMatch[0] && headingMatch.index !== undefined)
 
           if (hasHeading) {
@@ -222,14 +222,14 @@ export default defineConfig({
     math: true,
     config: (md) => {
       md.use(MarkdownItFootnote)
-      md.use(MarkdownItMathjax3)
+      md.use(MarkdownItMathjax3 as any)
       md.use(BiDirectionalLinks({
         dir: process.cwd(),
-      }))
-      md.use(UnlazyImages(), {
+      }) as any)
+      md.use(UnlazyImages() as any, {
         imgElementTag: 'NolebaseUnlazyImg',
       })
-      md.use(InlineLinkPreviewElementTransform, {
+      md.use(InlineLinkPreviewElementTransform as any, {
         tag: 'VPNolebaseInlineLinkPreview',
       })
     },
