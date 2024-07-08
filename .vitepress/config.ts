@@ -7,6 +7,7 @@ import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
+import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
 
 import { discordLink, githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
 import { creatorNames, creatorUsernames } from './creators'
@@ -233,6 +234,15 @@ export default defineConfig({
         tag: 'VPNolebaseInlineLinkPreview',
       })
     },
+  },
+  async transformHead(context) {
+    let head = [...context.head]
+
+    const returnedHead = await transformHeadMeta()(head, context)
+    if (typeof returnedHead !== 'undefined')
+      head = returnedHead
+
+    return head
   },
   async buildEnd(siteConfig) {
     await buildEndGenerateOpenGraphImages({
