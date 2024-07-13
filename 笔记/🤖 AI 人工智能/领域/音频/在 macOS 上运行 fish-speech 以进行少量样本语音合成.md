@@ -10,27 +10,44 @@ tags:
 ---
 ## 环境准备
 
+如果没有 `mamba`，可以这样安装：
+
+```shell
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+```
+
+- [Micromamba Installation — documentation](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html)
 ### 创建和安装 mamba/anaconda 环境和依赖
 
 ```shell
-mamba create -n fish-speech python=3.10
+mamba create -n fish-speech python=3.10 -y
 mamba activate fish-speech
 mamba install cmake
+```
+
+或者 
+
+```shell
+micromamba create -n fish-speech python=3.10
+micromamba activate fish-speech
+micromamba install cmake
 ```
 
 ### 安装 pip 依赖
 
 ```shell
-pip3 install
-pip3 install torch torchvision torchaudio\n
-pip3 install -e .
+pip install torch torchvision torchaudio
+pip install -e .
 ```
 
 ### 安装额外依赖
 
+- macOS: `brew install sox`
+- Linux: `apt install libsox-dev`
+
 ```shell
-brew install sox
-pip3 install openai-whisper fish-speech
+pip install huggingface_hub gradio
+pip install openai-whisper fish-speech
 ```
 
 ## 创建启动脚本
