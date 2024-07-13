@@ -92,17 +92,17 @@ class VueViewPlugin implements PluginValue {
     
 	// other code...
 	
-    const parsedMarkdownAst = await unified()
-      .use(RemarkParse)
-      .use(() => tree => remove(tree, 'heading'))
-      .parse(this.view.state.doc.toString())
+    const parsedMarkdownAst = await unified() // [!code hl]
+      .use(RemarkParse) // [!code hl]
+      .use(() => tree => remove(tree, 'heading')) // [!code hl]
+      .parse(this.view.state.doc.toString()) // [!code hl]
 
-    const transformedHast = await unified()
-      .use(RemarkRehype, { allowDangerousHtml: true })
-      .use(() => tree => remove(tree, 'text'))
-      .use(RehypeRaw)
-      .use(() => tree => remove(tree, (node, _, parent) => parent?.type === 'root' && node.type === 'text'))
-      .run(parsedMarkdownAst)
+    const transformedHast = await unified() // [!code hl]
+      .use(RemarkRehype, { allowDangerousHtml: true }) // [!code hl]
+      .use(() => tree => remove(tree, 'text')) // [!code hl]
+      .use(RehypeRaw) // [!code hl]
+      .use(() => tree => remove(tree, (node, _, parent) => parent?.type === 'root' && node.type === 'text')) // [!code hl]
+      .run(parsedMarkdownAst) // [!code hl]
   }
 }
 
@@ -144,32 +144,27 @@ class VueViewPlugin implements PluginValue {
       // other code ...
       .run(parsedMarkdownAst)
 
-	let index = 0
-    let firstCode = ''
-
-    for (const node of transformedHast.children) {
-      index++
-
-      // 注意这里用之前说的 `hast-util-to-html` 转换回纯文本
-      const componentTemplateStr = toHtml(node)
-
-      const { code, errors } = compileTemplate({
-        isProd: false,
-        source: componentTemplateStr,
-        filename: `some-${index}`,
-        id: index.toString(),
-      })
-      if (errors.length) {
-        console.error(errors)
-        throw new Error('Failed to compile template')
-      }
-
-      // eslint-disable-next-line no-console
-      console.log(code)
-
-      if (index === 1)
-        firstCode = code
-      }
+	let index = 0 // [!code ++]
+    // [!code ++]
+    for (const node of transformedHast.children) { // [!code ++]
+      index++ // [!code ++]
+      // [!code ++]
+      // 注意这里用之前说的 `hast-util-to-html` 转换回纯文本 // [!code ++]
+      const componentTemplateStr = toHtml(node) // [!code ++]
+      // [!code ++]
+      const { code, errors } = compileTemplate({ // [!code ++]
+        isProd: false, // [!code ++]
+        source: componentTemplateStr, // [!code ++]
+        filename: `some-${index}`, // [!code ++]
+        id: index.toString(), // [!code ++]
+      }) // [!code ++]
+      if (errors.length) { // [!code ++]
+        console.error(errors) // [!code ++]
+        throw new Error('Failed to compile template') // [!code ++]
+      } // [!code ++]
+      // [!code ++]
+      // eslint-disable-next-line no-console // [!code ++]
+      console.log(code) // [!code ++]
     }
   }
 }
@@ -215,25 +210,25 @@ export function render(_ctx, _cache) {
 class VueViewPlugin implements PluginValue {
 // other code...
   async init() {
-	let firstCode = ''
+	let firstCode = '' // [!code ++]
 
     for (const node of transformedHast.children) {
       // compile...
 
-      if (index === 1)
-        firstCode = code
-      }
+      if (index === 1) // [!code ++]
+        firstCode = code // [!code ++]
+      } // [!code ++]
     }
     
-	// Create a Blob from the render function text
-    const blob = new Blob([firstCode], { type: 'application/javascript' })
-    const url = URL.createObjectURL(blob)
-    // eslint-disable-next-line no-console
-    console.log(url)
+	// Create a Blob from the render function text // [!code ++]
+    const blob = new Blob([firstCode], { type: 'application/javascript' }) // [!code ++]
+    const url = URL.createObjectURL(blob) // [!code ++]
+    // eslint-disable-next-line no-console // [!code ++]
+    console.log(url) // [!code ++]
 
-    const res = await import(url)
-    // eslint-disable-next-line no-console
-    console.log(res)
+    const res = await import(url) // [!code ++]
+    // eslint-disable-next-line no-console // [!code ++]
+    console.log(res) // [!code ++]
   }
 }
 ```
@@ -266,18 +261,18 @@ class VueViewPlugin implements PluginValue {
   async init() {
     // other code...
   
-    const existingImportMapScriptEl = this.view.dom.querySelector('#obsidian-plugin-vue-import-map')
-    if (existingImportMapScriptEl)
-      this.importMapScriptEl = existingImportMapScriptEl as HTMLScriptElement
-
-    this.importMapScriptEl ||= this.view.dom.createEl('script')
-    this.importMapScriptEl.id = 'obsidian-plugin-vue-import-map'
-    this.importMapScriptEl.type = 'importmap'
-    this.importMapScriptEl.innerHTML = JSON.stringify({
-      imports: {
-        vue: 'https://unpkg.com/vue@3.4.31/dist/vue.esm-browser.js',
-      },
-    }, null, 2)
+    const existingImportMapScriptEl = this.view.dom.querySelector('#obsidian-plugin-vue-import-map') // [!code ++]
+    if (existingImportMapScriptEl) // [!code ++]
+      this.importMapScriptEl = existingImportMapScriptEl as HTMLScriptElement // [!code ++]
+    // [!code ++]
+    this.importMapScriptEl ||= this.view.dom.createEl('script') // [!code ++]
+    this.importMapScriptEl.id = 'obsidian-plugin-vue-import-map' // [!code ++]
+    this.importMapScriptEl.type = 'importmap' // [!code ++]
+    this.importMapScriptEl.innerHTML = JSON.stringify({ // [!code ++]
+      imports: { // [!code ++]
+        vue: 'https://unpkg.com/vue@3.4.31/dist/vue.esm-browser.js', // [!code ++]
+      }, // [!code ++]
+    }, null, 2) // [!code ++]
 
 	// other code...
   }
@@ -307,18 +302,18 @@ class VueViewPlugin implements PluginValue {
       }
     }
     
-	const someComponentScriptEl = this.view.dom.createEl('script')
-    someComponentScriptEl.type = 'module'
-    someComponentScriptEl.innerHTML = `const firstCode = \`${firstCode}\`
-    // Create a Blob from the render function text
-    const blob = new Blob([firstCode], { type: 'application/javascript' })
-    const url = URL.createObjectURL(blob)
-    // eslint-disable-next-line no-console
-    console.log(url)
-
-    const res = await import(url)
-    // eslint-disable-next-line no-console
-    console.log(res)`
+	const someComponentScriptEl = this.view.dom.createEl('script') // [!code ++]
+    someComponentScriptEl.type = 'module' // [!code ++]
+    someComponentScriptEl.innerHTML = `const firstCode = \`${firstCode}\` // [!code ++]
+    // Create a Blob from the render function text // [!code ++]
+    const blob = new Blob([firstCode], { type: 'application/javascript' }) // [!code ++]
+    const url = URL.createObjectURL(blob) // [!code ++]
+    // eslint-disable-next-line no-console // [!code ++]
+    console.log(url) // [!code ++]
+    // [!code ++]
+    const res = await import(url)  // [!code ++]
+    // eslint-disable-next-line no-console // [!code ++]
+    console.log(res)` // [!code ++]
   }
 }
 ```
@@ -632,18 +627,18 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
 
 // other parts of the code...
 
-_sfc_main.__hmrId = "938b83b0";
-typeof __VUE_HMR_RUNTIME__ !== "undefined" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);
-import.meta.hot.accept((mod) => {
-  if (!mod)
-    return;
-  const { default: updated, _rerender_only } = mod;
-  if (_rerender_only) {
-    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);
-  } else {
-    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);
-  }
-});
+_sfc_main.__hmrId = "938b83b0"; // [!code focus]
+typeof __VUE_HMR_RUNTIME__ !== "undefined" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main); // [!code focus]
+import.meta.hot.accept((mod) => { // [!code focus]
+  if (!mod) // [!code focus]
+    return; // [!code focus]
+  const { default: updated, _rerender_only } = mod; // [!code focus]
+  if (_rerender_only) { // [!code focus]
+    __VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render); // [!code focus]
+  } else { // [!code focus]
+    __VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated); // [!code focus]
+  } // [!code focus]
+}); // [!code focus]
 ```
 
 如果直接观察 Inspector 左边的 Transforms 我们会发现，这部分 `__VUE_HMR_RUNTIME__` 的代码是在 `vite:vue` 的流水线中被变换和插入的，这个时候我们理解了，这些代码都是在现在在 Vite 的世界中广泛使用的 `unplugin-vue` 或者说 `vitejs/plugin-vue` 底层所依赖的插件中实现的。
@@ -660,8 +655,8 @@ if (
 ) {
   output.push(
     `_sfc_main.__hmrId = ${JSON.stringify(descriptor.id)}`,
-    `typeof __VUE_HMR_RUNTIME__ !== 'undefined' && ` +
-    `__VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main)`,
+    `typeof __VUE_HMR_RUNTIME__ !== 'undefined' && ` + // [!code focus]
+    `__VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main)`, // [!code focus]
   )
   // check if the template is the only thing that changed
   if (prevDescriptor && isOnlyTemplateChanged(prevDescriptor, descriptor)) {
@@ -691,7 +686,7 @@ if (
 // it easier to be used in toolings like vue-loader
 // Note: for a component to be eligible for HMR it also needs the __hmrId option
 // to be set so that its instances can be registered / removed.
-if (__DEV__) {
+if (__DEV__) { // [!code hl]
   getGlobalThis().__VUE_HMR_RUNTIME__ = {
     createRecord: tryWrap(createRecord),
     rerender: tryWrap(rerender),
@@ -709,7 +704,7 @@ export default defineBuildConfig({
     esbuild: {
       format: 'cjs',
       define: {
-        __DEV__: 'true',
+        __DEV__: 'true', // [!code ++]
       },
     },
 	// other configs...
