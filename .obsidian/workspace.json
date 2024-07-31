@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "ae994d6d2a7605fc",
+        "id": "82a8c0d8a989a292",
         "type": "tabs",
         "children": [
           {
-            "id": "c01998b6274879fd",
+            "id": "8fdbc022d1449898",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🎨 设计/调色板设计入门.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f3ffc3ee92df043f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/🎨 设计/调色板设计入门.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.50390243530273
+    "width": 305.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -115,7 +98,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🎨 设计/调色板设计入门.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -138,7 +120,7 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 1.9885368456908947,
+                  "scale": 1.737146941803905,
                   "close": true
                 }
               }
@@ -162,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🎨 设计/调色板设计入门.md"
+                "file": "笔记/📦 收集箱/🔬 调研/assets/animation-frameworks-for-frontend-1.png"
               }
             }
           },
@@ -187,7 +169,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🎨 设计/调色板设计入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +185,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🎨 设计/调色板设计入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,11 +206,15 @@
       }
     ],
     "direction": "horizontal",
-    "width": 362.5,
-    "collapsed": true
+    "width": 366.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-spaced-repetition:复习卡片": false,
+      "obsidian42-brat:BRAT": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "random-note:开始漫游笔记": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -239,38 +223,30 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f3ffc3ee92df043f",
+  "active": "b5dfc4e6c8287ee4",
   "lastOpenFiles": [
-    "笔记/🎨 设计/assets/Pasted image 20240619153923.png",
-    "笔记/🎨 设计/image.png",
-    "笔记/🎨 设计/assets/Pasted image 20240619151152.png",
-    "笔记/🛠️ 开发/Refactoring UI 读书笔记.md",
-    "笔记/🎨 设计/调色版设计入门.md",
-    "笔记/🎨 设计/调色板设计入门.md",
-    "笔记/🎨 设计/assets/Pasted image 20240618235052.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618233038.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618232940.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618232924.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618232602.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618232551.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618232241.png",
-    "笔记/🎨 设计/assets/Pasted image 20240618232100.png",
-    "笔记/🎨 设计/assets",
-    "笔记/🛠️ 开发/語 编程语言/🐍 Python/各种 pip 包和 conda 包的名称都是什么含义？.md",
-    "node_modules/@vueuse",
-    "pnpm-lock.yaml.3768216865",
-    "node_modules/@nolebase",
-    "node_modules/@antfu",
-    "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
-    "笔记/🧱 基础设施/容器里没有 ps 怎么办？.md",
-    "笔记/🤖 AI 人工智能/用 PyTorch Lightning 监控和串流 PyTorch 的训练进度.md",
-    "笔记/🤖 AI 人工智能/验证 Anaconda 和 Mamba 安装的 PyTorch 和 CUDA 是否正确.md",
-    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
-    "笔记/🤖 AI 人工智能/安装和配置 NVIDIA 的 Apex.md",
-    "笔记/🛠️ 开发/語 编程语言/🐍 Python/配置 Anaconda 的环境目录和包目录.md",
-    "README.md",
+    "vite.config.ts.timestamp-1722419663374-d028de33b93e1.mjs",
+    "笔记/📦 收集箱/🐙 GitHub 项目/maplibre/index.md",
+    "vite.config.ts.timestamp-1722419502801-c0f131dfbd90b.mjs",
+    "vite.config.ts.timestamp-1722419148230-79be399d2a428.mjs",
+    "vite.config.ts.timestamp-1722418995442-2b3462f0bdf8c.mjs",
+    "vite.config.ts.timestamp-1722418778766-06912072fb6dc.mjs",
+    "vite.config.ts.timestamp-1722418621695-98bf17f84f4b3.mjs",
+    "编目 Catalog/文章/理解什么是 CRDT.md",
     "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
     "笔记/🪄 Vtuber/assets/屏幕录制2023-12-08 23.37.26.mov",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
+    "笔记/🧱 基础设施/🛜 OpenWRT/assets/Pasted image 20240520003337.png",
+    "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
+    "笔记/🧱 基础设施/🛜 OpenWRT/assets",
     "笔记/🧱 基础设施/🛜 OpenWRT",
     "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
     "笔记/🧱 基础设施/🚢 Kubernetes/将 TrueNAS 共享存储连接到 K8s 集群.md",
@@ -281,12 +257,20 @@
     "笔记/🧮 数学",
     "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
     "笔记/🧩 开源贡献/Kubernetes/assets",
+    "笔记/🤖 AI 人工智能/领域/音频/配置和运行 ChatTTS.md",
+    "笔记/🤖 AI 人工智能/领域/音频/在 macOS 上配置 GPT-SoVITS-WebUI.md",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
     "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
     "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
     "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
     "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
     "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
-    "笔记/🤖 AI 人工智能/assets/量子位智库AIGC产业全景图报告.pdf",
+    "笔记/🤖 AI 人工智能/扩散模型是如何工作的？.md",
+    "笔记/🤖 AI 人工智能/安装和配置 NVIDIA 的 Apex.md",
+    "笔记/🤖 AI 人工智能/大规模分布式机器学习里的断卡重训和故障恢复.md",
+    "笔记/🤖 AI 人工智能/多机多卡训练的时候的 NCCL 错误.md",
+    "笔记/🤖 AI 人工智能/在前端和浏览器上玩耍 Transformers.js 库.md",
+    "笔记/🤖 AI 人工智能/在 Apple Silicon 上用 PyTorch 和 Accelerate 进行训练.md",
     "未命名.canvas"
   ]
 }

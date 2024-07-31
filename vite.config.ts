@@ -8,6 +8,7 @@ import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepre
 import { ThumbnailHashImages } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
 
 import { githubRepoLink } from './metadata'
+import { creators } from '.vitepress/creators'
 
 export default defineConfig(async () => {
   return {
@@ -23,6 +24,7 @@ export default defineConfig(async () => {
       Inspect(),
       GitChangelog({
         repoURL: () => githubRepoLink,
+        mapAuthors: creators,
       }),
       GitChangelogMarkdownSection({
         excludes: [

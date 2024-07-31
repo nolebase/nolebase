@@ -13,8 +13,11 @@
     "pipenv",
     "pixi",
     "unlazy",
+    "unocss",
+    "unplugin",
     "vitepress",
-    "vuedraggable"
+    "vuedraggable",
+    "xlink"
   ],
   "prettier.enable": false,
   "editor.formatOnSave": false,

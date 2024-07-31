@@ -18,7 +18,6 @@ import {
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 
 import {
-  InjectionKey as NolebaseGitChangelogInjectionKey,
   NolebaseGitChangelogPlugin,
 } from '@nolebase/vitepress-plugin-git-changelog/client'
 
@@ -29,8 +28,6 @@ import {
 import {
   NolebaseUnlazyImg,
 } from '@nolebase/vitepress-plugin-thumbnail-hash/client'
-
-import { creators } from '../creators'
 
 import AppContainer from './components/AppContainer.vue'
 import DocFooter from './components/DocFooter.vue'
@@ -96,10 +93,6 @@ const ExtendedTheme: Theme = {
         defaultToggle: true,
         hoverBlockColor: 'rgb(240 197 52 / 7%)',
       },
-    })
-
-    app.provide(NolebaseGitChangelogInjectionKey, {
-      mapContributors: creators,
     })
 
     app.use(NolebaseInlineLinkPreviewPlugin)

@@ -223,14 +223,14 @@ export default defineConfig({
     math: true,
     config: (md) => {
       md.use(MarkdownItFootnote)
-      md.use(MarkdownItMathjax3)
+      md.use(MarkdownItMathjax3 as any)
       md.use(BiDirectionalLinks({
         dir: process.cwd(),
       }) as any)
-      md.use(UnlazyImages(), {
+      md.use(UnlazyImages() as any, {
         imgElementTag: 'NolebaseUnlazyImg',
       })
-      md.use(InlineLinkPreviewElementTransform, {
+      md.use(InlineLinkPreviewElementTransform as any, {
         tag: 'VPNolebaseInlineLinkPreview',
       })
     },
