@@ -48,7 +48,6 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           run_install: false
-          version: '9.1.2'
 
       - name: 获取 pnpm store 目录
         shell: bash
