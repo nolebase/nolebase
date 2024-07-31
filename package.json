@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.0",
+    "@hedgedoc/markdown-it-plugins": "^2.1.4",
     "@iconify-json/eos-icons": "^1.1.10",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/octicon": "^1.1.56",

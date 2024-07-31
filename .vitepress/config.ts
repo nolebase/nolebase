@@ -2,6 +2,7 @@ import process from 'node:process'
 import { defineConfig } from 'vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
+import { taskLists } from '@hedgedoc/markdown-it-plugins'
 
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
@@ -233,6 +234,7 @@ export default defineConfig({
       md.use(InlineLinkPreviewElementTransform as any, {
         tag: 'VPNolebaseInlineLinkPreview',
       })
+      md.use(taskLists)
     },
   },
   async transformHead(context) {
