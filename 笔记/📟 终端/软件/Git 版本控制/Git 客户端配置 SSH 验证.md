@@ -15,7 +15,7 @@ tags:
 ---
 # Git 客户端配置 SSH 验证
 
-## macOS / Linux
+## macOS / Linux / Windows
 
 ### 创建 SSH 密钥对
 
@@ -26,12 +26,21 @@ SSH 密钥对是两个基于非对称加密算法生成的文件：
 
 #### SSH 密钥对存储位置
 
-SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就是个人用户目录的 `.ssh` 目录，这个目录下，存放着以下几种文件：
+## macOS / Linux / Windows
+SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh`(Windows下是 `C:\Users\你的用户名\.ssh` 目录下，也就是个人用户目录的 `.ssh` 目录，这个目录下，存放着以下几种文件：
 
 1. `config` - SSH 连接配置文件
 2. `xxx_rsa` - RSA 私钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
 3. `xxx_rsa.pub` - RSA 私钥对应的公钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
 4. `authorized_keys`  - 远程连接 SSH 时验证的公钥文件，每行一个公钥，**发起请求用的 SSH 客户端是不会需要配置的**。
+
+## Windows
+Windows SSH 相关的密钥、文件，都应该放到 `C:\Users\你的用户名\.ssh` （后面的$Home即位Windows的C:\Users\你的用户名）目录下，也就是个人用户目录的 `.ssh` 目录，这个目录下，存放着以下几种文件
+（如果没有显示相关文件夹，请在 `设置-系统-开发者选项` 下，找到并打开 `显示隐藏和系统文件`）：
+1. `config` - SSH 连接配置文件
+2. `xxx_rsa` - RSA 私钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
+3. `xxx_rsa.pub` - RSA 私钥对应的公钥文件，`xxx` 有可能是 `id`，也有可能是别的名字
+4. `known_hosts`和 `known_hosts.old` 是保存存储已知的远程主机的公钥以及备份
 
 > [!NOTE] 如果没有这个目录，需要使用 `mkdir` 命令（参考 [[mkdir 创建目录]]）手动创建该目录
 >
@@ -45,11 +54,20 @@ SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就�
 > sudo su rizumu # 切换用户到 rizumu
 > mkdir $HOME/.ssh # 创建目录
 > ```
-
+>
+> ⚠️ 注意：Windows用户请关闭系统的OpenSSH Authentication Agent服务
+> 
+>  按下 `Win + R` ，然后输入 `services.msc` ，点击 `确定`
+>  找到 `OpenSSH Authentication Agent`
+>  双击进入该服务，先 `停止` 该服务，然后在启动类型里选择 `禁用`
+>  点击 `应用`
+> 
 #### SSH 密钥对存储位置的权限配置
 
+## macOS / Linux
 此处还需要注意的是 `.ssh` 目录和该目录下的文件权限，都有不同的要求：
 权限说明：[Linux 权限](../../Linux%20%E6%9D%83%E9%99%90.md)
+
 
 1. `.ssh` 目录要求 700 (`drwx------``)
 2. `.pub` 公钥文件（包括但不限于 `.pub` 文件）要求 644 (`-rw-r--r--`)
@@ -130,6 +148,7 @@ The key's randomart image is: # 随机码的可视化
 ```
 
 现在就创建完毕了。私钥的文件存放在 `~/.ssh/<填写的私钥文件名>`内，公钥存放在 `~/.ssh/<填写的私钥文件名>.pub` 内
+
 
 ### 配置 GitHub 的 SSH
 
