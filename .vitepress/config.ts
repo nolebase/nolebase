@@ -9,8 +9,7 @@ import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-i
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
 
-import { discordLink, githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
-import { creatorNames, creatorUsernames } from './creators'
+import { creatorNames, creatorUsernames, discordLink, githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
 import { sidebar } from './docsMetadata.json'
 
 export default defineConfig({
