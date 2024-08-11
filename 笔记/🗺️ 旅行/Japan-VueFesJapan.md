@@ -1,5 +1,10 @@
 # 2024.10 Vue Fes Japan <sup>[Tokyo Japan]</sup>
 
+## Travel Apps
+
+- [动画巡礼地图](https://anitabi.cn/map) — 动画取景坐标截图网页地图
+- [Suica](https://www.jreast.co.jp/e/pass/suica.html) — 东京地铁交通卡（iPhone Wallet 里面直接加就行）
+
 ## Interesting Places
 
 ### Tokyo
