@@ -84,6 +84,7 @@
 - [shalotts/shalodoc](https://github.com/shalotts/shalodoc)
 - [vdriasworld/manual: Vdrias World! 游玩指南](https://github.com/vdriasworld/manual)
 - [LittleSkinCommspt/manual-ng: under dev](https://github.com/LittleSkinCommspt/manual-ng)
+- [LemonNekoGH/zhishiku: 也许会有知识](https://github.com/LemonNekoGH/zhishiku)
 
 ### 如何下载到本地
 
