@@ -219,6 +219,9 @@ RNN，GRU，LASTM 窗口不足。
 
 [arXiv [2304.11062] Scaling Transformer to 1M tokens and beyond with RMT](https://arxiv.org/pdf/2304.11062.pdf)
 
+Self-Extend works amazingly well with gemma-2b-it. 8k->90k+ on 'Needle in the haystack' : r/LocalLLaMA
+https://www.reddit.com/r/LocalLLaMA/comments/1b1q88w/selfextend_works_amazingly_well_with_gemma2bit/
+
 ![](./assets/how-llm-works-4.jpg)
 
 > Claude 2.1 (200K Tokens) - Pressure Testing Long Context Recall We all love increasing context lengths - but what's performance like? Anthropic reached out with early access to Claude 2.1 so I repeated the “needle in a haystack” analysis I did on GPT-4 Here's what I found...
