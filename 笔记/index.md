@@ -2,19 +2,19 @@
 
 ## 小音和猫猫的知识库
 
-欢迎来到小音和猫猫的知识库 [Nólëbase](https://nolebase.ayaka.io)，这里是 📒 笔记分区
+欢迎来到小音和猫猫的知识库 [Pengxuan](https://nolebase.ayaka.io)，这里是 📒 笔记分区
 
-## 想要自己部署和在本地启动强大的 Nólëbase 知识库，或者自己拥有一份？
+## 想要自己部署和在本地启动强大的 Pengxuan 知识库，或者自己拥有一份？
 
-很高兴你对 [Nólëbase](https://nolebase.ayaka.io) 感兴趣！
+很高兴你对 [Pengxuan](https://nolebase.ayaka.io) 感兴趣！
 
 ### 背景介绍
 
-首先 [Nólëbase](https://nolebase.ayaka.io) 是完全可以在本地无网络环境的情况下使用的！你可以在跟随[如何下载到本地](#如何下载到本地)的指引下载或者克隆之后使用 [Obsidian](https://obsidian.md) 和 [Logseq](https://logseq.com/) 这样的知识库软件打开，也可以用 [Typora](https://typora.io/) 这样的 Markdown 编辑器打开进行浏览和编辑，这意味着即便你不具备任何的编程技能，也可以使用或者借鉴我们的知识库分类和组织方法。
+首先 [Pengxuan](https://nolebase.ayaka.io) 是完全可以在本地无网络环境的情况下使用的！你可以在跟随[如何下载到本地](#如何下载到本地)的指引下载或者克隆之后使用 [Obsidian](https://obsidian.md) 和 [Logseq](https://logseq.com/) 这样的知识库软件打开，也可以用 [Typora](https://typora.io/) 这样的 Markdown 编辑器打开进行浏览和编辑，这意味着即便你不具备任何的编程技能，也可以使用或者借鉴我们的知识库分类和组织方法。
 
 在继续之前，也请容许我介绍一下对项目所使用的技术和架构。
 
-和其他的由 [Hexo](https://hexo.io) 驱动和生成的博客和静态网站类似，[Nólëbase](https://nolebase.ayaka.io) 其实使用了名为 [VitePress](https://vitepress.dev) 的静态生成器来驱动和生成网站，像 [VitePress](https://vitepress.dev) 这样的静态生成器支持在 Markdown 文件中使用 [Vue](https://vuejs.org/) 组件来嵌入并增强文档的阅读和使用体验。而 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 是 [Node.js](https://nodejs.org/en) 生态的一部分，他们都属于「前端技术」的一部分。
+和其他的由 [Hexo](https://hexo.io) 驱动和生成的博客和静态网站类似，[Pengxuan](https://nolebase.ayaka.io) 其实使用了名为 [VitePress](https://vitepress.dev) 的静态生成器来驱动和生成网站，像 [VitePress](https://vitepress.dev) 这样的静态生成器支持在 Markdown 文件中使用 [Vue](https://vuejs.org/) 组件来嵌入并增强文档的阅读和使用体验。而 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 是 [Node.js](https://nodejs.org/en) 生态的一部分，他们都属于「前端技术」的一部分。
 
 在运行和部署上，我们使用免费的 [Netlify](https://www.netlify.com/) 来提供网站的托管，使用 [GitHub Actions](https://github.com/features/actions)（你可以理解一个将会在每次我们将笔记和知识库内容更新到 GitHub 仓库之后会自动触发的一个自动化工作）把我们的笔记和知识库内容自动构建和部署到 [Netlify](https://www.netlify.com/) 上。
 
@@ -25,14 +25,14 @@
 #### 为什么不用 [Obsidian Publish](https://obsidian.md/publish)
 
 1. [Obsidian Publish](https://obsidian.md/publish) 需要付费才能使用，但是实际上对于静态网站而言，就像先前介绍的那样，我们可以白嫖一些像是 [GitHub Pages](https://pages.github.com/)，[Netlify](https://www.netlify.com/)，[Vercel](https://vercel.com/) 和 [Cloudflare Pages](https://pages.cloudflare.com/) 这样现成的基础设施帮忙托管；
-2. [Obsidian Publish](https://obsidian.md/publish) 部署后的静态页面是没有 [Obsidian](https://obsidian.md) 自带的插件功能的支持的，这意味着很多作者（或者你）在本地撰写好的使用了插件支持的语法的文档在本地使用 [Obsidian](https://obsidian.md) 渲染和预览的时候是能正常工作的，然而将会在 [Obsidian Publish](https://obsidian.md/publish) 部署和托管后变得不可用。这是非常关键的一个问题，很多用户（包括我在内）都非常依赖于 [Obsidian](https://obsidian.md) 的插件生态，这样的问题现在还没有足够好的解决方案，但我们创建了名为 [Nólëbase 集成](https://github.com/nolebase/integrations) 这样的项目来尝试提供一些常见的和常用的 [Obsidian](https://obsidian.md) 插件在 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 的环境下的替代方案，这样的替代方案虽然不能完全替代 [Obsidian](https://obsidian.md) 插件的功能，但是可以在一定程度上提供类似的功能，你也可以关注一下；
+2. [Obsidian Publish](https://obsidian.md/publish) 部署后的静态页面是没有 [Obsidian](https://obsidian.md) 自带的插件功能的支持的，这意味着很多作者（或者你）在本地撰写好的使用了插件支持的语法的文档在本地使用 [Obsidian](https://obsidian.md) 渲染和预览的时候是能正常工作的，然而将会在 [Obsidian Publish](https://obsidian.md/publish) 部署和托管后变得不可用。这是非常关键的一个问题，很多用户（包括我在内）都非常依赖于 [Obsidian](https://obsidian.md) 的插件生态，这样的问题现在还没有足够好的解决方案，但我们创建了名为 [Pengxuan 集成](https://github.com/nolebase/integrations) 这样的项目来尝试提供一些常见的和常用的 [Obsidian](https://obsidian.md) 插件在 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 的环境下的替代方案，这样的替代方案虽然不能完全替代 [Obsidian](https://obsidian.md) 插件的功能，但是可以在一定程度上提供类似的功能，你也可以关注一下；
 
 #### 在什么情况下你应该使用 [Obsidian Publish](https://obsidian.md/publish)
 
 [Obsidian Publish](https://obsidian.md/publish) 也有它自己的优点：
 
 1. 寻找适合 [VitePress](https://vitepress.dev) 的 Markdown 插件是困难和复杂的，[Obsidian Publish](https://obsidian.md/publish) 天然支持所有 [Obsidian](https://obsidian.md) 原生支持的语法和插件，这意味着你不需要额外的调研和试错工作就可以将你在本地使用 [Obsidian](https://obsidian.md) 撰写的文档直接部署到互联网上；
-2. 运行和部署像是 [Nólëbase](https://nolebase.ayaka.io) 这样的静态网站对于不具备任何的代码和编程知识的作者难度大得多，但是 [Obsidian Publish](https://obsidian.md/publish) 不需要任何的代码和编程知识，也无需关心任何的技术细节，和 Notion 的分享一样，你只需要点击几下就可以完成部署；
+2. 运行和部署像是 [Pengxuan](https://nolebase.ayaka.io) 这样的静态网站对于不具备任何的代码和编程知识的作者难度大得多，但是 [Obsidian Publish](https://obsidian.md/publish) 不需要任何的代码和编程知识，也无需关心任何的技术细节，和 Notion 的分享一样，你只需要点击几下就可以完成部署；
 
 所以如果你没有掌握必备的编程技能，或者你不想花时间和精力去学习和掌握这些技能，那么 [Obsidian Publish](https://obsidian.md/publish) 可能是一个更好的选择。
 
@@ -47,7 +47,7 @@
 - [maomao1996/mm-notes: 茂茂物语: 各种笔记记录（想到啥写啥系列）](https://github.com/maomao1996/mm-notes)
 - [ATQQ/sugar-blog: ✍️📚我写博客的地方🤪🤪🤪记录随笔与学习笔记](https://github.com/ATQQ/sugar-blog)
 - [chodocs/chodocs: 一站式前端内容网站，包括学习路线、知识体系。](https://github.com/chodocs/chodocs)
-- [cangzihan/knolls-think-tank: 基于Nólëbase的个人知识库](https://github.com/cangzihan/knolls-think-tank)
+- [cangzihan/knolls-think-tank: 基于Pengxuan的个人知识库](https://github.com/cangzihan/knolls-think-tank)
 - [CHENJIAMIAN/Blog: Obsidian笔记库 | 我的笔记分bei享fen | 根据GitHub工作流自动构建vitepress博客 | http://chenjiamian.me/Blog/](https://github.com/CHENJIAMIAN/Blog)
 - [realzhengyiming/YiMingBlog: a... new blog again, hhhh](https://github.com/realzhengyiming/YiMingBlog)
 - [nikitavoloboev/knowledge: Everything I know](https://github.com/nikitavoloboev/knowledge?tab=readme-ov-file)
@@ -101,7 +101,7 @@ git clone https://github.com/nolebase/nolebase
 
 正如先前介绍过
 
-> [Nólëbase](https://nolebase.ayaka.io) 其实使用了名为 [VitePress](https://vitepress.dev) 的静态生成器来驱动和生成网站。
+> [Pengxuan](https://nolebase.ayaka.io) 其实使用了名为 [VitePress](https://vitepress.dev) 的静态生成器来驱动和生成网站。
 >
 > 而 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 是 [Node.js](https://nodejs.org/en) 生态的一部分，他们都属于「前端技术」的一部分。
 
@@ -172,13 +172,13 @@ pnpm setup
 
 来配置 [pnpm](https://pnpm.io/) 所需要的目录，完成之后需要关掉当前的 Powershell 窗口，然后重新打开一个新的 Powershell 窗口。
 
-差不多准备好啦，让我们前往 Nólëbase 知识库所在的目录吧，使用下面的命令来前往 Nólëbase 知识库所在的目录：
+差不多准备好啦，让我们前往 Pengxuan 知识库所在的目录吧，使用下面的命令来前往 Pengxuan 知识库所在的目录：
 
 ```shell
 cd
 ```
 
-先多输入一个空格，然后接下来打开文件管理器，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到运行窗口中，最后按下 <kbd data-keyboard-key="enter">回车</kbd> 键，就可以告诉 Powershell 前往 Nólëbase 知识库所在的目录了。
+先多输入一个空格，然后接下来打开文件管理器，把你解压缩完成的 Pengxuan 知识库文件夹拖拽到运行窗口中，最后按下 <kbd data-keyboard-key="enter">回车</kbd> 键，就可以告诉 Powershell 前往 Pengxuan 知识库所在的目录了。
 
 ##### 使用的是 macOS 吗
 
@@ -224,13 +224,13 @@ pnpm setup
 
 来配置 [pnpm](https://pnpm.io/) 所需要的目录，完成之后需要关掉当前的终端窗口，然后重新打开一个新的终端窗口。
 
-差不多准备好啦，让我们前往 Nólëbase 知识库所在的目录吧，使用下面的命令来前往 Nólëbase 知识库所在的目录：
+差不多准备好啦，让我们前往 Pengxuan 知识库所在的目录吧，使用下面的命令来前往 Pengxuan 知识库所在的目录：
 
 ```shell
 cd
 ```
 
-先多输入一个空格，然后接下来打开访达，把你解压缩完成的 Nólëbase 知识库文件夹拖拽到终端窗口中，最后按下 <kbd data-keyboard-key="return">return</kbd> 键，就可以告诉终端前往 Nólëbase 知识库所在的目录了。
+先多输入一个空格，然后接下来打开访达，把你解压缩完成的 Pengxuan 知识库文件夹拖拽到终端窗口中，最后按下 <kbd data-keyboard-key="return">return</kbd> 键，就可以告诉终端前往 Pengxuan 知识库所在的目录了。
 
 ##### 使用的是 Linux 吗
 
@@ -238,13 +238,13 @@ cd
 
 #### 安装依赖和运行开发服务器
 
-在倒数第二步中，我们需要安装依赖，这样 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 就会被下载到本地的 [Nólëbase](https://nolebase.ayaka.io) 目录/文件夹下的 `node_modules` 目录/文件夹下了：
+在倒数第二步中，我们需要安装依赖，这样 [VitePress](https://vitepress.dev) 和 [Vue](https://vuejs.org/) 就会被下载到本地的 [Pengxuan](https://nolebase.ayaka.io) 目录/文件夹下的 `node_modules` 目录/文件夹下了：
 
 ```shell
 pnpm install
 ```
 
-接下来你可以直接运行下面的命令开启一个本地运行的 [Nólëbase](https://nolebase.ayaka.io) 知识库前端服务器，通常而言我们称之为「开发服务器」，用这个服务器，可以通过浏览器在本地直接访问渲染完成的页面：
+接下来你可以直接运行下面的命令开启一个本地运行的 [Pengxuan](https://nolebase.ayaka.io) 知识库前端服务器，通常而言我们称之为「开发服务器」，用这个服务器，可以通过浏览器在本地直接访问渲染完成的页面：
 
 ```shell
 pnpm docs:dev
@@ -264,7 +264,7 @@ $ pnpm docs:dev
 
 当你看到上面的字样的时候，就可以前往本地的 [http://localhost:5173](http://localhost:5173) 查看渲染完成的页面了：
 
-在这个本地运行的 Nólëbase 知识库前端服务器启动的情况下，你针对所有 Markdown 文件、样式文件、配置文件的变更，都会实时响应到网页中。
+在这个本地运行的 Pengxuan 知识库前端服务器启动的情况下，你针对所有 Markdown 文件、样式文件、配置文件的变更，都会实时响应到网页中。
 
 如果刷新不及时或者更新有异常，也可以试试看使用 <kbd data-macos-keyboard-key="command">command</kbd> + <kbd>R</kbd> （macOS 系统） <kbd>Ctrl</kbd> + <kbd>R</kbd> （Windows 和 Linux 系统）快捷键强制刷新。
 
@@ -276,11 +276,11 @@ $ pnpm docs:dev
 pnpm docs:build
 ```
 
-构建完成后，渲染出来的 HTML 和各种资源将会被存储在 `.vitepress/dist` 目录下面，你可以通过上传 `.vitepress/dist` 目录来完成 Nólëbase 知识库的部署。
+构建完成后，渲染出来的 HTML 和各种资源将会被存储在 `.vitepress/dist` 目录下面，你可以通过上传 `.vitepress/dist` 目录来完成 Pengxuan 知识库的部署。
 
 #### 使用静态网站托管服务部署页面
 
-Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页面，因此可以部署到下列已知的优质**静态网站托管服务**：
+Pengxuan 知识库使用 VitePress 静态生成器来驱动和生成静态页面，因此可以部署到下列已知的优质**静态网站托管服务**：
 
 - [Netlify](https://netlify.com/)
 - [Vercel](https://vercel.com/)
@@ -295,7 +295,7 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 >
 > 让我们把精力放在写作上吧！❤️
 
-请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Nólëbase 知识库。
+请参照 VitePress 官方文档的[部署 VitePress 站点](https://vitepress.dev/zh/guide/deploy)页面文档所介绍的内容，通过主流的静态网站托管服务来部署自己的 Pengxuan 知识库。
 
 ##### 使用 Vercel 部署
 
@@ -329,7 +329,7 @@ Nólëbase 知识库使用 VitePress 静态生成器来驱动和生成静态页�
 ![](/obsidian-screenshot-1.png)
 
 > [!TIP]
-> 默认情况下，Nólëbase 自带的「[双向链接插件](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/)」将会自动处理所有 Obsidian 支持的 `[[link]]` 和 `![[link]]` 双向链接。
+> 默认情况下，Pengxuan 自带的「[双向链接插件](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/)」将会自动处理所有 Obsidian 支持的 `[[link]]` 和 `![[link]]` 双向链接。
 > 但有的情况下，你可能会想要避免出现和使用双向链接，比如：
 >
 > 1. 保持兼容性的 Markdown : 可以让文档也能在 Github 中被正确渲染（ Github 无法解析`[[双链]]`）
@@ -358,7 +358,7 @@ Giscus 利用了 [GitHub Discussions](https://docs.github.com/en/discussions) 
 
 1. 访问 [Giscus 网站](https://giscus.app/zh-CN)
 2. 参考网站上的说明，一步步操作，最终你会得到 Giscus 的配置信息
-3. 在 Nólëbase 仓库下执行，
+3. 在 Pengxuan 仓库下执行，
 
 ```sh
 pnpm add -D vitepress-plugin-comment-with-giscus
