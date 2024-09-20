@@ -1,1 +1,0 @@
-[ScriptingBridge with Swift - Communicating with Apps using AppleScript and Swift - BrightDigit](https://brightdigit.com/blog/2017/06/09/scriptingbridge-with-swift-communicating-with-apps-using-applescript-and-swift/)
