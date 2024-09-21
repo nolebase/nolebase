@@ -1,31 +1,21 @@
 ---
 share: "true"
 ---
-
-https://www.cnblogs.com/orlion/p/5765339.html
-
+> 参考链接如下：
+```markdown
+> https://www.cnblogs.com/orlion/p/5765339.html
 https://zhuanlan.zhihu.com/p/627238135
-
 https://blog.csdn.net/a513247209/article/details/118326530
-
 https://zhuanlan.zhihu.com/p/502146080?utm_id=0
-
 https://riscv-programming.org/book/riscv-book.html
-
 https://riscv-programming.org/ale/#select_url_content=TjRJZ3RnaGdsZ2RnK2dCd2djd0tZZ0Z3Z0hRSG9BbUVBTGhMZ0JaRmdBMnVhUlJzeWNBemlRRTVHcjdZWFVnQTBJQ00yWlJXRUdFUllCak5sQVJGTUlBU0drQjdHQURNb3lUS0RVS29HNW50VWJ0VE1SQUNDbUltd0N1cVFlcTA2NFZnTUozSHpzMjh0bUNBQVJIeWNYYzNjckFERXd2MWNMRHlDQVNUaUlnS1NJQUZrMC0wU3JBR1ZjaEtpZ2dGVmMxQmdJQUNNcVZCWTFPR2t5VkdrQWF4cTFBQTljNWlieERzUTFXRTQyT0FBM0NDb25KUUFHYm9CMmFKV1Y3MEVhaDJZNFRUWlVBRWNuR0drQVR6ZzJDVFFsQUdZNWtBQmZRV1lUNW1scHFoTU1ZRWVRZkZRSnFEU1ZDZmI3M2U1QUE=
-
 https://toolchains.bootlin.com/
-
 https://blog.csdn.net/dmf_fff/article/details/130937975
-
 https://blog.csdn.net/hy907539007/article/details/102608816/
-
 [官方文档](https://riscv-programming.org/book/riscv-book.html)
-
 [知乎已经部分翻译的文档](https://zhuanlan.zhihu.com/p/540887151)
-
 https://www.cnblogs.com/harrypotterjackson/p/17548837.html
-
+```
 # 汇编语法
 
 ## `Label、Symbols、reference、relocation`
@@ -264,7 +254,7 @@ Section header string table index: 5
 
 &emsp;&emsp;在链接多个`object`文件时，链接器会将含有同名`setcion`的信息放在单个`section`的可执行文件。比如当链接多个obj文件时，所有obj文件中的`.text`会被分到同一个组，并且被放置到一个同样加做`.text section`中的可执行文件中。看下图：
 
-![image-20230910222656894](C:\Users\Px\AppData\Roaming\Typora\typora-user-images\image-20230910222656894.png)
+![image-20230910222656894](RISC-V指令学习笔记/image-20230910222656894.png)
 
 `.text`被映射到`8000~8007`,同时，`.data`被映射到`800d~8011`。
 
