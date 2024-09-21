@@ -179,7 +179,7 @@ $ cat 'C:UsersKwongad.gitconfig'
 
 工作目录中的文件并不是全都需要纳入版本管理，如日志、临时文件、私有配置文件等不需要也不能纳入版本管理，那该怎么办呢？
 
-![2daab00e-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuaAJhs1AACIQSVvYTw203.jpg)
+![2daab00e-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuaAJhs1AACIQSVvYTw203.jpg)
 
 
 
@@ -232,7 +232,7 @@ SourceTree的官网 下载安装包，支持Window、Mac系统，按照提示完
 
 - SourceTree支持管理多个仓库，通过+按钮，可选择多种方式添加仓库。
 
-![2dcbee86-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuaAB3fkAAB4sjVnQU8831.jpg)
+![2dcbee86-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuaAB3fkAAB4sjVnQU8831.jpg)
 
 
 
@@ -250,14 +250,14 @@ SourceTree的官网 下载安装包，支持Window、Mac系统，按照提示完
 
 TortoiseGit 官网下载安装包，及中文语言包，按照提示完成安装。小乌龟的Git是集成到[操作系统](https://m.elecfans.com/v/tag/527/)里的，直接右键文件夹就可以进行Git操作了。
 
-![2e149348-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuaAFVdYAACcprB6B4Q271.jpg)
+![2e149348-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuaAFVdYAACcprB6B4Q271.jpg)
 
 
 
 - 先进入设置：右键文件夹菜单 --> TortoiseGit --> Settings 进入设置，设置中文语言。
 - 小乌龟的各种Git操作都在右键菜单了，深度集成到了操作系统的资源管理器中了，文件图标也是有Git状态的，比较容易分辨。
 
-![2e2f77b2-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuaADla_AACKSAHcSVA381.jpg)
+![2e2f77b2-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuaADla_AACKSAHcSVA381.jpg)
 
 ![2e3c3e84-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuaAawJ_AAKGabIe50c934.png)
 
@@ -324,7 +324,7 @@ Resolving deltas: 100% (48/48), done.
 
 会在当前目录下创建“KWebNote”项目目录。
 
-![2eb09054-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntueAB9JnAACvp57EEYc875.jpg)
+![2eb09054-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntueAB9JnAACvp57EEYc875.jpg)
 
 
 
@@ -356,7 +356,7 @@ $ git mv [file-original] [file-renamed]
 
 执行`git add .`暂存：
 
-![2edbbe8c-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntueAJHV4AACUlHTNz98280.jpg)
+![2edbbe8c-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntueAJHV4AACUlHTNz98280.jpg)
 
 
 
@@ -380,7 +380,7 @@ $ git mv [file-original] [file-renamed]
 
 `Sourcetree`上的历史记录：
 
-![2f0e1b5c-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntueAcCKuAABYCZZlg90609.jpg)
+![2f0e1b5c-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntueAcCKuAABYCZZlg90609.jpg)
 
 
 
@@ -566,7 +566,7 @@ Git服务器一般提供两种登录验证方式：
   - 不用每次输入用户名、密码，比较推荐的方法。
   - 地址形式：git@github.com:kwonganding/KWebNote.git
 
-![2f9ed0a2-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuiABUAxAABOyFlOj5s630.jpg)
+![2f9ed0a2-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuiABUAxAABOyFlOj5s630.jpg)
 
 
 
@@ -584,7 +584,7 @@ git config --global http.sslVerify false
 
 基于HTTPS的地址连接远程仓库，Github的共有仓库克隆、拉取（pull）是不需要验证的。
 
-![2fcc811e-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuiAb9NJAABUHtxvrQU929.jpg)
+![2fcc811e-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuiAb9NJAABUHtxvrQU929.jpg)
 
 
 
@@ -624,19 +624,19 @@ https://kwonganding:[加密内容付费可见]@github.com
 
 ### 远程用户登录：SSH
 
-![2fedaa10-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuiAaV2UAABBUYPZZEg096.jpg)
+![2fedaa10-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuiAaV2UAABBUYPZZEg096.jpg)
 
 
 
 SSH（Secure Shell，安全外壳）是一种[网络](https://m.elecfans.com/v/tag/1722/)安全协议，通过加密和[认证](https://bbs.elecfans.com/group_776)机制实现安全的访问和文件传输等业务，多用来进行远程登录、数据传输。SSH通过公钥、私钥非对称加密数据，所以SSH需要生成一个公私钥对，公钥放服务器上，私有自己留着进行认证。
 
-![300727a6-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuiAXDZfAABiMeE63PE259.jpg)
+![300727a6-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuiAXDZfAABiMeE63PE259.jpg)
 
 
 
 **① 生成公私钥**：通过Git指令ssh-keygen -t rsa生成公私钥，一路回车即可完成。生成在“C:Users用户名.ssh”目录下，文件id_rsa.pub的内容就是公钥。
 
-![3023d02c-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuiAKFIkAACXQQdwyCc863.jpg)
+![3023d02c-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuiAKFIkAACXQQdwyCc863.jpg)
 
 
 
@@ -736,7 +736,7 @@ Fast-forward
 
 比如有一个项目团队，准备10月份发布新版本，要新开发一堆黑科技功能，占领市场。你和小伙伴“小美”一起负责开发一个新功能A，开发周期2周，在这两周你们的代码不能影响其他人，不影响主分支。这个时候就可以为这个新功能创建一个分支，你们两在这个分支上干活，2周后代码开发完了、测试通过，就可以合并进要发版的开发分支了。安全、高效，不影响其他人工作，完美！
 
-![309af094-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntumAYwWJAADGkj9UP3A118.jpg)
+![309af094-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntumAYwWJAADGkj9UP3A118.jpg)
 
 
 
@@ -797,7 +797,7 @@ $ git branch
 
 代码仓库可以有多个分支，`master`为默认的主分支，但只有一个分支在工作状态。所以要操作不同分支，需要切换到该分支，`HEAD`就是指向当前正在活动的分支。
 
-![30ba28ce-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntumAMjbeAAB8SfOo2bc513.jpg)
+![30ba28ce-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntumAMjbeAAB8SfOo2bc513.jpg)
 
 
 
@@ -863,7 +863,7 @@ ref: refs/heads/dev
 
 在有冲突的文件中，`<<<<<<< HEAD`开头的内容就表示是有冲突的部分，需要人工处理，可以借助一些第三方的对比工具。人工处理完毕后，完成合并提交，才最终完成此次合并。`=======`分割线上方是当前分支的内容，下方是被合并分支的变更内容。
 
-![313c6ee2-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuqAN0XjAACbQav-wbM435.jpg)
+![313c6ee2-05d3-11ee-962d-dac502259ad0.jpg](笔记/01 附件/git-基础概念/wKgZomTntuqAN0XjAACbQav-wbM435.jpg)
 
 
 
