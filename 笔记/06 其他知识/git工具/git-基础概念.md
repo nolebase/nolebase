@@ -3,7 +3,7 @@ share: "true"
 ---
 # 认识一下Git！—简介
 Git是当前最先进、最主流的**分布式**版本控制系统，免费、开源！核心能力就是版本控制。再具体一点，就是面向代码文件的版本控制，代码的任何修改历史都会被记录管理起来，意味着可以恢复到到以前的任意时刻状态。支持跨区域多人协作编辑，是团队项目开发的必备基础，所以Git也就成了程序员的必备技能。
-![2c89e8a2-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuSAZtp2AAFsEqPrgpA009.png)
+![2c89e8a2-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuSAZtp2AAFsEqPrgpA009.png)
 **主要特点**：
 - 开源免费，使用广泛。
 - 强大的文档（代码）的历史版本管理，直接记录完整快照（完整内容，而非差异），支持回滚、对比。
@@ -24,13 +24,13 @@ Git是[Linux](https://www.elecfans.com/v/tag/538/)之父被迫开发的，为了
 
 ## 工作区/暂存区/仓库
 
-![2cb5d908-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuWALof9AAKVHHt-p0U505.png)
+![2cb5d908-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuWALof9AAKVHHt-p0U505.png)
 
 
 
 **工作区**、**暂存区**、**版本库**是Git最基本的概念，关系如下图：
 
-![2ce278d2-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuWADtg3AAC2xopVPy0114.png)
+![2ce278d2-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuWADtg3AAC2xopVPy0114.png)
 
 
 
@@ -47,7 +47,7 @@ Git是[Linux](https://www.elecfans.com/v/tag/538/)之父被迫开发的，为了
 - 用`git commit`命令将暂存区的内容正式提交到版本库。
 - `master`为仓库的默认分支`master`，**HEAD**是一个“`指针`”指向当前分支的最新提交，默认指向最新的master。
 
-![2d0fc6d4-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuWAcpWBAAHyE301oa4496.png)
+![2d0fc6d4-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuWAcpWBAAHyE301oa4496.png)
 
 
 
@@ -69,7 +69,7 @@ Git是[Linux](https://www.elecfans.com/v/tag/538/)之父被迫开发的，为了
 - **推送**（`git push`）：将本地仓库推送到远程仓库，同步版本库。
 - **获取更新**（`fetch/pull`）：从服务端更新到本地，获取他人推送的更新，与他人协作、共享。
 
-![2d468e4e-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuWAXlFAAAEFWi_9DBg864.png)
+![2d468e4e-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuWAXlFAAAEFWi_9DBg864.png)
 
 
 
@@ -90,7 +90,7 @@ Git在执行提交的时候，不是直接将工作区的修改保存到仓库�
 - **已暂存**（staged）：修改、新增的文件添加到暂存区后的状态。
 - **已提交**(committed)：从暂存区提交到版本库。
 
-![2d547fe0-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuWACUROAADKFalTpnA445.png)
+![2d547fe0-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuWACUROAADKFalTpnA445.png)
 
 ------
 
@@ -118,7 +118,7 @@ Git有三个主要的配置文件：三个配置文件的优先级是**① < ②
 - **② 用户全局配置**(`--system`)：当前系统用户的全局配置，存放用户目录：`C:Users[系统用户名].gitconfig`。
 - **③ 仓库/项目配置**(`--local`)：仓库（项目）的特定配置，存放在项目目录下`.git/config`。
 
-![2d7679d8-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuWADpZ-AANcgb1PNqk348.png)
+![2d7679d8-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuWADpZ-AANcgb1PNqk348.png)
 
 
 
@@ -238,13 +238,13 @@ SourceTree的官网 下载安装包，支持Window、Mac系统，按照提示完
 
 - 然后就是可视化的仓库管理了，不用记住繁琐的指令（参数）了，可视化操作。
 
-![2dd5df68-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuaAF-LUAAN35IkjooQ900.png)
+![2dd5df68-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuaAF-LUAAN35IkjooQ900.png)
 
 
 
 **4.2、TortoiseGit**
 
-![2dfa977c-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuaAaXghAAAO6iLFZkQ809.png)
+![2dfa977c-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuaAaXghAAAO6iLFZkQ809.png)
 
 
 
@@ -259,7 +259,7 @@ TortoiseGit 官网下载安装包，及中文语言包，按照提示完成安�
 
 ![2e2f77b2-05d3-11ee-962d-dac502259ad0.jpg](git-基础概念/wKgZomTntuaADla_AACKSAHcSVA381.jpg)
 
-![2e3c3e84-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuaAawJ_AAKGabIe50c934.png)
+![2e3c3e84-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuaAawJ_AAKGabIe50c934.png)
 
 
 
@@ -269,7 +269,7 @@ VSCode自带的Git工具基本已经可以满足日常使用了，既有可视�
 
 - **GitLens**：在团队项目开发中非常实用，必备！！！用于快速查看代码提交历史记录，在代码上会显示最近的修改信息，包括提交者，只就这一点就值得[推荐](https://www.elecfans.com/v/)了。
 
-![2e71b1c2-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuaAOjqAAACULfQ-OMI488.png)
+![2e71b1c2-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuaAOjqAAACULfQ-OMI488.png)
 
 
 
@@ -305,7 +305,7 @@ Initialized empty Git repository in D:/Project_Files/github.Kwong/KwebNote/.git/
 
 创建完多出了一个被隐藏的`.git`目录，这就是本地仓库`Git`的工作场所。
 
-![2e93eef4-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntueAIUkVAAAKontZjhI003.png)
+![2e93eef4-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntueAIUkVAAAKontZjhI003.png)
 
 
 
@@ -350,7 +350,7 @@ $ git mv [file-original] [file-renamed]
 
 修改文件`“R.md”`，未暂存：
 
-![2eb98ba0-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntueAMbfqAAAz5SaURAI010.png)
+![2eb98ba0-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntueAMbfqAAAz5SaURAI010.png)
 
 
 
@@ -374,7 +374,7 @@ $ git mv [file-original] [file-renamed]
 
 多个提交就形成了一条时间线，每次提交完，会移动当前分支`master、HEAD`的“指针”位置。
 
-![2ef2e6d4-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntueAHjSWAACZyO4DEck437.png)
+![2ef2e6d4-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntueAHjSWAACZyO4DEck437.png)
 
 
 
@@ -402,7 +402,7 @@ $ git mv [file-original] [file-renamed]
 + `git reflog`：查看所有可用的历史版本记录（实际是`HEAD`变更记录），包含被回退的记录（**重要**）
 + `git status`：查看本地仓库状态，比较常用的指令，加参数`-s`简洁模式
 
-![2f21b22a-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntueAbYlmAAKmAoa69HE881.png)
+![2f21b22a-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntueAbYlmAAKmAoa69HE881.png)
 
 
 
@@ -445,7 +445,7 @@ Git中最重要的就是提交记录了，其他如**标签**、**分支**、**H
 - **分支**：也是指向某一个提交记录的“指针”引用，“指针”位置可变，如提交、更新、回滚。存储在工作区根目录下`.git/efs/heads`。
 - **HEAD**：指向当前活动分支（最新提交）的一个“指针”引用，存在在`“.git/HEAD”`文件中，存储的内容为`“ref: refs/heads/master”`。
 
-![2f52c91e-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntueAK83vAAEFT45KvRM481.png)
+![2f52c91e-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntueAK83vAAEFT45KvRM481.png)
 
 
 
@@ -525,7 +525,7 @@ d3e15f9 HEAD@{9}: reset: moving to HEAD~
 
 画个图更清晰些：
 
-![2f764dbc-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntueAb2loAADYFg2aR34028.png)
+![2f764dbc-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntueAb2loAADYFg2aR34028.png)
 
 
 
@@ -546,7 +546,7 @@ $ git diff --shortstat "@{0 day ago}"
 
 `Git`作为分布式的版本管理系统，每个终端都有自己的`Git`仓库。但团队协作还需一个中间仓库，作为中心，同步各个仓库。于是服务端（远程）仓库就来承担这个职责，服务端不仅有仓库，还配套相关管理功能。
 
-![2f7e78ca-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuiAehZ_AADAMvWhZEU041.png)
+![2f7e78ca-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuiAehZ_AADAMvWhZEU041.png)
 
 
 
@@ -642,7 +642,7 @@ SSH（Secure Shell，安全外壳）是一种[网络](https://m.elecfans.com/v/t
 
 **② 配置公钥**：打开id_rsa.pub文件，复制内容。Github上，打开Setting➤SSH and GPG keys➤SSH keys➤ 按钮New SSH key，标题（Title）随意，秘钥内容粘贴进去即可。
 
-![302ed2ce-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntumAU6qRAADRVFMLF8U004.png)
+![302ed2ce-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntumAU6qRAADRVFMLF8U004.png)
 
 
 
@@ -686,7 +686,7 @@ Hi kwonganding! You've successfully authenticated, but GitHub does not provide s
 - `git pull`：拉取服务端的最新提交到本地，并与本地合并，合并过程同分支的合并。
 - `git fetch`：拉取服务端的最新提交到本地，不会自动合并，也不会更新工作区。
 
-![30563f30-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntumAAUWbAADSxqwpL7o150.png)
+![30563f30-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntumAAUWbAADSxqwpL7o150.png)
 
 
 
@@ -699,7 +699,7 @@ Hi kwonganding! You've successfully authenticated, but GitHub does not provide s
 - 如下面图中，`git fetch`只获取了更新，并未影响`master、HEAD`的位置。
 - 要更新`master、HEAD`的位置需要手动执行`git merge`合并。
 
-![3072b7c8-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntumAUSvWAAET2eHSFSk874.png)
+![3072b7c8-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntumAUSvWAAET2eHSFSk874.png)
 
 
 
@@ -728,7 +728,7 @@ Fast-forward
 
 分支是从主线分离出去的“副本”，分支就像是平行宇宙，可独立发展，独立编辑、提交，也可以和其他分支合并。分支是Git的核心必杀利器之一，分支创建、切换、删除都非常快，他非常的轻量。所以，早建分支！多用分支！
 
-![308ee740-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntumADCnDAAAZBxg8iWs225.png)
+![308ee740-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntumADCnDAAAZBxg8iWs225.png)
 
 
 
@@ -826,7 +826,7 @@ ref: refs/heads/dev
 
 把两个分支的修改内容合并到一起，常用的合并指令`git merge [branch]`，**将分支[branch]合并到<font color=gree>当前分支</font>**。根据要合并的内容的不同，具体合并过程就会有多种情况。
 
-![30f17630-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntumAYDtQAABnFdig9Cs735.png)
+![30f17630-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntumAYDtQAABnFdig9Cs735.png)
 
 
 
@@ -834,7 +834,7 @@ ref: refs/heads/dev
 
 如下图，master分支么有任何提交，`“git merge dev”`合并分支`dev`到`master`，此时合并速度就非常快，直接移动`master`的“指针”引用到`dev`即可。**这就是快速合并（Fast forward），不会产生新的提交**。
 
-![3111cc6e-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAbScgAADxOo2dDes238.png)
+![3111cc6e-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAbScgAADxOo2dDes238.png)
 
 
 
@@ -849,7 +849,7 @@ ref: refs/heads/dev
 - 如果两边变更的文件不同，没有什么冲突，就自动合并了。
 - 如果有修改同一个文件，则会存在冲突，到底该采用哪边的，程序无法判断，就换产生冲突。冲突内容需要人工修改后再重新提交，才能完成最终的合并。
 
-![311d073c-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAYPvqAADAqlIT5Es710.png)
+![311d073c-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAYPvqAADAqlIT5Es710.png)
 
 
 
@@ -871,7 +871,7 @@ ref: refs/heads/dev
 
 把两个分支的修改内容合并到一起的办法有两种：`merge`和`rebase`，作用都是一样的，区别是`rebase`的提交历史更简洁，干掉了分叉，`merge`的提交历史更完整。
 
-![31568232-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAQ0GtAAGZ1qN_c6I538.png)
+![31568232-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAQ0GtAAGZ1qN_c6I538.png)
 
 
 
@@ -895,7 +895,7 @@ $ git merge dev
 
 默认标签是打在最新提交的`commit`上的，如果希望在指定的提交上打标签则带上提交编号（`commit id`）：`git tag v0.9 f52c633`
 
-![31806c28-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAAhWTAABS5R19Fjk993.png)
+![31806c28-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAAhWTAABS5R19Fjk993.png)
 
 
 
@@ -937,7 +937,7 @@ v1
 - **已提交但么有push的提交如何撤销？**——`reset、revert`
 - **已push的提交如何撤销？**—— 同上，先本地撤销，然后强制推送`git push origin -f`，**注意慎用！**记得先`pull`获取更新。
 
-![318807bc-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAMo0HAAEFtG7gqeE691.png)
+![318807bc-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAMo0HAAEFtG7gqeE691.png)
 
 
 
@@ -993,7 +993,7 @@ Updated 1 path from f951a96
 - 回退版本`git reset --hard v4`或`git reset --hard HEAD~2`，`master`、`HEAD`会指向`v4`提交，`v5`、`v6`就被废弃了。
 - 也可以重新恢复到`v6`版本：`git reset --hard v6`，就是移动`master`、`HEAD`的“指针”地址。
 
-![31a834ba-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAOtbVAABy8M4JRRg341.png)
+![31a834ba-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAOtbVAABy8M4JRRg341.png)
 
 
 
@@ -1004,7 +1004,7 @@ Updated 1 path from f951a96
 - `mixed`为默认模式，参数可以省略。
 - 只有`hard`模式会重置工作区、暂存区，一般用这个模式会多一点。
 
-![31c5ee4c-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuqAAfbdAAAdaLk--YI707.png)
+![31c5ee4c-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuqAAfbdAAAdaLk--YI707.png)
 
 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
 
@@ -1037,7 +1037,7 @@ ccb9937 (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: commit: 报表新增�
 
 安全的撤销某一个提交记录，基本原理就是生产一个新的提交，用原提交的逆向操作来完成撤销操作。注意，这不同于`reset`，`reset`是回退版本，`revert`只是用于撤销某一次历史提交，操作是比较安全的。
 
-![31ecbea0-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuuAbIE4AACKuOcPo4o999.png)
+![31ecbea0-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuuAbIE4AACKuOcPo4o999.png)
 
 
 
@@ -1084,7 +1084,7 @@ $ git revert 41ea42 -m'撤销对***的修改'
 
 `Git flow（Git工作流程）`是指软件项目中的一种`Git`分支管理模型，经过了大量的实践和优化，被认为是现代敏捷软件开发和`DevOps`（开发、技术运营和质量保障三者的交集）的最佳实践。`Git flow`主要流程及关键分支：`原图地址-processon`
 
-![31f4b5a6-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuuAYmKsAAG84OIZh3A871.png)
+![31f4b5a6-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuuAYmKsAAG84OIZh3A871.png)
 
 
 
@@ -1097,7 +1097,7 @@ $ git revert 41ea42 -m'撤销对***的修改'
 - ③ 合并代码到`dev`分支，在本地`Git`中操作即可；
 - ④ 合并代码到`master`分支。
 
-![321d1578-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuuAGmRlAAAev-f9Cdo088.png)
+![321d1578-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuuAGmRlAAAev-f9Cdo088.png)
 
 
 
@@ -1105,7 +1105,7 @@ $ git revert 41ea42 -m'撤销对***的修改'
 
 **开发分支：`dev`**，开发版本分支，针对迭代任务开发的分支，日常开发原则上都在此分支上面，迭代完成后合并到`release`分支，开发、发版两不误。
 
-![32417fb2-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuuAL9CNAABR3OeBxbc170.png)
+![32417fb2-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuuAL9CNAABR3OeBxbc170.png)
 
 
 
@@ -1157,7 +1157,7 @@ $ git stash pop
 
 当有一个紧急bug，在`dev`上修复完，我们需要把`dev`上的这个`bug`修复所做的修改“复制”到`master`分支，但不想把整个`dev`合并过去。为了方便操作，Git专门提供了一个`cherry-pick`命令，让我们能复制一个特定的提交到当前分支，而不管这个提交在哪个分支。
 
-![325e365c-05d3-11ee-962d-dac502259ad0.png](x-git-基础概念/wKgZomTntuuAMm7aAACWnYDL9qo697.png)
+![325e365c-05d3-11ee-962d-dac502259ad0.png](笔记/01 附件/git-基础概念/wKgZomTntuuAMm7aAACWnYDL9qo697.png)
 
 
 
