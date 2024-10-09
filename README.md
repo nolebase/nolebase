@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="350" src="https://user-images.githubusercontent.com/19204772/193437443-b5e04990-9957-4339-a83c-72b33307dbff.png">
+  <img width="350" src="https://user-images.githubusercontent.com/19204772/193437443-b5e04990-9957-4339-a83c-72b33307dbff.png" alt="Nólëbase|nolebase">
 </p>
 
 <p align="center">
@@ -11,6 +11,22 @@
   <a href="https://discord.gg/XuNFDcDZGj"><img src="https://img.shields.io/discord/1229292283657195520?style=flat&logo=discord&logoColor=white&label=Discord&color=%23404eed" /></a>
   <a href="https://t.me/+6WKTUzWijf1kMzFl"><img src="https://img.shields.io/badge/Group-%235AA9E6?logo=telegram&label=Telegram" /></a>
 </p>
+
+<p align="center">
+  <a href="https://github.com/nolebase/sponsors">
+    <img src="https://cdn.jsdelivr.net/gh/nolebase/sponsors/sponsors.svg"/>
+  </a>
+</p>
+
+<p align="center">
+  这个项目得以实现，要感谢所有支持我们的 Sponsors<br>
+  你也可以访问我们的 Sponsors 页面来加入其中：
+</p>
+<p align="center">
+<a href="https://github.com/sponsors/LittleSound"><img src="https://img.shields.io/static/v1?label=Sponsor&message=Rizumu&logo=GitHub&color=%23fe8e86&style=for-the-badge" /></a>
+<a href="https://github.com/sponsors/nekomeowww"><img src="https://img.shields.io/static/v1?label=Sponsor&message=Neko&logo=GitHub&color=%23fe8e86&style=for-the-badge" /></a>
+</p>
+
 
 # Nólëbase
 
