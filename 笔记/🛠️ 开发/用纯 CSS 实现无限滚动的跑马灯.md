@@ -8,7 +8,7 @@ tags:
 
 # 用纯 CSS 实现无限滚动文字的跑马灯
 
-René Roth | <marquee>: Alternatives in CSS
+René Roth | `<marquee>`: Alternatives in CSS
 https://reneroth.xyz/marquees-in-css/
 
 web前端 - 使用css动画实现跑马灯 - 掘金

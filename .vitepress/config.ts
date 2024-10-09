@@ -1,13 +1,13 @@
 import process from 'node:process'
-import { defineConfig } from 'vitepress'
+import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
+import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+
+import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
+import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
-
-import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
-import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
-import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
-import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
-import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
+import { defineConfig } from 'vitepress'
 
 import { creatorNames, creatorUsernames, discordLink, githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
 import { sidebar } from './docsMetadata.json'
@@ -221,7 +221,7 @@ export default defineConfig({
     },
     math: true,
     config: (md) => {
-      md.use(MarkdownItFootnote)
+      md.use(MarkdownItFootnote as any)
       md.use(MarkdownItMathjax3 as any)
       md.use(BiDirectionalLinks({
         dir: process.cwd(),
