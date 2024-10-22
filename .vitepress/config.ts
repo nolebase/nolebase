@@ -25,7 +25,7 @@ export default defineConfig({
       },
     },
   },
-  lang: 'zh-CN',
+  lang: 'en-US',
   title: siteName,
   description: siteDescription,
   ignoreDeadLinks: true,
@@ -148,8 +148,8 @@ export default defineConfig({
           root: {
             translations: {
               button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档',
+                buttonText: 'Search',
+                buttonAriaLabel: 'Search',
               },
               modal: {
                 noResultsText: '无法找到相关结果',
@@ -208,9 +208,9 @@ export default defineConfig({
       },
     },
     nav: [
-      { text: '主页', link: '/' },
-      { text: '笔记', link: '/笔记/' },
-      { text: '最近更新', link: '/toc' },
+      { text: 'Home', link: '/' },
+      { text: 'Docs', link: '/docs/' },
+      { text: 'Updates', link: '/toc' },
     ],
     sidebar,
   },
