@@ -1,7 +1,7 @@
-<!-- 目录 -->
+<!-- Release Notes -->
 <script lang="ts" setup>
-import { computed } from 'vue'
 import type { ArticleTree } from '../../../scripts/types/metadata'
+import { computed } from 'vue'
 import { sidebar } from '../../docsMetadata.json'
 
 const list = computed(() => {
@@ -32,14 +32,14 @@ const sortedList = computed(() => {
       <div class="inline-block">
         <span class="i-octicon:repo-16 align-middle text-xs opacity-50" />
         <span class="align-middle opacity-50">
-          类别：
+          Category:
         </span>
         <span class="rounded-sm bg-[var(--vp-c-bg-mute)] px-6px py-3px align-middle opacity-70">{{ item.category }}</span>
       </div>
       <div class="inline-block opacity-50">
         <span class="i-octicon:history-16 align-middle text-xs" />
         <span class="align-middle">
-          更新时间：{{ new Date(item.lastUpdated || 0).toLocaleDateString() }}
+          Last Updated: {{ new Date(item.lastUpdated || 0).toLocaleDateString() }}
         </span>
       </div>
     </div>

@@ -115,11 +115,11 @@ function copyShareLink() {
     >
       <span v-if="shareSuccess" flex items-center space-x-1>
         <span class="i-octicon:checkbox-16" />
-        <span>复制成功</span>
+        <span>Copy Success!!</span>
       </span>
       <span v-else flex items-center space-x-1>
         <span class="i-octicon:share-16" />
-        <span>分享此页</span>
+        <span>Share this page</span>
       </span>
     </Transition>
   </button>

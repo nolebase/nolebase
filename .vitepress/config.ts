@@ -126,11 +126,11 @@ export default defineConfig({
     ['script', { 'defer': 'true', 'data-domain': 'nolebase.ayaka.io', 'data-api': '/api/v1/page-external-data/submit', 'src': '/assets/page-external-data/js/script.js' }],
   ],
   themeConfig: {
-    outline: { label: '页面大纲', level: 'deep' },
-    darkModeSwitchLabel: '切换主题',
+    outline: { label: 'Outline', level: 'deep' },
+    darkModeSwitchLabel: 'Switch to dark mode',
     editLink: {
       pattern: `${githubRepoLink}/tree/main/:path`,
-      text: '编辑本页面',
+      text: 'Edit this page',
     },
     socialLinks: [
       { icon: 'github', link: githubRepoLink },
@@ -152,11 +152,11 @@ export default defineConfig({
                 buttonAriaLabel: 'Search',
               },
               modal: {
-                noResultsText: '无法找到相关结果',
-                resetButtonTitle: '清除查询条件',
+                noResultsText: 'No results could be found',
+                resetButtonTitle: 'Reset search query',
                 footer: {
-                  selectText: '选择',
-                  navigateText: '切换',
+                  selectText: 'Option',
+                  navigateText: 'Select',
                 },
               },
             },

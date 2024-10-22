@@ -11,12 +11,12 @@
             "id": "8fdbc022d1449898",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
-                "mode": "source",
-                "source": false
-              }
+                "file": "public/og.png"
+              },
+              "icon": "lucide-image",
+              "title": "og"
             }
           }
         ]
@@ -39,7 +39,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -48,13 +50,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "基础设施 AWS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +66,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -70,7 +76,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           },
           {
@@ -78,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "recent-files",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ]
@@ -102,7 +112,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "public/og.png",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -125,10 +135,12 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 1.737146941803905,
+                  "scale": 0.05920873090702345,
                   "close": true
                 }
-              }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of og"
             }
           },
           {
@@ -140,7 +152,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -150,7 +164,9 @@
               "type": "outline",
               "state": {
                 "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md"
-              }
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 用 CSS 画一本好看的可以交互的 3D 书"
             }
           },
           {
@@ -158,7 +174,9 @@
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ]
@@ -182,7 +200,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 用 CSS 画一本好看的可以交互的 3D 书"
             }
           },
           {
@@ -194,7 +214,9 @@
                 "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 用 CSS 画一本好看的可以交互的 3D 书"
             }
           },
           {
@@ -205,7 +227,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           }
         ],
@@ -217,67 +241,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-spaced-repetition:复习卡片": false,
-      "obsidian42-brat:BRAT": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "random-note:开始漫游笔记": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "8fdbc022d1449898",
   "lastOpenFiles": [
-    "node_modules/@vueuse",
-    "node_modules/@antfu",
-    "vite.config.ts.timestamp-1728465284690-0e28b7c319039.mjs",
-    "vite.config.ts.timestamp-1728464096252-aa8904c364146.mjs",
-    "pnpm-lock.yaml.2653060370",
-    "node_modules/@types",
-    "node_modules/@nolebase",
-    "node_modules/@netlify",
-    "node_modules/@iconify-json",
-    "node_modules/@hedgedoc",
-    "node_modules/@unocss",
-    "笔记/🛠️ 开发/JS Framework Benchmark 命令速查.md",
-    "笔记/🛠️ 开发/Another Custom Directive API in Vue and Vapor.md",
-    "笔记/🛠️ 开发/因为 dayjs 不能轻松导入全部的 i18n 语言而换用了 date-fns.md",
-    "笔记/🛠️ 开发/用兼容性更好，体积更小的 Rive 渲染和播放 Lottie 动画.md",
+    "public/obsidian-screenshot-2.png",
+    "public/android-chrome-192x192.png",
+    "public/og.png",
+    "public/safari-pinned-tab.svg",
+    "public/obsidian-logo.svg",
+    "public/obsidian-screenshot-1.png",
+    "public/mstile-310x310.png",
+    "public/mstile-144x144.png",
+    "public/mstile-70x70.png",
+    "public/logo.svg",
+    "public/favicon-32x32.png",
+    "toc.md",
+    "🔌 知识库插件列表.md",
+    "README.md",
+    "index.md",
+    "笔记/index.md",
+    "笔记/🪄 Vtuber/优化直播的时候 OBS 会造成 macOS 卡顿的问题.md",
+    "笔记/🪄 Vtuber/在 macOS 上作为 Vtuber 进行直播.md",
+    "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/本地开发环境 TLS 搭建和 DNS 覆写.md",
+    "笔记/🔒 PKI 公钥基础设施/TLS 传输层安全/HTTPS/申请 Lets Encrypt 的 SSL 证书.md",
+    "笔记/🎬 项目/Nolebase.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/如何卸载 macOS 虚拟声卡.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/修复在 macOS 上因为默认 pnpm 在 PATH 中权重过高导致 corepack 失效的问题.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/音频坏了？可以试试看重启系统组件 coreaudiod.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/修复 Finder（访达）在变更默认打开程序之后图标依然维持原样的异常问题.md",
+    "笔记/🎛️ 操作系统/🍎 macOS/修复 macOS 反复弹出提示 com.leagsoft.epp.gui.filemonitor.systemextension 将对你的电脑造成伤害的错误.md",
+    "笔记/🎓 学习/辅助专注力提升的音频 App.md",
+    "笔记/✍️ 文档工程/图表即代码（CaC）图表绘制.md",
+    "笔记/☀️ 生活/📅 事务/更新 HSBC HK 的中国内地联络地址.md",
+    "视图/未添加标签的页面.md",
+    "视图/尚未编写完成的页面.md",
     "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
-    "笔记/📦 收集箱/🐙 GitHub 项目/maplibre/index.md",
-    "编目 Catalog/文章/理解什么是 CRDT.md",
-    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
-    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
-    "笔记/🧱 基础设施/🛜 OpenWRT/assets/Pasted image 20240520003337.png",
-    "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/将 TrueNAS 共享存储连接到 K8s 集群.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
-    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
-    "笔记/🧱 基础设施/云上集群的 GPU.md",
-    "笔记/🧮 数学/空洞的想法.md",
-    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
-    "笔记/🤖 AI 人工智能/领域/音频/配置和运行 ChatTTS.md",
-    "笔记/🤖 AI 人工智能/领域/音频/在 macOS 上配置 GPT-SoVITS-WebUI.md",
-    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
-    "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
-    "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
-    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
-    "笔记/🤖 AI 人工智能/扩散模型是如何工作的？.md",
+    "vite.config.ts.timestamp-1729996096663-dff0bd6eee4a4.mjs",
+    "vite.config.ts.timestamp-1729995929583-2d484f5a7bb3b.mjs",
+    "vite.config.ts.timestamp-1729995878238-8f4a5b82600c8.mjs",
+    "Notes/thoughts/supabase.md",
+    "Notes/thoughts/UnoCSS.md",
+    "Notes/thoughts/Free Wi-Fi.md",
+    "Notes/thoughts/Content Security Policy (CSP).md",
+    "Notes/thoughts",
+    "Notes/tags",
+    "Notes/Excalidraw/resize-fujifilm-x-app 2024-09-23.excalidraw",
+    "Notes/Excalidraw/example-2024-09-21-1707.excalidraw",
+    "Notes/assets",
+    "Notes/Tips",
+    "Notes/Tech",
     "未命名.canvas"
   ]
 }
