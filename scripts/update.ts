@@ -11,6 +11,7 @@ import matter from 'gray-matter'
 import uniq from 'lodash/uniq'
 import Git from 'simple-git'
 import TagsAlias from '../.vitepress/docsTagsAlias.json'
+import { collapsed } from '../metadata/config'
 
 const dir = './'
 const target = 'Notes/'
@@ -103,7 +104,7 @@ function addRouteItemRecursion(indexes: ArticleTree[], item: any, path: string[]
 
     if (!obj) {
       // 如果没有找到，就创建一个
-      obj = { index: onePath, text: onePath, collapsed: true, items: [] }
+      obj = { index: onePath, text: onePath, collapsed, items: [] }
       indexes.push(obj)
     }
     else if (!obj.items) {

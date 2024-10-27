@@ -50,11 +50,12 @@ async function createShareLink(url: string) {
 }
 
 async function getShareLink(): Promise<string> {
-  // 本身就是短地址或不是生产环境的话不处理，节省资源
   if (
     window.location.hostname !== plainTargetDomain
     || window.location.pathname.length <= 20
-  ) return window.location.href
+  ) {
+    return window.location.href
+  }
 
   const url = window.location.href
 

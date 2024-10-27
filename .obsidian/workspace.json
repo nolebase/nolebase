@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "82a8c0d8a989a292",
+        "id": "fbc6131d80f572f6",
         "type": "tabs",
         "children": [
           {
-            "id": "8fdbc022d1449898",
+            "id": "f9b2fb1391fa1ed9",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "public/og.png"
+                "file": "Notes/Tech/version manager.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "og"
+              "icon": "lucide-file",
+              "title": "version manager"
             }
           }
         ]
@@ -50,10 +52,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#productivity",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -112,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "public/og.png",
+                "file": "Notes/Tech/version manager.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,7 +142,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of og"
+              "title": "Graph of version manager"
             }
           },
           {
@@ -192,7 +194,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "Notes/Tech/version manager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +204,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 用 CSS 画一本好看的可以交互的 3D 书"
+              "title": "Backlinks for version manager"
             }
           },
           {
@@ -211,12 +213,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "Notes/Tech/version manager.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 用 CSS 画一本好看的可以交互的 3D 书"
+              "title": "Outgoing links from version manager"
             }
           },
           {
@@ -233,7 +235,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -249,41 +251,47 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8fdbc022d1449898",
+  "active": "f9b2fb1391fa1ed9",
   "lastOpenFiles": [
-    "Notes/Digital Garden/Digital Garden.md~",
-    "Notes/Uses.md",
-    "Notes/Pasted image 20241023144305.png",
+    "Notes/Tech/Git Cheatsheet.md",
+    "Notes/Tech/Awesome List.md",
     "Notes/index.md",
-    "Notes/Tips/TeuxDeux.md",
-    "Notes/Tips/Slab.md",
-    "Notes/Tips/Read It later.md",
-    "Notes/Tips/Obsidian Cheatsheet.md",
-    "Notes/Tips/Mac_2024-10-22.png",
-    "Notes/Tips/Mac Settings.md",
-    "Notes/Tips/How To Search App.md",
-    "Notes/Tips/GDPR.md",
-    "Notes/Tips/Draw Tool.md",
-    "Notes/Tips/Block Selection.md",
-    "Notes/Tips",
-    "Notes/thoughts/カーボローディング.md",
-    "Notes/thoughts/ウォーターローディング.md",
-    "Notes/thoughts/X-H2.md",
-    "Notes/thoughts/Workflow.md",
-    "Notes/thoughts/WeekToDo.md",
-    "Notes/thoughts/Warp.md",
-    "Notes/thoughts/VitePress.md",
-    "Notes/thoughts/Unsplash.md",
-    "Notes/thoughts/UnoCSS.md",
-    "Notes/thoughts/Tweek Calendar.md",
-    "Notes/thoughts/todo mate.md",
-    "Notes/thoughts/Tinylytics.md",
-    "Notes/thoughts/Tinybird.md",
-    "Notes/thoughts/TanStack Query.md",
-    "Notes/thoughts",
-    "Notes/Tech",
+    "index.md",
+    "vite.config.ts.timestamp-1730021790573-7c9e2fc4e69b5.mjs",
+    "Notes/Uses.md",
+    "README.md",
+    "BoltAI.md",
+    "Notes/thoughts/AI Chat Client Tool.md",
+    "Notes/templates/クリエイティブプログラマー.md",
+    "Notes/templates",
+    "Notes/tags/seed.md",
     "Notes/tags",
-    "Notes/Photography",
+    "Notes/Bookmarks/index.md",
+    "Notes/Bookmarks/2024-09/2024-09-21__Kent C. Dodds 🌌 on X- I'm currently writing a test for this exercise-  a good example....md",
+    "Notes/Bookmarks/2024-09/2024-09-26__後で読む記事 (omnivore、pocket) や、github ページなどのさまざまなリンクやプロジェクト、さまざまなソフトウェアやソリューションへのリンク (rai....md",
+    "Notes/Bookmarks/2024-09/2024-09-26__New to Obsidian- how do you take notes on books without it becoming a chore- - r-Obsi....md",
+    "Notes/Bookmarks/2024-09/2024-09-25__Amazon - Mastering Functional Programming with TypeScript- Unlocking the Power of Fun....md",
+    "Notes/Bookmarks/2024-09/2024-09-24__Package Managers- A face-off (npm vs. pnpm vs. Yarn vs. Bun) - by AALA IT Solutions -....md",
+    "Notes/Bookmarks/2024-09/2024-09-24__Amazon - Modern Full-Stack React Projects- Build, maintain, and deploy modern web app....md",
+    "Notes/Bookmarks/2024-09/2024-09-18__What’s new- Introducing Height 2.0 with Autonomous workflows, Teams, Multiplayer curs....md",
+    "Notes/Bookmarks/2024-09/2024-09-14__Digital Garden. The topic of note-taking remains… - by Anton Belyaev - Aug, 2024 - Me....md",
+    "Notes/Bookmarks/2024-09/2024-09-13__GitHub - arthurfiorette-proposal-safe-assignment-operator- Draft for ECMAScript Error....md",
+    "Notes/Bookmarks/2024-09/2024-09-02__Takuya Matsuyama leveraged viral content to grow his SaaS to $10k+ MRR and become a Y....md",
+    "Notes/Bookmarks/2024-09/2024-09-11__【企業・人事向け】Findy(ファインディ)の使い方・運用方法を採用代行のプロが解説！特徴や費用、スカウトのコツまで - HeaR inc.-企業の採用力向上を支援.md",
+    "Notes/Bookmarks/2024-09/2024-09-12__Product engineers. We had just finished a customer… - by Sherif Mansour - Medium.md",
+    "Notes/Bookmarks/2024-09/2024-09-27__React and Next.js is DEAD — Something New is (Finally) Replacing It (For Good).md",
+    "Notes/Bookmarks/2024-09/2024-09-26__プロジェクトやキャリアを成功させる必須要素「3つのP」とは。ログラスVPoEに聞く開発体制改善の秘訣 - what we use（技術スタックデータベース）.md",
+    "Notes/Bookmarks/2024-09/2024-09-11__私は新しいランナーのためにApple Watchアプリを作り、最初の5Kを走るように案内しました。10K拡張プランを追加しました🏃‍♀️：r-apple.md",
+    "Notes/Bookmarks/2024-09",
+    "Notes/Bookmarks/2024-08",
+    "Notes/Bookmarks/2024-07",
+    "Notes/Bookmarks/2024-06",
+    "Notes/Bookmarks/2024-05",
+    "Notes/Bookmarks/2024-04",
+    "Notes/Bookmarks",
+    "public/og.png",
+    "Notes/Pasted image 20241023144305.png",
+    "Notes/Tips/Mac_2024-10-22.png",
     "Notes/assets/web-vital-3-points.png",
     "Notes/assets/web-dev-core-web-vitals-section.png",
     "Notes/assets/teuxdeux.gif",
@@ -291,12 +299,6 @@
     "Notes/assets/slab-ux-preview.gif",
     "Notes/assets/slab-template.png",
     "Notes/assets/slab-list.png",
-    "Notes/assets/slab-compare-notion.png",
-    "Notes/Excalidraw/resize-fujifilm-x-app 2024-09-23.excalidraw",
-    "Notes/Excalidraw/example-2024-09-21-1707.excalidraw",
-    "Notes/assets",
-    "Notes/Mental Model",
-    "Notes/Excalidraw",
     "未命名.canvas"
   ]
 }
