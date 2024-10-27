@@ -9,7 +9,7 @@ tags:
 ## Notionとの比較表
 
 ![[slab-compare-notion.png]]
-> *https://slab.com/alternative-to/notion/
+> *https://slab.com/alternative-to/notion/ 
 
 ## 特徴
 

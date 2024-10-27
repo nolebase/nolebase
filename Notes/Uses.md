@@ -28,8 +28,8 @@ tags:
 - [CIO SMARTCOBY Pro SLIM CABLE 35W2C](https://connectinternationalone.co.jp/cioproduct/mobilebattery/smartcoby/cio-mb35w2c-10000-sc/)
 - [CIO NovaPort DUO 45W](https://connectinternationalone.co.jp/cioproduct/adapter/novaport/cio-g45w2c/)
 ## Software
-- [[Workflowy]]: #PKM
-- [[Notes/thoughts/Notion]]: #PIM
+- [[Workflowy]]: #PKM 
+- [[Notion]]: #PIM
 - #Photography
 	- [[Photomator]]
 	- X App
@@ -58,7 +58,7 @@ tags:
 - Toggl
 - Spotify
 - Ghost with Pikapod
--
+- 
 ### Trial
 - OFFLIGHT
 - Portal app

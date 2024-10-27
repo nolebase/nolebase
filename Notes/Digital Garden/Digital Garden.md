@@ -6,7 +6,7 @@ tags:
   - seed
 ---
 [[micro.blog]]を始めとした、IndieWebに興味を持つ内に、Digital Gardenというワードを知りました。
-現在、[[Notes/thoughts/Obsidian]] でmarkdown管理し、[Quartz](https://github.com/jackyzha0/quartz)でコンテンツ展開しています。
+現在、[[Obsidian]] でmarkdown管理し、[Quartz](https://github.com/jackyzha0/quartz)でコンテンツ展開しています。
 
 ## 自分なりの運用
 
@@ -23,7 +23,7 @@ tags:
 | [Pelayo Arbués](https://www.pelayoarbues.com/)                                   | Quartzで構築されたサイト。[Photography](https://www.pelayoarbues.com/photography/)やサイトマップの構成を参考にしている。                                                                                                                               |
 | [Welcome in my mind 🧠 ](https://anthonyamar.fr/Welcome+in+my+mind+%F0%9F%A7%A0) | **Anthony**によるサイト。わかりやすく洗練されている。<br>[ソフトウェア原則に類しているという記事](https://anthonyamar.fr/Digital+garden/Software+design+principles+applied+to+digital+gardening)が知見。                                                              |
 | https://wiki.nikiv.dev/                                                          | 見てきた中で最大規模のDigital Garden。その大量のコンテンツを有料販売化している。ただ圧巻。そしてアプリやツールの運用方法は非常に参考になる。<br>                                                                                                                                         |
-| [📒 笔记 \| Nólëbase](https://nolebase.ayaka.io/%E7%AC%94%E8%AE%B0/)               | [[Notes/Digital Garden/nolebase]]の作者のサイト。                                                                                                                                                                                                      |
+| [📒 笔记 \| Nólëbase](https://nolebase.ayaka.io/%E7%AC%94%E8%AE%B0/)               | [[nolebase]]の作者のサイト。                                                                                                                                                                                                      |
 
 ## 参考文献
 

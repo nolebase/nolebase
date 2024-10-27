@@ -9,7 +9,7 @@ tags:
 
 ![[quartz.png]]
 ## Explorer
-###
+### 
 
 ```diff
 - filterFn: filterFn: (node) => node.name !== "tags", // filters out 'tags' folder

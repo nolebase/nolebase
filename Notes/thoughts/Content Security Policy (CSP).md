@@ -4,7 +4,7 @@ tags:
 ---
 ## 概要
 > **コンテンツ セキュリティ ポリシー**( [CSP ) は、クロスサイト スクリプティング (](https://developer.mozilla.org/en-US/docs/Glossary/CSP) [XSS](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting) ) やデータ インジェクション攻撃などの特定の種類の攻撃を検出して軽減するのに役立つ追加のセキュリティ レイヤーです。
->
+> 
 > [Content Security Policy (CSP) - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 
 HTTPの`Content-Security-Policy`レスポンスヘッダーに設定することで、信頼できるコンテンツやスクリプトのみを実行します。違反しているリソースの読み込みや実行は拒否されます。

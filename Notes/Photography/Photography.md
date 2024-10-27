@@ -18,4 +18,4 @@
 
 - [Glass](https://glass.photo/nitaking): 大好きなサービス
 - [Unsplash](https://unsplash.com/ja/@sa_nitawaki): これから投稿していきたい
-- [Instagram](https://www.instagram.com/nitastagram_photo/)
+- [Instagram](https://www.instagram.com/nitastagram_photo/) 

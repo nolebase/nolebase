@@ -4,7 +4,7 @@ tags:
   - obsidian
   - tips
 ---
-関連: [[Notes/thoughts/Obsidian]]
+関連: [[Obsidian]]
 ## Edit Properties
 
 > - Use the **Add file property** [command](https://help.obsidian.md/Plugins/Command+palette).
@@ -40,15 +40,15 @@ See also: https://forum.obsidian.md/t/add-images-folder/3856
 ### 1) Using Markdown alt
 
 > `![[image.png | center | 256]]` or
->
+> 
 > `![Photo | center | 256](image.png)`
->
+> 
 > The css to achieve that is as follows:
->
+> 
 > img[alt*="center"] {
 >     display: block;
 >     margin-left: auto;
 >     margin-right: auto;
 > }
->
+> 
 https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/centering_images_in_reading_mode/

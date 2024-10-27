@@ -4,21 +4,19 @@ tags:
   - "#evergreen"
 title: Satoshi Nitawaki
 ---
-[Satoshi Nitawaki](https://nitaking.omg.lol/ ) です。Product Engineerです。
+[Satoshi Nitawaki](https://nitaking.omg.lol/ ) です。Software Engineerです。
+Frontendを得意とする Full-Stack Engineerで、Product Engineerに近いかもしれません。
 
 [Blog](https://www.nitaking.dev)  
-General writing and opinions.
 
 **Online**
-[Micro.blog](https://nitaking.micro.blog/) | [About](https://www.nitaking.dev/about/)
- | [GitHub](https://github.com/nitaking)
+
+[Micro.blog](https://nitaking.micro.blog/) | [About](https://www.nitaking.dev/about/)  | [GitHub](https://github.com/nitaking)
 
 **Sitemap**
 - [[Uses]]
 - [[Tech]]
 - [[Photography]]
-- [[thoughts/]]
-- [[tags/]]
 
 ---
 
