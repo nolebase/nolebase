@@ -209,7 +209,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/docs/' },
+      { text: 'Knowledge', link: '/Notes/' },
       { text: 'Updates', link: '/toc' },
     ],
     sidebar,

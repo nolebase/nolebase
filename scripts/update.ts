@@ -1,18 +1,19 @@
 #!/usr/bin/env tsx
-import { fileURLToPath } from 'node:url'
-import { dirname, join, resolve } from 'node:path'
+
+import type { ArticleTree, DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
 import { createHash } from 'node:crypto'
+import { dirname, join, resolve } from 'node:path'
 import process from 'node:process'
-import fs from 'fs-extra'
+import { fileURLToPath } from 'node:url'
 import fg from 'fast-glob'
-import Git from 'simple-git'
+import fs from 'fs-extra'
 import matter from 'gray-matter'
 import uniq from 'lodash/uniq'
+import Git from 'simple-git'
 import TagsAlias from '../.vitepress/docsTagsAlias.json'
-import type { ArticleTree, DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
 
 const dir = './'
-const target = 'docs/'
+const target = 'Notes/'
 const folderTop = true
 
 export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')

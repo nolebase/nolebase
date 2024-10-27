@@ -1,6 +1,6 @@
-# 目录
+# Release Notes
 
-排序方式：`最近更新`
+Sort by: `Last Updated`
 
 ---
 

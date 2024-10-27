@@ -1,1 +1,0 @@
-- [Webアプリのアプリストア - WebCatalog](https://webcatalog.io/ja/apps/)
