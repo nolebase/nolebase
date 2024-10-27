@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Tech/version manager.md",
+                "file": "Notes/Photography/Photography.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "version manager"
+              "title": "Photography"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#productivity",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Notes/Tech/version manager.md",
+                "file": "Notes/Photography/Photography.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -142,7 +142,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of version manager"
+              "title": "Graph of Photography"
             }
           },
           {
@@ -194,7 +194,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Tech/version manager.md",
+                "file": "Notes/Photography/Photography.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +204,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for version manager"
+              "title": "Backlinks for Photography"
             }
           },
           {
@@ -213,12 +213,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Tech/version manager.md",
+                "file": "Notes/Photography/Photography.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from version manager"
+              "title": "Outgoing links from Photography"
             }
           },
           {
@@ -251,8 +251,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f9b2fb1391fa1ed9",
+  "active": "b5dfc4e6c8287ee4",
   "lastOpenFiles": [
+    "vite.config.ts.timestamp-1730024115817-a3da4894d0501.mjs",
+    "Notes/Photography/assets",
+    "Notes/Tech/version manager.md",
+    "vite.config.ts.timestamp-1730023932302-67c42bf8ae37a.mjs",
     "Notes/Tech/Git Cheatsheet.md",
     "Notes/Tech/Awesome List.md",
     "Notes/index.md",
@@ -280,15 +284,11 @@
     "Notes/Bookmarks/2024-09/2024-09-11__【企業・人事向け】Findy(ファインディ)の使い方・運用方法を採用代行のプロが解説！特徴や費用、スカウトのコツまで - HeaR inc.-企業の採用力向上を支援.md",
     "Notes/Bookmarks/2024-09/2024-09-12__Product engineers. We had just finished a customer… - by Sherif Mansour - Medium.md",
     "Notes/Bookmarks/2024-09/2024-09-27__React and Next.js is DEAD — Something New is (Finally) Replacing It (For Good).md",
-    "Notes/Bookmarks/2024-09/2024-09-26__プロジェクトやキャリアを成功させる必須要素「3つのP」とは。ログラスVPoEに聞く開発体制改善の秘訣 - what we use（技術スタックデータベース）.md",
-    "Notes/Bookmarks/2024-09/2024-09-11__私は新しいランナーのためにApple Watchアプリを作り、最初の5Kを走るように案内しました。10K拡張プランを追加しました🏃‍♀️：r-apple.md",
     "Notes/Bookmarks/2024-09",
     "Notes/Bookmarks/2024-08",
     "Notes/Bookmarks/2024-07",
     "Notes/Bookmarks/2024-06",
     "Notes/Bookmarks/2024-05",
-    "Notes/Bookmarks/2024-04",
-    "Notes/Bookmarks",
     "public/og.png",
     "Notes/Pasted image 20241023144305.png",
     "Notes/Tips/Mac_2024-10-22.png",
