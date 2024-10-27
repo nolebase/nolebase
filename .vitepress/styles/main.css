@@ -74,8 +74,8 @@ html, body {
 
 /* 标题所需要的字体 */
 @font-face {
-  font-family: tengwarannatar;
-  src: url(/tengwar-annatar-glaemscrafu.woff2) format('woff2');
+  /*font-family: tengwarannatar;*/
+  /*src: url(/tengwar-annatar-glaemscrafu.woff2) format('woff2');*/
   font-weight: 400;
   font-style: normal;
   font-display: block;
@@ -83,8 +83,8 @@ html, body {
 
 /* 标题所需要的字体 */
 @font-face {
-  font-family: tengwarannatar-bold;
-  src: url(/tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');
+  /*font-family: tengwarannatar-bold;*/
+  /*src: url(/tengwar-annatar-glaemscrafu-bold.woff2) format('woff2');*/
   font-weight: 400;
   font-style: normal;
   font-display: block;
@@ -93,7 +93,7 @@ html, body {
 /* 首页标题样式 */
 .VPHomeHero > .container > .main > h1 {
   font-size: 5rem;
-  font-family: 'tengwarannatar-bold';
+  /*font-family: 'tengwarannatar-bold';*/
 }
 
 /* 首页子标题样式 */

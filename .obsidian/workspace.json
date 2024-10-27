@@ -251,8 +251,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5dfc4e6c8287ee4",
+  "active": "f9b2fb1391fa1ed9",
   "lastOpenFiles": [
+    "vite.config.ts.timestamp-1730024866657-a1005be1f8551.mjs",
+    "vite.config.ts.timestamp-1730024707174-51e4159c3cc3.mjs",
     "vite.config.ts.timestamp-1730024115817-a3da4894d0501.mjs",
     "Notes/Photography/assets",
     "Notes/Tech/version manager.md",
@@ -287,8 +289,6 @@
     "Notes/Bookmarks/2024-09",
     "Notes/Bookmarks/2024-08",
     "Notes/Bookmarks/2024-07",
-    "Notes/Bookmarks/2024-06",
-    "Notes/Bookmarks/2024-05",
     "public/og.png",
     "Notes/Pasted image 20241023144305.png",
     "Notes/Tips/Mac_2024-10-22.png",
