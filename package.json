@@ -9,7 +9,7 @@
     "url": "https://github.com/nolebase"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=21.0.0"
   },
   "license": "MIT",
   "keywords": [
