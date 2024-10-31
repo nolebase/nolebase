@@ -4,7 +4,7 @@ import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 
 import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
-import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
+// import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { defineConfig } from 'vitepress'
@@ -221,15 +221,15 @@ export default defineConfig({
     },
     math: true,
     config: (md) => {
-      md.use(MarkdownItFootnote as any)
-      md.use(MarkdownItMathjax3 as any)
+      md.use(MarkdownItFootnote)
+      md.use(MarkdownItMathjax3)
       md.use(BiDirectionalLinks({
         dir: process.cwd(),
-      }) as any)
-      md.use(UnlazyImages() as any, {
+      }))
+      md.use(UnlazyImages(), {
         imgElementTag: 'NolebaseUnlazyImg',
       })
-      md.use(InlineLinkPreviewElementTransform as any)
+      md.use(InlineLinkPreviewElementTransform)
     },
   },
   async transformHead(context) {
@@ -241,12 +241,12 @@ export default defineConfig({
 
     return head
   },
-  async buildEnd(siteConfig) {
-    await buildEndGenerateOpenGraphImages({
-      baseUrl: targetDomain,
-      category: {
-        byLevel: 2,
-      },
-    })(siteConfig)
-  },
+  // async buildEnd(siteConfig) {
+  //   await buildEndGenerateOpenGraphImages({
+  //     baseUrl: targetDomain,
+  //     category: {
+  //       byLevel: 2,
+  //     },
+  //   })(siteConfig)
+  // },
 })
