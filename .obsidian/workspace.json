@@ -13,13 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "配置 CUDA 的一万种方法"
+            }
+          },
+          {
+            "id": "362e2d5392173459",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +54,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -54,7 +71,9 @@
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -62,7 +81,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           },
           {
@@ -70,7 +91,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           },
           {
@@ -78,7 +101,9 @@
             "type": "leaf",
             "state": {
               "type": "recent-files",
-              "state": {}
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
         ]
@@ -102,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -128,7 +153,9 @@
                   "scale": 1.737146941803905,
                   "close": true
                 }
-              }
+              },
+              "icon": "lucide-git-fork",
+              "title": "配置 CUDA 的一万种方法 的关系图"
             }
           },
           {
@@ -140,7 +167,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
             }
           },
           {
@@ -149,8 +178,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md"
-              }
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md"
+              },
+              "icon": "lucide-list",
+              "title": "配置 CUDA 的一万种方法 的大纲"
             }
           },
           {
@@ -158,10 +189,23 @@
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "85e74261f30e425b",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "笔记复习序列"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -174,7 +218,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +226,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "配置 CUDA 的一万种方法 的反向链接列表"
             }
           },
           {
@@ -191,10 +237,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "配置 CUDA 的一万种方法 的出链列表"
             }
           },
           {
@@ -205,7 +253,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           }
         ],
@@ -230,8 +280,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "8fdbc022d1449898",
+  "active": "85e74261f30e425b",
   "lastOpenFiles": [
+    "笔记/🧩 开源贡献/Kubernetes/CNCF Traval Funding.md",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+    "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
     "node_modules/@vueuse",
     "node_modules/@antfu",
     "vite.config.ts.timestamp-1728465284690-0e28b7c319039.mjs",
@@ -242,12 +295,10 @@
     "node_modules/@netlify",
     "node_modules/@iconify-json",
     "node_modules/@hedgedoc",
-    "node_modules/@unocss",
     "笔记/🛠️ 开发/JS Framework Benchmark 命令速查.md",
     "笔记/🛠️ 开发/Another Custom Directive API in Vue and Vapor.md",
     "笔记/🛠️ 开发/因为 dayjs 不能轻松导入全部的 i18n 语言而换用了 date-fns.md",
     "笔记/🛠️ 开发/用兼容性更好，体积更小的 Rive 渲染和播放 Lottie 动画.md",
-    "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
     "笔记/📦 收集箱/🐙 GitHub 项目/maplibre/index.md",
     "编目 Catalog/文章/理解什么是 CRDT.md",
     "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
@@ -271,7 +322,6 @@
     "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
     "笔记/🤖 AI 人工智能/领域/音频/配置和运行 ChatTTS.md",
     "笔记/🤖 AI 人工智能/领域/音频/在 macOS 上配置 GPT-SoVITS-WebUI.md",
-    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
     "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
     "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
     "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",

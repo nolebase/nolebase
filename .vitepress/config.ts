@@ -4,13 +4,13 @@ import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 
 import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
+import { calculateSidebar } from '@nolebase/vitepress-plugin-sidebar'
 // import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { defineConfig } from 'vitepress'
 
 import { creatorNames, creatorUsernames, discordLink, githubRepoLink, siteDescription, siteName, targetDomain } from '../metadata'
-import { sidebar } from './docsMetadata.json'
 
 export default defineConfig({
   vue: {
@@ -210,9 +210,13 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '笔记', link: '/笔记/' },
+      { text: '编目 Catalog', link: '/编目 Catalog/' },
       { text: '最近更新', link: '/toc' },
     ],
-    sidebar,
+    sidebar: calculateSidebar([
+      { folderName: '笔记', separate: true },
+      { folderName: '编目 Catalog', separate: true },
+    ]),
   },
   markdown: {
     theme: {

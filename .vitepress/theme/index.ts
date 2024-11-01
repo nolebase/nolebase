@@ -1,7 +1,4 @@
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue'
-
 import {
   InjectionKey as NolebaseEnhancedReadabilitiesInjectionKey,
   LayoutMode as NolebaseEnhancedReadabilitiesLayoutMode,
@@ -10,16 +7,15 @@ import {
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
 import {
-  NolebaseInlineLinkPreviewPlugin,
-} from '@nolebase/vitepress-plugin-inline-link-preview/client'
-
+  NolebaseGitChangelogPlugin,
+} from '@nolebase/vitepress-plugin-git-changelog/client'
 import {
   NolebaseHighlightTargetedHeading,
 } from '@nolebase/vitepress-plugin-highlight-targeted-heading/client'
 
 import {
-  NolebaseGitChangelogPlugin,
-} from '@nolebase/vitepress-plugin-git-changelog/client'
+  NolebaseInlineLinkPreviewPlugin,
+} from '@nolebase/vitepress-plugin-inline-link-preview/client'
 
 import {
   NolebasePagePropertiesPlugin,
@@ -28,6 +24,10 @@ import {
 import {
   NolebaseUnlazyImg,
 } from '@nolebase/vitepress-plugin-thumbnail-hash/client'
+
+import DefaultTheme from 'vitepress/theme'
+
+import { h } from 'vue'
 
 import AppContainer from './components/AppContainer.vue'
 import DocFooter from './components/DocFooter.vue'
