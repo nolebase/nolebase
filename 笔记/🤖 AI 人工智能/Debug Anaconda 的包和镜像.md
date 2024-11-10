@@ -49,7 +49,7 @@ linux-32   linux-64   linux-aarch64   linux-armv6l   linux-armv7l   linux-ppc64l
 
 的行：
 
-![[Pasted image 20241108170553.png]]
+![](./assets/Pasted-image-20241108170553.png)
 
 这些都是系统内核和 CPU 架构的编码，它会按照：
 
@@ -253,4 +253,4 @@ opendiff nb_conda_kernels-2.5.1-pyh707e725_2/info/info/index.json nb_conda_kerne
 
 直接进行 diff 对比：
 
-![[Pasted image 20241108174435.png]]
+![](./assets/Pasted-image-20241108174435.png)
