@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
-import Components from 'unplugin-vue-components/vite'
-import UnoCSS from 'unocss/vite'
-import Inspect from 'vite-plugin-inspect'
-
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
 import { ThumbnailHashImages } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
+import UnoCSS from 'unocss/vite'
+
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
+import Inspect from 'vite-plugin-inspect'
 
 import { creators, githubRepoLink } from './metadata'
 
@@ -51,6 +51,7 @@ export default defineConfig(async () => {
         '@nolebase/vitepress-plugin-enhanced-readabilities',
         '@nolebase/vitepress-plugin-highlight-targeted-heading',
         '@nolebase/vitepress-plugin-inline-link-preview',
+        '@nolebase/vitepress-plugin-index',
       ],
     },
   }
