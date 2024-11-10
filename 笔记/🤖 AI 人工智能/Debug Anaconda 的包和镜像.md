@@ -208,38 +208,38 @@ $ diff -u nb_conda_kernels-2.5.1-pyh707e725_2/info/info/index.json nb_conda_kern
 +++ nb_conda_kernels-2.5.2-py312h06a4308_0/info/info/index.json	2024-11-05 23:59:51
 @@ -1,20 +1,22 @@
  {
--  "arch": null, # [!code] --
--  "build": "pyh707e725_2", # [!code] --
--  "build_number": 2, # [!code] --
-+  "arch": "x86_64", # [!code] ++
-+  "build": "py312h06a4308_0", # [!code] ++
-+  "build_number": 0, # [!code] ++
-+  "constrains": [ # [!code] ++
-+    "notebook >=5.3.0" # [!code] ++
-+  ], # [!code] ++
+-  "arch": null, # [!code --]
+-  "build": "pyh707e725_2", # [!code --]
+-  "build_number": 2, # [!code --]
++  "arch": "x86_64", # [!code ++]
++  "build": "py312h06a4308_0", # [!code ++]
++  "build_number": 0, # [!code ++]
++  "constrains": [ # [!code ++]
++    "notebook >=5.3.0" # [!code ++]
++  ], # [!code ++]
    "depends": [
--    "__unix", # [!code] --
+-    "__unix", # [!code --]
      "jupyter_client >=4.2",
--    "notebook", # [!code] --
-+    "jupyter_core", # [!code] ++
+-    "notebook", # [!code --]
++    "jupyter_core", # [!code ++]
      "psutil",
--    "python >=3.8", # [!code] --
--    "requests" # [!code] --
-+    "python >=3.12,<3.13.0a0", # [!code] ++
-+    "traitlets" # [!code] ++
+-    "python >=3.8", # [!code --]
+-    "requests" # [!code --]
++    "python >=3.12,<3.13.0a0", # [!code ++]
++    "traitlets" # [!code ++]
    ],
    "license": "BSD-3-Clause",
-+  "license_family": "BSD", # [!code] ++
++  "license_family": "BSD", # [!code ++]
    "name": "nb_conda_kernels",
--  "noarch": "python", # [!code] --
--  "platform": null, # [!code] --
--  "subdir": "noarch", # [!code] --
--  "timestamp": 1714150164539, # [!code] --
--  "version": "2.5.1" # [!code] --
-+  "platform": "linux", # [!code] ++
-+  "subdir": "linux-64", # [!code] ++
-+  "timestamp": 1730822391556, # [!code] ++
-+  "version": "2.5.2" # [!code] ++
+-  "noarch": "python", # [!code --]
+-  "platform": null, # [!code --]
+-  "subdir": "noarch", # [!code --]
+-  "timestamp": 1714150164539, # [!code --]
+-  "version": "2.5.1" # [!code --]
++  "platform": "linux", # [!code ++]
++  "subdir": "linux-64", # [!code ++]
++  "timestamp": 1730822391556, # [!code ++]
++  "version": "2.5.2" # [!code ++]
  }
 ```
 
