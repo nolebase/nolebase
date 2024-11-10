@@ -42,6 +42,7 @@
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.7.0",
     "@nolebase/vitepress-plugin-git-changelog": "^2.7.0",
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.7.0",
+    "@nolebase/vitepress-plugin-index": "^2.9.0",
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.7.0",
     "@nolebase/vitepress-plugin-meta": "^2.7.0",
     "@nolebase/vitepress-plugin-og-image": "^2.7.0",
