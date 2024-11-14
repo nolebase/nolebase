@@ -1,4 +1,4 @@
-# 一个新的地图项目和 Exping 之死
+# 一个新的地图项目和 exping 之死
 
 今天。上海[“聚一聚”](https://x.com/OikawaRizumu/status/1857086052629983549)现场变成新点子孵化器了。我们深度讨论了[之前提到](https://x.com/OikawaRizumu/status/1856232869758414892)的咖啡地图 APP 的可行性。
 
