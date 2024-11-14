@@ -1,4 +1,4 @@
-# 这个咖啡地图项目
+# 一个新的地图项目和 Exping 之死
 
 今天。上海[“聚一聚”](https://x.com/OikawaRizumu/status/1857086052629983549)现场变成新点子孵化器了。我们深度讨论了[之前提到](https://x.com/OikawaRizumu/status/1856232869758414892)的咖啡地图 APP 的可行性。
 
@@ -16,8 +16,13 @@
 
 但是基于地图的分享社区，这种 APP 是非常看重“人”的，未必适宜“优质果酱”的商业方式。
 
-[![[quality-software.png]]](https://stephango.com/quality-software)
+[
+  文章：优质软件值得您辛苦赚来的钱\
+  ![[quality-software.png]]
+](https://stephango.com/quality-software)
 
-我们可以使用像是 @bluesky 背后的 ATProto 这样的去中心化联邦宇宙和 @loro_dev 这样的本地优先 Local-first 技术。从技术角度保障了项目的存续，使用上的自由，以及数据上的安全。
+我们可以使用像是 [🦋 Bluesky](https://bsky.social/about) 背后的 [ATProto](https://github.com/bluesky-social/atproto) 这样的去中心化[联邦宇宙](https://en.wikipedia.org/wiki/Fediverse)和 [🦜 Loro](https://loro.dev/) 这样的本地优先 [Local-first](https://localfirstweb.dev/) 技术。从技术角度保障了项目的存续，使用上的自由，以及数据上的安全。
 
-咖啡地图这个点子有可能以一个开源项目的形式由热爱使用它的人亲手构建出来并活下去。（5/5）
+![[fediverse-and-local-first.png]]
+
+咖啡地图这个点子有可能以一个开源项目的形式由热爱使用它的人亲手构建出来并活下去。
