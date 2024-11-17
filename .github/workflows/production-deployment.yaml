@@ -71,12 +71,12 @@ jobs:
           fetch-depth: 0
 
       - name: 安装 Node.js 22.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 22.x
 
       - name: 安装 pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           run_install: false
 
