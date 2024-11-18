@@ -44,8 +44,8 @@ jobs:
         with:
           workflow_conclusion: success
           run_id: ${{ github.event.workflow_run.id }}
-          name: docs-build
-          path: docs-build
+          name: docs-build-${{ steps.pr-num }}
+          path: docs-build-${{ steps.pr-num }}
           allow_forks: true
 
       - name: 安装 Node.js 22.x
