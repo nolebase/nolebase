@@ -78,6 +78,6 @@ jobs:
       - name: 上传构建产物
         uses: actions/upload-artifact@v4
         with:
-          name: docs-build-${{ github.event.pull_request.number }}-${{ github.sha }}
+          name: docs-build-${{ github.event.pull_request.number }}
           path: .vitepress/dist
           overwrite: true
