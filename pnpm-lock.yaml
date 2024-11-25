@@ -154,7 +154,7 @@ importers:
         version: 5.4.11(@types/node@20.14.5)(less@4.2.0)
       vite-plugin-inspect:
         specifier: ^0.8.7
-        version: 0.8.7(rollup@4.27.4)(vite@5.4.11(@types/node@20.14.5)(less@4.2.0))
+        version: 0.8.8(rollup@4.27.4)(vite@5.4.11(@types/node@20.14.5)(less@4.2.0))
       vitepress:
         specifier: ^1.4.2
         version: 1.4.2(@algolia/client-search@4.23.3)(@types/node@20.14.5)(less@4.2.0)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.6.3)
@@ -976,8 +976,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@polka/url@1.0.0-next.24':
-    resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
+  '@polka/url@1.0.0-next.28':
+    resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
   '@resvg/resvg-wasm@2.6.2':
     resolution: {integrity: sha512-FqALmHI8D4o6lk/LRWDnhw95z5eO+eAa6ORjVg09YRR7BkcM6oPHU9uyC0gtQG5vpFLvgpeU4+zEAz2H8APHNw==}
@@ -992,8 +992,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/pluginutils@5.1.2':
-    resolution: {integrity: sha512-/FIdS3PyZ39bjZlwqFnWqCOVnW7o963LtKMwQOD0NhQqw22gSr2YY1afu3FxRip4ZCZNsD5jq6Aaz6QV3D/Njw==}
+  '@rollup/pluginutils@5.1.3':
+    resolution: {integrity: sha512-Pnsb6f32CD2W3uCaLZIzDmeFyQ2b8UWMFI7xtwUezpcGBDVDW6y9XgAWIlARiGAo6eNF5FK5aQTr0LFyNyqq5A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -3010,9 +3010,6 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  picocolors@1.1.0:
-    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
-
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
@@ -3212,6 +3209,10 @@ packages:
   sirv@2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
     engines: {node: '>= 10'}
+
+  sirv@3.0.0:
+    resolution: {integrity: sha512-BPwJGUeDaDCHihkORDchNyyTvWFhcusy1XMmhEVTQTwGeybFbp8YEmB+njbPnth1FibULBSBVwCQni25XlCUDg==}
+    engines: {node: '>=18'}
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -3541,8 +3542,8 @@ packages:
   vfile@6.0.1:
     resolution: {integrity: sha512-1bYqc7pt6NIADBJ98UiG0Bn/CHIVOoZ/IyEkqIruLg0mE1BKzkOXY2D6CSqQIcKqgadppE5lrxgWXJmXd7zZJw==}
 
-  vite-plugin-inspect@0.8.7:
-    resolution: {integrity: sha512-/XXou3MVc13A5O9/2Nd6xczjrUwt7ZyI9h8pTnUMkr5SshLcb0PJUOVq2V+XVkdeU4njsqAtmK87THZuO2coGA==}
+  vite-plugin-inspect@0.8.8:
+    resolution: {integrity: sha512-aZlBuXsWUPJFmMK92GIv6lH7LrwG2POu4KJ+aEdcqnu92OAf+rhBnfMDQvxIJPEB7hE2t5EyY/PMgf5aDLT8EA==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': '*'
@@ -4838,7 +4839,7 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@polka/url@1.0.0-next.24': {}
+  '@polka/url@1.0.0-next.28': {}
 
   '@resvg/resvg-wasm@2.6.2': {}
 
@@ -4850,11 +4851,11 @@ snapshots:
     optionalDependencies:
       rollup: 4.27.4
 
-  '@rollup/pluginutils@5.1.2(rollup@4.27.4)':
+  '@rollup/pluginutils@5.1.3(rollup@4.27.4)':
     dependencies:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
-      picomatch: 2.3.1
+      picomatch: 4.0.2
     optionalDependencies:
       rollup: 4.27.4
 
@@ -5171,7 +5172,7 @@ snapshots:
   '@unocss/cli@0.63.6(rollup@4.27.4)':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@rollup/pluginutils': 5.1.2(rollup@4.27.4)
+      '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
       '@unocss/config': 0.63.6
       '@unocss/core': 0.63.6
       '@unocss/preset-uno': 0.63.6
@@ -5314,7 +5315,7 @@ snapshots:
   '@unocss/vite@0.63.6(rollup@4.27.4)(typescript@5.6.3)(vite@5.4.11(@types/node@20.14.5)(less@4.2.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@rollup/pluginutils': 5.1.2(rollup@4.27.4)
+      '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
       '@unocss/config': 0.63.6
       '@unocss/core': 0.63.6
       '@unocss/inspector': 0.63.6(typescript@5.6.3)
@@ -7311,8 +7312,6 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  picocolors@1.1.0: {}
-
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
@@ -7564,7 +7563,13 @@ snapshots:
 
   sirv@2.0.4:
     dependencies:
-      '@polka/url': 1.0.0-next.24
+      '@polka/url': 1.0.0-next.28
+      mrmime: 2.0.0
+      totalist: 3.0.1
+
+  sirv@3.0.0:
+    dependencies:
+      '@polka/url': 1.0.0-next.28
       mrmime: 2.0.0
       totalist: 3.0.1
 
@@ -7908,17 +7913,17 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-plugin-inspect@0.8.7(rollup@4.27.4)(vite@5.4.11(@types/node@20.14.5)(less@4.2.0)):
+  vite-plugin-inspect@0.8.8(rollup@4.27.4)(vite@5.4.11(@types/node@20.14.5)(less@4.2.0)):
     dependencies:
       '@antfu/utils': 0.7.10
-      '@rollup/pluginutils': 5.1.2(rollup@4.27.4)
+      '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
       debug: 4.3.7
       error-stack-parser-es: 0.1.5
       fs-extra: 11.2.0
       open: 10.1.0
       perfect-debounce: 1.0.0
-      picocolors: 1.1.0
-      sirv: 2.0.4
+      picocolors: 1.1.1
+      sirv: 3.0.0
       vite: 5.4.11(@types/node@20.14.5)(less@4.2.0)
     transitivePeerDependencies:
       - rollup
