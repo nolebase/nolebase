@@ -95,7 +95,7 @@ jobs:
           body-includes: 到 Netlify
 
       - name: 创建或更新评论
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ env.PR_NUM }}
@@ -138,7 +138,7 @@ jobs:
           body-includes: 到 Netlify
 
       - name: 创建或更新评论
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ env.PR_NUM }}
