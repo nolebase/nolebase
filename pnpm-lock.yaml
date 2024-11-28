@@ -64,7 +64,7 @@ importers:
         version: 2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
       '@nolebase/vitepress-plugin-sidebar':
         specifier: ^2.10.0
-        version: 2.10.0
+        version: 2.11.1
       '@nolebase/vitepress-plugin-thumbnail-hash':
         specifier: ^2.10.0
         version: 2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
@@ -966,8 +966,8 @@ packages:
   '@nolebase/vitepress-plugin-page-properties@2.10.0':
     resolution: {integrity: sha512-SrdAGquW0NPFH6EVm2oK4e2Zv77MTNw8XBi2b6ch8Ekps5+v0CkE35b7vVKViyfgJu05tECaUPGYVtkyT/LmYw==}
 
-  '@nolebase/vitepress-plugin-sidebar@2.10.0':
-    resolution: {integrity: sha512-X0iYWFXDCQv2+CmyDXEzyq2HIc21UoTl8JVywIv++Ifqo4Qh5Q0JzFwmdWDnb6lraEdrZ+9q443RzP/gBOW62g==}
+  '@nolebase/vitepress-plugin-sidebar@2.11.1':
+    resolution: {integrity: sha512-yDq9OVFrALfxAlFC2bkrvgb3xAGIgH4AZ4+ybPnobSpWydh23DDm+ZOir+K52DWUAJwhDf5FmumQQz65SIrTlQ==}
 
   '@nolebase/vitepress-plugin-thumbnail-hash@2.10.0':
     resolution: {integrity: sha512-GwZeH5BgvSrRGi7mKybx9d2o+5zG0c2vn/6BV8jrm3l/boXomHACq0j40EAe4byNIFdrPWNL1r7fL5nJWiaGOw==}
@@ -4766,10 +4766,10 @@ snapshots:
       - typescript
       - universal-cookie
 
-  '@nolebase/vitepress-plugin-sidebar@2.10.0':
+  '@nolebase/vitepress-plugin-sidebar@2.11.1':
     dependencies:
       fs-extra: 11.2.0
-      glob: 11.0.0
+      tinyglobby: 0.2.10
 
   '@nolebase/vitepress-plugin-thumbnail-hash@2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)':
     dependencies:
