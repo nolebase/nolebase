@@ -40,7 +40,7 @@ importers:
         version: 2.11.1(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
       '@nolebase/vitepress-plugin-enhanced-readabilities':
         specifier: ^2.10.0
-        version: 2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
+        version: 2.11.1(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
       '@nolebase/vitepress-plugin-git-changelog':
         specifier: ^2.10.0
         version: 2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
@@ -1083,11 +1083,14 @@ packages:
   '@nolebase/ui@2.10.0':
     resolution: {integrity: sha512-h6c/7fNrm8aVTJ9cCUGtoTntOPYq5Rs08z7rGZFtQ3lL+L/mAR6wPoBkNXfdgK9bm6ThnV2aPj9VR0GF9iLF7w==}
 
+  '@nolebase/ui@2.11.1':
+    resolution: {integrity: sha512-J08bh8wd1AXYzgGJtnoo6ptr20W+P/JuLISm7HdOTLr5nmq/pKmygOYVx63zuDVskpd04/VwUEkzA5wVipozvg==}
+
   '@nolebase/vitepress-plugin-enhanced-mark@2.11.1':
     resolution: {integrity: sha512-2W2AcJMJfpZiKipAn1+nx2CtU5v3oievRvw2mFrmYnobM6/tzuXlRR45N+0R46hi8Crt3EZby6KGvb9RSbDdPw==}
 
-  '@nolebase/vitepress-plugin-enhanced-readabilities@2.10.0':
-    resolution: {integrity: sha512-/O2eKLQOUf2ejSbqWfpVPBhW0TUx/X1STnk9SYTLn+6cGH02Q3TEQbQqk4YylGCLh7XEEHiV+Tygj98A26kLmg==}
+  '@nolebase/vitepress-plugin-enhanced-readabilities@2.11.1':
+    resolution: {integrity: sha512-2iD/CsABrLKT2cP/2D7L9mof2re6lMZaGfwVlJbkOd1svHJFU9QmAqZ9QAR2iPWHutUGEemW4sgKUpDnFiIV8Q==}
 
   '@nolebase/vitepress-plugin-git-changelog@2.10.0':
     resolution: {integrity: sha512-fAeJAxeveE6Y9xuRVSOv24GvXsigcpyeecfSpAnBAeIbR9Y3I0fHqJLkXyoieRk4ZC/k6qjXwZ+Iv2z3/qlNaA==}
@@ -4679,6 +4682,41 @@ snapshots:
       - typescript
       - universal-cookie
 
+  '@nolebase/ui@2.11.1(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)':
+    dependencies:
+      '@iconify-json/octicon': 1.2.1
+      less: 4.2.1
+      vitepress: 1.5.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(less@4.2.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
+      vue: 3.5.13(typescript@5.7.2)
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/node'
+      - '@types/react'
+      - '@vue/composition-api'
+      - async-validator
+      - axios
+      - change-case
+      - drauu
+      - fuse.js
+      - idb-keyval
+      - jwt-decode
+      - lightningcss
+      - markdown-it-mathjax3
+      - nprogress
+      - postcss
+      - qrcode
+      - react
+      - react-dom
+      - sass
+      - sass-embedded
+      - search-insights
+      - sortablejs
+      - stylus
+      - sugarss
+      - terser
+      - typescript
+      - universal-cookie
+
   '@nolebase/vitepress-plugin-enhanced-mark@2.11.1(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)':
     dependencies:
       less: 4.2.1
@@ -4712,11 +4750,11 @@ snapshots:
       - typescript
       - universal-cookie
 
-  '@nolebase/vitepress-plugin-enhanced-readabilities@2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)':
+  '@nolebase/vitepress-plugin-enhanced-readabilities@2.11.1(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)':
     dependencies:
       '@iconify-json/carbon': 1.2.4
       '@iconify-json/icon-park-outline': 1.2.1
-      '@nolebase/ui': 2.10.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
+      '@nolebase/ui': 2.11.1(@algolia/client-search@4.23.3)(@types/node@20.14.5)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
       less: 4.2.1
       vitepress: 1.5.0(@algolia/client-search@4.23.3)(@types/node@20.14.5)(less@4.2.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.14.0)(typescript@5.7.2)
     transitivePeerDependencies:
