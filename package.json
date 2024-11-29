@@ -2,7 +2,7 @@
   "name": "nolebase",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.14.3",
   "author": {
     "name": "Nólëbase",
     "email": "nolebase@ayaka.moe",
