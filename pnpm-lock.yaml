@@ -22,7 +22,7 @@ importers:
         version: 1.2.1
       '@iconify-json/octicon':
         specifier: ^1.2.1
-        version: 1.2.1
+        version: 1.2.2
       '@iconify-json/svg-spinners':
         specifier: ^1.2.1
         version: 1.2.1
@@ -872,8 +872,8 @@ packages:
   '@iconify-json/icon-park-outline@1.2.1':
     resolution: {integrity: sha512-cNvUJL9mk3xOfyffErQuxvyRCWk0hCx1M8AEyGmNXjqIfgPC25OChCstt0KFB3IULS+hw9es+uA7pvVPmQh+AA==}
 
-  '@iconify-json/octicon@1.2.1':
-    resolution: {integrity: sha512-4w7yMipQtp6s6aCHrSVlVXsf0OCBQ8CRmUTkMQUBexR42SXl4z5GnaUyaOMVoZttfgaBNnj0mlMB5T1cmRDgTg==}
+  '@iconify-json/octicon@1.2.2':
+    resolution: {integrity: sha512-qEPkP9DMMay5uILzyaSmVksSMxRw9i2wSDREfB8OK20mPdSadusjLqD/u69GzpFpw6894c+WNmoq7WzN5KAPeg==}
 
   '@iconify-json/simple-icons@1.2.13':
     resolution: {integrity: sha512-rRQjMoIt/kPfaD+fnBC9YZQpso3hkn8xPeadl+YWhscJ5SVUCdB9oTeR9VIpt+/5Yi8vEkh2UOWFPq4lz3ee2A==}
@@ -4298,7 +4298,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/octicon@1.2.1':
+  '@iconify-json/octicon@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -4483,7 +4483,7 @@ snapshots:
 
   '@nolebase/ui@2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)':
     dependencies:
-      '@iconify-json/octicon': 1.2.1
+      '@iconify-json/octicon': 1.2.2
       less: 4.2.1
       vitepress: 1.5.0(@algolia/client-search@5.15.0)(@types/node@22.10.1)(less@4.2.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
       vue: 3.5.13(typescript@5.7.2)
@@ -4587,7 +4587,7 @@ snapshots:
 
   '@nolebase/vitepress-plugin-git-changelog@2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)':
     dependencies:
-      '@iconify-json/octicon': 1.2.1
+      '@iconify-json/octicon': 1.2.2
       '@nolebase/ui': 2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
       colorette: 2.0.20
       date-fns: 4.1.0
@@ -4701,7 +4701,7 @@ snapshots:
   '@nolebase/vitepress-plugin-inline-link-preview@2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)':
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.1
-      '@iconify-json/octicon': 1.2.1
+      '@iconify-json/octicon': 1.2.2
       '@iconify-json/svg-spinners': 1.2.1
       '@nolebase/markdown-it-element-transform': 2.11.1(markdown-it@14.1.0)
       '@nolebase/ui': 2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
@@ -4830,7 +4830,7 @@ snapshots:
   '@nolebase/vitepress-plugin-page-properties@2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)':
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.1
-      '@iconify-json/octicon': 1.2.1
+      '@iconify-json/octicon': 1.2.2
       '@nolebase/ui': 2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
       date-fns: 4.1.0
       gray-matter: 4.0.3
