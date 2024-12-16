@@ -25,7 +25,7 @@ importers:
         version: 1.2.2
       '@iconify-json/svg-spinners':
         specifier: ^1.2.1
-        version: 1.2.1
+        version: 1.2.2
       '@netlify/functions':
         specifier: ^2.8.2
         version: 2.8.2
@@ -878,8 +878,8 @@ packages:
   '@iconify-json/simple-icons@1.2.13':
     resolution: {integrity: sha512-rRQjMoIt/kPfaD+fnBC9YZQpso3hkn8xPeadl+YWhscJ5SVUCdB9oTeR9VIpt+/5Yi8vEkh2UOWFPq4lz3ee2A==}
 
-  '@iconify-json/svg-spinners@1.2.1':
-    resolution: {integrity: sha512-QZNA4YzFD2zqdC6nIBJM6WlAGakUCjvMt92Ks1R4XFxkd76Ps3rdiauYWESDRZvNYURAByp2b9cwZarFula65g==}
+  '@iconify-json/svg-spinners@1.2.2':
+    resolution: {integrity: sha512-DIErwfBWWzLfmAG2oQnbUOSqZhDxlXvr8941itMCrxQoMB0Hiv8Ww6Bln/zIgxwjDvSem2dKJtap+yKKwsB/2A==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -4305,7 +4305,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/svg-spinners@1.2.1':
+  '@iconify-json/svg-spinners@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -4701,7 +4701,7 @@ snapshots:
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.1
       '@iconify-json/octicon': 1.2.2
-      '@iconify-json/svg-spinners': 1.2.1
+      '@iconify-json/svg-spinners': 1.2.2
       '@nolebase/markdown-it-element-transform': 2.11.1(markdown-it@14.1.0)
       '@nolebase/ui': 2.11.1(@algolia/client-search@5.15.0)(@types/node@22.10.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
       less: 4.2.1
