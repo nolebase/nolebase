@@ -19,7 +19,7 @@ importers:
         version: 1.2.1
       '@iconify-json/ic':
         specifier: ^1.2.1
-        version: 1.2.1
+        version: 1.2.2
       '@iconify-json/octicon':
         specifier: ^1.2.1
         version: 1.2.2
@@ -866,8 +866,8 @@ packages:
   '@iconify-json/eos-icons@1.2.1':
     resolution: {integrity: sha512-nqucN9E670dRHDk5osNNObhxQg/eBI8wvYA+zWaOMsJR0g8VodF9z/cpDvMH7YyUm4elOF9r8cGIj3byFBFLRQ==}
 
-  '@iconify-json/ic@1.2.1':
-    resolution: {integrity: sha512-UjL/bjJP/T5EV881+hTzcfTKVo0KEUjhnMiJcLtPzNgPtU2KZZmRx8BSKKR61H4CN/5FTEbyawGyG0aEt3SwGQ==}
+  '@iconify-json/ic@1.2.2':
+    resolution: {integrity: sha512-QmjwS3lYiOmVWgTCEOTFyGODaR/+689+ajep/VsrCcsUN0Gdle5PmIcibDsdmRyrOsW/E77G41UUijdbjQUofw==}
 
   '@iconify-json/icon-park-outline@1.2.1':
     resolution: {integrity: sha512-cNvUJL9mk3xOfyffErQuxvyRCWk0hCx1M8AEyGmNXjqIfgPC25OChCstt0KFB3IULS+hw9es+uA7pvVPmQh+AA==}
@@ -4289,7 +4289,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/ic@1.2.1':
+  '@iconify-json/ic@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
