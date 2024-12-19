@@ -35,7 +35,7 @@
     "@iconify-json/ic": "^1.2.1",
     "@iconify-json/octicon": "^1.2.1",
     "@iconify-json/svg-spinners": "^1.2.1",
-    "@netlify/functions": "^2.8.2",
+    "@netlify/functions": "^3.0.0",
     "@nolebase/markdown-it-bi-directional-links": "^2.10.0",
     "@nolebase/markdown-it-unlazy-img": "^2.10.0",
     "@nolebase/vitepress-plugin-enhanced-mark": "^2.10.0",
