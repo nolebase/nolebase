@@ -17,6 +17,7 @@ export default defineConfig(async () => {
       // This needs to be excluded from optimization
       exclude: [
         'vitepress',
+        '@nolebase/vitepress-plugin-index',
       ],
     },
     plugins: [
