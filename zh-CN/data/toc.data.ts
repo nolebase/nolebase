@@ -1,5 +1,5 @@
 import { createRecentUpdatesLoader } from '@nolebase/vitepress-plugin-index/vitepress'
 
 export default createRecentUpdatesLoader({
-  dir: '笔记',
+  dir: 'zh-CN/笔记',
 })
