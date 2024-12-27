@@ -28,15 +28,15 @@ export default defineConfig(async () => {
       }),
       GitChangelogMarkdownSection({
         excludes: [
-          'toc.md',
-          'index.md',
+          'zh-CN/toc.md',
+          'zh-CN/index.md',
         ],
       }),
       PageProperties(),
       PagePropertiesMarkdownSection({
         excludes: [
-          'toc.md',
-          'index.md',
+          'zh-CN/toc.md',
+          'zh-CN/index.md',
         ],
       }),
       ThumbnailHashImages(),
