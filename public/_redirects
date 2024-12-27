@@ -7,3 +7,6 @@
 
 # Short link
 /to/* /.netlify/functions/to/:splat 301
+
+# i18n
+/*  /zh-CN/:splat  301  Language=zh-cn
