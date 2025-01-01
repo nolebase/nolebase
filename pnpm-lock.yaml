@@ -153,8 +153,8 @@ importers:
         specifier: ^6.0.6
         version: 6.0.6(@types/node@22.10.1)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.2)(yaml@2.6.1)
       vite-plugin-inspect:
-        specifier: ^0.8.9
-        version: 0.8.9(rollup@4.29.1)(vite@6.0.6(@types/node@22.10.1)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.2)(yaml@2.6.1))
+        specifier: ^0.10.0
+        version: 0.10.6(rollup@4.29.1)(vite@6.0.6(@types/node@22.10.1)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.2)(yaml@2.6.1))
       vitepress:
         specifier: ^1.5.0
         version: 1.5.0(@algolia/client-search@5.15.0)(@types/node@22.10.1)(less@4.2.1)(markdown-it-mathjax3@4.3.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2)
@@ -3510,12 +3510,12 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite-plugin-inspect@0.8.9:
-    resolution: {integrity: sha512-22/8qn+LYonzibb1VeFZmISdVao5kC22jmEKm24vfFE8siEn47EpVcCLYMv6iKOYMJfjSvSJfueOwcFCkUnV3A==}
+  vite-plugin-inspect@0.10.6:
+    resolution: {integrity: sha512-R3pwljjBbjFM2sZvy6Zvynnm51oaEwLYyYPk9Wp2lF97w/YMBq+KtTJXpCA17IO2pImX0bWA6WB05kuqRnkuyQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': '*'
-      vite: ^3.1.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.1
+      vite: ^6.0.0
     peerDependenciesMeta:
       '@nuxt/kit':
         optional: true
@@ -7798,7 +7798,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-inspect@0.8.9(rollup@4.29.1)(vite@6.0.6(@types/node@22.10.1)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.2)(yaml@2.6.1)):
+  vite-plugin-inspect@0.10.6(rollup@4.29.1)(vite@6.0.6(@types/node@22.10.1)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.2)(yaml@2.6.1)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.4(rollup@4.29.1)
