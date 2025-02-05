@@ -74,7 +74,7 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "unocss": "^0.65.3",
-    "unplugin-vue-components": "^0.28.0",
+    "unplugin-vue-components": "^28.0.0",
     "uuid": "^11.0.3",
     "vite": "^6.0.6",
     "vite-plugin-inspect": "^0.10.0",
