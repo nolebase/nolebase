@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "7bf25fa9b275a114",
+        "id": "d60d9813f66a1cce",
         "type": "tabs",
         "children": [
           {
-            "id": "54819aae3450e1a7",
+            "id": "8b8974485c5430a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zh-CN/笔记/🤖 AI 人工智能/Neuro/AI VTuber.md",
+                "file": "zh-CN/笔记/🛠️ 开发/为 DuckDB WASM 制作 Drizzle ORM Driver.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AI VTuber"
+              "title": "为 DuckDB WASM 制作 Drizzle ORM Driver"
+            }
+          },
+          {
+            "id": "ea65bc0da501beda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zh-CN/笔记/🛠️ 开发/为 DuckDB WASM 制作 Drizzle ORM Driver.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "为 DuckDB WASM 制作 Drizzle ORM Driver"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -264,9 +279,15 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "54819aae3450e1a7",
+  "active": "ea65bc0da501beda",
   "lastOpenFiles": [
+    "zh-CN/笔记/🧱 基础设施/容器既没有 netstat 和 lsof 也不是 root 时如何排查网络？手动解析 procfs！.md",
+    "zh-CN/笔记/🛠️ 开发/为 DuckDB WASM 制作 Drizzle ORM Driver.md",
+    "zh-CN/笔记/🛠️ 开发/在容器内如何列出正在被监听的端口或者打开的文件？.md",
+    "zh-CN/笔记/📟 终端/软件/容器化/列出 Docker CLI 当前登录的域名.md",
+    "zh-CN/笔记/🛠️ 开发/🗂 数据库/关系型数据库 Relational DB/🐣 DuckDB/各种语句.md",
     "zh-CN/笔记/🤖 AI 人工智能/Neuro/AI VTuber.md",
+    "zh-CN/笔记/🛠️ 开发/🗂 数据库/关系型数据库 Relational DB/🐣 DuckDB",
     "zh-CN/笔记/🤖 AI 人工智能/Neuro/Archive.zip",
     "笔记/🧩 开源贡献/Kubernetes/CNCF Traval Funding.md",
     "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
@@ -279,7 +300,6 @@
     "node_modules/@types",
     "node_modules/@nolebase",
     "node_modules/@netlify",
-    "node_modules/@iconify-json",
     "笔记/🛠️ 开发/JS Framework Benchmark 命令速查.md",
     "笔记/🛠️ 开发/Another Custom Directive API in Vue and Vapor.md",
     "笔记/🛠️ 开发/因为 dayjs 不能轻松导入全部的 i18n 语言而换用了 date-fns.md",
@@ -307,11 +327,6 @@
     "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
     "笔记/🤖 AI 人工智能/领域/音频/配置和运行 ChatTTS.md",
     "笔记/🤖 AI 人工智能/领域/音频/在 macOS 上配置 GPT-SoVITS-WebUI.md",
-    "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
-    "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
-    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
-    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
-    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
     "未命名.canvas"
   ]
 }
