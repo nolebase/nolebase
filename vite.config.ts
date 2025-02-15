@@ -1,6 +1,5 @@
-import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
-import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
-import { ThumbnailHashImages } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
+import { join } from 'node:path'
+import { presetVite } from '@nolebase/integrations/vitepress/vite'
 import UnoCSS from 'unocss/vite'
 
 import Components from 'unplugin-vue-components/vite'
@@ -8,6 +7,33 @@ import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 
 import { creators, githubRepoLink } from './metadata'
+
+const nolebase = presetVite({
+  gitChangelog: {
+    options: {
+      gitChangelog: {
+        repoURL: () => githubRepoLink,
+        mapAuthors: creators,
+      },
+      markdownSection: {
+        excludes: [
+          join('zh-CN', 'toc.md'),
+          join('zh-CN', 'index.md'),
+        ],
+      },
+    },
+  },
+  pageProperties: {
+    options: {
+      markdownSection: {
+        excludes: [
+          join('zh-CN', 'toc.md'),
+          join('zh-CN', 'index.md'),
+        ],
+      },
+    },
+  },
+})
 
 export default defineConfig(async () => {
   return {
@@ -22,30 +48,13 @@ export default defineConfig(async () => {
     },
     plugins: [
       Inspect(),
-      GitChangelog({
-        repoURL: () => githubRepoLink,
-        mapAuthors: creators,
-      }),
-      GitChangelogMarkdownSection({
-        excludes: [
-          'zh-CN/toc.md',
-          'zh-CN/index.md',
-        ],
-      }),
-      PageProperties(),
-      PagePropertiesMarkdownSection({
-        excludes: [
-          'zh-CN/toc.md',
-          'zh-CN/index.md',
-        ],
-      }),
-      ThumbnailHashImages(),
       Components({
         include: [/\.vue$/, /\.md$/],
         dirs: '.vitepress/theme/components',
         dts: '.vitepress/components.d.ts',
       }),
       UnoCSS(),
+      ...nolebase.plugins(),
     ],
     ssr: {
       noExternal: [
