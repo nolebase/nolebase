@@ -8,34 +8,34 @@ import Inspect from 'vite-plugin-inspect'
 
 import { creators, githubRepoLink } from './metadata'
 
-const nolebase = presetVite({
-  gitChangelog: {
-    options: {
-      gitChangelog: {
-        repoURL: () => githubRepoLink,
-        mapAuthors: creators,
-      },
-      markdownSection: {
-        excludes: [
-          join('zh-CN', 'toc.md'),
-          join('zh-CN', 'index.md'),
-        ],
-      },
-    },
-  },
-  pageProperties: {
-    options: {
-      markdownSection: {
-        excludes: [
-          join('zh-CN', 'toc.md'),
-          join('zh-CN', 'index.md'),
-        ],
-      },
-    },
-  },
-})
-
 export default defineConfig(async () => {
+  const nolebase = presetVite({
+    gitChangelog: {
+      options: {
+        gitChangelog: {
+          repoURL: () => githubRepoLink,
+          mapAuthors: creators,
+        },
+        markdownSection: {
+          excludes: [
+            join('zh-CN', 'toc.md'),
+            join('zh-CN', 'index.md'),
+          ],
+        },
+      },
+    },
+    pageProperties: {
+      options: {
+        markdownSection: {
+          excludes: [
+            join('zh-CN', 'toc.md'),
+            join('zh-CN', 'index.md'),
+          ],
+        },
+      },
+    },
+  })
+
   return {
     assetsInclude: ['**/*.mov'],
     optimizeDeps: {
@@ -43,7 +43,6 @@ export default defineConfig(async () => {
       // This needs to be excluded from optimization
       exclude: [
         'vitepress',
-        '@nolebase/vitepress-plugin-index',
       ],
     },
     plugins: [
@@ -56,13 +55,5 @@ export default defineConfig(async () => {
       UnoCSS(),
       ...nolebase.plugins(),
     ],
-    ssr: {
-      noExternal: [
-        '@nolebase/vitepress-plugin-enhanced-readabilities',
-        '@nolebase/vitepress-plugin-highlight-targeted-heading',
-        '@nolebase/vitepress-plugin-inline-link-preview',
-        '@nolebase/vitepress-plugin-index',
-      ],
-    },
   }
 })
