@@ -37,7 +37,9 @@ export default defineConfig(async () => {
   })
 
   return {
-    assetsInclude: ['**/*.mov'],
+    assetsInclude: [
+      '**/*.mov',
+    ],
     optimizeDeps: {
       // vitepress is aliased with replacement `join(DIST_CLIENT_PATH, '/index')`
       // This needs to be excluded from optimization
