@@ -55,6 +55,7 @@ export default defineConfig(async () => {
         dts: '.vitepress/components.d.ts',
       }),
       UnoCSS(),
+      nolebase,
       ...nolebase.plugins(),
     ],
   }
