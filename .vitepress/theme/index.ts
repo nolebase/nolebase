@@ -28,41 +28,6 @@ const nolebase = presetClient<{
       },
     },
   },
-  pageProperties: {
-    options: {
-      properties: {
-        'zh-CN': [
-          {
-            key: 'tags',
-            type: 'tags',
-            title: '标签',
-          },
-          {
-            key: 'progress',
-            type: 'progress',
-            title: '完成进度',
-          },
-          {
-            key: 'wordCount',
-            type: 'dynamic',
-            title: '字数',
-            options: {
-              type: 'wordsCount',
-            },
-          },
-          {
-            key: 'readingTime',
-            type: 'dynamic',
-            title: '阅读时间',
-            options: {
-              type: 'readingTime',
-              dateFnsLocaleName: 'zhCN',
-            },
-          },
-        ],
-      },
-    },
-  },
 })
 
 const ExtendedTheme: Theme = {
@@ -87,7 +52,7 @@ const ExtendedTheme: Theme = {
       ],
     })
   },
-  enhanceApp(ctx) {
+  async enhanceApp(ctx) {
     const { app } = ctx
 
     /**
@@ -97,7 +62,7 @@ const ExtendedTheme: Theme = {
      * https://github.com/vuejs/vitepress/issues/1918
      */
 
-    nolebase?.enhanceApp?.(ctx)
+    await nolebase?.enhanceApp?.(ctx)
 
     app.component('HomePage', HomePage)
     app.component('DocFooter', DocFooter)
