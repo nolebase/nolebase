@@ -96,6 +96,10 @@ html, body {
   font-family: 'tengwarannatar-bold';
 }
 
+.VPHero.has-image span.name:nth-child(1) {
+  line-height: 7rem;
+}
+
 /* 首页子标题样式 */
 .VPHomeHero > .container > .main > .text {
   padding-top: 45px;
