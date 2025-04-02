@@ -70,29 +70,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 安装 Node.js 22.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-
       - name: 安装 pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
-          version: 9
 
-      - name: 获取 pnpm store 目录
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: 配置 pnpm 缓存
-        uses: actions/cache@v4
+      - name: 安装 Node.js 23.x
+        uses: actions/setup-node@v4
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: 23.x
+          cache: 'pnpm'
 
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
