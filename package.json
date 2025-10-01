@@ -68,7 +68,7 @@
     "lodash": "^4.17.21",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
-    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-mathjax3": "^5.2.0",
     "node-fetch": "^3.3.2",
     "sharp": "^0.34.4",
     "simple-git": "^3.28.0",
