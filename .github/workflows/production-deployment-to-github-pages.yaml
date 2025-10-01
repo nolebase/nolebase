@@ -67,7 +67,7 @@ jobs:
       url: https://nolebase.github.io/nolebase
     steps:
       - name: 签出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
