@@ -35,7 +35,7 @@
     "@iconify-json/ic": "^1.2.4",
     "@iconify-json/octicon": "^1.2.16",
     "@iconify-json/svg-spinners": "^1.2.4",
-    "@netlify/functions": "^4.3.0",
+    "@netlify/functions": "^5.0.1",
     "@nolebase/integrations": "2.18.2",
     "@nolebase/markdown-it-bi-directional-links": "^2.18.2",
     "@nolebase/markdown-it-unlazy-img": "^2.18.2",
