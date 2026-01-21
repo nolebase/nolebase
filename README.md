@@ -83,6 +83,7 @@
 
 这里有一些我们在 GitHub 上发现的使用 [VitePress](https://vitepress.dev) 作为知识库的项目：
 
+- [dsh0416/godot-cef: High-Performance Chromium Integration](https://dsh0416.github.io/godot-cef/)
 - [Charles7c/charles7c.github.io：基于 VitePress 构建的个人知识库/博客。](https://github.com/Charles7c/charles7c.github.io)
 - [Lercel/Vision](https://github.com/Lercel/Vision)
 - [maomao1996/mm-notes: 茂茂物语: 各种笔记记录（想到啥写啥系列）](https://github.com/maomao1996/mm-notes)
