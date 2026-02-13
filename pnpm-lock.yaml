@@ -13,7 +13,7 @@ importers:
         version: 6.7.3(@unocss/eslint-plugin@66.6.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.27)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       '@hedgedoc/markdown-it-plugins':
         specifier: ^2.1.4
-        version: 2.1.4(markdown-it@14.1.0)
+        version: 2.1.4(markdown-it@14.1.1)
       '@iconify-json/eos-icons':
         specifier: ^1.2.4
         version: 1.2.4
@@ -31,13 +31,13 @@ importers:
         version: 5.1.2
       '@nolebase/integrations':
         specifier: 2.18.2
-        version: 2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.0)(tsx@4.21.0)(vite@7.3.1(jiti@2.6.1)(less@4.5.1)(tsx@4.21.0)(yaml@2.8.2))(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)
+        version: 2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.1)(tsx@4.21.0)(vite@7.3.1(jiti@2.6.1)(less@4.5.1)(tsx@4.21.0)(yaml@2.8.2))(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)
       '@nolebase/markdown-it-bi-directional-links':
         specifier: ^2.18.2
-        version: 2.18.2(markdown-it@14.1.0)
+        version: 2.18.2(markdown-it@14.1.1)
       '@nolebase/markdown-it-unlazy-img':
         specifier: ^2.18.2
-        version: 2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.0)(tsx@4.21.0)(yaml@2.8.2)
+        version: 2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.1)(tsx@4.21.0)(yaml@2.8.2)
       '@nolebase/vitepress-plugin-enhanced-mark':
         specifier: ^2.18.2
         version: 2.18.2(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))
@@ -121,7 +121,7 @@ importers:
         version: 4.17.23
       markdown-it:
         specifier: ^14.1.0
-        version: 14.1.0
+        version: 14.1.1
       markdown-it-footnote:
         specifier: ^4.0.0
         version: 4.0.0
@@ -2487,8 +2487,8 @@ packages:
   markdown-it-mathjax3@5.2.0:
     resolution: {integrity: sha512-R+XAy5/7vSGuhG9Z0/cJm6zKxOzStcScfSKVwoarh4nBra+v1KClvbALr/xFTEe9iQhwfQM4SJnO68LXL+btMA==}
 
-  markdown-it@14.1.0:
-    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
+  markdown-it@14.1.1:
+    resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
     hasBin: true
 
   markdown-table@3.0.4:
@@ -3733,11 +3733,11 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hedgedoc/markdown-it-plugins@2.1.4(markdown-it@14.1.0)':
+  '@hedgedoc/markdown-it-plugins@2.1.4(markdown-it@14.1.1)':
     dependencies:
       '@mrdrogdrog/optional': 1.2.1
       html-entities: 2.5.2
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
 
   '@humanfs/core@0.19.1': {}
 
@@ -3931,10 +3931,10 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
-  '@nolebase/integrations@2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.0)(tsx@4.21.0)(vite@7.3.1(jiti@2.6.1)(less@4.5.1)(tsx@4.21.0)(yaml@2.8.2))(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)':
+  '@nolebase/integrations@2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.1)(tsx@4.21.0)(vite@7.3.1(jiti@2.6.1)(less@4.5.1)(tsx@4.21.0)(yaml@2.8.2))(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
-      '@nolebase/markdown-it-bi-directional-links': 2.18.2(markdown-it@14.1.0)
-      '@nolebase/markdown-it-unlazy-img': 2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.0)(tsx@4.21.0)(yaml@2.8.2)
+      '@nolebase/markdown-it-bi-directional-links': 2.18.2(markdown-it@14.1.1)
+      '@nolebase/markdown-it-unlazy-img': 2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.1)(tsx@4.21.0)(yaml@2.8.2)
       '@nolebase/vitepress-plugin-enhanced-mark': 2.18.2(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-enhanced-readabilities': 2.18.2(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       '@nolebase/vitepress-plugin-git-changelog': 2.18.2(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
@@ -3963,23 +3963,23 @@ snapshots:
       - vue
       - yaml
 
-  '@nolebase/markdown-it-bi-directional-links@2.18.2(markdown-it@14.1.0)':
+  '@nolebase/markdown-it-bi-directional-links@2.18.2(markdown-it@14.1.1)':
     dependencies:
       colorette: 2.0.20
       debug: 4.4.3
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
       tinyglobby: 0.2.15
     transitivePeerDependencies:
       - supports-color
 
-  '@nolebase/markdown-it-element-transform@2.18.2(markdown-it@14.1.0)':
+  '@nolebase/markdown-it-element-transform@2.18.2(markdown-it@14.1.1)':
     dependencies:
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
 
-  '@nolebase/markdown-it-unlazy-img@2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.0)(tsx@4.21.0)(yaml@2.8.2)':
+  '@nolebase/markdown-it-unlazy-img@2.18.2(jiti@2.6.1)(less@4.5.1)(markdown-it@14.1.1)(tsx@4.21.0)(yaml@2.8.2)':
     dependencies:
       colorette: 2.0.20
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
       tinyglobby: 0.2.15
       vite: 7.3.1(jiti@2.6.1)(less@4.5.1)(tsx@4.21.0)(yaml@2.8.2)
     transitivePeerDependencies:
@@ -4052,11 +4052,11 @@ snapshots:
       '@iconify-json/icon-park-outline': 1.2.2
       '@iconify-json/octicon': 1.2.20
       '@iconify-json/svg-spinners': 1.2.4
-      '@nolebase/markdown-it-element-transform': 2.18.2(markdown-it@14.1.0)
+      '@nolebase/markdown-it-element-transform': 2.18.2(markdown-it@14.1.1)
       '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       less: 4.5.1
-      markdown-it: 14.1.0
-      markdown-it-attrs: 4.3.1(markdown-it@14.1.0)
+      markdown-it: 14.1.1
+      markdown-it-attrs: 4.3.1(markdown-it@14.1.1)
       vitepress: 2.0.0-alpha.16(change-case@5.4.4)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.5.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - vue
@@ -5869,9 +5869,9 @@ snapshots:
 
   mark.js@8.11.1: {}
 
-  markdown-it-attrs@4.3.1(markdown-it@14.1.0):
+  markdown-it-attrs@4.3.1(markdown-it@14.1.1):
     dependencies:
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
 
   markdown-it-footnote@4.0.0: {}
 
@@ -5880,7 +5880,7 @@ snapshots:
       '@se-oss/deasync': 1.0.1
       mathxyjax3: 0.8.3
 
-  markdown-it@14.1.0:
+  markdown-it@14.1.1:
     dependencies:
       argparse: 2.0.1
       entities: 4.5.0
