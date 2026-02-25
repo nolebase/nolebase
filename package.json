@@ -29,7 +29,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.7.3",
+    "@antfu/eslint-config": "^7.6.1",
     "@hedgedoc/markdown-it-plugins": "^2.1.4",
     "@iconify-json/eos-icons": "^1.2.4",
     "@iconify-json/ic": "^1.2.4",
