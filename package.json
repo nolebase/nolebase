@@ -60,7 +60,7 @@
     "@vueuse/core": "^14.4.0",
     "@vueuse/shared": "^14.4.0",
     "emoji-regex": "^10.6.0",
-    "eslint": "^9.39.5",
+    "eslint": "^10.10.0",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.4.0",
     "gray-matter": "^4.0.3",
