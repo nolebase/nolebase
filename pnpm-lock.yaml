@@ -31,7 +31,7 @@ importers:
         version: 5.3.0
       '@nolebase/integrations':
         specifier: 2.18.2
-        version: 2.18.2(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(markdown-it@14.3.1)(tsx@4.23.13)(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))(yaml@2.8.2)
+        version: 2.18.2(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(markdown-it@14.3.1)(tsx@4.23.13)(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))(yaml@2.8.2)
       '@nolebase/markdown-it-bi-directional-links':
         specifier: ^2.18.2
         version: 2.18.2(markdown-it@14.3.1)
@@ -40,37 +40,37 @@ importers:
         version: 2.18.2(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(markdown-it@14.3.1)(tsx@4.23.13)(yaml@2.8.2)
       '@nolebase/vitepress-plugin-enhanced-mark':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-enhanced-readabilities':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       '@nolebase/vitepress-plugin-git-changelog':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       '@nolebase/vitepress-plugin-highlight-targeted-heading':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-index':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-inline-link-preview':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       '@nolebase/vitepress-plugin-meta':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-og-image':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-page-properties':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       '@nolebase/vitepress-plugin-sidebar':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@nolebase/vitepress-plugin-thumbnail-hash':
         specifier: ^2.18.2
-        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+        version: 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -145,7 +145,7 @@ importers:
         version: 5.9.3
       unocss:
         specifier: ^66.8.1
-        version: 66.8.1(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))
+        version: 66.8.1(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))
       unplugin-vue-components:
         specifier: ^30.0.0
         version: 30.0.0(@babel/parser@7.29.8)(vue@3.5.42(typescript@5.9.3))
@@ -153,14 +153,14 @@ importers:
         specifier: ^13.0.2
         version: 13.0.2
       vite:
-        specifier: ^7.3.6
-        version: 7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)
+        specifier: ^8.3.0
+        version: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
       vite-plugin-inspect:
         specifier: ^11.4.1
-        version: 11.4.1(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))
+        version: 11.4.1(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))
       vitepress:
         specifier: ^2.0.0-alpha.19
-        version: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+        version: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
       vue:
         specifier: ^3.5.42
         version: 3.5.42(typescript@5.9.3)
@@ -3349,6 +3349,10 @@ packages:
     resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
     engines: {node: '>=12'}
 
+  picomatch@4.0.7:
+    resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
+    engines: {node: '>=12'}
+
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
 
@@ -3374,8 +3378,8 @@ packages:
     resolution: {integrity: sha512-DTPx3RWSSnWyzLxQnlH0rJP+EW5ekl16ZU4/psbIhA0e53kJfdgaN5vKM+xP7yJtXVu+nfdVFmlgFDEKAe4Pyw==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.26:
-    resolution: {integrity: sha512-u82N74LFzG8ca+dD8puPnplTXoGH4fTPpVGuIbt36G3qvNlkvfD0lEAZSxaly3KX8TS/L1A1gsCEmvKmBcVbkQ==}
+  postcss@8.5.28:
+    resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
 
   powershell-utils@0.1.0:
@@ -3886,13 +3890,13 @@ packages:
       yaml:
         optional: true
 
-  vite@8.2.2:
-    resolution: {integrity: sha512-cFKLV/PRgAUlIRm5WjMjJ86jrftzpqcgH+Us+DS8mI3CDNiH30Whrz8uHL3+MOLPAgqbMBAqWdAHAphOAM+z/Q==}
+  vite@8.3.0:
+    resolution: {integrity: sha512-lhZBVvEHefgE+HQZC9O7EBJgCU/nVzFNl7vkS4RE0APtWLP02/8QVIkQtzBxPquh7lq5/78NHipTj7ODQ6XuyQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
-      '@vitejs/devtools': ^0.4.0 || ^0.5.0
+      '@vitejs/devtools': ^0.7.1
       esbuild: ^0.27.0 || ^0.28.0
       jiti: '>=1.21.0'
       less: ^4.0.0
@@ -4560,22 +4564,22 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
-  '@nolebase/integrations@2.18.2(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(markdown-it@14.3.1)(tsx@4.23.13)(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))(yaml@2.8.2)':
+  '@nolebase/integrations@2.18.2(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(markdown-it@14.3.1)(tsx@4.23.13)(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
       '@nolebase/markdown-it-bi-directional-links': 2.18.2(markdown-it@14.3.1)
       '@nolebase/markdown-it-unlazy-img': 2.18.2(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(markdown-it@14.3.1)(tsx@4.23.13)(yaml@2.8.2)
-      '@nolebase/vitepress-plugin-enhanced-mark': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
-      '@nolebase/vitepress-plugin-enhanced-readabilities': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
-      '@nolebase/vitepress-plugin-git-changelog': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
-      '@nolebase/vitepress-plugin-highlight-targeted-heading': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
-      '@nolebase/vitepress-plugin-index': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
-      '@nolebase/vitepress-plugin-inline-link-preview': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
-      '@nolebase/vitepress-plugin-page-properties': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
-      '@nolebase/vitepress-plugin-thumbnail-hash': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+      '@nolebase/vitepress-plugin-enhanced-mark': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+      '@nolebase/vitepress-plugin-enhanced-readabilities': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/vitepress-plugin-git-changelog': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/vitepress-plugin-highlight-targeted-heading': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+      '@nolebase/vitepress-plugin-index': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
+      '@nolebase/vitepress-plugin-inline-link-preview': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/vitepress-plugin-page-properties': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/vitepress-plugin-thumbnail-hash': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))
       defu: 6.1.4
     optionalDependencies:
-      vite: 7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4624,37 +4628,37 @@ snapshots:
       - tsx
       - yaml
 
-  '@nolebase/ui@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
+  '@nolebase/ui@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
     dependencies:
       '@iconify-json/octicon': 1.2.32
       less: 4.9.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
       vue: 3.5.42(typescript@5.9.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@nolebase/vitepress-plugin-enhanced-mark@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-enhanced-mark@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       less: 4.9.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@nolebase/vitepress-plugin-enhanced-readabilities@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
+  '@nolebase/vitepress-plugin-enhanced-readabilities@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
     dependencies:
       '@iconify-json/carbon': 1.2.13
       '@iconify-json/icon-park-outline': 1.2.2
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       less: 4.9.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - vue
 
-  '@nolebase/vitepress-plugin-git-changelog@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
+  '@nolebase/vitepress-plugin-git-changelog@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
     dependencies:
       '@iconify-json/octicon': 1.2.32
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       colorette: 2.0.20
       date-fns: 4.1.0
       defu: 6.1.4
@@ -4664,42 +4668,42 @@ snapshots:
       gray-matter: 4.0.3
       less: 4.9.0
       uncrypto: 0.1.3
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - vue
 
-  '@nolebase/vitepress-plugin-highlight-targeted-heading@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-highlight-targeted-heading@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       less: 4.9.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@nolebase/vitepress-plugin-index@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-index@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       defu: 6.1.4
       execa: 9.6.0
       gray-matter: 4.0.3
       tinyglobby: 0.2.15
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
 
-  '@nolebase/vitepress-plugin-inline-link-preview@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
+  '@nolebase/vitepress-plugin-inline-link-preview@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.2
       '@iconify-json/octicon': 1.2.32
       '@iconify-json/svg-spinners': 1.2.4
       '@nolebase/markdown-it-element-transform': 2.18.2(markdown-it@14.3.1)
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       less: 4.9.0
       markdown-it: 14.3.1
       markdown-it-attrs: 4.3.1(markdown-it@14.3.1)
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - vue
 
-  '@nolebase/vitepress-plugin-meta@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-meta@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       defu: 6.1.4
       hast-util-select: 6.0.4
@@ -4710,9 +4714,9 @@ snapshots:
       unified: 11.0.5
       unist-util-remove: 4.0.0
       unist-util-remove-position: 5.0.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
 
-  '@nolebase/vitepress-plugin-og-image@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-og-image@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       '@resvg/resvg-wasm': 2.6.2
       colorette: 2.0.20
@@ -4728,30 +4732,30 @@ snapshots:
       tinyglobby: 0.2.15
       unified: 11.0.5
       unist-util-visit: 5.0.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
 
-  '@nolebase/vitepress-plugin-page-properties@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
+  '@nolebase/vitepress-plugin-page-properties@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
     dependencies:
       '@iconify-json/icon-park-outline': 1.2.2
       '@iconify-json/octicon': 1.2.32
-      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@nolebase/ui': 2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       date-fns: 4.1.0
       gray-matter: 4.0.3
       less: 4.9.0
       uuid: 11.1.0
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
       - vue
 
-  '@nolebase/vitepress-plugin-sidebar@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-sidebar@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       fs-extra: 11.4.0
       gray-matter: 4.0.3
       tinyglobby: 0.2.15
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
 
-  '@nolebase/vitepress-plugin-thumbnail-hash@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
+  '@nolebase/vitepress-plugin-thumbnail-hash@2.18.2(vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       '@unlazy/vue': 0.12.4
       canvaskit-wasm: 0.40.0
@@ -4762,7 +4766,7 @@ snapshots:
       tinyglobby: 0.2.15
       uncrypto: 0.1.3
       unlazy: 0.12.4
-      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
+      vitepress: 2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -5431,7 +5435,7 @@ snapshots:
     dependencies:
       '@unocss/core': 66.8.1
 
-  '@unocss/vite@66.8.1(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))':
+  '@unocss/vite@66.8.1(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))':
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@unocss/config': 66.8.1
@@ -5442,12 +5446,12 @@ snapshots:
       pathe: 2.0.3
       tinyglobby: 0.2.17
       unplugin-utils: 0.3.2
-      vite: 7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
 
-  '@vitejs/plugin-vue@6.0.8(vite@8.2.2(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
+  '@vitejs/plugin-vue@6.0.8(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.2.2(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
       vue: 3.5.42(typescript@5.9.3)
 
   '@vitest/eslint-plugin@1.6.6(eslint@9.39.5(jiti@2.6.1))(typescript@5.9.3)':
@@ -6243,6 +6247,10 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.4):
     optionalDependencies:
       picomatch: 4.0.4
+
+  fdir@6.5.0(picomatch@4.0.7):
+    optionalDependencies:
+      picomatch: 4.0.7
 
   fetch-blob@3.2.0:
     dependencies:
@@ -7307,6 +7315,8 @@ snapshots:
 
   picomatch@4.0.5: {}
 
+  picomatch@4.0.7: {}
+
   pkg-types@1.3.1:
     dependencies:
       confbox: 0.1.8
@@ -7342,7 +7352,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.26:
+  postcss@8.5.28:
     dependencies:
       nanoid: 3.3.18
       picocolors: 1.1.1
@@ -7675,8 +7685,8 @@ snapshots:
 
   tinyglobby@0.2.17:
     dependencies:
-      fdir: 6.5.0(picomatch@4.0.4)
-      picomatch: 4.0.4
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
 
   to-regex-range@5.0.1:
     dependencies:
@@ -7807,7 +7817,7 @@ snapshots:
     dependencies:
       '@unlazy/core': 0.12.4
 
-  unocss@66.8.1(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)):
+  unocss@66.8.1(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)):
     dependencies:
       '@unocss/cli': 66.8.1
       '@unocss/core': 66.8.1
@@ -7825,7 +7835,7 @@ snapshots:
       '@unocss/transformer-compile-class': 66.8.1
       '@unocss/transformer-directives': 66.8.1
       '@unocss/transformer-variant-group': 66.8.1
-      '@unocss/vite': 66.8.1(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))
+      '@unocss/vite': 66.8.1(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))
     transitivePeerDependencies:
       - vite
 
@@ -7893,17 +7903,17 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-dev-rpc@2.0.0(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)):
+  vite-dev-rpc@2.0.0(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)):
     dependencies:
       birpc: 4.0.0
-      vite: 7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)
-      vite-hot-client: 2.2.0(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
+      vite-hot-client: 2.2.0(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))
 
-  vite-hot-client@2.2.0(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)):
+  vite-hot-client@2.2.0(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)):
     dependencies:
-      vite: 7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
 
-  vite-plugin-inspect@11.4.1(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)):
+  vite-plugin-inspect@11.4.1(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)):
     dependencies:
       ansis: 4.3.1
       error-stack-parser-es: 1.0.5
@@ -7913,8 +7923,8 @@ snapshots:
       perfect-debounce: 2.1.0
       sirv: 3.0.2
       unplugin-utils: 0.3.1
-      vite: 7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2)
-      vite-dev-rpc: 2.0.0(vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2))
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
+      vite-dev-rpc: 2.0.0(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))
 
   vite@7.3.6(jiti@2.6.1)(less@4.9.0)(lightningcss@1.33.0)(tsx@4.23.13)(yaml@2.8.2):
     dependencies:
@@ -7932,11 +7942,11 @@ snapshots:
       tsx: 4.23.13
       yaml: 2.8.2
 
-  vite@8.2.2(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2):
+  vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2):
     dependencies:
       lightningcss: 1.33.0
-      picomatch: 4.0.5
-      postcss: 8.5.26
+      picomatch: 4.0.7
+      postcss: 8.5.28
       rolldown: 1.2.6
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -7947,7 +7957,7 @@ snapshots:
       tsx: 4.23.13
       yaml: 2.8.2
 
-  vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.26)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2):
+  vitepress@2.0.0-alpha.19(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.28)(tsx@4.23.13)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
       '@docsearch/css': 4.7.0
       '@docsearch/js': 4.7.0
@@ -7957,7 +7967,7 @@ snapshots:
       '@shikijs/transformers': 4.4.3
       '@shikijs/types': 4.4.3
       '@types/markdown-it': 14.2.0
-      '@vitejs/plugin-vue': 6.0.8(vite@8.2.2(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
+      '@vitejs/plugin-vue': 6.0.8(vite@8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2))(vue@3.5.42(typescript@5.9.3))
       '@vue/devtools-api': 8.2.1
       '@vue/shared': 3.5.40
       '@vueuse/core': 14.4.0(vue@3.5.42(typescript@5.9.3))
@@ -7966,11 +7976,11 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 7.2.0
       shiki: 4.4.3
-      vite: 8.2.2(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
+      vite: 8.3.0(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.0)(tsx@4.23.13)(yaml@2.8.2)
       vue: 3.5.42(typescript@5.9.3)
     optionalDependencies:
       markdown-it-mathjax3: 5.2.0
-      postcss: 8.5.26
+      postcss: 8.5.28
     transitivePeerDependencies:
       - '@types/node'
       - '@vitejs/devtools'
