@@ -71,7 +71,7 @@
     "markdown-it-mathjax3": "^5.2.0",
     "node-fetch": "^3.3.2",
     "sharp": "^0.34.5",
-    "simple-git": "^3.36.0",
+    "simple-git": "^4.0.0",
     "tsx": "^4.23.13",
     "typescript": "^5.9.3",
     "unocss": "^66.8.1",
