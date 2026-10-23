@@ -73,7 +73,7 @@
     "sharp": "^0.34.5",
     "simple-git": "^3.36.0",
     "tsx": "^4.23.13",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "unocss": "^66.8.1",
     "unplugin-vue-components": "^30.0.0",
     "uuid": "^13.0.2",
