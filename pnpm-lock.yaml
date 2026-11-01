@@ -150,8 +150,8 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0(@babel/parser@7.29.12)(vue@3.5.44(typescript@5.9.3))
       uuid:
-        specifier: ^13.0.2
-        version: 13.0.2
+        specifier: ^14.0.3
+        version: 14.0.3
       vite:
         specifier: ^7.3.6
         version: 7.3.6(jiti@2.6.1)(less@4.9.1)(lightningcss@1.33.0)(tsx@4.23.15)(yaml@2.8.2)
@@ -4031,6 +4031,10 @@ packages:
 
   uuid@13.0.2:
     resolution: {integrity: sha512-vzi9uRZ926x4XV73S/4qQaTwPXM2JBj6/6lI/byHH1jOpCzb0zDbfytgA9LcN/hzb2l7WQSQnxITOVx5un/wGw==}
+    hasBin: true
+
+  uuid@14.0.3:
+    resolution: {integrity: sha512-Sc5u1VVln93y1Xnz4R+CunOZc7R9LUcTmhj7Rc7Eg3HVcf7rVn2FOoa812fe0W8p3jD7xeoGSYbfqCGGH2B6xw==}
     hasBin: true
 
   vfile-location@5.0.3:
@@ -8316,6 +8320,8 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   uuid@13.0.2: {}
+
+  uuid@14.0.3: {}
 
   vfile-location@5.0.3:
     dependencies:
