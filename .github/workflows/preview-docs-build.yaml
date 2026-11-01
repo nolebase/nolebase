@@ -29,7 +29,7 @@ jobs:
           echo "${{ github.event.number }}" > pr_num
 
       - name: 上传 PR 信息
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: pr-num
           path: ./pr_num
@@ -63,7 +63,7 @@ jobs:
           pnpm docs:build
 
       - name: 上传构建产物
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: docs-build
           path: .vitepress/dist
