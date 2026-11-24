@@ -27,8 +27,8 @@ importers:
         specifier: ^1.2.4
         version: 1.2.4
       '@netlify/functions':
-        specifier: ^5.3.0
-        version: 5.3.0
+        specifier: ^6.1.2
+        version: 6.1.2
       '@nolebase/integrations':
         specifier: 2.21.1
         version: 2.21.1(esbuild@0.28.1)(jiti@2.6.1)(less@4.9.1)(markdown-it@14.3.3)(tsx@4.23.15)(vite@7.3.6(jiti@2.6.1)(less@4.9.1)(lightningcss@1.33.0)(tsx@4.23.15)(yaml@2.8.2))(vitepress@2.0.0-alpha.21(change-case@5.4.4)(esbuild@0.28.1)(jiti@2.6.1)(jwt-decode@4.0.0)(less@4.9.1)(markdown-it-mathjax3@5.2.0)(postcss@8.5.32)(tsx@4.23.15)(typescript@5.9.3)(yaml@2.8.2))(vue@3.5.44(typescript@5.9.3))(yaml@2.8.2)
@@ -880,13 +880,21 @@ packages:
   '@mrdrogdrog/optional@1.2.1':
     resolution: {integrity: sha512-8JdrQautBZ+nxTC29Sp7z/plyONdgPDjCbFTf6Iih5spZKW18EmP2D4zd48wG9Nn0Qpe8f0p9f8/94SlZFl4tQ==}
 
-  '@netlify/functions@5.3.0':
-    resolution: {integrity: sha512-FP+xCoZMkMOUsKa4UdG/oiK/2md1/TxuXvqqieaMVMgDbFFMaHI8h0oHCViUY73kPbKV6HyzayaSXGYXKpBSoQ==}
-    engines: {node: '>=18.0.0'}
+  '@netlify/cache@4.2.2':
+    resolution: {integrity: sha512-465pszTiI4m5b+K92Akg3F2Bh59FQWWV5jPEOwDdwcWdsCRwWkYlzhFD5kJc9mFGj8snaQ0SShFEK+BVJxM3bw==}
+    engines: {node: '>=22.12.0'}
 
-  '@netlify/types@2.8.0':
-    resolution: {integrity: sha512-8/g0Pt6y6wXj5Ia5eeYLiXhRfWeqZXGXpGFeCiiQdUOem+FPtXdA4+YdGxqzWc7D0AvptKSO01KGeeVWHSu8Kg==}
-    engines: {node: ^18.14.0 || >=20}
+  '@netlify/functions@6.1.2':
+    resolution: {integrity: sha512-JTBCeefjypHueU+wlemiXSA69ZIaYw3dPOqOSDxLEZ7F0Pu3vZM+21GeIvJwjwbHMPKzzCpepmFSVK5YJ9AMDg==}
+    engines: {node: '>=22.12.0'}
+
+  '@netlify/runtime-utils@3.1.0':
+    resolution: {integrity: sha512-mzlRsXQCo9a9Y4W/jiKvPrDOgmoVu+QIsQ2Lehi7hFJD7KlvEsCucJ2i1DOgN3LpYVbo8gyrxmGZFT2Jlf6SHA==}
+    engines: {node: '>=22.12.0'}
+
+  '@netlify/types@3.3.1':
+    resolution: {integrity: sha512-LwPy3VpwMTETniJEgLr67yP8Rt8eORZaQ/NwVXhOOkv9q1F2SANSoJbfkhEmyLpwQ/aoPTAi0bULBDlFHXwEQA==}
+    engines: {node: '>=22.12.0'}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1776,6 +1784,7 @@ packages:
 
   '@unlazy/core@1.1.0':
     resolution: {integrity: sha512-ezCESX729KqtP2hud3i0ucepMx5/tz4V9Z4KKHInIgcoqOz/vP9LpEDVl3hkkRfPuuv33C2YUOApMJECEai1Dw==}
+    deprecated: 'Merged into unlazy. Install unlazy@3 and import from ''unlazy'' instead: https://unlazy.byjohann.dev/guide/migration'
 
   '@unlazy/vue@1.1.0':
     resolution: {integrity: sha512-v2C7BQ2+WyNoLDg7ZMqa/qRbpcSvzvwwtYup4wkjmV/fxpzn8/g9tJB8ztkOUyr3RlUqWv0ztNbFkC0eKS4FLw==}
@@ -4787,11 +4796,18 @@ snapshots:
 
   '@mrdrogdrog/optional@1.2.1': {}
 
-  '@netlify/functions@5.3.0':
+  '@netlify/cache@4.2.2':
     dependencies:
-      '@netlify/types': 2.8.0
+      '@netlify/runtime-utils': 3.1.0
 
-  '@netlify/types@2.8.0': {}
+  '@netlify/functions@6.1.2':
+    dependencies:
+      '@netlify/cache': 4.2.2
+      '@netlify/types': 3.3.1
+
+  '@netlify/runtime-utils@3.1.0': {}
+
+  '@netlify/types@3.3.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
